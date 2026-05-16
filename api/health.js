@@ -3,8 +3,10 @@
 import { isSupabaseConfigured } from "../lib/supabase.js";
 import { isRedisConfigured } from "../lib/ratelimit.js";
 import { applyCors } from "../lib/cors.js";
+import { initSentry, isSentryConfigured } from "../lib/sentry.js";
 
 export default function handler(req, res) {
+  initSentry();
   if (applyCors(req, res)) return;
   res.status(200).json({
     status: "ok",
@@ -13,6 +15,7 @@ export default function handler(req, res) {
     supabaseConfigured: isSupabaseConfigured(),
     redisConfigured: isRedisConfigured(),
     adminKeySet: !!process.env.ADMIN_KEY,
+    sentryConfigured: isSentryConfigured(),
     timestamp: new Date().toISOString(),
   });
 }

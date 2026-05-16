@@ -5,8 +5,10 @@ import { VALID_LEVELS, VALID_LANGS, generateQuiz } from "../lib/anthropic.js";
 import { fetchCachedQuiz, isSupabaseConfigured } from "../lib/supabase.js";
 import { checkGuestDailyLimit, extractIp } from "../lib/ratelimit.js";
 import { applyCors } from "../lib/cors.js";
+import { initSentry, captureApiError } from "../lib/sentry.js";
 
 export default async function handler(req, res) {
+  initSentry();
   if (applyCors(req, res)) return;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
@@ -54,13 +56,16 @@ export default async function handler(req, res) {
     }
     if (err.code === "ANTHROPIC_ERROR") {
       console.error("Anthropic API error:", err.status, err.body);
+      captureApiError(err, { api: "generate", level, lang, kind: "ANTHROPIC_ERROR", status: err.status });
       return res.status(502).json({ error: "AI service error", status: err.status });
     }
     if (err.code === "MALFORMED_RESPONSE") {
       console.error("Malformed AI response:", err.preview);
+      captureApiError(err, { api: "generate", level, lang, kind: "MALFORMED_RESPONSE" });
       return res.status(502).json({ error: "Malformed AI response" });
     }
     console.error("generate handler error:", err);
+    captureApiError(err, { api: "generate", level, lang, kind: "UNKNOWN" });
     return res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -3,6 +3,7 @@
 
 import { VALID_LEVELS, VALID_LANGS, generateQuiz } from "../lib/anthropic.js";
 import { insertPregenerated, isSupabaseConfigured } from "../lib/supabase.js";
+import { initSentry, captureApiError } from "../lib/sentry.js";
 
 const DEFAULT_PER_COMBO = 100;
 const MAX_PER_COMBO = 200;
@@ -13,6 +14,7 @@ function sleep(ms) {
 }
 
 export default async function handler(req, res) {
+  initSentry();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   // Admin Key 保護
@@ -63,6 +65,7 @@ export default async function handler(req, res) {
         } catch (err) {
           summary.failed += 1;
           console.error(`generateQuiz failed (${level}/${lang} #${i}):`, err.message);
+          captureApiError(err, { api: "generate-batch", phase: "generateQuiz", level, lang, index: i });
         }
       }
       if (items.length > 0) {
@@ -72,6 +75,7 @@ export default async function handler(req, res) {
           summary.byCombo.push({ level, lang, generated: items.length, inserted: n });
         } catch (err) {
           console.error(`insertPregenerated failed (${level}/${lang}):`, err.message);
+          captureApiError(err, { api: "generate-batch", phase: "insertPregenerated", level, lang, items: items.length });
           summary.byCombo.push({ level, lang, generated: items.length, inserted: 0, error: err.message });
         }
       }
