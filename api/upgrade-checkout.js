@@ -28,23 +28,29 @@ export default async function handler(req, res) {
   const Stripe = (await import("stripe")).default;
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-  // ensure a customer exists
-  let customerId = profile?.stripe_customer_id;
-  if (!customerId) {
-    const c = await stripe.customers.create({ email: user.email, metadata: { user_id: user.id } });
-    customerId = c.id;
-    await db.from("users").update({ stripe_customer_id: customerId }).eq("id", user.id);
+  try {
+    // ensure a customer exists
+    let customerId = profile?.stripe_customer_id;
+    if (!customerId) {
+      const c = await stripe.customers.create({ email: user.email, metadata: { user_id: user.id } });
+      customerId = c.id;
+      await db.from("users").update({ stripe_customer_id: customerId }).eq("id", user.id);
+    }
+
+    const session = await stripe.checkout.sessions.create({
+      customer: customerId,
+      mode: plan === "lifetime" ? "payment" : "subscription",
+      line_items: [{ price: priceId, quantity: 1 }],
+      client_reference_id: user.id,
+      success_url: `${siteUrl}/?upgrade=success&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${siteUrl}/?upgrade=cancelled`,
+      metadata: { user_id: user.id, plan },
+    });
+
+    return res.status(200).json({ checkout_url: session.url });
+  } catch (e) {
+    // surface the Stripe error instead of crashing (e.g. bad price ID / mode mismatch)
+    console.error("upgrade-checkout stripe error:", e?.message);
+    return res.status(502).json({ error: "Stripe: " + (e?.message || "checkout failed") });
   }
-
-  const session = await stripe.checkout.sessions.create({
-    customer: customerId,
-    mode: plan === "lifetime" ? "payment" : "subscription",
-    line_items: [{ price: priceId, quantity: 1 }],
-    client_reference_id: user.id,
-    success_url: `${siteUrl}/?upgrade=success&session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${siteUrl}/?upgrade=cancelled`,
-    metadata: { user_id: user.id, plan },
-  });
-
-  return res.status(200).json({ checkout_url: session.url });
 }

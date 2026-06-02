@@ -16,11 +16,16 @@ export default async function handler(req, res) {
   if (!profile?.stripe_customer_id) return res.status(400).json({ error: "No billing account" });
 
   const siteUrl = process.env.SITE_URL || `https://${req.headers.host}`;
-  const Stripe = (await import("stripe")).default;
-  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-  const session = await stripe.billingPortal.sessions.create({
-    customer: profile.stripe_customer_id,
-    return_url: `${siteUrl}/`,
-  });
-  return res.status(200).json({ portal_url: session.url });
+  try {
+    const Stripe = (await import("stripe")).default;
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+    const session = await stripe.billingPortal.sessions.create({
+      customer: profile.stripe_customer_id,
+      return_url: `${siteUrl}/`,
+    });
+    return res.status(200).json({ portal_url: session.url });
+  } catch (e) {
+    console.error("stripe-portal error:", e?.message);
+    return res.status(502).json({ error: "Stripe: " + (e?.message || "portal failed") });
+  }
 }
