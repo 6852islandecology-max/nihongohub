@@ -1296,8 +1296,13 @@ if (document.readyState === 'loading') {
     $('nhSubmit').disabled = true; msg('…');
     try {
       const fn = mode === 'signup' ? sb.auth.signUp({ email, password }) : sb.auth.signInWithPassword({ email, password });
-      const { error } = await fn;
+      const { data, error } = await fn;
       if (error) { msg(error.message, 'err'); $('nhSubmit').disabled = false; return; }
+      if (mode === 'signup' && data && data.user && !data.session) {
+        // email confirmation is ON → no session yet
+        msg('Account created! Check your email to confirm, then log in.', 'ok');
+        $('nhSubmit').disabled = false; return;
+      }
       msg('', 'ok'); await render();
     } catch (e) { msg('Something went wrong. Try again.', 'err'); }
     $('nhSubmit').disabled = false;
