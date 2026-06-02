@@ -561,6 +561,25 @@ footer a{color:var(--gold);text-decoration:none}
 
 <div id="nh-toast" role="status" aria-live="polite"></div>
 
+<style>
+/* signature strip (G5: per-prefecture differentiation by strongest stat + region colour) */
+.sig-strip{display:flex;align-items:center;gap:10px;margin:10px 0 4px;padding:9px 12px;
+  background:var(--white);border:2px solid var(--soft);border-radius:8px;font-family:var(--dot)}
+.sig-emoji{font-size:20px;line-height:1}
+.sig-label{font-family:var(--pixel);font-size:10px;letter-spacing:1px;color:var(--ink)}
+.sig-score{margin-left:auto;font-family:var(--pixel);font-size:8px;color:var(--muted)}
+/* full-guide CTA → own blog article (G7: kill dead-ends, route to 47-prefecture guides) */
+.blog-cta{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);
+  background:linear-gradient(90deg,rgba(224,166,52,.16),rgba(224,166,52,.04));
+  border:2px solid var(--gold);border-radius:9px;padding:11px 13px}
+.blog-cta:hover{background:rgba(224,166,52,.24)}
+.blog-cta .tl-arrow{margin-left:auto;font-family:var(--pixel);font-size:8px;color:var(--gold-d)}
+/* chibi guide characters (G4: replace 16x16 dot sprites with illustrated chibi PNGs) */
+.npc-sprite{width:50px;height:50px;background:radial-gradient(circle at 50% 38%,#fff,#f3ead7);
+  border-color:var(--gold-d)!important;padding:2px;image-rendering:auto}
+.npc-img{width:100%;height:100%;object-fit:contain;image-rendering:auto;display:block}
+</style>
+
 <script src="explore-data.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════
@@ -741,7 +760,7 @@ function selectPref(el){
   const{kanji,romaji}=titleParts(el);
   const key=el.classList[0],region=regionOf(el),data=PREF_DATA[key];
   const code=el.getAttribute("data-code");
-  panel.innerHTML=data?renderReady(kanji,romaji,region,data,code):renderLocked(kanji,romaji,region);
+  panel.innerHTML=data?renderReady(kanji,romaji,region,data,code,key):renderLocked(kanji,romaji,region);
   if(window.innerWidth<=880)panel.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
@@ -787,17 +806,29 @@ function feedBlock(d){
   return `<div class="block"><div class="block-title">📰 TRENDING &amp; HIDDEN GEMS</div>${inner}${tagHtml}</div>`;
 }
 
-function renderReady(kanji,romaji,region,d,code){
+/* G5: a per-prefecture signature banner from its strongest stat + region colour,
+   so each card reads distinctly instead of one uniform template. */
+const SIG_DEFS={food:["🍜","FLAVOR TOWN"],culture:["⛩️","HERITAGE LAND"],nature:["⛰️","WILD COUNTRY"],city:["🌃","NEON CITY"],access:["🚅","EASY REACH"]};
+function signatureStrip(d,region){
+  const s=d.stats||{};let best=null,bv=-1;
+  for(const k in SIG_DEFS){const v=s[k]||0;if(v>bv){bv=v;best=k;}}
+  if(!best||bv<=0)return "";
+  const[emoji,label]=SIG_DEFS[best],col=regionColor(region);
+  return `<div class="sig-strip" style="border-color:${col};box-shadow:inset 5px 0 0 ${col}"><span class="sig-emoji">${emoji}</span><span class="sig-label">${label}</span><span class="sig-score">${best.toUpperCase()} ${bv}/5</span></div>`;
+}
+function renderReady(kanji,romaji,region,d,code,key){
   const blurbHtml=d.blurb?`<p class="pref-blurb">${d.blurb}</p>`:"";
+  const blogHtml=key?`<div class="block"><a class="blog-cta" href="blog/${key}.html"><span class="tl-emoji">📖</span><span><b>Read the full ${romaji} guide</b> — food, sights, seasons &amp; phrases</span><span class="tl-arrow">OPEN →</span></a></div>`:"";
   const travelHtml=(d.travel&&d.travel.length)?`<div class="block"><div class="block-title">📜 WAYPOINTS</div><div class="travel-list">${d.travel.map(t=>`<a class="travel-link" href="${t.url}" target="_blank" rel="noopener"><span class="tl-emoji">${t.emoji}</span><span>${t.title}</span><span class="tl-arrow">GO →</span></a>`).join("")}</div></div>`:"";
   const areasHtml=(d.areas&&d.areas.length)?`<div class="block"><div class="block-title">🗺️ SUB-AREAS</div><div class="area-chips">${d.areas.map((a,i)=>`<button class="area-chip" data-area="${i}">${a.type==="island"?"🏝️":"🏙️"} ${a.romaji}</button>`).join("")}</div><div class="area-detail" id="area-detail"></div><p class="area-note">Cities &amp; islands within ${romaji}. Clickable sub-area maps are coming in a future update.</p></div>`:"";
   const affHtml=(d.affiliates&&d.affiliates.length)?`<div class="block"><div class="block-title">🏨 INNS &amp; TOURS</div><div class="aff-grid">${d.affiliates.map(a=>`<a class="aff-card" href="${a.url}" target="_blank" rel="sponsored noopener"><span class="aff-pr">PR</span><div class="aff-name">${a.name}</div><div class="aff-sub">${a.sub}</div></a>`).join("")}</div><p class="aff-disclose">Some links are affiliate links (PR). We may earn a commission at no extra cost to you.</p></div>`:"";
-  const quizHtml=d.quiz?`<div class="block"><div class="battle" data-answer="${d.quiz.answer}"><div class="battle-tag"><span class="blink">⚔️</span> BATTLE · ${romaji}</div><div class="battle-q">${d.quiz.q}</div><div class="battle-opts">${d.quiz.opts.map((o,i)=>`<button class="battle-opt" data-i="${i}">${o}</button>`).join("")}</div><div class="battle-result"></div><div class="battle-explain">${d.quiz.explain}</div><a class="battle-cta" href="index.html#practice">GET A DAILY QUIZ — FREE →</a></div></div>`:`<div class="block" style="text-align:center"><a class="battle-cta" href="index.html#practice">GET A FREE DAILY JAPANESE QUIZ →</a></div>`;
+  const quizHtml=d.quiz?`<div class="block"><div class="battle" data-answer="${d.quiz.answer}" data-romaji="${romaji}"><div class="battle-tag"><span class="blink">⚔️</span> BATTLE · ${romaji}</div><div class="battle-q">${d.quiz.q}</div><div class="battle-opts">${d.quiz.opts.map((o,i)=>`<button class="battle-opt" data-i="${i}">${o}</button>`).join("")}</div><div class="battle-result"></div><div class="battle-explain">${d.quiz.explain}</div><a class="battle-cta" href="quiz.html">GET A DAILY QUIZ — FREE →</a></div></div>`:`<div class="block" style="text-align:center"><a class="battle-cta" href="quiz.html">GET A FREE DAILY JAPANESE QUIZ →</a></div>`;
   return `
   <div class="card-head"><span class="blink">▶</span> NOW ENTERING</div>
   <div class="card-body pxwin" style="border-top:0;box-shadow:0 0 0 3px var(--white),0 0 0 6px var(--ink),6px 9px 0 rgba(22,16,10,.18)">
     <div class="pref-head"><span class="pref-kanji">${kanji}</span><span class="pref-romaji">${romaji}</span></div>
     ${regionBadge(region)}
+    ${signatureStrip(d,region)}
     ${blurbHtml}
     ${guidesBlock(d,romaji)}
     ${claimBtnHtml(romaji)}
@@ -808,6 +839,7 @@ function renderReady(kanji,romaji,region,d,code){
     ${travelHtml}
     ${areasHtml}
     ${foodCultureBlock(d)}
+    ${blogHtml}
     ${feedBlock(d)}
     ${affHtml}
     ${quizHtml}
@@ -824,7 +856,7 @@ function renderLocked(kanji,romaji,region){
     <h4>This area isn't discovered yet</h4>
     <p>We're charting travel guides, stats, and quiz battles for all 47 prefectures. Want ${romaji} unlocked next? Start your quest free.</p>
     <div>${claimBtnHtml(romaji)}</div>
-    <a class="battle-cta" href="index.html#practice">START FREE →</a>
+    <a class="battle-cta" href="quiz.html">START FREE →</a>
   </div>`;
 }
 
@@ -853,14 +885,20 @@ panel.addEventListener("click",e=>{
     return;
   }
   const opt=e.target.closest(".battle-opt");
-  if(opt){
+  if(opt&&!opt.disabled){
     const battle=opt.closest(".battle");
     const answer=+battle.dataset.answer,chosen=+opt.dataset.i;
-    battle.querySelectorAll(".battle-opt").forEach((b,i)=>{b.disabled=true;if(i===answer)b.classList.add("correct");else if(i===chosen)b.classList.add("wrong");});
     const res=battle.querySelector(".battle-result");
-    if(chosen===answer){res.textContent="✨ CRITICAL HIT!  +10 XP";res.classList.add("win","show");}
-    else{res.textContent="💥 MISSED!  Try the next area.";res.classList.add("lose","show");}
-    battle.querySelector(".battle-explain").classList.add("show");
+    if(chosen===answer){
+      battle.querySelectorAll(".battle-opt").forEach((b,i)=>{b.disabled=true;if(i===answer)b.classList.add("correct");});
+      res.textContent="✨ CRITICAL HIT!  +10 XP";res.className="battle-result win show";
+      battle.querySelector(".battle-explain").classList.add("show");
+      const rj=battle.dataset.romaji;
+      if(rj&&!getTitles().includes(rj)){claimTitle(rj);toast(`🏅 <b>${rj} title earned!</b> Quest cleared.`);}
+    }else{
+      opt.classList.add("wrong");opt.disabled=true;
+      res.textContent="💥 MISSED! Pick another — clear it to earn the title.";res.className="battle-result lose show";
+    }
   }
 });
 
@@ -905,21 +943,17 @@ function claimTitle(romaji){
   const t=getTitles();
   if(!t.includes(romaji)){t.push(romaji);localStorage.setItem("nh_titles",JSON.stringify(t));}
   renderTitles();
+  if(t.length>=47&&!isVip()){grantVip();toast("🏅 <b>All 47 prefectures cleared!</b> Gold party frame unlocked 🎉",6000);}
 }
 renderTitles();
 
 /* ═══ PARTY GUIDE NPCs: Akari (狐/culture) + Yukika (鶴/nature) ═══
-   Hand-authored 16x16 ドット絵 sprites (mirrors scripts/build-npc-sprites.mjs
-   and 成果物/Marketing/NihongoHub/MK-29-assets/rpg-dot/*.svg). */
-const NPC_PAL={".":null,o:"#16100a",f:"#d9622b",w:"#fdfaf3",g:"#e0a634",e:"#2a1c10",c:"#fdfaf3",k:"#16100a",r:"#bf3325",G:"#3fae6b"};
-const NPC_SPR={
-  akari:["................","...o........o...","..ofo......ofo..","..offo....offo..","..offffffffo....",".offffffffffo...","offffffffffffo..","offfffggffffffo.","offweffffffewffo","offffwwwwwwffffo",".offwwwwwwwwffo.","..offwwoowwffo..","..offfwwwwfffo..","...offffffffo...","....oooooooo....","................"],
-  yukika:["......rr........",".....orro.......",".....occo.......","....occcco......","...occcccco.....","...occkkcco.....","...occcccco.....","....occcco......",".....occo.......",".....occo.......","..occcccccco....",".occcccccccco...",".oGccccccccGo...",".oGGccccccGGo...","..oGGGGGGGGo....","...oooooooo....."]
-};
+   Illustrated chibi characters (のんのんびより / メイドラゴン系 癒し和テイスト).
+   PNG assets in assets/characters/. Replaces the old 16x16 dot sprites. */
 function npcSVG(name){
-  const g=NPC_SPR[name]||NPC_SPR.akari;let r="";
-  for(let y=0;y<g.length;y++){const row=g[y];for(let x=0;x<row.length;x++){const col=NPC_PAL[row[x]];if(col)r+=`<rect x="${x}" y="${y}" width="1" height="1" fill="${col}"/>`;}}
-  return `<svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">${r}</svg>`;
+  const n=(name==="yukika")?"yukika":"akari";
+  const alt=(n==="akari")?"Akari, the fox culture guide":"Yukika, the crane nature guide";
+  return `<img class="npc-img" src="assets/characters/${n}.png" alt="${alt}" loading="lazy">`;
 }
 function guidesBlock(d,romaji){
   const s=d.stats||{};

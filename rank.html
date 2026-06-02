@@ -56,6 +56,22 @@ body{font-family:'DM Sans',sans-serif;color:var(--ink);background:
 footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-family:var(--dot);font-size:13px}
 footer a{color:var(--gold);text-decoration:none}
 .err{font-family:var(--dot);color:var(--red);padding:30px}
+/* G2: click a ranking row to expand its prefecture detail inline (no page jump) */
+.rowwrap{margin-bottom:9px}
+.row{cursor:pointer;margin-bottom:0}
+.row .nm .taphint{font-family:var(--dot);font-size:11px;color:var(--gold-d);margin-top:3px;display:block}
+.row.open{border-color:var(--gold-d);border-bottom-left-radius:0;border-bottom-right-radius:0}
+.row-detail{display:none;background:var(--white);border:2px solid var(--gold-d);border-top:0;
+  border-radius:0 0 10px 10px;padding:13px 15px;margin-top:-2px}
+.row-detail.show{display:block}
+.rd-blurb{color:var(--muted);font-size:14px;line-height:1.5;margin-bottom:9px}
+.rd-list{margin:0 0 11px 18px;font-size:14px;line-height:1.5}
+.rd-list li{margin-bottom:5px}
+.rd-list b{font-weight:600}
+.rd-links{display:flex;flex-wrap:wrap;gap:10px}
+.rd-links a{font-family:var(--dot);font-size:13px;color:var(--gold-d);text-decoration:none;
+  border:2px solid var(--soft);border-radius:6px;padding:7px 11px}
+.rd-links a:hover{border-color:var(--gold-d);background:rgba(224,166,52,.08)}
 </style>
 </head>
 <body>
@@ -67,6 +83,7 @@ footer a{color:var(--gold);text-decoration:none}
 <footer><p>© 2026 NihongoHub · <a href="prefectures.html">Explore</a> · Rankings from official statistics. NATURE ranking: <a href="wildlife.html">いきものクエスト</a>.</p></footer>
 
 <script src="rank-data.js"></script>
+<script src="explore-data.js"></script>
 <script>
 const AX=["food","culture","city","access"];
 const params=new URLSearchParams(location.search);
@@ -86,11 +103,14 @@ function render(){
   const rows=d.prefs.map(p=>{
     const [g,gv]=GRADE(p.pip);
     let pips="";for(let i=1;i<=5;i++)pips+=`<span class="pip${i<=p.pip?" on":""}"></span>`;
-    return `<a class="row${p.romaji===pref?" hot":""}" id="r-${p.romaji}" href="prefectures.html?pref=${p.romaji}" title="Open ${p.en} on the map">
-      <div class="lv">Lv<b>${p.rank}</b></div>
-      <div class="nm">${p.ja}<span class="en"> ${p.en}</span><div class="raw">${p.raw}</div></div>
-      <div class="right"><span class="pips">${pips}</span><span class="grade" style="background:var(${gv})">${g}</span></div>
-    </a>`;
+    return `<div class="rowwrap">
+      <div class="row${p.romaji===pref?" hot":""}" id="r-${p.romaji}" data-romaji="${p.romaji}" role="button" tabindex="0" aria-expanded="false" title="Show ${p.en} details">
+        <div class="lv">Lv<b>${p.rank}</b></div>
+        <div class="nm">${p.ja}<span class="en"> ${p.en}</span><div class="raw">${p.raw}</div><span class="taphint">▸ tap for details</span></div>
+        <div class="right"><span class="pips">${pips}</span><span class="grade" style="background:var(${gv})">${g}</span></div>
+      </div>
+      <div class="row-detail" id="d-${p.romaji}"></div>
+    </div>`;
   }).join("");
   wrap.innerHTML=`
     <h1 class="title">${d.emoji} <em>${d.label}</em> RANKING</h1>
@@ -98,8 +118,45 @@ function render(){
     ${tabs()}
     <div class="method"><b>Method:</b> ${d.method} ${d.year?`(${d.year})`:""} ${src?`· Sources: ${src}`:""}</div>
     ${rows}`;
-  if(pref){const el=document.getElementById("r-"+pref);if(el)setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"center"}),120);}
+  if(pref){const el=document.getElementById("r-"+pref);if(el)setTimeout(()=>{openRow(pref);el.scrollIntoView({behavior:"smooth",block:"center"});},140);}
 }
+
+/* G2: inline prefecture detail sourced from explore-data.js (window.NH_EXTRA) */
+function prefDetail(romaji){
+  const e=(window.NH_EXTRA||{})[romaji]||{};
+  const list=(axis==="food"||axis==="culture")?(e[axis]||[]):[];
+  const items=list.slice(0,5).map(s=>`<li><b>${s.name}</b>${s.note?` — ${s.note}`:""}</li>`).join("");
+  const body=items?`<ul class="rd-list">${items}</ul>`
+    :(e.blurb?`<p class="rd-blurb">${e.blurb}</p>`:`<p class="rd-blurb">Open the map for ${romaji}'s full profile.</p>`);
+  const blurbTop=(items&&e.blurb)?`<p class="rd-blurb">${e.blurb}</p>`:"";
+  return `${blurbTop}${body}
+    <div class="rd-links">
+      <a href="prefectures.html?pref=${romaji}">🗺️ Open on the map</a>
+      <a href="blog/${romaji}.html">📖 Full guide</a>
+    </div>`;
+}
+function openRow(rj){
+  const row=document.getElementById("r-"+rj),det=document.getElementById("d-"+rj);
+  if(!row||!det)return;
+  if(!det.dataset.loaded){det.innerHTML=prefDetail(rj);det.dataset.loaded="1";}
+  det.classList.add("show");row.classList.add("open");row.setAttribute("aria-expanded","true");
+}
+function toggleRow(rj){
+  const row=document.getElementById("r-"+rj),det=document.getElementById("d-"+rj);
+  if(!row||!det)return;
+  if(det.classList.contains("show")){det.classList.remove("show");row.classList.remove("open");row.setAttribute("aria-expanded","false");}
+  else openRow(rj);
+}
+wrap.addEventListener("click",e=>{
+  if(e.target.closest(".row-detail"))return; // let detail links navigate
+  const row=e.target.closest(".row");
+  if(row&&row.dataset.romaji)toggleRow(row.dataset.romaji);
+});
+wrap.addEventListener("keydown",e=>{
+  if(e.key!=="Enter"&&e.key!==" ")return;
+  const row=e.target.closest&&e.target.closest(".row");
+  if(row&&row.dataset.romaji){e.preventDefault();toggleRow(row.dataset.romaji);}
+});
 render();
 </script>
 </body>

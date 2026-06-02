@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JLPT Battle — NihongoHub Quiz Quest</title>
+<meta name="description" content="RPG-style JLPT quiz quest (N5–N1). Answer AI-generated Japanese questions, earn XP, and power up your guide Akari — part of the NihongoHub Explore world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--red:#bf3325;--gold:#e0a634;--gold-d:#c8911f;
+  --soft:#ddcfb6;--muted:#7a6a52;--white:#fdfaf3;--hud:#0d0a14;--green:#2a7a4b;
+  --pixel:'Press Start 2P',monospace;--dot:'DotGothic16',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);
+  background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);min-height:100vh}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud .navlinks{display:flex;gap:16px}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:30px 20px 70px}
+.title{font-family:var(--dot);font-size:clamp(26px,5vw,40px);letter-spacing:1px;margin-bottom:4px}
+.title em{color:var(--red);font-style:normal}
+.sub{font-family:var(--dot);color:var(--muted);font-size:15px;margin-bottom:18px;line-height:1.55}
+
+/* guide character + power bar (entry point to the character-growth RPG) */
+.party{display:flex;gap:14px;align-items:center;background:var(--white);border:2px solid var(--soft);
+  border-radius:12px;padding:12px 14px;margin-bottom:18px}
+.party .ava{width:78px;height:78px;flex:0 0 78px;background:radial-gradient(circle at 50% 40%,rgba(224,166,52,.18),transparent 70%);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;transition:transform .3s}
+.party .ava img{width:100%;height:100%;object-fit:contain;image-rendering:auto}
+.party.power-2 .ava{transform:scale(1.04)} .party.power-3 .ava{transform:scale(1.09)}
+.party .pinfo{flex:1;min-width:0}
+.party .pname{font-family:var(--pixel);font-size:10px;color:var(--ink);letter-spacing:1px}
+.party .bubble{font-size:14px;color:var(--muted);margin:5px 0 8px;line-height:1.45}
+.xp-track{height:12px;background:#e9dec6;border:2px solid var(--soft);border-radius:7px;overflow:hidden}
+.xp-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--red));transition:width .5s}
+.xp-meta{display:flex;justify-content:space-between;font-family:var(--dot);font-size:12px;color:var(--muted);margin-top:4px}
+
+/* level pills */
+.levels{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.lvpill{font-family:var(--pixel);font-size:10px;text-decoration:none;cursor:pointer;color:var(--ink);
+  background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:11px 14px;transition:all .12s}
+.lvpill:hover{border-color:var(--gold-d)}
+.lvpill.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+
+/* battle card */
+.battle{background:var(--hud);border:3px solid var(--gold);border-radius:14px;padding:20px 18px;color:var(--white);
+  box-shadow:0 0 0 3px var(--ink),6px 9px 0 rgba(22,16,10,.18)}
+.b-tag{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;margin-bottom:12px}
+.b-tag .blink{animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.b-q{font-family:'Noto Sans JP',sans-serif;font-size:24px;line-height:1.5;min-height:36px;margin-bottom:4px;word-break:break-word}
+.b-q u{text-decoration-color:var(--gold);text-underline-offset:3px}
+.b-reading{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:18px;min-height:16px}
+.b-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+@media(max-width:520px){.b-opts{grid-template-columns:1fr}}
+.b-opt{font-family:'Noto Sans JP',sans-serif;font-size:16px;text-align:left;color:var(--white);
+  background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.2);border-radius:9px;
+  padding:13px 14px;cursor:pointer;transition:all .12s}
+.b-opt:hover:not(:disabled){border-color:var(--gold);background:rgba(224,166,52,.14)}
+.b-opt:disabled{cursor:default}
+.b-opt.correct-ans{border-color:#6ac98d;background:rgba(106,201,141,.18)}
+.b-opt.wrong-ans{border-color:var(--red);background:rgba(191,51,37,.16);opacity:.85}
+.b-result{font-family:var(--dot);font-size:16px;min-height:22px;margin-bottom:8px}
+.b-result.win{color:#7fdca0} .b-result.lose{color:#f0a48c}
+.b-explain{display:none;font-size:14px;line-height:1.6;color:rgba(255,255,255,.82);
+  background:rgba(255,255,255,.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:11px 13px}
+.b-explain.show{display:block}
+.b-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{font-family:var(--dot);font-size:15px;cursor:pointer;border:none;border-radius:8px;padding:12px 20px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn.primary{background:var(--red);color:#fff}
+.btn.ghost{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+.btn:disabled{opacity:.6;cursor:default}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.note{font-family:var(--dot);font-size:13px;color:var(--muted);text-align:center;margin-top:18px;line-height:1.6}
+.note a{color:var(--gold-d)}
+footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-family:var(--dot);font-size:13px;margin-top:40px}
+footer a{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <div class="navlinks">
+    <a href="prefectures.html" class="back">🗾 Explore map</a>
+    <a href="index.html" class="back">← Home</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1 class="title">⚔️ JLPT <em>BATTLE</em></h1>
+  <p class="sub">AI-generated Japanese questions, N5 → N1. Clear battles to earn XP and power up your guide — same world as the Explore map.</p>
+
+  <div class="party" id="party">
+    <div class="ava"><img src="assets/characters/akari.png" alt="Akari, your fox guide"></div>
+    <div class="pinfo">
+      <div class="pname" id="p-name">AKARI · Lv.1</div>
+      <div class="bubble" id="p-bubble">Pick a level and tap <b>New Question</b>, traveler!</div>
+      <div class="xp-track"><div class="xp-fill" id="xp-fill"></div></div>
+      <div class="xp-meta"><span id="xp-text">0 XP</span><span id="xp-next">Next power-up: 10 XP</span></div>
+    </div>
+  </div>
+
+  <div class="levels" id="levels"></div>
+
+  <div class="battle">
+    <div class="b-tag"><span class="blink">⚔️</span> <span id="b-level">N5</span> BATTLE</div>
+    <div class="b-q" id="b-q">Select a level and start your first battle.</div>
+    <div class="b-reading" id="b-reading"></div>
+    <div class="b-opts" id="b-opts" style="display:none"></div>
+    <div class="b-result" id="b-result"></div>
+    <div class="b-explain" id="b-explain"></div>
+    <div class="b-actions">
+      <button class="btn primary" id="btn-new" onclick="newQuestion()">⚡ New Question</button>
+      <a class="btn ghost" href="prefectures.html">🗾 Quest the map</a>
+    </div>
+  </div>
+
+  <p class="note">Daily free questions are rate-limited. Want unlimited practice and to evolve Akari through every JLPT level?
+    <a href="index.html#pricing">See NihongoHub Pro →</a></p>
+</main>
+
+<footer><p>© 2026 NihongoHub · <a href="prefectures.html">Explore</a> · <a href="index.html">Home</a> · AI questions avoid copyrighted material.</p></footer>
+
+<script>
+/* ═══ JLPT BATTLE — reuses /api/generate (same contract as the homepage demo) ═══ */
+const LANG = 'en';
+const LEVELS = ['N5','N4','N3','N2','N1'];
+let level = 'N5';
+let current = null;
+let busy = false;
+
+/* minimal sanitizer: allow only <u>/<ruby>/<rt>/<rp> for furigana, escape the rest */
+function sanitizeQuizHTML(s){
+  if(s==null) return '';
+  let t = String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  t = t.replace(/&lt;(\/?)(u|ruby|rt|rp)&gt;/g,'<$1$2>');
+  return t;
+}
+
+/* ── character power / XP (seed of the character-growth RPG) ── */
+function getXP(){ try{ return parseInt(localStorage.getItem('nh_quiz_xp')||'0',10)||0; }catch(e){ return 0; } }
+function addXP(n){ try{ localStorage.setItem('nh_quiz_xp', String(getXP()+n)); }catch(e){} }
+function powerTier(xp){ return xp>=60?3 : xp>=20?2 : 1; }       // 3 tiers for now; full 5-stage art is future
+function powerLevel(xp){ return 1 + Math.floor(xp/10); }         // +1 Lv every 10 XP
+const TIER_LINE = {
+  1:'Pick a level and clear battles to power me up!',
+  2:'We\'re getting stronger together — keep going!',
+  3:'Master rank! You\'re reading Japanese like a local.'
+};
+function renderParty(extra){
+  const xp = getXP(), tier = powerTier(xp), lv = powerLevel(xp);
+  const into = xp % 10, nextAt = (Math.floor(xp/10)+1)*10;
+  document.getElementById('p-name').textContent = `AKARI · Lv.${lv}`;
+  document.getElementById('xp-fill').style.width = (into*10) + '%';
+  document.getElementById('xp-text').textContent = xp + ' XP';
+  document.getElementById('xp-next').textContent = `Next power-up: ${nextAt} XP`;
+  const party = document.getElementById('party');
+  party.className = 'party power-' + tier;
+  document.getElementById('p-bubble').innerHTML = extra || TIER_LINE[tier];
+}
+
+/* ── level pills ── */
+function renderLevels(){
+  document.getElementById('levels').innerHTML = LEVELS.map(l =>
+    `<a class="lvpill${l===level?' active':''}" data-level="${l}" role="button" tabindex="0">${l}</a>`).join('');
+}
+document.getElementById('levels').addEventListener('click', e=>{
+  const p = e.target.closest('.lvpill'); if(!p) return;
+  level = p.dataset.level;
+  document.querySelectorAll('.lvpill').forEach(x=>x.classList.toggle('active', x===p));
+  document.getElementById('b-level').textContent = level;
+});
+
+/* ── battle flow ── */
+async function newQuestion(){
+  if(busy) return; busy = true;
+  const btn = document.getElementById('btn-new');
+  const qEl = document.getElementById('b-q'), rEl = document.getElementById('b-reading');
+  const optsWrap = document.getElementById('b-opts'), resEl = document.getElementById('b-result'), expEl = document.getElementById('b-explain');
+  btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Summoning…';
+  resEl.textContent=''; resEl.className='b-result'; expEl.className='b-explain'; expEl.innerHTML='';
+  optsWrap.style.display='grid'; optsWrap.innerHTML='<button class="b-opt" disabled>…</button>'.repeat(4);
+  qEl.textContent='…'; rEl.textContent='';
+  document.getElementById('b-level').textContent = level;
+  try{
+    const res = await fetch('/api/generate', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ level, lang: LANG })
+    });
+    if(res.status===429){
+      qEl.textContent='⏳'; optsWrap.style.display='none';
+      resEl.textContent='Daily free limit reached — come back tomorrow or go Pro for unlimited battles.';
+      resEl.className='b-result lose'; return;
+    }
+    if(!res.ok){ const er=await res.json().catch(()=>({})); throw new Error(er.error||('HTTP '+res.status)); }
+    const data = await res.json();
+    const opts = shuffle([{t:data.correct,c:true}, ...(data.distractors||[]).slice(0,3).map(d=>({t:d,c:false}))]);
+    current = { correctIndex: opts.findIndex(o=>o.c), correctText:data.correct, explanation:data.explanation||'' };
+    qEl.innerHTML = sanitizeQuizHTML(data.question);
+    rEl.textContent = data.reading || '';
+    optsWrap.innerHTML = opts.map((o,i)=>`<button class="b-opt" data-i="${i}">${sanitizeQuizHTML(o.t)}</button>`).join('');
+  }catch(err){
+    qEl.textContent='⚠️'; optsWrap.style.display='none';
+    resEl.textContent='Battle failed to load — '+err.message; resEl.className='b-result lose';
+  }finally{
+    busy=false; btn.disabled=false; btn.innerHTML='⚡ New Question';
+  }
+}
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+document.getElementById('b-opts').addEventListener('click', e=>{
+  const opt = e.target.closest('.b-opt'); if(!opt || opt.disabled || !current) return;
+  const i = +opt.dataset.i;
+  const all = document.querySelectorAll('#b-opts .b-opt');
+  all.forEach(b=>b.disabled=true);
+  const resEl = document.getElementById('b-result'), expEl = document.getElementById('b-explain');
+  if(i===current.correctIndex){
+    opt.classList.add('correct-ans');
+    resEl.textContent='✨ CRITICAL HIT! +10 XP'; resEl.className='b-result win';
+    addXP(10);
+    renderParty('✨ Nice! That\'s a critical hit — I leveled up!');
+  }else{
+    opt.classList.add('wrong-ans');
+    all[current.correctIndex].classList.add('correct-ans');
+    resEl.innerHTML='💥 Missed. Correct: <b>'+sanitizeQuizHTML(current.correctText)+'</b>'; resEl.className='b-result lose';
+    renderParty('Don\'t worry — read the hint and try the next battle!');
+  }
+  if(current.explanation){ expEl.innerHTML = sanitizeQuizHTML(current.explanation); expEl.classList.add('show'); }
+});
+
+/* keyboard support for level pills */
+document.getElementById('levels').addEventListener('keydown', e=>{
+  if(e.key==='Enter'||e.key===' '){ const p=e.target.closest('.lvpill'); if(p){ e.preventDefault(); p.click(); } }
+});
+
+/* deep-link: quiz.html?level=N3 */
+(function(){ const l=(new URLSearchParams(location.search).get('level')||'').toUpperCase(); if(LEVELS.includes(l)) level=l; })();
+renderLevels(); renderParty(); document.getElementById('b-level').textContent = level;
+</script>
+</body>
+</html>
