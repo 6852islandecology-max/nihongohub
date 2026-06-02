@@ -1,0 +1,12 @@
+{
+  "pref": "Tokyo",
+  "sample": true,
+  "note": "SCHEMATIC PLACEHOLDER geometry — NOT real boundaries. Replace with N03-derived data via scripts/build-n03.mjs (see README.md).",
+  "viewBox": "0 0 100 100",
+  "areas": [
+    { "name": "渋谷区", "romaji": "Shibuya", "blurb": "Scramble crossing, youth fashion, nightlife.", "d": "M8,55 L40,50 L46,72 L14,80 Z" },
+    { "name": "新宿区", "romaji": "Shinjuku", "blurb": "Skyscrapers, free observation deck, Omoide Yokochō.", "d": "M10,18 L44,14 L48,46 L12,52 Z" },
+    { "name": "台東区", "romaji": "Taitō", "blurb": "Old-Tokyo Asakusa, Sensō-ji temple, Ueno park.", "d": "M52,12 L88,16 L84,44 L50,44 Z" },
+    { "name": "千代田区", "romaji": "Chiyoda", "blurb": "Imperial Palace, Tokyo Station, government district.", "d": "M52,50 L86,48 L90,82 L50,78 Z" }
+  ]
+}

@@ -76,11 +76,12 @@ expected_traffic: "5K-20K 単発訪問 + バックリンク（DR 85+）"
   Indonesian, Traditional Chinese, and English. Powered by Claude Haiku 4.5.
   Free daily quizzes, Pro for $3.99-$9.99/month (PPP-adjusted).
   ```
-- [ ] **First Comment（最重要！ローンチ直後に hunter がコメントで launcher として紹介）**:
+- [ ] **First Comment（最重要！ローンチ直後に hunter がコメントで launcher として紹介、2026-05-05 ペルソナ家族版リブランド反映）**:
   ```
-  Hi Product Hunt! 👋 I'm Yuri, a PhD candidate at Toho University.
+  Hi Product Hunt! 👋 We're Ikimono Hakase Family — a Japanese family of three
+  who's been to all 47 prefectures together with our child.
 
-  I built NihongoHub because 5 of the top Japanese learning apps only support
+  We built NihongoHub because 5 of the top Japanese learning apps only support
   English UI — yet JLPT test-takers grew 4x in Indonesia, Thailand, Vietnam
   over 3 years. This felt wrong.
 
@@ -90,11 +91,11 @@ expected_traffic: "5K-20K 単発訪問 + バックリンク（DR 85+）"
   💰 Pricing: $3.99 (id) to $9.99 (en) Pro, PPP-adjusted.
 
   🛠️ Tech stack: Vercel Serverless + Supabase + Anthropic API + 47-prefecture
-      content pipeline (coming soon).
+      family travel content pipeline (coming soon, with kid-friendly angles).
 
   🙏 Ask: Try the free quiz, feedback on what's missing for your language.
 
-  I'll be answering every comment today — AMA!
+  We'll be answering every comment today — AMA!
   ```
 
 ### D-3 〜 D-1: Twitter/X 予告 + 事前ネットワーキング

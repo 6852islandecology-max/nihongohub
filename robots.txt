@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /municipality-demo.html
+
+Sitemap: https://www.nihongo-hub.com/sitemap.xml

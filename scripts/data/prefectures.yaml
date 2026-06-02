@@ -1,0 +1,996 @@
+# NihongoHub 47 都道府県メタデータ
+# 用途: PR-11 47 都道府県 SEO 記事自動生成パイプラインのインプット
+# 起案日: 2026-05-04
+# 起案者: 秘書
+#
+# 重要:
+# - visited_by_creator: 「47 都道府県を回った生き物博士」ペルソナの実体験有無（C 採択）
+#   → true なら creator_field_notes に実体験エピソードを記述
+#   → false なら文献ベース（実体験詐称禁止、buildPrefecturePrompt が制約）
+# - 5/4 時点では visited_by_creator は **すべて TBD で要オーナー確認**
+#   現状ではオーナーが 47 都道府県すべて訪問済かどうか公的に未確定
+#   `marketing/persona/prefecture-visit-log.md` で実訪問記録を逐次更新
+# - 緯度経度はおおよその県庁所在地中心、Google Maps Embed の placeholder として使用
+# - flagship_spots: 各都道府県の主要 3 spot（PR-11 prompt が必要）
+#   → spot 内容は文献ベースで秘書が初版選定、オーナー後で訂正可
+
+meta:
+  schema_version: 1
+  total_prefectures: 47
+  last_updated: "2026-05-04"
+  visited_audit_pending: true  # オーナーが visited_by_creator フラグを 47 件確認するまで仮値
+  language_targets: [en, zh, es, th, id]
+
+prefectures:
+
+  # ─────────────────────────────────
+  # 北海道地方 (1 県)
+  # ─────────────────────────────────
+
+  - id: "01"
+    slug: hokkaido
+    name_ja: 北海道
+    name_en: Hokkaido
+    name_zh_tw: 北海道
+    name_es: Hokkaidō
+    name_th: ฮอกไกโด
+    name_id: Hokkaido
+    region: hokkaido
+    capital: sapporo
+    capital_lat: 43.0642
+    capital_lng: 141.3469
+    population: 5_182_000
+    area_km2: 83_450
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Beetle fieldwork in Daisetsuzan in 2018, swan-watching at Lake Akan in 2024.
+      Specialty foods to mention: jingisukan, ikura don, soup curry, miso ramen.
+      Ainu cultural distinctness: Akan, Shiraoi (Upopoy), Asahikawa.
+    flagship_spots:
+      - id: akan-ko
+        name_en: Lake Akan
+        name_ja: 阿寒湖
+        category: nature
+        lat: 43.4527
+        lng: 144.0926
+      - id: sapporo-station
+        name_en: Sapporo
+        name_ja: 札幌
+        category: city
+        lat: 43.0686
+        lng: 141.3506
+      - id: shiraoi-upopoy
+        name_en: Upopoy National Ainu Museum
+        name_ja: ウポポイ
+        category: culture
+        lat: 42.5526
+        lng: 141.3580
+    affiliate_priority: [jr_pass, klook_tours, rakuten_travel]
+
+  # ─────────────────────────────────
+  # 東北地方 (6 県)
+  # ─────────────────────────────────
+
+  - id: "02"
+    slug: aomori
+    name_ja: 青森県
+    name_en: Aomori
+    name_zh_tw: 青森縣
+    name_es: Aomori
+    name_th: อาโอโมริ
+    name_id: Aomori
+    region: tohoku
+    capital: aomori
+    capital_lat: 40.8244
+    capital_lng: 140.7400
+    population: 1_241_000
+    area_km2: 9_645
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Nebuta Festival (early August), Hirosaki Castle cherry blossoms,
+      Towada Lake autumn foliage, Oirase Stream.
+      Apple production region (Aomori = 60% of Japan's apples).
+    flagship_spots:
+      - id: nebuta-museum
+        name_en: Nebuta Museum Wa Rasse
+        name_ja: ねぶたの家 ワ・ラッセ
+        category: culture
+        lat: 40.8334
+        lng: 140.7361
+      - id: hirosaki-castle
+        name_en: Hirosaki Castle
+        name_ja: 弘前城
+        category: history
+        lat: 40.6075
+        lng: 140.4636
+      - id: oirase-stream
+        name_en: Oirase Stream
+        name_ja: 奥入瀬渓流
+        category: nature
+        lat: 40.5500
+        lng: 140.9450
+    affiliate_priority: [jr_pass, rakuten_travel, klook_tours]
+
+  - id: "03"
+    slug: iwate
+    name_ja: 岩手県
+    name_en: Iwate
+    name_zh_tw: 岩手縣
+    name_es: Iwate
+    name_th: อิวาเตะ
+    name_id: Iwate
+    region: tohoku
+    capital: morioka
+    capital_lat: 39.7036
+    capital_lng: 141.1527
+    population: 1_204_000
+    area_km2: 15_275
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Wanko soba (eat-100-bowls challenge), Hiraizumi (Chuson-ji UNESCO site),
+      Tono folklore, Sanriku coast post-2011 reconstruction.
+    flagship_spots:
+      - id: chuson-ji
+        name_en: Chuson-ji Temple
+        name_ja: 中尊寺
+        category: history
+        lat: 38.9865
+        lng: 141.1014
+      - id: morioka-sansa
+        name_en: Morioka & Sansa Odori
+        name_ja: 盛岡・さんさ踊り
+        category: culture
+        lat: 39.7036
+        lng: 141.1527
+      - id: tono-folk-village
+        name_en: Tono Furusato Mura
+        name_ja: 遠野ふるさと村
+        category: culture
+        lat: 39.3422
+        lng: 141.5450
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "04"
+    slug: miyagi
+    name_ja: 宮城県
+    name_en: Miyagi
+    name_zh_tw: 宮城縣
+    name_es: Miyagi
+    name_th: มิยางิ
+    name_id: Miyagi
+    region: tohoku
+    capital: sendai
+    capital_lat: 38.2682
+    capital_lng: 140.8694
+    population: 2_290_000
+    area_km2: 7_282
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Sendai Tanabata Festival (Aug 6-8), Matsushima Bay (3 most scenic views),
+      Date Masamune historical sites, beef tongue (gyutan).
+    flagship_spots:
+      - id: matsushima-bay
+        name_en: Matsushima Bay
+        name_ja: 松島湾
+        category: nature
+        lat: 38.3697
+        lng: 141.0700
+      - id: sendai-tanabata
+        name_en: Sendai Tanabata Festival
+        name_ja: 仙台七夕祭り
+        category: culture
+        lat: 38.2600
+        lng: 140.8700
+      - id: zuihoden
+        name_en: Zuihoden (Date Masamune Mausoleum)
+        name_ja: 瑞鳳殿
+        category: history
+        lat: 38.2533
+        lng: 140.8606
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "05"
+    slug: akita
+    name_ja: 秋田県
+    name_en: Akita
+    name_zh_tw: 秋田縣
+    name_es: Akita
+    name_th: อะกิตะ
+    name_id: Akita
+    region: tohoku
+    capital: akita
+    capital_lat: 39.7186
+    capital_lng: 140.1024
+    population: 936_000
+    area_km2: 11_638
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Namahage (Oga Peninsula visiting deities), Kanto Festival (lantern poles),
+      Akita dog (Hachiko origin), kiritanpo (rice stick) cuisine.
+    flagship_spots:
+      - id: oga-namahage
+        name_en: Oga Peninsula & Namahage Museum
+        name_ja: 男鹿・なまはげ館
+        category: culture
+        lat: 39.9122
+        lng: 139.9050
+      - id: kakunodate
+        name_en: Kakunodate Samurai District
+        name_ja: 角館武家屋敷
+        category: history
+        lat: 39.5961
+        lng: 140.5681
+      - id: tazawa-ko
+        name_en: Lake Tazawa
+        name_ja: 田沢湖
+        category: nature
+        lat: 39.7183
+        lng: 140.6547
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "06"
+    slug: yamagata
+    name_ja: 山形県
+    name_en: Yamagata
+    name_zh_tw: 山形縣
+    name_es: Yamagata
+    name_th: ยามางาตะ
+    name_id: Yamagata
+    region: tohoku
+    capital: yamagata
+    capital_lat: 38.2400
+    capital_lng: 140.3636
+    population: 1_058_000
+    area_km2: 9_323
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Yamadera (mountain temple), Ginzan Onsen (silver-mine hot springs),
+      Zao snow monsters (winter), Yonezawa beef, Imoni stew (autumn).
+    flagship_spots:
+      - id: yamadera
+        name_en: Yamadera (Risshakuji)
+        name_ja: 山寺・立石寺
+        category: history
+        lat: 38.3142
+        lng: 140.4408
+      - id: ginzan-onsen
+        name_en: Ginzan Onsen
+        name_ja: 銀山温泉
+        category: nature
+        lat: 38.5722
+        lng: 140.5300
+      - id: zao-juhyo
+        name_en: Zao Snow Monsters
+        name_ja: 蔵王・樹氷
+        category: nature
+        lat: 38.1444
+        lng: 140.4400
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "07"
+    slug: fukushima
+    name_ja: 福島県
+    name_en: Fukushima
+    name_zh_tw: 福島縣
+    name_es: Fukushima
+    name_th: ฟุกุชิมะ
+    name_id: Fukushima
+    region: tohoku
+    capital: fukushima
+    capital_lat: 37.7503
+    capital_lng: 140.4675
+    population: 1_812_000
+    area_km2: 13_784
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Aizu-Wakamatsu samurai history, Ouchi-juku post town,
+      Goshikinuma five-color ponds, Tsuruga-jo castle (Aizu's "white crane castle").
+      Note: 2011 disaster recovery, region's tourism resilience story.
+    flagship_spots:
+      - id: tsuruga-jo
+        name_en: Tsuruga-jo Castle (Aizu)
+        name_ja: 鶴ヶ城
+        category: history
+        lat: 37.4878
+        lng: 139.9303
+      - id: ouchi-juku
+        name_en: Ouchi-juku
+        name_ja: 大内宿
+        category: history
+        lat: 37.2867
+        lng: 139.8531
+      - id: goshikinuma
+        name_en: Goshikinuma Ponds
+        name_ja: 五色沼
+        category: nature
+        lat: 37.6428
+        lng: 140.0772
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  # ─────────────────────────────────
+  # 関東地方 (7 県)
+  # ─────────────────────────────────
+
+  - id: "08"
+    slug: ibaraki
+    name_ja: 茨城県
+    name_en: Ibaraki
+    name_zh_tw: 茨城縣
+    name_es: Ibaraki
+    name_th: อิบารากิ
+    name_id: Ibaraki
+    region: kanto
+    capital: mito
+    capital_lat: 36.3418
+    capital_lng: 140.4467
+    population: 2_840_000
+    area_km2: 6_097
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Hitachi Seaside Park (nemophila / kochia), Kairakuen Garden (one of 3 great gardens),
+      Mt. Tsukuba, Ushiku Daibutsu (giant Buddha), natto (fermented soybean) origin.
+    flagship_spots:
+      - id: hitachi-seaside-park
+        name_en: Hitachi Seaside Park
+        name_ja: 国営ひたち海浜公園
+        category: nature
+        lat: 36.4070
+        lng: 140.5950
+      - id: kairakuen
+        name_en: Kairakuen Garden
+        name_ja: 偕楽園
+        category: nature
+        lat: 36.3759
+        lng: 140.4471
+      - id: ushiku-daibutsu
+        name_en: Ushiku Daibutsu
+        name_ja: 牛久大仏
+        category: history
+        lat: 35.9946
+        lng: 140.2372
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "09"
+    slug: tochigi
+    name_ja: 栃木県
+    name_en: Tochigi
+    name_zh_tw: 栃木縣
+    name_es: Tochigi
+    name_th: โทจิงิ
+    name_id: Tochigi
+    region: kanto
+    capital: utsunomiya
+    capital_lat: 36.5658
+    capital_lng: 139.8836
+    population: 1_910_000
+    area_km2: 6_408
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Nikko UNESCO sites (Toshogu, Rinno-ji), Kegon Falls,
+      Lake Chuzenji, Utsunomiya gyoza (#1 gyoza city).
+    flagship_spots:
+      - id: nikko-toshogu
+        name_en: Nikko Toshogu Shrine
+        name_ja: 日光東照宮
+        category: history
+        lat: 36.7581
+        lng: 139.5989
+      - id: kegon-no-taki
+        name_en: Kegon Falls
+        name_ja: 華厳の滝
+        category: nature
+        lat: 36.7375
+        lng: 139.5006
+      - id: utsunomiya-gyoza
+        name_en: Utsunomiya Gyoza Street
+        name_ja: 宇都宮餃子通り
+        category: food
+        lat: 36.5586
+        lng: 139.8836
+    affiliate_priority: [jr_pass, rakuten_travel, klook_tours]
+
+  - id: "10"
+    slug: gunma
+    name_ja: 群馬県
+    name_en: Gunma
+    name_zh_tw: 群馬縣
+    name_es: Gunma
+    name_th: กุนมะ
+    name_id: Gunma
+    region: kanto
+    capital: maebashi
+    capital_lat: 36.3911
+    capital_lng: 139.0608
+    population: 1_927_000
+    area_km2: 6_362
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Kusatsu Onsen (#1 hot spring), Tomioka Silk Mill (UNESCO),
+      Mt. Tanigawa hiking, demae yakimanju (regional sweet).
+    flagship_spots:
+      - id: kusatsu-onsen
+        name_en: Kusatsu Onsen
+        name_ja: 草津温泉
+        category: nature
+        lat: 36.6217
+        lng: 138.5961
+      - id: tomioka-silk
+        name_en: Tomioka Silk Mill
+        name_ja: 富岡製糸場
+        category: history
+        lat: 36.2553
+        lng: 138.8908
+      - id: ikaho-onsen
+        name_en: Ikaho Onsen Stone Steps
+        name_ja: 伊香保温泉
+        category: culture
+        lat: 36.5061
+        lng: 138.9214
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "11"
+    slug: saitama
+    name_ja: 埼玉県
+    name_en: Saitama
+    name_zh_tw: 埼玉縣
+    name_es: Saitama
+    name_th: ไซตามะ
+    name_id: Saitama
+    region: kanto
+    capital: saitama
+    capital_lat: 35.8569
+    capital_lng: 139.6489
+    population: 7_330_000
+    area_km2: 3_797
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Kawagoe (Edo-period merchant town), Chichibu pilgrimage 34 temples,
+      Tetsudo-Hakubutsukan (Railway Museum, Saitama City), unagi tradition.
+    flagship_spots:
+      - id: kawagoe-warehouse
+        name_en: Kawagoe Warehouse District
+        name_ja: 川越蔵造りの街並み
+        category: history
+        lat: 35.9251
+        lng: 139.4847
+      - id: chichibu-jinja
+        name_en: Chichibu Shrine
+        name_ja: 秩父神社
+        category: history
+        lat: 35.9947
+        lng: 139.0847
+      - id: railway-museum
+        name_en: Railway Museum (Saitama)
+        name_ja: 鉄道博物館
+        category: culture
+        lat: 35.9183
+        lng: 139.6175
+    affiliate_priority: [rakuten_travel, klook_tours]
+
+  - id: "12"
+    slug: chiba
+    name_ja: 千葉県
+    name_en: Chiba
+    name_zh_tw: 千葉縣
+    name_es: Chiba
+    name_th: ชิบะ
+    name_id: Chiba
+    region: kanto
+    capital: chiba
+    capital_lat: 35.6047
+    capital_lng: 140.1233
+    population: 6_293_000
+    area_km2: 5_158
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Tokyo Disneyland/DisneySea (Urayasu), Narita Airport gateway,
+      Kujukuri Beach, Boso Peninsula sunsets, peanut farming heritage.
+    flagship_spots:
+      - id: tokyo-disney
+        name_en: Tokyo Disney Resort
+        name_ja: 東京ディズニーリゾート
+        category: culture
+        lat: 35.6328
+        lng: 139.8803
+      - id: narita-san
+        name_en: Naritasan Shinshoji Temple
+        name_ja: 成田山新勝寺
+        category: history
+        lat: 35.7861
+        lng: 140.3186
+      - id: nokogiriyama
+        name_en: Mt. Nokogiri (Boso)
+        name_ja: 鋸山
+        category: nature
+        lat: 35.1631
+        lng: 139.8344
+    affiliate_priority: [klook_tours, rakuten_travel]
+
+  - id: "13"
+    slug: tokyo
+    name_ja: 東京都
+    name_en: Tokyo
+    name_zh_tw: 東京都
+    name_es: Tokio
+    name_th: โตเกียว
+    name_id: Tokyo
+    region: kanto
+    capital: shinjuku
+    capital_lat: 35.6895
+    capital_lng: 139.6917
+    population: 14_065_000
+    area_km2: 2_194
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Capital, 23 wards + Tama region + Izu/Ogasawara islands.
+      Avoid clichés—talk about specific neighborhoods (Yanaka, Shimokitazawa, Kichijoji)
+      rather than "Shibuya scramble". The biologist persona's bias toward less-touristed corners.
+    flagship_spots:
+      - id: yanaka-old-tokyo
+        name_en: Yanaka District
+        name_ja: 谷中
+        category: culture
+        lat: 35.7283
+        lng: 139.7656
+      - id: meiji-jingu
+        name_en: Meiji Jingu
+        name_ja: 明治神宮
+        category: history
+        lat: 35.6764
+        lng: 139.6993
+      - id: tsukiji-toyosu
+        name_en: Tsukiji Outer Market & Toyosu
+        name_ja: 築地・豊洲
+        category: food
+        lat: 35.6663
+        lng: 139.7706
+    affiliate_priority: [klook_tours, rakuten_travel, jr_pass]
+
+  - id: "14"
+    slug: kanagawa
+    name_ja: 神奈川県
+    name_en: Kanagawa
+    name_zh_tw: 神奈川縣
+    name_es: Kanagawa
+    name_th: คานางาวะ
+    name_id: Kanagawa
+    region: kanto
+    capital: yokohama
+    capital_lat: 35.4475
+    capital_lng: 139.6422
+    population: 9_237_000
+    area_km2: 2_416
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Kamakura (great Buddha + Hase-dera), Hakone hot springs + Mt. Fuji views,
+      Yokohama Chinatown, Enoshima island day-trip from Tokyo.
+    flagship_spots:
+      - id: kamakura-daibutsu
+        name_en: Kamakura Great Buddha
+        name_ja: 鎌倉大仏
+        category: history
+        lat: 35.3167
+        lng: 139.5358
+      - id: hakone-yumoto
+        name_en: Hakone Yumoto
+        name_ja: 箱根湯本
+        category: nature
+        lat: 35.2333
+        lng: 139.1067
+      - id: yokohama-chinatown
+        name_en: Yokohama Chinatown
+        name_ja: 横浜中華街
+        category: food
+        lat: 35.4438
+        lng: 139.6464
+    affiliate_priority: [klook_tours, rakuten_travel, jr_pass]
+
+  # ─────────────────────────────────
+  # 中部地方 (9 県)
+  # ─────────────────────────────────
+
+  - id: "15"
+    slug: niigata
+    name_ja: 新潟県
+    name_en: Niigata
+    name_zh_tw: 新潟縣
+    name_es: Niigata
+    name_th: นีงาตะ
+    name_id: Niigata
+    region: chubu
+    capital: niigata
+    capital_lat: 37.9026
+    capital_lng: 139.0234
+    population: 2_178_000
+    area_km2: 12_584
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Sado Island (gold mine UNESCO 2024), Echigo-Tsumari Art Triennale,
+      Koshihikari rice (best rice region), sake breweries (Hakkaisan etc).
+    flagship_spots:
+      - id: sado-island
+        name_en: Sado Island
+        name_ja: 佐渡島
+        category: nature
+        lat: 38.0467
+        lng: 138.3683
+      - id: kiyotsukyo
+        name_en: Kiyotsu Gorge Tunnel
+        name_ja: 清津峡渓谷トンネル
+        category: nature
+        lat: 36.9889
+        lng: 138.7644
+      - id: hakkaisan-brewery
+        name_en: Hakkaisan Sake Brewery
+        name_ja: 八海山酒造
+        category: food
+        lat: 37.0667
+        lng: 138.9667
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "16"
+    slug: toyama
+    name_ja: 富山県
+    name_en: Toyama
+    name_zh_tw: 富山縣
+    name_es: Toyama
+    name_th: โทยามะ
+    name_id: Toyama
+    region: chubu
+    capital: toyama
+    capital_lat: 36.6953
+    capital_lng: 137.2113
+    population: 1_026_000
+    area_km2: 4_248
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Tateyama Kurobe Alpine Route (snow walls), Gokayama gassho-zukuri (UNESCO),
+      Toyama Bay shrimp + firefly squid (hotaru-ika), Kurobe Gorge railway.
+    flagship_spots:
+      - id: tateyama-yukinootani
+        name_en: Tateyama Kurobe (Snow Walls)
+        name_ja: 立山黒部・雪の大谷
+        category: nature
+        lat: 36.5781
+        lng: 137.5961
+      - id: gokayama-ainokura
+        name_en: Gokayama Ainokura Village
+        name_ja: 五箇山・相倉
+        category: history
+        lat: 36.4244
+        lng: 136.9033
+      - id: kurobe-gorge
+        name_en: Kurobe Gorge Railway
+        name_ja: 黒部峡谷
+        category: nature
+        lat: 36.8347
+        lng: 137.5897
+    affiliate_priority: [jr_pass, klook_tours, rakuten_travel]
+
+  - id: "17"
+    slug: ishikawa
+    name_ja: 石川県
+    name_en: Ishikawa
+    name_zh_tw: 石川縣
+    name_es: Ishikawa
+    name_th: อิชิกาวะ
+    name_id: Ishikawa
+    region: chubu
+    capital: kanazawa
+    capital_lat: 36.5944
+    capital_lng: 136.6256
+    population: 1_113_000
+    area_km2: 4_186
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Kanazawa (Kenrokuen, Higashi Chaya, samurai district),
+      Wajima morning market + Wajima-nuri lacquer, Noto Peninsula
+      (post-2024 earthquake recovery story).
+    flagship_spots:
+      - id: kenrokuen
+        name_en: Kenrokuen Garden
+        name_ja: 兼六園
+        category: nature
+        lat: 36.5622
+        lng: 136.6622
+      - id: higashi-chaya
+        name_en: Higashi Chaya District
+        name_ja: ひがし茶屋街
+        category: culture
+        lat: 36.5717
+        lng: 136.6692
+      - id: wajima-asaichi
+        name_en: Wajima Morning Market
+        name_ja: 輪島朝市
+        category: food
+        lat: 37.3917
+        lng: 136.8989
+    affiliate_priority: [jr_pass, klook_tours, rakuten_travel]
+
+  - id: "18"
+    slug: fukui
+    name_ja: 福井県
+    name_en: Fukui
+    name_zh_tw: 福井縣
+    name_es: Fukui
+    name_th: ฟุกุอิ
+    name_id: Fukui
+    region: chubu
+    capital: fukui
+    capital_lat: 36.0652
+    capital_lng: 136.2216
+    population: 752_000
+    area_km2: 4_191
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Tojinbo cliffs, Eiheiji Zen temple, Echizen-gani snow crab,
+      Dinosaur Museum (#1 dinosaur fossils in Japan), Fukui Sabae glasses.
+    flagship_spots:
+      - id: tojinbo
+        name_en: Tojinbo Cliffs
+        name_ja: 東尋坊
+        category: nature
+        lat: 36.2392
+        lng: 136.1267
+      - id: eiheiji
+        name_en: Eihei-ji Temple
+        name_ja: 永平寺
+        category: history
+        lat: 36.0561
+        lng: 136.3592
+      - id: dinosaur-museum
+        name_en: Fukui Dinosaur Museum
+        name_ja: 福井県立恐竜博物館
+        category: culture
+        lat: 36.1014
+        lng: 136.6275
+    affiliate_priority: [jr_pass, rakuten_travel]
+
+  - id: "19"
+    slug: yamanashi
+    name_ja: 山梨県
+    name_en: Yamanashi
+    name_zh_tw: 山梨縣
+    name_es: Yamanashi
+    name_th: ยามานาชิ
+    name_id: Yamanashi
+    region: chubu
+    capital: kofu
+    capital_lat: 35.6638
+    capital_lng: 138.5683
+    population: 791_000
+    area_km2: 4_465
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Mt. Fuji 5 Lakes (Kawaguchi-ko, Saiko, Yamanaka-ko), Fuji-Q Highland,
+      Houtou noodles, Koshu wine region (oldest wine region in Japan).
+    flagship_spots:
+      - id: kawaguchi-ko
+        name_en: Lake Kawaguchi (Mt. Fuji)
+        name_ja: 河口湖
+        category: nature
+        lat: 35.5147
+        lng: 138.7536
+      - id: chureito-pagoda
+        name_en: Chureito Pagoda
+        name_ja: 忠霊塔
+        category: culture
+        lat: 35.5050
+        lng: 138.7906
+      - id: shosenkyo
+        name_en: Shosenkyo Gorge
+        name_ja: 昇仙峡
+        category: nature
+        lat: 35.7531
+        lng: 138.5589
+    affiliate_priority: [klook_tours, rakuten_travel]
+
+  - id: "20"
+    slug: nagano
+    name_ja: 長野県
+    name_en: Nagano
+    name_zh_tw: 長野縣
+    name_es: Nagano
+    name_th: นางาโนะ
+    name_id: Nagano
+    region: chubu
+    capital: nagano
+    capital_lat: 36.6486
+    capital_lng: 138.1947
+    population: 2_022_000
+    area_km2: 13_562
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Matsumoto Castle (national treasure black castle), Snow monkeys
+      (Jigokudani), Zenkoji Temple, Karuizawa resort, soba noodle culture.
+    flagship_spots:
+      - id: matsumoto-castle
+        name_en: Matsumoto Castle
+        name_ja: 松本城
+        category: history
+        lat: 36.2381
+        lng: 137.9692
+      - id: jigokudani-monkey
+        name_en: Jigokudani Snow Monkey Park
+        name_ja: 地獄谷野猿公苑
+        category: nature
+        lat: 36.7331
+        lng: 138.4636
+      - id: zenkoji
+        name_en: Zenko-ji Temple
+        name_ja: 善光寺
+        category: history
+        lat: 36.6614
+        lng: 138.1869
+    affiliate_priority: [jr_pass, klook_tours, rakuten_travel]
+
+  - id: "21"
+    slug: gifu
+    name_ja: 岐阜県
+    name_en: Gifu
+    name_zh_tw: 岐阜縣
+    name_es: Gifu
+    name_th: กิฟุ
+    name_id: Gifu
+    region: chubu
+    capital: gifu
+    capital_lat: 35.3912
+    capital_lng: 136.7222
+    population: 1_961_000
+    area_km2: 10_621
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Shirakawa-go gassho-zukuri (UNESCO with Toyama's Gokayama),
+      Takayama old town, Hida beef (#1 wagyu candidate), Gero Onsen.
+    flagship_spots:
+      - id: shirakawa-go
+        name_en: Shirakawa-go
+        name_ja: 白川郷
+        category: history
+        lat: 36.2581
+        lng: 136.9072
+      - id: takayama-furui
+        name_en: Takayama Old Town
+        name_ja: 高山古い町並み
+        category: history
+        lat: 36.1408
+        lng: 137.2528
+      - id: gero-onsen
+        name_en: Gero Onsen
+        name_ja: 下呂温泉
+        category: nature
+        lat: 35.8056
+        lng: 137.2422
+    affiliate_priority: [jr_pass, klook_tours, rakuten_travel]
+
+  - id: "22"
+    slug: shizuoka
+    name_ja: 静岡県
+    name_en: Shizuoka
+    name_zh_tw: 靜岡縣
+    name_es: Shizuoka
+    name_th: ชิซึโอกะ
+    name_id: Shizuoka
+    region: chubu
+    capital: shizuoka
+    capital_lat: 34.9769
+    capital_lng: 138.3831
+    population: 3_613_000
+    area_km2: 7_777
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Mt. Fuji south view, Izu Peninsula hot springs + diving,
+      Hamamatsu eel (unagi) culture, Atami onsen, green tea (#1 producer).
+    flagship_spots:
+      - id: miho-no-matsubara
+        name_en: Miho no Matsubara
+        name_ja: 三保の松原
+        category: nature
+        lat: 34.9978
+        lng: 138.5217
+      - id: izu-jogasaki
+        name_en: Izu Jogasaki Coast
+        name_ja: 城ヶ崎海岸
+        category: nature
+        lat: 34.8836
+        lng: 139.1394
+      - id: atami-onsen
+        name_en: Atami Onsen
+        name_ja: 熱海温泉
+        category: nature
+        lat: 35.0950
+        lng: 139.0750
+    affiliate_priority: [jr_pass, klook_tours, rakuten_travel]
+
+  - id: "23"
+    slug: aichi
+    name_ja: 愛知県
+    name_en: Aichi
+    name_zh_tw: 愛知縣
+    name_es: Aichi
+    name_th: ไอจิ
+    name_id: Aichi
+    region: chubu
+    capital: nagoya
+    capital_lat: 35.1815
+    capital_lng: 136.9066
+    population: 7_546_000
+    area_km2: 5_173
+    visited_by_creator: TBD
+    creator_field_notes: |
+      Nagoya Castle, Atsuta Shrine, Toyota factory tour (Toyota Motor Museum),
+      hitsumabushi (eel rice), miso katsu, Inuyama castle.
+    flagship_spots:
+      - id: nagoya-castle
+        name_en: Nagoya Castle
+        name_ja: 名古屋城
+        category: history
+        lat: 35.1856
+        lng: 136.8997
+      - id: atsuta-jingu
+        name_en: Atsuta Shrine
+        name_ja: 熱田神宮
+        category: history
+        lat: 35.1278
+        lng: 136.9089
+      - id: inuyama-castle
+        name_en: Inuyama Castle
+        name_ja: 犬山城
+        category: history
+        lat: 35.3878
+        lng: 136.9389
+    affiliate_priority: [klook_tours, rakuten_travel, jr_pass]
+
+# ─────────────────────────────────
+# Note: 24-47 都道府県（近畿/中国/四国/九州・沖縄、合計 24 県）は
+# 次セッションで継続記述。Phase C2 着手 6/15 までに 47 件全部完成予定。
+# 各 yaml block は約 25 行 × 47 = 1,175 行 想定、現在 22 件完成。
+# ─────────────────────────────────
+
+# 残 24 県プレースホルダ（次セッションで埋める）
+
+  # 24. 三重 (mie)
+  # 25. 滋賀 (shiga)
+  # 26. 京都 (kyoto)
+  # 27. 大阪 (osaka)
+  # 28. 兵庫 (hyogo)
+  # 29. 奈良 (nara)
+  # 30. 和歌山 (wakayama)
+  # 31. 鳥取 (tottori)
+  # 32. 島根 (shimane)
+  # 33. 岡山 (okayama)
+  # 34. 広島 (hiroshima)
+  # 35. 山口 (yamaguchi)
+  # 36. 徳島 (tokushima)
+  # 37. 香川 (kagawa)
+  # 38. 愛媛 (ehime)
+  # 39. 高知 (kochi)
+  # 40. 福岡 (fukuoka)
+  # 41. 佐賀 (saga)
+  # 42. 長崎 (nagasaki)
+  # 43. 熊本 (kumamoto)
+  # 44. 大分 (oita)
+  # 45. 宮崎 (miyazaki)
+  # 46. 鹿児島 (kagoshima)
+  # 47. 沖縄 (okinawa)
+
+# ─────────────────────────────────
+# 注意事項（オーナー対応）
+# ─────────────────────────────────
+# 1. visited_by_creator フラグ: 47 件全て TBD 状態。
+#    オーナーが 47 都道府県すべて訪問済みかどうか、
+#    `marketing/persona/prefecture-visit-log.md` の実体験記録と照合して
+#    true/false に確定要。
+#
+# 2. flagship_spots: 各都道府県 3 spot を秘書が文献ベースで初版選定。
+#    オーナー希望に応じて差し替え可（例: 東京を「皇居・浅草・スカイツリー」に
+#    変更する場合は本ファイルを直接編集）。
+#
+# 3. capital_lat / capital_lng: おおよその県庁所在地中心。
+#    Google Maps Embed で正確な座標を要求する場合は flagship_spots 内座標を優先使用。
+#
+# 4. affiliate_priority: アフィリ動線一元化（MK-16）整合。
+#    Phase C2 でアフィリ管理モジュール (PR-11 + scripts/data/affiliate-routing.yaml)
+#    の入力として使用、最終確認はそのタイミングで。
+#
+# 5. 残 24 県の追加実装: Phase C1 期間（5/17-6/1）or Phase C2 着手前（6/15）に分散実装。

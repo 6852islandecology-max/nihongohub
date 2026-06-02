@@ -1,0 +1,43 @@
+/* Shared styles for NihongoHub prefecture guides (/blog). RPG-tinged, light, readable. */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;
+  --muted:#7a6a52;--soft:#ddcfb6;--green:#3fae6b;
+  --pixel:'Press Start 2P',monospace;--dot:'DotGothic16',sans-serif;
+}
+body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.7;
+  background:var(--paper);}
+.bnav{position:sticky;top:0;z-index:10;background:#0d0a14;border-bottom:3px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:center;padding:11px 20px;gap:12px;flex-wrap:wrap}
+.bnav a{color:#fdfaf3;text-decoration:none;font-family:var(--dot);font-size:15px}
+.bnav .logo span{color:var(--red)}
+.bnav .cta{font-family:var(--pixel);font-size:9px;background:var(--red);color:#fff;padding:9px 13px;border-radius:3px}
+.wrap{max-width:760px;margin:0 auto;padding:30px 20px 60px}
+.tag{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:1px}
+h1{font-family:var(--dot);font-size:clamp(28px,5vw,42px);line-height:1.15;margin:12px 0 8px}
+h2{font-family:var(--dot);font-size:22px;margin:30px 0 10px;border-bottom:2px solid var(--soft);padding-bottom:5px}
+.lede{font-size:18px;color:var(--muted);margin:8px 0 18px}
+p{margin:12px 0}
+ul{margin:10px 0 10px 22px}li{margin:5px 0}
+a{color:var(--red)}
+.jpbox{background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:14px 16px;margin:18px 0}
+.jpbox b{font-family:var(--pixel);font-size:9px;color:var(--green);display:block;margin-bottom:6px}
+.jp{font-family:'Noto Sans JP',sans-serif;font-size:17px}
+.romaji{color:var(--muted);font-size:14px}
+.aff{background:#fff7e6;border:2px solid var(--gold);border-radius:6px;padding:12px 16px;margin:20px 0}
+.aff .pr{font-family:var(--pixel);font-size:8px;background:var(--gold);color:#fff;padding:2px 6px;border-radius:3px}
+.aff a{display:inline-block;margin:6px 12px 0 0;font-weight:600}
+.disclose{font-size:12.5px;color:var(--muted);margin-top:8px}
+.cta-box{text-align:center;margin:34px 0 10px}
+.cta-box a{display:inline-block;font-family:var(--pixel);font-size:11px;background:var(--red);color:#fff;
+  text-decoration:none;padding:14px 20px;border-radius:4px;border-bottom:3px solid #7e1c12}
+.sources{font-size:12.5px;color:var(--muted);margin-top:30px;border-top:1px dashed var(--soft);padding-top:12px}
+.sources a{color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:20px}
+.bcard{display:block;background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:16px;
+  text-decoration:none;color:var(--ink);box-shadow:3px 4px 0 rgba(22,16,10,.14)}
+.bcard:hover{transform:translateY(-2px)}
+.bcard .bk{font-family:'Noto Sans JP',sans-serif;font-size:20px;font-weight:700}
+.bcard .br{font-family:var(--pixel);font-size:9px;color:var(--gold);margin-top:4px}
+.bcard p{font-size:13.5px;color:var(--muted);margin:8px 0 0}

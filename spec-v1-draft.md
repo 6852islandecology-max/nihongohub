@@ -23,6 +23,12 @@ based_on: "nihongohub-competitive-analysis.md (2026-04-22 本調査)"
 > 3. **SRS 機能を Phase C1 スコープに正式追加** (Bunpro/jpdb との競争優位、SLA 学術エビデンス: kanji 90 日 +37% retention)
 > 4. **ミニチャット入口 + 3 層モダンキャッシュは §12 Phase B 受入基準から外し、Phase C1 後送り** (Phase B 集中枠の侵食回避、Migaku Patreon 離脱の前例警告と整合)
 > 5. **生活ハンドブック単発 PDF 固定 + 販売開始 6/14 前倒し** (新 Specified Residence Card 発行ピーク捕捉、行政書士法業務性回避)
+>
+> **🎯 2026-05-04 確定 (PR-15 Opt-in 採択)**: Free Trial 型は **Opt-in (クレカ不要、ユーザー明示申込)** で実装。業界平均転換率 17.8% を採用、Opt-out (49.9%) は法的リスク + 自動課金トラブルを避けるため不採択。Phase D で AB テスト判断は別途。
+>
+> **🎯 2026-05-04 確定 (PR-25 アーキ A)**: Japan Life Quiz Mode は案 A (既存 `pregenerated_quiz` に `quiz_mode` カラム追加、6-8h)。Phase C1 (5/17-) で実装着手。
+>
+> **🎯 2026-05-04 確定 (Substack 名)**: "47 Notes from Japan" (v2 第 2 候補、23 点)。Phase C1 期間中の MK-12 で開設 (5/24)。
 
 ---
 
@@ -78,7 +84,7 @@ Anthropic Haiku 4.5 による原創問題生成と 5 言語 UI で、JLPT 受験
 - [ ] クイズ履歴保存（DB、8 節で詳細、v1.5）
 - [ ] ニュースレター登録（ConvertKit）
 - [ ] 価格ページに **vs Migaku / vs NativShark 比較表**（競合調査の提案）
-- [ ] **🆕 LP Hero 改修**: Lifetime $149 主訴求 + 研究者ブランド (Yuri Fukuda, PhD candidate at Toho University) + Free Trial 訴求 ← 2026-04-30 夜 戦略反転採択
+- [ ] **🆕 LP Hero 改修**: Lifetime $149 主訴求 + Ikimono Hakase Family ペルソナ訴求（実名・所属非公開、5/5 リブランドで「a Japanese family of three who's been to all 47 prefectures together with our child」型に書き換え）+ Free Trial 訴求 ← 2026-04-30 夜 戦略反転採択 + 2026-05-05 ペルソナリブランド
 - [ ] **🆕 多言語日本生活ハンドブック ¥1,480-1,980 買い切り商品 開発**（一般教材型、3 言語ファースト = 繁中 + インドネシア + 英語、Phase D で西/タイ）
   - **🆕 販売開始 2026-06-14 前倒し** (新 Specified Residence Card 発行ピーク捕捉) ← 2026-04-30 夜 戦略反転採択
   - **🆕 単発 PDF 固定** (Web ビューワは閲覧用、サブスク化しない、行政書士法業務性回避) ← 2026-04-30 夜 戦略反転採択
@@ -660,7 +666,7 @@ Reverse Engineering: 月 ¥100 万 = MAU 30,000 = **月間 LP 訪問 300,000 必
 | **A** | **Product Hunt ローンチ** | Phase B デプロイ後 2 週間 | 3h 単発 | 5K–20K |
 | **A** | r/LearnJapanese で**回答活動** | Phase C1 | 1h | (口コミの種) |
 | **A** | KOL 提携（10 万+ 登録者、1–2 人単発） | Phase D | 1h 単発 | 5K–20K |
-| **B** | X 週 1 投稿（研究者個人アカ統合） | Phase C2 以降 | 30min | — |
+| **B** | X 週 1 投稿（Ikimono Hakase Family ハンドルで運用、研究者個人アカウントとは完全分離） | Phase C2 以降 | 30min | — |
 | **❌ 不採用** | **自前 YouTube 運用（Jepang Menarik 100 登録）** | — | — | 100–500（目標の 0.2%、ROI 劣悪） |
 | **❌ 見送り** | TikTok / YouTube Shorts / Instagram / Threads / note | — | — | 制作コスト vs 期待値悪 |
 
@@ -701,7 +707,7 @@ Google の Helpful Content Update で AI 生成コンテンツ大量投入サイ
 
 | 項目 | 実装 |
 |---|---|
-| **Author Bio** | 全記事末尾に「Written by Yuri Fukuda, PhD candidate at Toho University, researcher in behavioral ecology and AI language learning」 + 顔写真 + researchmap / ORCID リンク |
+| **Author Bio** | 全記事末尾に「Written by **Ikimono Hakase Family** — A Japanese family of three who's been to all 47 prefectures together with our child. Father is an animal-behaviour enthusiast, sharing nature observations and kid-friendly travel tips.」 + 家族後ろ姿シルエット（顔写真完全 NG）+ Substack/Medium ハンドルリンクのみ（実名・大学名・ORCID リンクは**完全非公開**、商用ペルソナと学術業界 SNS は完全分離） |
 | **Japanese source review** | 記事末尾に「Original Japanese content reviewed by the author」明示 |
 | **Citation** | 文化・歴史事実には出典リンク（JNTO 公式 / 都道府県公式サイト等、**複製ではなく参照**） |
 | **Updated date** | 各記事に `published_at` と `updated_at` を表示 |
@@ -713,7 +719,7 @@ Google の Helpful Content Update で AI 生成コンテンツ大量投入サイ
 
 ### note 活用は不採用（D15）
 - Google 資本業務提携（6.01%）で SEO 優遇の可能性はあるが、note は日本語中心で非英語圏ターゲットに不適合
-- 研究者個人ブランド用 note は別途検討（`marketing/strategy-deliberation/2026-04-19-sns-yes-or-no.md` 案 C 参照）
+- 研究者個人ブランド用 note は商用ペルソナ（Ikimono Hakase Family）とは完全分離して個別運用（5/5 リブランドにより家族商用人格と研究者人格は完全別人格、商用 LP との連動は不実施）
 
 → Marketing 部署に Phase C2 起票予定
 

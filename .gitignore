@@ -20,3 +20,6 @@ Thumbs.db
 
 # Original handoff ZIP (証跡だが Git には入れない)
 _original_handoff.zip
+
+# Stray agent scaffolding (must never be deployed)
+.claude/

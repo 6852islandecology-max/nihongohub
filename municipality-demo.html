@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Municipality Drill-down (beta) — NihongoHub Explore</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=Noto+Sans+JP:wght@400;700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;--green:#3fae6b;--muted:#7a6a52;
+    --pixel:'Press Start 2P',monospace;--dot:'DotGothic16',sans-serif}
+  body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);padding:24px;line-height:1.6}
+  .wrap{max-width:760px;margin:0 auto}
+  .tag{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:1px}
+  h1{font-family:var(--dot);font-size:30px;margin:10px 0}
+  .beta{display:inline-block;font-family:var(--pixel);font-size:8px;background:var(--red);color:#fff;padding:3px 7px;border-radius:3px;vertical-align:middle}
+  .banner{background:#fff7e6;border:2px solid var(--gold);border-radius:6px;padding:10px 14px;margin:14px 0;font-size:13.5px}
+  .stage{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  @media(max-width:640px){.stage{grid-template-columns:1fr}}
+  .mapwin{background:var(--white);border:3px solid var(--ink);border-radius:6px;box-shadow:5px 6px 0 rgba(22,16,10,.16);padding:10px}
+  svg.muni{width:100%;height:auto;display:block;background:#0d0a14;border-radius:4px}
+  .muni path{fill:#3a2f4a;stroke:#efe6d3;stroke-width:.6;cursor:pointer;transition:fill .12s}
+  .muni path:hover{fill:var(--gold)}
+  .muni path.on{fill:var(--red)}
+  .panel{background:var(--white);border:3px solid var(--ink);border-radius:6px;box-shadow:5px 6px 0 rgba(22,16,10,.16);padding:14px}
+  .panel .pk{font-family:'Noto Sans JP',sans-serif;font-size:22px;font-weight:700}
+  .panel .pr{font-family:var(--pixel);font-size:9px;color:var(--gold);margin:4px 0 10px}
+  .hint{color:var(--muted);font-size:13.5px}
+  .src{font-size:12px;color:var(--muted);margin-top:18px}
+  a{color:var(--red)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tag">▶ EXPLORE · DRILL-DOWN</div>
+  <h1>Inside the prefecture <span class="beta">BETA</span></h1>
+  <div class="banner">🧪 <b>Prototype.</b> This demonstrates the click-to-explore municipality map. The shapes below are <b>schematic placeholders</b>; production loads real boundaries from government <b>N03</b> data (see <code>data/n03/README.md</code>). Once a real <code>data/n03/&lt;pref&gt;.json</code> is built, this renderer folds into the Explore map.</div>
+
+  <div class="stage">
+    <div class="mapwin"><svg id="muni" class="muni" aria-label="Municipalities"></svg></div>
+    <div class="panel" id="panel"><div class="pk">Tap an area</div><div class="hint">Click a ward on the map to see what it's known for. (Sample: Tokyo wards.)</div></div>
+  </div>
+
+  <p class="src">Geometry format & build pipeline: <code>data/n03/README.md</code>. Production attribution: 国土数値情報（行政区域データ）国土交通省.</p>
+</div>
+
+<script>
+const PREF = "tokyo-sample"; // production: derive from ?pref= and load data/n03/<slug>.json
+const svg = document.getElementById("muni");
+const panel = document.getElementById("panel");
+
+fetch(`data/n03/${PREF}.json`)
+  .then(r => r.ok ? r.json() : Promise.reject(r.status))
+  .then(renderMunicipalities)
+  .catch(() => { panel.innerHTML = `<div class="pk">No map yet</div><div class="hint">Municipality data for this prefecture isn't built yet. The text guide still applies.</div>`; });
+
+function renderMunicipalities(data) {
+  svg.setAttribute("viewBox", data.viewBox || "0 0 100 100");
+  svg.innerHTML = data.areas.map((a, i) =>
+    `<path d="${a.d}" data-i="${i}"><title>${a.romaji} (${a.name})</title></path>`).join("");
+  svg.addEventListener("click", e => {
+    const p = e.target.closest("path"); if (!p) return;
+    svg.querySelectorAll("path").forEach(x => x.classList.remove("on"));
+    p.classList.add("on");
+    const a = data.areas[+p.dataset.i];
+    panel.innerHTML = `<div class="pk">${a.name}</div><div class="pr">${a.romaji.toUpperCase()}</div><p>${a.blurb}</p>`;
+  });
+}
+</script>
+</body>
+</html>

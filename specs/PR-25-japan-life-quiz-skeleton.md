@@ -2,9 +2,10 @@
 
 **起案日**: 2026-05-03
 **起案者**: 秘書 (オーナー指示「日本クイズ拡張」を受けて)
-**ステータス**: skeleton (Phase C1 着手前 / 5/17 以降)
+**ステータス**: **architecture-decided (案 A 採択 2026-05-04)** — Phase C1 (5/17-) で実装着手
 **優先度**: Phase C1 (PR-12 生活ハンドブック販売 6/14 と同時稼働を狙う)
-**工数試算**: 8-12h (実装) + 2-4h (シードコンテンツ生成)
+**工数試算**: **6-8h (案 A)** + 2-4h (シードコンテンツ生成)
+**アーキ確定**: **案 A** = 既存 `pregenerated_quiz` に `quiz_mode` カラム追加、最少変更、既存キャッシュ機構流用 (2026-05-04 オーナー判断)
 
 ---
 
@@ -155,13 +156,13 @@ export async function fetchCachedQuiz({ mode = 'jlpt', level, lang, lifeCategory
 
 ---
 
-## 10. Open Questions (オーナー判断保留)
+## 10. Open Questions (オーナー判断状況)
 
-1. **案 A vs 案 B vs 案 C**: 推奨は A、ただし C (別ページ /quiz/life) は SEO 最強。秘書としては A 着手 → Phase D で C 昇格判断を提案
-2. **popculture カテゴリの著作権境界**: 「アニメジャンル名」は OK だが「特定作品」はどこまで? 弁護士相談時に同時確認推奨
-3. **生活ハンドブック CTA の出し方**: rules カテゴリ末尾だけ vs 全カテゴリ末尾 vs LP 別 CTA
-4. **AB テスト設計**: 「JLPT のみ」群 vs 「JLPT + life」群で滞在時間 / Pro 転換率を比較する設計が必要
-5. **Phase C1 起点**: 5/17 着手 (Phase C1 開始日) vs 6/1 (PR-12 ハンドブック完成後同時投入) のどちらが Trust Karma Funnel と相乗するか
+1. **案 A vs 案 B vs 案 C** ✅ **2026-05-04 確定 = 案 A** (既存 `pregenerated_quiz` に `quiz_mode` カラム追加、6-8h)。Phase D で C 昇格判断は別途
+2. **popculture カテゴリの著作権境界**: 「アニメジャンル名」は OK だが「特定作品」はどこまで? 弁護士相談時に同時確認推奨（NHL-1 知人弁護士ヒアリング項目に追加）
+3. **生活ハンドブック CTA の出し方**: rules カテゴリ末尾だけ vs 全カテゴリ末尾 vs LP 別 CTA → ⏳ オーナー判断保留
+4. **AB テスト設計**: 「JLPT のみ」群 vs 「JLPT + life」群で滞在時間 / Pro 転換率を比較する設計が必要 → ⏳ Phase Interview 5/24 完了後に確定
+5. **Phase C1 起点**: 5/17 着手 (Phase C1 開始日) vs 6/1 (PR-12 ハンドブック完成後同時投入) → ⏳ v3 では 5/17 着手で Phase C1 期間に同時実装推奨
 
 ---
 

@@ -46,6 +46,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);o
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.3px;transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
+/* Echo (Shadowing) 連携リンクは金色アクセント + 🎙 アイコンで他と差別化 */
+.nav-shadowing{color:var(--gold) !important;border:1px solid rgba(200,145,31,.32);padding:5px 12px;border-radius:4px;transition:all .2s !important}
+.nav-shadowing:hover{background:rgba(200,145,31,.13);color:var(--gold) !important;border-color:var(--gold)}
 .btn-nav{background:var(--red);color:#fff;border:none;padding:9px 20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s}
 .btn-nav:hover{background:#a22b1e}
 
@@ -341,7 +344,9 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <li><a href="#learn" data-i18n="nav_learn">Learn</a></li>
     <li><a href="#culture" data-i18n="nav_culture">Culture</a></li>
     <li><a href="#travel" data-i18n="nav_travel">Travel Japan</a></li>
+    <li><a href="prefectures.html" data-i18n="nav_explore">Explore 🗾</a></li>
     <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+    <li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" class="nav-shadowing" data-i18n="nav_shadowing">🎙 Shadowing</a></li>
   </ul>
   <button class="btn-nav" data-i18n="nav_cta" onclick="scrollToPractice()">Start Free →</button>
 </nav>
@@ -574,7 +579,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
 <footer>
   <div><span class="footer-logo">Nihongo<span>Hub</span></span><p class="footer-desc" data-i18n="footer_desc">AI-powered Japanese learning for the global curious. N3 in 6 months — guaranteed.</p></div>
   <div><div class="footer-heading" data-i18n="fl1_head">Learn</div><ul class="footer-links"><li><a href="#" data-i18n="fl1_1">JLPT Practice</a></li><li><a href="#" data-i18n="fl1_2">Anime Japanese</a></li><li><a href="#" data-i18n="fl1_3">Academic Japanese</a></li><li><a href="#" data-i18n="fl1_4">Travel Phrases</a></li></ul></div>
-  <div><div class="footer-heading" data-i18n="fl2_head">Explore</div><ul class="footer-links"><li><a href="#" data-i18n="fl2_1">Culture Articles</a></li><li><a href="#" data-i18n="fl2_2">Japan Travel</a></li><li><a href="#" data-i18n="fl2_3">Newsletter</a></li><li><a href="#" data-i18n="fl2_4">Blog</a></li></ul></div>
+  <div><div class="footer-heading" data-i18n="fl2_head">Explore</div><ul class="footer-links"><li><a href="blog/index.html" data-i18n="fl2_1">Culture Articles</a></li><li><a href="blog/index.html" data-i18n="fl2_2">Japan Travel</a></li><li><a href="#" data-i18n="fl2_3">Newsletter</a></li><li><a href="blog/index.html" data-i18n="fl2_4">Blog</a></li></ul></div>
   <div><div class="footer-heading" data-i18n="fl3_head">Company</div><ul class="footer-links"><li><a href="#" data-i18n="fl3_1">About</a></li><li><a href="#" data-i18n="fl3_2">Pricing</a></li><li><a href="#" data-i18n="fl3_3">Affiliate Program</a></li><li><a href="#" data-i18n="fl3_4">Contact</a></li></ul></div>
 </footer>
 <div class="footer-bottom">
@@ -588,7 +593,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
 ═══════════════════════════════════════════ */
 const T = {
   en: {
-    nav_roadmap:"Roadmap", nav_learn:"Learn", nav_culture:"Culture", nav_travel:"Travel Japan", nav_pricing:"Pricing", nav_cta:"Start Free →",
+    nav_roadmap:"Roadmap", nav_learn:"Learn", nav_culture:"Culture", nav_travel:"Travel Japan", nav_explore:"Explore 🗾", nav_pricing:"Pricing", nav_shadowing:"🎙 Shadowing", nav_cta:"Start Free →",
     hero_tag:"AI-Powered Japanese Learning", hero_title1:"Master Japanese.", hero_title2:"Discover Japan.",
     hero_promise:"🎯 N3 in 6 months — or your money back",
     hero_sub:"AI-generated JLPT practice, immersive culture lessons, streak-based habit tracking, and curated Japan travel guides — everything in one place.",
@@ -651,7 +656,7 @@ const T = {
   },
 
   zh: {
-    nav_roadmap:"學習路線", nav_learn:"開始學習", nav_culture:"日本文化", nav_travel:"旅遊日本", nav_pricing:"定價", nav_cta:"免費開始 →",
+    nav_roadmap:"學習路線", nav_learn:"開始學習", nav_culture:"日本文化", nav_travel:"旅遊日本", nav_explore:"探索日本 🗾", nav_pricing:"定價", nav_shadowing:"🎙 跟讀練習", nav_cta:"免費開始 →",
     hero_tag:"AI 驅動的日語學習平台", hero_title1:"精通日語。", hero_title2:"探索日本。",
     hero_promise:"🎯 6個月達到N3 — 否則全額退款",
     hero_sub:"AI生成的JLPT練習、沉浸式文化課程、連續學習追蹤，以及精選日本旅遊指南 — 一站式完整服務。",
@@ -714,7 +719,7 @@ const T = {
   },
 
   es: {
-    nav_roadmap:"Ruta", nav_learn:"Aprender", nav_culture:"Cultura", nav_travel:"Viaja a Japón", nav_pricing:"Precios", nav_cta:"Empezar Gratis →",
+    nav_roadmap:"Ruta", nav_learn:"Aprender", nav_culture:"Cultura", nav_travel:"Viaja a Japón", nav_explore:"Explora 🗾", nav_pricing:"Precios", nav_shadowing:"🎙 Shadowing", nav_cta:"Empezar Gratis →",
     hero_tag:"Aprendizaje de Japonés con IA", hero_title1:"Domina el Japonés.", hero_title2:"Descubre Japón.",
     hero_promise:"🎯 N3 en 6 meses — o te devolvemos el dinero",
     hero_sub:"Práctica JLPT con IA, lecciones culturales inmersivas, seguimiento de hábitos y guías de viaje a Japón — todo en un solo lugar.",
@@ -777,7 +782,7 @@ const T = {
   },
 
   th: {
-    nav_roadmap:"แผนการเรียน", nav_learn:"เรียนภาษา", nav_culture:"วัฒนธรรม", nav_travel:"เที่ยวญี่ปุ่น", nav_pricing:"ราคา", nav_cta:"เริ่มฟรี →",
+    nav_roadmap:"แผนการเรียน", nav_learn:"เรียนภาษา", nav_culture:"วัฒนธรรม", nav_travel:"เที่ยวญี่ปุ่น", nav_explore:"สำรวจญี่ปุ่น 🗾", nav_pricing:"ราคา", nav_shadowing:"🎙 ฝึกพูดตาม", nav_cta:"เริ่มฟรี →",
     hero_tag:"เรียนภาษาญี่ปุ่นด้วย AI", hero_title1:"เชี่ยวชาญภาษาญี่ปุ่น", hero_title2:"ค้นพบญี่ปุ่น",
     hero_promise:"🎯 ผ่าน N3 ใน 6 เดือน — หรือคืนเงินเต็มจำนวน",
     hero_sub:"ข้อสอบ JLPT แบบ AI เนื้อหาวัฒนธรรมเข้มข้น ติดตามความสม่ำเสมอ และคู่มือท่องเที่ยวญี่ปุ่น — ครบในที่เดียว",
@@ -840,7 +845,7 @@ const T = {
   },
 
   id: {
-    nav_roadmap:"Peta Belajar", nav_learn:"Belajar", nav_culture:"Budaya", nav_travel:"Wisata Jepang", nav_pricing:"Harga", nav_cta:"Mulai Gratis →",
+    nav_roadmap:"Peta Belajar", nav_learn:"Belajar", nav_culture:"Budaya", nav_travel:"Wisata Jepang", nav_explore:"Jelajahi 🗾", nav_pricing:"Harga", nav_shadowing:"🎙 Shadowing", nav_cta:"Mulai Gratis →",
     hero_tag:"Belajar Bahasa Jepang dengan AI", hero_title1:"Kuasai Bahasa Jepang.", hero_title2:"Jelajahi Jepang.",
     hero_promise:"🎯 Capai N3 dalam 6 bulan — atau uang kembali",
     hero_sub:"Latihan JLPT berbasis AI, pelajaran budaya imersif, pelacakan kebiasaan belajar, dan panduan wisata Jepang — semua dalam satu tempat.",

@@ -47,7 +47,7 @@ vercel login
 ## ステップ 2: Anthropic API Key（5 分）
 
 1. [https://console.anthropic.com/](https://console.anthropic.com/) にログイン
-2. **Settings → Billing** で**月額予算 $40** の上限を設定（コスト爆発防止）
+2. **Settings → Billing** で**月額予算 $20** の上限を設定（コスト爆発防止、2026-04-24 決定の最新値）
 3. **Settings → API Keys → Create Key** で新規発行
 4. 名前は `nihongohub-prod`、値を安全な場所にメモ（`sk-ant-api03-...`）
 
@@ -226,8 +226,8 @@ Vercel Dashboard → `nihongohub` プロジェクト → **Analytics** タブ �
 ### A. Anthropic Spend Alert（予算爆発防止）
 
 1. [console.anthropic.com](https://console.anthropic.com/) → **Settings → Billing → Spend Limit**
-2. 月次上限: **$40**
-3. アラート通知: **$20 / $30 / $40** の 3 段でメール受信
+2. 月次上限: **$20**（2026-04-24 決定の最新値、当初 $40 → 1st 案 $10 → 中間値 $20）
+3. アラート通知: **$10 / $15 / $20** の 3 段でメール受信
 4. 上限到達時の挙動: ハードストップ（API が 429 を返す）
 
 ### B. Vercel のデプロイ失敗通知

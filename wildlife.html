@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>いきものクエスト — 47都道府県 生き物観察ランキング（GBIFデータ）</title>
+<meta name="description" content="GBIFの市民科学データをもとに、観察努力をそろえた『記録種多様性（rarefied richness）』で47都道府県をRPG風にランキング。各県の代表レア生物・数値・参照元データ（GBIF）も確認できます。2024年版。">
+<meta property="og:title" content="いきものクエスト — あなたの県の生き物ステータスは？">
+<meta property="og:description" content="GBIFデータで47都道府県の生き物観察をRPG風ステータスに。各県の代表レア生物＋記録種多様性ランキング（2024）。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#070d1a;--win:#0c1a30;--win2:#0a1526;--border:#d6e6ff;--ink:#eaf2ff;--mut:#8aa0c4;
+    --gold:#ffd86b;--atk:#5fe08a;--rare:#ff7bd0;--exp:#5bb8ff;--line:#23375a}
+  *{box-sizing:border-box}
+  body{margin:0;background:
+      radial-gradient(1px 1px at 20% 30%,#ffffff55,transparent),
+      radial-gradient(1px 1px at 70% 60%,#ffffff44,transparent),
+      radial-gradient(1px 1px at 40% 80%,#ffffff33,transparent),
+      radial-gradient(1px 1px at 85% 15%,#ffffff44,transparent),var(--bg);
+    color:var(--ink);font-family:"DotGothic16",monospace;line-height:1.7}
+  .wrap{max-width:780px;margin:0 auto;padding:20px 14px 70px}
+  .pix{font-family:"Press Start 2P",monospace}
+  .langnav{text-align:right;font-size:12px;color:var(--mut);margin-bottom:6px}
+  .win{background:var(--win);border:3px solid var(--border);border-radius:3px;
+    box-shadow:0 0 0 3px var(--bg),0 0 18px #0bf2,inset 0 0 0 1px #ffffff14;padding:16px;margin:14px 0}
+  h1{font-family:"Press Start 2P",monospace;font-size:18px;line-height:1.5;margin:.2em 0;color:var(--gold);text-shadow:2px 2px 0 #000}
+  .tagline{color:var(--mut);font-size:13px;margin:6px 0 0}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut)}
+  .legend b{color:var(--ink)}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle;margin-right:5px}
+  .row{display:grid;grid-template-columns:54px 40px 1fr auto;gap:10px;align-items:center;
+    padding:12px;border:2px solid var(--line);border-radius:3px;background:var(--win2);margin:9px 0;
+    cursor:pointer;transition:border-color .12s,transform .06s}
+  .row:hover{border-color:var(--border)} .row:active{transform:translateY(1px)}
+  .lv{font-family:"Press Start 2P",monospace;font-size:11px;color:var(--mut);text-align:center}
+  .lv b{display:block;color:var(--gold);font-size:15px;margin-top:3px}
+  .rowspr{width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+  .rowspr svg{width:34px;height:34px}
+  .name{font-size:18px}
+  .name .en{color:var(--mut);font-size:11px;font-family:"Press Start 2P",monospace}
+  .grade{font-family:"Press Start 2P",monospace;font-size:18px;text-align:right}
+  .score{font-family:"Press Start 2P",monospace;font-size:12px;color:var(--gold);text-align:right;margin-top:4px}
+  .gS{color:#ffd86b}.gA{color:#7fffd0}.gB{color:#9fd0ff}.gC{color:#c7b8ff}.gD{color:#8aa0c4}
+  .stat{grid-column:1 / -1;margin-top:8px;display:none;border-top:2px dashed var(--line);padding-top:10px}
+  .row.open .stat{display:block}
+  .creature{display:flex;gap:12px;align-items:center;background:#060f1e;border:1px solid var(--line);
+    border-radius:3px;padding:10px;margin-bottom:10px}
+  .csprite{flex:0 0 auto;width:56px;height:56px;display:flex;align-items:center;justify-content:center;
+    background:#0c1a30;border:2px solid var(--line);border-radius:3px}
+  .clabel{font-size:11px;color:var(--gold)}
+  .cname{font-size:17px;color:var(--ink);margin:2px 0}
+  .csci{font-size:11px;color:var(--mut);font-style:italic}
+  .cnote{font-size:11px;color:var(--mut)}
+  .srow{display:grid;grid-template-columns:96px 1fr 70px;gap:8px;align-items:center;font-size:13px;margin:6px 0}
+  .bar{height:12px;background:#0a1526;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+  .bar>i{display:block;height:100%}
+  .sval{text-align:right;font-size:12px;color:var(--mut)}
+  .note{font-size:12px;color:var(--mut);margin-top:8px}
+  .dataref-btn{font-family:"DotGothic16",monospace;font-size:13px;margin-top:10px;background:transparent;
+    color:var(--exp);border:2px solid var(--line);border-radius:3px;padding:8px 12px;cursor:pointer}
+  .dataref-btn:hover{border-color:var(--exp)}
+  .dataref{display:none;margin-top:10px;background:#060f1e;border:1px solid var(--line);border-radius:3px;padding:10px 12px;font-size:12.5px;color:var(--mut)}
+  .dataref.show{display:block} .dataref ul{margin:6px 0;padding-left:18px}
+  .dataref code{color:#cfe3ff;background:#0c1a30;padding:1px 5px;border-radius:3px;font-size:12px}
+  .dataref a{display:inline-block;margin-top:8px;color:var(--gold);font-weight:bold;text-decoration:none}
+  .dataref a:hover{text-decoration:underline}
+  .rule{font-size:13px;color:var(--mut)} .rule b{color:var(--ink)} .rule li{margin:5px 0}
+  a{color:var(--exp)}
+  .foot{color:var(--mut);font-size:12px;margin-top:18px;text-align:center}
+  .blink{animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="langnav">▶ JP（日本語）</div>
+
+  <div class="win">
+    <h1>いきものクエスト</h1>
+    <p class="tagline">▶ GBIF の市民科学データで、47都道府県の「生き物観察」をRPGステータスに。各県の<b>代表レア生物</b>つき。<br>
+      観察努力をそろえた<b>記録種多様性（rarefied richness）</b>ランキング・2024年版。<span class="blink">▼</span></p>
+  </div>
+
+  <div class="win">
+    <div class="legend">
+      <span><span class="dot" style="background:var(--atk)"></span><b>しゅるい力</b> 記録種の多さ（努力標準化）</span>
+      <span><span class="dot" style="background:var(--rare)"></span><b>レア度</b> 絶滅危惧種の数</span>
+      <span><span class="dot" style="background:var(--exp)"></span><b>たんけん数</b> 観察記録の総数</span>
+    </div>
+    <p class="note">▶ 各県を選ぶと「ステータス」＋<b>その県の代表レア生物（ドット絵）</b>が開きます。さらに「参照したデータを見る」で元データ（GBIF）と使用クエリまで確認できます。</p>
+  </div>
+
+  <div id="board"></div>
+
+  <div class="win rule">
+    <p class="pix" style="font-size:12px;color:var(--gold)">★ クエストの注意書き</p>
+    <ul>
+      <li><b>これは「観察された記録」のランキング</b>であって、「自然のゆたかさ日本一」を断定するものではありません。</li>
+      <li>データ出典：<a href="https://www.gbif.org/" target="_blank" rel="noopener">GBIF</a>（地球規模生物多様性情報機構）2024年・各都道府県の生き物観察記録。県の指定は GADM 行政界。</li>
+      <li><b>「しゅるい力」= rarefied richness</b>：観察記録が多い県ほど種も多く記録される「観察努力バイアス」を消すため、<b>全県を同じ記録数（940件）にそろえた期待種数</b>（Hurlbert 1971）で比較。</li>
+      <li><b>代表レア生物</b>：2系統から選定。<b>(A) GBIF実データ</b>＝各県の絶滅危惧種（IUCN CR/EN/VU）観察記録から重複回避で1種を割当。<b>(B) 県シンボル種（手動）</b>＝GBIF候補が薄い10県について、<u>環境省レッドリスト・IUCNレッドリスト・国指定天然記念物</u>に明記された県象徴種を手動選定（ヤイロチョウ・イヌワシ・アユモドキ・スナメリ・クマゲラ・クマタカ・シコクサンショウウオ・カブトガニ・アカウミガメ・オキサンショウウオ）。手動選定種は「[県シンボル種]」マーク＋根拠を表示。<b>ドット絵は分類群のイメージ</b>（その種そっくりの絵ではありません）。GBIF由来で記録1件の不安定な選定や、徳島1県で <i>Aythya ferina</i>（ホシハジロ・VU）が残っている点はデータの限界です。</li>
+      <li>限界：観察努力バイアスは完全には除けません。<b>遊びとして、データの一つの見方</b>としてお楽しみください。更新：年1回。</li>
+    </ul>
+  </div>
+
+  <p class="foot">いきものクエスト — 独立した非公式のデータ・ビジュアルです。Data: GBIF.org (2024), GADM, IUCN Red List categories.<br>© いきものクエスト</p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Dataset",
+  "name":"いきものクエスト — 47都道府県 記録種多様性ランキング（2024, rarefied richness）",
+  "description":"GBIFの2024年市民科学観察データをもとに、観察努力を940記録に標準化した期待種数（Hurlbertレアファクション）で47都道府県を比較。各県の代表的な絶滅危惧種（IUCN CR/EN/VU）、希少種数、観察記録総数を併記。",
+  "creator":{"@type":"Organization","name":"いきものクエスト"},
+  "license":"https://creativecommons.org/licenses/by/4.0/",
+  "isBasedOn":"https://www.gbif.org/","temporalCoverage":"2024",
+  "spatialCoverage":{"@type":"Place","name":"Japan"},
+  "variableMeasured":["rarefied species richness (n=940)","threatened species count (IUCN CR/EN/VU)","total occurrence records","representative threatened species"]
+}
+</script>
+
+<script>
+/* ランキング実データ: [rank,県JP,県EN,gid,JBI,しゅるい力,観測種数,レア度,たんけん数,面積,人口] */
+const DATA = [
+  [1,"静岡","SHIZUOKA","JPN.38_1",71.1,360.7,1416,8,9426,7777,3633202],
+  [2,"沖縄","OKINAWA","JPN.32_1",68.4,277.5,2155,27,42994,2281,1467480],
+  [3,"高知","KOCHI","JPN.20_1",67.8,349.3,424,4,1271,7104,691527],
+  [4,"東京","TOKYO","JPN.41_1",63.6,234.9,2871,29,201119,2194,14047594],
+  [5,"鳥取","TOTTORI","JPN.42_1",63.1,308.1,456,6,1817,3507,553407],
+  [6,"北海道","HOKKAIDO","JPN.12_1",58.4,183.2,1277,33,83321,83424,5224614],
+  [7,"富山","TOYAMA","JPN.43_1",56.0,258.1,466,5,2467,4248,1034814],
+  [8,"石川","ISHIKAWA","JPN.15_1",55.8,236.7,634,11,5986,4186,1132526],
+  [9,"新潟","NIIGATA","JPN.29_1",55.4,244.2,643,8,5434,12584,2201272],
+  [10,"島根","SHIMANE","JPN.37_1",55.3,242.8,306,8,1506,6708,671126],
+  [11,"鹿児島","KAGOSHIMA","JPN.18_1",55.0,190.8,1520,23,35463,9187,1588256],
+  [12,"岐阜","GIFU","JPN.9_1",54.0,233.7,976,8,8777,10621,1978742],
+  [13,"京都","KYOTO","JPN.22_1",54.0,210.1,1797,15,43690,4612,2578087],
+  [14,"福島","FUKUSHIMA","JPN.8_1",52.8,237.5,478,4,3091,13784,1833152],
+  [15,"福井","FUKUI","JPN.6_1",52.1,229.4,264,5,1218,4191,766863],
+  [16,"茨城","IBARAKI","JPN.14_1",51.8,194.1,1049,15,22124,6097,2867009],
+  [17,"大阪","OSAKA","JPN.33_1",51.4,187.7,1247,16,26132,1905,8837685],
+  [18,"和歌山","WAKAYAMA","JPN.44_1",51.4,230.9,413,3,2629,4725,922584],
+  [19,"長野","NAGANO","JPN.26_1",50.5,187.2,1452,14,33538,13562,2048011],
+  [20,"香川","KAGAWA","JPN.17_1",50.3,216.0,216,5,940,1877,950244],
+  [21,"山形","YAMAGATA","JPN.45_1",50.2,218.7,233,4,1050,9323,1068027],
+  [22,"山口","YAMAGUCHI","JPN.46_1",48.8,174.7,362,14,5034,6113,1342059],
+  [23,"滋賀","SHIGA","JPN.36_1",48.5,175.8,745,13,15211,4017,1413610],
+  [24,"宮城","MIYAGI","JPN.24_1",48.3,184.4,750,10,15453,7282,2301996],
+  [25,"徳島","TOKUSHIMA","JPN.40_1",48.2,190.5,286,8,2222,4147,719559],
+  [26,"福岡","FUKUOKA","JPN.7_1",47.9,178.1,581,11,11231,4987,5135214],
+  [27,"神奈川","KANAGAWA","JPN.19_1",47.7,166.3,1840,14,75768,2416,9237337],
+  [28,"千葉","CHIBA","JPN.4_1",46.3,156.3,887,14,34659,5158,6284480],
+  [29,"三重","MIE","JPN.23_1",46.0,157.4,648,13,12154,5774,1770254],
+  [30,"佐賀","SAGA","JPN.34_1",45.6,147.3,324,15,9580,2441,811442],
+  [31,"広島","HIROSHIMA","JPN.11_1",45.5,180.4,370,5,3488,8480,2799702],
+  [32,"山梨","YAMANASHI","JPN.47_1",45.3,182.2,699,4,11879,4465,809974],
+  [33,"青森","AOMORI","JPN.3_1",45.2,171.1,301,7,3445,9646,1237984],
+  [34,"岩手","IWATE","JPN.16_1",45.2,180.8,317,4,3055,15275,1210534],
+  [35,"栃木","TOCHIGI","JPN.39_1",44.9,165.8,763,8,21028,6408,1933146],
+  [36,"愛知","AICHI","JPN.1_1",43.7,123.7,760,18,45185,5173,7542415],
+  [37,"秋田","AKITA","JPN.2_1",43.7,163.6,342,6,5815,11638,959502],
+  [38,"長崎","NAGASAKI","JPN.27_1",43.5,158.2,399,7,8463,4131,1312317],
+  [39,"兵庫","HYOGO","JPN.13_1",43.4,148.0,794,10,22672,8401,5465002],
+  [40,"群馬","GUNMA","JPN.10_1",43.1,165.4,521,4,8490,6362,1939110],
+  [41,"大分","OITA","JPN.30_1",43.1,149.2,296,9,3623,6341,1123852],
+  [42,"奈良","NARA","JPN.28_1",42.5,154.1,606,6,16664,3691,1324473],
+  [43,"愛媛","EHIME","JPN.5_1",42.4,153.9,363,6,4869,5676,1334841],
+  [44,"熊本","KUMAMOTO","JPN.21_1",41.8,146.1,535,7,12733,7409,1738301],
+  [45,"宮崎","MIYAZAKI","JPN.25_1",40.6,140.3,308,6,6408,7735,1069576],
+  [46,"岡山","OKAYAMA","JPN.31_1",40.4,139.1,492,6,12374,7114,1888432],
+  [47,"埼玉","SAITAMA","JPN.35_1",39.8,130.7,998,7,37390,3798,7344765],
+];
+
+/* 各県の代表レア生物: gid -> [学名, 分類群raw, GBIF 2024年記録数]
+   ソース2系統 = GBIF実データ(重複回避割当) または 環境省RDB/IUCNの県シンボル種(手動)。
+   手動選定種は CURATED に根拠を併記。 */
+const RARE = {
+ "JPN.38_1":["Rhinobatos schlegelii","fish",1],"JPN.32_1":["Gallirallus okinawae","bird",693],
+ "JPN.20_1":["Pitta nympha","bird",0],"JPN.41_1":["Aythya ferina","bird",1608],
+ "JPN.42_1":["Andrias japonicus","frog",3],"JPN.12_1":["Haliaeetus pelagicus","bird",1077],
+ "JPN.43_1":["Hynobius takedai","frog",1],"JPN.15_1":["Ursus thibetanus","mammal",1],
+ "JPN.29_1":["Nipponia nippon","bird",86],"JPN.37_1":["Hynobius okiensis","frog",0],
+ "JPN.18_1":["Grus monacha","bird",649],"JPN.9_1":["Mergus squamatus","bird",9],
+ "JPN.22_1":["Mauremys reevesii","other",24],"JPN.8_1":["Emberiza rustica","bird",21],
+ "JPN.6_1":["Epinephelus akaara","other",1],"JPN.14_1":["Rissa tridactyla","bird",11],
+ "JPN.33_1":["Calidris tenuirostris","bird",27],"JPN.44_1":["Caretta caretta","reptile",0],
+ "JPN.26_1":["Emberiza rustica","bird",288],"JPN.17_1":["Pelodiscus sinensis","other",6],
+ "JPN.45_1":["Sympetrum maculatum","dragonfly",3],"JPN.46_1":["Tachypleus tridentatus","other",0],
+ "JPN.36_1":["Aythya baeri","bird",11],"JPN.24_1":["Anser erythropus","bird",49],
+ "JPN.40_1":["Aythya ferina","bird",8],"JPN.7_1":["Anguilla japonica","other",15],
+ "JPN.19_1":["Cerioporus squamosus","fungi",1],"JPN.4_1":["Pluvialis squatarola","bird",349],
+ "JPN.23_1":["Numenius madagascariensis","bird",6],"JPN.34_1":["Platalea minor","bird",115],
+ "JPN.11_1":["Neophocaena asiaeorientalis","mammal",0],"JPN.47_1":["Gastrodia elata","plant",1],
+ "JPN.3_1":["Podiceps auritus","bird",9],"JPN.16_1":["Aquila chrysaetos","bird",0],
+ "JPN.39_1":["Ciconia boyciana","bird",114],"JPN.1_1":["Calidris acuminata","bird",14],
+ "JPN.2_1":["Dryocopus martius","bird",0],"JPN.27_1":["Egretta eulophotes","bird",3],
+ "JPN.13_1":["Anser cygnoides","bird",369],"JPN.10_1":["Emberiza rustica","bird",60],
+ "JPN.30_1":["Libellula angelina","dragonfly",1],"JPN.28_1":["Nisaetus nipalensis","bird",0],
+ "JPN.5_1":["Hynobius stejnegeri","frog",0],"JPN.21_1":["Calidris falcinellus","bird",4],
+ "JPN.25_1":["Synthliboramphus wumizusume","bird",6],"JPN.31_1":["Parabotia curta","fish",0],
+ "JPN.35_1":["Clangula hyemalis","bird",10],
+};
+/* 手動キュレーション種の根拠（環境省RDB/IUCN/天然記念物等）。
+   gid -> {status, note}。これに含まれる gid は表示で「県シンボル種」扱いになる。 */
+const CURATED = {
+ "JPN.20_1":{status:"EN",note:"高知県の県鳥・環境省RDB絶滅危惧IB類"},
+ "JPN.37_1":{status:"EN",note:"隠岐諸島固有種・IUCN EN"},
+ "JPN.44_1":{status:"VU",note:"紀伊半島南部は重要産卵地・IUCN VU"},
+ "JPN.46_1":{status:"EN",note:"国指定天然記念物（山陽小野田等）・IUCN EN"},
+ "JPN.11_1":{status:"EN",note:"瀬戸内海個体群は減少著しい・IUCN EN"},
+ "JPN.16_1":{status:"EN",note:"北上山地は重要繁殖地・環境省RDB絶滅危惧IB類"},
+ "JPN.2_1":{status:"EN",note:"東北原生林・環境省RDB絶滅危惧II類"},
+ "JPN.28_1":{status:"EN",note:"山地性猛禽・環境省RDB絶滅危惧IB類"},
+ "JPN.5_1":{status:"EN",note:"四国固有種・IUCN EN"},
+ "JPN.31_1":{status:"CR",note:"国指定天然記念物・IUCN CR"},
+};
+/* 確実な和名（学名→和名）。GBIF の和名欠落/ローマ字を補完。 */
+const JPNAME = {
+ "Cypripedium japonicum":"クマガイソウ","Gallirallus okinawae":"ヤンバルクイナ","Aythya ferina":"ホシハジロ",
+ "Andrias japonicus":"オオサンショウウオ","Haliaeetus pelagicus":"オオワシ","Hynobius takedai":"ホクリクサンショウウオ",
+ "Ursus thibetanus":"ツキノワグマ","Nipponia nippon":"トキ","Grus monacha":"ナベヅル","Mergus squamatus":"コウライアイサ",
+ "Mauremys reevesii":"クサガメ","Emberiza rustica":"カシラダカ","Epinephelus akaara":"キジハタ","Rissa tridactyla":"ミツユビカモメ",
+ "Calidris tenuirostris":"オバシギ","Aythya baeri":"アカハジロ","Anser erythropus":"カリガネ","Anguilla japonica":"ニホンウナギ",
+ "Oxalis corniculata":"カタバミ","Pluvialis squatarola":"ダイゼン","Numenius madagascariensis":"ホウロクシギ",
+ "Platalea minor":"クロツラヘラサギ","Ginkgo biloba":"イチョウ","Gastrodia elata":"オニノヤガラ","Podiceps auritus":"ミミカイツブリ",
+ "Barbarea vulgaris":"ハルザキヤマガラシ","Ciconia boyciana":"コウノトリ","Calidris acuminata":"ウズラシギ",
+ "Egretta eulophotes":"カラシラサギ","Anser cygnoides":"サカツラガン","Oreochromis mossambicus":"カワスズメ（ティラピア）",
+ "Oryctolagus cuniculus":"アナウサギ","Calidris falcinellus":"キリアイ","Synthliboramphus wumizusume":"カンムリウミスズメ",
+ "Pelodiscus sinensis":"ニホンスッポン","Clangula hyemalis":"コオリガモ",
+ "Rhinobatos schlegelii":"サカタザメ","Cerioporus squamosus":"アミヒラタケ","Libellula angelina":"ベッコウトンボ",
+ "Pitta nympha":"ヤイロチョウ","Aquila chrysaetos":"イヌワシ","Parabotia curta":"アユモドキ",
+ "Neophocaena asiaeorientalis":"スナメリ","Dryocopus martius":"クマゲラ","Nisaetus nipalensis":"クマタカ",
+ "Hynobius stejnegeri":"シコクサンショウウオ","Tachypleus tridentatus":"カブトガニ",
+ "Caretta caretta":"アカウミガメ","Hynobius okiensis":"オキサンショウウオ",
+};
+/* 分類群の補正（GBIFで other になった種を turtle→爬虫類 / 魚→fish へ） */
+const TYPEFIX = {
+ "Mauremys reevesii":"reptile","Pelodiscus sinensis":"reptile",
+ "Epinephelus akaara":"fish","Anguilla japonica":"fish","Oreochromis mossambicus":"fish",
+};
+const TLABEL = {bird:"鳥",plant:"植物",frog:"両生類",mammal:"哺乳類",dragonfly:"トンボ",
+  reptile:"爬虫類",fish:"魚",butterfly:"チョウ",beetle:"甲虫",fungi:"キノコ",other:"生きもの"};
+const TCOLOR = {bird:"#9fd0ff",plant:"#5fe08a",frog:"#7fe0b0",mammal:"#d6b48a",dragonfly:"#ff7bd0",
+  reptile:"#8fd08a",fish:"#5bb8ff",butterfly:"#ffb0e0",beetle:"#c9a86a",fungi:"#d8a8c0",other:"#ffd86b"};
+
+/* 12x12 ドット絵（'1'=塗り）。分類群アイコン。 */
+const SPR = {
+ bird:["............",".....111....","....11111...","...1111111..","..111111111.","1111111111..",".11111111111","..11111111..","...111111...","...11..11...","..11...1....","............"],
+ plant:["....11......","...1111.....","..11..11....","..11..11....","...1111.....","....11......","...111......","..1111......","....11......","....11......","..1111111...",".111111111.."],
+ frog:["..11....11..",".1111..1111.",".1111..1111.","..11111111..",".1111111111.","111111111111","111111111111",".1111111111.","..11111111..",".11......11.","11........11","............"],
+ mammal:["11..........","1111........",".11111111111","111111111111","111111111111","111111111111",".1.1....1.1.",".1.1....1.1.","............","............","............","............"],
+ dragonfly:[".....11.....",".....11.....","111..11..111","1111.11.1111",".111.11.111.",".....11.....","111..11..111","1111.11.1111",".....11.....",".....11.....",".....11.....",".....11....."],
+ reptile:["....1111....","..1.1111.1..",".11111111111","111111111111","111111111111","111111111111",".1111111111.","..1.1111.1..","....1..1....","............","............","............"],
+ fish:["............",".......11...","..11111.11..",".1111111111.","111111111111","1111111111.1",".11111111111","..11111.11..",".......11...","............","............","............"],
+ butterfly:[".11.....11..","1111...1111.","111111111111",".1111111111.","....1..1....","....1111....",".1111111111.","111111111111","1111...1111.",".11.....11..","............","............"],
+ beetle:["...1111.....","..111111....",".11111111...","1111111111..","1111111111..","1111111111..","1111111111..",".11111111...","..111111....","1..1..1..1..","1..1..1..1..","............"],
+ fungi:["...11111....","..1111111...",".111111111..","11111111111.","11111111111.",".111111111..","..11.1.11...","....111.....","....111.....","....111.....","...11111....","..1111111..."],
+ other:[".....11.....",".....11.....","....1111....","111111111111",".1111111111.","..11111111..","...111111...","..1111111...",".11.....11..","............","............","............"],
+};
+const MAX = {rich:360.7, rare:33, recs:201119};
+function grade(s){ if(s>=65)return['S','gS']; if(s>=53)return['A','gA']; if(s>=48)return['B','gB']; if(s>=44)return['C','gC']; return['D','gD']; }
+function pct(v,m){ return Math.max(2, Math.round(v/m*100)); }
+const nf = (n)=> n.toLocaleString('ja-JP');
+function spriteSVG(type){
+  const g = SPR[type]||SPR.other; let r='';
+  for(let y=0;y<g.length;y++){const row=g[y];for(let x=0;x<row.length;x++){if(row[x]==='1')r+=`<rect x="${x}" y="${y}" width="1" height="1"/>`;}}
+  return `<svg viewBox="0 0 12 12" shape-rendering="crispEdges" fill="${TCOLOR[type]||'#ffd86b'}" aria-hidden="true">${r}</svg>`;
+}
+
+const board = document.getElementById('board');
+DATA.forEach(d=>{
+  const [rank,ja,en,gid,jbi,rich,sobs,rare,recs,area,pop] = d;
+  const [g,gc] = grade(jbi);
+  const r = RARE[gid] || [null,"other",0];
+  const sci = r[0]; const ctype = TYPEFIX[sci] || r[1] || "other"; const crecs = r[2];
+  const cname = sci ? (JPNAME[sci] || null) : null;
+  const cur = CURATED[gid] || null;
+  const gbif = `https://www.gbif.org/occurrence/search?gadm_gid=${gid}&year=2024`;
+  const row = document.createElement('div'); row.className='win row'; row.style.margin='9px 0';
+  const noteText = cur
+    ? `${cur.note}（${cur.status}）。県を代表する希少種として手動選定。アイコンは分類群（${TLABEL[ctype]||'生きもの'}）のイメージ。`
+    : `GBIF 2024年の絶滅危惧種（IUCN）記録から選定。記録数 ${crecs}。アイコンは分類群（${TLABEL[ctype]||'生きもの'}）のイメージ。`;
+  const creatureHTML = sci ? `
+    <div class="creature">
+      <div class="csprite">${spriteSVG(ctype)}</div>
+      <div class="cinfo">
+        <div class="clabel">★ この県の代表レア生物${cur?` <span style="color:var(--mut);font-size:10px">[県シンボル種]</span>`:''}</div>
+        <div class="cname">${cname ? cname : sci}${cname ? `<span class="csci">（${sci}）</span>` : ''}</div>
+        <div class="cnote">${noteText}</div>
+      </div>
+    </div>` : '';
+  row.innerHTML = `
+    <div class="lv">Lv<b>${rank}</b></div>
+    <div class="rowspr">${spriteSVG(ctype)}</div>
+    <div class="name">${ja}<br><span class="en">${en}</span></div>
+    <div><div class="grade ${gc}">${g}</div><div class="score">${jbi.toFixed(1)}pt</div></div>
+    <div class="stat">
+      ${creatureHTML}
+      <div class="srow"><span>しゅるい力</span><div class="bar"><i style="width:${pct(rich,MAX.rich)}%;background:var(--atk)"></i></div><span class="sval">${rich}</span></div>
+      <div class="srow"><span>レア度</span><div class="bar"><i style="width:${pct(rare,MAX.rare)}%;background:var(--rare)"></i></div><span class="sval">✦${rare}</span></div>
+      <div class="srow"><span>たんけん数</span><div class="bar"><i style="width:${pct(recs,MAX.recs)}%;background:var(--exp)"></i></div><span class="sval">${nf(recs)}</span></div>
+      <p class="note">観測された種数は ${nf(sobs)} 種。940記録にそろえると「しゅるい力 ${rich}」。レア度＝絶滅危惧種(IUCN CR/EN/VU) ${rare}種。</p>
+      <button type="button" class="dataref-btn">🔍 参照したデータ・出典を見る</button>
+      <div class="dataref">
+        <div><b style="color:var(--ink)">▼ ${ja}県のステータスの元データ（GBIF 2024年）</b></div>
+        <ul>
+          <li>観察記録 総数 N＝<code>${nf(recs)}</code> 件</li>
+          <li>観測種数 S_obs＝<code>${nf(sobs)}</code> 種</li>
+          <li>標準化記録数 n＝<code>940</code> → rarefied richness＝<code>${rich}</code></li>
+          <li>絶滅危惧種（IUCN CR/EN/VU）＝<code>${rare}</code> 種</li>
+          <li>代表レア生物＝<code>${sci || '—'}</code>${cur ? `（県シンボル種・${cur.status}・手動選定）` : `（GBIF 2024年記録 ${crecs} 件）`}</li>
+          <li>面積＝<code>${nf(area)}</code> km² ／ 人口＝<code>${nf(pop)}</code></li>
+          <li>GBIFクエリ：<code>gadmGid=${gid}</code>, <code>year=2024</code>, <code>facet=speciesKey</code></li>
+        </ul>
+        <a href="${gbif}" target="_blank" rel="noopener">▶ GBIF で ${ja} の実データ（生の観察記録）を開く ↗</a>
+      </div>
+    </div>`;
+  row.querySelector('.dataref-btn').addEventListener('click', (e)=>{ e.stopPropagation(); row.querySelector('.dataref').classList.toggle('show'); });
+  row.querySelectorAll('.dataref a').forEach(a=> a.addEventListener('click', e=> e.stopPropagation()));
+  row.addEventListener('click', ()=> row.classList.toggle('open'));
+  row.dataset.pref = String(en).toLowerCase();
+  board.appendChild(row);
+});
+
+/* Deep-link from NihongoHub Explore map: ?pref=<romaji> opens & highlights that prefecture's row. */
+(function(){
+  const pref=new URLSearchParams(location.search).get('pref');
+  if(!pref)return;
+  const target=board.querySelector('[data-pref="'+pref.toLowerCase()+'"]');
+  if(!target)return;
+  target.classList.add('open');
+  target.style.outline='3px solid #e0a634';
+  target.style.outlineOffset='2px';
+  setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'center'}),120);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prefecture Rankings — NihongoHub Explore</title>
+<meta name="description" content="RPG-style rankings of Japan's 47 prefectures by Food, Culture, City and Access — data-grounded from official statistics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--red:#bf3325;--gold:#e0a634;--gold-d:#c8911f;
+  --soft:#ddcfb6;--muted:#7a6a52;--white:#fdfaf3;--hud:#0d0a14;
+  --S:#e0a634;--A:#c77b8b;--B:#54b0a6;--C:#9aa45e;--D:#9d8bc4;
+  --pixel:'Press Start 2P',monospace;--dot:'DotGothic16',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:
+  radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);min-height:100vh}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold)}
+.wrap{max-width:880px;margin:0 auto;padding:34px 22px 70px}
+.title{font-family:var(--dot);font-size:clamp(26px,5vw,40px);letter-spacing:1px;margin-bottom:6px}
+.title em{color:var(--red);font-style:normal}
+.sub{font-family:var(--dot);color:var(--muted);font-size:15px;margin-bottom:18px;line-height:1.55}
+/* axis tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{font-family:var(--pixel);font-size:9px;text-decoration:none;color:var(--ink);background:var(--white);
+  border:2px solid var(--soft);border-radius:5px;padding:10px 12px;transition:all .12s}
+.tab:hover{border-color:var(--gold-d)}
+.tab.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.method{font-family:var(--dot);font-size:12px;color:var(--muted);background:var(--white);border:2px dashed var(--soft);
+  border-radius:8px;padding:12px 14px;margin-bottom:20px;line-height:1.55}
+.method a{color:var(--gold-d)}
+/* rows */
+.row{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;background:var(--white);
+  border:2px solid var(--soft);border-radius:10px;padding:12px 14px;margin-bottom:9px;transition:border-color .12s}
+.row:hover{border-color:var(--gold-d)}
+.row.hot{outline:3px solid var(--gold);outline-offset:2px}
+.lv{font-family:var(--pixel);font-size:8px;color:var(--muted);text-align:center;line-height:1.5}
+.lv b{display:block;font-size:14px;color:var(--ink)}
+.nm{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:19px;line-height:1.1}
+.nm .en{font-family:var(--dot);font-weight:400;font-size:12px;color:var(--muted);letter-spacing:1px}
+.nm .raw{font-family:var(--dot);font-weight:400;font-size:12px;color:var(--muted);margin-top:3px}
+.right{display:flex;align-items:center;gap:12px}
+.grade{font-family:var(--pixel);font-size:13px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:#fff}
+.pips{display:flex;gap:3px}
+.pip{width:13px;height:13px;border:2px solid var(--soft);border-radius:2px}
+.pip.on{background:var(--gold);border-color:var(--gold)}
+@media(max-width:560px){.right .pips{display:none}.nm{font-size:17px}}
+footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-family:var(--dot);font-size:13px}
+footer a{color:var(--gold);text-decoration:none}
+.err{font-family:var(--dot);color:var(--red);padding:30px}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <a href="prefectures.html" class="back">← Explore map</a>
+</header>
+<main class="wrap" id="wrap"><div class="err">Loading…</div></main>
+<footer><p>© 2026 NihongoHub · <a href="prefectures.html">Explore</a> · Rankings from official statistics. NATURE ranking: <a href="wildlife.html">いきものクエスト</a>.</p></footer>
+
+<script src="rank-data.js"></script>
+<script>
+const AX=["food","culture","city","access"];
+const params=new URLSearchParams(location.search);
+let axis=params.get("axis"); if(!AX.includes(axis))axis="food";
+const pref=(params.get("pref")||"").toLowerCase();
+const GRADE=p=>p>=5?["S","--S"]:p>=4?["A","--A"]:p>=3?["B","--B"]:p>=2?["C","--C"]:["D","--D"];
+const wrap=document.getElementById("wrap");
+
+function tabs(){
+  const t=AX.map(a=>`<a class="tab${a===axis?" active":""}" href="rank.html?axis=${a}">${(window.NH_RANK?.[a]?.emoji)||""} ${a.toUpperCase()}</a>`).join("");
+  return `<div class="tabs">${t}<a class="tab" href="wildlife.html">🦋 NATURE</a></div>`;
+}
+function render(){
+  if(!window.NH_RANK||!NH_RANK[axis]){wrap.innerHTML=`<div class="err">No ranking data.</div>`;return;}
+  const d=NH_RANK[axis];
+  const src=(d.sources||[]).map((u,i)=>`<a href="${u}" target="_blank" rel="noopener">[${i+1}]</a>`).join(" ");
+  const rows=d.prefs.map(p=>{
+    const [g,gv]=GRADE(p.pip);
+    let pips="";for(let i=1;i<=5;i++)pips+=`<span class="pip${i<=p.pip?" on":""}"></span>`;
+    return `<a class="row${p.romaji===pref?" hot":""}" id="r-${p.romaji}" href="prefectures.html?pref=${p.romaji}" title="Open ${p.en} on the map">
+      <div class="lv">Lv<b>${p.rank}</b></div>
+      <div class="nm">${p.ja}<span class="en"> ${p.en}</span><div class="raw">${p.raw}</div></div>
+      <div class="right"><span class="pips">${pips}</span><span class="grade" style="background:var(${gv})">${g}</span></div>
+    </a>`;
+  }).join("");
+  wrap.innerHTML=`
+    <h1 class="title">${d.emoji} <em>${d.label}</em> RANKING</h1>
+    <p class="sub">Japan's 47 prefectures, ranked. Data-grounded — RPG style, just like the wildlife quest.</p>
+    ${tabs()}
+    <div class="method"><b>Method:</b> ${d.method} ${d.year?`(${d.year})`:""} ${src?`· Sources: ${src}`:""}</div>
+    ${rows}`;
+  if(pref){const el=document.getElementById("r-"+pref);if(el)setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"center"}),120);}
+}
+render();
+</script>
+</body>
+</html>
