@@ -1216,5 +1216,149 @@ if (document.readyState === 'loading') {
 }
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+
+<!-- ===== Free Trial Auth widget (Supabase) — self-contained ===== -->
+<style>
+  #nhAuthFab{position:fixed;right:18px;bottom:18px;z-index:900;background:#16100a;color:#fff;border:2px solid #4ECDC4;
+    border-radius:999px;padding:11px 18px;font:600 14px/1 'Noto Sans JP',system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  #nhAuthFab:hover{background:#241a0f}
+  #nhAuthOv{position:fixed;inset:0;z-index:1000;background:rgba(10,8,6,.55);display:none;align-items:center;justify-content:center;padding:18px}
+  #nhAuthOv.on{display:flex}
+  #nhAuthCard{background:#fff;color:#16100a;max-width:380px;width:100%;border-radius:14px;padding:24px;font-family:'Noto Sans JP',system-ui,sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+  #nhAuthCard h3{margin:0 0 4px;font-size:20px}
+  #nhAuthCard p.sub{margin:0 0 16px;color:#7a6a52;font-size:13px}
+  #nhAuthCard input{width:100%;padding:11px 12px;margin:6px 0;border:1.5px solid #ddcfb6;border-radius:8px;font-size:15px}
+  #nhAuthCard button.primary{width:100%;padding:12px;margin-top:8px;background:#4ECDC4;color:#0a2a28;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer}
+  #nhAuthCard button.primary:disabled{opacity:.5;cursor:default}
+  #nhAuthCard .muted{font-size:13px;color:#7a6a52;margin-top:12px;text-align:center}
+  #nhAuthCard .muted a{color:#bf3325;cursor:pointer;text-decoration:underline}
+  #nhAuthMsg{font-size:13px;margin-top:10px;min-height:1.2em}
+  #nhAuthMsg.err{color:#bf3325}#nhAuthMsg.ok{color:#15803d}
+  #nhAuthCard .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  #nhAuthClose{background:none;border:none;font-size:22px;cursor:pointer;color:#7a6a52;line-height:1}
+  .nh-pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#eef7ef;color:#15803d;margin:8px 0}
+  #nhAuthCard button.ghost{width:100%;padding:10px;margin-top:8px;background:transparent;border:1.5px solid #ddcfb6;border-radius:8px;cursor:pointer;font-size:14px}
+</style>
+<button id="nhAuthFab" hidden>👤 Log in / Free Trial</button>
+<div id="nhAuthOv" role="dialog" aria-modal="true">
+  <div id="nhAuthCard">
+    <div class="row"><h3 id="nhAuthTitle">Start your free trial</h3><button id="nhAuthClose" aria-label="Close">×</button></div>
+    <!-- logged-out form -->
+    <div id="nhAuthForm">
+      <p class="sub">7-day free trial · no credit card required.</p>
+      <input id="nhEmail" type="email" placeholder="you@example.com" autocomplete="email">
+      <input id="nhPass" type="password" placeholder="Password (min 6 chars)" autocomplete="current-password">
+      <button class="primary" id="nhSubmit">Sign up &amp; start</button>
+      <div id="nhAuthMsg"></div>
+      <p class="muted"><span id="nhToggleTxt">Already have an account?</span> <a id="nhToggle">Log in</a></p>
+    </div>
+    <!-- logged-in panel -->
+    <div id="nhAccount" style="display:none">
+      <p class="sub" id="nhWho"></p>
+      <div id="nhPlan"></div>
+      <button class="primary" id="nhStartTrial" style="display:none">🚀 Start 7-day Free Trial</button>
+      <button class="primary" id="nhUpgrade" style="display:none">⭐ Upgrade to Pro</button>
+      <div id="nhAuthMsg2" style="font-size:13px;margin-top:10px"></div>
+      <button class="ghost" id="nhLogout">Log out</button>
+    </div>
+  </div>
+</div>
+<script type="module">
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  let cfg;
+  try { cfg = await fetch('/api/public-config').then(r => r.json()); } catch { return; }
+  if (!cfg || !cfg.authEnabled) return; // auth not configured → keep widget hidden
+  const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
+  const sb = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
+
+  const fab = $('nhAuthFab'), ov = $('nhAuthOv');
+  fab.hidden = false;
+  let mode = 'signup';
+  const msg = (t, cls = '') => { const m = $('nhAuthMsg'); m.textContent = t; m.className = cls; };
+  const open = () => ov.classList.add('on');
+  const close = () => ov.classList.remove('on');
+  fab.onclick = open; $('nhAuthClose').onclick = close;
+  ov.onclick = (e) => { if (e.target === ov) close(); };
+
+  $('nhToggle').onclick = () => {
+    mode = mode === 'signup' ? 'login' : 'signup';
+    $('nhAuthTitle').textContent = mode === 'signup' ? 'Start your free trial' : 'Welcome back';
+    $('nhSubmit').textContent = mode === 'signup' ? 'Sign up & start' : 'Log in';
+    $('nhToggleTxt').textContent = mode === 'signup' ? 'Already have an account?' : 'New here?';
+    $('nhToggle').textContent = mode === 'signup' ? 'Log in' : 'Create account';
+    msg('');
+  };
+
+  $('nhSubmit').onclick = async () => {
+    const email = $('nhEmail').value.trim(), password = $('nhPass').value;
+    if (!email || password.length < 6) { msg('Enter an email and a password (6+ chars).', 'err'); return; }
+    $('nhSubmit').disabled = true; msg('…');
+    try {
+      const fn = mode === 'signup' ? sb.auth.signUp({ email, password }) : sb.auth.signInWithPassword({ email, password });
+      const { error } = await fn;
+      if (error) { msg(error.message, 'err'); $('nhSubmit').disabled = false; return; }
+      msg('', 'ok'); await render();
+    } catch (e) { msg('Something went wrong. Try again.', 'err'); }
+    $('nhSubmit').disabled = false;
+  };
+
+  $('nhLogout').onclick = async () => { await sb.auth.signOut(); await render(); };
+
+  async function authedFetch(path, opts = {}) {
+    const { data: { session } } = await sb.auth.getSession();
+    const headers = Object.assign({}, opts.headers, session ? { Authorization: 'Bearer ' + session.access_token } : {});
+    return fetch(path, Object.assign({}, opts, { headers }));
+  }
+
+  $('nhStartTrial').onclick = async () => {
+    $('nhStartTrial').disabled = true; $('nhAuthMsg2').textContent = 'Starting your trial…';
+    try {
+      const r = await authedFetch('/api/trial-start', { method: 'POST' });
+      const j = await r.json();
+      if (r.ok) { $('nhAuthMsg2').textContent = '🎉 Trial active! ' + (j.days_remaining || 7) + ' days of full access.'; }
+      else { $('nhAuthMsg2').textContent = j.error || 'Could not start trial.'; }
+    } catch { $('nhAuthMsg2').textContent = 'Network error.'; }
+    await render();
+  };
+
+  $('nhUpgrade').onclick = async () => {
+    if (!cfg.stripeEnabled) { $('nhAuthMsg2').textContent = 'Payments open soon.'; return; }
+    $('nhUpgrade').disabled = true;
+    try {
+      const r = await authedFetch('/api/upgrade-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plan: 'pro' }) });
+      const j = await r.json();
+      if (j.checkout_url) location.href = j.checkout_url; else $('nhAuthMsg2').textContent = j.error || 'Checkout unavailable.';
+    } catch { $('nhAuthMsg2').textContent = 'Network error.'; }
+    $('nhUpgrade').disabled = false;
+  };
+
+  async function render() {
+    const { data: { session } } = await sb.auth.getSession();
+    if (!session) {
+      $('nhAuthForm').style.display = ''; $('nhAccount').style.display = 'none';
+      fab.textContent = '👤 Log in / Free Trial';
+      return;
+    }
+    $('nhAuthForm').style.display = 'none'; $('nhAccount').style.display = '';
+    $('nhWho').textContent = 'Signed in as ' + (session.user.email || '');
+    fab.textContent = '👤 My account';
+    let st = { plan: 'free', trial_status: 'never_started', days_remaining: 0 };
+    try { st = await authedFetch('/api/trial-status').then(r => r.json()); } catch {}
+    const planEl = $('nhPlan');
+    const label = st.plan === 'pro' ? 'PRO' : st.plan === 'lifetime' ? 'LIFETIME' :
+      st.trial_status === 'active' ? 'FREE TRIAL · ' + st.days_remaining + 'd left' :
+      st.trial_status === 'expired' ? 'TRIAL ENDED' : 'FREE';
+    planEl.innerHTML = '<span class="nh-pill">' + label + '</span>';
+    $('nhStartTrial').style.display = (st.trial_status === 'never_started' && st.plan === 'free') ? '' : 'none';
+    $('nhStartTrial').disabled = false;
+    $('nhUpgrade').style.display = (st.plan === 'free') ? '' : 'none';
+    $('nhUpgrade').textContent = cfg.stripeEnabled ? '⭐ Upgrade to Pro' : '⭐ Upgrade (opening soon)';
+  }
+
+  sb.auth.onAuthStateChange(() => render());
+  await render();
+})();
+</script>
 </body>
 </html>
