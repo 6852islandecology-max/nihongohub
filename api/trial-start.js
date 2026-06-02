@@ -28,7 +28,7 @@ export default async function handler(req, res) {
   if (!stripeCustomerId && process.env.STRIPE_SECRET_KEY) {
     try {
       const Stripe = (await import("stripe")).default;
-      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { httpClient: Stripe.createFetchHttpClient(), timeout: 20000 });
       const customer = await stripe.customers.create({
         email: user.email,
         metadata: { user_id: user.id, trial_started_at: new Date().toISOString() },
