@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — NihongoHub</title>
+<meta name="description" content="NihongoHub is an AI-powered platform for learning Japanese and exploring Japan — JLPT practice, culture deep dives, and a 47-prefecture travel map, in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#18120a;--paper:#f4efe5;--red:#bf3325;--gold:#c8911f;--gold-l:#e0a634;--soft:#e6ddd0;--muted:#796c5c;--white:#fdfaf3;--hud:#0d0a14;--dot:'DotGothic16',sans-serif}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);line-height:1.7}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold-l);display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold-l)}
+.page{max-width:720px;margin:0 auto;padding:48px 22px 72px}
+.tag{font-family:var(--dot);font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:8px}
+h1{font-family:'Shippori Mincho',serif;font-size:clamp(30px,5vw,44px);line-height:1.2;margin-bottom:18px}
+h2{font-family:'Shippori Mincho',serif;font-size:22px;margin:34px 0 10px}
+p{margin-bottom:14px;color:#3a3125}
+.lead{font-size:18px;color:var(--ink)}
+ul{margin:0 0 14px 20px}
+li{margin-bottom:7px;color:#3a3125}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;text-decoration:none;border-radius:8px;padding:13px 22px;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--red);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--soft)}
+.btn.ghost:hover{border-color:var(--gold)}
+footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-family:var(--dot);font-size:13px;margin-top:30px}
+footer a{color:var(--gold-l);text-decoration:none}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <a href="index.html" class="back">← Home</a>
+</header>
+<main class="page">
+  <p class="tag">About</p>
+  <h1>Learn Japanese. Discover Japan.</h1>
+  <p class="lead">NihongoHub is an AI-powered platform that brings Japanese practice and real Japan together in one place — JLPT-style quizzes, culture deep dives, and a clickable map of all 47 prefectures.</p>
+
+  <h2>Why we built it</h2>
+  <p>Most apps drill vocabulary but leave you guessing about the bigger picture — where you are, what's next, and what Japan is actually like beyond the textbook. We wanted one place that teaches the language and shows the country it belongs to.</p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li><b>AI practice.</b> Fresh JLPT-style questions (N5–N1) are generated on demand, so you never repeat the same test.</li>
+    <li><b>Explore the 47 prefectures.</b> A clickable map with data-grounded stats, local food and sights, and quiz battles for each prefecture.</li>
+    <li><b>Culture &amp; travel context.</b> Etiquette, seasons, and the Japanese that real situations call for — shrines, izakayas, trains.</li>
+    <li><b>Five languages.</b> English, 繁體中文, Español, ไทย, and Bahasa Indonesia.</li>
+  </ul>
+
+  <h2>Honest by design</h2>
+  <p>We don't show fake progress numbers or invented social proof. When another tool or guide is genuinely better for you, we'll point you to it — even when it isn't ours. Some links are affiliate links, always disclosed.</p>
+
+  <div class="cta-row">
+    <a href="quiz.html" class="btn primary">⚔️ Try the JLPT Battle</a>
+    <a href="prefectures.html" class="btn ghost">🗾 Explore the map</a>
+  </div>
+</main>
+<footer><p>© 2026 NihongoHub · <a href="index.html">Home</a> · <a href="affiliate.html">Affiliate disclosure</a> · <a href="contact.html">Contact</a></p></footer>
+</body>
+</html>

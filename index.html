@@ -410,6 +410,41 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
   </div>
 </section>
 
+<!-- SITE GUIDE: explains + links every header destination -->
+<style>
+  .guide{padding:64px 24px;background:linear-gradient(180deg,transparent,rgba(224,166,52,.05))}
+  .guide-inner{max-width:1100px;margin:0 auto}
+  .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+  @media(max-width:900px){.guide-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.guide-grid{grid-template-columns:1fr}}
+  .guide-card{display:flex;flex-direction:column;gap:7px;text-decoration:none;color:var(--ink);
+    background:var(--white);border:2px solid var(--soft);border-radius:12px;padding:18px 16px;transition:border-color .14s,transform .14s}
+  .guide-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .gc-ico{font-size:26px;line-height:1}
+  .gc-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:17px}
+  .gc-desc{font-size:13.5px;color:var(--muted);line-height:1.55;flex:1}
+  .gc-go{font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:600;color:var(--red)}
+</style>
+<section class="guide" id="guide">
+  <div class="guide-inner">
+    <div class="reveal">
+      <p class="section-tag" style="color:var(--gold)">Start Here</p>
+      <h2 class="section-title">What's inside NihongoHub</h2>
+      <p class="section-sub">One place to learn the language and explore the country. Here's the whole map — pick where to begin.</p>
+    </div>
+    <div class="guide-grid reveal">
+      <a class="guide-card" href="#roadmap"><span class="gc-ico">🧭</span><span class="gc-title">Roadmap</span><span class="gc-desc">Your step-by-step path from zero to N3 in six months — know exactly what's next.</span><span class="gc-go">See the path →</span></a>
+      <a class="guide-card" href="#learn"><span class="gc-ico">📚</span><span class="gc-title">Learn</span><span class="gc-desc">Every study tool in one place — streaks, AI questions, anime, culture and travel Japanese.</span><span class="gc-go">What we offer →</span></a>
+      <a class="guide-card" href="#culture"><span class="gc-ico">🎎</span><span class="gc-title">Culture</span><span class="gc-desc">Etiquette, seasons and everyday life — Japan beyond the textbook.</span><span class="gc-go">Deep dives →</span></a>
+      <a class="guide-card" href="#travel"><span class="gc-ico">✈️</span><span class="gc-title">Travel Japan</span><span class="gc-desc">Language plus trip planning for Tokyo, Kyoto, Hokkaido and beyond.</span><span class="gc-go">Plan a trip →</span></a>
+      <a class="guide-card" href="prefectures.html"><span class="gc-ico">🗾</span><span class="gc-title">Explore</span><span class="gc-desc">A clickable map of all 47 prefectures with data-grounded stats and quiz battles.</span><span class="gc-go">Open the map →</span></a>
+      <a class="guide-card" href="quiz.html"><span class="gc-ico">⚔️</span><span class="gc-title">Quiz</span><span class="gc-desc">AI-generated JLPT battles, N5 to N1. Earn XP and power up your guide Akari.</span><span class="gc-go">Start a battle →</span></a>
+      <a class="guide-card" href="#pricing"><span class="gc-ico">💴</span><span class="gc-title">Pricing</span><span class="gc-desc">Start free. Go Pro monthly, or own it forever with Lifetime.</span><span class="gc-go">See plans →</span></a>
+      <a class="guide-card" href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener"><span class="gc-ico">🎙</span><span class="gc-title">Shadowing</span><span class="gc-desc">Practice speaking with YouTube shadowing in our sister app, Echo.</span><span class="gc-go">Open Echo →</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ROADMAP -->
 <section class="roadmap" id="roadmap">
   <div class="reveal">
@@ -434,10 +469,9 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
   <div class="features-grid reveal">
     <div class="feature-card"><div class="feature-num">01</div><span class="feature-icon">🔥</span><div class="feature-title" data-i18n="f1_title">Streak & Habit Engine</div><p class="feature-desc" data-i18n="f1_desc">Daily streaks, weekly targets, and achievement badges keep you consistent. Miss a day and lose your flame.</p><div class="feature-new">NEW</div></div>
     <div class="feature-card"><div class="feature-num">02</div><span class="feature-icon">🤖</span><div class="feature-title" data-i18n="f2_title">AI Question Generator</div><p class="feature-desc" data-i18n="f2_desc">Infinite JLPT-style questions generated fresh every session. The AI adapts to your weak points automatically.</p></div>
-    <div class="feature-card"><div class="feature-num">03</div><span class="feature-icon">📊</span><div class="feature-title" data-i18n="f3_title">JLPT Readiness Score</div><p class="feature-desc" data-i18n="f3_desc">A live dashboard shows your predicted exam score and how many weeks until you're ready. No more guessing.</p><div class="feature-new">NEW</div></div>
-    <div class="feature-card"><div class="feature-num">04</div><span class="feature-icon">📺</span><div class="feature-title" data-i18n="f4_title">Anime & Manga Japanese</div><p class="feature-desc" data-i18n="f4_desc">Learn the Japanese actually spoken in anime, manga, and pop culture — with full cultural context.</p></div>
-    <div class="feature-card"><div class="feature-num">05</div><span class="feature-icon">🗾</span><div class="feature-title" data-i18n="f5_title">Culture Deep Dives</div><p class="feature-desc" data-i18n="f5_desc">Weekly essays on Japanese culture and society — written by people who actually live here.</p></div>
-    <div class="feature-card"><div class="feature-num">06</div><span class="feature-icon">✈️</span><div class="feature-title" data-i18n="f6_title">Travel Japanese</div><p class="feature-desc" data-i18n="f6_desc">Phrase packs, etiquette guides, and survival vocabulary. What to say at shrines, izakayas, and combini.</p></div>
+    <div class="feature-card"><div class="feature-num">03</div><span class="feature-icon">📺</span><div class="feature-title" data-i18n="f4_title">Anime & Manga Japanese</div><p class="feature-desc" data-i18n="f4_desc">Learn the Japanese actually spoken in anime, manga, and pop culture — with full cultural context.</p></div>
+    <div class="feature-card"><div class="feature-num">04</div><span class="feature-icon">🗾</span><div class="feature-title" data-i18n="f5_title">Culture Deep Dives</div><p class="feature-desc" data-i18n="f5_desc">Weekly essays on Japanese culture and society — written by people who actually live here.</p></div>
+    <div class="feature-card"><div class="feature-num">05</div><span class="feature-icon">✈️</span><div class="feature-title" data-i18n="f6_title">Travel Japanese</div><p class="feature-desc" data-i18n="f6_desc">Phrase packs, etiquette guides, and survival vocabulary. What to say at shrines, izakayas, and combini.</p></div>
   </div>
 </section>
 
@@ -506,7 +540,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
   </div>
   <div class="pricing-grid reveal">
     <div class="price-card"><div class="price-plan" data-i18n="pl1_name">Free</div><div class="price-amount">$0</div><div class="price-period" data-i18n="pl1_period">forever</div><ul class="price-features"><li data-i18n="pl1_f1">10 AI questions/day</li><li data-i18n="pl1_f2">N5 & N4 levels only</li><li data-i18n="pl1_f3">Basic streak tracking</li><li data-i18n="pl1_f4">2 culture articles/month</li></ul><button class="btn-plan btn-plan-ghost" data-i18n="pl1_btn">Get Started Free</button></div>
-    <div class="price-card featured"><div class="price-badge" data-i18n="pl2_badge">Most Popular</div><div class="price-plan" data-i18n="pl2_name">Pro</div><div class="price-amount">$9.99</div><div class="price-period" data-i18n="pl2_period">per month</div><ul class="price-features"><li data-i18n="pl2_f1">Unlimited AI questions</li><li data-i18n="pl2_f2">All JLPT levels N1–N5</li><li data-i18n="pl2_f3">Full streak + badge system</li><li data-i18n="pl2_f4">JLPT readiness dashboard</li><li data-i18n="pl2_f5">Anime & manga phrases</li><li data-i18n="pl2_f6">Full culture library</li><li data-i18n="pl2_f7">Travel phrase packs</li></ul><button class="btn-plan btn-plan-solid" data-i18n="pl2_btn">Start Pro — $9.99/mo</button><div class="lifetime-note">or $79.99/year <span class="price-save" data-i18n="pl2_save">SAVE 33%</span></div></div>
+    <div class="price-card featured"><div class="price-badge" data-i18n="pl2_badge">Most Popular</div><div class="price-plan" data-i18n="pl2_name">Pro</div><div class="price-amount">$9.99</div><div class="price-period" data-i18n="pl2_period">per month</div><ul class="price-features"><li data-i18n="pl2_f1">Unlimited AI questions</li><li data-i18n="pl2_f2">All JLPT levels N1–N5</li><li data-i18n="pl2_f3">Full streak + badge system</li><li data-i18n="pl2_f5">Anime & manga phrases</li><li data-i18n="pl2_f6">Full culture library</li><li data-i18n="pl2_f7">Travel phrase packs</li></ul><button class="btn-plan btn-plan-solid" data-i18n="pl2_btn">Start Pro — $9.99/mo</button><div class="lifetime-note">or $79.99/year <span class="price-save" data-i18n="pl2_save">SAVE 33%</span></div></div>
     <div class="price-card"><div class="price-plan" data-i18n="pl3_name">Academic</div><div class="price-amount">$19.99</div><div class="price-period" data-i18n="pl3_period">per month</div><ul class="price-features"><li data-i18n="pl3_f1">Everything in Pro</li><li data-i18n="pl3_f2">Academic Japanese module</li><li data-i18n="pl3_f3">Research vocabulary packs</li><li data-i18n="pl3_f4">Formal writing guides</li><li data-i18n="pl3_f5">PDF study exports</li></ul><button class="btn-plan btn-plan-ghost" data-i18n="pl3_btn">Go Academic</button></div>
     <div class="price-card"><div class="price-badge" style="background:var(--gold);color:var(--ink)" data-i18n="pl4_badge">Best Value</div><div class="price-plan" data-i18n="pl4_name">Lifetime</div><div class="price-amount" style="color:var(--gold)">$149</div><div class="price-period" data-i18n="pl4_period">one-time</div><ul class="price-features"><li data-i18n="pl4_f1">Everything in Pro — forever</li><li data-i18n="pl4_f2">All future content included</li><li data-i18n="pl4_f3">No recurring charges, ever</li><li data-i18n="pl4_f4">Founding member badge</li><li data-i18n="pl4_f5">Early access to new features</li></ul><button class="btn-plan btn-plan-ghost" style="border-color:var(--gold);color:var(--gold)" data-i18n="pl4_btn">Own It Forever</button><div class="lifetime-note" style="color:rgba(255,255,255,.35)" data-i18n="pl4_note">~15 months of Pro</div></div>
   </div>
@@ -527,9 +561,9 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
 <!-- FOOTER -->
 <footer>
   <div><span class="footer-logo">Nihongo<span>Hub</span></span><p class="footer-desc" data-i18n="footer_desc">AI-powered Japanese learning for the global curious. N3 in 6 months — guaranteed.</p></div>
-  <div><div class="footer-heading" data-i18n="fl1_head">Learn</div><ul class="footer-links"><li><a href="quiz.html" data-i18n="fl1_1">JLPT Practice</a></li><li><a href="#anime" data-i18n="fl1_2">Anime Japanese</a></li><li><a href="#" data-i18n="fl1_3">Academic Japanese</a></li><li><a href="#travel" data-i18n="fl1_4">Travel Phrases</a></li></ul></div>
+  <div><div class="footer-heading" data-i18n="fl1_head">Learn</div><ul class="footer-links"><li><a href="quiz.html" data-i18n="fl1_1">JLPT Practice</a></li><li><a href="#anime" data-i18n="fl1_2">Anime Japanese</a></li><li><a href="#travel" data-i18n="fl1_4">Travel Phrases</a></li></ul></div>
   <div><div class="footer-heading" data-i18n="fl2_head">Explore</div><ul class="footer-links"><li><a href="blog/index.html" data-i18n="fl2_1">Culture Articles</a></li><li><a href="blog/index.html" data-i18n="fl2_2">Japan Travel</a></li><li><a href="#newsletter" data-i18n="fl2_3">Newsletter</a></li><li><a href="blog/index.html" data-i18n="fl2_4">Blog</a></li></ul></div>
-  <div><div class="footer-heading" data-i18n="fl3_head">Company</div><ul class="footer-links"><li><a href="#" data-i18n="fl3_1">About</a></li><li><a href="#pricing" data-i18n="fl3_2">Pricing</a></li><li><a href="#" data-i18n="fl3_3">Affiliate Program</a></li><li><a href="#" data-i18n="fl3_4">Contact</a></li></ul></div>
+  <div><div class="footer-heading" data-i18n="fl3_head">Company</div><ul class="footer-links"><li><a href="about.html" data-i18n="fl3_1">About</a></li><li><a href="#pricing" data-i18n="fl3_2">Pricing</a></li><li><a href="affiliate.html" data-i18n="fl3_3">Affiliate Program</a></li><li><a href="contact.html" data-i18n="fl3_4">Contact</a></li></ul></div>
 </footer>
 <div class="footer-bottom">
   <span>© 2026 NihongoHub. All rights reserved.</span>
@@ -932,237 +966,6 @@ function scrollToRoadmap() {
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-/* ═══════════════════════════════════════════
-   Safe HTML sanitizer (PR-23 ruby + PR-17a underline)
-   Only allows <u>, <ruby>, <rt>, <rp>. Everything else is escaped.
-═══════════════════════════════════════════ */
-function sanitizeQuizHTML(raw) {
-  if (raw == null) return '';
-  const escaped = String(raw)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-  // Re-allow only the whitelisted tags (no attributes)
-  return escaped
-    .replace(/&lt;(\/?)(u|ruby|rt|rp)&gt;/gi, '<$1$2>');
-}
-
-/* ═══════════════════════════════════════════
-   429 reset-time formatter (PR-17c)
-═══════════════════════════════════════════ */
-function formatResetCountdown(resetMs, lang) {
-  if (!resetMs) return '';
-  const diff = Math.max(0, resetMs - Date.now());
-  const hours = Math.floor(diff / 3600000);
-  const minutes = Math.floor((diff % 3600000) / 60000);
-  const labels = {
-    en: ['Resets in', 'h', 'm'],
-    zh: ['將在', '小時', '分鐘後重置'],
-    es: ['Se reinicia en', 'h', 'm'],
-    th: ['รีเซ็ตใน', 'ชม.', 'นาที'],
-    id: ['Reset dalam', 'jam', 'menit'],
-  };
-  const [prefix, hLbl, mLbl] = labels[lang] || labels.en;
-  if (lang === 'zh') return `${prefix} ${hours} ${hLbl} ${minutes} ${mLbl}`;
-  return `${prefix} ${hours}${hLbl} ${minutes}${mLbl}`;
-}
-
-/* ═══════════════════════════════════════════
-   PR-24 MVP: streak/accuracy badge (3 tiers)
-   Tracks last-N answers in localStorage, shows 🌱/🎓/🏆 badge.
-═══════════════════════════════════════════ */
-const BADGE_STORAGE_KEY = 'nh_quiz_history_v1';
-const BADGE_WINDOW = 10; // last N answers
-function loadHistory() {
-  try {
-    const raw = localStorage.getItem(BADGE_STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch { return []; }
-}
-function saveHistory(arr) {
-  try { localStorage.setItem(BADGE_STORAGE_KEY, JSON.stringify(arr.slice(-BADGE_WINDOW))); } catch {}
-}
-function recordAnswer(isCorrect) {
-  const h = loadHistory();
-  h.push(isCorrect ? 1 : 0);
-  saveHistory(h);
-}
-function computeBadge() {
-  const h = loadHistory();
-  if (h.length < 3) return { tier: 'seed', emoji: '🌱', label: 'Beginner', accuracy: null };
-  const accuracy = h.reduce((s, v) => s + v, 0) / h.length;
-  if (accuracy >= 0.8) return { tier: 'master', emoji: '🏆', label: 'Master', accuracy };
-  if (accuracy >= 0.5) return { tier: 'grad', emoji: '🎓', label: 'Learner', accuracy };
-  return { tier: 'seed', emoji: '🌱', label: 'Beginner', accuracy };
-}
-function renderBadge() {
-  const el = document.getElementById('quizBadge');
-  if (!el) return;
-  const b = computeBadge();
-  const pct = b.accuracy == null ? '—' : Math.round(b.accuracy * 100) + '%';
-  el.innerHTML = `<span style="font-size:18px;margin-right:6px">${b.emoji}</span><span style="font-weight:600">${b.label}</span><span style="opacity:.65;margin-left:8px;font-size:12px">${pct} (last ${loadHistory().length})</span>`;
-  el.style.display = 'inline-flex';
-}
-
-/* ═══════════════════════════════════════════
-   AI QUESTION GENERATOR — calls /api/generate
-═══════════════════════════════════════════ */
-let currentLevel = 'N5';
-let currentQuestion = null;
-let isGenerating = false;
-
-function selectLevel(el) {
-  document.querySelectorAll('.level-pill').forEach(p => p.classList.remove('active'));
-  el.classList.add('active');
-  currentLevel = el.dataset.level;
-}
-
-/* Fisher-Yates shuffle — correct answer position is RANDOM each time */
-function shuffleOptions(correct, distractors) {
-  const arr = [
-    { text: correct, isCorrect: true },
-    ...distractors.slice(0, 3).map(d => ({ text: d, isCorrect: false }))
-  ];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-async function generateQuestion() {
-  if (isGenerating) return;
-  isGenerating = true;
-
-  const d = T[currentLang];
-  const btn = document.getElementById('btnNew');
-  const qEl = document.getElementById('demoQ');
-  const rEl = document.getElementById('demoR');
-  const optsWrap = document.getElementById('demoOpts');
-  const opts = optsWrap.querySelectorAll('.demo-opt');
-  const resultEl = document.getElementById('demoResult');
-  const expEl = document.getElementById('demoExplanation');
-  const btnExplain = document.getElementById('btnExplain');
-
-  /* reset UI */
-  btn.disabled = true;
-  btn.innerHTML = '<span style="display:inline-block;width:12px;height:12px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite"></span> ' + (d.btn_loading || 'Generating…');
-  resultEl.textContent = '';
-  resultEl.className = 'demo-result';
-  expEl.style.display = 'none';
-  btnExplain.style.display = 'none';
-  optsWrap.style.display = 'grid';
-  opts.forEach(o => { o.className = 'demo-opt'; o.textContent = '…'; });
-  qEl.textContent = '…';
-  rEl.textContent = '';
-
-  try {
-    const res = await fetch('/api/generate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ level: currentLevel, lang: currentLang })
-    });
-
-    if (res.status === 429) {
-      const errBody = await res.json().catch(() => ({}));
-      const resetMs = errBody.reset ? Number(errBody.reset) * 1000 : 0;
-      const countdown = formatResetCountdown(resetMs, currentLang);
-      const baseMsg = d.rate_limit || 'Daily limit reached.';
-      resultEl.innerHTML = '⏳ ' + baseMsg + (countdown ? ' <span style="opacity:.75">— ' + countdown + '</span>' : '');
-      resultEl.style.color = '#e0a861';
-      qEl.textContent = '⏳';
-      rEl.textContent = '';
-      optsWrap.style.display = 'none';
-      return;
-    }
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error || 'HTTP ' + res.status);
-    }
-
-    const data = await res.json();
-
-    /* shuffle so correct position is random */
-    const shuffled = shuffleOptions(data.correct, data.distractors);
-    const correctIndex = shuffled.findIndex(o => o.isCorrect);
-
-    currentQuestion = {
-      question: data.question,
-      reading: data.reading || '',
-      opts: shuffled,
-      correctIndex,
-      correctText: data.correct,
-      explanation: data.explanation || ''
-    };
-
-    /* PR-17a + PR-23: render <u> and <ruby> tags via sanitized innerHTML */
-    qEl.innerHTML = sanitizeQuizHTML(data.question);
-    rEl.textContent = data.reading || '';
-    opts.forEach((b, i) => {
-      b.innerHTML = sanitizeQuizHTML(shuffled[i].text);
-      b.className = 'demo-opt';
-    });
-
-  } catch (err) {
-    console.error('generateQuestion error:', err);
-    resultEl.textContent = '⚠️ ' + (d.gen_error || 'Generation failed. Please try again.') + ' — ' + err.message;
-    resultEl.style.color = '#e0816b';
-    qEl.textContent = '⚠️';
-    rEl.textContent = '';
-    optsWrap.style.display = 'none';
-  } finally {
-    isGenerating = false;
-    btn.disabled = false;
-    btn.innerHTML = '<span>' + (d.btn_new || '⚡ New Question') + '</span>';
-  }
-}
-
-function checkDemo(el, index) {
-  if (!currentQuestion) return;
-  const d = T[currentLang];
-  const opts = document.querySelectorAll('#demoOpts .demo-opt');
-  const resultEl = document.getElementById('demoResult');
-  const btnExplain = document.getElementById('btnExplain');
-
-  opts.forEach(o => o.className = 'demo-opt');
-
-  const isCorrect = (index === currentQuestion.correctIndex);
-  if (isCorrect) {
-    el.classList.add('correct-ans');
-    resultEl.textContent = d.demo_correct;
-    resultEl.style.color = '#6ac98d';
-  } else {
-    el.classList.add('wrong-ans');
-    opts[currentQuestion.correctIndex].classList.add('correct-ans');
-    resultEl.innerHTML = (d.demo_wrong || 'Correct: ') + sanitizeQuizHTML(currentQuestion.correctText);
-    resultEl.style.color = '#e0816b';
-  }
-
-  /* PR-24 MVP: record answer and refresh badge */
-  recordAnswer(isCorrect);
-  renderBadge();
-
-  if (currentQuestion.explanation) {
-    btnExplain.style.display = 'inline-flex';
-  }
-}
-
-function showExplanation() {
-  if (!currentQuestion?.explanation) return;
-  const expEl = document.getElementById('demoExplanation');
-  expEl.innerHTML = sanitizeQuizHTML(currentQuestion.explanation);
-  expEl.style.display = 'block';
-  document.getElementById('btnExplain').style.display = 'none';
-}
-
-/* Render any existing badge on initial load */
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderBadge);
-} else {
-  renderBadge();
-}
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 

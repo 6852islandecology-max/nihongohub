@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — NihongoHub</title>
+<meta name="description" content="Get in touch with NihongoHub — questions, feedback, partnerships, or press.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#18120a;--paper:#f4efe5;--red:#bf3325;--gold:#c8911f;--gold-l:#e0a634;--soft:#e6ddd0;--muted:#796c5c;--white:#fdfaf3;--hud:#0d0a14;--dot:'DotGothic16',sans-serif}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);line-height:1.7}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold-l);display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold-l)}
+.page{max-width:640px;margin:0 auto;padding:48px 22px 72px}
+.tag{font-family:var(--dot);font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:8px}
+h1{font-family:'Shippori Mincho',serif;font-size:clamp(30px,5vw,44px);line-height:1.2;margin-bottom:16px}
+p{margin-bottom:14px;color:#3a3125}
+.lead{font-size:18px}
+.card{background:var(--white);border:2px solid var(--soft);border-radius:12px;padding:22px;margin-top:22px}
+.card h2{font-family:'Shippori Mincho',serif;font-size:19px;margin-bottom:10px}
+.email{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;text-decoration:none;font-weight:600;border-radius:8px;padding:13px 22px;margin-top:6px}
+label{display:block;font-size:13px;color:var(--muted);margin:12px 0 4px}
+input,textarea{width:100%;padding:11px 12px;border:1.5px solid var(--soft);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;background:var(--white)}
+textarea{min-height:120px;resize:vertical}
+button.send{margin-top:14px;width:100%;background:var(--ink);color:#fff;border:none;border-radius:8px;padding:13px;font-weight:600;font-size:15px;cursor:pointer}
+button.send:hover{background:#2a2013}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-family:var(--dot);font-size:13px;margin-top:30px}
+footer a{color:var(--gold-l);text-decoration:none}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <a href="index.html" class="back">← Home</a>
+</header>
+<main class="page">
+  <p class="tag">Contact</p>
+  <h1>Get in touch.</h1>
+  <p class="lead">Questions, feedback, a partnership idea, or press — we read everything.</p>
+
+  <div class="card">
+    <h2>Email us</h2>
+    <p>The fastest way to reach us is email. We usually reply within a few days.</p>
+    <a class="email" href="mailto:hello@nihongo-hub.com?subject=NihongoHub%20inquiry">✉️ hello@nihongo-hub.com</a>
+  </div>
+
+  <div class="card">
+    <h2>Send a message</h2>
+    <form action="mailto:hello@nihongo-hub.com" method="post" enctype="text/plain">
+      <label for="cname">Name</label>
+      <input id="cname" name="name" type="text" placeholder="Your name">
+      <label for="cemail">Email</label>
+      <input id="cemail" name="email" type="email" placeholder="you@email.com">
+      <label for="cmsg">Message</label>
+      <textarea id="cmsg" name="message" placeholder="How can we help?"></textarea>
+      <button class="send" type="submit">Send →</button>
+    </form>
+    <p class="note">This form opens your email app addressed to us. Prefer the button above for a direct email.</p>
+  </div>
+</main>
+<footer><p>© 2026 NihongoHub · <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="affiliate.html">Affiliate disclosure</a></p></footer>
+</body>
+</html>
