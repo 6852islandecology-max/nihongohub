@@ -115,6 +115,14 @@ footer a{color:var(--gold);text-decoration:none}
 /* ── type badge on battle card ── */
 .b-type{font-family:var(--pixel);font-size:7px;color:rgba(255,255,255,.3);
   letter-spacing:.5px;margin-top:10px;min-height:12px;text-transform:uppercase}
+/* ── remaining & auto-next ── */
+.b-rem{font-family:var(--pixel);font-size:8px;color:rgba(255,255,255,.28);margin-left:auto;letter-spacing:.3px}
+.b-rem.low{color:#f0a48c}
+.autonext-wrap{display:flex;align-items:center;gap:8px;margin-top:10px}
+.autonext-label{font-family:var(--dot);font-size:13px;color:rgba(255,255,255,.45);
+  cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none}
+.autonext-label input{width:15px;height:15px;accent-color:var(--gold);cursor:pointer;flex-shrink:0}
+.autonext-cd{font-family:var(--pixel);font-size:9px;color:var(--gold);min-width:28px}
 </style>
 </head>
 <body>
@@ -153,7 +161,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="levels" id="levels"></div>
 
   <div class="battle">
-    <div class="b-tag"><span class="blink">⚔️</span> <span id="b-level">N5</span> <span data-i18n="battle">BATTLE</span></div>
+    <div class="b-tag"><span class="blink">⚔️</span> <span id="b-level">N5</span> <span data-i18n="battle">BATTLE</span><span class="b-rem" id="b-rem"></span></div>
     <div class="b-q" id="b-q" data-i18n="start">Select a level and start your first battle.</div>
     <div class="b-reading" id="b-reading"></div>
     <div class="b-opts" id="b-opts" style="display:none"></div>
@@ -162,6 +170,10 @@ footer a{color:var(--gold);text-decoration:none}
     <div class="b-actions">
       <button class="btn primary" id="btn-new" onclick="newQuestion()" data-i18n="btn_new">⚡ New Question</button>
       <a class="btn ghost" href="prefectures.html" data-i18n="btn_map">🗾 Quest the map</a>
+    </div>
+    <div class="autonext-wrap">
+      <label class="autonext-label"><input type="checkbox" id="autonext-toggle"> Auto-next (2s)</label>
+      <span class="autonext-cd" id="autonext-cd"></span>
     </div>
     <div class="b-type" id="b-type"></div>
   </div>
@@ -261,6 +273,24 @@ let level = 'N5';
 let topic = 'any';
 let current = null;
 let busy = false;
+let autoNextTimer = null;
+
+function cancelAutoNext(){
+  if(autoNextTimer){ clearInterval(autoNextTimer); autoNextTimer=null; }
+  const cd=document.getElementById('autonext-cd'); if(cd) cd.textContent='';
+}
+function scheduleAutoNext(){
+  const tog=document.getElementById('autonext-toggle'); if(!tog||!tog.checked) return;
+  cancelAutoNext();
+  let secs=2;
+  const cd=document.getElementById('autonext-cd');
+  if(cd) cd.textContent=secs+'s';
+  autoNextTimer=setInterval(()=>{
+    secs--;
+    if(cd) cd.textContent=secs>0?secs+'s':'';
+    if(secs<=0){ clearInterval(autoNextTimer); autoNextTimer=null; if(!busy) newQuestion(); }
+  },1000);
+}
 
 /* minimal sanitizer: allow only <u>/<ruby>/<rt>/<rp> for furigana, escape the rest */
 function sanitizeQuizHTML(s){
@@ -339,6 +369,7 @@ document.getElementById('levels').addEventListener('click', e=>{
 /* ── battle flow ── */
 async function newQuestion(){
   if(busy) return; busy = true;
+  cancelAutoNext();
   const btn = document.getElementById('btn-new');
   const qEl = document.getElementById('b-q'), rEl = document.getElementById('b-reading');
   const optsWrap = document.getElementById('b-opts'), resEl = document.getElementById('b-result'), expEl = document.getElementById('b-explain');
@@ -366,6 +397,11 @@ async function newQuestion(){
     rEl.textContent = data.reading || '';
     optsWrap.innerHTML = opts.map((o,i)=>`<button class="b-opt" data-i="${i}">${sanitizeQuizHTML(o.t)}</button>`).join('');
     if(typeEl && data.type) typeEl.textContent = 'TYPE: '+data.type.replace(/_/g,' ').toUpperCase();
+    const remEl=document.getElementById('b-rem');
+    if(remEl && data.remaining!=null){
+      remEl.textContent = data.remaining+' left today';
+      remEl.classList.toggle('low', data.remaining<=5);
+    }
   }catch(err){
     qEl.textContent='⚠️'; optsWrap.style.display='none';
     resEl.textContent=t('fail')+err.message; resEl.className='b-result lose';
@@ -395,6 +431,7 @@ document.getElementById('b-opts').addEventListener('click', e=>{
     renderParty(t('bubble_miss'));
   }
   if(current.explanation){ expEl.innerHTML = sanitizeQuizHTML(current.explanation); expEl.classList.add('show'); }
+  scheduleAutoNext();
 });
 
 /* keyboard support for level pills */

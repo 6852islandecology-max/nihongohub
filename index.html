@@ -373,16 +373,16 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <div class="kanji-bg">語</div>
     <p class="hero-tag" data-i18n="hero_tag">AI-Powered Japanese Learning</p>
     <h1 class="hero-title"><span data-i18n="hero_title1">Master Japanese.</span><br><em data-i18n="hero_title2">Discover Japan.</em></h1>
-    <div class="hero-promise"><span data-i18n="hero_promise">🎯 N3 in 6 months — or your money back</span></div>
-    <p class="hero-sub" data-i18n="hero_sub">AI-generated JLPT practice, immersive culture lessons, streak-based habit tracking, and curated Japan travel guides — everything in one place.</p>
+    <div class="hero-promise"><span data-i18n="hero_promise">🗺️ Real Japanese for every corner of Japan</span></div>
+    <p class="hero-sub" data-i18n="hero_sub">AI-generated JLPT practice, 47-prefecture travel guides, and authentic Japanese phrases — everything free to start.</p>
     <div class="hero-ctas">
       <button class="btn-primary" data-i18n="hero_cta1" onclick="scrollToPractice()">Start Free Today</button>
       <a class="btn-outline" href="prefectures.html" data-i18n="hero_cta2">Explore Japan 🗾</a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">400K+</div><div class="stat-label" data-i18n="stat1">Global Learners</div></div>
+      <div><div class="stat-num">Free</div><div class="stat-label" data-i18n="stat1">Start Today</div></div>
       <div><div class="stat-num">N1–N5</div><div class="stat-label" data-i18n="stat2">All JLPT Levels</div></div>
-      <div><div class="stat-num">6mo</div><div class="stat-label" data-i18n="stat3">Avg. N3 Time</div></div>
+      <div><div class="stat-num">47</div><div class="stat-label" data-i18n="stat3">Prefectures</div></div>
     </div>
   </div>
   <div class="hero-right">
@@ -390,15 +390,15 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
       <div class="streak-widget">
         <div class="streak-flame">🔥</div>
         <div class="streak-info">
-          <div class="streak-label" data-i18n="streak_label">Current Streak</div>
-          <div class="streak-num">23</div>
-          <div class="streak-sub" data-i18n="streak_sub">days in a row</div>
+          <div class="streak-label" data-i18n="streak_label">Quiz Streak</div>
+          <div class="streak-num" id="hw-streak-num">—</div>
+          <div class="streak-sub" id="hw-streak-sub" data-i18n="streak_sub">answer your first question →</div>
         </div>
-        <div class="streak-days">
-          <div class="streak-day done">M</div><div class="streak-day done">T</div>
-          <div class="streak-day done">W</div><div class="streak-day done">T</div>
-          <div class="streak-day done">F</div><div class="streak-day done">S</div>
-          <div class="streak-day today">S</div>
+        <div class="streak-days" id="hw-streak-days">
+          <div class="streak-day">·</div><div class="streak-day">·</div>
+          <div class="streak-day">·</div><div class="streak-day">·</div>
+          <div class="streak-day">·</div><div class="streak-day">·</div>
+          <div class="streak-day">·</div>
         </div>
       </div>
       <div class="quiz-card">
@@ -414,11 +414,11 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
       </div>
       <div class="progress-widget">
         <div class="pw-header">
-          <span class="pw-title" data-i18n="pw_title">JLPT Readiness</span>
-          <span class="pw-level">N3 · 68%</span>
+          <span class="pw-title" data-i18n="pw_title">Your Progress</span>
+          <span class="pw-level" id="hw-lv-badge">Start free →</span>
         </div>
-        <div class="pw-bar-wrap"><div class="pw-bar"></div></div>
-        <div class="pw-meta"><span data-i18n="pw_left">Started N4 ✓</span><span data-i18n="pw_right">N3 exam in ~6 weeks</span></div>
+        <div class="pw-bar-wrap"><div class="pw-bar" id="hw-xp-bar" style="width:0%"></div></div>
+        <div class="pw-meta"><span id="hw-xp-left" data-i18n="pw_left">0 XP · Lv.1</span><span id="hw-xp-right" data-i18n="pw_right">Best streak: 0 🔥</span></div>
       </div>
     </div>
   </div>
@@ -482,8 +482,8 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <h2 class="section-title" data-i18n="ft_title">Every tool you need,<br>in one place.</h2>
   </div>
   <div class="features-grid reveal">
-    <div class="feature-card"><div class="feature-num">01</div><span class="feature-icon">🔥</span><div class="feature-title" data-i18n="f1_title">Streak & Habit Engine</div><p class="feature-desc" data-i18n="f1_desc">Daily streaks, weekly targets, and achievement badges keep you consistent. Miss a day and lose your flame.</p><div class="feature-new">NEW</div></div>
-    <div class="feature-card"><div class="feature-num">02</div><span class="feature-icon">🤖</span><div class="feature-title" data-i18n="f2_title">AI Question Generator</div><p class="feature-desc" data-i18n="f2_desc">Infinite JLPT-style questions generated fresh every session. The AI adapts to your weak points automatically.</p></div>
+    <div class="feature-card"><div class="feature-num">01</div><span class="feature-icon">🔥</span><div class="feature-title" data-i18n="f1_title">Streak Counter</div><p class="feature-desc" data-i18n="f1_desc">Track your consecutive correct answers and personal best. Every question earns XP and levels up your guide Akari.</p></div>
+    <div class="feature-card"><div class="feature-num">02</div><span class="feature-icon">🤖</span><div class="feature-title" data-i18n="f2_title">AI Question Generator</div><p class="feature-desc" data-i18n="f2_desc">Infinite JLPT-style questions (N5–N1) generated fresh every session. Choose your topic — transport, food, travel, and more.</p></div>
     <div class="feature-card"><div class="feature-num">03</div><span class="feature-icon">🗾</span><div class="feature-title" data-i18n="f4_title">47-Prefecture Quest</div><p class="feature-desc" data-i18n="f4_desc">A clickable map of all 47 prefectures with data-grounded stats. Each region opens its own quiz battle and rare-creature pixel art.</p></div>
     <div class="feature-card"><div class="feature-num">04</div><span class="feature-icon">🗾</span><div class="feature-title" data-i18n="f5_title">Culture Deep Dives</div><p class="feature-desc" data-i18n="f5_desc">Weekly essays on Japanese culture and society — written by people who actually live here.</p></div>
     <div class="feature-card"><div class="feature-num">05</div><span class="feature-icon">✈️</span><div class="feature-title" data-i18n="f6_title">Travel Japanese</div><p class="feature-desc" data-i18n="f6_desc">Phrase packs, etiquette guides, and survival vocabulary. What to say at shrines, izakayas, and combini.</p></div>
@@ -554,7 +554,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
 
 <!-- FOOTER -->
 <footer>
-  <div><span class="footer-logo">Nihongo<span>Hub</span></span><p class="footer-desc" data-i18n="footer_desc">AI-powered Japanese learning for the global curious. N3 in 6 months — guaranteed.</p></div>
+  <div><span class="footer-logo">Nihongo<span>Hub</span></span><p class="footer-desc" data-i18n="footer_desc">AI-powered Japanese learning for the globally curious. Real phrases, all 47 prefectures.</p></div>
   <div><div class="footer-heading" data-i18n="fl1_head">Learn</div><ul class="footer-links"><li><a href="quiz.html" data-i18n="fl1_1">JLPT Practice</a></li><li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" data-i18n="fl1_2">Shadowing (Echo)</a></li><li><a href="prefectures.html" data-i18n="fl1_5">47-Prefecture Quest</a></li><li><a href="#travel" data-i18n="fl1_4">Travel Phrases</a></li></ul></div>
   <div><div class="footer-heading" data-i18n="fl2_head">Explore</div><ul class="footer-links"><li><a href="blog/index.html" data-i18n="fl2_1">Culture Articles</a></li><li><a href="blog/index.html" data-i18n="fl2_2">Japan Travel</a></li><li><a href="#newsletter" data-i18n="fl2_3">Newsletter</a></li><li><a href="blog/index.html" data-i18n="fl2_4">Blog</a></li></ul></div>
   <div><div class="footer-heading" data-i18n="fl3_head">Company</div><ul class="footer-links"><li><a href="about.html" data-i18n="fl3_1">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#pricing" data-i18n="fl3_2">Pricing</a></li><li><a href="affiliate.html" data-i18n="fl3_3">Affiliate Program</a></li><li><a href="contact.html" data-i18n="fl3_4">Contact</a></li></ul></div>
@@ -572,11 +572,11 @@ const T = {
   en: {
     nav_roadmap:"Roadmap", nav_learn:"Learn", nav_culture:"Culture", nav_travel:"Travel Japan", nav_explore:"Explore 🗾", nav_quiz:"⚔️ Quiz", nav_pricing:"Pricing", nav_shadowing:"🎙 Shadowing", nav_cta:"Start Free →",
     hero_tag:"AI-Powered Japanese Learning", hero_title1:"Master Japanese.", hero_title2:"Discover Japan.",
-    hero_promise:"🎯 N3 in 6 months — or your money back",
-    hero_sub:"AI-generated JLPT practice, immersive culture lessons, streak-based habit tracking, and curated Japan travel guides — everything in one place.",
+    hero_promise:"🗺️ Real Japanese for every corner of Japan",
+    hero_sub:"AI-generated JLPT practice, 47-prefecture travel guides, and authentic Japanese phrases — everything free to start.",
     hero_cta1:"Start Free Today", hero_cta2:"Explore Japan 🗾",
-    stat1:"Global Learners", stat2:"All JLPT Levels", stat3:"Avg. N3 Time",
-    streak_label:"Current Streak", streak_sub:"days in a row",
+    stat1:"Start Today", stat2:"All JLPT Levels", stat3:"Prefectures",
+    streak_label:"Quiz Streak", streak_sub:"answer your first question →",
     quiz_label:"Daily Quiz", quiz_sub:"She wakes up every morning ___.",
     pw_title:"JLPT Readiness", pw_left:"Started N4 ✓", pw_right:"N3 exam in ~6 weeks",
     rm_tag:"Your Learning Path", rm_title:"From zero to N3 in 6 months.<br>We show you every step.",
@@ -1252,6 +1252,42 @@ function scrollToRoadmap() {
 
   sb.auth.onAuthStateChange(() => render());
   await render();
+})();
+</script>
+<script>
+/* ── hero widgets: pull real data from quiz localStorage ── */
+(function(){
+  try{
+    const xp  = parseInt(localStorage.getItem('nh_quiz_xp')||'0',10)||0;
+    const str = parseInt(localStorage.getItem('nh_streak')||'0',10)||0;
+    const best= parseInt(localStorage.getItem('nh_best_streak')||'0',10)||0;
+    const lv  = 1 + Math.floor(xp/10);
+    const pct = (xp % 10) * 10;
+
+    // streak widget
+    const sNum  = document.getElementById('hw-streak-num');
+    const sSub  = document.getElementById('hw-streak-sub');
+    const sDays = document.getElementById('hw-streak-days');
+    if(sNum) sNum.textContent = str > 0 ? str : '—';
+    if(sSub) sSub.textContent = str > 0 ? 'correct in a row' : 'answer your first question →';
+    if(sDays && str > 0){
+      const dots = sDays.querySelectorAll('.streak-day');
+      dots.forEach((d,i)=>{
+        d.textContent = i < Math.min(str,7) ? '✓' : '·';
+        d.classList.toggle('done', i < Math.min(str,7));
+      });
+    }
+
+    // progress widget
+    const lvBadge = document.getElementById('hw-lv-badge');
+    const xpBar   = document.getElementById('hw-xp-bar');
+    const xpLeft  = document.getElementById('hw-xp-left');
+    const xpRight = document.getElementById('hw-xp-right');
+    if(lvBadge) lvBadge.textContent = xp > 0 ? ('Lv.'+lv+' · '+xp+' XP') : 'Start free →';
+    if(xpBar)   xpBar.style.width   = pct+'%';
+    if(xpLeft)  xpLeft.textContent  = xp > 0 ? (xp+' XP earned') : '0 XP';
+    if(xpRight) xpRight.textContent = 'Best streak: '+(best||0)+' 🔥';
+  }catch(e){}
 })();
 </script>
 </body>
