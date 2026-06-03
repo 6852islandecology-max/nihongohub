@@ -249,7 +249,7 @@ section{padding:90px 60px}
 .pricing{background:var(--ink)}
 .pricing .section-title{color:var(--white)}
 .pricing .section-sub{color:rgba(255,255,255,.44)}
-.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:50px;background:rgba(255,255,255,.06)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:50px;background:rgba(255,255,255,.06);max-width:920px;margin-left:auto;margin-right:auto}
 .price-card{background:var(--ink);padding:40px 28px;position:relative;border:1px solid rgba(255,255,255,.06)}
 .price-card.featured{background:var(--white);border-color:var(--white)}
 .price-badge{position:absolute;top:-1px;left:24px;background:var(--red);color:#fff;font-size:10px;letter-spacing:2px;padding:4px 11px;text-transform:uppercase;font-weight:700}
@@ -335,6 +335,8 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
   <button class="lang-btn" onclick="setLang('th')">🇹🇭 ภาษาไทย</button>
   <span class="lang-divider">|</span>
   <button class="lang-btn" onclick="setLang('id')">🇮🇩 Indonesia</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" onclick="setLang('ja')">🇯🇵 日本語</button>
 </div>
 
 <!-- NAV -->
@@ -346,7 +348,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <li><a href="blog/index.html" data-i18n="nav_culture">Culture</a></li>
     <li><a href="#travel" data-i18n="nav_travel">Travel Japan</a></li>
     <li><a href="prefectures.html" data-i18n="nav_explore">Explore 🗾</a></li>
-    <li><a href="quiz.html">⚔️ Quiz</a></li>
+    <li><a href="quiz.html" data-i18n="nav_quiz">⚔️ Quiz</a></li>
     <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
     <li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" class="nav-shadowing" data-i18n="nav_shadowing">🎙 Shadowing</a></li>
   </ul>
@@ -438,6 +440,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
       <a class="guide-card" href="blog/index.html"><span class="gc-ico">🎎</span><span class="gc-title">Culture</span><span class="gc-desc">Etiquette, seasons and everyday life — read it on the blog, one prefecture at a time.</span><span class="gc-go">Open the blog →</span></a>
       <a class="guide-card" href="#travel"><span class="gc-ico">✈️</span><span class="gc-title">Travel Japan</span><span class="gc-desc">Language plus trip planning for Tokyo, Kyoto, Hokkaido and beyond.</span><span class="gc-go">Plan a trip →</span></a>
       <a class="guide-card" href="prefectures.html"><span class="gc-ico">🗾</span><span class="gc-title">Explore</span><span class="gc-desc">A clickable map of all 47 prefectures with data-grounded stats and quiz battles.</span><span class="gc-go">Open the map →</span></a>
+      <a class="guide-card" href="wildlife.html"><span class="gc-ico">🦋</span><span class="gc-title">Wildlife</span><span class="gc-desc">Each prefecture's rare creatures from GBIF, drawn as pixel art. Yukika's territory.</span><span class="gc-go">Meet them →</span></a>
       <a class="guide-card" href="quiz.html"><span class="gc-ico">⚔️</span><span class="gc-title">Quiz</span><span class="gc-desc">AI-generated JLPT battles, N5 to N1. Earn XP and power up your guide Akari.</span><span class="gc-go">Start a battle →</span></a>
       <a class="guide-card" href="#pricing"><span class="gc-ico">💴</span><span class="gc-title">Pricing</span><span class="gc-desc">Start free. Go Pro monthly, or own it forever with Lifetime.</span><span class="gc-go">See plans →</span></a>
       <a class="guide-card" href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener"><span class="gc-ico">🎙</span><span class="gc-title">Shadowing</span><span class="gc-desc">Practice speaking with YouTube shadowing in our sister app, Echo.</span><span class="gc-go">Open Echo →</span></a>
@@ -519,10 +522,9 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <p class="section-sub" style="margin:0 auto" data-i18n="pr_sub">Start free. Upgrade anytime. Cancel anytime. Or own it forever with Lifetime.</p>
   </div>
   <div class="pricing-grid reveal">
-    <div class="price-card"><div class="price-plan" data-i18n="pl1_name">Free</div><div class="price-amount">$0</div><div class="price-period" data-i18n="pl1_period">forever</div><ul class="price-features"><li data-i18n="pl1_f1">10 AI questions/day</li><li data-i18n="pl1_f2">N5 & N4 levels only</li><li data-i18n="pl1_f3">Basic streak tracking</li><li data-i18n="pl1_f4">2 culture articles/month</li></ul><button class="btn-plan btn-plan-ghost" data-i18n="pl1_btn">Get Started Free</button></div>
-    <div class="price-card featured"><div class="price-badge" data-i18n="pl2_badge">Most Popular</div><div class="price-plan" data-i18n="pl2_name">Pro</div><div class="price-amount">$9.99</div><div class="price-period" data-i18n="pl2_period">per month</div><ul class="price-features"><li data-i18n="pl2_f1">Unlimited AI questions</li><li data-i18n="pl2_f2">All JLPT levels N1–N5</li><li data-i18n="pl2_f3">Full streak + badge system</li><li data-i18n="pl2_f5">Anime & manga phrases</li><li data-i18n="pl2_f6">Full culture library</li><li data-i18n="pl2_f7">Travel phrase packs</li></ul><button class="btn-plan btn-plan-solid" data-i18n="pl2_btn">Start Pro — $9.99/mo</button><div class="lifetime-note">or $79.99/year <span class="price-save" data-i18n="pl2_save">SAVE 33%</span></div></div>
-    <div class="price-card"><div class="price-plan" data-i18n="pl3_name">Academic</div><div class="price-amount">$19.99</div><div class="price-period" data-i18n="pl3_period">per month</div><ul class="price-features"><li data-i18n="pl3_f1">Everything in Pro</li><li data-i18n="pl3_f2">Academic Japanese module</li><li data-i18n="pl3_f3">Research vocabulary packs</li><li data-i18n="pl3_f4">Formal writing guides</li><li data-i18n="pl3_f5">PDF study exports</li></ul><button class="btn-plan btn-plan-ghost" data-i18n="pl3_btn">Go Academic</button></div>
-    <div class="price-card"><div class="price-badge" style="background:var(--gold);color:var(--ink)" data-i18n="pl4_badge">Best Value</div><div class="price-plan" data-i18n="pl4_name">Lifetime</div><div class="price-amount" style="color:var(--gold)">$149</div><div class="price-period" data-i18n="pl4_period">one-time</div><ul class="price-features"><li data-i18n="pl4_f1">Everything in Pro — forever</li><li data-i18n="pl4_f2">All future content included</li><li data-i18n="pl4_f3">No recurring charges, ever</li><li data-i18n="pl4_f4">Founding member badge</li><li data-i18n="pl4_f5">Early access to new features</li></ul><button class="btn-plan btn-plan-ghost" style="border-color:var(--gold);color:var(--gold)" data-i18n="pl4_btn">Own It Forever</button><div class="lifetime-note" style="color:rgba(255,255,255,.35)" data-i18n="pl4_note">~15 months of Pro</div></div>
+    <div class="price-card"><div class="price-plan" data-i18n="pl1_name">Free</div><div class="price-amount">$0</div><div class="price-period" data-i18n="pl1_period">forever</div><ul class="price-features"><li data-i18n="pl1_f1">10 AI questions/day</li><li data-i18n="pl1_f2">N5 & N4 levels only</li><li data-i18n="pl1_f3">Basic streak tracking</li><li data-i18n="pl1_f4">2 culture articles/month</li></ul><button class="btn-plan btn-plan-ghost" data-plan-cta="free" data-i18n="pl1_btn">Get Started Free</button></div>
+    <div class="price-card featured"><div class="price-badge" data-i18n="pl2_badge">Most Popular</div><div class="price-plan" data-i18n="pl2_name">Pro</div><div class="price-amount">$9.99</div><div class="price-period" data-i18n="pl2_period">per month</div><ul class="price-features"><li data-i18n="pl2_f1">Unlimited AI questions</li><li data-i18n="pl2_f2">All JLPT levels N1–N5</li><li data-i18n="pl2_f3">Full streak + badge system</li><li data-i18n="pl2_f5">47-Prefecture Quest access</li><li data-i18n="pl2_f6">Full culture library</li><li data-i18n="pl2_f7">Travel phrase packs</li></ul><button class="btn-plan btn-plan-solid" data-plan-cta="pro" data-i18n="pl2_btn">Start Pro — $9.99/mo</button><div class="lifetime-note">or $79.99/year <span class="price-save" data-i18n="pl2_save">SAVE 33%</span></div></div>
+    <div class="price-card"><div class="price-badge" style="background:var(--gold);color:var(--ink)" data-i18n="pl4_badge">Best Value</div><div class="price-plan" data-i18n="pl4_name">Lifetime</div><div class="price-amount" style="color:var(--gold)">$149</div><div class="price-period" data-i18n="pl4_period">one-time</div><ul class="price-features"><li data-i18n="pl4_f1">Everything in Pro — forever</li><li data-i18n="pl4_f2">All future content included</li><li data-i18n="pl4_f3">No recurring charges, ever</li><li data-i18n="pl4_f4">Founding member badge</li><li data-i18n="pl4_f5">Early access to new features</li></ul><button class="btn-plan btn-plan-ghost" style="border-color:var(--gold);color:var(--gold)" data-plan-cta="lifetime" data-i18n="pl4_btn">Own It Forever</button><div class="lifetime-note" style="color:rgba(255,255,255,.35)" data-i18n="pl4_note">~15 months of Pro</div></div>
   </div>
 </section>
 
@@ -531,10 +533,10 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
   <p class="section-tag" data-i18n="nl_tag">47 Notes from Japan</p>
   <h2 class="section-title" data-i18n="nl_title">Shall we visit one of the 47 with us this week?</h2>
   <p style="color:var(--muted);font-size:15px;margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto" data-i18n="nl_sub">A weekly note from a family of three slowly walking through Japan's 47 prefectures — one place, one phrase, one small thing we noticed.</p>
-  <div class="newsletter-form">
-    <input class="newsletter-input" type="email" data-i18n-placeholder="nl_placeholder" placeholder="your@email.com">
-    <button class="btn-subscribe" data-i18n="nl_btn">Subscribe</button>
-  </div>
+  <form class="newsletter-form" id="nlForm" action="https://ikimonohakasefamily.substack.com/subscribe" method="get" target="_blank">
+    <input class="newsletter-input" id="nlEmail" type="email" name="email" required data-i18n-placeholder="nl_placeholder" placeholder="your@email.com">
+    <button class="btn-subscribe" type="submit" data-i18n="nl_btn">Subscribe</button>
+  </form>
   <p class="newsletter-note" data-i18n="nl_note">Weekly. Free. Unsubscribe whenever you like.</p>
 </section>
 
@@ -556,7 +558,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
 ═══════════════════════════════════════════ */
 const T = {
   en: {
-    nav_roadmap:"Roadmap", nav_learn:"Learn", nav_culture:"Culture", nav_travel:"Travel Japan", nav_explore:"Explore 🗾", nav_pricing:"Pricing", nav_shadowing:"🎙 Shadowing", nav_cta:"Start Free →",
+    nav_roadmap:"Roadmap", nav_learn:"Learn", nav_culture:"Culture", nav_travel:"Travel Japan", nav_explore:"Explore 🗾", nav_quiz:"⚔️ Quiz", nav_pricing:"Pricing", nav_shadowing:"🎙 Shadowing", nav_cta:"Start Free →",
     hero_tag:"AI-Powered Japanese Learning", hero_title1:"Master Japanese.", hero_title2:"Discover Japan.",
     hero_promise:"🎯 N3 in 6 months — or your money back",
     hero_sub:"AI-generated JLPT practice, immersive culture lessons, streak-based habit tracking, and curated Japan travel guides — everything in one place.",
@@ -619,7 +621,7 @@ const T = {
   },
 
   zh: {
-    nav_roadmap:"學習路線", nav_learn:"開始學習", nav_culture:"日本文化", nav_travel:"旅遊日本", nav_explore:"探索日本 🗾", nav_pricing:"定價", nav_shadowing:"🎙 跟讀練習", nav_cta:"免費開始 →",
+    nav_roadmap:"學習路線", nav_learn:"開始學習", nav_culture:"日本文化", nav_travel:"旅遊日本", nav_explore:"探索日本 🗾", nav_quiz:"⚔️ 測驗", nav_pricing:"定價", nav_shadowing:"🎙 跟讀練習", nav_cta:"免費開始 →",
     hero_tag:"AI 驅動的日語學習平台", hero_title1:"精通日語。", hero_title2:"探索日本。",
     hero_promise:"🎯 6個月達到N3 — 否則全額退款",
     hero_sub:"AI生成的JLPT練習、沉浸式文化課程、連續學習追蹤，以及精選日本旅遊指南 — 一站式完整服務。",
@@ -682,7 +684,7 @@ const T = {
   },
 
   es: {
-    nav_roadmap:"Ruta", nav_learn:"Aprender", nav_culture:"Cultura", nav_travel:"Viaja a Japón", nav_explore:"Explora 🗾", nav_pricing:"Precios", nav_shadowing:"🎙 Shadowing", nav_cta:"Empezar Gratis →",
+    nav_roadmap:"Ruta", nav_learn:"Aprender", nav_culture:"Cultura", nav_travel:"Viaja a Japón", nav_explore:"Explora 🗾", nav_quiz:"⚔️ Quiz", nav_pricing:"Precios", nav_shadowing:"🎙 Shadowing", nav_cta:"Empezar Gratis →",
     hero_tag:"Aprendizaje de Japonés con IA", hero_title1:"Domina el Japonés.", hero_title2:"Descubre Japón.",
     hero_promise:"🎯 N3 en 6 meses — o te devolvemos el dinero",
     hero_sub:"Práctica JLPT con IA, lecciones culturales inmersivas, seguimiento de hábitos y guías de viaje a Japón — todo en un solo lugar.",
@@ -745,7 +747,7 @@ const T = {
   },
 
   th: {
-    nav_roadmap:"แผนการเรียน", nav_learn:"เรียนภาษา", nav_culture:"วัฒนธรรม", nav_travel:"เที่ยวญี่ปุ่น", nav_explore:"สำรวจญี่ปุ่น 🗾", nav_pricing:"ราคา", nav_shadowing:"🎙 ฝึกพูดตาม", nav_cta:"เริ่มฟรี →",
+    nav_roadmap:"แผนการเรียน", nav_learn:"เรียนภาษา", nav_culture:"วัฒนธรรม", nav_travel:"เที่ยวญี่ปุ่น", nav_explore:"สำรวจญี่ปุ่น 🗾", nav_quiz:"⚔️ ควิซ", nav_pricing:"ราคา", nav_shadowing:"🎙 ฝึกพูดตาม", nav_cta:"เริ่มฟรี →",
     hero_tag:"เรียนภาษาญี่ปุ่นด้วย AI", hero_title1:"เชี่ยวชาญภาษาญี่ปุ่น", hero_title2:"ค้นพบญี่ปุ่น",
     hero_promise:"🎯 ผ่าน N3 ใน 6 เดือน — หรือคืนเงินเต็มจำนวน",
     hero_sub:"ข้อสอบ JLPT แบบ AI เนื้อหาวัฒนธรรมเข้มข้น ติดตามความสม่ำเสมอ และคู่มือท่องเที่ยวญี่ปุ่น — ครบในที่เดียว",
@@ -808,7 +810,7 @@ const T = {
   },
 
   id: {
-    nav_roadmap:"Peta Belajar", nav_learn:"Belajar", nav_culture:"Budaya", nav_travel:"Wisata Jepang", nav_explore:"Jelajahi 🗾", nav_pricing:"Harga", nav_shadowing:"🎙 Shadowing", nav_cta:"Mulai Gratis →",
+    nav_roadmap:"Peta Belajar", nav_learn:"Belajar", nav_culture:"Budaya", nav_travel:"Wisata Jepang", nav_explore:"Jelajahi 🗾", nav_quiz:"⚔️ Kuis", nav_pricing:"Harga", nav_shadowing:"🎙 Shadowing", nav_cta:"Mulai Gratis →",
     hero_tag:"Belajar Bahasa Jepang dengan AI", hero_title1:"Kuasai Bahasa Jepang.", hero_title2:"Jelajahi Jepang.",
     hero_promise:"🎯 Capai N3 dalam 6 bulan — atau uang kembali",
     hero_sub:"Latihan JLPT berbasis AI, pelajaran budaya imersif, pelacakan kebiasaan belajar, dan panduan wisata Jepang — semua dalam satu tempat.",
@@ -868,6 +870,59 @@ const T = {
     fl3_head:"Perusahaan", fl3_1:"Tentang Kami", fl3_2:"Harga", fl3_3:"Program Afiliasi", fl3_4:"Kontak",
     footer_legal:"Privasi · Syarat & Ketentuan · Pengungkapan Afiliasi",
     demo_correct:"✓ Benar! Terus lanjutkan.", demo_wrong:"✗ Kurang tepat — jawaban: "
+  },
+
+  ja: {
+    nav_roadmap:"ロードマップ", nav_learn:"学ぶ", nav_culture:"文化", nav_travel:"日本を旅する", nav_explore:"探索 🗾", nav_quiz:"⚔️ クイズ", nav_pricing:"料金", nav_shadowing:"🎙 シャドーイング", nav_cta:"無料で始める →",
+    hero_tag:"AI 日本語学習プラットフォーム", hero_title1:"日本語を、自分のものに。", hero_title2:"そして、日本を歩く。",
+    hero_promise:"🎯 6ヶ月でN3 — 達成できなければ全額返金",
+    hero_sub:"AI が JLPT の問題を毎回新しく作り、ストリークで習慣を支え、47都道府県のガイドが旅とつながる — すべてひとつの場所に。",
+    hero_cta1:"無料で始める", hero_cta2:"仕組みを見る →",
+    stat1:"世界の学習者", stat2:"全 JLPT レベル", stat3:"平均 N3 到達期間",
+    streak_label:"連続日数", streak_sub:"日連続",
+    quiz_label:"今日のクイズ", quiz_sub:"彼女は毎朝___起きます。",
+    pw_title:"JLPT 進捗", pw_left:"N4 達成 ✓", pw_right:"N3 まで残り約 6 週",
+    rm_tag:"あなたの学習ルート", rm_title:"ゼロから 6 ヶ月で N3 へ。<br>一歩ずつ道筋を示します。",
+    rm_sub:"NihongoHub は、何をいつ学ぶかを毎週はっきり示すマイルストーン地図を用意しています。",
+    rm1_month:"1 ヶ月目", rm1_goal:"ひらがな・カタカナ", rm1_desc:"両方の文字 + 200 の基本語彙を習得。メニュー、看板、簡単な文が読めるように。", rm1_badge:"✓ N5 の土台",
+    rm2_month:"2–3 ヶ月目", rm2_goal:"文法と漢字", rm2_desc:"必須漢字 100 + 基礎文法パターン + 日常会話フレーズ。", rm2_badge:"✓ N5 合格レベル",
+    rm3_month:"4–5 ヶ月目", rm3_goal:"中級の流暢さ", rm3_desc:"漢字 500+、複雑な文法、本物の日本語テキストや各種メディアを読む。", rm3_badge:"✓ N4 合格レベル",
+    rm4_month:"6 ヶ月目", rm4_goal:"N3 試験対策", rm4_desc:"模試・弱点ドリル・リスニング演習。自信を持って JLPT 当日へ。", rm4_badge:"🎯 N3 目標",
+    ft_tag:"提供する機能", ft_title:"必要な学習ツールが、<br>ひとつの場所に。",
+    f1_title:"ストリーク・習慣エンジン", f1_desc:"毎日のストリーク、週間目標、達成バッジで継続を支えます。一日抜けると火が消える仕様。",
+    f2_title:"AI 問題ジェネレーター", f2_desc:"毎回新しい JLPT 形式の問題を AI が生成。弱点を自動で学習します。",
+    f3_title:"JLPT 準備度スコア", f3_desc:"あと何週で本試験に間に合うかを、ライブダッシュボードで可視化。",
+    f4_title:"47 都道府県クエスト", f4_desc:"47 都道府県をクリックして開く統計データ付きの地図。地域ごとにクイズバトルと希少生物のドット絵が用意されています。",
+    f5_title:"カルチャー深掘り", f5_desc:"日本に実際に住む人が書く、文化と生活のエッセイ。",
+    f6_title:"旅の日本語", f6_desc:"フレーズパック・マナー集・サバイバル語彙。神社、居酒屋、コンビニで使う言葉。",
+    jlpt_tag:"ライブ AI 演習", jlpt_title:"AI が問題を生成。<br>毎レベル、毎日。", jlpt_sub:"毎回新しい AI 問題 — 同じテストは二度と出ません。",
+    jlpt_legal:"問題は AI により独立して生成されており、日本国際教育支援協会（JEES）や日本国際交流基金とは無関係です。",
+    jlpt_prompt:"レベルを選んで「新しい問題」をタップ。",
+    btn_new:"⚡ 新しい問題", btn_loading:"生成中…", btn_explain:"💡 解説を見る",
+    ai_note:"Claude AI が生成した問題 · 学習用 · 公式試験素材ではありません",
+    gen_error:"生成に失敗しました。もう一度お試しください。", rate_limit:"無料利用枠の上限に達しました。",
+    lv_beginner:"入門", lv_basic:"基礎", lv_inter:"中級", lv_adv:"上級", lv_exp:"エキスパート",
+    db_tag:"進捗ダッシュボード", db_title:"自分の現在地が、<br>いつでもはっきり分かる。", db_sub:"クイズのたびに JLPT 準備度スコアが更新されます。",
+    db_main_title:"スキル分布 — 現在のレベル: N3",
+    sk1:"語彙", sk2:"文法", sk3:"漢字読み", sk4:"聴解", sk5:"読解速度",
+    ds1_label:"連続日数", ds1_sub:"日連続", ds2_label:"今月の解答数", ds2_sub:"今月",
+    jp_tag:"JLPT 予測", jp_sub:"あと約 6 週で本試験対応",
+    cu_tag:"文化と暮らし", cu_title:"教科書の向こう側にある日本。", cu_sub:"マナー、季節、食、日常 — 47 都道府県をひとつずつ、ブログで書いていきます。", cu_cta:"47都道府県ブログを読む →",
+    tr_tag:"日本を旅する", tr_title:"行く準備、お手伝いします。", tr_sub:"言語準備と旅の計画を組み合わせた、提携トラベルガイド。",
+    td1:"東京", td1_desc:"渋谷の交差点から路地裏の居酒屋まで — 言語と旅をまとめたガイド。必須フレーズ 200 つき。", td1_cta:"東京の旅を計画 →",
+    td2:"京都", td2_desc:"寺、茶道、花街。日本文化の中心で使われる丁寧な日本語を学ぶ。", td2_cta:"京都を探索 →",
+    td3:"北海道", td3_desc:"パウダースノー、海鮮市場、手つかずの自然。日本の北を旅する言葉。", td3_cta:"北海道を発見 →",
+    pr_tag:"料金", pr_title:"シンプルな料金。<br>本気の成果。", pr_sub:"まず無料で。いつでも Pro へ。Lifetime なら一度買って一生使えます。",
+    pl1_name:"Free", pl1_period:"永久無料", pl1_f1:"1 日 10 問の AI 問題", pl1_f2:"N5・N4 のみ", pl1_f3:"基本ストリーク機能", pl1_f4:"月 2 本のカルチャー記事", pl1_btn:"無料で始める",
+    pl2_badge:"人気", pl2_name:"Pro", pl2_period:"月額", pl2_f1:"AI 問題 無制限", pl2_f2:"全 JLPT レベル N1–N5", pl2_f3:"ストリーク + バッジ フル機能", pl2_f4:"JLPT 準備度ダッシュボード", pl2_f5:"47 都道府県クエスト アクセス", pl2_f6:"カルチャーライブラリ全公開", pl2_f7:"旅のフレーズパック", pl2_btn:"Pro を始める — $9.99/月", pl2_save:"33% お得",
+    pl4_badge:"おすすめ", pl4_name:"Lifetime", pl4_period:"買い切り", pl4_f1:"Pro の全機能 — 一生", pl4_f2:"今後の追加コンテンツも込み", pl4_f3:"継続課金一切なし", pl4_f4:"創設メンバーバッジ", pl4_f5:"新機能の早期アクセス", pl4_btn:"一生使う", pl4_note:"Pro 約 15 ヶ月分",
+    nl_tag:"47 Notes from Japan", nl_title:"今週、47 のうちのひとつに、一緒に行ってみませんか？", nl_sub:"3 人家族が日本の 47 都道府県をゆっくり歩きながら毎週送るノート — ひとつの場所、ひとつのフレーズ、ひとつの小さな気づき。", nl_placeholder:"your@email.com", nl_btn:"購読する", nl_note:"毎週・無料・いつでも解除可。",
+    footer_desc:"AI で支える日本語学習プラットフォーム。6 ヶ月で N3 — 保証付き。",
+    fl1_head:"学ぶ", fl1_1:"JLPT 演習", fl1_2:"シャドーイング (Echo)", fl1_5:"47 都道府県クエスト", fl1_3:"アカデミック日本語", fl1_4:"旅のフレーズ",
+    fl2_head:"探索", fl2_1:"カルチャー記事", fl2_2:"日本の旅", fl2_3:"ニュースレター", fl2_4:"ブログ",
+    fl3_head:"運営", fl3_1:"私たちについて", fl3_2:"料金", fl3_3:"アフィリエイトプログラム", fl3_4:"お問い合わせ",
+    footer_legal:"プライバシー · 利用規約 · アフィリエイト開示",
+    demo_correct:"✓ 正解！その調子。", demo_wrong:"✗ おしい — 答え: "
   }
 };
 
@@ -899,7 +954,7 @@ function setLang(lang) {
   });
 
   // Update html lang
-  document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang === 'th' ? 'th' : lang === 'id' ? 'id' : lang === 'es' ? 'es' : 'en';
+  document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang === 'th' ? 'th' : lang === 'id' ? 'id' : lang === 'es' ? 'es' : lang === 'ja' ? 'ja' : 'en';
 }
 
 /* ═══════════════════════════════════════════
@@ -999,8 +1054,20 @@ function scrollToRoadmap() {
 (async () => {
   const $ = (id) => document.getElementById(id);
   let cfg;
-  try { cfg = await fetch('/api/public-config').then(r => r.json()); } catch { return; }
-  if (!cfg || !cfg.authEnabled) return; // auth not configured → keep widget hidden
+  try { cfg = await fetch('/api/public-config').then(r => r.json()); } catch { cfg = null; }
+  if (!cfg || !cfg.authEnabled) {
+    // auth not configured → keep widget hidden, but still give pricing buttons a soft fallback
+    document.querySelectorAll('[data-plan-cta]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tag = document.getElementById('pricing');
+        if (tag) tag.scrollIntoView({ behavior: 'smooth' });
+        btn.textContent = 'Opening soon — join the newsletter ↓';
+        setTimeout(() => document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' }), 400);
+      });
+    });
+    return;
+  }
   const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
   const sb = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
 
@@ -1059,16 +1126,31 @@ function scrollToRoadmap() {
     await render();
   };
 
+  let pendingPlan = null;
   $('nhUpgrade').onclick = async () => {
     if (!cfg.stripeEnabled) { $('nhAuthMsg2').textContent = 'Payments open soon.'; return; }
     $('nhUpgrade').disabled = true;
+    const plan = pendingPlan === 'lifetime' ? 'lifetime' : 'pro';
     try {
-      const r = await authedFetch('/api/upgrade-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plan: 'pro' }) });
+      const r = await authedFetch('/api/upgrade-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plan }) });
       const j = await r.json();
       if (j.checkout_url) location.href = j.checkout_url; else $('nhAuthMsg2').textContent = j.error || 'Checkout unavailable.';
     } catch { $('nhAuthMsg2').textContent = 'Network error.'; }
     $('nhUpgrade').disabled = false;
   };
+
+  document.querySelectorAll('[data-plan-cta]').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      pendingPlan = btn.getAttribute('data-plan-cta');
+      open();
+      const { data: { session } } = await sb.auth.getSession();
+      if (!session) {
+        mode = 'signup';
+        $('nhAuthTitle').textContent = pendingPlan === 'free' ? 'Start your free trial' : (pendingPlan === 'lifetime' ? 'Sign up & buy Lifetime' : 'Sign up & start Pro');
+      }
+    });
+  });
 
   async function render() {
     const { data: { session } } = await sb.auth.getSession();
@@ -1087,10 +1169,13 @@ function scrollToRoadmap() {
       st.trial_status === 'active' ? 'FREE TRIAL · ' + st.days_remaining + 'd left' :
       st.trial_status === 'expired' ? 'TRIAL ENDED' : 'FREE';
     planEl.innerHTML = '<span class="nh-pill">' + label + '</span>';
-    $('nhStartTrial').style.display = (st.trial_status === 'never_started' && st.plan === 'free') ? '' : 'none';
+    const wantsFree = pendingPlan === 'free' || pendingPlan === null;
+    const wantsPaid = pendingPlan === 'pro' || pendingPlan === 'lifetime';
+    $('nhStartTrial').style.display = (wantsFree && st.trial_status === 'never_started' && st.plan === 'free') ? '' : 'none';
     $('nhStartTrial').disabled = false;
-    $('nhUpgrade').style.display = (st.plan === 'free') ? '' : 'none';
-    $('nhUpgrade').textContent = cfg.stripeEnabled ? '⭐ Upgrade to Pro' : '⭐ Upgrade (opening soon)';
+    $('nhUpgrade').style.display = (wantsPaid && st.plan === 'free') ? '' : 'none';
+    const upgradeLabel = pendingPlan === 'lifetime' ? '⭐ Buy Lifetime — $149' : '⭐ Upgrade to Pro — $9.99/mo';
+    $('nhUpgrade').textContent = cfg.stripeEnabled ? upgradeLabel : '⭐ Upgrade (opening soon)';
   }
 
   sb.auth.onAuthStateChange(() => render());
