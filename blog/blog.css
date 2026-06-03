@@ -41,3 +41,34 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:24px}
 .bcard .bk{font-family:'Noto Sans JP',sans-serif;font-size:20px;font-weight:700}
 .bcard .br{font-family:var(--pixel);font-size:9px;color:var(--gold);margin-top:4px}
 .bcard p{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+
+/* ── on-this-page TOC (injected by scripts/inject-blog-nav.mjs) ── */
+.toc{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:12px 16px;margin:18px 0}
+.toc-h{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;display:block;margin-bottom:8px}
+.toc ul{margin:0 0 0 18px}
+.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none;font-size:14.5px}
+.toc a:hover{color:var(--red);text-decoration:underline}
+
+/* ── prev / all / next strip ── */
+.pxnav{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch;margin:36px 0 8px}
+.pxnav a,.pxnav .pxempty{display:flex;flex-direction:column;justify-content:center;background:var(--white);
+  border:2px solid var(--ink);border-radius:6px;padding:11px 14px;text-decoration:none;color:var(--ink);
+  box-shadow:3px 4px 0 rgba(22,16,10,.12)}
+.pxnav a:hover{transform:translateY(-2px)}
+.pxnav .pxnext{text-align:right}
+.pxnav span{font-family:var(--pixel);font-size:8px;color:var(--gold)}
+.pxnav b{font-family:'Noto Sans JP',sans-serif;font-size:15px;margin-top:3px}
+.pxnav .pxall{justify-content:center;align-items:center;font-family:var(--pixel);font-size:9px;color:var(--muted);box-shadow:none;border-style:dashed}
+.pxnav .pxempty{border-style:dashed;opacity:.35;box-shadow:none}
+@media(max-width:520px){.pxnav{grid-template-columns:1fr 1fr;}.pxnav .pxall{grid-column:1 / -1;order:3}}
+
+/* ── related prefectures in the same region ── */
+.pxrel{margin:22px 0 6px}
+.pxrel-h{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;margin-bottom:10px}
+.pxrel-row{display:flex;flex-wrap:wrap;gap:8px}
+.pxrel-row a{display:flex;align-items:baseline;gap:6px;background:var(--white);border:2px solid var(--soft);
+  border-radius:20px;padding:7px 13px;text-decoration:none;color:var(--ink)}
+.pxrel-row a:hover{border-color:var(--gold)}
+.pxrel-row .rk{font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700}
+.pxrel-row .re{font-family:var(--pixel);font-size:8px;color:var(--muted)}
