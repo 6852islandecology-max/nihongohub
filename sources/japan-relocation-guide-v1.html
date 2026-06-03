@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Japan Relocation Survival Kit — NihongoHub</title>
+<style>
+/* ── Print-optimized PDF guide ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;
+  --muted:#7a6a52;--soft:#ddcfb6;--green:#3fae6b;
+}
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap');
+body{
+  font-family:'DM Sans',-apple-system,system-ui,sans-serif;
+  color:var(--ink);line-height:1.65;
+  background:#fff;
+  max-width:800px;margin:0 auto;padding:32px 28px 60px;
+}
+@media print{
+  body{padding:0;max-width:100%}
+  .no-print{display:none}
+  .page-break{page-break-before:always}
+}
+/* Cover */
+.cover{
+  background:var(--ink);color:var(--paper);
+  padding:48px 36px;border-radius:8px;margin-bottom:36px;
+}
+.cover-badge{
+  font-family:'Press Start 2P',monospace;font-size:9px;
+  color:var(--gold);letter-spacing:1px;display:block;margin-bottom:12px
+}
+.cover h1{
+  font-family:'DotGothic16',sans-serif;
+  font-size:clamp(26px,5vw,38px);line-height:1.15;
+  color:#fdfaf3;margin-bottom:10px
+}
+.cover p{color:#ccc;font-size:15px;line-height:1.6;margin-bottom:14px}
+.cover .meta{font-size:12px;color:#999;border-top:1px solid #333;padding-top:10px;margin-top:16px}
+/* Section headers */
+.phase{
+  display:flex;align-items:center;gap:12px;
+  border-bottom:3px solid var(--gold);padding-bottom:8px;margin:36px 0 16px
+}
+.phase-n{
+  font-family:'Press Start 2P',monospace;font-size:9px;
+  background:var(--gold);color:var(--ink);
+  padding:6px 10px;border-radius:3px;white-space:nowrap
+}
+.phase h2{font-family:'DotGothic16',sans-serif;font-size:22px}
+h3{font-family:'DotGothic16',sans-serif;font-size:17px;margin:20px 0 8px;color:var(--ink)}
+p{margin:8px 0;font-size:14.5px}
+ul{margin:8px 0 8px 20px}li{margin:4px 0;font-size:14.5px}
+/* Checklist */
+.cl{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:16px 20px;margin:16px 0}
+.cl-title{font-family:'Press Start 2P',monospace;font-size:9px;color:var(--green);margin-bottom:10px}
+.cl ul{list-style:none;margin:0;padding:0}
+.cl li{
+  padding:7px 0 7px 28px;position:relative;
+  border-bottom:1px dashed var(--soft);font-size:14px
+}
+.cl li:last-child{border-bottom:none}
+.cl li::before{
+  content:"☐";position:absolute;left:0;top:6px;
+  color:var(--gold);font-size:18px;line-height:1
+}
+/* Phrase cards */
+.phrase-card{
+  border:2px solid var(--ink);border-radius:6px;
+  padding:12px 16px;margin:12px 0;
+  background:var(--white);
+}
+.phrase-label{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);display:block;margin-bottom:6px}
+.phrase-jp{font-family:'Noto Sans JP',sans-serif;font-size:17px;font-weight:700}
+.phrase-ro{color:var(--muted);font-size:13px;margin-top:2px}
+.phrase-en{font-size:13px;margin-top:2px;color:var(--ink)}
+/* Warning */
+.warn{background:#fff7e6;border:2px solid #e09000;border-radius:6px;padding:12px 16px;margin:14px 0}
+.warn strong{font-family:'Press Start 2P',monospace;font-size:8px;color:#b06800;display:block;margin-bottom:5px}
+.warn p{font-size:13.5px}
+/* Timeline */
+.timeline{margin:16px 0}
+.tl-item{display:flex;gap:14px;margin:10px 0}
+.tl-dot{
+  width:12px;height:12px;border-radius:50%;
+  background:var(--gold);margin-top:5px;flex-shrink:0
+}
+.tl-body{font-size:14px}
+.tl-body strong{color:var(--red)}
+/* Sources */
+.sources-box{background:var(--white);border:1px dashed var(--soft);border-radius:6px;padding:14px 18px;margin:28px 0}
+.sources-box h3{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--muted);margin-bottom:10px}
+.sources-box a{color:var(--muted);font-size:12.5px;word-break:break-all}
+.sources-box li{margin:4px 0;font-size:12.5px}
+/* Footer watermark */
+.watermark{
+  text-align:center;font-size:11px;color:#bbb;
+  border-top:1px dashed var(--soft);padding-top:10px;margin-top:36px
+}
+/* Print button */
+.print-btn{
+  display:inline-block;font-family:'Press Start 2P',monospace;font-size:9px;
+  background:var(--red);color:#fff;text-decoration:none;
+  padding:12px 18px;border-radius:4px;border-bottom:3px solid #7e1c12;
+  cursor:pointer;margin-bottom:28px
+}
+</style>
+</head>
+<body>
+
+<div class="no-print" style="background:#f0f0f0;padding:14px 20px;border-radius:6px;margin-bottom:24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+  <span style="font-size:14px">Save as PDF: use your browser's Print function → "Save as PDF"</span>
+  <button class="print-btn" onclick="window.print()">🖨 PRINT / SAVE AS PDF</button>
+  <a href="../blog/moving-to-japan-guide.html" style="font-size:13px;color:#555">← Back to full article</a>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-badge">NIHONGOHUB · FREE GUIDE · 2026</span>
+  <h1>Japan Relocation Survival Kit</h1>
+  <p>The complete, source-verified checklist guide for moving to Japan — from COE application through your first resident tax bill. Every claim links to an official Japanese government source.</p>
+  <div class="meta">
+    nihongo-hub.com · For personal use · Updated June 2026<br>
+    Sources: ISA / MHLW / Japan Pension Service / NTA / JMA
+  </div>
+</div>
+
+<!-- HOW TO USE -->
+<h3 style="margin-top:0">How to use this guide</h3>
+<p>This guide follows the chronological order in which you will actually face each challenge — not alphabetically. Work through it in phases. The checklists are designed to be printed and ticked off as you complete each step.</p>
+<ul>
+  <li>Phase 1 (pre-arrival): start this 3–6 months before your move date</li>
+  <li>Phase 2 (first two weeks): the most time-critical phase — 14-day legal deadline for city hall</li>
+  <li>Phase 3 (months 1–6): settling in and building daily routines</li>
+  <li>Phase 4 (year 2+): tax, pension, and long-term planning</li>
+</ul>
+
+<!-- ─── PHASE 1 ─── -->
+<div class="phase page-break">
+  <span class="phase-n">PHASE 1</span>
+  <h2>Before You Arrive — Visa &amp; Budget</h2>
+</div>
+
+<h3>Certificate of Eligibility (COE)</h3>
+<p>The COE (在留資格認定証明書) is issued by the Immigration Services Agency (ISA) in Japan, typically by your employer or school. Processing takes 1–3 months. You cannot enter Japan on a long-stay visa without it.</p>
+<ul>
+  <li>COE application guide: <strong>isa.go.jp/en</strong></li>
+  <li>Do not book non-refundable travel until the COE is in your hands</li>
+  <li>Take the COE to the nearest Japanese embassy to exchange for your visa</li>
+</ul>
+
+<h3>Move-in cost estimate</h3>
+<ul>
+  <li>Security deposit (敷金): 1–2 months' rent, partially refundable</li>
+  <li>Key money (礼金): 0–2 months' rent, non-refundable (often waived in newer buildings)</li>
+  <li>Agency fee: 0.5–1 month's rent</li>
+  <li>Guarantee company fee: 0.5–1 month's rent (if no guarantor)</li>
+  <li>First month's rent: 1 month upfront</li>
+  <li>Total budget: plan for 5–6 months' rent equivalent</li>
+</ul>
+
+<div class="cl">
+  <div class="cl-title">PHASE 1 CHECKLIST</div>
+  <ul>
+    <li>Confirm visa category with employer / school</li>
+    <li>Submit COE application (or confirm employer submitted it)</li>
+    <li>Track COE processing at isa.go.jp</li>
+    <li>Apply for visa at Japanese embassy once COE arrives</li>
+    <li>Set aside 5–6 months' rent as move-in reserve</li>
+    <li>Learn hiragana &amp; katakana before arrival (forms use them)</li>
+    <li>Research apartment options — note foreigner-friendly agencies</li>
+    <li>Download Japan Official Travel App (JNTO) for disaster alerts</li>
+  </ul>
+</div>
+
+<!-- ─── PHASE 2 ─── -->
+<div class="phase page-break">
+  <span class="phase-n">PHASE 2</span>
+  <h2>The First Two Weeks — The Chicken-and-Egg Gauntlet</h2>
+</div>
+
+<div class="warn">
+  <strong>14-DAY LEGAL DEADLINE</strong>
+  <p>You must register your address at your local city/ward hall within 14 days of moving in. Missing this is a minor legal violation and complicates every other step. Do it on Day 1 if possible.</p>
+</div>
+
+<h3>The unlock order</h3>
+<p>Follow this sequence to break the chicken-and-egg cycle:</p>
+<div class="timeline">
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><strong>1.</strong> Collect Residence Card at airport (major airports issue on arrival)</div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><strong>2.</strong> Register address at city hall → card gets address stamped</div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><strong>3.</strong> Get a SIM card (requires Residence Card with address)</div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><strong>4.</strong> Open Japan Post Bank account (requires Residence Card + address)</div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><strong>5.</strong> Enroll in National Health Insurance and Pension at city hall (same visit as step 2)</div></div>
+</div>
+
+<h3>City hall — what to bring</h3>
+<ul>
+  <li>Residence Card (在留カード)</li>
+  <li>Passport</li>
+  <li>Lease agreement (showing your address)</li>
+  <li>Stamp / hanko — increasingly optional, signature accepted at many offices</li>
+</ul>
+<p>At city hall, complete in one visit if possible: address registration, health insurance enrollment, pension enrollment. Pick up the garbage sorting calendar while you're there.</p>
+
+<h3>Bank account — foreigner-friendly options</h3>
+<ul>
+  <li><strong>Japan Post Bank (ゆうちょ銀行)</strong> — most accessible; available at every post office; accepts Residence Card + passport</li>
+  <li><strong>Rakuten Bank / Sony Bank</strong> — English apps; can open online after residence registration</li>
+  <li>Major city banks (MUFG, SMBC, Mizuho) — may require 6+ months of residency</li>
+</ul>
+
+<h3>SIM card — what to expect</h3>
+<ul>
+  <li>Require: Residence Card with registered address + payment method</li>
+  <li>IIJmio, Mineo, Rakuten Mobile — affordable MVNOs, English support available</li>
+  <li>Consider an eSIM for the first few days before residence is registered</li>
+</ul>
+
+<div class="cl">
+  <div class="cl-title">PHASE 2 CHECKLIST</div>
+  <ul>
+    <li>Collect Residence Card at airport immigration</li>
+    <li>Register address at city hall (within 14 days — Day 1 recommended)</li>
+    <li>Enroll in National Health Insurance (if not employer-covered)</li>
+    <li>Enroll in National Pension (if not employer-covered)</li>
+    <li>Pick up garbage sorting calendar at city hall</li>
+    <li>Get a local SIM card</li>
+    <li>Open Japan Post Bank account</li>
+    <li>Purchase bike registration (防犯登録) if you have a bicycle</li>
+    <li>Register for city disaster alert notifications</li>
+    <li>Locate nearest evacuation point (避難場所) on your ward's map</li>
+  </ul>
+</div>
+
+<!-- PHRASE CARDS -->
+<h3>City Hall Phrase Cards</h3>
+
+<div class="phrase-card">
+  <span class="phrase-label">MOVE-IN REGISTRATION</span>
+  <div class="phrase-jp">転入届を出したいのですが、どこに行けばいいですか？</div>
+  <div class="phrase-ro">Tenyūtodoke o dashitai no desu ga, doko ni ikeba ii desu ka?</div>
+  <div class="phrase-en">I'd like to file my move-in registration. Where should I go?</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">HEALTH INSURANCE</span>
+  <div class="phrase-jp">国民健康保険に加入したいのですが。</div>
+  <div class="phrase-ro">Kokumin kenkō hoken ni kanyū shitai no desu ga.</div>
+  <div class="phrase-en">I'd like to enroll in National Health Insurance.</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">NATIONAL PENSION</span>
+  <div class="phrase-jp">国民年金の加入手続きをお願いします。</div>
+  <div class="phrase-ro">Kokumin nenkin no kanyū tetsuzuki o onegai shimasu.</div>
+  <div class="phrase-en">I'd like to complete the National Pension enrollment procedures.</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">ASKING FOR AN ENGLISH FORM</span>
+  <div class="phrase-jp">英語の説明書はありますか？</div>
+  <div class="phrase-ro">Eigo no setsumeisho wa arimasu ka?</div>
+  <div class="phrase-en">Do you have an English explanation / form?</div>
+</div>
+
+<!-- ─── PHASE 3 ─── -->
+<div class="phase page-break">
+  <span class="phase-n">PHASE 3</span>
+  <h2>Daily Life — Garbage, Health &amp; Disasters</h2>
+</div>
+
+<h3>Garbage sorting rules</h3>
+<p>Every municipality has its own system. Violations mean the bag is left uncollected. Categories typically include:</p>
+<ul>
+  <li><strong>Combustible (燃えるごみ)</strong>: food scraps, tissues, clothing, rubber — most common</li>
+  <li><strong>Non-combustible (燃えないごみ)</strong>: glass, ceramics, metal, small appliances</li>
+  <li><strong>Recyclable (資源ごみ)</strong>: plastic containers (rinse first), cans, bottles, cardboard — often further separated by type</li>
+  <li><strong>Large items (粗大ごみ)</strong>: furniture, appliances — purchase disposal tickets at a convenience store first; schedule a pickup via your city's website</li>
+</ul>
+<p>The city hall garbage calendar shows which type goes out on which days. Put bags out the morning of collection day — not the night before.</p>
+
+<div class="phrase-card">
+  <span class="phrase-label">ASKING NEIGHBORS</span>
+  <div class="phrase-jp">ごみの分別方法を教えてもらえますか？</div>
+  <div class="phrase-ro">Gomi no bunbetsu hōhō o oshiete moraemasu ka?</div>
+  <div class="phrase-en">Could you teach me how to sort the garbage?</div>
+</div>
+
+<h3>Healthcare</h3>
+<ul>
+  <li>Present your insurance card (保険証) at reception; your co-pay is 30% of standard costs</li>
+  <li>For a basic clinic visit: typically ¥1,000–3,000 out-of-pocket</li>
+  <li>Prescriptions are filled at a separate pharmacy (薬局) — another ¥200–700</li>
+  <li>English-speaking doctor directory: <strong>amdamedicalcenter.com</strong></li>
+  <li>Ambulances (救急車) are free to call (119) but hospital fees apply</li>
+</ul>
+
+<div class="phrase-card">
+  <span class="phrase-label">AT THE CLINIC</span>
+  <div class="phrase-jp">保険証を持っています。初診なのですが。</div>
+  <div class="phrase-ro">Hokenshō o motte imasu. Shoshin na no desu ga.</div>
+  <div class="phrase-en">I have my insurance card. This is my first visit here.</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">PHARMACY</span>
+  <div class="phrase-jp">この薬の飲み方を教えてください。</div>
+  <div class="phrase-ro">Kono kusuri no nomikata o oshiete kudasai.</div>
+  <div class="phrase-en">Please explain how to take this medicine.</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">EMERGENCY</span>
+  <div class="phrase-jp">救急車を呼んでください！</div>
+  <div class="phrase-ro">Kyūkyūsha o yonde kudasai!</div>
+  <div class="phrase-en">Please call an ambulance!</div>
+</div>
+
+<h3>Earthquake &amp; disaster preparedness</h3>
+<ul>
+  <li>J-Alert: your phone will sound an alarm before significant earthquakes — do not disable it</li>
+  <li>Drop, cover, hold: under a sturdy table or against an interior wall; away from windows</li>
+  <li>After shaking stops: check for gas leaks (smell), open doors before aftershocks can jam them</li>
+  <li>Evacuation point (避難場所): shown on maps posted in your neighborhood and on your city's website</li>
+  <li>Emergency kit: 3 liters of water/person/day for 3 days, emergency food, flashlight, radio, Residence Card copy, cash</li>
+</ul>
+<p>Source: Japan Meteorological Agency (jma.go.jp/jma/indexe.html)</p>
+
+<div class="cl">
+  <div class="cl-title">PHASE 3 CHECKLIST</div>
+  <ul>
+    <li>Learn your garbage collection schedule (days and categories)</li>
+    <li>Identify nearest clinic and hospital with emergency service</li>
+    <li>Locate nearest evacuation point on your city's map</li>
+    <li>Assemble a 72-hour emergency kit</li>
+    <li>Set up city disaster alert push notifications</li>
+    <li>Get IC card (Suica / Pasmo / ICOCA) for transit</li>
+    <li>Register bicycle with police (防犯登録, ~¥600)</li>
+  </ul>
+</div>
+
+<!-- ─── PHASE 4 ─── -->
+<div class="phase page-break">
+  <span class="phase-n">PHASE 4</span>
+  <h2>The Long Game — Resident Tax, Pension &amp; Workplace</h2>
+</div>
+
+<h3>Resident tax timeline (the June ambush)</h3>
+<p>Resident tax (住民税) is calculated on income earned in the previous calendar year. It is billed starting in June of the following year. This delay catches many newcomers off guard.</p>
+
+<div class="timeline">
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body">Jan–Dec <strong>2025</strong>: you earn income in Japan</div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body">Jan–Mar <strong>2026</strong>: you (or your employer) file your income tax return</div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body">June <strong>2026</strong>: resident tax bill arrives — covers the full 2025 income at ~10%</div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-body">July 2026 – May 2027: paid in 4 installments (if paying yourself) or withheld monthly by employer</div></div>
+</div>
+
+<div class="warn">
+  <strong>LEAVING JAPAN EARLY?</strong>
+  <p>If you leave Japan before resident tax is fully paid, appoint a tax representative (納税管理人) — a trusted contact still in Japan — before departure. They receive and pay bills on your behalf. Unpaid resident tax accrues penalties and can affect future re-entry. Source: nta.go.jp/english</p>
+</div>
+
+<h3>National Pension lump-sum withdrawal</h3>
+<p>Non-Japanese citizens who paid into Japan's pension system and leave permanently (or for 2+ years) can claim a Lump-Sum Withdrawal Payment (脱退一時金).</p>
+<ul>
+  <li>Eligibility: minimum 6 months of contributions</li>
+  <li>Deadline: apply within 2 years of leaving Japan</li>
+  <li>Where to apply: filed abroad to the Japan Pension Service</li>
+  <li>Tax: 20.42% withholding deducted at source; tax treaty refund may be available</li>
+  <li>Amount: based on average monthly wage and number of months contributed</li>
+  <li>Application forms and current formula: <strong>nenkin.go.jp/international</strong></li>
+</ul>
+
+<div class="warn">
+  <strong>TOTALIZATION AGREEMENTS</strong>
+  <p>Japan has totalization agreements with ~22 countries (including USA, UK, Germany, Australia, South Korea). This prevents double contributions and may allow pension credits to count toward your home country's pension. Check your country's status at nenkin.go.jp/international.</p>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">TAX OFFICE</span>
+  <div class="phrase-jp">住民税の支払い方を教えてください。</div>
+  <div class="phrase-ro">Jūminzei no shiharai kata o oshiete kudasai.</div>
+  <div class="phrase-en">Please explain how to pay resident tax.</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">PENSION SERVICE</span>
+  <div class="phrase-jp">脱退一時金の申請方法を教えてください。</div>
+  <div class="phrase-ro">Dattai ichiji-kin no shinsei hōhō o oshiete kudasai.</div>
+  <div class="phrase-en">Please tell me how to apply for the lump-sum withdrawal payment.</div>
+</div>
+
+<div class="cl">
+  <div class="cl-title">PHASE 4 CHECKLIST</div>
+  <ul>
+    <li>Track resident tax cycle — budget for a June billing after first full year</li>
+    <li>Confirm whether employer withholds resident tax or you pay yourself</li>
+    <li>Keep all pension payment records (ねんきん定期便 annual statement)</li>
+    <li>If planning to leave Japan: note the 2-year lump-sum withdrawal deadline</li>
+    <li>If leaving with unpaid resident tax: appoint a tax representative before departure</li>
+    <li>Check if home country has a totalization agreement with Japan</li>
+    <li>File income tax return by March 15 each year (確定申告)</li>
+  </ul>
+</div>
+
+<!-- ─── MASTER PHRASE CARD COLLECTION ─── -->
+<div class="phase page-break">
+  <span class="phase-n">BONUS</span>
+  <h2>Master Phrase Card Collection</h2>
+</div>
+<p>Cut out or screenshot these cards. Each is designed to be shown to a Japanese speaker at the relevant location.</p>
+
+<div class="phrase-card">
+  <span class="phrase-label">APARTMENT HUNTING</span>
+  <div class="phrase-jp">外国人でも入居できますか？</div>
+  <div class="phrase-ro">Gaikokujin demo nyūkyo dekimasu ka?</div>
+  <div class="phrase-en">Can foreigners rent here?</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">APARTMENT — INITIAL COSTS</span>
+  <div class="phrase-jp">敷金と礼金はいくらですか？</div>
+  <div class="phrase-ro">Shikikin to reikin wa ikura desu ka?</div>
+  <div class="phrase-en">How much are the security deposit and key money?</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">UTILITIES — GAS</span>
+  <div class="phrase-jp">ガスの開栓をお願いしたいのですが。</div>
+  <div class="phrase-ro">Gasu no kaisen o onegai shitai no desu ga.</div>
+  <div class="phrase-en">I'd like to have the gas turned on, please.</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">CONVENIENCE STORE — LARGE ITEM DISPOSAL TICKET</span>
+  <div class="phrase-jp">粗大ごみ処理券はどこで買えますか？</div>
+  <div class="phrase-ro">Sodai gomi shori-ken wa doko de kaemasu ka?</div>
+  <div class="phrase-en">Where can I buy a large-item disposal ticket?</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">WORKPLACE — CONFIRMING A DECISION</span>
+  <div class="phrase-jp">この件について、事前にご相談させてください。</div>
+  <div class="phrase-ro">Kono ken ni tsuite, jizen ni go-sōdan sasete kudasai.</div>
+  <div class="phrase-en">Regarding this matter, please allow me to consult with you in advance.</div>
+</div>
+
+<div class="phrase-card">
+  <span class="phrase-label">REPORTING PROGRESS (HŌRENSO)</span>
+  <div class="phrase-jp">〇〇の件、進捗をご報告いたします。</div>
+  <div class="phrase-ro">Maru-maru no ken, shinchoku o go-hōkoku itashimasu.</div>
+  <div class="phrase-en">Regarding [topic], I'd like to report on progress.</div>
+</div>
+
+<!-- SOURCES -->
+<div class="sources-box page-break">
+  <h3>OFFICIAL SOURCES — ALL CLAIMS IN THIS GUIDE</h3>
+  <ul>
+    <li>Immigration Services Agency of Japan (ISA) — visa, COE, Residence Card: <a href="https://www.isa.go.jp/en/index.html">isa.go.jp/en</a></li>
+    <li>Ministry of Internal Affairs — address registration: <a href="https://www.soumu.go.jp">soumu.go.jp</a></li>
+    <li>My Number Card Portal (Digital Agency): <a href="https://www.kojinbango-card.go.jp/en/">kojinbango-card.go.jp/en</a></li>
+    <li>Ministry of Health, Labour and Welfare — health insurance, labor standards: <a href="https://www.mhlw.go.jp/english/">mhlw.go.jp/english</a></li>
+    <li>Japan Pension Service — enrollment, lump-sum withdrawal: <a href="https://www.nenkin.go.jp/international/">nenkin.go.jp/international</a></li>
+    <li>National Tax Agency — resident tax, income tax: <a href="https://www.nta.go.jp/english/">nta.go.jp/english</a></li>
+    <li>Japan Meteorological Agency — earthquake alerts: <a href="https://www.jma.go.jp/jma/indexe.html">jma.go.jp</a></li>
+    <li>Fire and Disaster Management Agency — evacuation: <a href="https://www.fdma.go.jp/en/">fdma.go.jp/en</a></li>
+    <li>AMDA International Medical Information Center: <a href="https://www.amdamedicalcenter.com/">amdamedicalcenter.com</a></li>
+  </ul>
+</div>
+
+<div class="watermark">
+  Japan Relocation Survival Kit · NihongoHub · nihongo-hub.com · Free for personal use · June 2026<br>
+  All claims sourced from official Japanese government websites as listed above.
+</div>
+
+</body>
+</html>

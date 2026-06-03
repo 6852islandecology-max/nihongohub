@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Japan Tax & Pension Handbook — NihongoHub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;
+  --muted:#7a6a52;--soft:#ddcfb6;--green:#3fae6b;--blue:#1d4ed8;--orange:#ea580c;
+}
+body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.6;background:#fff;max-width:830px;margin:0 auto;padding:28px 24px 60px}
+@media print{
+  body{padding:0;max-width:100%;font-size:11pt}
+  .no-print{display:none!important}
+  .page-break{page-break-before:always}
+  @page{margin:15mm 15mm 15mm 15mm;size:A4}
+  .timeline-row{break-inside:avoid}
+}
+
+/* COVER */
+.cover{background:var(--ink);color:var(--paper);padding:44px 36px;border-radius:8px;margin-bottom:32px;position:relative;overflow:hidden}
+.cover::after{content:"税";font-family:'Noto Sans JP',sans-serif;font-size:200px;color:rgba(255,255,255,0.04);position:absolute;right:-10px;top:-20px;line-height:1}
+.cover-vol{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--gold);letter-spacing:2px;display:block;margin-bottom:10px}
+.cover-title{font-family:'DotGothic16',sans-serif;font-size:clamp(22px,4vw,34px);color:#fdfaf3;margin-bottom:10px;line-height:1.2}
+.cover-sub{color:#bbb;font-size:14px;line-height:1.6;margin-bottom:16px}
+.cover-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.badge{background:rgba(200,145,31,.2);border:1px solid var(--gold);color:var(--gold);font-family:'Press Start 2P',monospace;font-size:7px;padding:4px 8px;border-radius:3px}
+.cover-meta{font-size:11px;color:#888;border-top:1px solid #333;padding-top:10px;margin-top:16px}
+
+/* SECTIONS */
+.sec{border-bottom:3px solid var(--gold);padding-bottom:8px;margin:32px 0 18px;display:flex;align-items:center;gap:12px}
+.sec-icon{font-size:22px;line-height:1}
+.sec h2{font-family:'DotGothic16',sans-serif;font-size:20px}
+h3{font-family:'DotGothic16',sans-serif;font-size:16px;margin:20px 0 10px;color:var(--red)}
+p{font-size:14px;margin:8px 0}
+ul{margin:8px 0 8px 20px}li{margin:4px 0;font-size:14px}
+
+/* YEAR TIMELINE */
+.year-timeline{margin:18px 0}
+.year-block{border:2px solid var(--soft);border-radius:6px;margin:0 0 12px;overflow:hidden}
+.year-header{background:var(--ink);color:var(--gold);font-family:'Press Start 2P',monospace;font-size:9px;padding:8px 14px;display:flex;align-items:center;gap:10px}
+.year-body{padding:0}
+.timeline-row{display:grid;grid-template-columns:80px 1fr;align-items:stretch;border-bottom:1px dashed var(--soft)}
+.timeline-row:last-child{border-bottom:none}
+.timeline-month{background:#f9f5ef;padding:8px 12px;font-family:'Press Start 2P',monospace;font-size:8px;color:var(--gold);display:flex;align-items:center;border-right:2px solid var(--soft)}
+.timeline-event{padding:8px 14px;font-size:13px}
+.timeline-event strong{color:var(--red);display:block;margin-bottom:2px}
+.timeline-event small{color:var(--muted);display:block;margin-top:2px}
+.event-warn{background:#fff7e6}
+.event-action{background:#f0fdf4}
+.event-deadline{background:#fef2f2}
+
+/* TAX TABLE */
+.tax-table{width:100%;border-collapse:collapse;margin:12px 0}
+.tax-table th{font-family:'Press Start 2P',monospace;font-size:7px;background:var(--ink);color:var(--gold);padding:7px 10px;text-align:left}
+.tax-table td{padding:8px 10px;border-bottom:1px solid var(--soft);font-size:13px;vertical-align:top}
+.tax-table tr:nth-child(even) td{background:#fdf9f3}
+
+/* FORMULA BOX */
+.formula{background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:16px 20px;margin:16px 0;font-family:'DM Sans',monospace}
+.formula-title{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);display:block;margin-bottom:10px}
+.formula-eq{font-size:15px;color:var(--ink);margin:6px 0;padding:8px 14px;background:#f9f5ef;border-left:3px solid var(--gold);border-radius:0 4px 4px 0}
+.formula-note{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* WORKSHEET */
+.worksheet{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:16px 20px;margin:16px 0}
+.worksheet-title{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);display:block;margin-bottom:12px}
+.ws-row{display:grid;grid-template-columns:1fr 120px;gap:8px;align-items:center;padding:6px 0;border-bottom:1px dashed var(--soft);font-size:13px}
+.ws-row:last-child{border-bottom:none}
+.ws-field{height:24px;border-bottom:2px solid var(--ink);display:block}
+
+/* CHECKLIST */
+.cl{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:14px 18px;margin:14px 0}
+.cl-title{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);margin-bottom:10px;display:block}
+.cl ul{list-style:none;margin:0;padding:0}
+.cl li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--soft);font-size:13.5px}
+.cl li:last-child{border-bottom:none}
+.cl li::before{content:"☐";position:absolute;left:0;top:6px;color:var(--gold);font-size:17px;line-height:1}
+
+/* TREATY TABLE */
+.treaty-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12.5px}
+.treaty-table th{background:var(--ink);color:var(--gold);font-family:'Press Start 2P',monospace;font-size:7px;padding:6px 10px;text-align:left}
+.treaty-table td{padding:6px 10px;border-bottom:1px solid var(--soft)}
+.treaty-table .yes{color:var(--green);font-weight:700}
+.treaty-table .no{color:var(--muted)}
+
+/* WARN / TIP */
+.warn{background:#fff7e6;border:2px solid #e09000;border-radius:6px;padding:12px 16px;margin:14px 0}
+.warn strong{font-family:'Press Start 2P',monospace;font-size:7px;color:#b06800;display:block;margin-bottom:5px}
+.tip{background:#f0fdf4;border:2px solid var(--green);border-radius:6px;padding:10px 14px;margin:12px 0}
+.tip strong{font-family:'Press Start 2P',monospace;font-size:7px;color:var(--green);display:block;margin-bottom:4px}
+
+.disclaimer{background:#f9f9f9;border:1px dashed #ccc;border-radius:4px;padding:12px 16px;margin:28px 0;font-size:11.5px;color:#666}
+.print-btn{display:inline-block;font-family:'Press Start 2P',monospace;font-size:9px;background:var(--red);color:#fff;text-decoration:none;padding:12px 18px;border-radius:4px;border-bottom:3px solid #7e1c12;cursor:pointer;margin-bottom:24px}
+</style>
+</head>
+<body>
+
+<div class="no-print" style="background:#f0f0f0;padding:12px 16px;border-radius:6px;margin-bottom:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+  <span style="font-size:13px">Print → "Save as PDF" for the best result</span>
+  <button class="print-btn" onclick="window.print()">🖨 PRINT / SAVE AS PDF</button>
+  <a href="../blog/moving-to-japan-guide.html" style="font-size:13px;color:#555">← Back to blog</a>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-vol">NIHONGOHUB GUIDE SERIES · VOL.3</span>
+  <div class="cover-title">Japan Tax &amp; Pension<br>Handbook for Residents</div>
+  <div class="cover-sub">The resident tax timing trap, how to claim your pension back when you leave, country-by-country treaty table, and every deadline you cannot miss. Includes planning worksheets.</div>
+  <div class="cover-badges">
+    <span class="badge">YEAR-BY-YEAR TIMELINE</span>
+    <span class="badge">PENSION WITHDRAWAL GUIDE</span>
+    <span class="badge">22-COUNTRY TREATY TABLE</span>
+    <span class="badge">WORKSHEETS</span>
+  </div>
+  <div class="cover-meta">nihongo-hub.com · Vol.3 of 3 · Updated June 2026 · Sources: NTA / Japan Pension Service / ISA</div>
+</div>
+
+<div class="disclaimer">
+  This handbook provides general information about Japan's tax and pension systems as of June 2026. It does not constitute tax, legal, or financial advice. Tax rules and pension regulations change; verify current requirements at nta.go.jp and nenkin.go.jp. For advice specific to your situation, consult a registered tax accountant (税理士) or social insurance labor consultant (社会保険労務士).
+</div>
+
+<!-- ─── RESIDENT TAX: THE TIMING TRAP ─── -->
+<div class="sec"><span class="sec-icon">📅</span><h2>Resident Tax (住民税) — The Year-by-Year Timeline</h2></div>
+
+<p>Resident tax is calculated on income earned in the <strong>previous calendar year</strong> and billed in <strong>June of the following year</strong>. This delay trips up almost every foreign resident. The timeline below shows exactly when bills arrive — year by year.</p>
+
+<div class="year-timeline">
+  <div class="year-block">
+    <div class="year-header">YEAR 0 — THE YEAR YOU ARRIVE</div>
+    <div class="year-body">
+      <div class="timeline-row">
+        <div class="timeline-month">ANY MONTH</div>
+        <div class="timeline-event">
+          <strong>You arrive in Japan and start working</strong>
+          No resident tax due this year on pre-Japan income.
+          <small>If you arrive and earn income, that income will be taxed in Year 1 (June billing).</small>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-month">JAN – DEC</div>
+        <div class="timeline-event">
+          <strong>Income earned in Japan this year is recorded</strong>
+          This becomes the base for next year's resident tax bill.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-header">YEAR 1 — THE QUIET YEAR</div>
+    <div class="year-body">
+      <div class="timeline-row event-action">
+        <div class="timeline-month">JAN – MAR</div>
+        <div class="timeline-event">
+          <strong>Income tax return (確定申告) deadline: March 15</strong>
+          If salaried: your employer files on your behalf (年末調整). Self-employed or freelance: file yourself at your local tax office.
+          <small>Source: nta.go.jp/english</small>
+        </div>
+      </div>
+      <div class="timeline-row event-warn">
+        <div class="timeline-month">JUNE</div>
+        <div class="timeline-event">
+          <strong>⚠ First resident tax bill arrives</strong>
+          Based on income you earned in Year 0. If you arrived mid-year, the bill is proportional.
+          Salaried employees: withheld monthly by employer (June–May cycle).
+          Self-employed: 4 installment payments (June, August, October, January).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-header">YEAR 2 AND BEYOND — THE STEADY STATE</div>
+    <div class="year-body">
+      <div class="timeline-row">
+        <div class="timeline-month">JAN – MAR</div>
+        <div class="timeline-event">
+          <strong>Income tax return if applicable (March 15 deadline)</strong>
+          <small>Salaried workers with no side income typically do not need to file.</small>
+        </div>
+      </div>
+      <div class="timeline-row event-warn">
+        <div class="timeline-month">JUNE</div>
+        <div class="timeline-event">
+          <strong>New resident tax cycle begins</strong>
+          Bill covers income from January–December of last year. Rate: approximately 10% of taxable income (6% municipal + 4% prefectural) plus a flat household levy (均等割, ~¥5,000/year). Exact amount varies by municipality.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block" style="border-color:#dc2626">
+    <div class="year-header" style="background:#dc2626">LEAVING JAPAN — CRITICAL DEADLINES</div>
+    <div class="year-body">
+      <div class="timeline-row event-deadline">
+        <div class="timeline-month">BEFORE YOU LEAVE</div>
+        <div class="timeline-event">
+          <strong>Check your resident tax balance</strong>
+          Ask your employer's HR or your ward tax office: "Is there any resident tax remaining for me to pay?"
+          <small>If outstanding: appoint a tax representative (納税管理人) before departure.</small>
+        </div>
+      </div>
+      <div class="timeline-row event-deadline">
+        <div class="timeline-month">WITHIN 2 YEARS OF LEAVING</div>
+        <div class="timeline-event">
+          <strong>Apply for pension lump-sum withdrawal</strong>
+          This is a strict deadline. After 2 years, the right to claim is forfeited.
+          <small>See pension section below for full details.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── HOW RESIDENT TAX IS CALCULATED ─── -->
+<div class="sec"><span class="sec-icon">🧮</span><h2>How Resident Tax Is Calculated</h2></div>
+
+<div class="formula">
+  <span class="formula-title">GENERAL CALCULATION FORMULA</span>
+  <div class="formula-eq">Taxable Income = Gross Income − Salary Income Deduction − Personal Deduction</div>
+  <div class="formula-eq">Resident Tax ≈ Taxable Income × 10% + Flat levy (~¥5,000)</div>
+  <div class="formula-note">
+    The 10% rate is the combined prefectural (4%) + municipal (6%) standard rate. Actual deductions vary by personal circumstances (dependents, social insurance paid, special deductions). Your tax notice (課税明細書) explains the breakdown.
+  </div>
+</div>
+
+<div class="worksheet">
+  <span class="worksheet-title">RESIDENT TAX PLANNING WORKSHEET</span>
+  <div class="ws-row"><span>Estimated annual gross income (¥)</span><span class="ws-field"></span></div>
+  <div class="ws-row"><span>Salary income deduction estimate (¥) <small style="color:var(--muted)">(check nta.go.jp for current table)</small></span><span class="ws-field"></span></div>
+  <div class="ws-row"><span>Social insurance paid this year (¥) <small style="color:var(--muted)">(health insurance + pension)</small></span><span class="ws-field"></span></div>
+  <div class="ws-row"><span>Basic personal deduction (¥430,000 standard)</span><span class="ws-field"></span></div>
+  <div class="ws-row"><span>Estimated taxable income (¥)</span><span class="ws-field"></span></div>
+  <div class="ws-row"><span>Estimated resident tax ≈ taxable × 10% + 5,000 (¥)</span><span class="ws-field"></span></div>
+  <div class="ws-row"><span>Monthly withholding estimate (¥) <small style="color:var(--muted)">(÷12)</small></span><span class="ws-field"></span></div>
+</div>
+
+<div class="warn">
+  <strong>LEAVING IN YOUR 2ND OR 3RD YEAR?</strong>
+  <p>If you leave Japan before June, you may have NO resident tax deducted yet for last year's income — it hasn't been billed yet. This does NOT mean you don't owe it. The bill will arrive at your registered address in Japan. If you've left, your tax representative receives it and must pay on your behalf. Appoint one before departure.</p>
+</div>
+
+<table class="tax-table">
+  <tr><th>TAX TERM</th><th>JAPANESE</th><th>MEANING</th></tr>
+  <tr><td>Resident tax</td><td>住民税 (jūminzei)</td><td>Annual local tax on previous year's income, ~10%</td></tr>
+  <tr><td>Income tax</td><td>所得税 (shotokuzei)</td><td>National income tax, withheld monthly or filed March 15</td></tr>
+  <tr><td>Tax representative</td><td>納税管理人 (nōzei kanrinin)</td><td>Person appointed to receive/pay tax bills on behalf of a departed resident</td></tr>
+  <tr><td>Tax return</td><td>確定申告 (kakutei shinkoku)</td><td>Annual income tax filing, March 15 deadline</td></tr>
+  <tr><td>Year-end adjustment</td><td>年末調整 (nenmatsu chōsei)</td><td>Employer's annual tax reconciliation for salaried workers (no filing needed for most)</td></tr>
+  <tr><td>Tax notice</td><td>課税明細書 (kazei meisaisho)</td><td>Detailed tax breakdown sent by your ward/city office in May–June</td></tr>
+  <tr><td>Special taxation office</td><td>税務署 (zeimusho)</td><td>National Tax Agency branch office — for income tax questions</td></tr>
+  <tr><td>Ward/city tax division</td><td>市民税課 (shiminzei-ka)</td><td>Local resident tax administration — for resident tax questions</td></tr>
+</table>
+
+<!-- ─── PENSION SYSTEM ─── -->
+<div class="sec page-break"><span class="sec-icon">🏦</span><h2>National Pension (国民年金) — The Basics</h2></div>
+
+<p>Japan has two pension tiers. Which one you're in depends on your employment status:</p>
+
+<table class="tax-table">
+  <tr><th>PENSION TYPE</th><th>WHO PAYS</th><th>ENROLLMENT</th></tr>
+  <tr><td><strong>国民年金 (Kokumin Nenkin)</strong> — National Pension<br><small>Base tier, everyone</small></td><td>Self-employed, freelancers, students, unemployed, company dependents</td><td>At city hall, or automatically upon address registration</td></tr>
+  <tr><td><strong>厚生年金 (Kōsei Nenkin)</strong> — Employees' Pension<br><small>Tier 2 — adds on top of National Pension</small></td><td>Full-time company employees</td><td>Automatic via employer; listed on your pay slip</td></tr>
+</table>
+
+<p>Mandatory enrollment ages 20–59 for anyone residing in Japan. Monthly contribution amounts change annually; check the current rate at nenkin.go.jp.</p>
+
+<div class="tip">
+  <strong>CONFIRMING YOUR CONTRIBUTIONS</strong>
+  You receive an annual pension statement (ねんきん定期便) by post each August (or around your birthday). It shows total months contributed and projected benefits. Keep this document — you will need it for the lump-sum withdrawal application.
+</div>
+
+<!-- ─── LUMP-SUM WITHDRAWAL ─── -->
+<div class="sec"><span class="sec-icon">💰</span><h2>Lump-Sum Withdrawal (脱退一時金) — Getting Your Money Back</h2></div>
+
+<p>This is one of the most underused financial benefits for departing foreign residents. If you paid into Japan's pension system and are leaving permanently (or for 2+ years), you can claim a Lump-Sum Withdrawal Payment.</p>
+
+<h3>Eligibility requirements</h3>
+<ul>
+  <li>You are not a Japanese national</li>
+  <li>You have paid pension premiums for <strong>at least 6 months</strong></li>
+  <li>You have lost resident status in Japan (departure)</li>
+  <li>You have NOT reached the age to receive regular pension payments (currently 65)</li>
+  <li>You have <strong>never previously received a lump-sum withdrawal</strong></li>
+</ul>
+
+<div class="warn">
+  <strong>2-YEAR DEADLINE — DO NOT MISS THIS</strong>
+  <p>You must submit your application within <strong>2 years of the date you left Japan</strong> (date of departure from the national registry). After 2 years, the right is forfeited permanently. Applications are filed from abroad, sent directly to the Japan Pension Service.</p>
+</div>
+
+<h3>How the amount is calculated</h3>
+<div class="formula">
+  <span class="formula-title">LUMP-SUM CALCULATION (GENERAL FORMULA)</span>
+  <div class="formula-eq">Lump-Sum = Average Monthly Pension Insured Amount × Contribution Multiplier</div>
+  <div class="formula-note">
+    The multiplier table is based on months of contributions (1–6 months = 6 months' worth; up to 60 months = 60 months' worth). For Employees' Pension (厚生年金), the base includes both employer and employee contributions. The exact formula and current multiplier table are published at nenkin.go.jp/international.
+  </div>
+</div>
+
+<h3>Tax withholding on the lump sum</h3>
+<p>A 20.42% withholding tax is deducted from the lump-sum payment at source. This rate comprises 20% income tax plus 2.1% reconstruction special income tax (復興特別所得税). Note: the reconstruction special tax portion was scheduled through 2037 and may be extended or revised by legislation.</p>
+<p>If your home country has a tax treaty with Japan (see table below), you may be able to reclaim a portion of the withholding tax through your home country's tax authority. Procedures vary by country — consult a tax professional in your home country.</p>
+
+<div class="cl">
+  <div class="cl-title">LUMP-SUM WITHDRAWAL APPLICATION CHECKLIST</div>
+  <ul>
+    <li>Confirm total months of pension contributions (check your ねんきん定期便 or contact nenkin.go.jp)</li>
+    <li>Download Form "脱退一時金請求書" from nenkin.go.jp/international</li>
+    <li>Prepare: passport copy, certificate of address in home country, bank account details (foreign account OK)</li>
+    <li>Prepare: Basic Pension Number (基礎年金番号) from ねんきん定期便 or pension book</li>
+    <li>Prepare: Copy of departure stamp or certificate of residence cancellation (転出証明書)</li>
+    <li>Mail application to Japan Pension Service within 2 years of departure date</li>
+    <li>Track via registered mail — processing takes several months</li>
+    <li>Upon receipt, consult tax professional in home country about treaty refund eligibility</li>
+  </ul>
+</div>
+
+<h3>Sending address (as of June 2026)</h3>
+<p>Japan Pension Service (日本年金機構) — 〒168-8505 東京都杉並区高井戸西3-5-24 · nenkin.go.jp/international — confirm current address before mailing.</p>
+
+<!-- ─── TOTALIZATION AGREEMENTS ─── -->
+<div class="sec page-break"><span class="sec-icon">🌐</span><h2>Totalization Agreements — Avoid Double Contributions</h2></div>
+
+<p>Japan has concluded social security totalization agreements with the countries below. These prevent you from paying pension contributions in both Japan and your home country simultaneously, and allow contribution periods to be combined toward benefit eligibility.</p>
+
+<div class="warn">
+  <strong>CHECK BEFORE ASSUMING YOU ARE EXEMPT</strong>
+  <p>Even with a totalization agreement, you must formally claim the exemption. Bring your home country's "Certificate of Coverage" (派遣証明書 equivalent) to your Japanese pension office. Without it, Japanese pension premiums are still due. Agreement terms vary — confirm details with your employer's HR or at nenkin.go.jp.</p>
+</div>
+
+<table class="treaty-table">
+  <tr><th>COUNTRY</th><th>AGREEMENT IN FORCE</th><th>CONTRIBUTION EXEMPTION</th><th>PERIOD TOTALIZATION</th></tr>
+  <tr><td>United States</td><td class="yes">Yes (2005)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>United Kingdom</td><td class="yes">Yes (2001)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Germany</td><td class="yes">Yes (2000)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>South Korea</td><td class="yes">Yes (2005)</td><td class="yes">Yes</td><td class="no">No</td></tr>
+  <tr><td>France</td><td class="yes">Yes (2007)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Australia</td><td class="yes">Yes (2009)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Canada</td><td class="yes">Yes (2008)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Netherlands</td><td class="yes">Yes (2009)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Italy</td><td class="yes">Yes (2010)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Spain</td><td class="yes">Yes (2010)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Belgium</td><td class="yes">Yes (2007)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Switzerland</td><td class="yes">Yes (2012)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Hungary</td><td class="yes">Yes (2014)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>India</td><td class="yes">Yes (2012)</td><td class="yes">Yes</td><td class="no">No</td></tr>
+  <tr><td>Luxembourg</td><td class="yes">Yes (2014)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Philippines</td><td class="yes">Yes (2018)</td><td class="yes">Yes</td><td class="no">No</td></tr>
+  <tr><td>Czech Republic</td><td class="yes">Yes (2009)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Slovakia</td><td class="yes">Yes (2012)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>China</td><td class="yes">Yes (2009)</td><td class="yes">Yes</td><td class="no">No</td></tr>
+  <tr><td>Brazil</td><td class="yes">Yes (2012)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Finland</td><td class="yes">Yes (2014)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>Sweden</td><td class="yes">Yes (2019)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+  <tr><td>All other countries</td><td class="no">No agreement</td><td class="no">No — pay both</td><td class="no">No</td></tr>
+</table>
+<p style="font-size:12px;color:var(--muted);margin-top:6px">Agreement status as of June 2026. Additional agreements may have been signed; verify at nenkin.go.jp/international/agreement.</p>
+
+<!-- ─── KEY DEADLINES CALENDAR ─── -->
+<div class="sec"><span class="sec-icon">🗓</span><h2>Annual Tax &amp; Pension Deadlines</h2></div>
+
+<table class="tax-table">
+  <tr><th>MONTH</th><th>DEADLINE / EVENT</th><th>WHO</th></tr>
+  <tr><td>January 31</td><td>Withholding tax statement (源泉徴収票) issued by employer</td><td>All employees</td></tr>
+  <tr><td>February 16 – March 15</td><td>Income tax return filing window (確定申告)</td><td>Self-employed, freelancers, those with multiple income sources</td></tr>
+  <tr><td>March 15</td><td>Income tax payment deadline</td><td>Self-filers</td></tr>
+  <tr><td>May – June</td><td>Resident tax notice arrives (課税明細書)</td><td>All residents</td></tr>
+  <tr><td>June</td><td>First resident tax installment due (or new monthly withholding begins)</td><td>All earners in Japan</td></tr>
+  <tr><td>August</td><td>National Pension annual statement mailed (ねんきん定期便)</td><td>Pension contributors</td></tr>
+  <tr><td>August / October / January</td><td>Remaining resident tax installments (self-pay)</td><td>Non-salaried residents</td></tr>
+  <tr><td>Within 2 years of departure</td><td>Pension lump-sum withdrawal application deadline</td><td>Departing foreign residents</td></tr>
+  <tr><td>Before departure</td><td>Appoint tax representative if resident tax remains unpaid</td><td>Departing residents with tax balance</td></tr>
+</table>
+
+<!-- ─── LEAVING JAPAN CHECKLIST ─── -->
+<div class="sec"><span class="sec-icon">✈️</span><h2>Leaving Japan — Complete Checklist</h2></div>
+<div class="cl">
+  <div class="cl-title">FINANCIAL CLOSURE CHECKLIST</div>
+  <ul>
+    <li>Confirm total resident tax balance with ward/city tax office (市民税課)</li>
+    <li>If balance remains: appoint a tax representative (納税管理人) with city hall before you depart</li>
+    <li>Collect all 源泉徴収票 (withholding tax certificates) from employers for this year</li>
+    <li>File a final income tax return (確定申告) if self-employed or with unusual income</li>
+    <li>Note your Basic Pension Number (基礎年金番号) from your ねんきん定期便</li>
+    <li>Confirm total months of pension contribution — will determine your lump-sum amount</li>
+    <li>Download the 脱退一時金 application form before leaving Japan</li>
+    <li>Prepare bank account details for pension refund (overseas account is accepted)</li>
+    <li>Cancel National Health Insurance (国民健康保険) at city hall</li>
+    <li>Cancel National Pension (国民年金) at city hall (issue: cancellation vs continuation)</li>
+    <li>Return Residence Card (在留カード) at airport immigration on departure</li>
+    <li>Send pension lump-sum application within 2 years — mark the deadline in your calendar</li>
+  </ul>
+</div>
+
+<!-- ─── GLOSSARY ─── -->
+<div class="sec page-break"><span class="sec-icon">📚</span><h2>Tax &amp; Pension Glossary</h2></div>
+<table class="tax-table">
+  <tr><th>TERM</th><th>JAPANESE</th><th>MEANING</th></tr>
+  <tr><td>Resident tax</td><td>住民税</td><td>Local government tax on prior-year income (~10%)</td></tr>
+  <tr><td>Income tax</td><td>所得税</td><td>National progressive income tax (withheld or filed)</td></tr>
+  <tr><td>Withholding tax</td><td>源泉徴収税</td><td>Tax deducted at source by payer</td></tr>
+  <tr><td>Tax representative</td><td>納税管理人</td><td>Appointed person who handles tax on behalf of absent resident</td></tr>
+  <tr><td>Taxable income</td><td>課税所得</td><td>Income after all deductions — the base for tax calculation</td></tr>
+  <tr><td>Basic pension number</td><td>基礎年金番号</td><td>Your unique 10-digit pension ID — needed for all pension procedures</td></tr>
+  <tr><td>Pension book</td><td>年金手帳</td><td>Physical record of pension enrollment (older system; now digital card)</td></tr>
+  <tr><td>Annual pension statement</td><td>ねんきん定期便</td><td>Mailed annually in August — shows contribution history and projected benefits</td></tr>
+  <tr><td>Lump-sum withdrawal</td><td>脱退一時金</td><td>One-time pension refund available to departing non-Japanese residents</td></tr>
+  <tr><td>Certificate of coverage</td><td>適用証明書</td><td>Document from home country confirming you're covered there — activates totalization exemption</td></tr>
+  <tr><td>Social insurance</td><td>社会保険</td><td>Employer-based health insurance + employees' pension bundle</td></tr>
+  <tr><td>National Health Insurance</td><td>国民健康保険</td><td>Health coverage for non-employees; city hall enrollment required</td></tr>
+  <tr><td>Reconstruction special tax</td><td>復興特別所得税</td><td>2.1% surcharge on income tax; applies to pension lump-sum withholding; scheduled through 2037</td></tr>
+</table>
+
+<div class="disclaimer" style="margin-top:32px">
+  nihongo-hub.com · Japan Tax & Pension Handbook · Vol.3 of 3 · June 2026 · For personal use only.<br>
+  General information only. Not tax, legal, or financial advice. Verify all figures and deadlines at nta.go.jp and nenkin.go.jp/international before acting. Consult a qualified tax accountant (税理士) for advice specific to your situation.
+</div>
+
+</body>
+</html>

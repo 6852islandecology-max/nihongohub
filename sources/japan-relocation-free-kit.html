@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Japan First Two Weeks Survival Kit — Free — NihongoHub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;
+  --muted:#7a6a52;--soft:#ddcfb6;--green:#3fae6b;
+}
+body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.65;background:#fff;max-width:700px;margin:0 auto;padding:28px 20px 60px}
+@media print{
+  body{padding:0;max-width:100%;font-size:11pt}
+  .no-print{display:none!important}
+  @page{margin:12mm 12mm 12mm 12mm;size:A4}
+}
+
+/* COVER */
+.cover{background:var(--ink);color:var(--paper);padding:36px 28px;border-radius:8px;margin-bottom:28px;position:relative;overflow:hidden}
+.cover::after{content:"生";font-family:'Noto Sans JP',sans-serif;font-size:180px;color:rgba(255,255,255,0.04);position:absolute;right:-5px;top:-10px;line-height:1}
+.cover-free{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);letter-spacing:1px;display:block;margin-bottom:8px}
+.cover-title{font-family:'DotGothic16',sans-serif;font-size:clamp(22px,5vw,34px);color:#fdfaf3;margin-bottom:8px}
+.cover-sub{color:#ccc;font-size:13.5px;line-height:1.6}
+.cover-meta{font-size:11px;color:#888;border-top:1px solid #333;padding-top:8px;margin-top:14px}
+
+/* UNLOCK SEQUENCE */
+.unlock{margin:18px 0}
+.ul-row{display:flex;align-items:flex-start;gap:10px;margin:5px 0}
+.ul-num{min-width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--ink);font-family:'Press Start 2P',monospace;font-size:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.ul-body{flex:1;background:var(--white);border:2px solid var(--soft);border-radius:5px;padding:8px 12px;font-size:13.5px}
+.ul-body strong{display:block;color:var(--red);margin-bottom:2px;font-size:13.5px}
+.ul-body small{color:var(--muted);font-size:11.5px;display:block;margin-top:2px}
+.ul-arrow{text-align:center;color:var(--gold);font-size:18px;margin:-3px 0;padding-left:44px}
+
+/* CHECKLIST */
+.cl{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:12px 16px;margin:12px 0}
+.cl-title{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);margin-bottom:10px;display:block}
+.cl ul{list-style:none;margin:0;padding:0}
+.cl li{padding:6px 0 6px 24px;position:relative;border-bottom:1px dashed var(--soft);font-size:13.5px}
+.cl li:last-child{border-bottom:none}
+.cl li::before{content:"☐";position:absolute;left:0;top:5px;color:var(--gold);font-size:17px;line-height:1}
+.cl-note{font-size:11px;color:var(--muted);display:block}
+
+/* PHRASE */
+.phrase{background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:10px 14px;margin:8px 0}
+.phrase-label{font-family:'Press Start 2P',monospace;font-size:7px;color:var(--green);display:block;margin-bottom:5px}
+.phrase-jp{font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:700;display:block}
+.phrase-ro{color:var(--muted);font-size:12px;font-style:italic;display:block}
+.phrase-en{font-size:13px}
+
+/* UPGRADE CTA */
+.upgrade{background:linear-gradient(135deg,#0d0a14,#1a1535);border-radius:8px;padding:24px 20px;margin:28px 0;text-align:center}
+.upgrade h3{font-family:'DotGothic16',sans-serif;font-size:20px;color:#fdfaf3;margin-bottom:8px}
+.upgrade p{color:#bbb;font-size:13px;margin-bottom:14px;line-height:1.6}
+.upgrade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+@media(max-width:440px){.upgrade-grid{grid-template-columns:1fr}}
+.upgrade-item{background:rgba(255,255,255,0.07);border:1px solid rgba(200,145,31,0.4);border-radius:6px;padding:10px 8px;text-align:center}
+.upgrade-item .vol{font-family:'Press Start 2P',monospace;font-size:7px;color:var(--gold);display:block;margin-bottom:4px}
+.upgrade-item .name{font-size:12px;color:#eee;font-weight:600;display:block;margin-bottom:2px}
+.upgrade-item .price{font-size:12px;color:var(--gold);font-family:'Press Start 2P',monospace}
+.upgrade-set{font-family:'Press Start 2P',monospace;font-size:9px;background:var(--gold);color:var(--ink);text-decoration:none;padding:12px 20px;border-radius:4px;border-bottom:3px solid #8a6008;display:inline-block;margin-top:10px}
+.upgrade-note{font-size:11px;color:#888;margin-top:8px}
+
+.disclaimer{font-size:11px;color:#999;border-top:1px dashed var(--soft);padding-top:10px;margin-top:24px}
+.print-btn{display:inline-block;font-family:'Press Start 2P',monospace;font-size:9px;background:var(--red);color:#fff;text-decoration:none;padding:12px 18px;border-radius:4px;border-bottom:3px solid #7e1c12;cursor:pointer;margin-bottom:20px}
+</style>
+</head>
+<body>
+
+<div class="no-print" style="background:#f0f0f0;padding:10px 14px;border-radius:6px;margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+  <span style="font-size:13px">Save as PDF via browser Print → "Save as PDF"</span>
+  <button class="print-btn" onclick="window.print()">🖨 SAVE AS PDF</button>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-free">✓ FREE DOWNLOAD — NIHONGOHUB</span>
+  <div class="cover-title">Japan First Two Weeks<br>Survival Kit</div>
+  <div class="cover-sub">The unlock sequence for Japan's bureaucratic chicken-and-egg problem. Do these 5 steps in order. Don't skip ahead.</div>
+  <div class="cover-meta">nihongo-hub.com · Free for personal use · June 2026</div>
+</div>
+
+<!-- UNLOCK SEQUENCE -->
+<h2 style="font-family:'DotGothic16',sans-serif;font-size:18px;margin-bottom:12px">The 5-Step Unlock Sequence</h2>
+<p style="font-size:13.5px;color:var(--muted);margin-bottom:14px">Every step depends on the previous one. Follow this order to avoid wasting days.</p>
+
+<div class="unlock">
+  <div class="ul-row">
+    <div class="ul-num">1</div>
+    <div class="ul-body">
+      <strong>Airport → Collect Residence Card (在留カード)</strong>
+      Issued at immigration at major airports. Address field is blank — that's normal. This is your master key.
+      <small>Without this: nothing else works.</small>
+    </div>
+  </div>
+  <div class="ul-arrow">↓</div>
+  <div class="ul-row">
+    <div class="ul-num">2</div>
+    <div class="ul-body">
+      <strong>City Hall → Register Address + Health Insurance + Pension</strong>
+      Do all three in one visit. Deadline: 14 days from move-in date. Bring Residence Card + Passport + Lease.
+      <small>After this: your card has your address stamped on it.</small>
+    </div>
+  </div>
+  <div class="ul-arrow">↓</div>
+  <div class="ul-row">
+    <div class="ul-num">3</div>
+    <div class="ul-body">
+      <strong>Get a SIM Card (Japanese phone number)</strong>
+      IIJmio / Rakuten Mobile / Mineo. Needs: Residence Card with address. Phone number unlocks bank verification.
+    </div>
+  </div>
+  <div class="ul-arrow">↓</div>
+  <div class="ul-row">
+    <div class="ul-num">4</div>
+    <div class="ul-body">
+      <strong>Japan Post Bank → Open Account (ゆうちょ銀行)</strong>
+      Available at every post office. Most foreigner-accessible. Needs: Residence Card + Passport.
+    </div>
+  </div>
+  <div class="ul-arrow">↓</div>
+  <div class="ul-row">
+    <div class="ul-num">5</div>
+    <div class="ul-body">
+      <strong>Utilities → Gas, Water, Electricity</strong>
+      Gas requires in-person technician visit — call within day 1 or 2. Water and electricity can be set up online.
+    </div>
+  </div>
+</div>
+
+<!-- FULL CHECKLIST -->
+<div class="cl" style="margin-top:20px">
+  <span class="cl-title">COMPLETE FIRST TWO WEEKS CHECKLIST</span>
+  <ul>
+    <li>Collect Residence Card at airport immigration
+      <span class="cl-note">Major airports only: Narita, Haneda, Kansai, Chubu, New Chitose, Hiroshima, Fukuoka</span>
+    </li>
+    <li>Go to city hall within 14 days — register address (転入届)</li>
+    <li>At city hall: enroll in National Health Insurance (国民健康保険)</li>
+    <li>At city hall: enroll in National Pension (国民年金)</li>
+    <li>At city hall: pick up garbage sorting calendar (ゴミ収集カレンダー)</li>
+    <li>Get SIM card with Japanese phone number</li>
+    <li>Open Japan Post Bank account (ゆうちょ銀行) at a post office</li>
+    <li>Call gas company to schedule in-person activation</li>
+    <li>Set up water and electricity (usually online or by phone)</li>
+    <li>Register bicycle with police if purchased (防犯登録, ~¥600)</li>
+    <li>Sign up for city emergency / disaster alerts</li>
+    <li>Locate nearest evacuation point on city map</li>
+  </ul>
+</div>
+
+<!-- 5 ESSENTIAL PHRASES -->
+<h2 style="font-family:'DotGothic16',sans-serif;font-size:18px;margin:20px 0 12px">5 Phrases That Unlock City Hall</h2>
+
+<div class="phrase">
+  <span class="phrase-label">1 — FINDING THE RIGHT WINDOW</span>
+  <span class="phrase-jp">外国人登録の窓口はどこですか？</span>
+  <span class="phrase-ro">Gaikokujin tōroku no madoguchi wa doko desu ka?</span>
+  <span class="phrase-en">Where is the counter for foreign resident registration?</span>
+</div>
+
+<div class="phrase">
+  <span class="phrase-label">2 — ADDRESS REGISTRATION</span>
+  <span class="phrase-jp">転入届を出したいのですが。</span>
+  <span class="phrase-ro">Tenyūtodoke o dashitai no desu ga.</span>
+  <span class="phrase-en">I'd like to file my move-in registration.</span>
+</div>
+
+<div class="phrase">
+  <span class="phrase-label">3 — HEALTH INSURANCE</span>
+  <span class="phrase-jp">国民健康保険に加入したいのですが。</span>
+  <span class="phrase-ro">Kokumin kenkō hoken ni kanyū shitai no desu ga.</span>
+  <span class="phrase-en">I'd like to enroll in National Health Insurance.</span>
+</div>
+
+<div class="phrase">
+  <span class="phrase-label">4 — PENSION</span>
+  <span class="phrase-jp">国民年金の手続きもお願いします。</span>
+  <span class="phrase-ro">Kokumin nenkin no tetsuzuki mo onegai shimasu.</span>
+  <span class="phrase-en">Please also help me with National Pension enrollment.</span>
+</div>
+
+<div class="phrase">
+  <span class="phrase-label">5 — WHEN LOST / CONFUSED</span>
+  <span class="phrase-jp">日本語がわかりません。英語の案内はありますか？</span>
+  <span class="phrase-ro">Nihongo ga wakarimasen. Eigo no annai wa arimasu ka?</span>
+  <span class="phrase-en">I don't understand Japanese. Is there English guidance available?</span>
+</div>
+
+<!-- UPGRADE CTA -->
+<div class="upgrade">
+  <h3>Need the full guide?</h3>
+  <p>This free kit covers your first two weeks. The complete 3-volume set covers everything else — apartment hunting scripts, 70+ medical phrases, resident tax timeline, and pension withdrawal guide.</p>
+  <div class="upgrade-grid">
+    <div class="upgrade-item">
+      <span class="vol">VOL.1</span>
+      <span class="name">Complete Guide</span>
+      <span class="price">$9.99</span>
+    </div>
+    <div class="upgrade-item">
+      <span class="vol">VOL.2</span>
+      <span class="name">Medical Japanese</span>
+      <span class="price">$7.99</span>
+    </div>
+    <div class="upgrade-item">
+      <span class="vol">VOL.3</span>
+      <span class="name">Tax &amp; Pension</span>
+      <span class="price">$7.99</span>
+    </div>
+  </div>
+  <a class="upgrade-set" href="https://nihongo-hub.com/japan-guide-set">GET ALL 3 FOR $19.99 →</a>
+  <div class="upgrade-note">Save $5.98 vs. individual prices · nihongo-hub.com/japan-guide-set</div>
+</div>
+
+<div class="disclaimer">
+  nihongo-hub.com · Free for personal use · June 2026<br>
+  General information only — not immigration or legal advice. Verify at isa.go.jp and relevant official sources.
+</div>
+
+</body>
+</html>

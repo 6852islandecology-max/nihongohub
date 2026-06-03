@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Medical Japanese for Japan Residents — NihongoHub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;
+  --muted:#7a6a52;--soft:#ddcfb6;--green:#3fae6b;--blue:#2563eb;
+}
+body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.6;background:#fff;max-width:830px;margin:0 auto;padding:28px 24px 60px}
+@media print{
+  body{padding:0;max-width:100%;font-size:11pt}
+  .no-print{display:none!important}
+  .page-break{page-break-before:always}
+  @page{margin:15mm 15mm 15mm 15mm;size:A4}
+  .emergency-card{break-inside:avoid;page-break-inside:avoid}
+  .phrase-row{break-inside:avoid}
+}
+
+/* COVER */
+.cover{background:var(--ink);color:var(--paper);padding:44px 36px;border-radius:8px;margin-bottom:32px;position:relative;overflow:hidden}
+.cover::after{content:"医";font-family:'Noto Sans JP',sans-serif;font-size:200px;color:rgba(255,255,255,0.04);position:absolute;right:-10px;top:-20px;line-height:1}
+.cover-vol{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--gold);letter-spacing:2px;display:block;margin-bottom:10px}
+.cover-title{font-family:'DotGothic16',sans-serif;font-size:clamp(22px,4vw,34px);color:#fdfaf3;margin-bottom:10px;line-height:1.2}
+.cover-sub{color:#bbb;font-size:14px;line-height:1.6;margin-bottom:16px}
+.cover-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.badge{background:rgba(200,145,31,.2);border:1px solid var(--gold);color:var(--gold);font-family:'Press Start 2P',monospace;font-size:7px;padding:4px 8px;border-radius:3px}
+.cover-meta{font-size:11px;color:#888;border-top:1px solid #333;padding-top:10px;margin-top:16px}
+
+/* SECTIONS */
+.sec{border-bottom:3px solid var(--gold);padding-bottom:8px;margin:32px 0 18px;display:flex;align-items:center;gap:12px}
+.sec-icon{font-size:22px;line-height:1}
+.sec h2{font-family:'DotGothic16',sans-serif;font-size:20px}
+h3{font-family:'DotGothic16',sans-serif;font-size:16px;margin:20px 0 10px;color:var(--red)}
+p,li{font-size:14px}
+ul{margin:8px 0 8px 20px}li{margin:4px 0}
+
+/* PHRASE TABLE */
+.phrase-table{width:100%;border-collapse:collapse;margin:12px 0}
+.phrase-table th{font-family:'Press Start 2P',monospace;font-size:7px;background:var(--ink);color:var(--gold);padding:7px 10px;text-align:left}
+.phrase-table td{padding:8px 10px;border-bottom:1px solid var(--soft);vertical-align:top;font-size:13px}
+.phrase-table tr:hover td{background:#fdf6ec}
+.phrase-jp{font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;display:block;line-height:1.4}
+.phrase-ro{color:var(--muted);font-size:12px;display:block;font-style:italic}
+.phrase-en{color:var(--ink);font-size:13px}
+.phrase-note{font-size:11px;color:var(--muted);display:block;margin-top:2px}
+
+/* SCRIPT BOX */
+.script{background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:18px 20px;margin:16px 0}
+.script-title{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);display:block;margin-bottom:12px}
+.script-line{margin:8px 0;padding:8px 12px;border-left:3px solid var(--soft);font-size:13px}
+.script-line.you{border-color:var(--blue)}
+.script-line.them{border-color:var(--gold)}
+.speaker{font-family:'Press Start 2P',monospace;font-size:7px;display:block;margin-bottom:3px}
+.speaker.you-tag{color:var(--blue)}
+.speaker.them-tag{color:var(--gold)}
+
+/* EMERGENCY CARD */
+.emergency-card{background:#fef2f2;border:3px solid #dc2626;border-radius:8px;padding:20px 24px;margin:20px 0}
+.emergency-card h3{color:#dc2626;font-size:18px;margin-bottom:12px}
+.emergency-phrases{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.emergency-phrases{grid-template-columns:1fr}}
+.ep{background:#fff;border:2px solid #dc2626;border-radius:6px;padding:10px}
+.ep .jp{font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:700;color:#dc2626}
+.ep .ro{color:#888;font-size:11px;font-style:italic}
+.ep .en{font-size:12px;color:#333;margin-top:2px}
+
+/* BODY PARTS */
+.bodymap{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:16px;margin:16px 0}
+.bodymap-title{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);display:block;margin-bottom:10px}
+.body-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px}
+.body-item{background:#f9f6f0;border:1px solid var(--soft);border-radius:4px;padding:6px 10px;font-size:13px}
+.body-jp{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:15px}
+.body-ro{color:var(--muted);font-size:11px;font-style:italic}
+
+/* INSURANCE VISUAL */
+.card-visual{background:linear-gradient(135deg,#1e3a5f,#2563eb);border-radius:10px;padding:20px 22px;color:#fff;margin:16px 0;font-size:13px}
+.card-visual .card-title{font-family:'DotGothic16',sans-serif;font-size:18px;margin-bottom:12px}
+.card-field{margin:6px 0;display:flex;align-items:baseline;gap:8px}
+.card-label{font-size:10px;opacity:.7;min-width:100px}
+.card-value{font-size:14px;font-weight:600}
+.card-note{font-size:11px;opacity:.7;margin-top:4px}
+
+/* ALLERGY TABLE */
+.allergy-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+.allergy-table th{background:var(--red);color:#fff;font-family:'Press Start 2P',monospace;font-size:7px;padding:6px 10px;text-align:left}
+.allergy-table td{padding:7px 10px;border-bottom:1px solid var(--soft)}
+
+/* DISCLAIMER */
+.disclaimer{background:#f9f9f9;border:1px dashed #ccc;border-radius:4px;padding:12px 16px;margin:28px 0;font-size:11.5px;color:#666}
+
+/* PRINT BUTTON */
+.print-btn{display:inline-block;font-family:'Press Start 2P',monospace;font-size:9px;background:var(--red);color:#fff;text-decoration:none;padding:12px 18px;border-radius:4px;border-bottom:3px solid #7e1c12;cursor:pointer;margin-bottom:24px}
+
+.tip{background:#f0fdf4;border:2px solid var(--green);border-radius:6px;padding:10px 14px;margin:12px 0;font-size:13px}
+.tip strong{font-family:'Press Start 2P',monospace;font-size:7px;color:var(--green);display:block;margin-bottom:4px}
+
+.section-img{height:120px;border-radius:6px;margin:14px 0;overflow:hidden;background:linear-gradient(135deg,#e8f4fd,#bee3f8);display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(0,0,0,0.1);font-family:'Noto Sans JP',sans-serif}
+</style>
+</head>
+<body>
+
+<div class="no-print" style="background:#f0f0f0;padding:12px 16px;border-radius:6px;margin-bottom:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+  <span style="font-size:13px">Print → "Save as PDF" for the best result</span>
+  <button class="print-btn" onclick="window.print()">🖨 PRINT / SAVE AS PDF</button>
+  <a href="../blog/moving-to-japan-guide.html" style="font-size:13px;color:#555">← Back to blog</a>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-vol">NIHONGOHUB GUIDE SERIES · VOL.2</span>
+  <div class="cover-title">Medical Japanese<br>for Japan Residents</div>
+  <div class="cover-sub">70+ phrases for clinic visits, emergencies, and pharmacy pickups — with complete phone booking and check-in scripts. For residents who need real language, not tourist phrases.</div>
+  <div class="cover-badges">
+    <span class="badge">70+ PHRASES</span>
+    <span class="badge">EMERGENCY CARD</span>
+    <span class="badge">FULL SCRIPTS</span>
+    <span class="badge">BODY PARTS MAP</span>
+  </div>
+  <div class="cover-meta">nihongo-hub.com · Vol.2 of 3 · Updated June 2026 · For personal use only</div>
+</div>
+
+<div class="disclaimer">
+  This guide provides general language reference for use in medical settings in Japan. It does not constitute medical, legal, or immigration advice. For advice specific to your health situation, consult a qualified medical professional. Phrase translations are provided as general reference; phrasing may vary by region and context.
+</div>
+
+<!-- ─── HOW TO USE ─── -->
+<div class="sec"><span class="sec-icon">📖</span><h2>How to Use This Guide</h2></div>
+<p>This guide is organized as a journey through the Japanese healthcare system: starting with booking by phone, through the clinic visit, to prescription pickup. Each section has complete scripts you can read aloud or show to a Japanese speaker on your phone screen.</p>
+<ul>
+  <li>Show the Japanese text directly to clinic staff if you're unsure of pronunciation</li>
+  <li>The emergency card (page 3) is designed to be shown or handed to emergency staff — print it separately or screenshot it</li>
+  <li>Romaji pronunciations follow Hepburn romanization; vowels are pronounced as in Italian (a=ah, i=ee, u=oo, e=eh, o=oh)</li>
+</ul>
+
+<!-- ─── UNDERSTANDING YOUR INSURANCE CARD ─── -->
+<div class="sec"><span class="sec-icon">🪪</span><h2>Understanding Your Insurance Card (保険証)</h2></div>
+
+<div class="card-visual">
+  <div class="card-title">保険証 — National Health Insurance Card</div>
+  <div class="card-field"><span class="card-label">氏名 (Name)</span><span class="card-value">Your name in Japanese</span></div>
+  <div class="card-field"><span class="card-label">生年月日 (DOB)</span><span class="card-value">Year / Month / Day (Japanese era or Western)</span></div>
+  <div class="card-field"><span class="card-label">記号・番号 (ID)</span><span class="card-value">Your insurance registration number</span></div>
+  <div class="card-field"><span class="card-label">保険者名 (Insurer)</span><span class="card-value">Your city/ward office name</span></div>
+  <div class="card-note">Present this card at every medical facility. Without it, you pay 100% upfront (claimable later). With it: 30% co-pay.</div>
+</div>
+
+<table class="phrase-table">
+  <tr><th>SITUATION</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
+  <tr><td>Presenting card</td><td><span class="phrase-jp">保険証をお持ちです。</span><span class="phrase-ro">Hokenshō o o-mochi desu.</span></td><td>I have my insurance card.</td></tr>
+  <tr><td>Forgot card</td><td><span class="phrase-jp">今日は保険証を持ってきていません。</span><span class="phrase-ro">Kyō wa hokenshō o motte kite imasen.</span></td><td>I didn't bring my insurance card today.</td></tr>
+  <tr><td>New insurance</td><td><span class="phrase-jp">先月、保険証が変わりました。</span><span class="phrase-ro">Sengetsu, hokenshō ga kawarimashita.</span></td><td>My insurance card changed last month.</td></tr>
+  <tr><td>Employer insurance</td><td><span class="phrase-jp">社会保険に入っています。</span><span class="phrase-ro">Shakai hoken ni haitte imasu.</span></td><td>I have employer health insurance.</td></tr>
+</table>
+
+<!-- ─── BOOKING BY PHONE ─── -->
+<div class="sec page-break"><span class="sec-icon">📞</span><h2>Booking a Clinic Appointment by Phone</h2></div>
+
+<p>Calling a Japanese clinic for the first time is one of the most stressful tasks for new residents. The script below covers the entire call. Read it aloud or show it to someone who can read Japanese and make the call for you.</p>
+
+<div class="script">
+  <span class="script-title">PHONE BOOKING SCRIPT — READ ALOUD OR SHOW TO STAFF</span>
+
+  <div class="script-line you">
+    <span class="speaker you-tag">YOU →</span>
+    <div class="phrase-jp">すみません、予約をしたいのですが。</div>
+    <div class="phrase-ro">Sumimasen, yoyaku o shitai no desu ga.</div>
+    <div class="phrase-en">Excuse me, I'd like to make an appointment.</div>
+  </div>
+  <div class="script-line them">
+    <span class="speaker them-tag">CLINIC →</span>
+    <div class="phrase-jp">どのような症状でしょうか？</div>
+    <div class="phrase-ro">Dono yōna shōjō deshō ka?</div>
+    <div class="phrase-en">What are your symptoms?</div>
+  </div>
+  <div class="script-line you">
+    <span class="speaker you-tag">YOU →</span>
+    <div class="phrase-jp">__________があります。（下の症状リストから選んでください）</div>
+    <div class="phrase-ro">__________ ga arimasu. (Choose from the symptom list below)</div>
+    <div class="phrase-en">I have __________ . (fill in your symptom)</div>
+  </div>
+  <div class="script-line them">
+    <span class="speaker them-tag">CLINIC →</span>
+    <div class="phrase-jp">初めてですか？</div>
+    <div class="phrase-ro">Hajimete desu ka?</div>
+    <div class="phrase-en">Is this your first visit?</div>
+  </div>
+  <div class="script-line you">
+    <span class="speaker you-tag">YOU →</span>
+    <div class="phrase-jp">はい、初めてです。 / いいえ、以前に来たことがあります。</div>
+    <div class="phrase-ro">Hai, hajimete desu. / Iie, izen ni kita koto ga arimasu.</div>
+    <div class="phrase-en">Yes, first time. / No, I've been here before.</div>
+  </div>
+  <div class="script-line you">
+    <span class="speaker you-tag">YOU →</span>
+    <div class="phrase-jp">外国人なのですが、英語を話せる先生はいますか？</div>
+    <div class="phrase-ro">Gaikokujin na no desu ga, eigo o hanaseru sensei wa imasu ka?</div>
+    <div class="phrase-en">I'm a foreigner — do you have a doctor who speaks English?</div>
+  </div>
+  <div class="script-line you">
+    <span class="speaker you-tag">YOU →</span>
+    <div class="phrase-jp">___曜日の___時は空いていますか？</div>
+    <div class="phrase-ro">___ yōbi no ___ ji wa aite imasu ka?</div>
+    <div class="phrase-en">Is ___day at ___:00 available?</div>
+  </div>
+</div>
+
+<div class="tip">
+  <strong>TIP</strong>
+  Many clinics now offer online booking (ネット予約) via their websites or via apps like LINE. Check the clinic's website for an online reservation button before calling — it's much easier.
+</div>
+
+<!-- ─── CLINIC CHECK-IN ─── -->
+<div class="sec"><span class="sec-icon">🏥</span><h2>Clinic Check-In and Consultation</h2></div>
+
+<table class="phrase-table">
+  <tr><th>WHEN</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
+  <tr><td>Arriving</td><td><span class="phrase-jp">予約した___と申します。</span><span class="phrase-ro">Yoyaku shita ___ to mōshimasu.</span></td><td>I'm ___ , I have an appointment.</td></tr>
+  <tr><td>No appointment</td><td><span class="phrase-jp">予約はないのですが、診てもらえますか？</span><span class="phrase-ro">Yoyaku wa nai no desu ga, mite moraemasu ka?</span></td><td>I don't have an appointment — can I be seen?</td></tr>
+  <tr><td>First visit</td><td><span class="phrase-jp">初診です。</span><span class="phrase-ro">Shoshin desu.</span></td><td>This is my first visit.</td></tr>
+  <tr><td>English form?</td><td><span class="phrase-jp">英語の問診票はありますか？</span><span class="phrase-ro">Eigo no monshin-hyō wa arimasu ka?</span></td><td>Do you have an English intake form?</td></tr>
+  <tr><td>Waiting</td><td><span class="phrase-jp">どのくらい待ちますか？</span><span class="phrase-ro">Dono kurai machimasu ka?</span></td><td>How long is the wait?</td></tr>
+</table>
+
+<h3>Describing your symptoms to the doctor</h3>
+<table class="phrase-table">
+  <tr><th>SYMPTOM / FEELING</th><th>JAPANESE + ROMAJI</th><th>NOTES</th></tr>
+  <tr><td>It hurts here</td><td><span class="phrase-jp">ここが痛いです。</span><span class="phrase-ro">Koko ga itai desu.</span></td><td>Point to the location</td></tr>
+  <tr><td>Dull ache</td><td><span class="phrase-jp">鈍い痛みがあります。</span><span class="phrase-ro">Nibui itami ga arimasu.</span></td><td>Persistent low-level pain</td></tr>
+  <tr><td>Sharp pain</td><td><span class="phrase-jp">鋭い痛みがあります。</span><span class="phrase-ro">Surudoi itami ga arimasu.</span></td><td>Stabbing, acute pain</td></tr>
+  <tr><td>Fever</td><td><span class="phrase-jp">熱があります。___度です。</span><span class="phrase-ro">Netsu ga arimasu. ___ do desu.</span></td><td>Fill in temperature in Celsius</td></tr>
+  <tr><td>Chills</td><td><span class="phrase-jp">悪寒がします。</span><span class="phrase-ro">Okan ga shimasu.</span></td><td>Feeling cold/shivery</td></tr>
+  <tr><td>Nausea</td><td><span class="phrase-jp">吐き気がします。</span><span class="phrase-ro">Hakike ga shimasu.</span></td><td>Wanting to vomit</td></tr>
+  <tr><td>Vomiting</td><td><span class="phrase-jp">嘔吐しました。</span><span class="phrase-ro">Ōto shimashita.</span></td><td>Past tense (I vomited)</td></tr>
+  <tr><td>Diarrhea</td><td><span class="phrase-jp">下痢があります。</span><span class="phrase-ro">Geri ga arimasu.</span></td><td></td></tr>
+  <tr><td>Constipation</td><td><span class="phrase-jp">便秘です。</span><span class="phrase-ro">Benpi desu.</span></td><td></td></tr>
+  <tr><td>Cough</td><td><span class="phrase-jp">咳が出ます。</span><span class="phrase-ro">Seki ga demasu.</span></td><td></td></tr>
+  <tr><td>Sore throat</td><td><span class="phrase-jp">喉が痛いです。</span><span class="phrase-ro">Nodo ga itai desu.</span></td><td></td></tr>
+  <tr><td>Runny nose</td><td><span class="phrase-jp">鼻水が出ます。</span><span class="phrase-ro">Hanamizu ga demasu.</span></td><td></td></tr>
+  <tr><td>Headache</td><td><span class="phrase-jp">頭痛がします。</span><span class="phrase-ro">Zutsū ga shimasu.</span></td><td></td></tr>
+  <tr><td>Dizziness</td><td><span class="phrase-jp">めまいがします。</span><span class="phrase-ro">Memai ga shimasu.</span></td><td></td></tr>
+  <tr><td>Fatigue</td><td><span class="phrase-jp">ひどく疲れています。</span><span class="phrase-ro">Hidoku tsukarete imasu.</span></td><td>Severe fatigue</td></tr>
+  <tr><td>Rash/hives</td><td><span class="phrase-jp">発疹が出ています。</span><span class="phrase-ro">Hasshin ga dete imasu.</span></td><td>Skin rash</td></tr>
+  <tr><td>Swelling</td><td><span class="phrase-jp">腫れています。</span><span class="phrase-ro">Harete imasu.</span></td><td>Point to the area</td></tr>
+  <tr><td>Bleeding</td><td><span class="phrase-jp">出血しています。</span><span class="phrase-ro">Shukketsu shite imasu.</span></td><td></td></tr>
+  <tr><td>Can't sleep</td><td><span class="phrase-jp">眠れません。</span><span class="phrase-ro">Nemuremansen.</span></td><td>Insomnia</td></tr>
+  <tr><td>Since when</td><td><span class="phrase-jp">___日前から続いています。</span><span class="phrase-ro">___ nichi mae kara tsuzuite imasu.</span></td><td>Fill in number of days</td></tr>
+  <tr><td>Getting worse</td><td><span class="phrase-jp">だんだん悪くなっています。</span><span class="phrase-ro">Dandan waruku natte imasu.</span></td><td></td></tr>
+  <tr><td>After eating</td><td><span class="phrase-jp">食後に悪くなります。</span><span class="phrase-ro">Shokugo ni waruku narimasu.</span></td><td>Symptoms worse after meals</td></tr>
+</table>
+
+<h3>Medical history and current medications</h3>
+<table class="phrase-table">
+  <tr><th>TOPIC</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
+  <tr><td>Have allergies</td><td><span class="phrase-jp">アレルギーがあります。</span><span class="phrase-ro">Arerugī ga arimasu.</span></td><td>I have allergies.</td></tr>
+  <tr><td>Allergic to ___</td><td><span class="phrase-jp">___にアレルギーがあります。</span><span class="phrase-ro">___ ni arerugī ga arimasu.</span></td><td>I'm allergic to ___.</td></tr>
+  <tr><td>Taking medication</td><td><span class="phrase-jp">現在、薬を飲んでいます。</span><span class="phrase-ro">Genzai, kusuri o nonde imasu.</span></td><td>I'm currently taking medication.</td></tr>
+  <tr><td>No medication</td><td><span class="phrase-jp">薬は飲んでいません。</span><span class="phrase-ro">Kusuri wa nonde imasen.</span></td><td>I'm not taking any medication.</td></tr>
+  <tr><td>Past surgery</td><td><span class="phrase-jp">以前、手術したことがあります。</span><span class="phrase-ro">Izen, shujutsu shita koto ga arimasu.</span></td><td>I've had surgery before.</td></tr>
+  <tr><td>Pregnant</td><td><span class="phrase-jp">妊娠中です。___週です。</span><span class="phrase-ro">Ninshin-chū desu. ___ shū desu.</span></td><td>I'm pregnant. ___ weeks.</td></tr>
+  <tr><td>Chronic condition</td><td><span class="phrase-jp">___の持病があります。</span><span class="phrase-ro">___ no jibyō ga arimasu.</span></td><td>I have a chronic condition: ___</td></tr>
+  <tr><td>Blood type</td><td><span class="phrase-jp">血液型は___型です。</span><span class="phrase-ro">Ketsueki-gata wa ___ gata desu.</span></td><td>My blood type is ___.</td></tr>
+</table>
+
+<h3>Asking the doctor questions</h3>
+<table class="phrase-table">
+  <tr><th>QUESTION</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
+  <tr><td>What is it?</td><td><span class="phrase-jp">どんな病気ですか？</span><span class="phrase-ro">Donna byōki desu ka?</span></td><td>What condition is this?</td></tr>
+  <tr><td>Is it serious?</td><td><span class="phrase-jp">深刻ですか？</span><span class="phrase-ro">Shinkoku desu ka?</span></td><td>Is it serious?</td></tr>
+  <tr><td>Explain again</td><td><span class="phrase-jp">もう一度、ゆっくり説明してください。</span><span class="phrase-ro">Mō ichido, yukkuri setsumei shite kudasai.</span></td><td>Could you explain that again, slowly?</td></tr>
+  <tr><td>Can I write down?</td><td><span class="phrase-jp">病名を紙に書いてもらえますか？</span><span class="phrase-ro">Byōmei o kami ni kaite moraemasu ka?</span></td><td>Could you write the diagnosis on paper?</td></tr>
+  <tr><td>Next appointment?</td><td><span class="phrase-jp">次はいつ来ればいいですか？</span><span class="phrase-ro">Tsugi wa itsu kureba ii desu ka?</span></td><td>When should I come back?</td></tr>
+  <tr><td>Rest required?</td><td><span class="phrase-jp">仕事を休む必要がありますか？</span><span class="phrase-ro">Shigoto o yasumu hitsuyō ga arimasu ka?</span></td><td>Do I need to take time off work?</td></tr>
+</table>
+
+<!-- ─── BODY PARTS ─── -->
+<div class="sec page-break"><span class="sec-icon">🫀</span><h2>Body Parts Reference Map</h2></div>
+<p>Use this chart to communicate the location of symptoms precisely. Point to the word or show it on your phone.</p>
+
+<div class="bodymap">
+  <span class="bodymap-title">HEAD & FACE</span>
+  <div class="body-grid">
+    <div class="body-item"><span class="body-jp">頭</span><span class="body-ro">atama — head</span></div>
+    <div class="body-item"><span class="body-jp">目</span><span class="body-ro">me — eye</span></div>
+    <div class="body-item"><span class="body-jp">耳</span><span class="body-ro">mimi — ear</span></div>
+    <div class="body-item"><span class="body-jp">鼻</span><span class="body-ro">hana — nose</span></div>
+    <div class="body-item"><span class="body-jp">口</span><span class="body-ro">kuchi — mouth</span></div>
+    <div class="body-item"><span class="body-jp">歯</span><span class="body-ro">ha — tooth/teeth</span></div>
+    <div class="body-item"><span class="body-jp">喉</span><span class="body-ro">nodo — throat</span></div>
+    <div class="body-item"><span class="body-jp">首</span><span class="body-ro">kubi — neck</span></div>
+  </div>
+</div>
+
+<div class="bodymap">
+  <span class="bodymap-title">TORSO</span>
+  <div class="body-grid">
+    <div class="body-item"><span class="body-jp">胸</span><span class="body-ro">mune — chest</span></div>
+    <div class="body-item"><span class="body-jp">お腹</span><span class="body-ro">onaka — stomach/abdomen</span></div>
+    <div class="body-item"><span class="body-jp">背中</span><span class="body-ro">senaka — back</span></div>
+    <div class="body-item"><span class="body-jp">腰</span><span class="body-ro">koshi — lower back/hips</span></div>
+    <div class="body-item"><span class="body-jp">肩</span><span class="body-ro">kata — shoulder</span></div>
+    <div class="body-item"><span class="body-jp">心臓</span><span class="body-ro">shinzō — heart</span></div>
+    <div class="body-item"><span class="body-jp">肺</span><span class="body-ro">hai — lungs</span></div>
+  </div>
+</div>
+
+<div class="bodymap">
+  <span class="bodymap-title">LIMBS</span>
+  <div class="body-grid">
+    <div class="body-item"><span class="body-jp">腕</span><span class="body-ro">ude — arm</span></div>
+    <div class="body-item"><span class="body-jp">肘</span><span class="body-ro">hiji — elbow</span></div>
+    <div class="body-item"><span class="body-jp">手首</span><span class="body-ro">tekubi — wrist</span></div>
+    <div class="body-item"><span class="body-jp">手</span><span class="body-ro">te — hand</span></div>
+    <div class="body-item"><span class="body-jp">指</span><span class="body-ro">yubi — finger</span></div>
+    <div class="body-item"><span class="body-jp">足</span><span class="body-ro">ashi — leg / foot</span></div>
+    <div class="body-item"><span class="body-jp">膝</span><span class="body-ro">hiza — knee</span></div>
+    <div class="body-item"><span class="body-jp">足首</span><span class="body-ro">ashikubi — ankle</span></div>
+  </div>
+</div>
+
+<!-- ─── PHARMACY ─── -->
+<div class="sec"><span class="sec-icon">💊</span><h2>Pharmacy (薬局) — Prescription Pickup</h2></div>
+
+<div class="script">
+  <span class="script-title">PRESCRIPTION PICKUP SCRIPT</span>
+  <div class="script-line you">
+    <span class="speaker you-tag">YOU →</span>
+    <div class="phrase-jp">処方箋を持ってきました。</div>
+    <div class="phrase-ro">Shohōsen o motte kimashita.</div>
+    <div class="phrase-en">I've brought my prescription.</div>
+  </div>
+  <div class="script-line them">
+    <span class="speaker them-tag">PHARMACIST →</span>
+    <div class="phrase-jp">保険証はお持ちですか？</div>
+    <div class="phrase-ro">Hokenshō wa o-mochi desu ka?</div>
+    <div class="phrase-en">Do you have your insurance card?</div>
+  </div>
+  <div class="script-line you">
+    <span class="speaker you-tag">YOU →</span>
+    <div class="phrase-jp">はい、どうぞ。</div>
+    <div class="phrase-ro">Hai, dōzo.</div>
+    <div class="phrase-en">Yes, here you go.</div>
+  </div>
+</div>
+
+<table class="phrase-table">
+  <tr><th>SITUATION</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
+  <tr><td>How to take it?</td><td><span class="phrase-jp">この薬の飲み方を教えてください。</span><span class="phrase-ro">Kono kusuri no nomikata o oshiete kudasai.</span></td><td>Please explain how to take this medicine.</td></tr>
+  <tr><td>Side effects?</td><td><span class="phrase-jp">副作用はありますか？</span><span class="phrase-ro">Fukusayō wa arimasu ka?</span></td><td>Are there any side effects?</td></tr>
+  <tr><td>With food?</td><td><span class="phrase-jp">食前ですか、食後ですか？</span><span class="phrase-ro">Shokuzen desu ka, shokugo desu ka?</span></td><td>Before meals or after meals?</td></tr>
+  <tr><td>Can I drink alcohol?</td><td><span class="phrase-jp">この薬を飲んでいる間、お酒は飲めますか？</span><span class="phrase-ro">Kono kusuri o nonde iru aida, o-sake wa nomemasu ka?</span></td><td>Can I drink alcohol while taking this?</td></tr>
+  <tr><td>English label?</td><td><span class="phrase-jp">英語の説明書はありますか？</span><span class="phrase-ro">Eigo no setsumeisho wa arimasu ka?</span></td><td>Is there an English instruction leaflet?</td></tr>
+  <tr><td>OTC painkiller</td><td><span class="phrase-jp">市販の鎮痛剤を買いたいのですが。</span><span class="phrase-ro">Shihan no chintsu-zai o kaitai no desu ga.</span></td><td>I'd like to buy an over-the-counter painkiller.</td></tr>
+  <tr><td>OTC cold medicine</td><td><span class="phrase-jp">風邪薬をください。</span><span class="phrase-ro">Kazegusuri o kudasai.</span></td><td>I'd like cold medicine, please.</td></tr>
+</table>
+
+<!-- ─── ALLERGY VOCABULARY ─── -->
+<div class="sec"><span class="sec-icon">⚠️</span><h2>Allergy Vocabulary</h2></div>
+<p>Use this table to describe specific allergies to doctors, pharmacists, or restaurant staff.</p>
+
+<table class="allergy-table">
+  <tr><th>ALLERGEN</th><th>JAPANESE</th><th>ROMAJI</th></tr>
+  <tr><td>Penicillin</td><td>ペニシリン</td><td>Penishirin</td></tr>
+  <tr><td>Aspirin</td><td>アスピリン</td><td>Asupirin</td></tr>
+  <tr><td>Sulfa drugs</td><td>スルファ剤</td><td>Surufa-zai</td></tr>
+  <tr><td>Iodine/contrast dye</td><td>ヨード/造影剤</td><td>Yōdo / Zōei-zai</td></tr>
+  <tr><td>Latex</td><td>ラテックス</td><td>Ratekkusu</td></tr>
+  <tr><td>Pollen (hay fever)</td><td>花粉</td><td>Kafun</td></tr>
+  <tr><td>House dust</td><td>ハウスダスト</td><td>Hausu dasuto</td></tr>
+  <tr><td>Shellfish</td><td>甲殻類</td><td>Kōkaku-rui</td></tr>
+  <tr><td>Peanuts</td><td>ピーナッツ</td><td>Pīnattsu</td></tr>
+  <tr><td>Wheat / gluten</td><td>小麦・グルテン</td><td>Komugi / Guruten</td></tr>
+  <tr><td>Eggs</td><td>卵</td><td>Tamago</td></tr>
+  <tr><td>Dairy / milk</td><td>乳製品・牛乳</td><td>Nyūseihin / Gyūnyū</td></tr>
+  <tr><td>Soy</td><td>大豆</td><td>Daizu</td></tr>
+  <tr><td>Cats / animals</td><td>猫・動物</td><td>Neko / Dōbutsu</td></tr>
+  <tr><td>Metal (nickel)</td><td>金属（ニッケル）</td><td>Kinzoku (Nikkeru)</td></tr>
+</table>
+
+<!-- ─── EMERGENCY CARD ─── -->
+<div class="sec page-break"><span class="sec-icon">🚨</span><h2>Emergency Card — Print &amp; Carry</h2></div>
+<p>Print this section separately (or screenshot it). If you cannot speak, show it to emergency staff or bystanders. These phrases are in large type to be readable at a distance or by someone else holding your phone.</p>
+
+<div class="emergency-card">
+  <h3>🚨 EMERGENCY PHRASES — SHOW THIS SCREEN</h3>
+  <div class="emergency-phrases">
+    <div class="ep">
+      <div class="jp">助けてください！</div>
+      <div class="ro">Tasukete kudasai!</div>
+      <div class="en">Help me, please!</div>
+    </div>
+    <div class="ep">
+      <div class="jp">救急車を呼んでください！</div>
+      <div class="ro">Kyūkyūsha o yonde kudasai!</div>
+      <div class="en">Please call an ambulance! (119)</div>
+    </div>
+    <div class="ep">
+      <div class="jp">胸が痛いです。</div>
+      <div class="ro">Mune ga itai desu.</div>
+      <div class="en">I have chest pain.</div>
+    </div>
+    <div class="ep">
+      <div class="jp">呼吸が苦しいです。</div>
+      <div class="ro">Kokyū ga kurushii desu.</div>
+      <div class="en">I'm having trouble breathing.</div>
+    </div>
+    <div class="ep">
+      <div class="jp">意識を失いそうです。</div>
+      <div class="ro">Ishiki o ushinaisō desu.</div>
+      <div class="en">I'm about to lose consciousness.</div>
+    </div>
+    <div class="ep">
+      <div class="jp">アレルギー反応です！</div>
+      <div class="ro">Arerugī hannō desu!</div>
+      <div class="en">I'm having an allergic reaction!</div>
+    </div>
+    <div class="ep">
+      <div class="jp">エピペンを使ってください。</div>
+      <div class="ro">Epipen o tsukatte kudasai.</div>
+      <div class="en">Please use my EpiPen.</div>
+    </div>
+    <div class="ep">
+      <div class="jp">転んで頭を打ちました。</div>
+      <div class="ro">Koronde atama o uchimashita.</div>
+      <div class="en">I fell and hit my head.</div>
+    </div>
+    <div class="ep" style="grid-column:1/-1;background:#fee2e2">
+      <div class="jp" style="font-size:18px">私の緊急連絡先は___です。電話番号は___です。</div>
+      <div class="ro">Watashi no kinkyū renraku-saki wa ___. Denwa bangō wa ___.</div>
+      <div class="en">My emergency contact is ___. Phone number: ___. (Fill in before carrying)</div>
+    </div>
+  </div>
+
+  <div style="margin-top:14px;font-size:12px;color:#dc2626">
+    Emergency numbers in Japan: 救急・Fire 119 · Police 110 · Tourist emergency helpline 0570-783-114 (24hr English)
+  </div>
+</div>
+
+<!-- ─── DENTAL PHRASES ─── -->
+<div class="sec"><span class="sec-icon">🦷</span><h2>Dental Clinic (歯科) — Essential Phrases</h2></div>
+<table class="phrase-table">
+  <tr><th>SITUATION</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
+  <tr><td>Toothache</td><td><span class="phrase-jp">歯が痛いです。</span><span class="phrase-ro">Ha ga itai desu.</span></td><td>I have a toothache.</td></tr>
+  <tr><td>Broken tooth</td><td><span class="phrase-jp">歯が欠けました。</span><span class="phrase-ro">Ha ga kakemashita.</span></td><td>My tooth chipped/broke.</td></tr>
+  <tr><td>Lost filling</td><td><span class="phrase-jp">詰め物が取れました。</span><span class="phrase-ro">Tsumemono ga toremashita.</span></td><td>My filling fell out.</td></tr>
+  <tr><td>Wisdom tooth pain</td><td><span class="phrase-jp">親知らずが痛いです。</span><span class="phrase-ro">Oyashirazu ga itai desu.</span></td><td>My wisdom tooth hurts.</td></tr>
+  <tr><td>Injection fear</td><td><span class="phrase-jp">注射が怖いです。できれば麻酔を先に教えてください。</span><span class="phrase-ro">Chūsha ga kowai desu. Dekeba masui o saki ni oshiete kudasai.</span></td><td>I'm nervous about injections. Please warn me before the anesthetic.</td></tr>
+</table>
+
+<!-- ─── MENTAL HEALTH ─── -->
+<div class="sec"><span class="sec-icon">🧠</span><h2>Mental Health and Psychological Support</h2></div>
+<p>Seeking mental health support is increasingly normalized in Japan. Clinics for 心療内科 (psychosomatic medicine) or 精神科 (psychiatry) are available in most cities.</p>
+<table class="phrase-table">
+  <tr><th>SITUATION</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
+  <tr><td>Anxiety / stress</td><td><span class="phrase-jp">不安感やストレスが続いています。</span><span class="phrase-ro">Fuankan ya sutoresu ga tsuzuite imasu.</span></td><td>I've been experiencing anxiety and stress.</td></tr>
+  <tr><td>Feeling depressed</td><td><span class="phrase-jp">気分が沈んでいます。</span><span class="phrase-ro">Kibun ga shizunde imasu.</span></td><td>I've been feeling low/depressed.</td></tr>
+  <tr><td>Can't sleep</td><td><span class="phrase-jp">ストレスで眠れません。</span><span class="phrase-ro">Sutoresu de nemuremansen.</span></td><td>Stress is affecting my sleep.</td></tr>
+  <tr><td>Want counseling</td><td><span class="phrase-jp">カウンセリングを受けたいのですが。</span><span class="phrase-ro">Kaunseringu o uketai no desu ga.</span></td><td>I'd like to try counseling.</td></tr>
+  <tr><td>English counselor?</td><td><span class="phrase-jp">英語が話せるカウンセラーはいますか？</span><span class="phrase-ro">Eigo ga hanaseru kaunserā wa imasu ka?</span></td><td>Is there an English-speaking counselor?</td></tr>
+</table>
+<div class="tip">
+  <strong>RESOURCES</strong>
+  TELL Japan (English counseling): 03-5774-0992 · Lifeline: 0570-783-556 · AMDA multilingual helpline: 03-5285-8088
+</div>
+
+<div class="disclaimer" style="margin-top:32px">
+  nihongo-hub.com · Medical Japanese for Japan Residents · Vol.2 of 3 · June 2026 · For personal use only.<br>
+  This guide provides general language reference only. It does not constitute medical advice. Phrase translations are approximate and may vary by context. Always seek professional medical advice for health concerns.
+</div>
+
+</body>
+</html>
