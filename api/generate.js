@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 
   // 1. ゲスト日次リミット（Upstash 未設定時は fail-open で通す）
   const ip = extractIp(req);
-  const rl = await checkGuestDailyLimit(ip);
+  const rl = await checkGuestDailyLimit(ip, level);
   if (!rl.success) {
     return res.status(429).json({
       error: "Daily limit reached",
