@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Journey — NihongoHub RPG</title>
+<meta name="description" content="Track your Japanese learning adventure. Level up your explorer character by answering JLPT questions and conquering all 47 prefectures.">
+<link rel="canonical" href="https://www.nihongo-hub.com/rpg.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="My Japan Journey — NihongoHub">
+<meta property="og:description" content="I'm leveling up my Japanese! Join me on NihongoHub.">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta property="og:url" content="https://www.nihongo-hub.com/rpg.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Press+Start+2P&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1008;--parch:#fdf6e3;--red:#c0392b;--gold:#e8a020;--gold-d:#b87800;
+  --green:#3fae6b;--soft:#8b7355;--hud:#2a1f14;--hud-line:#3d2f1f;--white:#fff;
+  --pixel:'Press Start 2P',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--hud);color:var(--parch);font-family:'DM Sans',sans-serif;min-height:100vh}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:2px solid var(--hud-line);flex-wrap:wrap;gap:10px}
+.nav-brand{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px}
+.nav-links{display:flex;gap:14px;font-size:14px}
+
+/* Hero — character stage */
+.hero{display:flex;flex-direction:column;align-items:center;padding:32px 20px 20px;text-align:center}
+.char-wrap{position:relative;width:220px;height:260px}
+.char-img{width:220px;height:260px;object-fit:contain;transition:opacity .4s}
+.char-glow{position:absolute;inset:-12px;border-radius:50%;background:radial-gradient(circle,rgba(232,160,32,.18) 0%,transparent 70%);pointer-events:none}
+.char-stage{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;margin-top:14px}
+.char-title{font-size:22px;font-weight:700;margin:6px 0 2px;color:var(--white)}
+.jlpt-badge{display:inline-block;background:var(--red);color:var(--white);font-family:var(--pixel);font-size:10px;padding:5px 12px;border-radius:4px;border-bottom:3px solid #8b1f18;margin-top:6px}
+
+/* XP bar */
+.xp-section{width:100%;max-width:380px;margin:18px auto 0}
+.xp-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--soft);margin-bottom:5px;font-family:var(--pixel)}
+.xp-bar{height:14px;background:var(--hud-line);border-radius:7px;overflow:hidden;border:1px solid var(--hud-line)}
+.xp-fill{height:100%;background:linear-gradient(90deg,var(--gold),#f0c040);border-radius:7px;transition:width .6s ease;min-width:2px}
+.xp-num{text-align:center;font-size:13px;color:var(--soft);margin-top:5px}
+
+/* Stats row */
+.stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 20px 0}
+.stat-card{background:var(--hud-line);border:2px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 18px;text-align:center;min-width:90px}
+.stat-val{font-family:var(--pixel);font-size:18px;color:var(--gold);display:block;margin-bottom:4px}
+.stat-label{font-size:12px;color:var(--soft)}
+
+/* Prefecture grid */
+.pref-section{margin:28px 20px;max-width:600px;margin-left:auto;margin-right:auto}
+.section-head{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-head span{color:var(--soft);font-size:11px;font-family:'DM Sans',sans-serif;font-weight:400;letter-spacing:0}
+.pref-grid{display:flex;flex-wrap:wrap;gap:5px}
+.pref-cell{padding:4px 8px;border-radius:4px;font-size:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);font-family:'Noto Sans JP',sans-serif;transition:background .2s}
+.pref-cell.cleared{background:rgba(63,174,107,.2);border-color:var(--green);color:var(--green)}
+
+/* CTAs */
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:28px 20px}
+.btn-battle{background:var(--red);color:var(--white);font-family:var(--pixel);font-size:9px;padding:14px 22px;border-radius:6px;border:none;border-bottom:4px solid #8b1f18;cursor:pointer;letter-spacing:1px;transition:transform .1s}
+.btn-battle:hover{transform:translateY(-2px)}
+.btn-explore{background:transparent;color:var(--gold);font-family:var(--pixel);font-size:9px;padding:14px 22px;border-radius:6px;border:2px solid var(--gold);cursor:pointer;letter-spacing:1px;transition:transform .1s}
+.btn-explore:hover{transform:translateY(-2px)}
+.btn-share{background:transparent;color:var(--soft);font-family:'DM Sans',sans-serif;font-size:13px;padding:10px 18px;border-radius:6px;border:1px solid var(--hud-line);cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-share:hover{border-color:var(--soft)}
+
+/* Toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:14px;padding:10px 20px;border-radius:8px;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap;z-index:999}
+.toast.show{opacity:1}
+
+footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-top:1px solid var(--hud-line);margin-top:20px}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-brand">⚔️ NIHONGOHUB</span>
+  <div class="nav-links">
+    <a href="quiz.html">⚔ Battle</a>
+    <a href="prefectures.html">🗾 Explore</a>
+    <a href="index.html">Home</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="char-wrap">
+    <div class="char-glow"></div>
+    <img class="char-img" id="char-img" src="rpg-n5.png" alt="Your adventurer">
+  </div>
+  <p class="char-stage" id="char-stage">STAGE 1 · TRAVELER</p>
+  <h1 class="char-title" id="char-title">はじめての冒険者</h1>
+  <div class="jlpt-badge" id="jlpt-badge">N5</div>
+
+  <div class="xp-section">
+    <div class="xp-labels">
+      <span id="xp-cur">0 XP</span>
+      <span id="xp-target">→ N4 at 100 XP</span>
+    </div>
+    <div class="xp-bar"><div class="xp-fill" id="xp-fill" style="width:0%"></div></div>
+    <div class="xp-num" id="xp-num">Keep answering questions to power up!</div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <span class="stat-val" id="s-xp">0</span>
+    <span class="stat-label">Total XP</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-val" id="s-streak">0</span>
+    <span class="stat-label">Best Streak 🔥</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-val" id="s-pref">0/47</span>
+    <span class="stat-label">Prefectures</span>
+  </div>
+</div>
+
+<div class="pref-section">
+  <p class="section-head">🗾 PREFECTURE CONQUEST <span id="pref-count">0 / 47 cleared</span></p>
+  <div class="pref-grid" id="pref-grid"></div>
+</div>
+
+<div class="ctas">
+  <button class="btn-battle" onclick="location.href='quiz.html'">⚔ START BATTLE</button>
+  <button class="btn-explore" onclick="location.href='prefectures.html'">🗾 EXPLORE MAP</button>
+  <button class="btn-share" id="share-btn">🔗 Share my journey</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer>© 2026 NihongoHub · <a href="index.html">Home</a> · <a href="quiz.html">Quiz</a> · <a href="prefectures.html">Explore</a></footer>
+
+<script>
+const STAGES = [
+  { min:0,   max:99,  level:'N5', stage:1, title:'はじめての冒険者', label:'First Adventurer', img:'rpg-n5.png', next:'N4 at 100 XP' },
+  { min:100, max:299, level:'N4', stage:2, title:'旅の修行者',       label:'Traveling Practitioner', img:'rpg-n4.png', next:'N3 at 300 XP' },
+  { min:300, max:599, level:'N3', stage:3, title:'言葉の探検家',     label:'Word Explorer',  img:'rpg-n3.png', next:'N2 at 600 XP' },
+  { min:600, max:999, level:'N2', stage:4, title:'日本語の使者',     label:'Language Envoy', img:'rpg-n2.png', next:'N1 at 1000 XP' },
+  { min:1000,max:Infinity, level:'N1', stage:5, title:'伝説の日本語マスター', label:'Legendary Master', img:'rpg-n1.png', next:'MASTERED ✨' },
+];
+
+const PREFS = [
+  ['hokkaido','北海道'],['aomori','青森'],['iwate','岩手'],['miyagi','宮城'],
+  ['akita','秋田'],['yamagata','山形'],['fukushima','福島'],['ibaraki','茨城'],
+  ['tochigi','栃木'],['gunma','群馬'],['saitama','埼玉'],['chiba','千葉'],
+  ['tokyo','東京'],['kanagawa','神奈川'],['niigata','新潟'],['toyama','富山'],
+  ['ishikawa','石川'],['fukui','福井'],['yamanashi','山梨'],['nagano','長野'],
+  ['gifu','岐阜'],['shizuoka','静岡'],['aichi','愛知'],['mie','三重'],
+  ['shiga','滋賀'],['kyoto','京都'],['osaka','大阪'],['hyogo','兵庫'],
+  ['nara','奈良'],['wakayama','和歌山'],['tottori','鳥取'],['shimane','島根'],
+  ['okayama','岡山'],['hiroshima','広島'],['yamaguchi','山口'],['tokushima','徳島'],
+  ['kagawa','香川'],['ehime','愛媛'],['kochi','高知'],['fukuoka','福岡'],
+  ['saga','佐賀'],['nagasaki','長崎'],['kumamoto','熊本'],['oita','大分'],
+  ['miyazaki','宮崎'],['kagoshima','鹿児島'],['okinawa','沖縄'],
+];
+
+function get(k, def){ try{ return localStorage.getItem(k)||def; }catch(e){ return def; } }
+
+function init(){
+  const xp   = parseInt(get('nh_quiz_xp','0'),10)||0;
+  const best = parseInt(get('nh_best_streak','0'),10)||0;
+  let titles;
+  try{ titles = JSON.parse(get('nh_titles','[]')); }catch(e){ titles=[]; }
+
+  // Stage
+  const stage = STAGES.find(s=>xp>=s.min&&xp<=s.max)||STAGES[0];
+  document.getElementById('char-img').src = stage.img;
+  document.getElementById('char-stage').textContent = `STAGE ${stage.stage} · ${stage.label.toUpperCase()}`;
+  document.getElementById('char-title').textContent = stage.title;
+  document.getElementById('jlpt-badge').textContent = stage.level;
+
+  // XP bar
+  const range = stage.max===Infinity ? 1000 : (stage.max - stage.min + 1);
+  const prog  = stage.max===Infinity ? 100 : Math.min(100, Math.round((xp - stage.min) / range * 100));
+  document.getElementById('xp-fill').style.width = prog + '%';
+  document.getElementById('xp-cur').textContent = xp + ' XP';
+  document.getElementById('xp-target').textContent = '→ ' + stage.next;
+  document.getElementById('xp-num').textContent = stage.max===Infinity
+    ? '✨ Legendary Master — all levels cleared!'
+    : `${xp - stage.min} / ${range} XP to next stage`;
+
+  // Stats
+  document.getElementById('s-xp').textContent = xp;
+  document.getElementById('s-streak').textContent = best;
+  document.getElementById('s-pref').textContent = titles.length + '/47';
+
+  // Prefecture grid
+  const grid = document.getElementById('pref-grid');
+  const titlesLower = titles.map(t=>t.toLowerCase());
+  PREFS.forEach(([slug, jp])=>{
+    const c = document.createElement('div');
+    c.className = 'pref-cell' + (titlesLower.includes(slug) ? ' cleared' : '');
+    c.textContent = jp;
+    c.title = slug;
+    grid.appendChild(c);
+  });
+  document.getElementById('pref-count').textContent = titles.length + ' / 47 cleared';
+}
+
+// Share
+document.getElementById('share-btn').addEventListener('click',()=>{
+  const xp   = parseInt(get('nh_quiz_xp','0'),10)||0;
+  let titles; try{ titles=JSON.parse(get('nh_titles','[]')); }catch(e){ titles=[]; }
+  const stage = STAGES.find(s=>xp>=s.min&&xp<=s.max)||STAGES[0];
+  const text = `I'm on a Japanese learning quest! ${stage.level} adventurer · ${xp} XP · ${titles.length}/47 prefectures 🗾 #NihongoHub https://www.nihongo-hub.com/rpg.html`;
+  if(navigator.share){ navigator.share({title:'My Japan Journey',text,url:'https://www.nihongo-hub.com/rpg.html'}); }
+  else if(navigator.clipboard){ navigator.clipboard.writeText(text).then(()=>toast('Copied to clipboard!')); }
+  else{ toast('Share: ' + text); }
+});
+
+function toast(msg,dur=2500){
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),dur);
+}
+
+init();
+</script>
+</body>
+</html>
