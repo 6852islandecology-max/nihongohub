@@ -377,7 +377,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <p class="hero-sub" data-i18n="hero_sub">AI-generated JLPT practice, immersive culture lessons, streak-based habit tracking, and curated Japan travel guides — everything in one place.</p>
     <div class="hero-ctas">
       <button class="btn-primary" data-i18n="hero_cta1" onclick="scrollToPractice()">Start Free Today</button>
-      <button class="btn-outline" data-i18n="hero_cta2" onclick="scrollToRoadmap()">See How It Works →</button>
+      <a class="btn-outline" href="prefectures.html" data-i18n="hero_cta2">Explore Japan 🗾</a>
     </div>
     <div class="hero-stats">
       <div><div class="stat-num">400K+</div><div class="stat-label" data-i18n="stat1">Global Learners</div></div>
@@ -557,7 +557,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
   <div><span class="footer-logo">Nihongo<span>Hub</span></span><p class="footer-desc" data-i18n="footer_desc">AI-powered Japanese learning for the global curious. N3 in 6 months — guaranteed.</p></div>
   <div><div class="footer-heading" data-i18n="fl1_head">Learn</div><ul class="footer-links"><li><a href="quiz.html" data-i18n="fl1_1">JLPT Practice</a></li><li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" data-i18n="fl1_2">Shadowing (Echo)</a></li><li><a href="prefectures.html" data-i18n="fl1_5">47-Prefecture Quest</a></li><li><a href="#travel" data-i18n="fl1_4">Travel Phrases</a></li></ul></div>
   <div><div class="footer-heading" data-i18n="fl2_head">Explore</div><ul class="footer-links"><li><a href="blog/index.html" data-i18n="fl2_1">Culture Articles</a></li><li><a href="blog/index.html" data-i18n="fl2_2">Japan Travel</a></li><li><a href="#newsletter" data-i18n="fl2_3">Newsletter</a></li><li><a href="blog/index.html" data-i18n="fl2_4">Blog</a></li></ul></div>
-  <div><div class="footer-heading" data-i18n="fl3_head">Company</div><ul class="footer-links"><li><a href="about.html" data-i18n="fl3_1">About</a></li><li><a href="#pricing" data-i18n="fl3_2">Pricing</a></li><li><a href="affiliate.html" data-i18n="fl3_3">Affiliate Program</a></li><li><a href="contact.html" data-i18n="fl3_4">Contact</a></li></ul></div>
+  <div><div class="footer-heading" data-i18n="fl3_head">Company</div><ul class="footer-links"><li><a href="about.html" data-i18n="fl3_1">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#pricing" data-i18n="fl3_2">Pricing</a></li><li><a href="affiliate.html" data-i18n="fl3_3">Affiliate Program</a></li><li><a href="contact.html" data-i18n="fl3_4">Contact</a></li></ul></div>
 </footer>
 <div class="footer-bottom">
   <span>© 2026 NihongoHub. All rights reserved.</span>
@@ -574,7 +574,7 @@ const T = {
     hero_tag:"AI-Powered Japanese Learning", hero_title1:"Master Japanese.", hero_title2:"Discover Japan.",
     hero_promise:"🎯 N3 in 6 months — or your money back",
     hero_sub:"AI-generated JLPT practice, immersive culture lessons, streak-based habit tracking, and curated Japan travel guides — everything in one place.",
-    hero_cta1:"Start Free Today", hero_cta2:"See How It Works →",
+    hero_cta1:"Start Free Today", hero_cta2:"Explore Japan 🗾",
     stat1:"Global Learners", stat2:"All JLPT Levels", stat3:"Avg. N3 Time",
     streak_label:"Current Streak", streak_sub:"days in a row",
     quiz_label:"Daily Quiz", quiz_sub:"She wakes up every morning ___.",
@@ -647,7 +647,7 @@ const T = {
     hero_tag:"AI 驅動的日語學習平台", hero_title1:"精通日語。", hero_title2:"探索日本。",
     hero_promise:"🎯 6個月達到N3 — 否則全額退款",
     hero_sub:"AI生成的JLPT練習、沉浸式文化課程、連續學習追蹤，以及精選日本旅遊指南 — 一站式完整服務。",
-    hero_cta1:"立即免費開始", hero_cta2:"了解更多 →",
+    hero_cta1:"立即免費開始", hero_cta2:"探索日本 🗾",
     stat1:"全球學習者", stat2:"全JLPT級別", stat3:"平均N3時間",
     streak_label:"連續學習天數", streak_sub:"連續天數",
     quiz_label:"每日測驗", quiz_sub:"她每天早上___起床。",
@@ -720,7 +720,7 @@ const T = {
     hero_tag:"Aprendizaje de Japonés con IA", hero_title1:"Domina el Japonés.", hero_title2:"Descubre Japón.",
     hero_promise:"🎯 N3 en 6 meses — o te devolvemos el dinero",
     hero_sub:"Práctica JLPT con IA, lecciones culturales inmersivas, seguimiento de hábitos y guías de viaje a Japón — todo en un solo lugar.",
-    hero_cta1:"Empezar Gratis Hoy", hero_cta2:"Ver Cómo Funciona →",
+    hero_cta1:"Empezar Gratis Hoy", hero_cta2:"Explorar Japón 🗾",
     stat1:"Estudiantes Globales", stat2:"Todos los Niveles", stat3:"Tiempo Prom. N3",
     streak_label:"Racha Actual", streak_sub:"días seguidos",
     quiz_label:"Quiz Diario", quiz_sub:"Ella se despierta todas las mañanas ___.",
@@ -793,7 +793,7 @@ const T = {
     hero_tag:"เรียนภาษาญี่ปุ่นด้วย AI", hero_title1:"เชี่ยวชาญภาษาญี่ปุ่น", hero_title2:"ค้นพบญี่ปุ่น",
     hero_promise:"🎯 ผ่าน N3 ใน 6 เดือน — หรือคืนเงินเต็มจำนวน",
     hero_sub:"ข้อสอบ JLPT แบบ AI เนื้อหาวัฒนธรรมเข้มข้น ติดตามความสม่ำเสมอ และคู่มือท่องเที่ยวญี่ปุ่น — ครบในที่เดียว",
-    hero_cta1:"เริ่มใช้งานฟรีวันนี้", hero_cta2:"ดูวิธีการทำงาน →",
+    hero_cta1:"เริ่มใช้งานฟรีวันนี้", hero_cta2:"สำรวจญี่ปุ่น 🗾",
     stat1:"ผู้เรียนทั่วโลก", stat2:"ทุกระดับ JLPT", stat3:"เวลาเฉลี่ยถึง N3",
     streak_label:"ความต่อเนื่องปัจจุบัน", streak_sub:"วันติดต่อกัน",
     quiz_label:"แบบทดสอบประจำวัน", quiz_sub:"เธอตื่นนอนทุกเช้า ___",
@@ -866,7 +866,7 @@ const T = {
     hero_tag:"Belajar Bahasa Jepang dengan AI", hero_title1:"Kuasai Bahasa Jepang.", hero_title2:"Jelajahi Jepang.",
     hero_promise:"🎯 Capai N3 dalam 6 bulan — atau uang kembali",
     hero_sub:"Latihan JLPT berbasis AI, pelajaran budaya imersif, pelacakan kebiasaan belajar, dan panduan wisata Jepang — semua dalam satu tempat.",
-    hero_cta1:"Mulai Gratis Sekarang", hero_cta2:"Lihat Cara Kerjanya →",
+    hero_cta1:"Mulai Gratis Sekarang", hero_cta2:"Jelajahi Jepang 🗾",
     stat1:"Pelajar Global", stat2:"Semua Level JLPT", stat3:"Rata-rata Waktu N3",
     streak_label:"Streak Saat Ini", streak_sub:"hari berturut-turut",
     quiz_label:"Kuis Harian", quiz_sub:"Dia bangun setiap pagi ___.",
@@ -939,7 +939,7 @@ const T = {
     hero_tag:"AI 日本語学習プラットフォーム", hero_title1:"日本語を、自分のものに。", hero_title2:"そして、日本を歩く。",
     hero_promise:"🎯 6ヶ月でN3 — 達成できなければ全額返金",
     hero_sub:"AI が JLPT の問題を毎回新しく作り、ストリークで習慣を支え、47都道府県のガイドが旅とつながる — すべてひとつの場所に。",
-    hero_cta1:"無料で始める", hero_cta2:"仕組みを見る →",
+    hero_cta1:"無料で始める", hero_cta2:"日本を探索する 🗾",
     stat1:"世界の学習者", stat2:"全 JLPT レベル", stat3:"平均 N3 到達期間",
     streak_label:"連続日数", streak_sub:"日連続",
     quiz_label:"今日のクイズ", quiz_sub:"彼女は毎朝___起きます。",

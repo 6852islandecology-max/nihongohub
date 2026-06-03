@@ -99,6 +99,22 @@ footer a{color:var(--gold);text-decoration:none}
 .langbar{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;background:var(--white);border-bottom:1px solid var(--soft);padding:7px 10px}
 .langbar button{font-family:var(--dot);font-size:13px;background:none;border:none;cursor:pointer;color:var(--muted);padding:3px 8px;border-radius:5px}
 .langbar button.active{color:var(--ink);background:var(--soft);font-weight:700}
+/* ── topic pills ── */
+.topic-label{font-family:var(--pixel);font-size:8px;color:var(--muted);letter-spacing:.5px;margin-bottom:6px;text-transform:uppercase}
+.topics{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tpill{font-family:var(--dot);font-size:13px;cursor:pointer;color:var(--muted);
+  background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:8px 12px;
+  transition:all .12s;display:flex;align-items:center;gap:4px;text-decoration:none;user-select:none}
+.tpill:hover{border-color:var(--gold-d);color:var(--ink)}
+.tpill.active{background:var(--hud);color:var(--gold);border-color:var(--hud)}
+/* ── streak ── */
+.streak-line{display:flex;align-items:center;gap:6px;margin-top:5px;
+  font-family:var(--dot);font-size:12px;color:var(--muted);flex-wrap:wrap}
+.streak-fire{transition:transform .2s}
+.streak-fire.hot{transform:scale(1.25)}
+/* ── type badge on battle card ── */
+.b-type{font-family:var(--pixel);font-size:7px;color:rgba(255,255,255,.3);
+  letter-spacing:.5px;margin-top:10px;min-height:12px;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -128,9 +144,12 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="bubble" id="p-bubble">Pick a level and tap <b>New Question</b>, traveler!</div>
       <div class="xp-track"><div class="xp-fill" id="xp-fill"></div></div>
       <div class="xp-meta"><span id="xp-text">0 XP</span><span id="xp-next">Next power-up: 10 XP</span></div>
+      <div class="streak-line"><span class="streak-fire" id="streak-fire">🔥</span><span id="streak-text">0 streak</span>&nbsp;·&nbsp;Best: <span id="best-streak">0</span></div>
     </div>
   </div>
 
+  <p class="topic-label">Topic</p>
+  <div class="topics" id="topics"></div>
   <div class="levels" id="levels"></div>
 
   <div class="battle">
@@ -144,6 +163,7 @@ footer a{color:var(--gold);text-decoration:none}
       <button class="btn primary" id="btn-new" onclick="newQuestion()" data-i18n="btn_new">⚡ New Question</button>
       <a class="btn ghost" href="prefectures.html" data-i18n="btn_map">🗾 Quest the map</a>
     </div>
+    <div class="b-type" id="b-type"></div>
   </div>
 
   <p class="note"><span data-i18n="note">Daily free questions are rate-limited. Want unlimited practice and to evolve Akari through every JLPT level?</span>
@@ -227,7 +247,18 @@ function buildLangbar(){
   document.getElementById('langbar').innerHTML = QLANGS.map(l=>`<button class="${l===LANG?'active':''}" onclick="setLang('${l}')">${QT[l].label}</button>`).join('');
 }
 const LEVELS = ['N5','N4','N3','N2','N1'];
+const TOPICS = [
+  {id:'any',      icon:'🎲', label:'Any'},
+  {id:'greetings',icon:'🙏', label:'Greetings'},
+  {id:'transport',icon:'🚅', label:'Transport'},
+  {id:'food',     icon:'🍱', label:'Food'},
+  {id:'shopping', icon:'🛍', label:'Shopping'},
+  {id:'travel',   icon:'✈️', label:'Travel'},
+  {id:'nature',   icon:'🌸', label:'Nature'},
+  {id:'numbers',  icon:'🔢', label:'Numbers'},
+];
 let level = 'N5';
+let topic = 'any';
 let current = null;
 let busy = false;
 
@@ -256,6 +287,43 @@ function renderParty(extra){
   document.getElementById('p-bubble').innerHTML = extra || t('tier'+tier);
 }
 
+/* ── topic pills ── */
+function renderTopics(){
+  document.getElementById('topics').innerHTML = TOPICS.map(tp=>
+    `<a class="tpill${tp.id===topic?' active':''}" data-topic="${tp.id}" role="button" tabindex="0">${tp.icon} ${tp.label}</a>`
+  ).join('');
+}
+document.getElementById('topics').addEventListener('click', e=>{
+  const p=e.target.closest('.tpill'); if(!p) return;
+  topic=p.dataset.topic;
+  document.querySelectorAll('.tpill').forEach(x=>x.classList.toggle('active',x===p));
+});
+document.getElementById('topics').addEventListener('keydown', e=>{
+  if(e.key==='Enter'||e.key===' '){ const p=e.target.closest('.tpill'); if(p){ e.preventDefault(); p.click(); } }
+});
+
+/* ── streak ── */
+function getStreak(){try{return parseInt(localStorage.getItem('nh_streak')||'0',10)||0;}catch(e){return 0;}}
+function getBestStreak(){try{return parseInt(localStorage.getItem('nh_best_streak')||'0',10)||0;}catch(e){return 0;}}
+function renderStreak(){
+  const cur=getStreak(), best=getBestStreak();
+  const sEl=document.getElementById('streak-text'), bEl=document.getElementById('best-streak');
+  const fEl=document.getElementById('streak-fire');
+  if(sEl) sEl.textContent=cur+(cur===1?' streak':' streak');
+  if(bEl) bEl.textContent=best;
+  if(fEl){ fEl.classList.toggle('hot', cur>=3); fEl.textContent=cur>=5?'🔥':'🔥'; }
+}
+function onCorrect(){
+  const n=getStreak()+1;
+  try{localStorage.setItem('nh_streak',String(n));}catch(e){}
+  const b=getBestStreak(); if(n>b) try{localStorage.setItem('nh_best_streak',String(n));}catch(e){}
+  renderStreak();
+}
+function onWrong(){
+  try{localStorage.setItem('nh_streak','0');}catch(e){}
+  renderStreak();
+}
+
 /* ── level pills ── */
 function renderLevels(){
   document.getElementById('levels').innerHTML = LEVELS.map(l =>
@@ -279,10 +347,11 @@ async function newQuestion(){
   optsWrap.style.display='grid'; optsWrap.innerHTML='<button class="b-opt" disabled>…</button>'.repeat(4);
   qEl.textContent='…'; rEl.textContent='';
   document.getElementById('b-level').textContent = level;
+  const typeEl=document.getElementById('b-type'); if(typeEl) typeEl.textContent='';
   try{
     const res = await fetch('/api/generate', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ level, lang: LANG })
+      body: JSON.stringify({ level, lang: LANG, topic })
     });
     if(res.status===429){
       qEl.textContent='⏳'; optsWrap.style.display='none';
@@ -296,6 +365,7 @@ async function newQuestion(){
     qEl.innerHTML = sanitizeQuizHTML(data.question);
     rEl.textContent = data.reading || '';
     optsWrap.innerHTML = opts.map((o,i)=>`<button class="b-opt" data-i="${i}">${sanitizeQuizHTML(o.t)}</button>`).join('');
+    if(typeEl && data.type) typeEl.textContent = 'TYPE: '+data.type.replace(/_/g,' ').toUpperCase();
   }catch(err){
     qEl.textContent='⚠️'; optsWrap.style.display='none';
     resEl.textContent=t('fail')+err.message; resEl.className='b-result lose';
@@ -315,11 +385,13 @@ document.getElementById('b-opts').addEventListener('click', e=>{
     opt.classList.add('correct-ans');
     resEl.textContent=t('hit'); resEl.className='b-result win';
     addXP(10);
+    onCorrect();
     renderParty(t('bubble_hit'));
   }else{
     opt.classList.add('wrong-ans');
     all[current.correctIndex].classList.add('correct-ans');
     resEl.innerHTML=t('miss')+'<b>'+sanitizeQuizHTML(current.correctText)+'</b>'; resEl.className='b-result lose';
+    onWrong();
     renderParty(t('bubble_miss'));
   }
   if(current.explanation){ expEl.innerHTML = sanitizeQuizHTML(current.explanation); expEl.classList.add('show'); }
@@ -330,9 +402,14 @@ document.getElementById('levels').addEventListener('keydown', e=>{
   if(e.key==='Enter'||e.key===' '){ const p=e.target.closest('.lvpill'); if(p){ e.preventDefault(); p.click(); } }
 });
 
-/* deep-link: quiz.html?level=N3 */
-(function(){ const l=(new URLSearchParams(location.search).get('level')||'').toUpperCase(); if(LEVELS.includes(l)) level=l; })();
-renderLevels(); buildLangbar(); applyLang(); document.getElementById('b-level').textContent = level;
+/* deep-link: quiz.html?level=N3&topic=food */
+(function(){
+  const p=new URLSearchParams(location.search);
+  const l=(p.get('level')||'').toUpperCase(); if(LEVELS.includes(l)) level=l;
+  const tp=(p.get('topic')||'').toLowerCase(); if(TOPICS.some(t=>t.id===tp)) topic=tp;
+})();
+renderTopics(); renderLevels(); buildLangbar(); applyLang(); renderStreak();
+document.getElementById('b-level').textContent = level;
 </script>
 </body>
 </html>
