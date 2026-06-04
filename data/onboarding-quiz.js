@@ -1,4 +1,4 @@
-/* 14-question JLPT diagnostic quiz (static, no API). Coverage: PRE×2 (kana basics), N5×3, N4×3, N3×3, N2×2, N1×1.
+/* 20-question JLPT diagnostic quiz (static, no API). Coverage: PRE×2 (kana basics), N5×3, N4×3, N3×3, N2×5, N1×4.
    Each item has level, options (4 strings), correct index, and i18n-aware prompt + explanation.
    PRE level catches absolute beginners who don't even know kana yet. */
 window.NH_ONBOARDING_QUIZ = [
