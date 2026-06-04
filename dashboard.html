@@ -157,6 +157,7 @@ footer a{color:var(--gold);text-decoration:none}
     <div class="actions">
       <a class="aciton-btn action-train" id="ax-train" href="quiz.html" data-i18n="ax_train">⚔️ Train 20 questions today</a>
       <a class="aciton-btn action-review" id="ax-review" href="quiz.html?mode=review" data-i18n="ax_review">📚 Review (0 due)</a>
+      <a class="aciton-btn action-review" id="ax-pdf" href="study-sheet.html" data-i18n="ax_pdf">📄 Study sheet · Pro</a>
     </div>
   </div>
 
@@ -202,9 +203,9 @@ const T = {
     eta_label:'N3 ETA', btn_train:'⚔️ Train now', btn_review:'📚 Review mistakes',
     bars_h:'Readiness by level', threshold:'PASS · 75%', spark_h:'Last 7 days',
     spark_total:'<b id="weekly-total">0</b> questions this week',
-    next_h:'What to do next', ax_train:'⚔️ Train 20 questions today', ax_review:'📚 Review',
+    next_h:'What to do next', ax_train:'⚔️ Train 20 questions today', ax_review:'📚 Review', ax_pdf:'📄 Study sheet · Pro',
     how_h:'How your score is calculated',
-    how_1:'<b>Diagnostic (40%)</b> — your initial 12-question test result.',
+    how_1:'<b>Diagnostic (40%)</b> — your initial 20-question test result.',
     how_2:'<b>Recent accuracy (40%)</b> — your last 50 answers at each level.',
     how_3:'<b>SRS retention (20%)</b> — how well you\'ve held onto words you previously missed.',
     eta_ready:'You\'re already at {pct}% — ready for {lvl}!', eta_weeks:'~{n} weeks at 20 questions/day',
@@ -224,9 +225,9 @@ const T = {
     eta_label:'N3 までの予想', btn_train:'⚔️ 今すぐ訓練', btn_review:'📚 復習する',
     bars_h:'レベル別 Readiness', threshold:'合格 · 75%', spark_h:'直近 7 日',
     spark_total:'<b id="weekly-total">0</b> 問 (今週)',
-    next_h:'次にすること', ax_train:'⚔️ 今日 20 問やる', ax_review:'📚 復習',
+    next_h:'次にすること', ax_train:'⚔️ 今日 20 問やる', ax_review:'📚 復習', ax_pdf:'📄 学習シート · Pro',
     how_h:'スコアの計算方法',
-    how_1:'<b>診断 (40%)</b> — 最初の 12 問の結果。',
+    how_1:'<b>診断 (40%)</b> — 最初の 20 問の結果。',
     how_2:'<b>直近の正答率 (40%)</b> — 各レベル直近 50 問。',
     how_3:'<b>SRS 定着 (20%)</b> — 一度間違えた語をどれだけ維持できているか。',
     eta_ready:'すでに {pct}% — {lvl} 合格圏内!', eta_weeks:'1日20問で約 {n} 週間',

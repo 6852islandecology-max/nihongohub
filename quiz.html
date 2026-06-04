@@ -278,6 +278,7 @@ const QT = {
     m_h_2:'Your <span id="m-n3-pct">42</span>% to N3 grew today.',
     m_p:'Keep momentum tonight + tomorrow. Two more weeks of 20 questions/day puts you in the pass zone.',
     m_b_trial:'⚡ Start 7-day free trial (no card)', m_b_life:'💎 Get Lifetime $149', m_b_dash:'📊 See your dashboard', m_close:'Maybe tomorrow — close',
+    srs_tag:'REVIEW LIMIT REACHED', srs_limit_h:"You've reviewed 20 cards today.<br><em>Unlimited review is a Pro perk.</em>", srs_limit_p:'Free accounts review 20 cards a day. Go Pro (or start a free trial) for unlimited spaced-repetition review.',
     srs_again:'Again<small>&lt; 1m</small>', srs_hard:'Hard<small>1d</small>', srs_good:'Good<small>3d</small>', srs_easy:'Easy<small>1w</small>',
     mistakes_n:'Mistakes: ', due_n:'Due today: ', review_link:'Start review →', exit_review:'Exit review',
     review_mode:'📚 Review mode · spaced repetition',
@@ -302,6 +303,7 @@ const QT = {
     m_h_2:'N3 までの達成度が <span id="m-n3-pct">42</span>% に伸びました。',
     m_p:'勢いを止めずに今夜と明日も。1日20問を2週間続ければ合格圏に入ります。',
     m_b_trial:'⚡ 7日間無料トライアル開始 (カード不要)', m_b_life:'💎 Lifetime $149', m_b_dash:'📊 ダッシュボードを見る', m_close:'また明日 — 閉じる',
+    srs_tag:'復習の上限に到達', srs_limit_h:'今日の復習 20 枚が完了。<br><em>無制限の復習は Pro 特典です。</em>', srs_limit_p:'無料は1日20枚まで復習できます。Pro（または無料トライアル）で間隔反復の復習が無制限に。',
     srs_again:'もう一度<small>&lt; 1分</small>', srs_hard:'難しい<small>1日</small>', srs_good:'普通<small>3日</small>', srs_easy:'簡単<small>1週</small>',
     mistakes_n:'ミス: ', due_n:'今日復習: ', review_link:'復習を開始 →', exit_review:'復習を終了',
     review_mode:'📚 復習モード · 間隔反復',
@@ -690,9 +692,30 @@ function renderMistakeLine(){
   }
 }
 
+/* ── Pro gating: SRS review daily cap (free = 20/day, Pro/trial = unlimited) ── */
+const FREE_SRS_DAILY = 20;
+function planFull(){ try { return !!(window.NH_PLAN && window.NH_PLAN.isFullAccess()); } catch(e){ return false; } }
+function srsTodayKey(){ return new Date().toISOString().slice(0,10); }
+function srsReviewedToday(){
+  try { const o = JSON.parse(localStorage.getItem('nh_srs_count')||'{}'); return o.date===srsTodayKey() ? (o.n||0) : 0; } catch(e){ return 0; }
+}
+function srsBumpReviewed(){
+  try { localStorage.setItem('nh_srs_count', JSON.stringify({ date: srsTodayKey(), n: srsReviewedToday()+1 })); } catch(e){}
+}
+function srsCapReached(){ return !planFull() && srsReviewedToday() >= FREE_SRS_DAILY; }
+function showReviewLimit(){
+  const modal = document.getElementById('limit-modal');
+  if(!modal) return;
+  const tag = modal.querySelector('.mtag'); if(tag) tag.textContent = t('srs_tag');
+  const h2 = modal.querySelector('h2'); if(h2) h2.innerHTML = t('srs_limit_h');
+  const p = modal.querySelector('p[data-i18n="m_p"]'); if(p) p.textContent = t('srs_limit_p');
+  modal.classList.add('show');
+}
+
 /* ── Review mode ── */
 function enterReviewMode(){
   if(!window.NH_SRS) return;
+  if(srsCapReached()){ showReviewLimit(); return; }
   reviewQueue = window.NH_SRS.dueMistakes().slice();
   if(!reviewQueue.length) return;
   reviewMode = true;
@@ -713,7 +736,9 @@ function exitReviewMode(){
 }
 function loadNextReview(){
   if(!reviewQueue.length){ exitReviewMode(); return; }
+  if(srsCapReached()){ showReviewLimit(); exitReviewMode(); return; }
   const m = reviewQueue.shift();
+  srsBumpReviewed();
   currentMistakeId = m.id;
   level = m.level || level;
   document.getElementById('b-level').textContent = level;

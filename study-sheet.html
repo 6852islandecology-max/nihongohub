@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Study Sheet — NihongoHub</title>
+<link rel="canonical" href="https://www.nihongo-hub.com/study-sheet.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#16100a;--gold:#c8911f;--red:#bf3325;--muted:#6b6051;--line:#d9cdb4;--green:#2a7a4b}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#f4efe5;line-height:1.55}
+.bar-top{background:#0d0a14;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 22px;flex-wrap:wrap;gap:10px}
+.bar-top a{color:var(--gold);text-decoration:none;font-size:14px}
+.bar-top .acts{display:flex;gap:12px}
+.btn{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;border:none;border-radius:7px;padding:9px 16px;text-decoration:none}
+.btn.print{background:var(--red);color:#fff}
+.sheet{max-width:780px;margin:24px auto;background:#fff;border:1px solid var(--line);border-radius:10px;padding:34px 38px;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.sh-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid var(--ink);padding-bottom:14px;margin-bottom:20px;flex-wrap:wrap;gap:8px}
+.sh-head .brand{font-family:'DotGothic16',sans-serif;font-size:22px;letter-spacing:1px}
+.sh-head .brand span{color:var(--red)}
+.sh-head .meta{font-size:13px;color:var(--muted);text-align:right}
+.sh-head .lv{font-family:'Press Start 2P',monospace;font-size:13px;color:var(--gold);background:var(--ink);padding:6px 10px;border-radius:5px;display:inline-block;margin-top:4px}
+h2.sec{font-family:'DotGothic16',sans-serif;font-size:16px;margin:22px 0 12px;border-left:4px solid var(--gold);padding-left:10px}
+.rdy{display:flex;flex-direction:column;gap:8px}
+.rrow{display:grid;grid-template-columns:46px 1fr 46px;gap:10px;align-items:center}
+.rrow .l{font-family:'Press Start 2P',monospace;font-size:10px}
+.rrow .trk{height:13px;background:#ece2cd;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.rrow .fil{height:100%;background:linear-gradient(90deg,var(--gold),var(--red))}
+.rrow .p{font-size:12px;color:var(--muted);text-align:right}
+.mlist{counter-reset:m;display:flex;flex-direction:column;gap:12px}
+.mitem{border:1px solid var(--line);border-radius:8px;padding:12px 14px;page-break-inside:avoid}
+.mitem .q{font-family:'Noto Sans JP',sans-serif;font-size:15px;margin-bottom:6px}
+.mitem .q::before{counter-increment:m;content:"Q" counter(m) ". ";font-family:'Press Start 2P',monospace;font-size:10px;color:var(--gold);margin-right:4px}
+.mitem .a{font-size:14px;color:var(--green);font-weight:600}
+.mitem .tag{font-size:11px;color:var(--muted);margin-top:4px}
+.empty{color:var(--muted);font-size:14px;padding:10px 0}
+.foot{margin-top:26px;border-top:1px solid var(--line);padding-top:12px;font-size:12px;color:var(--muted);text-align:center}
+/* Pro gate */
+.gate{max-width:520px;margin:60px auto;background:#fff;border:2px solid var(--gold);border-radius:14px;padding:34px;text-align:center}
+.gate h1{font-family:'DotGothic16',sans-serif;font-size:24px;margin-bottom:10px}
+.gate p{color:var(--muted);margin-bottom:20px}
+.gate .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.gate .btn.gold{background:var(--gold);color:var(--ink)}
+.gate .btn.ghost{background:transparent;border:2px solid var(--ink);color:var(--ink)}
+@media print{
+  .no-print{display:none!important}
+  body{background:#fff}
+  .sheet{box-shadow:none;border:none;margin:0;max-width:100%;padding:0}
+  .rrow .fil{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="bar-top no-print">
+  <a href="dashboard.html">← Dashboard</a>
+  <div class="acts">
+    <button class="btn print" id="print-btn">🖨 Print / Save as PDF</button>
+  </div>
+</div>
+
+<div id="root"></div>
+
+<script>
+function g(k,d){ try{ const v=localStorage.getItem(k); return v==null?d:v; }catch(e){ return d; } }
+function full(){
+  try{ const p=JSON.parse(localStorage.getItem('nh_plan_cache')||'null'); return !!(p && (p.state==='paid'||p.state==='trial')); }catch(e){ return false; }
+}
+function esc(s){ const d=document.createElement('div'); d.textContent=String(s==null?'':s); return d.innerHTML; }
+function stripTags(s){ const d=document.createElement('div'); d.innerHTML=String(s||''); return d.textContent||d.innerText||''; }
+
+const LEVELS=['N5','N4','N3','N2','N1'];
+const RANK={PRE:'Beginner',N5:'Novice',N4:'Apprentice',N3:'Adept',N2:'Veteran',N1:'Master'};
+
+function render(){
+  const root=document.getElementById('root');
+  if(!full()){
+    root.innerHTML =
+      '<div class="gate">'+
+      '<h1>📄 Study sheets are a Pro feature</h1>'+
+      '<p>Export your level summary and every question you’ve missed as a printable, offline study sheet (save as PDF). Available on Pro, Lifetime, and during your free trial.</p>'+
+      '<div class="row">'+
+      '<a class="btn gold" href="index.html?trial=1#trial">⚡ Start 7-day free trial</a>'+
+      '<a class="btn ghost" href="index.html#pricing">See plans</a>'+
+      '</div></div>';
+    return;
+  }
+  const level=g('nh_estimated_level','N5');
+  let scores={}; try{ scores=JSON.parse(g('nh_diagnostic_scores','{}'))||{}; }catch(e){}
+  let mistakes=[]; try{ mistakes=JSON.parse(g('nh_mistakes','[]'))||[]; }catch(e){}
+  const xp=parseInt(g('nh_quiz_xp','0'),10)||0;
+  const best=parseInt(g('nh_best_streak','0'),10)||0;
+  const today=new Date().toISOString().slice(0,10);
+
+  const rdy=LEVELS.map(L=>{
+    const pct=Math.round(((scores[L]||0)*100));
+    return '<div class="rrow"><div class="l">'+L+'</div><div class="trk"><div class="fil" style="width:'+pct+'%"></div></div><div class="p">'+pct+'%</div></div>';
+  }).join('');
+
+  const mItems = mistakes.length
+    ? mistakes.slice(0,120).map(m=>{
+        const q=stripTags(m.question||'');
+        const a=stripTags(m.answer||'');
+        const tg=[m.level,m.topic].filter(Boolean).join(' · ');
+        return '<div class="mitem"><div class="q">'+esc(q)+'</div><div class="a">✓ '+esc(a)+'</div>'+(tg?'<div class="tag">'+esc(tg)+'</div>':'')+'</div>';
+      }).join('')
+    : '<div class="empty">No missed questions yet — answer some battles and your review items will appear here.</div>';
+
+  root.innerHTML =
+    '<div class="sheet">'+
+    '<div class="sh-head">'+
+      '<div><div class="brand">Nihongo<span>Hub</span></div><div class="lv">'+esc(level)+' · '+esc(RANK[level]||'Novice')+'</div></div>'+
+      '<div class="meta">Study Sheet<br>'+today+'<br>'+xp+' XP · best streak '+best+'</div>'+
+    '</div>'+
+    '<h2 class="sec">JLPT readiness by level</h2>'+
+    '<div class="rdy">'+rdy+'</div>'+
+    '<h2 class="sec">Review deck — questions you missed ('+Math.min(mistakes.length,120)+')</h2>'+
+    '<div class="mlist">'+mItems+'</div>'+
+    '<div class="foot">Generated by NihongoHub · nihongo-hub.com · Keep practicing, '+esc(RANK[level]||'adventurer')+'!</div>'+
+    '</div>';
+
+  if(new URLSearchParams(location.search).get('print')==='1'){ setTimeout(()=>window.print(), 600); }
+}
+
+document.getElementById('print-btn').addEventListener('click', ()=>window.print());
+render();
+</script>
+</body>
+</html>
