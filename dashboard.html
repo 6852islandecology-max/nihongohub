@@ -151,6 +151,17 @@ footer a{color:var(--gold);text-decoration:none}
     <p style="font-family:var(--dot);font-size:12px;color:var(--muted);margin:0" data-i18n="streak_def">"Streak" counts consecutive days with at least 1 question answered.</p>
   </div>
 
+  <div class="card" id="weak-card" style="display:none">
+    <h2><span data-i18n="weak_h">Weak words — Top 10</span> <small id="weak-sub" style="font-family:var(--pixel);font-size:9px;color:var(--muted)"></small></h2>
+    <div id="weak-list"></div>
+    <a class="aciton-btn action-review" href="quiz.html?mode=review" style="margin-top:12px;display:inline-flex" data-i18n="weak_review">📚 Drill these →</a>
+  </div>
+
+  <div class="card" id="cal-card">
+    <h2><span data-i18n="cal_h">Study calendar</span> <small id="cal-sub" style="font-family:var(--pixel);font-size:9px;color:var(--muted)"></small></h2>
+    <div id="cal-grid" style="overflow-x:auto"></div>
+  </div>
+
   <div class="card">
     <h2 data-i18n="next_h">What to do next</h2>
     <p id="next-headline" style="font-family:var(--dot);font-size:15px;color:var(--ink);margin-bottom:10px"></p>
@@ -204,6 +215,7 @@ const T = {
     bars_h:'Readiness by level', threshold:'PASS · 75%', spark_h:'Last 7 days',
     spark_total:'<b id="weekly-total">0</b> questions this week',
     next_h:'What to do next', ax_train:'⚔️ Train 20 questions today', ax_review:'📚 Review', ax_pdf:'📄 Study sheet · Pro',
+    weak_h:'Weak words — Top 10', weak_sub:'{n} tracked', weak_review:'📚 Drill these →', cal_h:'Study calendar', cal_sub:'{d} active days · {n} questions (9 wks)',
     how_h:'How your score is calculated',
     how_1:'<b>Diagnostic (40%)</b> — your initial 20-question test result.',
     how_2:'<b>Recent accuracy (40%)</b> — your last 50 answers at each level.',
@@ -226,6 +238,7 @@ const T = {
     bars_h:'レベル別 Readiness', threshold:'合格 · 75%', spark_h:'直近 7 日',
     spark_total:'<b id="weekly-total">0</b> 問 (今週)',
     next_h:'次にすること', ax_train:'⚔️ 今日 20 問やる', ax_review:'📚 復習', ax_pdf:'📄 学習シート · Pro',
+    weak_h:'苦手な単語 — TOP10', weak_sub:'{n} 件', weak_review:'📚 まとめて復習 →', cal_h:'学習カレンダー', cal_sub:'{d} 日学習 · {n} 問（9週間）',
     how_h:'スコアの計算方法',
     how_1:'<b>診断 (40%)</b> — 最初の 20 問の結果。',
     how_2:'<b>直近の正答率 (40%)</b> — 各レベル直近 50 問。',
@@ -457,6 +470,64 @@ function renderAll(){
   renderSparkline(s.sparkline);
   renderActions(s);
   renderMonthly();
+  renderWeakWords();
+  renderCalendar();
+}
+
+/* ── Weak words — Top 10 (from nh_mistakes, client-side) ── */
+function renderWeakWords(){
+  const card = document.getElementById('weak-card'); if(!card) return;
+  let list = [];
+  try { list = JSON.parse(localStorage.getItem('nh_mistakes')||'[]')||[]; } catch(e){}
+  if(!list.length){ card.style.display='none'; return; }
+  // most problematic first: fewest SRS repetitions, then most recently missed
+  const top = list.slice().sort((a,b)=>{
+    const ra=(a.srs&&a.srs.repetitions)||0, rb=(b.srs&&b.srs.repetitions)||0;
+    if(ra!==rb) return ra-rb;
+    return (b.last_seen||0)-(a.last_seen||0);
+  }).slice(0,10);
+  card.style.display='';
+  const sub=document.getElementById('weak-sub'); if(sub) sub.textContent = fmt(tr('weak_sub'),{n:list.length});
+  const strip=(s)=>{ const d=document.createElement('div'); d.innerHTML=String(s||''); return (d.textContent||'').slice(0,46); };
+  document.getElementById('weak-list').innerHTML = top.map(m=>{
+    const lv=m.level||'N5';
+    return `<div style="display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--soft)">`+
+      `<span style="font-family:var(--pixel);font-size:9px;background:var(--ink);color:var(--gold);padding:3px 6px;border-radius:4px;flex:0 0 auto">${lv}</span>`+
+      `<span style="flex:1;min-width:0;font-size:14px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${strip(m.question)}</span>`+
+      `<span style="font-size:13px;color:var(--green);font-weight:600;flex:0 0 auto">${strip(m.answer)}</span>`+
+    `</div>`;
+  }).join('');
+}
+
+/* ── Study calendar — last 9 weeks heatmap (from nh_quiz_log) ── */
+function renderCalendar(){
+  const grid = document.getElementById('cal-grid'); if(!grid) return;
+  let log=[]; try{ log = JSON.parse(localStorage.getItem('nh_quiz_log')||'[]')||[]; }catch(e){}
+  const WEEKS=9, DAYS=WEEKS*7;
+  const perDay={}; let total=0;
+  log.forEach(e=>{ if(!e||!e.t) return; const d=new Date(e.t); const key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); perDay[key]=(perDay[key]||0)+1; total++; });
+  const today=new Date(); today.setHours(0,0,0,0);
+  // start on the Sunday that begins the window
+  const start=new Date(today); start.setDate(start.getDate()-(DAYS-1));
+  start.setDate(start.getDate()-start.getDay()); // back to Sunday
+  function lvl(n){ return n===0?0 : n<3?1 : n<7?2 : n<15?3 : 4; }
+  const COLORS=['#e9dec6','#cdebd6','#86d3a6','#3fae6b','#1f7a45'];
+  let activeDays=0, cols='';
+  const cur=new Date(start);
+  while(cur<=today){
+    let cells='';
+    for(let i=0;i<7;i++){
+      const key=cur.getFullYear()+'-'+(cur.getMonth()+1)+'-'+cur.getDate();
+      const n = (cur<=today) ? (perDay[key]||0) : -1;
+      if(n>0) activeDays++;
+      const bg = n<0 ? 'transparent' : COLORS[lvl(n)];
+      cells += `<div title="${key}: ${n<0?0:n} Q" style="width:13px;height:13px;border-radius:3px;background:${bg}"></div>`;
+      cur.setDate(cur.getDate()+1);
+    }
+    cols += `<div style="display:flex;flex-direction:column;gap:3px">${cells}</div>`;
+  }
+  grid.innerHTML = `<div style="display:flex;gap:3px;min-width:max-content">${cols}</div>`;
+  const sub=document.getElementById('cal-sub'); if(sub) sub.textContent = fmt(tr('cal_sub'),{d:activeDays,n:total});
 }
 
 // Claim transfer from another device (?claim=<userId>) — runs before onboarding gate
