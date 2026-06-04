@@ -480,13 +480,22 @@ function renderAll(){
   }
 })();
 
-// First-time gate: if user lands on dashboard without doing onboarding, push them there
+// First-time prompt: if the user hasn't taken the level test, gently invite them — but DON'T
+// force-redirect (a hard bounce off the page is jarring). The dashboard renders its empty state.
 (function(){
   const p = new URLSearchParams(location.search);
-  if(p.get('claim')) return; // skip gate when claiming
+  if(p.get('claim')) return;
   let done = false;
   try { done = localStorage.getItem('nh_onboarding_done') === '1'; } catch(e){}
-  if(!done){ location.replace('onboarding.html'); }
+  if(done) return;
+  const main = document.querySelector('main.wrap');
+  if(!main) return;
+  const b = document.createElement('div');
+  b.style.cssText = 'background:var(--hud);color:#fdfaf3;border:2px solid var(--gold);border-radius:10px;'+
+    'padding:14px 16px;margin-bottom:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between';
+  b.innerHTML = '<span style="font-family:var(--dot);font-size:14px">🎯 Take the free 5-minute level test to personalize your readiness scores.</span>'+
+    '<a href="onboarding.html" style="background:var(--red);color:#fff;text-decoration:none;font-family:var(--dot);font-size:14px;padding:9px 16px;border-radius:7px;white-space:nowrap">Find my level →</a>';
+  main.insertBefore(b, main.firstChild);
 })();
 
 // Load QR library lazily (one-time, with Subresource Integrity check)
