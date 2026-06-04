@@ -543,6 +543,8 @@ function onCorrect(){
   const n=getStreak()+1;
   try{localStorage.setItem('nh_streak',String(n));}catch(e){}
   const b=getBestStreak(); if(n>b) try{localStorage.setItem('nh_best_streak',String(n));}catch(e){}
+  // running total of correct answers — drives weapon milestones (reconciled on the RPG screen)
+  try{ localStorage.setItem('nh_correct_total', String((parseInt(localStorage.getItem('nh_correct_total')||'0',10)||0)+1)); }catch(e){}
   renderStreak();
 }
 function onWrong(){

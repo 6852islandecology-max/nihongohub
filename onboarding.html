@@ -250,6 +250,8 @@ function finish(){
   document.getElementById('progress').style.display = 'none';
   document.getElementById('intro').style.display = 'none';
   const { level, acc } = window.NH_LEVEL_ESTIMATOR.saveResult(answers);
+  // Count level-test completions — each clear unlocks the next title-combination particle (の→は→を…)
+  try{ localStorage.setItem('nh_leveltest_completions', String((parseInt(localStorage.getItem('nh_leveltest_completions')||'0',10)||0)+1)); }catch(e){}
   // Preload first quiz question in background so quiz.html opens instantly later
   try {
     const preloadLevel = level === 'PRE' ? 'N5' : level;

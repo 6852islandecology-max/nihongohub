@@ -76,6 +76,20 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 2
 .toast.show{opacity:1}
 
 footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-top:1px solid var(--hud-line);margin-top:20px}
+
+/* Titles (称号) — guild-card combiner */
+.title-card{background:linear-gradient(135deg,rgba(232,160,32,.14),rgba(192,57,43,.10));border:2px solid var(--gold);border-radius:12px;padding:18px;text-align:center;margin-bottom:14px}
+.title-display{font-family:'Noto Sans JP',sans-serif;font-size:26px;font-weight:700;color:var(--white);line-height:1.3;min-height:32px}
+.title-display .en{display:block;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--soft);font-weight:400;margin-top:4px}
+.title-combiner{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.tsel{flex:1;min-width:96px;background:var(--hud-line);color:var(--parch);border:1px solid var(--hud-line);border-radius:6px;padding:10px;font-family:'Noto Sans JP',sans-serif;font-size:14px}
+.tsel-p{flex:0 0 70px;min-width:62px;text-align:center}
+.title-words{display:flex;flex-wrap:wrap;gap:6px}
+.tword{font-family:'Noto Sans JP',sans-serif;font-size:12px;padding:4px 9px;border-radius:5px;background:rgba(255,255,255,.05);border:1px solid var(--hud-line);color:var(--parch)}
+.tword.rarity-rare{border-color:#4d8fbf;color:#9fd0ee}
+.tword.rarity-epic{border-color:#a056d2;color:#d3a8ee}
+.tword.rarity-legendary{border-color:var(--gold);color:#f0c860}
+.title-empty{color:var(--soft);font-size:13px;text-align:center;padding:8px}
 </style>
 <link rel="stylesheet" href="styles/responsive.css">
 <link rel="stylesheet" href="styles/equipment.css">
@@ -85,6 +99,8 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 <script src="lib/hamburger.js" defer></script>
 <script src="data/equipment-metadata.js" defer></script>
 <script src="lib/equipment.js" defer></script>
+<script src="data/titles-metadata.js" defer></script>
+<script src="lib/titles.js" defer></script>
 </head>
 <body>
 <nav>
@@ -152,6 +168,21 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
       <!-- 4 slot rows injected by renderEquipment() -->
     </div>
   </div>
+</div>
+
+<!-- ── Titles (称号) — guild-card combiner ── -->
+<div class="pref-section" id="titles-section">
+  <p class="section-head">🏅 TITLE <span id="title-progress"></span></p>
+  <div class="title-card">
+    <div class="title-display" id="title-display">—</div>
+  </div>
+  <div class="title-combiner">
+    <select class="tsel" id="tw1" aria-label="First word"></select>
+    <select class="tsel tsel-p" id="tp" aria-label="Particle"></select>
+    <select class="tsel" id="tw2" aria-label="Second word"></select>
+    <button class="btn-explore" id="title-equip" style="padding:10px 16px">⚔ EQUIP</button>
+  </div>
+  <div class="title-words" id="title-words"></div>
 </div>
 
 <div class="pref-section">
@@ -464,6 +495,42 @@ document.addEventListener('keydown', e=>{
   }
 });
 
+/* ── Titles (称号): combine earned words + particle into a custom title ── */
+function renderTitles(){
+  const A = window.NH_TITLES_API; if(!A) return;
+  if (window.NH_EQUIPMENT_API) A.syncWeapons();          // grant weapons earned via total-correct
+  const words = A.earnedWords(), parts = A.unlockedParticles();
+  const tw1=document.getElementById('tw1'), tp=document.getElementById('tp'), tw2=document.getElementById('tw2');
+  const disp=document.getElementById('title-display'), prog=document.getElementById('title-progress'), box=document.getElementById('title-words');
+  if(!words.length){
+    if(prog) prog.textContent='';
+    if(disp) disp.innerHTML='<span style="font-size:15px;color:var(--soft)">Win no-miss streaks in Battle to earn title words ⚔</span>';
+    if(box) box.innerHTML='<div class="title-empty">No title words yet — keep a correct-answer streak going. First word at streak '+(A.nextWordAt()||5)+'.</div>';
+    [tw1,tp,tw2].forEach(s=>{ if(s) s.innerHTML=''; });
+    return;
+  }
+  const opt=(v,t)=>'<option value="'+v+'">'+t+'</option>';
+  tw1.innerHTML = words.map(w=>opt(w.key, w.ja+' · '+w.en)).join('');
+  tp.innerHTML  = parts.map(p=>opt(p.ja, p.ja)).join('');
+  tw2.innerHTML = opt('', '— (none)') + words.map(w=>opt(w.key, w.ja+' · '+w.en)).join('');
+  const cur=A.getComposed();
+  if(cur){ if(cur.w1) tw1.value=cur.w1; if(cur.p) tp.value=cur.p; if(cur.w2) tw2.value=cur.w2||''; }
+  const ja=A.composeDisplay(cur,'ja'), en=A.composeDisplay(cur,'en');
+  disp.innerHTML = (cur && ja) ? (ja + '<span class="en">'+en+'</span>') : '<span style="font-size:15px;color:var(--soft)">Combine words below, then ⚔ EQUIP</span>';
+  const nextAt=A.nextWordAt();
+  prog.textContent = words.length+' words'+(nextAt?(' · next at streak '+nextAt):'');
+  box.innerHTML = words.map(w=>'<span class="tword rarity-'+w.rarity+'">'+w.ja+'</span>').join('');
+}
+const titleEquipBtn=document.getElementById('title-equip');
+if(titleEquipBtn) titleEquipBtn.addEventListener('click', ()=>{
+  const A=window.NH_TITLES_API; if(!A) return;
+  const w1=document.getElementById('tw1').value;
+  if(!w1) return;
+  A.setComposed({ w1, p:document.getElementById('tp').value||'の', w2:document.getElementById('tw2').value||null });
+  renderTitles();
+  toast('🏅 Title equipped!');
+});
+
 init();
 
 // First-visit check: open avatar modal
@@ -476,6 +543,7 @@ window.addEventListener('load', ()=>{
     } else {
       renderEquipment();
     }
+    renderTitles();
     // Direct deep link: rpg.html#equip scrolls to equipment section
     if (location.hash === '#equip') {
       document.getElementById('equip-section').scrollIntoView({ behavior:'smooth' });
