@@ -1,0 +1,40 @@
+/* styles/theme-dark.css — RPG dark "world" unification.
+ * REVERSIBLE: to restore the light parchment look, remove the
+ *   <link rel="stylesheet" href="styles/theme-dark.css">
+ * tag from the page(s). This file only overrides the light surfaces and the
+ * text on them; the already-dark RPG sections (hero-left, nav, jlpt demo,
+ * price cards, hero widgets) are left untouched.
+ *
+ * Palette: bg #160f08 / surface #1f160d / surface2 #241a0e / text #f3ead3 / muted #b6a589 / line #3a2c1b
+ */
+
+/* ---- page + light section backgrounds → dark ---- */
+body { background:#160f08 !important; color:#f3ead3 !important; }
+.hero-right { background:#1a130b !important; }
+.features, .dashboard, .culture, .anime, .newsletter { background:#160f08 !important; }
+.feature-card, .dash-stat-card, .travel-card, .quiz-card { background:#1f160d !important; border-color:#3a2c1b !important; }
+.anime-img { background:rgba(255,255,255,.05) !important; }
+.price-card.featured { background:#1f160d !important; border-color:var(--gold) !important; }
+.newsletter-input { background:#241a0e !important; color:#f3ead3 !important; border-color:#3a2c1b !important; }
+.newsletter-input::placeholder { color:#8a7c64 !important; }
+.quiz-opt { background:#241a0e !important; color:#f3ead3 !important; border-color:#3a2c1b !important; }
+
+/* ---- text on now-dark surfaces → light ---- */
+.section-title { color:#f3ead3 !important; }
+.feature-title { color:#f3ead3 !important; }
+.feature-desc { color:#b6a589 !important; }
+.feature-num { color:rgba(255,255,255,.05) !important; }
+.quiz-q { color:#f3ead3 !important; }
+.travel-title, .travel-card h3 { color:#f3ead3 !important; }
+.travel-desc { color:#b6a589 !important; }
+.dash-stat-card, .dash-stat-card * { color:#f3ead3 !important; }
+.dash-stat-label { color:#b6a589 !important; }
+.price-card.featured .price-plan,
+.price-card.featured .price-amount,
+.price-card.featured .price-period,
+.price-card.featured .price-features li,
+.price-card.featured .lifetime-note { color:#f3ead3 !important; }
+.price-card.featured .price-features li { border-color:#3a2c1b !important; }
+
+/* generic paragraphs/labels inside darkened sections */
+.dashboard p, .anime p, .culture p, .newsletter p, .features p:not(.feature-desc) { color:#b6a589 !important; }
