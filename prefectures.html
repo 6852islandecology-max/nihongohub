@@ -50,8 +50,8 @@ body{
 /* ── PARTY GUIDE NPCs (Akari狐 / Yukika鶴) ── */
 .guides{display:flex;flex-direction:column;gap:8px;margin:12px 0}
 .npc{display:flex;align-items:flex-start;gap:9px}
-.npc-sprite{flex:0 0 auto;width:40px;height:40px;image-rendering:pixelated;background:var(--hud);
-  border:2px solid var(--ink);border-radius:4px;padding:3px}
+.npc-sprite{flex:0 0 auto;width:56px;height:56px;image-rendering:auto;background:radial-gradient(circle at 50% 38%,#fff,#f3ead7);
+  border:2px solid var(--ink);border-radius:6px;padding:2px}
 .npc-sprite svg{width:100%;height:100%;display:block}
 .npc-bubble{position:relative;background:var(--white);border:2px solid var(--ink);border-radius:6px;
   padding:7px 10px;font-family:var(--dot);font-size:12.5px;line-height:1.45;color:var(--ink)}
@@ -1045,7 +1045,7 @@ renderTitles();
 function npcSVG(name){
   const n=(name==="yukika")?"yukika":"akari";
   const alt=(n==="akari")?"Akari, the fox culture guide":"Yukika, the crane nature guide";
-  return `<img class="npc-img" src="assets/characters/${n}.svg" alt="${alt}" loading="lazy">`;
+  return `<img class="npc-img" src="assets/characters/${n}.png" alt="${alt}" loading="lazy">`;
 }
 function guidesBlock(d,romaji){
   const s=d.stats||{};
