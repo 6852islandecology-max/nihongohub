@@ -1,0 +1,34 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Nebuta Mask</title>
+<g id="nebuta-mask">
+<!-- Gold base frame -->
+<rect x="12" y="8" width="40" height="44" fill="#d4af37"/>
+<!-- Blue accent border (rarity color) -->
+<rect x="12" y="8" width="40" height="4" fill="#4d8fbf"/>
+<rect x="12" y="8" width="4" height="44" fill="#4d8fbf"/>
+<rect x="48" y="8" width="4" height="44" fill="#4d8fbf"/>
+<rect x="12" y="48" width="40" height="4" fill="#4d8fbf"/>
+<!-- Left eye white -->
+<rect x="16" y="16" width="8" height="8" fill="#ffffff"/>
+<!-- Right eye white -->
+<rect x="40" y="16" width="8" height="8" fill="#ffffff"/>
+<!-- Left eye pupil -->
+<rect x="18" y="18" width="4" height="4" fill="#000000"/>
+<!-- Right eye pupil -->
+<rect x="42" y="18" width="4" height="4" fill="#000000"/>
+<!-- Red nose section -->
+<rect x="28" y="24" width="8" height="4" fill="#d32f2f"/>
+<!-- Red cheeks left -->
+<rect x="20" y="28" width="4" height="4" fill="#e53935"/>
+<!-- Red cheeks right -->
+<rect x="40" y="28" width="4" height="4" fill="#e53935"/>
+<!-- Mouth - dark curve -->
+<rect x="24" y="36" width="16" height="4" fill="#1a1a1a"/>
+<!-- Mouth highlight -->
+<rect x="26" y="40" width="12" height="2" fill="#8b4513"/>
+<!-- Gold ornamental detail upper left -->
+<rect x="16" y="12" width="4" height="4" fill="#ffd700"/>
+<!-- Gold ornamental detail upper right -->
+<rect x="44" y="12" width="4" height="4" fill="#ffd700"/>
+</g>
+</svg>

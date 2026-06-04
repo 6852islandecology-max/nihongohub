@@ -1,0 +1,729 @@
+{
+  "hokkaido": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Nieve en polvo, onsen, mariscos y naturaleza abierta."
+  },
+  "aomori": {
+    "lede": "La región productora de manzanas de Japón en la punta norte de Honshu, famosa por el espectacular festival de verano Nebuta Matsuri.",
+    "intro": "Aomori se encuentra donde Honshu se encuentra con el mar hacia Hokkaido. Es conocida por sus manzanas crujientes, mariscos frescos y las ruinas de la era Jōmon de Sannai-Maruyama, además de tener algunas de las nevadas más profundas del país.",
+    "see": [
+      "Nebuta Matsuri — carrozas gigantes iluminadas cada agosto",
+      "Hirosaki Castle y sus famosos cerezos en flor",
+      "Oirase Gorge y Lake Towada",
+      "Sannai-Maruyama — un sitio prehistórico importante (UNESCO)"
+    ],
+    "eat": "Prueba las manzanas, vieiras y atún azul de Ōma.",
+    "getting": "Aproximadamente 3 horas desde Tokio en el Tōhoku Shinkansen hacia Shin-Aomori.",
+    "when": "Principios de agosto para Nebuta Matsuri; finales de abril a mayo para los cerezos en flor de Hirosaki.",
+    "word_meaning": "las carrozas gigantes iluminadas del festival",
+    "tip": "Reserva el alojamiento con meses de anticipación si visitas durante Nebuta (2–7 de agosto).",
+    "blurb": ""
+  },
+  "iwate": {
+    "lede": "Una vasta y accidentada prefectura de templos, costa y tradiciones de soba fría.",
+    "intro": "Iwate es la segunda prefectura más grande por área y una de las menos concurridas. Su punto destacado es Hiraizumi, un sitio Patrimonio de la Humanidad de la UNESCO con templos budistas de Tierra Pura y jardines.",
+    "see": [
+      "Los templos Chūson-ji y Mōtsū-ji en Hiraizumi (UNESCO)",
+      "Los desfiladeros Geibikei y Genbikei",
+      "La dramática costa de Sanriku",
+      "Las calles históricas de Morioka"
+    ],
+    "eat": "Morioka es famosa por tres tipos de fideos: wanko-soba, reimen y jajamen.",
+    "getting": "Morioka está a aproximadamente 2h10m de Tokyo en el Tōhoku Shinkansen.",
+    "when": "Primavera a otoño para senderismo y la costa; verano para el desafío del wanko-soba.",
+    "word_meaning": "soba de bocados todo lo que puedas comer",
+    "tip": "En los restaurantes de wanko-soba, coloca la tapa en tu plato para señalar que estás satisfecho — de lo contrario, las porciones siguen llegando.",
+    "blurb": ""
+  },
+  "miyagi": {
+    "lede": "Hogar de la animada Sendai y una de las 'tres grandes vistas' de Japón en la Bahía de Matsushima.",
+    "intro": "Miyagi se centra en Sendai, la ciudad más grande de Tōhoku, fundada por el legendario señor feudal Date Masamune. Las islas punteadas de pinos de la Bahía de Matsushima son un lugar escénico clásico.",
+    "see": [
+      "Bahía de Matsushima — islotes cubiertos de pinos",
+      "Mausoleo Zuihōden de Sendai",
+      "Ruinas del Castillo Aoba",
+      "Aguas termales Naruko Onsen"
+    ],
+    "eat": "Sendai es famosa por la lengua de res a la parrilla (gyūtan) y zunda (pasta dulce de edamame).",
+    "getting": "Sendai está a ~1h30m de Tokyo en el Tōhoku Shinkansen — la ciudad de Tōhoku más fácil de alcanzar.",
+    "when": "Todo el año; Matsushima es encantadora en otoño, y el festival Tanabata de Sendai es en agosto.",
+    "word_meaning": "lengua de res a la parrilla, una especialidad de Sendai",
+    "tip": "Haz un corto crucero alrededor de la Bahía de Matsushima para ver las islas desde el agua.",
+    "blurb": ""
+  },
+  "akita": {
+    "lede": "Nieve profunda, tierra de arroz y sake, y la feroz tradición folclórica de Namahage.",
+    "intro": "Akita es rural, nevado y orgulloso de sus tradiciones — desde el festival de linternas de poste Kantō hasta los visitantes ogro Namahage de la Península de Oga. También es famoso por su hermoso arroz y el perro Akita.",
+    "see": [
+      "Kakunodate — distrito samurái preservado",
+      "Lago Tazawa, el lago más profundo de Japón",
+      "Aguas termales Nyūtō Onsen",
+      "Península de Oga y Namahage"
+    ],
+    "eat": "Prueba kiritanpo (brochetas de arroz aplastado) en caldo caliente y sake local.",
+    "getting": "Akita está a aproximadamente 3 horas y 40 minutos de Tokio en el Akita Shinkansen.",
+    "when": "Primavera para las flores de cerezo llorón de Kakunodate; invierno para nieve y onsen.",
+    "word_meaning": "los visitantes ogro de Año Nuevo de la Península de Oga",
+    "tip": "El perro Akita (Akita-inu) proviene de aquí — encontrarás lugares amigables para conocerlos.",
+    "blurb": ""
+  },
+  "gunma": {
+    "lede": "Famosos balnearios termales y un patrimonio de molinos de seda de la UNESCO.",
+    "intro": "Gunma, sin acceso al mar, es tierra de onsen. Kusatsu es uno de los pueblos de aguas termales más célebres de Japón, y el Molino de Seda de Tomioka marca el comienzo de la industria moderna de Japón.",
+    "see": [
+      "Kusatsu Onsen y su campo de aguas termales yubatake",
+      "Los escalones de piedra de Ikaho Onsen",
+      "Molino de Seda de Tomioka (UNESCO)",
+      "Monte Haruna y Lago Haruna"
+    ],
+    "eat": "Prueba el udon de Mizusawa y el konnyaku local.",
+    "getting": "Takasaki está a ~50 minutos de Tokio en shinkansen; pueblos de onsen en autobús o línea local.",
+    "when": "Cualquier estación del año — los onsen son especialmente bienvenidos en los meses fríos.",
+    "word_meaning": "agua termal — Gunma tiene las más famosas de Japón",
+    "tip": "Presencia la presentación de 'yumomi' (revolvimiento de aguas termales) en Kusatsu.",
+    "blurb": ""
+  },
+  "saitama": {
+    "lede": "Un pequeño Edo en Kawagoe, más bonsái y suburbios bulliciosos.",
+    "intro": "Saitama rodea el norte de Tokyo. Kawagoe ('Pequeño Edo') preserva calles de mercaderes con muros de arcilla y una torre de campanas de madera, una excursión fácil y encantadora de medio día.",
+    "see": [
+      "La calle de almacenes Kurazukuri de Kawagoe y la Torre de Campanas",
+      "El parque Hitsujiyama con shibazakura (musgo rosa)",
+      "Omiya Bonsai Village",
+      "Railway Museum en Omiya"
+    ],
+    "eat": "Kawagoe es conocida por sus dulces de batata.",
+    "getting": "Kawagoe está a aproximadamente 30–45 minutos del centro de Tokyo en tren (Tōbu/Seibu/JR).",
+    "when": "Abril para shibazakura; todo el año para las calles antiguas de Kawagoe.",
+    "word_meaning": "'Pequeño Edo' — el apodo de Kawagoe",
+    "tip": "Kawagoe es una excursión perfecta de medio día cuando Tokyo se siente demasiado ajetreo.",
+    "blurb": ""
+  },
+  "chiba": {
+    "lede": "El vecino costero de Tokyo — la puerta del aeropuerto, playas y un templo famoso.",
+    "intro": "Chiba es donde la mayoría de los visitantes llegan por primera vez (Aeropuerto de Narita) y es el hogar del Tokyo Disney Resort (en realidad ubicado en Urayasu). Más allá hay playas para surfear, la Península de Bōsō y el magnífico templo Narita-san.",
+    "see": [
+      "Templo Narita-san Shinshō-ji",
+      "Tokyo Disney Resort (Urayasu)",
+      "Nokogiriyama y su Buda en el acantilado",
+      "Playas de Kujūkuri para surfear"
+    ],
+    "eat": "Los mariscos frescos y los cacahuetes son especialidades locales.",
+    "getting": "El Aeropuerto de Narita está en Chiba; el centro de Chiba está a aproximadamente 40 minutos de Tokyo en tren.",
+    "when": "Verano para playas y surfing; primavera para visitar templos.",
+    "word_meaning": "el templo principal cerca del Aeropuerto de Narita",
+    "tip": "¿Una larga escala en Narita? El templo Narita-san es un viaje rápido y que vale la pena desde el aeropuerto.",
+    "blurb": ""
+  },
+  "tokyo": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Neón, templos y los mejores trenes del mundo."
+  },
+  "kanagawa": {
+    "lede": "El Gran Buda de Kamakura, la ciudad portuaria de Yokohama y las aguas termales de Hakone.",
+    "intro": "Justo al sur de Tokyo, Kanagawa concentra el pueblo-templo frente al mar de Kamakura, la cosmopolita Yokohama con su gran Chinatown, y el resort de aguas termales y vistas de Hakone con el Monte Fuji en días despejados.",
+    "see": [
+      "El Gran Buda (Daibutsu) de Kamakura",
+      "Aguas termales de Hakone y Lago Ashi",
+      "Yokohama Minato Mirai y Chinatown",
+      "Isla Enoshima"
+    ],
+    "eat": "Chinatown de Yokohama y shirasu (peces pequeños) cerca de Enoshima.",
+    "getting": "Yokohama ~30 min, Kamakura ~1h, Hakone ~1h25m desde Tokyo en tren.",
+    "when": "Los días despejados de invierno ofrecen las mejores vistas del Monte Fuji desde Hakone.",
+    "word_meaning": "Gran Buda — la icónica estatua de bronce de Kamakura",
+    "tip": "El Hakone Free Pass cubre el circuito de trenes, teleféricos y barco pirata alrededor del Lago Ashi.",
+    "blurb": ""
+  },
+  "gifu": {
+    "lede": "Pueblos de montaña con techos de paja y el antiguo pueblo ribereño de Takayama.",
+    "intro": "Gifu se adentra profundamente en los Alpes. Las casas de granja con techos de paja de Shirakawa-gō son un ícono de la UNESCO, y Takayama preserva un hermoso distrito comercial intacto.",
+    "see": [
+      "Pueblo gasshō-zukuri de Shirakawa-gō (UNESCO)",
+      "Casco antiguo de Takayama",
+      "Gujō Hachiman y su danza estival",
+      "Castillo de Gifu y pesca con cormoranes"
+    ],
+    "eat": "La carne de Hida es una especialidad local muy apreciada.",
+    "getting": "Takayama está a aproximadamente 2 horas 20 minutos de Nagoya en tren exprés limitado; Shirakawa-gō se alcanza en autobús.",
+    "when": "Invierno para techos de paja cubiertos de nieve (y noches de iluminación); primavera/otoño para los festivales de Takayama.",
+    "word_meaning": "el estilo característico de casa de granja con techo de paja muy inclinado de Shirakawa-gō",
+    "tip": "Las iluminaciones nocturnas invernales de Shirakawa-gō son limitadas y requieren reserva anticipada.",
+    "blurb": ""
+  },
+  "shizuoka": {
+    "lede": "Monte Fuji, campos de té verde y la Península de Izu en la costa.",
+    "intro": "Shizuoka se extiende a lo largo del Pacífico bajo el Monte Fuji. Produce la mayor parte del té verde de Japón, y la Península de Izu está salpicada de pueblos con aguas termales y playas.",
+    "see": [
+      "Vistas del Monte Fuji y la 5ª Estación",
+      "Bosque de pinos Miho-no-Matsubara",
+      "Pueblos con onsen en la Península de Izu",
+      "Castillo Sunpu en Shizuoka City"
+    ],
+    "eat": "Té verde en todo, más mariscos y fideos Fuji-noodles.",
+    "getting": "Shizuoka City está a ~1 hora de Tokio en el Tōkaidō Shinkansen.",
+    "when": "Primavera e inicio del verano para los campos de té; días invernales despejados para el Fuji.",
+    "word_meaning": "té verde — Shizuoka es el productor más grande de Japón",
+    "tip": "La Península de Izu es un destino relajante con onsen que se combina fácilmente con una vista del Fuji.",
+    "blurb": ""
+  },
+  "aichi": {
+    "lede": "El castillo e industria de Nagoya, además de historia de la era samurái.",
+    "intro": "Aichi se centra en Nagoya, la cuarta ciudad más grande de Japón y una potencia industrial (hogar de Toyota). Tiene un castillo reconstruido, un santuario importante y una rica cultura culinaria local.",
+    "see": [
+      "Nagoya Castle",
+      "Atsuta Shrine",
+      "Toyota Commemorative Museum",
+      "Inuyama Castle"
+    ],
+    "eat": "Nagoya 'meshi': miso-katsu, hitsumabushi de anguila y alitas tebasaki.",
+    "getting": "Nagoya está a aproximadamente 1 hora 40 minutos de Tokyo y unos 50 minutos de Kyoto en el Tōkaidō Shinkansen.",
+    "when": "Todo el año; es un centro conveniente entre Tokyo y Kyoto.",
+    "word_meaning": "chuleta de cerdo con salsa de miso rojo rico, un clásico de Nagoya",
+    "tip": "Nagoya es una buena base para excursiones de un día a Takayama en Gifu o a Ise en Mie.",
+    "blurb": ""
+  },
+  "mie": {
+    "lede": "El santuario más sagrado de Japón en Ise y la tradición de buceo de perlas de las Ama.",
+    "intro": "Mie es hogar de Ise Jingū, el santuario Shintō más sagrado, ubicado en un bosque antiguo. La costa es conocida por sus perlas y las mujeres Ama que practican el buceo libre.",
+    "see": [
+      "Ise Jingū, gran santuario",
+      "Meoto Iwa (las Rocas Nupciales)",
+      "Islas perleras de Toba",
+      "Sitios ninja de Iga-Ueno"
+    ],
+    "eat": "Mariscos de Ise-Shima y la prestigiosa carne de res Matsusaka.",
+    "getting": "Ise está a aproximadamente 1 hora 20 minutos de Nagoya en tren expreso limitado; aproximadamente 2 horas desde Osaka.",
+    "when": "Cualquier época del año; el santuario es especialmente atmosférico al amanecer.",
+    "word_meaning": "El santuario Shintō más sagrado de Japón",
+    "tip": "Visite el Santuario Exterior (Gekū) antes del Santuario Interior (Naikū) — el orden tradicional.",
+    "blurb": ""
+  },
+  "shiga": {
+    "lede": "Envuelta alrededor del lago más grande de Japón, con un castillo impresionante.",
+    "intro": "Shiga se define por el Lago Biwa, el lago de agua dulce más grande del país. Hikone Castle es uno de solo un puñado de castillos originales que aún se mantienen en pie.",
+    "see": [
+      "Lake Biwa",
+      "Hikone Castle (torre principal original)",
+      "Enryaku-ji temple en Mount Hiei (UNESCO)",
+      "Miho Museum"
+    ],
+    "eat": "Carnes de Ōmi beef y funazushi (un antiguo sushi fermentado).",
+    "getting": "Ōtsu/Hikone están a aproximadamente 10–50 minutos de Kyoto en tren.",
+    "when": "Cualquier temporada; es una adición fácil a un viaje a Kyoto.",
+    "word_meaning": "Lake Biwa, el lago más grande de Japón",
+    "tip": "Hikone Castle es una torre principal genuinamente original — más rara que la mayoría de 'castillos' que verás en Japón.",
+    "blurb": ""
+  },
+  "shimane": {
+    "lede": "Hogar del Izumo Taisha, uno de los santuarios más antiguos y grandiosos de Japón.",
+    "intro": "Shimane está impregnada de mitología. Izumo Taisha es uno de los santuarios más importantes del país, y la ciudad minera de plata Iwami Ginzan es Patrimonio de la UNESCO.",
+    "see": [
+      "Izumo Taisha, gran santuario",
+      "Matsue Castle (torre original)",
+      "Iwami Ginzan, mina de plata (UNESCO)",
+      "Jardín del Adachi Museum of Art"
+    ],
+    "eat": "Izumo soba y sopa de miso con almejas Shijimi.",
+    "getting": "Se llega a Izumo/Matsue en avión desde Tokyo o en tren expreso limitado desde Okayama.",
+    "when": "Cualquier estación; octubre es el mítico 'mes de los dioses' en Izumo.",
+    "word_meaning": "hacer parejas / forjar lazos — la especialidad de Izumo Taisha",
+    "tip": "En Izumo Taisha, los visitantes aplauden cuatro veces (no las dos usuales) — dos por sí mismos, dos por una pareja.",
+    "blurb": ""
+  },
+  "okayama": {
+    "lede": "Un hermoso jardín, un 'castillo de cuervos' y la pintoresca ciudad de canales de Kurashiki.",
+    "intro": "La soleada Okayama alberga Kōraku-en, uno de los tres grandes jardines de Japón, y el pintoresco distrito de canales Bikan de Kurashiki. Está vinculada a la leyenda del Momotarō, el niño melocotón.",
+    "see": [
+      "Jardín Kōraku-en y Castillo de Okayama",
+      "Barrio histórico Kurashiki Bikan",
+      "Vistas de Washūzan de los puentes de Seto",
+      "Santuario Kibitsu"
+    ],
+    "eat": "Duraznos, uvas moscateles y barazushi.",
+    "getting": "Okayama está a aproximadamente 3h 15m de Tokio y 45 minutos de Osaka en shinkansen.",
+    "when": "Verano para duraznos y uvas moscateles; cualquier estación para los jardines.",
+    "word_meaning": "la leyenda del Niño Melocotón vinculada a Okayama",
+    "tip": "Okayama es la puerta de entrada a las islas de arte de Shikoku a través del puente Seto-Ōhashi.",
+    "blurb": ""
+  },
+  "hiroshima": {
+    "lede": "Un conmovedor memorial de paz y el torii flotante de Miyajima.",
+    "intro": "Hiroshima combina una historia profunda con una gran belleza. El Parque Conmemorativo de la Paz conmemora 1945, mientras que el Santuario Itsukushima de Miyajima, cerca de allí, parece flotar en pleamar.",
+    "see": [
+      "Parque Conmemorativo de la Paz y la Cúpula de la Bomba Atómica (UNESCO)",
+      "Santuario Itsukushima en Miyajima (UNESCO)",
+      "Castillo de Hiroshima",
+      "Jardín Shukkei-en"
+    ],
+    "eat": "Okonomiyaki al estilo de Hiroshima (en capas) y ostras.",
+    "getting": "Hiroshima está a ~4 horas de Tokyo y ~1 hora 25 minutos de Osaka en shinkansen.",
+    "when": "En cualquier estación; consulta la tabla de mareas para ver el torii de Miyajima 'flotando'.",
+    "word_meaning": "paz — el mensaje del memorial de Hiroshima",
+    "tip": "Sincroniza tu visita a Miyajima con la pleamar para ver el torii flotante, y con la bajamar para caminar hasta él.",
+    "blurb": ""
+  },
+  "yamaguchi": {
+    "lede": "Un espectacular puente de cinco arcos y un santuario de un rojo bermellón vívido.",
+    "intro": "En la punta occidental de Honshu, Yamaguchi ofrece el elegante puente Kintai-kyō, el santuario de zorros junto al mar de Motonosumi, y las cuevas de piedra caliza de Akiyoshidai.",
+    "see": [
+      "Puente de arcos de madera Kintai-kyō",
+      "Las puertas rojas del Santuario Motonosumi Inari",
+      "Cueva y meseta de Akiyoshidō",
+      "Puente Tsunoshima"
+    ],
+    "eat": "El fugu (pez globo) es la delicia local en Shimonoseki.",
+    "getting": "Shin-Yamaguchi está en la línea Sanyō Shinkansen; Iwakuni cerca de Hiroshima.",
+    "when": "Primavera u otoño para el puente Kintai-kyō con flores de cerezo o follaje.",
+    "word_meaning": "pez globo — la famosa delicia (y autorizada) de Shimonoseki",
+    "tip": "El fugu es preparado únicamente por chefs autorizados — cómelo en un restaurante de Shimonoseki de buena reputación.",
+    "blurb": ""
+  },
+  "tokushima": {
+    "lede": "Remolinos rugientes y el electrizante baile Awa Odori.",
+    "intro": "Tokushima es famoso por los remolinos de mareas del Estrecho de Naruto y por Awa Odori, el festival de danza estival más exuberante de Japón. El remoto Valle de Iya cuenta con puentes de enredaderas.",
+    "see": [
+      "Remolinos de Naruto",
+      "Awa Odori (festival de danza en agosto)",
+      "Puentes de enredaderas del Valle de Iya",
+      "Monte Tsurugi"
+    ],
+    "eat": "Cítricos sudachi y ramen de Tokushima.",
+    "getting": "Se llega a Tokushima en autobús desde Osaka/Kobe cruzando el puente Akashi-Kaikyō (~2h30m).",
+    "when": "12 al 15 de agosto para Awa Odori; las mareas vivas crean los remolinos más grandes.",
+    "word_meaning": "Festival de danza masivo de mediados de agosto en Tokushima",
+    "tip": "Los remolinos son más fuertes alrededor de las mareas vivas y muertas de primavera y otoño — consulta el horario.",
+    "blurb": ""
+  },
+  "ehime": {
+    "lede": "Una de las aguas termales más antiguas de Japón y un castillo en la cima de una colina en Matsuyama.",
+    "intro": "El Dōgo Onsen de Ehime se encuentra entre los balnearios más antiguos de Japón. Matsuyama cuenta con un magnífico castillo original, y la ruta ciclista Shimanami Kaidō es de clase mundial.",
+    "see": [
+      "Dōgo Onsen Honkan",
+      "Matsuyama Castle",
+      "Ruta ciclista Shimanami Kaidō",
+      "Pueblo de comerciantes de cera de Uchiko"
+    ],
+    "eat": "Cítricos (mikan) y taimeshi (arroz con pez espada).",
+    "getting": "Se llega a Matsuyama en avión desde Tokyo u Osaka, o en tren y autobús a través de Shikoku.",
+    "when": "Primavera a otoño para recorrer en bicicleta el Shimanami Kaidō; cualquier estación para las aguas termales.",
+    "word_meaning": "uno de los balnearios de aguas termales más antiguos de Japón",
+    "tip": "El Shimanami Kaidō conecta Ehime con Hiroshima mediante una cadena de puentes —alquila una bicicleta solo para el trayecto de ida.",
+    "blurb": ""
+  },
+  "kumamoto": {
+    "lede": "Un castillo imponente y una de las calderas volcánicas más grandes del mundo en Aso.",
+    "intro": "El majestuoso castillo de Kumamoto es un símbolo de Kyūshū, y la vasta caldera del Monte Aso se encuentra entre las cuencas volcánicas activas más grandes de la tierra.",
+    "see": [
+      "Kumamoto Castle",
+      "Mount Aso caldera",
+      "Suizenji Jōjuen garden",
+      "Kurokawa Onsen"
+    ],
+    "eat": "Basashi (sashimi de caballo) y ramen de Kumamoto.",
+    "getting": "Kumamoto está a aproximadamente 40 minutos de Fukuoka (Hakata) en el Kyūshū Shinkansen.",
+    "when": "Primavera a otoño para Aso (verifica los avisos de actividad volcánica antes de ir).",
+    "word_meaning": "volcán — Mount Aso es el gigante de la región",
+    "tip": "El acceso a Mount Aso puede cerrarse sin previo aviso por gas volcánico — verifica el estado del día primero.",
+    "blurb": ""
+  },
+  "oita": {
+    "lede": "La capital de aguas termales de Japón — el humeante Beppu y el elegante Yufuin.",
+    "intro": "Ōita produce más agua de aguas termales que cualquier otro lugar en Japón. Los 'infiernos' de Beppu son manantiales de colores vívidos, mientras que Yufuin es un elegante retiro onsen bajo una montaña de dos picos.",
+    "see": [
+      "Los manantiales termales 'Infiernos' (jigoku) de Beppu",
+      "Pueblo onsen Yufuin",
+      "Budas de piedra de Usuki",
+      "Monte Yufu"
+    ],
+    "eat": "Toriten (tempura de pollo) y carne de Bungo.",
+    "getting": "Beppu/Ōita están a ~2 horas de Fukuoka (Hakata) en tren limitado expreso.",
+    "when": "Cualquier estación — los onsen son maravillosos en los meses más frescos.",
+    "word_meaning": "los 'infiernos' — manantiales termales de colores vívidos de Beppu (para observar)",
+    "tip": "Los 'infiernos' de Beppu son para observar, no para bañarse — hay onsen separados para sumergirse.",
+    "blurb": ""
+  },
+  "miyazaki": {
+    "lede": "Costa del Pacífico soleada, surf y santuarios envueltos en mito.",
+    "intro": "Miyazaki en la costa sureste de Kyūshū tiene un clima templado y soleado, paseos bordeados de palmeras y vínculos profundos con los mitos de la creación de Japón en Takachiho Gorge.",
+    "see": [
+      "Takachiho Gorge",
+      "Santuario Udo en una cueva junto al mar",
+      "Isla de Aoshima y santuario",
+      "Costa de Nichinan"
+    ],
+    "eat": "Pollo nanban y mango de Miyazaki.",
+    "getting": "Se llega a Miyazaki en avión desde las principales ciudades, o en tren expreso limitado dentro de Kyūshū.",
+    "when": "Verano para surf y mango; cualquier estación para la costa templada.",
+    "word_meaning": "una garganta y sitio mitológico en las leyendas de la creación de Japón",
+    "tip": "Rema en bote hacia Takachiho Gorge para la vista clásica de la cascada de cerca.",
+    "blurb": ""
+  },
+  "okinawa": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Islas subtropicales y cultura Ryukyu distintiva."
+  },
+  "yamagata": {
+    "lede": "Templos de montaña, cerezas y monstruos de nieve en el Monte Zaō.",
+    "intro": "Yamagata combina montañas espirituales y valles frutales. El templo Yamadera, construido en un acantilado, inspiró al poeta Bashō, e invierno trae los famosos 'monstruos de nieve' cubiertos de hielo del Zaō.",
+    "see": [
+      "Yamadera (Risshaku-ji), templo en acantilado",
+      "Zaō Onsen y sus 'monstruos de nieve' invernales",
+      "Las montañas sagradas Dewa Sanzan",
+      "Las calles nostálgicas de Ginzan Onsen"
+    ],
+    "eat": "Yamagata es la capital de cerezas de Japón; también prueba imoni (estofado caliente de taro).",
+    "getting": "Yamagata está a aproximadamente 2h30m de Tokio en el Yamagata Shinkansen.",
+    "when": "Junio–julio para cerezas; febrero para los monstruos de nieve del Zaō iluminados por la noche.",
+    "word_meaning": "cerezas — Yamagata cultiva la mayoría de las cerezas de Japón",
+    "tip": "Sube los 1,000 escalones a Yamadera temprano para evitar las multitudes y el calor.",
+    "blurb": ""
+  },
+  "fukushima": {
+    "lede": "Historia de samurais, aguas termales y huertos de frutas en una prefectura grande y pintoresca.",
+    "intro": "Fukushima ofrece el bien conservado pueblo samurái de Aizu-Wakamatsu, pueblos posada con techos de paja, y excelentes duraznos y sake. La región de Aizu es especialmente rica en historia.",
+    "see": [
+      "Tsuruga Castle en Aizu-Wakamatsu",
+      "Ouchi-juku — pueblo posada con techos de paja",
+      "Goshiki-numa — lagos volcánicos",
+      "Spa Resort Hawaiians"
+    ],
+    "eat": "El ramen de Kitakata y el sake local son las estrellas regionales.",
+    "getting": "Kōriyama/Fukushima están aproximadamente 1h20m–1h40m de Tōkyō en el Tōhoku Shinkansen.",
+    "when": "Verano para los duraznos; otoño para el follaje alrededor de los lagos de Aizu.",
+    "word_meaning": "la histórica región samurái del oeste de Fukushima",
+    "tip": "En Ouchi-juku, prueba la negi-soba — se come usando un puerro entero como 'palillos'.",
+    "blurb": ""
+  },
+  "ibaraki": {
+    "lede": "Parques de flores estacionales, un Buda gigante y natto al norte de Tokyo.",
+    "intro": "Ibaraki es una escapada fácil desde la capital. El Parque Hitachi Seaside estalla de nemophila azul en primavera y kochia roja en otoño, y Ushiku alberga una de las estatuas de bronce más altas del mundo.",
+    "see": [
+      "Campos de flores Hitachi Seaside Park",
+      "Ushiku Daibutsu (Buda gigante)",
+      "Kairaku-en — uno de los tres grandes jardines de Japón",
+      "Fukuroda Falls"
+    ],
+    "eat": "Mito es la cuna del natto (habas de soja fermentadas); también anglerfish fresco (ankō).",
+    "getting": "Mito está a ~1h15m de Tokyo en tren de larga distancia; Hitachi Seaside Park se alcanza en autobús desde Katsuta.",
+    "when": "Finales de abril a mayo para la nemophila azul; octubre para las colinas de kochia carmesí.",
+    "word_meaning": "habas de soja fermentadas y pegajosas — Mito es famosa por ellas",
+    "tip": "Planifica tu viaje a Hitachi Seaside Park con el pico de nemophila o kochia — consulta el calendario de floración.",
+    "blurb": ""
+  },
+  "tochigi": {
+    "lede": "Hogar de los santuarios ornamentados y cascadas de Nikkō.",
+    "intro": "La joya de la corona de Tochigi es Nikkō, donde los suntuosos santuarios de la era Edo se encuentran entre bosques de cedros, lagos y cascadas. Es uno de los viajes de un día más populares desde Tokyo.",
+    "see": [
+      "Santuario Nikkō Tōshō-gū (UNESCO)",
+      "Cascadas Kegon Falls y Lago Chūzenji",
+      "Parque temático Edo Wonderland",
+      "Flores de glicina del Parque de Flores Ashikaga"
+    ],
+    "eat": "Utsunomiya es la capital de los gyōza (dumplings) de Japón.",
+    "getting": "Nikkō está a ~2h de Tokyo (línea Tōbu desde Asakusa, o shinkansen + transbordo).",
+    "when": "Finales de abril a mayo para las glicinas; octubre a noviembre para el espectacular follaje otoñal de Nikkō.",
+    "word_meaning": "dumplings salteados a la sartén — especialidad de Utsunomiya",
+    "tip": "Los colores otoñales de Nikkō atraen grandes multitudes — comienza temprano y considera un día entre semana.",
+    "blurb": ""
+  },
+  "niigata": {
+    "lede": "Arroz, sake y nieve en la costa del Mar de Japón.",
+    "intro": "Niigata produce algunos de los mejores arroces y sake de Japón, tiene nieve de clase mundial para esquiar y se enfrenta a la Isla de Sado al otro lado del mar. Está a solo un corto viaje en shinkansen desde Tokio.",
+    "see": [
+      "Isla de Sado y su historia minera de oro",
+      "Campos de arte al aire libre de Echigo-Tsumari",
+      "Estaciones de esquí alrededor de Yuzawa",
+      "Destilerías locales de sake"
+    ],
+    "eat": "Arroz Koshihikari, sake y hegi-soba.",
+    "getting": "Niigata está a ~2h, Echigo-Yuzawa a ~1h15m desde Tokio por el Jōetsu Shinkansen.",
+    "when": "Invierno para esquiar; verano durante los años de la trienal de arte de Echigo-Tsumari.",
+    "word_meaning": "sake — Niigata es una de las principales regiones de Japón para producirlo",
+    "tip": "En la Estación Echigo-Yuzawa, el 'ponshukan' te permite probar docenas de sake locales con monedas.",
+    "blurb": ""
+  },
+  "toyama": {
+    "lede": "Imponentes muros de nieve en los Alpes y bahías cristalinas de calamar luciérnaga.",
+    "intro": "Toyama se asoma al mar bajo los Alpes del norte de Japón. La Ruta Alpina Tateyama Kurobe atraviesa corredores de nieve de hasta 20 m de altura en primavera, un viaje inolvidable.",
+    "see": [
+      "Ruta Alpina Tateyama Kurobe y los muros de nieve",
+      "Ferrocarril de la Garganta de Kurobe",
+      "Pueblos gasshō con techos de paja de Gokayama (UNESCO)",
+      "Templo Zuiryū-ji en Takaoka"
+    ],
+    "eat": "Calamar luciérnaga (hotaru-ika) y camarones blancos.",
+    "getting": "Toyama está a aproximadamente 2 horas y 10 minutos de Tokio en el Shinkansen Hokuriku.",
+    "when": "De mediados de abril a junio para los muros de nieve; primavera para la temporada del calamar luciérnaga.",
+    "word_meaning": "el corredor de muros de nieve imponentes en la Ruta Alpina",
+    "tip": "Los muros de nieve de la Ruta Alpina abren a mediados de abril — está cerrada en invierno profundo.",
+    "blurb": ""
+  },
+  "ishikawa": {
+    "lede": "Los jardines y la lámina de oro de Kanazawa, además de la accidentada Península de Noto.",
+    "intro": "Ishikawa se centra en Kanazawa, un refinado pueblo castillo que escapó a los bombardeos de la guerra. Kenroku-en es celebrado como uno de los tres grandes jardines de paisaje de Japón.",
+    "see": [
+      "Jardín Kenroku-en",
+      "Distrito geisha Higashi Chaya",
+      "Castillo de Kanazawa y el Museo del Siglo XXI",
+      "Litoral de la Península de Noto"
+    ],
+    "eat": "Mariscos frescos, helado de lámina de oro y cocina Kaga.",
+    "getting": "Kanazawa está a aproximadamente 2h30m de Tokio en el Hokuriku Shinkansen.",
+    "when": "Cualquier estación; Kenroku-en es mágico en invierno con los soportes de cuerda 'yukitsuri'.",
+    "word_meaning": "lámina de oro — Kanazawa produce la mayoría de la de Japón",
+    "tip": "Prueba el helado suave cubierto con lámina de oro en el distrito Higashi Chaya.",
+    "blurb": ""
+  },
+  "fukui": {
+    "lede": "Dinosaurios, acantilados dramáticos y un gran templo Zen.",
+    "intro": "La tranquila Fukui sorprende a los visitantes con el mejor museo de dinosaurios de Japón, el templo meditativo Eihei-ji y los acantilados erosionados por las olas de Tōjinbō.",
+    "see": [
+      "Museo de Dinosaurios de la Prefectura de Fukui",
+      "Templo Zen Eihei-ji",
+      "Acantilados de Tōjinbō",
+      "Castillo Maruoka"
+    ],
+    "eat": "Cangrejo Echizen en invierno y sauce-katsudon.",
+    "getting": "Fukui es accesible a través del Shinkansen Hokuriku (extendido a Tsuruga en 2024).",
+    "when": "Noviembre–marzo para el cangrejo Echizen; primavera/otoño para templos y acantilados.",
+    "word_meaning": "dinosaurio — Fukui es la capital de los dinosaurios en Japón",
+    "tip": "Eihei-ji ofrece una visión de la vida monástica Zen en funcionamiento — visita con respeto y silencio.",
+    "blurb": ""
+  },
+  "yamanashi": {
+    "lede": "Los lagos del Monte Fuji, viñedos y la región vinícola de Japón.",
+    "intro": "Yamanashi ofrece las vistas clásicas del Monte Fuji desde los Cinco Lagos Fuji, además de la región vinícola más importante de Japón alrededor de Kōfu. Es un escape natural popular desde Tokio.",
+    "see": [
+      "Lago Kawaguchi y vistas del Fuji",
+      "Mirador de la Pagoda Chūreitō",
+      "Viñedos y bodegas de la Cuenca de Kōfu",
+      "Garganta Shōsenkyō"
+    ],
+    "eat": "Hōtō (cazuela de miso con fideos planos) y uvas/vino.",
+    "getting": "El Lago Kawaguchi está a ~2 horas de Tokio en autobús o tren (vía Ōtsuki).",
+    "when": "Mañanas despejadas en otoño/invierno para las vistas más nítidas del Fuji; otoño para las uvas.",
+    "word_meaning": "Monte Fuji — mejor visto desde los lagos de Yamanashi",
+    "tip": "La Pagoda Chūreitō enmarcada con el Fuji y las flores de cerezo es la foto postal clásica.",
+    "blurb": ""
+  },
+  "nagano": {
+    "lede": "Picos alpinos, el gran templo Zenkō-ji y monos de nieve en aguas termales.",
+    "intro": "Nagano fue sede de los Juegos Olímpicos de Invierno de 1998 y es el corazón montañoso de Japón. Visita el antiguo Zenkō-ji, los monos de nieve que se bañan en Jigokudani y los pueblos postas del Valle de Kiso.",
+    "see": [
+      "Templo Zenkō-ji",
+      "Parque de monos de nieve Jigokudani",
+      "Castillo Matsumoto",
+      "Pueblos postas del Valle de Kiso (Tsumago/Magome)"
+    ],
+    "eat": "Soba Shinshu y dumplings oyaki.",
+    "getting": "La ciudad de Nagano está a aproximadamente 1 hora 30 minutos de Tokio en el Hokuriku Shinkansen.",
+    "when": "Invierno para ver los monos de nieve en el vapor; verano para senderismo alpino refrescante.",
+    "word_meaning": "fideos de trigo sarraceno — Shinshu (Nagano) es famosa por ellos",
+    "tip": "Los monos de nieve están a 30 minutos de caminata cuesta arriba desde la parada de autobús — usa calzado apropiado en invierno.",
+    "blurb": ""
+  },
+  "kyoto": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Templos, té, bambú — el corazón cultural."
+  },
+  "osaka": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "La amable capital gastronómica. Come hasta no poder más."
+  },
+  "hyogo": {
+    "lede": "El castillo más hermoso de Japón en Himeji y la ciudad portuaria de Kobe.",
+    "intro": "Hyōgo se extiende desde el Mar de Japón hasta el Mar Interior. El Castillo de Himeji es la fortaleza más bella que se conserva en el país, y la cosmopolita Kobe es famosa en todo el mundo por su carne de res.",
+    "see": [
+      "Himeji Castle (UNESCO)",
+      "Puerto de Kobe y Monte Rokkō",
+      "Arima Onsen",
+      "Pueblo de Kinosaki Onsen"
+    ],
+    "eat": "Carne de res de Kobe y pulpo de Akashi.",
+    "getting": "Kobe está a unos 30 minutos y Himeji a unos 40 minutos de Osaka en tren.",
+    "when": "Cualquier época del año; las flores de cerezo enmarcan hermosamente el Castillo de Himeji a principios de abril.",
+    "word_meaning": "Castillo de Himeji, el castillo de la 'Garza Blanca'",
+    "tip": "El Castillo de Himeji es una excursión de un día fácil desde Osaka o Kyoto en shinkansen.",
+    "blurb": ""
+  },
+  "nara": {
+    "lede": "La primera capital de Japón — un Buda gigante y ciervos en libertad.",
+    "intro": "Nara fue la capital en el siglo VIII y conserva algunos de los templos más antiguos del país. Ciervos salvajes deambulan por su parque central, haciendo reverencias para obtener galletas.",
+    "see": [
+      "Tōdai-ji y su Gran Buda (UNESCO)",
+      "Los ciervos de Nara Park",
+      "Santuario Kasuga Taisha",
+      "Hōryū-ji, entre los edificios de madera más antiguos del mundo"
+    ],
+    "eat": "Kakinoha-zushi (sushi envuelto en hoja de caqui) y mochi.",
+    "getting": "Nara está a aproximadamente 45 minutos en tren tanto de Kyoto como de Osaka.",
+    "when": "Cualquier estación del año; una excursión de un día muy accesible desde Kyoto u Osaka.",
+    "word_meaning": "ciervo — residentes en libertad de Nara Park",
+    "tip": "Las galletas para ciervos (shika-senbei) se venden alrededor del parque; los ciervos harán una reverencia por ellas.",
+    "blurb": ""
+  },
+  "wakayama": {
+    "lede": "Montañas de peregrinación sagrada y aguas termales dramáticas en la costa.",
+    "intro": "Wakayama alberga el corazón espiritual de Kōyasan (Monte Kōya) y las rutas de peregrinación Kumano Kodō, ambos sitios UNESCO, además de una costa sur accidentada.",
+    "see": [
+      "Pueblo templo de Kōyasan y Okunoin",
+      "Senderos de peregrinación Kumano Kodō (UNESCO)",
+      "Cascada Nachi y santuario",
+      "Playa Shirahama y onsen"
+    ],
+    "eat": "Ramen de Wakayama y umeboshi (ciruelas encurtidas).",
+    "getting": "Kōyasan está a aproximadamente 2 horas de Osaka en tren y teleférico.",
+    "when": "Primavera a otoño para hacer senderismo en Kumano Kodō; cualquier estación para la tranquilidad de Kōyasan.",
+    "word_meaning": "Monte Kōya, un pueblo monasterio budista sagrado",
+    "tip": "Alójese durante la noche en un alojamiento de templo de Kōyasan (shukubō) para participar en las oraciones matutinas.",
+    "blurb": ""
+  },
+  "tottori": {
+    "lede": "Las famosas dunas de arena de Japón a orillas del Mar de Japón.",
+    "intro": "Tottori es la prefectura menos poblada, conocida principalmente por las vastas Dunas de Arena de Tottori y un peculiar museo de esculturas de arena. También es la tierra del manga.",
+    "see": [
+      "Tottori Sand Dunes",
+      "The Sand Museum",
+      "Mount Daisen",
+      "Mizuki Shigeru Road (yōkai manga)"
+    ],
+    "eat": "Cangrejo de nieve en invierno.",
+    "getting": "Tottori se alcanza en tren express limitado desde Okayama u Osaka.",
+    "when": "Invierno para el cangrejo de nieve; primavera–otoño para las dunas (en verano la arena se calienta mucho).",
+    "word_meaning": "dunas de arena — el paisaje distintivo de Tottori",
+    "tip": "Puedes pasear en camello o hacer sandboarding en las dunas; ve cerca del atardecer para evitar el calor del mediodía.",
+    "blurb": ""
+  },
+  "kagawa": {
+    "lede": "La prefectura más pequeña de Japón — fideos udon y islas de arte.",
+    "intro": "Kagawa es sinónimo de sanuki udon y de las islas de arte contemporáneo del Mar Interior de Seto, encabezadas por Naoshima.",
+    "see": [
+      "Las islas de arte Naoshima y Teshima",
+      "Ritsurin Garden",
+      "Santuario Kotohira-gū (Konpira)",
+      "Castillo Marugame"
+    ],
+    "eat": "Sanuki udon — fideos masticables, económicos y disponibles en todas partes.",
+    "getting": "Takamatsu está aproximadamente 50 minutos de Okayama en tren cruzando el puente Seto-Ōhashi.",
+    "when": "Primavera/verano/otoño durante los años del festival de arte Setouchi Triennale.",
+    "word_meaning": "fideos gruesos de trigo — Kagawa es el reino del udon",
+    "tip": "Muchos restaurantes de udon en Kagawa son de autoservicio y abren temprano — un desayuno económico y delicioso.",
+    "blurb": ""
+  },
+  "kochi": {
+    "lede": "Un río cristalino, un castillo famoso y el espíritu del reformador Sakamoto Ryōma.",
+    "intro": "Kōchi se asoma al Pacífico en el sur de Shikoku. Tiene uno de los pocos castillos originales de Japón, el pristino río Shimanto, y una orgullosa cultura gastronómica local.",
+    "see": [
+      "Kōchi Castle (torre de homenaje original)",
+      "Shimanto River",
+      "Katsurahama beach",
+      "Cape Ashizuri"
+    ],
+    "eat": "Katsuo no tataki (bonito chamuscado) es el plato insignia.",
+    "getting": "Se llega a Kōchi en avión desde Tokio u Osaka o en tren de larga distancia a través de Shikoku.",
+    "when": "Primavera-otoño para el río Shimanto; agosto para el festival de danza Yosakoi.",
+    "word_meaning": "bonito chamuscado, plato insignia de Kōchi",
+    "tip": "Prueba katsuo no tataki chamuscado sobre paja de arroz para obtener el sabor ahumado más auténtico.",
+    "blurb": ""
+  },
+  "fukuoka": {
+    "lede": "La puerta de entrada a Kyūshū, famosa por su tonkotsu ramen y sus puestos de comida callejera.",
+    "intro": "Fukuoka es la ciudad más grande y amigable de Kyūshū — cerca de Corea, llena de puestos de comida yatai junto al río, y una excelente base para toda la isla.",
+    "see": [
+      "Yatai (puestos de comida callejera) a lo largo del río",
+      "Ōhori Park y las ruinas del Fukuoka Castle",
+      "Santuario Dazaifu Tenmangū",
+      "Complejo Canal City"
+    ],
+    "eat": "Hakata tonkotsu ramen y mentaiko (hueva de bacalao picante).",
+    "getting": "Fukuoka (Hakata) está a aproximadamente 5 horas de Tokyo en shinkansen, o a unos 2 horas en avión.",
+    "when": "Durante todo el año; los puestos yatai están más animados en las noches cálidas.",
+    "word_meaning": "puestos de comida al aire libre — una institución de Fukuoka",
+    "tip": "Come en un yatai junto al río en Nakasu por la noche — señala y ordena; los asientos son limitados.",
+    "blurb": ""
+  },
+  "saga": {
+    "lede": "El corazón de la porcelana japonesa y un vivido festival de globos aerostáticos en otoño.",
+    "intro": "La pequeña Saga es la cuna de la porcelana japonesa — las cerámicas Arita e Imari son mundialmente famosas — y alberga una espectacular fiesta de globos aerostáticos cada otoño.",
+    "see": [
+      "Pueblos de porcelana Arita e Imari",
+      "Sitio prehistórico Yoshinogari",
+      "Saga International Balloon Fiesta",
+      "Santuario Yutoku Inari"
+    ],
+    "eat": "Carne de Saga y calamar fresco en Yobuko.",
+    "getting": "Saga está a unos 40 minutos de Fukuoka (Hakata) en tren de velocidad limitada.",
+    "when": "Finales de octubre a principios de noviembre para el festival de globos.",
+    "word_meaning": "Porcelana Arita — entre las cerámicas más famosas de Japón",
+    "tip": "Combina Saga con Fukuoka — están cerca, y Saga es mucho menos concurrida.",
+    "blurb": ""
+  },
+  "nagasaki": {
+    "lede": "Una ciudad portuaria de historia transcultural, vistas desde las laderas y un parque de la paz.",
+    "intro": "Nagasaki fue la ventana de Japón al mundo durante su aislamiento, dejando un legado holandés, chino y cristiano. También conmemora 1945 con su Parque de la Paz.",
+    "see": [
+      "Glover Garden y vistas del puerto",
+      "Nagasaki Peace Park",
+      "Dejima, antiguo puesto comercial holandés",
+      "Gunkanjima (Isla Hashima)"
+    ],
+    "eat": "Champon y fideos sara-udon; bizcocho castella.",
+    "getting": "Nagasaki está a ~1h30m de Fukuoka por el Nishi-Kyūshū Shinkansen + transbordo.",
+    "when": "Cualquier época del año; la vista nocturna desde Mount Inasa es famosa durante todo el año.",
+    "word_meaning": "Plato contundente de fideos mixtos de Nagasaki",
+    "tip": "La vista nocturna de Mount Inasa está clasificada entre las tres mejores de Japón — sube en teleférico después del anochecer.",
+    "blurb": ""
+  },
+  "kagoshima": {
+    "lede": "Un volcán activo al otro lado de la bahía y una puerta de entrada a islas de bosques antiguos.",
+    "intro": "Kagoshima se sitúa bajo el humeante volcán Sakurajima, a menudo llamado la 'Nápoles del Este'. Es el punto de partida para la isla de bosque de cedros Yakushima.",
+    "see": [
+      "Volcán Sakurajima",
+      "Jardín Sengan-en",
+      "Bosque de cedros antiguos de Yakushima (UNESCO)",
+      "Baños de arena de Ibusuki"
+    ],
+    "eat": "Kurobuta (cerdo negro) y albóndigas de pescado satsuma-age.",
+    "getting": "Kagoshima se encuentra aproximadamente a 1 hora y 40 minutos de Fukuoka en el Kyūshū Shinkansen, o por avión.",
+    "when": "Primavera-otoño para senderismo en Yakushima; cualquier estación para la ciudad y onsen.",
+    "word_meaning": "el volcán activo que se alza sobre la bahía de Kagoshima",
+    "tip": "Prueba los baños de arena de Ibusuki — te entierran en arena volcánica naturalmente caliente.",
+    "blurb": ""
+  }
+}

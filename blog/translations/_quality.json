@@ -1,0 +1,220 @@
+{
+  "generatedAt": "2026-06-04T11:01:46.558Z",
+  "findings": {
+    "zh": {
+      "totalSlugs": 47,
+      "issues": [
+        {
+          "slug": "aomori",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Hokkaido",
+            "Nebuta",
+            "Sannai-Maruyama",
+            "Jōmon"
+          ]
+        },
+        {
+          "slug": "iwate",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "ibaraki",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo"
+          ]
+        },
+        {
+          "slug": "tochigi",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo",
+            "Edo"
+          ]
+        },
+        {
+          "slug": "gunma",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Onsen",
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "saitama",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo",
+            "Edo"
+          ]
+        },
+        {
+          "slug": "kanagawa",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo",
+            "Onsen"
+          ]
+        },
+        {
+          "slug": "niigata",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo",
+            "Shinkansen"
+          ]
+        },
+        {
+          "slug": "yamanashi",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo"
+          ]
+        },
+        {
+          "slug": "gifu",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "nara",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Nara"
+          ]
+        },
+        {
+          "slug": "wakayama",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "tottori",
+          "issue": "field-too-short:lede",
+          "len": 11
+        },
+        {
+          "slug": "shimane",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "hiroshima",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Hiroshima"
+          ]
+        },
+        {
+          "slug": "ehime",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Onsen"
+          ]
+        },
+        {
+          "slug": "oita",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Onsen"
+          ]
+        }
+      ]
+    },
+    "es": {
+      "totalSlugs": 47,
+      "issues": [
+        {
+          "slug": "kanagawa",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Onsen"
+          ]
+        },
+        {
+          "slug": "niigata",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo"
+          ]
+        },
+        {
+          "slug": "yamanashi",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo"
+          ]
+        }
+      ]
+    },
+    "th": {
+      "totalSlugs": 47,
+      "issues": [
+        {
+          "slug": "iwate",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "ibaraki",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Tokyo"
+          ]
+        },
+        {
+          "slug": "tochigi",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Edo"
+          ]
+        },
+        {
+          "slug": "gunma",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "Onsen",
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "gifu",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "wakayama",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        },
+        {
+          "slug": "shimane",
+          "issue": "proper-noun-missing",
+          "dropped": [
+            "UNESCO"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "totalSlugs": 47,
+      "issues": []
+    }
+  }
+}

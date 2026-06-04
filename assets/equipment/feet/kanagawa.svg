@@ -1,0 +1,38 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Enoshima Surf Sandals</title>
+  
+  <!-- Left Sandal -->
+  <g id="left-sandal">
+    <!-- Sole -->
+    <rect x="4" y="32" width="16" height="8" fill="#d4a574"/>
+    <!-- Sole border -->
+    <rect x="4" y="32" width="16" height="1" fill="#9b9285"/>
+    <rect x="4" y="39" width="16" height="1" fill="#8b7d71"/>
+    <!-- Thong strap left -->
+    <rect x="10" y="28" width="1" height="12" fill="#ff6b9d"/>
+    <rect x="11" y="28" width="1" height="12" fill="#ff85b3"/>
+    <!-- Toe post -->
+    <rect x="9" y="30" width="4" height="2" fill="#9b9285"/>
+  </g>
+  
+  <!-- Right Sandal -->
+  <g id="right-sandal">
+    <!-- Sole -->
+    <rect x="44" y="32" width="16" height="8" fill="#d4a574"/>
+    <!-- Sole border -->
+    <rect x="44" y="32" width="16" height="1" fill="#9b9285"/>
+    <rect x="44" y="39" width="16" height="1" fill="#8b7d71"/>
+    <!-- Thong strap right -->
+    <rect x="52" y="28" width="1" height="12" fill="#ff6b9d"/>
+    <rect x="53" y="28" width="1" height="12" fill="#ff85b3"/>
+    <!-- Toe post -->
+    <rect x="51" y="30" width="4" height="2" fill="#9b9285"/>
+  </g>
+  
+  <!-- Frame/Rarity border -->
+  <rect x="2" y="26" width="60" height="22" fill="none" stroke="#9b9285" stroke-width="2"/>
+  
+  <!-- Highlight details -->
+  <rect x="8" y="34" width="2" height="1" fill="#f5deb3"/>
+  <rect x="54" y="34" width="2" height="1" fill="#f5deb3"/>
+</svg>

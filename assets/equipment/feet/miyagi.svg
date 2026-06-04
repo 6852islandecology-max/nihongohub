@@ -1,0 +1,41 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Matsushima Geta</title>
+  
+  <!-- Left geta sandal -->
+  <g id="left-geta">
+    <!-- Wood base -->
+    <rect x="4" y="36" width="20" height="12" fill="#8b6f47"/>
+    <rect x="4" y="36" width="20" height="2" fill="#9b9285"/>
+    
+    <!-- Thong straps -->
+    <rect x="10" y="32" width="2" height="8" fill="#c41e3a"/>
+    <rect x="14" y="32" width="2" height="8" fill="#c41e3a"/>
+    <rect x="10" y="32" width="4" height="2" fill="#8b3a3a"/>
+    
+    <!-- Wood grain detail -->
+    <rect x="6" y="40" width="16" height="1" fill="#7a5e38"/>
+    <rect x="6" y="44" width="16" height="1" fill="#7a5e38"/>
+  </g>
+  
+  <!-- Right geta sandal -->
+  <g id="right-geta">
+    <!-- Wood base -->
+    <rect x="40" y="36" width="20" height="12" fill="#8b6f47"/>
+    <rect x="40" y="36" width="20" height="2" fill="#9b9285"/>
+    
+    <!-- Thong straps -->
+    <rect x="48" y="32" width="2" height="8" fill="#c41e3a"/>
+    <rect x="52" y="32" width="2" height="8" fill="#c41e3a"/>
+    <rect x="48" y="32" width="4" height="2" fill="#8b3a3a"/>
+    
+    <!-- Wood grain detail -->
+    <rect x="42" y="40" width="16" height="1" fill="#7a5e38"/>
+    <rect x="42" y="44" width="16" height="1" fill="#7a5e38"/>
+  </g>
+  
+  <!-- Decorative bay motif (Matsushima reference) -->
+  <rect x="12" y="28" width="2" height="2" fill="#9b9285"/>
+  <rect x="16" y="28" width="2" height="2" fill="#9b9285"/>
+  <rect x="50" y="28" width="2" height="2" fill="#9b9285"/>
+  <rect x="54" y="28" width="2" height="2" fill="#9b9285"/>
+</svg>

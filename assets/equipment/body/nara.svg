@@ -1,0 +1,54 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Nara Period Kimono</title>
+  
+  <!-- Gold frame border (rarity accent) -->
+  <rect x="8" y="4" width="48" height="56" fill="none" stroke="#e0a634" stroke-width="2"/>
+  
+  <!-- Kimono outer robe - deep indigo -->
+  <g id="kimono">
+    <!-- Left side of kimono -->
+    <rect x="8" y="12" width="4" height="40" fill="#1a3a52"/>
+    <rect x="12" y="8" width="4" height="44" fill="#1a3a52"/>
+    <rect x="16" y="8" width="4" height="44" fill="#1a3a52"/>
+    <rect x="20" y="8" width="4" height="44" fill="#1a3a52"/>
+    
+    <!-- Right side of kimono (mirror) -->
+    <rect x="52" y="12" width="4" height="40" fill="#1a3a52"/>
+    <rect x="48" y="8" width="4" height="44" fill="#1a3a52"/>
+    <rect x="44" y="8" width="4" height="44" fill="#1a3a52"/>
+    <rect x="40" y="8" width="4" height="44" fill="#1a3a52"/>
+    
+    <!-- Center panel -->
+    <rect x="24" y="12" width="16" height="40" fill="#2d5a7b"/>
+    
+    <!-- Kimono sleeve left -->
+    <rect x="4" y="16" width="4" height="24" fill="#1a3a52"/>
+    
+    <!-- Kimono sleeve right -->
+    <rect x="56" y="16" width="4" height="24" fill="#1a3a52"/>
+  </g>
+  
+  <!-- Decorative pattern - gold embroidery -->
+  <g id="embroidery" fill="#e0a634">
+    <!-- Pattern on chest -->
+    <rect x="24" y="20" width="4" height="4" fill="#e0a634"/>
+    <rect x="36" y="20" width="4" height="4" fill="#e0a634"/>
+    <rect x="28" y="28" width="8" height="4" fill="#e0a634"/>
+    
+    <!-- Pattern on sleeves -->
+    <rect x="8" y="24" width="4" height="4" fill="#e0a634"/>
+    <rect x="52" y="24" width="4" height="4" fill="#e0a634"/>
+  </g>
+  
+  <!-- Inner collar/neckline detail -->
+  <g id="collar">
+    <rect x="28" y="8" width="8" height="4" fill="#c9956f"/>
+  </g>
+  
+  <!-- Obi (sash) - dark red -->
+  <rect x="20" y="32" width="24" height="4" fill="#8b3a2e"/>
+  
+  <!-- Gold obi accent -->
+  <rect x="24" y="32" width="16" height="2" fill="#e0a634"/>
+  
+</svg>

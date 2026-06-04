@@ -27,3 +27,36 @@ CREATE POLICY "service_role_all"
   TO service_role
   USING (true)
   WITH CHECK (true);
+
+-- ──────────────────────────────────────────────────────────────────
+-- user_progress: Supabase Anonymous Auth で発行された anon_user_id
+-- ごとに progress (XP / streak / mistakes / diagnostic) を JSONB で保持
+-- 端末を跨いで同期できる軽量同期ストレージ
+-- ──────────────────────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS user_progress (
+  user_id UUID PRIMARY KEY,
+  data JSONB NOT NULL DEFAULT '{}'::jsonb,
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+ALTER TABLE user_progress ENABLE ROW LEVEL SECURITY;
+
+-- 認証済みユーザーは自分の行のみ select/insert/update できる
+CREATE POLICY "users_select_own_progress"
+  ON user_progress FOR SELECT
+  TO authenticated
+  USING (auth.uid() = user_id);
+
+CREATE POLICY "users_upsert_own_progress"
+  ON user_progress FOR INSERT
+  TO authenticated
+  WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "users_update_own_progress"
+  ON user_progress FOR UPDATE
+  TO authenticated
+  USING (auth.uid() = user_id)
+  WITH CHECK (auth.uid() = user_id);
+
+CREATE INDEX IF NOT EXISTS idx_user_progress_updated_at
+  ON user_progress (updated_at DESC);

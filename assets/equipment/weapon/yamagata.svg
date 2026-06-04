@@ -1,0 +1,36 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Cherry Blossom Sickle</title>
+  
+  <!-- Frame border (rare rarity - blue) -->
+  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#4d8fbf" stroke-width="2"/>
+  
+  <!-- Handle (wood brown) -->
+  <rect x="24" y="36" width="4" height="20" fill="#8B6F47"/>
+  <rect x="20" y="40" width="4" height="12" fill="#A0826D"/>
+  <rect x="28" y="40" width="4" height="12" fill="#A0826D"/>
+  
+  <!-- Handle grip wrap (dark red) -->
+  <rect x="22" y="44" width="8" height="2" fill="#C41E3A"/>
+  <rect x="22" y="48" width="8" height="2" fill="#C41E3A"/>
+  
+  <!-- Sickle blade curve (steel gray) -->
+  <rect x="16" y="24" width="4" height="4" fill="#6B7280"/>
+  <rect x="12" y="28" width="4" height="4" fill="#6B7280"/>
+  <rect x="8" y="32" width="4" height="4" fill="#6B7280"/>
+  <rect x="8" y="36" width="4" height="4" fill="#6B7280"/>
+  
+  <!-- Blade edge highlight (light silver) -->
+  <rect x="16" y="24" width="2" height="2" fill="#E8E8E8"/>
+  <rect x="12" y="28" width="2" height="2" fill="#E8E8E8"/>
+  <rect x="8" y="32" width="2" height="2" fill="#E8E8E8"/>
+  
+  <!-- Cherry blossom accent (pink petals on blade) -->
+  <rect x="12" y="24" width="2" height="2" fill="#FFB6C1"/>
+  <rect x="14" y="26" width="2" height="2" fill="#FFB6C1"/>
+  <rect x="10" y="30" width="2" height="2" fill="#FFB6C1"/>
+  <rect x="8" y="34" width="2" height="2" fill="#FFB6C1"/>
+  
+  <!-- Metal ferrule (dark steel) -->
+  <rect x="20" y="36" width="12" height="2" fill="#4A4A4A"/>
+  <rect x="20" y="38" width="12" height="2" fill="#5A5A5A"/>
+</svg>

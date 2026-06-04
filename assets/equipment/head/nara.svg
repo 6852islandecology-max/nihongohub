@@ -1,0 +1,36 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Todaiji Monk Cowl</title>
+<g id="cowl">
+<!-- Outer frame border in rarity color -->
+<rect x="8" y="4" width="48" height="56" fill="none" stroke="#4d8fbf" stroke-width="1"/>
+<!-- Dark fabric base of cowl -->
+<rect x="12" y="8" width="40" height="32" fill="#2d3d4f"/>
+<!-- Top rounded section - darker brown -->
+<rect x="12" y="8" width="8" height="4" fill="#3d4d5f"/>
+<rect x="20" y="4" width="24" height="8" fill="#3d4d5f"/>
+<rect x="44" y="8" width="8" height="4" fill="#3d4d5f"/>
+<!-- Main cowl body - medium brown -->
+<rect x="16" y="12" width="32" height="20" fill="#5d5d47"/>
+<!-- Left side fold -->
+<rect x="12" y="16" width="4" height="16" fill="#4d4d37"/>
+<!-- Right side fold -->
+<rect x="52" y="16" width="4" height="16" fill="#4d4d37"/>
+<!-- Face opening - dark shadow -->
+<rect x="24" y="20" width="16" height="16" fill="#1a1a1a"/>
+<!-- Gold/brass accent trim around face -->
+<rect x="20" y="18" width="24" height="2" fill="#d4a574"/>
+<rect x="20" y="34" width="24" height="2" fill="#d4a574"/>
+<rect x="20" y="18" width="2" height="18" fill="#d4a574"/>
+<rect x="42" y="18" width="2" height="18" fill="#d4a574"/>
+<!-- Chin guard extension -->
+<rect x="16" y="32" width="32" height="4" fill="#4d4d37"/>
+<rect x="20" y="36" width="24" height="4" fill="#5d5d47"/>
+<!-- Lower fabric drape -->
+<rect x="18" y="40" width="28" height="12" fill="#3d3d2f"/>
+<!-- Side drape details -->
+<rect x="12" y="40" width="4" height="8" fill="#2d2d1f"/>
+<rect x="52" y="40" width="4" height="8" fill="#2d2d1f"/>
+<!-- Accent line at center -->
+<rect x="30" y="20" width="4" height="12" fill="#a68a6f"/>
+</g>
+</svg>

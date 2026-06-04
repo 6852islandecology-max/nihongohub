@@ -1,0 +1,44 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Daibutsu Crown</title>
+  
+  <!-- Gold base color -->
+  <g id="crown">
+    <!-- Top dome/ushnisha -->
+    <rect x="20" y="4" width="24" height="4" fill="#d4af37"/>
+    <rect x="16" y="8" width="8" height="4" fill="#d4af37"/>
+    <rect x="40" y="8" width="8" height="4" fill="#d4af37"/>
+    <rect x="12" y="12" width="40" height="4" fill="#d4af37"/>
+    
+    <!-- Blue accent band (rarity color) -->
+    <rect x="12" y="16" width="40" height="4" fill="#4d8fbf"/>
+    
+    <!-- Face area - light bronze -->
+    <rect x="16" y="20" width="32" height="12" fill="#b8860b"/>
+    
+    <!-- Eyes closed in meditation -->
+    <rect x="20" y="24" width="4" height="4" fill="#2d3d4f"/>
+    <rect x="40" y="24" width="4" height="4" fill="#2d3d4f"/>
+    
+    <!-- Nose bridge -->
+    <rect x="28" y="24" width="8" height="4" fill="#8b6914"/>
+    
+    <!-- Serene mouth -->
+    <rect x="22" y="32" width="20" height="2" fill="#654321"/>
+    
+    <!-- Lower face structure -->
+    <rect x="16" y="32" width="32" height="8" fill="#b8860b"/>
+    
+    <!-- Chin definition -->
+    <rect x="18" y="40" width="28" height="2" fill="#654321"/>
+    
+    <!-- Side ornaments/earrings (gold dangles) -->
+    <rect x="12" y="28" width="4" height="8" fill="#d4af37"/>
+    <rect x="52" y="28" width="4" height="8" fill="#d4af37"/>
+    
+    <!-- Blue frame border (rarity indicator) -->
+    <rect x="10" y="4" width="2" height="44" fill="#4d8fbf"/>
+    <rect x="52" y="4" width="2" height="44" fill="#4d8fbf"/>
+    <rect x="10" y="4" width="44" height="2" fill="#4d8fbf"/>
+    <rect x="10" y="46" width="44" height="2" fill="#4d8fbf"/>
+  </g>
+</svg>

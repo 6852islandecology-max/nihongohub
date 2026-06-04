@@ -360,6 +360,9 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
 [data-lang="th"] .section-sub,[data-lang="th"] .feature-desc,
 [data-lang="th"] .rs-desc,[data-lang="th"] .travel-desc{font-family:'Noto Sans Thai',sans-serif}
 </style>
+<link rel="stylesheet" href="styles/responsive.css">
+<script src="lib/hamburger.js" defer></script>
+<script src="lib/sync.js" defer></script>
 </head>
 <body data-lang="en">
 
@@ -388,6 +391,8 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <li><a href="#travel" data-i18n="nav_travel">Travel Japan</a></li>
     <li><a href="prefectures.html" data-i18n="nav_explore">Explore 🗾</a></li>
     <li><a href="quiz.html" data-i18n="nav_quiz">⚔️ Quiz</a></li>
+    <li><a href="rpg.html">⚔ My Journey</a></li>
+    <li><a href="sources/japan-relocation-guide-v1.html">🏡 Relocation</a></li>
     <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
     <li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" class="nav-shadowing" data-i18n="nav_shadowing">🎙 Shadowing</a></li>
   </ul>
@@ -523,8 +528,20 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
     <p class="section-tag" style="color:var(--gold)" data-i18n="jlpt_tag">Live AI Practice</p>
     <h2 class="section-title" style="color:var(--white)" data-i18n="jlpt_title">AI-generated questions.<br>Every level. Every day.</h2>
     <p class="section-sub" style="color:rgba(255,255,255,.5)" data-i18n="jlpt_sub">Fresh questions created by AI in real time — never the same test twice. Pick a level and tap New Question.</p>
-    <a href="quiz.html" class="jlpt-cta" style="display:inline-flex;align-items:center;gap:9px;margin:8px 0 2px;background:var(--red);color:#fff;text-decoration:none;padding:15px 28px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;border-radius:7px">⚔️ Start the JLPT Battle — N5 to N1 →</a>
-    <p style="font-size:13.5px;color:rgba(255,255,255,.5);margin-top:14px;line-height:1.6;max-width:520px">Pick a level, answer AI-generated questions, and power up your guide Akari. Fresh questions every time — free daily practice.</p>
+    <a href="onboarding.html" id="main-quiz-cta" class="jlpt-cta" data-i18n="jlpt_cta_new" style="display:inline-flex;align-items:center;gap:9px;margin:8px 0 2px;background:var(--red);color:#fff;text-decoration:none;padding:15px 28px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;border-radius:7px">⚡ Find your level (5 min) — free →</a>
+    <p style="font-size:13.5px;color:rgba(255,255,255,.5);margin-top:14px;line-height:1.6;max-width:520px" data-i18n="jlpt_cta_note">12-question diagnostic, then a personal weeks-to-N3 estimate. No signup. Already know your level? <a id="skip-cta" href="quiz.html" style="color:var(--gold)">Skip to free quiz →</a></p>
+    <script>
+      // Returning users skip diagnostic
+      (function(){
+        try {
+          if(localStorage.getItem('nh_onboarding_done') === '1'){
+            var cta = document.getElementById('main-quiz-cta');
+            if(cta){ cta.href = 'dashboard.html'; cta.textContent = '📊 Open your dashboard →'; }
+            var skip = document.getElementById('skip-cta'); if(skip) skip.style.display = 'none';
+          }
+        } catch(e){}
+      })();
+    </script>
     <p style="font-size:11px;color:rgba(255,255,255,.28);margin-top:14px;line-height:1.6" data-i18n="jlpt_legal">Questions are independently AI-generated and not affiliated with or endorsed by the Japan Foundation or JEES. "JLPT" is used only to indicate difficulty level.</p>
   </div>
 </section>
@@ -1178,6 +1195,12 @@ function scrollToRoadmap() {
   const close = () => ov.classList.remove('on');
   fab.onclick = open; $('nhAuthClose').onclick = close;
   ov.onclick = (e) => { if (e.target === ov) close(); };
+  // Auto-open on #trial hash or ?trial=1 (used by quiz.html limit modal CTA)
+  if (location.hash === '#trial' || new URLSearchParams(location.search).get('trial') === '1') {
+    setTimeout(open, 200);
+  }
+  // Close on ESC
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && ov.classList.contains('on')) close(); });
 
   $('nhToggle').onclick = () => {
     mode = mode === 'signup' ? 'login' : 'signup';

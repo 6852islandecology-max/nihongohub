@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Wanko Soba Apron</title>
+<g id="apron">
+<!-- Apron neck strap -->
+<rect x="28" y="4" width="8" height="4" fill="#9b9285"/>
+<!-- Apron main body left -->
+<rect x="16" y="12" width="16" height="24" fill="#c41e3a"/>
+<!-- Apron main body right -->
+<rect x="32" y="12" width="16" height="24" fill="#c41e3a"/>
+<!-- Apron border left -->
+<rect x="16" y="12" width="2" height="24" fill="#9b9285"/>
+<!-- Apron border right -->
+<rect x="46" y="12" width="2" height="24" fill="#9b9285"/>
+<!-- Apron border bottom -->
+<rect x="16" y="34" width="32" height="2" fill="#9b9285"/>
+<!-- Apron pocket left -->
+<rect x="20" y="18" width="8" height="8" fill="#f4a460"/>
+<!-- Apron pocket right -->
+<rect x="36" y="18" width="8" height="8" fill="#f4a460"/>
+<!-- Pocket detail left -->
+<rect x="20" y="18" width="8" height="1" fill="#9b9285"/>
+<!-- Pocket detail right -->
+<rect x="36" y="18" width="8" height="1" fill="#9b9285"/>
+<!-- Center stripe -->
+<rect x="31" y="12" width="2" height="22" fill="#9b9285"/>
+<!-- Waist tie left -->
+<rect x="12" y="16" width="4" height="2" fill="#9b9285"/>
+<!-- Waist tie right -->
+<rect x="48" y="16" width="4" height="2" fill="#9b9285"/>
+<!-- Bowl pattern detail 1 -->
+<rect x="24" y="26" width="2" height="2" fill="#f4a460"/>
+<!-- Bowl pattern detail 2 -->
+<rect x="38" y="26" width="2" height="2" fill="#f4a460"/>
+<!-- Bottom fringe left -->
+<rect x="18" y="36" width="2" height="4" fill="#8b3a3a"/>
+<!-- Bottom fringe center-left -->
+<rect x="24" y="36" width="2" height="4" fill="#8b3a3a"/>
+<!-- Bottom fringe center-right -->
+<rect x="38" y="36" width="2" height="4" fill="#8b3a3a"/>
+<!-- Bottom fringe right -->
+<rect x="44" y="36" width="2" height="4" fill="#8b3a3a"/>
+</g>
+</svg>

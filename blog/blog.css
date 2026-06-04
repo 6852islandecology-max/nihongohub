@@ -1,4 +1,5 @@
 /* Shared styles for NihongoHub prefecture guides (/blog). RPG-tinged, light, readable. */
+@import url('../styles/responsive.css');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;
@@ -13,6 +14,13 @@ body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);l
 .bnav .logo span{color:var(--red)}
 .bnav .cta{font-family:var(--pixel);font-size:9px;background:var(--red);color:#fff;padding:9px 13px;border-radius:3px}
 .wrap{max-width:760px;margin:0 auto;padding:30px 20px 60px}
+.phero{position:relative;width:100%;min-height:200px;display:flex;align-items:center;justify-content:center;padding:30px 24px;overflow:hidden}
+.phero-kanji{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:clamp(72px,18vw,168px);
+  color:rgba(255,255,255,0.93);line-height:1;letter-spacing:-2px;text-shadow:0 4px 12px rgba(0,0,0,.35);user-select:none}
+.phero-meta{position:absolute;bottom:18px;left:0;right:0;text-align:center}
+.phero-region{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:2px;margin-bottom:6px}
+.phero-romaji{font-family:var(--dot);font-size:20px;color:#fdfaf3;letter-spacing:3px}
+.langsw{font-family:var(--dot);font-size:13px}.langsw a{color:#fff;text-decoration:none;opacity:.8;cursor:pointer}.langsw a[aria-current]{color:var(--gold);opacity:1;font-weight:700}
 .tag{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:1px}
 h1{font-family:var(--dot);font-size:clamp(28px,5vw,42px);line-height:1.15;margin:12px 0 8px}
 h2{font-family:var(--dot);font-size:22px;margin:30px 0 10px;border-bottom:2px solid var(--soft);padding-bottom:5px}

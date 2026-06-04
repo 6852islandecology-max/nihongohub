@@ -1,0 +1,40 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Dogo Onsen Wooden Staff</title>
+  
+  <!-- Frame/Border accent -->
+  <g id="frame">
+    <rect x="20" y="4" width="24" height="56" fill="none" stroke="#4d8fbf" stroke-width="2"/>
+  </g>
+  
+  <!-- Staff shaft - light wood -->
+  <g id="shaft">
+    <rect x="26" y="12" width="12" height="40" fill="#d4a574"/>
+    <rect x="26" y="12" width="4" height="40" fill="#c9956b" opacity="0.6"/>
+  </g>
+  
+  <!-- Staff handle grip - darker wood -->
+  <g id="grip">
+    <rect x="24" y="44" width="16" height="8" fill="#8b6f47"/>
+    <rect x="24" y="46" width="16" height="2" fill="#6b5437"/>
+    <rect x="24" y="50" width="16" height="2" fill="#6b5437"/>
+  </g>
+  
+  <!-- Staff knob/pommel at bottom -->
+  <g id="pommel">
+    <rect x="26" y="52" width="12" height="4" fill="#a0826d"/>
+    <rect x="24" y="54" width="16" height="2" fill="#4d8fbf"/>
+  </g>
+  
+  <!-- Stone/crystal accent at top - Onsen spa element -->
+  <g id="stone_accent">
+    <rect x="28" y="6" width="8" height="6" fill="#7fa8c1"/>
+    <rect x="28" y="6" width="4" height="3" fill="#9bc4d8" opacity="0.7"/>
+  </g>
+  
+  <!-- Wood grain details -->
+  <g id="details">
+    <rect x="30" y="20" width="2" height="8" fill="#c9956b" opacity="0.5"/>
+    <rect x="34" y="26" width="2" height="10" fill="#c9956b" opacity="0.5"/>
+    <rect x="28" y="32" width="2" height="6" fill="#c9956b" opacity="0.5"/>
+  </g>
+</svg>

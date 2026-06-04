@@ -1,0 +1,37 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Ryukyu Sai Dagger</title>
+  
+  <!-- Handle/Grip - Dark wood brown -->
+  <rect x="24" y="40" width="16" height="20" fill="#4a3728"/>
+  <rect x="28" y="36" width="8" height="4" fill="#5a4738"/>
+  
+  <!-- Main blade - Silver -->
+  <rect x="28" y="12" width="8" height="28" fill="#d4d4d8"/>
+  <rect x="26" y="14" width="12" height="2" fill="#a8a8b0"/>
+  <rect x="28" y="20" width="8" height="1" fill="#808088"/>
+  
+  <!-- Blade point - Bright silver -->
+  <rect x="29" y="8" width="6" height="4" fill="#ffffff"/>
+  <rect x="30" y="6" width="4" height="2" fill="#e8e8f0"/>
+  
+  <!-- Left prong - Purple epic accent -->
+  <rect x="16" y="28" width="4" height="16" fill="#a056d2"/>
+  <rect x="14" y="30" width="2" height="12" fill="#8a3cb8"/>
+  
+  <!-- Right prong - Purple epic accent -->
+  <rect x="44" y="28" width="4" height="16" fill="#a056d2"/>
+  <rect x="48" y="30" width="2" height="12" fill="#8a3cb8"/>
+  
+  <!-- Prong tips - Darker purple -->
+  <rect x="12" y="42" width="4" height="2" fill="#6a2c98"/>
+  <rect x="48" y="42" width="4" height="2" fill="#6a2c98"/>
+  
+  <!-- Guard - Gold accent -->
+  <rect x="22" y="38" width="20" height="2" fill="#d4a754"/>
+  <rect x="24" y="37" width="16" height="1" fill="#c49844"/>
+  
+  <!-- Grip texture - Dark accent lines -->
+  <rect x="26" y="44" width="12" height="1" fill="#3a2718"/>
+  <rect x="26" y="48" width="12" height="1" fill="#3a2718"/>
+  <rect x="26" y="52" width="12" height="1" fill="#3a2718"/>
+</svg>

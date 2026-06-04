@@ -1,0 +1,32 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Apple Orchard Sandals</title>
+<g id="sandals">
+<!-- Left sandal base -->
+<rect x="8" y="40" width="20" height="12" fill="#8b7355"/>
+<!-- Left sandal strap -->
+<rect x="10" y="38" width="16" height="4" fill="#9b9285"/>
+<!-- Left sandal toe post -->
+<rect x="14" y="52" width="4" height="4" fill="#6b5345"/>
+<!-- Right sandal base -->
+<rect x="36" y="40" width="20" height="12" fill="#8b7355"/>
+<!-- Right sandal strap -->
+<rect x="38" y="38" width="16" height="4" fill="#9b9285"/>
+<!-- Right sandal toe post -->
+<rect x="46" y="52" width="4" height="4" fill="#6b5345"/>
+<!-- Left apple accent -->
+<rect x="12" y="28" width="4" height="4" fill="#d63031"/>
+<rect x="12" y="32" width="4" height="4" fill="#c92a2a"/>
+<rect x="16" y="30" width="4" height="4" fill="#d63031"/>
+<!-- Left leaf -->
+<rect x="20" y="28" width="4" height="4" fill="#27ae60"/>
+<!-- Right apple accent -->
+<rect x="48" y="28" width="4" height="4" fill="#d63031"/>
+<rect x="48" y="32" width="4" height="4" fill="#c92a2a"/>
+<rect x="44" y="30" width="4" height="4" fill="#d63031"/>
+<!-- Right leaf -->
+<rect x="40" y="28" width="4" height="4" fill="#27ae60"/>
+<!-- Frame border accent - top -->
+<rect x="8" y="36" width="20" height="2" fill="#9b9285"/>
+<rect x="36" y="36" width="20" height="2" fill="#9b9285"/>
+</g>
+</svg>

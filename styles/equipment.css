@@ -1,0 +1,216 @@
+/* styles/equipment.css - avatar customization, equipment grid, reward toast.
+   Pixel-art rendering on all <img> tags loaded from assets/avatars/ or assets/equipment/.
+*/
+:root {
+  --eq-common:    #9b9285;
+  --eq-rare:      #4d8fbf;
+  --eq-epic:      #a056d2;
+  --eq-legendary: #e0a634;
+}
+
+img.pixel-sprite,
+.avatar-stack img,
+.equipment-slot img,
+.reward-modal img,
+.inv-grid img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* ── Avatar selector modal ── */
+.avatar-modal {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(13, 10, 20, 0.78); display: none;
+  align-items: center; justify-content: center; padding: 18px;
+  backdrop-filter: blur(4px);
+}
+.avatar-modal.show { display: flex; }
+.avatar-modal .am-card {
+  background: var(--white, #fdfaf3); max-width: 520px; width: 100%;
+  border: 3px solid var(--gold, #e0a634); border-radius: 14px;
+  padding: 22px; box-shadow: 6px 9px 0 rgba(22,16,10,.4);
+}
+.avatar-modal h2 {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 22px; margin-bottom: 6px;
+}
+.avatar-modal p {
+  font-size: 14px; color: var(--muted, #7a6a52); margin-bottom: 16px;
+}
+.avatar-modal .am-group {
+  display: grid; gap: 10px; margin-bottom: 18px;
+}
+.avatar-modal .am-group-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px; color: var(--muted, #7a6a52); letter-spacing: 1px; margin-bottom: 6px;
+}
+.avatar-modal .am-swatches {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.avatar-modal .am-sw {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 2px solid rgba(0,0,0,.15); cursor: pointer;
+  position: relative; transition: transform .12s;
+}
+.avatar-modal .am-sw:hover { transform: scale(1.08); }
+.avatar-modal .am-sw.selected {
+  border-color: var(--gold, #e0a634); box-shadow: 0 0 0 2px var(--gold, #e0a634);
+}
+.avatar-modal .am-sw.selected::after {
+  content: '✓'; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%); color: #fff; font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+.avatar-modal .am-preview {
+  text-align: center; margin: 12px 0 18px;
+}
+.avatar-modal .am-preview img {
+  width: 128px; height: 128px;
+  background: rgba(224,166,52,.08); border-radius: 8px; padding: 8px;
+}
+.avatar-modal .am-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.avatar-modal .am-btn {
+  font-family: 'DotGothic16', sans-serif; font-size: 14px;
+  border: none; border-radius: 8px; padding: 10px 18px; cursor: pointer;
+}
+.avatar-modal .am-confirm {
+  background: var(--red, #bf3325); color: #fff; border-bottom: 3px solid #7e1c12;
+}
+.avatar-modal .am-skip {
+  background: transparent; color: var(--muted, #7a6a52);
+  border: 2px solid var(--soft, #ddcfb6);
+}
+
+/* ── Equipment screen ── */
+.eq-shell { display: grid; grid-template-columns: 280px 1fr; gap: 22px; }
+@media (max-width: 720px) { .eq-shell { grid-template-columns: 1fr; } }
+
+.avatar-stack {
+  position: relative; width: 200px; height: 200px;
+  background: linear-gradient(135deg, rgba(224,166,52,.12), rgba(191,51,37,.08));
+  border: 3px solid var(--soft, #ddcfb6); border-radius: 12px;
+  margin: 0 auto;
+}
+.avatar-stack img {
+  position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px);
+  object-fit: contain;
+}
+.avatar-stack .layer-base { z-index: 1; }
+.avatar-stack .layer-body { z-index: 2; }
+.avatar-stack .layer-head { z-index: 3; }
+.avatar-stack .layer-feet { z-index: 4; }
+.avatar-stack .layer-weapon { z-index: 5; }
+
+.eq-stats {
+  margin-top: 12px; padding: 10px 14px;
+  background: var(--white, #fdfaf3); border: 2px solid var(--soft, #ddcfb6); border-radius: 8px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: center;
+}
+.eq-stats .s-lbl {
+  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  color: var(--muted, #7a6a52); letter-spacing: 1px;
+}
+.eq-stats .s-val {
+  font-family: 'DotGothic16', sans-serif; font-size: 22px; margin-top: 4px;
+}
+
+.eq-slots { display: grid; gap: 12px; }
+.equipment-slot {
+  display: grid; grid-template-columns: 64px 1fr auto;
+  gap: 12px; align-items: center;
+  background: var(--white, #fdfaf3); border: 2px solid var(--soft, #ddcfb6);
+  border-radius: 8px; padding: 10px 14px; cursor: pointer;
+  transition: border-color .15s, transform .12s;
+}
+.equipment-slot:hover { border-color: var(--gold, #e0a634); transform: translateY(-1px); }
+.equipment-slot.empty .es-icon { opacity: .35; }
+.equipment-slot .es-icon {
+  width: 64px; height: 64px;
+  background: rgba(224,166,52,.06); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.equipment-slot .es-icon img { width: 56px; height: 56px; }
+.equipment-slot .es-info .es-slot-label {
+  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  color: var(--muted, #7a6a52); letter-spacing: 1px;
+}
+.equipment-slot .es-info .es-name {
+  font-family: 'DotGothic16', sans-serif; font-size: 15px; margin-top: 4px;
+}
+.equipment-slot .es-info .es-desc {
+  font-size: 12px; color: var(--muted, #7a6a52); margin-top: 2px;
+}
+.equipment-slot .es-action {
+  font-family: 'DotGothic16', sans-serif; font-size: 12px; color: var(--gold-d, #c8911f);
+}
+.equipment-slot.rarity-rare      { border-color: var(--eq-rare); }
+.equipment-slot.rarity-epic      { border-color: var(--eq-epic); }
+.equipment-slot.rarity-legendary { border-color: var(--eq-legendary); box-shadow: 0 0 0 2px rgba(224,166,52,.18); }
+
+/* ── Inventory modal (per slot picker) ── */
+.inv-modal {
+  position: fixed; inset: 0; z-index: 210;
+  background: rgba(13,10,20,.72); display: none;
+  align-items: center; justify-content: center; padding: 18px;
+}
+.inv-modal.show { display: flex; }
+.inv-modal .inv-card {
+  background: var(--white, #fdfaf3); max-width: 640px; width: 100%;
+  max-height: 80vh; overflow: auto;
+  border: 3px solid var(--gold, #e0a634); border-radius: 14px;
+  padding: 18px 20px;
+}
+.inv-modal h3 {
+  font-family: 'DotGothic16', sans-serif; font-size: 18px;
+  margin-bottom: 12px;
+}
+.inv-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px;
+}
+.inv-item {
+  background: var(--paper, #efe6d3); border: 2px solid var(--soft, #ddcfb6);
+  border-radius: 8px; padding: 8px; cursor: pointer; text-align: center;
+  transition: border-color .12s;
+}
+.inv-item:hover { border-color: var(--gold, #e0a634); }
+.inv-item.equipped { border-color: var(--red, #bf3325); }
+.inv-item img { width: 64px; height: 64px; }
+.inv-item .inv-name {
+  font-family: 'DotGothic16', sans-serif; font-size: 12px; margin-top: 4px;
+}
+.inv-item.rarity-rare      { border-color: var(--eq-rare); }
+.inv-item.rarity-epic      { border-color: var(--eq-epic); }
+.inv-item.rarity-legendary { border-color: var(--eq-legendary); }
+.inv-empty {
+  padding: 28px 12px; text-align: center;
+  font-size: 14px; color: var(--muted, #7a6a52);
+}
+.inv-modal .inv-actions {
+  display: flex; justify-content: space-between; align-items: center; margin-top: 14px; gap: 12px;
+}
+.inv-modal .inv-unequip,
+.inv-modal .inv-close {
+  font-family: 'DotGothic16', sans-serif; font-size: 13px;
+  background: transparent; color: var(--muted, #7a6a52);
+  border: 2px solid var(--soft, #ddcfb6); border-radius: 7px; padding: 8px 14px; cursor: pointer;
+}
+
+/* ── Reward toast (from claimReward) ── */
+.nh-reward-toast {
+  position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%) translateY(20px);
+  background: var(--hud, #0d0a14); color: #fff;
+  border: 2px solid var(--gold, #e0a634); border-radius: 10px;
+  padding: 14px 18px; display: flex; gap: 14px; align-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  opacity: 0; transition: transform .35s ease, opacity .35s ease;
+  z-index: 300; max-width: calc(100vw - 24px);
+}
+.nh-reward-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.nh-reward-toast img { background: rgba(224,166,52,.16); border-radius: 6px; padding: 4px; }
+.nh-reward-toast .rt-msg { font-family: 'DotGothic16', sans-serif; font-size: 14px; }
+.nh-reward-toast .rt-link {
+  display: inline-block; font-family: 'Press Start 2P', monospace; font-size: 9px;
+  color: var(--gold, #e0a634); margin-top: 6px; text-decoration: none; letter-spacing: 1px;
+}
+.nh-reward-toast .rt-link:hover { color: #fff; }

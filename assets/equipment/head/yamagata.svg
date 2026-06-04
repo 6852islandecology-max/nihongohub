@@ -1,0 +1,39 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Hanagasa Crown</title>
+  
+  <!-- Outer frame border (rare rarity) -->
+  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#4d8fbf" stroke-width="2"/>
+  
+  <!-- Wide brim base (light tan) -->
+  <g id="brim">
+    <rect x="8" y="28" width="48" height="4" fill="#d4a574"/>
+    <rect x="12" y="32" width="40" height="4" fill="#c9945f"/>
+  </g>
+  
+  <!-- Crown top dome (burgundy/red) -->
+  <g id="crown">
+    <rect x="16" y="16" width="32" height="4" fill="#8b3a3a"/>
+    <rect x="12" y="20" width="40" height="4" fill="#a04848"/>
+    <rect x="10" y="24" width="44" height="4" fill="#9d3f3f"/>
+  </g>
+  
+  <!-- Flower petals (pink/magenta accent) -->
+  <g id="flowers">
+    <!-- Top center flower -->
+    <rect x="28" y="12" width="8" height="4" fill="#e084a8"/>
+    <!-- Left petal -->
+    <rect x="12" y="20" width="4" height="4" fill="#d9648f"/>
+    <!-- Right petal -->
+    <rect x="52" y="20" width="4" height="4" fill="#d9648f"/>
+    <!-- Lower left flower -->
+    <rect x="16" y="28" width="4" height="4" fill="#e084a8"/>
+    <!-- Lower right flower -->
+    <rect x="44" y="28" width="4" height="4" fill="#e084a8"/>
+  </g>
+  
+  <!-- Center band decoration (gold) -->
+  <rect x="10" y="24" width="44" height="4" fill="#d4af37"/>
+  
+  <!-- Face opening shadow (dark) -->
+  <rect x="20" y="28" width="24" height="8" fill="#6b5344"/>
+</svg>

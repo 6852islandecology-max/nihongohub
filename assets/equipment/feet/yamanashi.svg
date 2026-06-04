@@ -1,0 +1,41 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Fuji Climbing Boots</title>
+  <g id="boots">
+    <!-- Left boot -->
+    <g id="left-boot">
+      <!-- Boot sole -->
+      <rect x="4" y="44" width="16" height="4" fill="#2d2d2d"/>
+      <!-- Boot shaft lower -->
+      <rect x="6" y="36" width="12" height="8" fill="#8b4513"/>
+      <!-- Boot shaft upper -->
+      <rect x="8" y="28" width="8" height="8" fill="#a0522d"/>
+      <!-- Boot accent stripe (rarity color) -->
+      <rect x="8" y="32" width="8" height="2" fill="#4d8fbf"/>
+      <!-- Boot cuff -->
+      <rect x="6" y="24" width="12" height="4" fill="#6b3410"/>
+      <!-- Laces -->
+      <rect x="10" y="28" width="2" height="8" fill="#4d8fbf"/>
+      <rect x="12" y="28" width="2" height="8" fill="#4d8fbf"/>
+    </g>
+    
+    <!-- Right boot -->
+    <g id="right-boot">
+      <!-- Boot sole -->
+      <rect x="44" y="44" width="16" height="4" fill="#2d2d2d"/>
+      <!-- Boot shaft lower -->
+      <rect x="46" y="36" width="12" height="8" fill="#8b4513"/>
+      <!-- Boot shaft upper -->
+      <rect x="48" y="28" width="8" height="8" fill="#a0522d"/>
+      <!-- Boot accent stripe (rarity color) -->
+      <rect x="48" y="32" width="8" height="2" fill="#4d8fbf"/>
+      <!-- Boot cuff -->
+      <rect x="46" y="24" width="12" height="4" fill="#6b3410"/>
+      <!-- Laces -->
+      <rect x="50" y="28" width="2" height="8" fill="#4d8fbf"/>
+      <rect x="52" y="28" width="2" height="8" fill="#4d8fbf"/>
+    </g>
+    
+    <!-- Connecting strap (mountain detail) -->
+    <rect x="28" y="40" width="8" height="4" fill="#4d8fbf"/>
+  </g>
+</svg>

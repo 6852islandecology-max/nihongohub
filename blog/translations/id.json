@@ -1,0 +1,729 @@
+{
+  "hokkaido": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Salju bubuk, onsen, makanan laut, dan alam yang luas terbuka."
+  },
+  "aomori": {
+    "lede": "Negeri apel Jepang di ujung utara Honshu, terkenal dengan festival musim panas Nebuta yang spektakuler.",
+    "intro": "Aomori terletak di mana Honshu bertemu laut menuju Hokkaido. Wilayah ini dikenal dengan apel yang segar, makanan laut berkualitas tinggi, dan situs purbakala Sannai-Maruyama dari era Jōmon, plus salah satu tempat dengan salju paling tebal di negara ini.",
+    "see": [
+      "Nebuta Matsuri — parade cahaya raksasa setiap bulan Agustus",
+      "Hirosaki Castle dan bunga sakura terkenalnya",
+      "Oirase Gorge dan Lake Towada",
+      "Sannai-Maruyama — situs purbakala utama (UNESCO)"
+    ],
+    "eat": "Coba apelnya, kerang-kerangan, dan ikan tuna Ōma bluefin.",
+    "getting": "Sekitar 3 jam dari Tokyo dengan Tōhoku Shinkansen ke Shin-Aomori.",
+    "when": "Awal Agustus untuk Nebuta Matsuri; akhir April hingga Mei untuk bunga sakura Hirosaki.",
+    "word_meaning": "parade cahaya festival raksasa yang bercahaya",
+    "tip": "Pesan penginapan berbulan-bulan sebelumnya jika Anda berkunjung saat Nebuta (2–7 Agustus).",
+    "blurb": ""
+  },
+  "akita": {
+    "lede": "Salju yang lebat, negeri beras dan sake, dan tradisi rakyat Namahage yang buas.",
+    "intro": "Akita adalah wilayah pedesaan, bersalju, dan bangga dengan tradisinya — dari festival lentera tiang Kantō hingga pengunjung ogre Namahage di Semenanjung Oga. Wilayah ini juga terkenal dengan beras berkualitas tinggi dan anjing Akita.",
+    "see": [
+      "Kakunodate — distrik samurai yang terjaga",
+      "Lake Tazawa, danau terdalam Jepang",
+      "Nyūtō Onsen hot springs",
+      "Semenanjung Oga dan Namahage"
+    ],
+    "eat": "Coba kiritanpo (tusuk nasi yang dilumatkan) dalam hidangan hot pot dan sake lokal.",
+    "getting": "Akita berjarak ~3 jam 40 menit dari Tokyo dengan Akita Shinkansen.",
+    "when": "Musim semi untuk bunga sakura yang menangis di Kakunodate; musim dingin untuk salju dan onsen.",
+    "word_meaning": "pengunjung ogre Tahun Baru dari Semenanjung Oga",
+    "tip": "Anjing Akita (Akita-inu) berasal dari sini — Anda akan menemukan tempat bertemu dan berinteraksi yang ramah.",
+    "blurb": ""
+  },
+  "yamagata": {
+    "lede": "Kuil-kuil di pegunungan, bunga sakura, dan monster salju di Gunung Zaō.",
+    "intro": "Yamagata memadukan pegunungan spiritual dan lembah kebun buah-buahan. Kuil Yamadera yang menempel di tebing menginspirasi penyair Bashō, dan musim dingin membawa pohon-pohon yang terkenal dengan 'monster salju' bersalut es di Zaō.",
+    "see": [
+      "Kuil tebing Yamadera (Risshaku-ji)",
+      "Zaō Onsen dan 'monster salju' musim dinginnya",
+      "Gunung-gunung suci Dewa Sanzan",
+      "Jalan-jalan nostalgia Ginzan Onsen"
+    ],
+    "eat": "Yamagata adalah ibu kota bunga sakura Jepang; juga cobalah imoni (sup panas taro).",
+    "getting": "Yamagata sekitar 2 jam 30 menit dari Tokyo dengan Yamagata Shinkansen.",
+    "when": "Juni–Juli untuk bunga sakura; Februari untuk monster salju Zaō yang bercahaya di malam hari.",
+    "word_meaning": "bunga sakura — Yamagata menghasilkan sebagian besar bunga sakura Jepang",
+    "tip": "Naiki 1.000 langkah ke Yamadera lebih awal untuk menghindari keramaian dan terik panas.",
+    "blurb": ""
+  },
+  "fukushima": {
+    "lede": "Sejarah samurai, mata air panas, dan perkebunan buah di prefektur yang luas dan indah.",
+    "intro": "Fukushima menawarkan kota samurai yang terpelihara dengan baik di Aizu-Wakamatsu, desa pos berarsitektur tradisional, serta buah persik dan sake berkualitas tinggi. Kawasan Aizu khususnya kaya akan sejarah.",
+    "see": [
+      "Tsuruga Castle di Aizu-Wakamatsu",
+      "Ouchi-juku — kota pos dengan atap jerami",
+      "Goshiki-numa danau vulkanik",
+      "Spa Resort Hawaiians"
+    ],
+    "eat": "Ramen Kitakata dan sake lokal adalah bintang regional.",
+    "getting": "Kōriyama/Fukushima berjarak ~1 jam 20 menit–1 jam 40 menit dari Tokyo dengan Tōhoku Shinkansen.",
+    "when": "Musim panas untuk buah persik; musim gugur untuk melihat dedaunan di sekitar danau Aizu.",
+    "word_meaning": "wilayah samurai bersejarah di barat Fukushima",
+    "tip": "Di Ouchi-juku, cobalah negi-soba — dimakan menggunakan batang bawang putih utuh sebagai 'sumpit'.",
+    "blurb": ""
+  },
+  "ibaraki": {
+    "lede": "Taman bunga musiman, Buddha raksasa, dan natto tepat di utara Tokyo.",
+    "intro": "Ibaraki adalah pelarian mudah dari ibu kota. Hitachi Seaside Park meledak dengan nemophila biru di musim semi dan kochia merah di musim gugur, dan Ushiku menampilkan salah satu patung perunggu tertinggi di dunia.",
+    "see": [
+      "Taman bunga Hitachi Seaside Park",
+      "Ushiku Daibutsu (Buddha raksasa)",
+      "Kairaku-en — salah satu dari tiga taman besar Jepang",
+      "Air Terjun Fukuroda"
+    ],
+    "eat": "Mito adalah rumah natto (kedelai fermentasi); juga ikan monkfish segar (ankō).",
+    "getting": "Mito berjarak ~1 jam 15 menit dari Tokyo dengan kereta ekspres terbatas; Hitachi Seaside Park dapat dicapai dengan bus dari Katsuta.",
+    "when": "Akhir April–Mei untuk nemophila biru; Oktober untuk bukit kochia merah tua.",
+    "word_meaning": "kedelai fermentasi yang lengket — Mito terkenal karenanya",
+    "tip": "Sesuaikan kunjungan Anda ke Hitachi Seaside Park dengan puncak nemophila atau kochia — periksa kalender mekar bunga.",
+    "blurb": ""
+  },
+  "tochigi": {
+    "lede": "Rumah bagi kuil-kuil yang megah dan air terjun di Nikkō.",
+    "intro": "Permata mahkota Tochigi adalah Nikkō, tempat kuil-kuil mewah dari era Edo berdiri di antara hutan cedar, danau, dan air terjun. Ini adalah salah satu perjalanan sehari paling populer dari Tokyo.",
+    "see": [
+      "Kuil Nikkō Tōshō-gū (UNESCO)",
+      "Air Terjun Kegon dan Danau Chūzenji",
+      "Taman hiburan Edo Wonderland",
+      "Bunga wisteria di Taman Ashikaga"
+    ],
+    "eat": "Utsunomiya adalah ibukota gyōza (pangsit goreng) di Jepang.",
+    "getting": "Nikkō berjarak ~2 jam dari Tokyo (jalur Tōbu dari Asakusa, atau shinkansen + transfer).",
+    "when": "Akhir April–Mei untuk bunga wisteria; Oktober–November untuk warna daun musim gugur Nikkō yang spektakuler.",
+    "word_meaning": "pangsit yang digoreng di wajan — spesialisasi Utsunomiya",
+    "tip": "Warna-warna musim gugur Nikkō menarik kerumunan besar — mulai lebih awal dan pertimbangkan hari kerja.",
+    "blurb": ""
+  },
+  "toyama": {
+    "lede": "Dinding salju menjulang tinggi di Pegunungan Alpen dan teluk jernih dengan cumi-cumi kunang-kunang.",
+    "intro": "Toyama menghadap laut di bawah Pegunungan Alpen Utara Jepang. Rute Alpine Tateyama Kurobe menembus koridor salju setinggi hingga 20 m pada musim semi, sebuah perjalanan yang tak terlupakan.",
+    "see": [
+      "Rute Alpine Tateyama Kurobe dan dinding-dinding salju",
+      "Kereta gantung Kurobe Gorge",
+      "Desa gasshō beratap jerami Gokayama (UNESCO)",
+      "Kuil Zuiryū-ji di Takaoka"
+    ],
+    "eat": "Cumi-cumi kunang-kunang (hotaru-ika) dan udang putih.",
+    "getting": "Toyama berjarak ~2 jam 10 menit dari Tokyo dengan Hokuriku Shinkansen.",
+    "when": "Pertengahan April hingga Juni untuk dinding salju; musim semi untuk musim cumi-cumi kunang-kunang.",
+    "word_meaning": "koridor dinding salju menjulang tinggi di Rute Alpine",
+    "tip": "Dinding salju Rute Alpine dibuka pertengahan April — ditutup di musim dingin yang dalam.",
+    "blurb": ""
+  },
+  "ishikawa": {
+    "lede": "Taman-taman Kanazawa dan daun emas, plus Semenanjung Noto yang berkarang.",
+    "intro": "Ishikawa berpusat di Kanazawa, sebuah kota kastil yang elegan yang terhindar dari pemboman saat perang. Kenroku-en dirayakan sebagai salah satu dari tiga taman lanskap terbesar di Jepang.",
+    "see": [
+      "Taman Kenroku-en",
+      "Distrik geisha Higashi Chaya",
+      "Kastil Kanazawa dan Museum Abad ke-21",
+      "Garis pantai Semenanjung Noto"
+    ],
+    "eat": "Seafood segar, es krim berlapis daun emas, dan masakan Kaga.",
+    "getting": "Kanazawa berjarak ~2 jam 30 menit dari Tokyo dengan Hokuriku Shinkansen.",
+    "when": "Kapan saja; Kenroku-en sangat indah saat musim dingin dengan tali penopang 'yukitsuri'.",
+    "word_meaning": "daun emas — Kanazawa memproduksi sebagian besar daun emas Jepang",
+    "tip": "Coba es krim lembut dengan topping daun emas di distrik Higashi Chaya.",
+    "blurb": ""
+  },
+  "fukui": {
+    "lede": "Dinosaurus, tebing dramatis, dan kuil Zen yang megah.",
+    "intro": "Fukui yang tenang mengejutkan pengunjung dengan museum dinosaurus terbaik Jepang, kuil meditasi Eihei-ji, dan tebing berpagar ombak Tōjinbō.",
+    "see": [
+      "Fukui Prefectural Dinosaur Museum",
+      "Kuil Zen Eihei-ji",
+      "Tebing Tōjinbō",
+      "Kastil Maruoka"
+    ],
+    "eat": "Kepiting Echizen di musim dingin dan sauce-katsudon.",
+    "getting": "Fukui dapat diakses melalui Hokuriku Shinkansen (diperpanjang ke Tsuruga pada 2024).",
+    "when": "November–Maret untuk kepiting Echizen; musim semi/gugur untuk kuil dan tebing.",
+    "word_meaning": "dinosaurus — Fukui adalah ibu kota dinosaurus Jepang",
+    "tip": "Eihei-ji menawarkan pandangan kehidupan monastik Zen yang bekerja — kunjungi dengan hormat dan tenang.",
+    "blurb": ""
+  },
+  "yamanashi": {
+    "lede": "Danau-danau Mount Fuji, perkebunan anggur, dan kawasan wine terkemuka Jepang.",
+    "intro": "Yamanashi menawarkan pemandangan klasik Mount Fuji dari Fuji Five Lakes, plus kawasan wine terdepan Jepang di sekitar Kōfu. Ini adalah destinasi alam yang populer untuk melarikan diri dari Tokyo.",
+    "see": [
+      "Lake Kawaguchi dan pemandangan Fuji",
+      "Titik pandang Chūreitō Pagoda",
+      "Perkebunan anggur dan winery di Kōfu Basin",
+      "Shōsenkyō Gorge"
+    ],
+    "eat": "Hōtō (hot pot miso dengan mie pipih) dan anggur/wine.",
+    "getting": "Lake Kawaguchi berjarak ~2 jam dari Tokyo dengan bus atau kereta (melalui Ōtsuki).",
+    "when": "Pagi musim gugur/musim dingin yang cerah untuk pemandangan Fuji yang paling tajam; musim gugur untuk anggur.",
+    "word_meaning": "Mount Fuji — paling baik dilihat dari danau-danau Yamanashi",
+    "tip": "Chūreitō Pagoda yang dibingkai dengan Fuji dan bunga sakura adalah foto kartu pos yang klasik.",
+    "blurb": ""
+  },
+  "kyoto": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Kuil, teh, bambu — jantung budaya."
+  },
+  "osaka": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Ibukota kuliner yang ramah. Makan sampai puas."
+  },
+  "hyogo": {
+    "lede": "Kastil terindah Jepang di Himeji dan kota pelabuhan Kobe.",
+    "intro": "Hyōgo membentang dari Laut Jepang hingga Laut Pedalaman. Kastil Himeji adalah benteng bersejarah terbaik yang masih bertahan di negara ini, dan Kobe yang kosmopolitan terkenal di seluruh dunia karena daging sapinya.",
+    "see": [
+      "Himeji Castle (UNESCO)",
+      "Pelabuhan Kobe dan Gunung Rokkō",
+      "Arima Onsen",
+      "Kota Kinosaki Onsen"
+    ],
+    "eat": "Daging sapi Kobe dan gurita Akashi.",
+    "getting": "Kobe berjarak sekitar 30 menit dan Himeji sekitar 40 menit dari Osaka dengan kereta.",
+    "when": "Kapan saja; bunga sakura memperindah Kastil Himeji dengan indah di awal April.",
+    "word_meaning": "Kastil Himeji, kastil 'Bangau Putih'",
+    "tip": "Kastil Himeji adalah perjalanan sehari yang mudah dari Osaka atau Kyoto dengan shinkansen.",
+    "blurb": ""
+  },
+  "nara": {
+    "lede": "Ibu kota pertama Jepang — patung Buddha raksasa dan rusa yang berkeliaran bebas.",
+    "intro": "Nara adalah ibu kota pada abad ke-8 dan menyimpan beberapa kuil tertua di negara ini. Rusa liar berkeliaran di taman pusatnya, membungkuk untuk meminta kerupuk.",
+    "see": [
+      "Tōdai-ji dan Patung Buddha Besar (UNESCO)",
+      "Rusa di Nara Park",
+      "Kuil Kasuga Taisha",
+      "Hōryū-ji, salah satu bangunan kayu tertua di dunia"
+    ],
+    "eat": "Kakinoha-zushi (sushi daun kesemek) dan mochi.",
+    "getting": "Nara berjarak sekitar 45 menit dari Kyoto dan Osaka dengan kereta.",
+    "when": "Musim apa pun; perjalanan sehari yang mudah dari Kyoto atau Osaka.",
+    "word_meaning": "rusa — penghuni Nara Park yang berkeliaran bebas",
+    "tip": "Kerupuk untuk rusa (shika-senbei) dijual di sekitar taman; rusa akan membungkuk untuk mendapatkannya.",
+    "blurb": ""
+  },
+  "wakayama": {
+    "lede": "Gunung-gunung ziarah suci dan pemandian air panas pantai yang dramatis.",
+    "intro": "Wakayama menyimpan jantung spiritual Kōyasan (Gunung Kōya) dan rute ziarah Kumano Kodō, keduanya situs UNESCO, ditambah pantai selatan yang terjal.",
+    "see": [
+      "Kota kuil Kōyasan dan Okunoin",
+      "Rute ziarah Kumano Kodō (UNESCO)",
+      "Air Terjun Nachi dan kuil",
+      "Pantai Shirahama dan onsen"
+    ],
+    "eat": "Ramen Wakayama dan umeboshi (buah prem asin).",
+    "getting": "Kōyasan berjarak ~2 jam dari Osaka dengan kereta dan kereta gantung.",
+    "when": "Musim semi–musim gugur untuk hiking Kumano Kodō; musim apa pun untuk ketenangan Kōyasan.",
+    "word_meaning": "Gunung Kōya, sebuah kota biara Buddha yang suci",
+    "tip": "Menginap di penginapan kuil Kōyasan (shukubō) untuk mengikuti doa pagi.",
+    "blurb": ""
+  },
+  "tottori": {
+    "lede": "Bukit pasir terkenal Jepang di Laut Jepang.",
+    "intro": "Tottori adalah prefektur dengan populasi terkecil, terkenal dengan Bukit Pasir Tottori yang luas dan museum patung pasir yang unik. Ini juga adalah negeri manga.",
+    "see": [
+      "Tottori Sand Dunes",
+      "The Sand Museum",
+      "Mount Daisen",
+      "Mizuki Shigeru Road (manga yōkai)"
+    ],
+    "eat": "Kepiting salju di musim dingin.",
+    "getting": "Tottori dapat dicapai dengan kereta express terbatas dari Okayama atau Osaka.",
+    "when": "Musim dingin untuk kepiting salju; musim semi–musim gugur untuk bukit pasir (pasir musim panas sangat panas).",
+    "word_meaning": "bukit pasir — pemandangan khas Tottori",
+    "tip": "Anda dapat menunggangi unta atau berselancar pasir di bukit; datanglah saat matahari terbenam untuk menghindari panas siang hari.",
+    "blurb": ""
+  },
+  "shimane": {
+    "lede": "Rumah Izumo Taisha, salah satu kuil tertua dan terindah di Jepang.",
+    "intro": "Shimane penuh dengan mitologi. Izumo Taisha adalah salah satu kuil paling penting di negara ini, dan kota penghasil perak Iwami Ginzan adalah situs UNESCO.",
+    "see": [
+      "Kuil agung Izumo Taisha",
+      "Matsue Castle (menara asli)",
+      "Tambang perak Iwami Ginzan (UNESCO)",
+      "Taman Adachi Museum of Art"
+    ],
+    "eat": "Izumo soba dan sup miso kerang Shijimi.",
+    "getting": "Izumo dan Matsue dapat dijangkau dengan pesawat dari Tokyo atau dengan kereta express terbatas dari Okayama.",
+    "when": "Segala musim; Oktober adalah 'bulan para dewa' yang mitologis di Izumo.",
+    "word_meaning": "pertemuan jodoh / menjalin ikatan — spesialisasi Izumo Taisha",
+    "tip": "Di Izumo Taisha, para penyembah bertepuk tangan empat kali (bukan yang biasanya dua kali) — dua kali untuk diri sendiri, dua kali untuk pasangan.",
+    "blurb": ""
+  },
+  "okayama": {
+    "lede": "Sebuah taman yang indah, sebuah 'kastil gagak', dan kota kanal Kurashiki.",
+    "intro": "Okayama yang cerah adalah rumah bagi Kōraku-en, salah satu dari tiga taman besar Jepang, dan distrik kanal Bikan di Kurashiki yang menawan. Kota ini terhubung dengan legenda anak laki-laki persik Momotarō.",
+    "see": [
+      "Taman Kōraku-en dan Okayama Castle",
+      "Kurashiki Bikan, kawasan bersejarah",
+      "Pemandangan Washūzan dari jembatan Seto",
+      "Kibitsu Shrine"
+    ],
+    "eat": "Buah persik, anggur muscat, dan barazushi.",
+    "getting": "Okayama berjarak ~3 jam 15 menit dari Tokyo dan ~45 menit dari Osaka dengan shinkansen.",
+    "when": "Musim panas untuk buah persik dan anggur muscat; kapan saja untuk menikmati taman-taman.",
+    "word_meaning": "legenda cerita anak laki-laki persik yang terikat dengan Okayama",
+    "tip": "Okayama adalah pintu gerbang menuju pulau-pulau seni Shikoku melalui jembatan Seto-Ōhashi.",
+    "blurb": ""
+  },
+  "hiroshima": {
+    "lede": "Sebuah monumen perdamaian yang menyentuh hati dan torii mengapung di Miyajima.",
+    "intro": "Hiroshima menggabungkan sejarah yang mendalam dengan keindahan alam. Peace Memorial Park memperingati tahun 1945, sementara Itsukushima Shrine di Miyajima terdekat tampak mengapung saat air pasang tinggi.",
+    "see": [
+      "Peace Memorial Park dan A-Bomb Dome (UNESCO)",
+      "Itsukushima Shrine di Miyajima (UNESCO)",
+      "Hiroshima Castle",
+      "Taman Shukkei-en"
+    ],
+    "eat": "Okonomiyaki gaya Hiroshima (berlapis) dan tiram.",
+    "getting": "Hiroshima berjarak ~4 jam dari Tokyo dan ~1 jam 25 menit dari Osaka dengan shinkansen.",
+    "when": "Setiap musim; periksa tabel pasang surut untuk melihat torii Miyajima 'mengapung'.",
+    "word_meaning": "perdamaian — pesan dari monumen peringatan Hiroshima",
+    "tip": "Atur kunjungan Miyajima Anda saat air pasang tinggi untuk melihat torii mengapung, atau saat air surut untuk berjalan menuju torii tersebut.",
+    "blurb": ""
+  },
+  "kochi": {
+    "lede": "Sungai yang jernih, kastil terkenal, dan semangat reformer Sakamoto Ryōma.",
+    "intro": "Kōchi menghadap Samudra Pasifik di selatan Shikoku. Kota ini memiliki salah satu kastil asli Jepang yang masih ada, Sungai Shimanto yang pristine, dan budaya kuliner lokal yang kaya.",
+    "see": [
+      "Kōchi Castle (menara utama asli)",
+      "Shimanto River",
+      "Pantai Katsurahama",
+      "Cape Ashizuri"
+    ],
+    "eat": "Katsuo no tataki (bonito yang dibakar) adalah hidangan khas Kōchi.",
+    "getting": "Kōchi dapat dicapai dengan pesawat dari Tokyo/Osaka atau dengan kereta limited express melalui Shikoku.",
+    "when": "Musim semi hingga gugur untuk Sungai Shimanto; Agustus untuk festival tari Yosakoi.",
+    "word_meaning": "bonito yang dibakar, hidangan khas Kōchi",
+    "tip": "Coba katsuo no tataki yang dibakar di atas jerami padi untuk rasa asap yang paling autentik.",
+    "blurb": ""
+  },
+  "fukuoka": {
+    "lede": "Kota gerbang Kyūshū, terkenal dengan tonkotsu ramen dan warung makanan jalanan.",
+    "intro": "Fukuoka adalah kota terbesar dan paling ramah di Kyūshū — dekat dengan Korea, penuh dengan yatai (warung makanan) tepi sungai, dan menjadi basis yang sempurna untuk menjelajahi seluruh pulau.",
+    "see": [
+      "Yatai (warung makanan jalanan) sepanjang sungai",
+      "Ōhori Park dan reruntuhan Fukuoka Castle",
+      "Kuil Dazaifu Tenmangū",
+      "Kompleks Canal City"
+    ],
+    "eat": "Hakata tonkotsu ramen dan mentaiko (telur ikan kod yang pedas).",
+    "getting": "Fukuoka (Hakata) berjarak sekitar 5 jam dari Tokyo dengan shinkansen, atau sekitar 2 jam dengan pesawat.",
+    "when": "Sepanjang tahun; yatai paling meriah pada malam-malam yang hangat.",
+    "word_meaning": "warung makanan terbuka — institusi Fukuoka yang ikonik",
+    "tip": "Makanlah di yatai tepi sungai di Nakasu pada malam hari — tunjuk dan pesan; tempat duduk terbatas.",
+    "blurb": ""
+  },
+  "saga": {
+    "lede": "Jantung keramik Jepang dan festival balon udara musim gugur yang meriah.",
+    "intro": "Saga yang kecil adalah tempat lahirnya keramik Jepang — barang-barang Arita dan Imari terkenal di seluruh dunia — dan menyelenggarakan festival balon udara panas spektakuler setiap musim gugur.",
+    "see": [
+      "Kota keramik Arita dan Imari",
+      "Situs prasejarah Yoshinogari",
+      "Saga International Balloon Fiesta",
+      "Kuil Yutoku Inari"
+    ],
+    "eat": "Daging sapi Saga dan cumi-cumi segar di Yobuko.",
+    "getting": "Saga berjarak ~40 menit dari Fukuoka (Hakata) dengan kereta ekspres terbatas.",
+    "when": "Akhir Oktober–awal November untuk festival balon.",
+    "word_meaning": "Keramik Arita — salah satu keramik paling terkenal di Jepang",
+    "tip": "Gabungkan Saga dengan Fukuoka — mereka dekat, dan Saga jauh lebih sepi.",
+    "blurb": ""
+  },
+  "nagasaki": {
+    "lede": "Kota pelabuhan dengan sejarah lintas budaya, pemandangan bukit, dan taman perdamaian.",
+    "intro": "Nagasaki adalah jendela Jepang ke dunia selama masa isolasinya, meninggalkan warisan Belanda, Cina, dan Kristen. Kota ini juga mengingat tahun 1945 dengan Taman Perdamaiannya.",
+    "see": [
+      "Glover Garden dan pemandangan pelabuhan",
+      "Nagasaki Peace Park",
+      "Dejima, bekas pos perdagangan Belanda",
+      "Gunkanjima (Pulau Hashima)"
+    ],
+    "eat": "Champon dan sara-udon; kue castella yang lembut.",
+    "getting": "Nagasaki berjarak ~1 jam 30 menit dari Fukuoka melalui Nishi-Kyūshū Shinkansen + transfer.",
+    "when": "Kapan saja; pemandangan malam dari Gunung Inasa terkenal sepanjang tahun.",
+    "word_meaning": "Hidangan mie campuran yang gurih khas Nagasaki",
+    "tip": "Pemandangan malam Gunung Inasa termasuk salah satu dari tiga terbaik di Jepang — naiklah dengan ropeway setelah gelap.",
+    "blurb": ""
+  },
+  "kumamoto": {
+    "lede": "Sebuah kastil yang megah dan salah satu kaldera vulkanik terbesar di dunia di Aso.",
+    "intro": "Kastil Kumamoto yang mengesankan adalah simbol Kyūshū, dan kaldera Mount Aso termasuk salah satu cekungan vulkanik aktif terbesar di bumi.",
+    "see": [
+      "Kumamoto Castle",
+      "Mount Aso caldera",
+      "Suizenji Jōjuen garden",
+      "Kurokawa Onsen"
+    ],
+    "eat": "Basashi (daging kuda sashimi) dan ramen Kumamoto.",
+    "getting": "Kumamoto berjarak ~40 menit dari Fukuoka (Hakata) dengan Kyūshū Shinkansen.",
+    "when": "Musim semi–musim gugur untuk Aso (periksa peringatan aktivitas vulkanik sebelum pergi).",
+    "word_meaning": "gunung berapi — Mount Aso adalah gunung raksasa di wilayah ini",
+    "tip": "Akses Mount Aso dapat ditutup dengan pemberitahuan singkat karena gas vulkanik — periksa status hari ini terlebih dahulu.",
+    "blurb": ""
+  },
+  "iwate": {
+    "lede": "Prefektur yang luas dan bergonung-gunung dengan candi, garis pantai, dan tradisi cold-soba.",
+    "intro": "Iwate adalah prefektur terluas kedua berdasarkan luas wilayah dan salah satu yang paling sepi. Sorotan utamanya adalah Hiraizumi, sebuah situs Warisan Dunia UNESCO dengan candi dan taman Buddhisme Pure Land.",
+    "see": [
+      "Candi Chūson-ji dan Mōtsū-ji di Hiraizumi (UNESCO)",
+      "Ngarai Geibikei dan Genbikei",
+      "Pantai Sanriku yang dramatis",
+      "Jalan-jalan bersejarah di Morioka"
+    ],
+    "eat": "Morioka terkenal dengan tiga mie: wanko-soba, reimen, dan jajamen.",
+    "getting": "Morioka berjarak ~2 jam 10 menit dari Tokyo dengan Tōhoku Shinkansen.",
+    "when": "Musim semi hingga musim gugur untuk mendaki dan menjelajahi pantai; musim panas untuk tantangan wanko-soba.",
+    "word_meaning": "soba ukuran gigitan all-you-can-eat",
+    "tip": "Di restoran wanko-soba, tutup mangkuk Anda untuk menandakan bahwa Anda sudah kenyang — jika tidak, penambahan terus akan datang.",
+    "blurb": ""
+  },
+  "miyagi": {
+    "lede": "Rumah bagi Sendai yang meriah dan salah satu dari 'tiga pemandangan besar' Jepang di Teluk Matsushima.",
+    "intro": "Miyagi berpusat di Sendai, kota terbesar di Tōhoku, yang didirikan oleh tokoh legendaris Date Masamune. Pulau-pulau berpohon pinus di Teluk Matsushima adalah tempat pemandangan klasik yang indah.",
+    "see": [
+      "Teluk Matsushima — pulau-pulau kecil berpohon pinus",
+      "Makam Zuihōden di Sendai",
+      "Reruntuhan Kastil Aoba",
+      "Pemandian air panas Naruko Onsen"
+    ],
+    "eat": "Sendai terkenal dengan lidah sapi panggang (gyūtan) dan zunda (pasta kacang edamame manis).",
+    "getting": "Sendai berjarak ~1 jam 30 menit dari Tokyo dengan Tōhoku Shinkansen — kota Tōhoku yang paling mudah dijangkau.",
+    "when": "Sepanjang tahun; Matsushima sangat indah di musim gugur, dan festival Tanabata Sendai diadakan pada bulan Agustus.",
+    "word_meaning": "lidah sapi panggang, spesialisasi Sendai",
+    "tip": "Naiklah kapal pesiar singkat mengelilingi Teluk Matsushima untuk melihat pulau-pulau dari atas air.",
+    "blurb": ""
+  },
+  "gunma": {
+    "lede": "Resor pemandian air panas terkenal dan warisan pabrik sutra UNESCO.",
+    "intro": "Gunma yang terisolasi dari laut adalah negeri onsen. Kusatsu adalah salah satu kota pemandian air panas paling terkenal di Jepang, dan Pabrik Sutra Tomioka menandai awal industri modern Jepang.",
+    "see": [
+      "Kusatsu Onsen dan lapangan air panas yubatake-nya",
+      "Tangga batu Ikaho Onsen",
+      "Pabrik Sutra Tomioka (UNESCO)",
+      "Gunung Haruna dan Danau Haruna"
+    ],
+    "eat": "Cobalah udon Mizusawa dan konnyaku lokal.",
+    "getting": "Takasaki sekitar 50 menit dari Tokyo dengan shinkansen; kota-kota onsen dapat diakses dengan bus atau jalur lokal.",
+    "when": "Musim apa pun — onsen sangat menyenangkan di bulan-bulan dingin.",
+    "word_meaning": "pemandian air panas — Gunma memiliki yang paling terkenal di Jepang",
+    "tip": "Saksikan pertunjukan 'yumomi' pengadukan air panas di Kusatsu.",
+    "blurb": ""
+  },
+  "saitama": {
+    "lede": "Sedikit Edo di Kawagoe, ditambah bonsai dan pinggiran kota yang ramai.",
+    "intro": "Saitama mengelilingi utara Tokyo. Kawagoe ('Little Edo') menyimpan jalan pedagang berlapis tanah liat dan menara lonceng kayu, perjalanan setengah hari yang mudah dan menawan.",
+    "see": [
+      "Jalan gudang Kurazukuri Kawagoe dan Bell Tower",
+      "Taman Hitsujiyama dengan shibazakura (lumut merah muda)",
+      "Desa Bonsai Omiya",
+      "Museum Kereta Api di Omiya"
+    ],
+    "eat": "Kawagoe terkenal dengan berbagai camilan ubi manis.",
+    "getting": "Kawagoe berjarak ~30–45 menit dari pusat Tokyo dengan kereta api (Tōbu/Seibu/JR).",
+    "when": "April untuk melihat shibazakura; sepanjang tahun untuk jalan-jalan tua Kawagoe.",
+    "word_meaning": "'Little Edo' — julukan Kawagoe",
+    "tip": "Kawagoe adalah perjalanan setengah hari yang sempurna ketika Tokyo terasa terlalu ramai.",
+    "blurb": ""
+  },
+  "chiba": {
+    "lede": "Tetangga tepi laut Tokyo — gerbang bandara, pantai, dan candi terkenal.",
+    "intro": "Chiba adalah tempat sebagian besar pengunjung pertama kali mendarat (Bandara Narita) dan rumah bagi Tokyo Disney Resort (sebenarnya berada di Urayasu). Selain itu, ada pantai berselancar, Semenanjung Bōsō, dan candi besar Narita-san.",
+    "see": [
+      "Kuil Narita-san Shinshō-ji",
+      "Tokyo Disney Resort (Urayasu)",
+      "Nokogiriyama dan Budha tebing-nya",
+      "Pantai Kujūkuri untuk berselancar"
+    ],
+    "eat": "Makanan laut segar dan kacang tanah adalah keahlian lokal.",
+    "getting": "Bandara Narita berada di Chiba; pusat Chiba sekitar 40 menit dari Tokyo dengan kereta.",
+    "when": "Musim panas untuk pantai dan berselancar; musim semi untuk mengunjungi kuil.",
+    "word_meaning": "kuil besar di dekat Bandara Narita",
+    "tip": "Memiliki waktu transit panjang di Narita? Kuil Narita-san adalah perjalanan cepat dan sangat berharga dari bandara.",
+    "blurb": ""
+  },
+  "tokyo": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Neon, kuil-kuil, dan kereta terbaik di dunia."
+  },
+  "kanagawa": {
+    "lede": "Daibutsu raksasa Kamakura, kota pelabuhan Yokohama, dan pemandian air panas Hakone.",
+    "intro": "Di selatan Tokyo, Kanagawa menawarkan kota kuil tepi laut Kamakura, Yokohama yang kosmopolitan dengan Chinatown yang besar, dan resor onsen serta pemandangan di Hakone dengan Gunung Fuji yang terlihat di hari cerah.",
+    "see": [
+      "Daibutsu (Great Buddha) Kamakura",
+      "Pemandian air panas Hakone dan Danau Ashi",
+      "Yokohama Minato Mirai dan Chinatown",
+      "Pulau Enoshima"
+    ],
+    "eat": "Chinatown Yokohama dan shirasu (ikan teri) di dekat Enoshima.",
+    "getting": "Yokohama sekitar 30 menit, Kamakura sekitar 1 jam, Hakone sekitar 1 jam 25 menit dari Tokyo dengan kereta.",
+    "when": "Hari-hari musim dingin yang cerah memberikan pemandangan Gunung Fuji terbaik dari Hakone.",
+    "word_meaning": "Daibutsu — patung perunggu ikonik Kamakura",
+    "tip": "Hakone Free Pass mencakup perjalanan kereta, kereta kabel, dan kapal bajak laut mengelilingi Danau Ashi.",
+    "blurb": ""
+  },
+  "niigata": {
+    "lede": "Beras, sake, dan salju di pantai Laut Jepang.",
+    "intro": "Niigata menghasilkan beberapa beras dan sake terbaik Jepang, memiliki salju ski kelas dunia, dan menghadap Pulau Sado di seberang laut. Jaraknya hanya perjalanan shinkansen singkat dari Tokyo.",
+    "see": [
+      "Pulau Sado dan sejarah pertambangan emasnya",
+      "Ladang seni terbuka Echigo-Tsumari",
+      "Resor ski di sekitar Yuzawa",
+      "Pabrik sake lokal"
+    ],
+    "eat": "Beras Koshihikari, sake, dan hegi-soba.",
+    "getting": "Niigata sekitar 2 jam, Echigo-Yuzawa sekitar 1 jam 15 menit dari Tokyo dengan Jōetsu Shinkansen.",
+    "when": "Musim dingin untuk ski; musim panas untuk tahun-tahun triennale seni Echigo-Tsumari.",
+    "word_meaning": "sake — Niigata adalah salah satu wilayah terbaik Jepang untuk minuman ini",
+    "tip": "Di Stasiun Echigo-Yuzawa, 'ponshukan' memungkinkan Anda mencicipi puluhan sake lokal dengan koin.",
+    "blurb": ""
+  },
+  "nagano": {
+    "lede": "Puncak-puncak Alpine, kuil besar Zenkō-ji, dan monyet salju di mata air panas.",
+    "intro": "Nagano menjadi tuan rumah Olimpiade Musim Dingin 1998 dan merupakan jantung pegunungan Jepang. Kunjungi kuil kuno Zenkō-ji, monyet salju yang mandi di Jigokudani, dan kota-kota pos di Lembah Kiso.",
+    "see": [
+      "Kuil Zenkō-ji",
+      "Taman monyet salju Jigokudani",
+      "Kastil Matsumoto",
+      "Kota-kota pos Lembah Kiso (Tsumago/Magome)"
+    ],
+    "eat": "Soba Shinshu dan pangsit oyaki.",
+    "getting": "Kota Nagano berjarak ~1 jam 30 menit dari Tokyo dengan Hokuriku Shinkansen.",
+    "when": "Musim dingin untuk melihat monyet salju di uap panas; musim panas untuk hiking alpine yang sejuk.",
+    "word_meaning": "mie soba gandum - Shinshu (Nagano) terkenal dengan mie ini",
+    "tip": "Monyet salju berjarak jalan kaki 30 menit menanjak dari halte bus — gunakan alas kaki yang sesuai di musim dingin.",
+    "blurb": ""
+  },
+  "gifu": {
+    "lede": "Desa-desa pegunungan dengan atap jerami dan kota lama tepi sungai Takayama.",
+    "intro": "Gifu menjangkau jauh ke dalam Pegunungan Alpen. Rumah pertanian berkatap jerami curam Shirakawa-gō adalah ikon UNESCO, dan Takayama menjaga distrik pedagang yang indah dan utuh.",
+    "see": [
+      "Desa gasshō-zukuri Shirakawa-gō (UNESCO)",
+      "Kota lama Takayama",
+      "Gujō Hachiman dan tarian musim panasnya",
+      "Kastil Gifu dan penangkapan ikan dengan cormorant"
+    ],
+    "eat": "Daging Hida adalah spesialisasi lokal yang sangat dihargai.",
+    "getting": "Takayama berjarak ~2 jam 20 menit dari Nagoya dengan kereta limited express; Shirakawa-gō dapat diakses dengan bus.",
+    "when": "Musim dingin untuk atap jerami tertutup salju (dan malam penerangannya); musim semi/gugur untuk festival Takayama.",
+    "word_meaning": "gaya rumah pertanian berkatap jerami curam khas Shirakawa-gō",
+    "tip": "Penerangan musim dingin di Shirakawa-gō terbatas dan memerlukan reservasi sebelumnya.",
+    "blurb": ""
+  },
+  "shizuoka": {
+    "lede": "Gunung Fuji, perkebunan teh hijau, dan Semenanjung Izu yang indah.",
+    "intro": "Shizuoka membentang di sepanjang Samudra Pasifik di bawah kaki Gunung Fuji. Wilayah ini menghasilkan sebagian besar teh hijau Jepang, dan Semenanjung Izu penuh dengan kota-kota onsen dan pantai yang menawan.",
+    "see": [
+      "Pemandangan Gunung Fuji dan Stasiun ke-5",
+      "Hutan pinus Miho-no-Matsubara",
+      "Kota-kota onsen di Semenanjung Izu",
+      "Kastil Sunpu di Kota Shizuoka"
+    ],
+    "eat": "Segala macam teh hijau, ditambah makanan laut dan mie Fuji.",
+    "getting": "Kota Shizuoka berjarak ~1 jam dari Tokyo dengan Shinkansen Tōkaidō.",
+    "when": "Musim semi hingga awal musim panas untuk melihat perkebunan teh; hari-hari musim dingin yang cerah untuk melihat Gunung Fuji.",
+    "word_meaning": "teh hijau — Shizuoka adalah produsen terbesar teh hijau di Jepang",
+    "tip": "Semenanjung Izu adalah tempat relaksasi onsen yang santai dan mudah dikombinasikan dengan pemandangan Gunung Fuji.",
+    "blurb": ""
+  },
+  "aichi": {
+    "lede": "Kastil Nagoya dan industri, plus sejarah era samurai.",
+    "intro": "Aichi berpusat di Nagoya, kota terbesar keempat Jepang dan pusat industri besar (rumah Toyota). Kota ini memiliki kastil yang direkonstruksi, sebuah kuil utama, dan budaya kuliner lokal yang lezat.",
+    "see": [
+      "Nagoya Castle",
+      "Atsuta Shrine",
+      "Toyota Commemorative Museum",
+      "Inuyama Castle"
+    ],
+    "eat": "Nagoya 'meshi': miso-katsu, hitsumabushi belut, dan sayap tebasaki.",
+    "getting": "Nagoya berjarak ~1 jam 40 menit dari Tokyo dan ~50 menit dari Kyoto dengan Tōkaidō Shinkansen.",
+    "when": "Sepanjang tahun; pusat transit yang praktis antara Tokyo dan Kyoto.",
+    "word_meaning": "daging babi goreng dengan saus miso merah yang kaya, klasik Nagoya",
+    "tip": "Nagoya menjadi basis yang baik untuk perjalanan sehari ke Takayama di Gifu atau Ise di Mie.",
+    "blurb": ""
+  },
+  "mie": {
+    "lede": "Kuil paling suci Jepang di Ise dan tradisi penyelam mutiara Ama.",
+    "intro": "Mie adalah rumah bagi Ise Jingū, kuil Shintō paling sakral, yang terletak di hutan kuno. Pantainya terkenal dengan mutiara dan tradisi penyelam bebas Ama perempuan.",
+    "see": [
+      "Kuil agung Ise Jingū",
+      "Meoto Iwa (Batu Pengantin)",
+      "Pulau-pulau mutiara Toba",
+      "Situs ninja Iga-Ueno"
+    ],
+    "eat": "Makanan laut Ise-Shima dan daging sapi Matsusaka yang terkenal.",
+    "getting": "Ise berjarak ~1 jam 20 menit dari Nagoya dengan kereta ekspres terbatas; ~2 jam dari Osaka.",
+    "when": "Setiap musim; kuil ini memiliki suasana yang sangat istimewa di pagi hari.",
+    "word_meaning": "Kuil Shintō paling suci di Jepang",
+    "tip": "Kunjungi Kuil Luar (Gekū) sebelum Kuil Dalam (Naikū) — urutan tradisional.",
+    "blurb": ""
+  },
+  "shiga": {
+    "lede": "Mengelilingi danau terbesar Jepang, dengan kastil yang memukau.",
+    "intro": "Shiga didefinisikan oleh Lake Biwa, danau air tawar terbesar di negara ini. Hikone Castle adalah salah satu dari hanya beberapa kastil asli yang masih berdiri.",
+    "see": [
+      "Lake Biwa",
+      "Hikone Castle (keep asli)",
+      "Kuil Enryaku-ji di Mount Hiei (UNESCO)",
+      "Miho Museum"
+    ],
+    "eat": "Daging sapi Ōmi dan funazushi (sushi fermentasi kuno).",
+    "getting": "Ōtsu/Hikone berjarak sekitar 10–50 menit dari Kyoto dengan kereta.",
+    "when": "Sepanjang tahun; mudah ditambahkan ke perjalanan Kyoto.",
+    "word_meaning": "Lake Biwa, danau terbesar Jepang",
+    "tip": "Hikone Castle adalah keep asli yang nyata — lebih langka daripada sebagian besar 'kastil' yang akan Anda lihat di Jepang.",
+    "blurb": ""
+  },
+  "yamaguchi": {
+    "lede": "Sebuah jembatan melengkung lima busur yang spektakuler dan sebuah kuil berwarna merah terang.",
+    "intro": "Di ujung barat Honshu, Yamaguchi menawarkan jembatan Kintai-kyō yang elegan, kuil rubah tepi pantai Motonosumi, dan gua batu kapur Akiyoshidai.",
+    "see": [
+      "Jembatan kayu melengkung Kintai-kyō",
+      "Gerbang merah Kuil Motonosumi Inari",
+      "Gua dan dataran tinggi Akiyoshidō",
+      "Jembatan Tsunoshima"
+    ],
+    "eat": "Fugu (ikan buntal) adalah kelezatan lokal di Shimonoseki.",
+    "getting": "Shin-Yamaguchi berada di jalur Sanyō Shinkansen; Iwakuni dekat Hiroshima.",
+    "when": "Musim semi/gugur untuk jembatan Kintai-kyō dengan bunga sakura atau dedaunan musiman.",
+    "word_meaning": "ikan buntal — kelezatan terkenal dan berlisensi Shimonoseki",
+    "tip": "Fugu disiapkan hanya oleh chef berlisensi — makan di restoran Shimonoseki yang bereputasi baik.",
+    "blurb": ""
+  },
+  "tokushima": {
+    "lede": "Pusaran air yang menggelegar dan tari Awa Odori yang penuh energi.",
+    "intro": "Tokushima terkenal dengan pusaran air pasang surut di Selat Naruto dan festival tari musim panas Awa Odori, festival tari paling meriah di Jepang. Lembah Iya yang terpencil memiliki jembatan-jembatan dari tali rotan.",
+    "see": [
+      "Pusaran air Naruto",
+      "Awa Odori (festival tari Agustus)",
+      "Jembatan tali rotan di Lembah Iya",
+      "Gunung Tsurugi"
+    ],
+    "eat": "Jeruk sudachi dan ramen Tokushima.",
+    "getting": "Tokushima dapat dicapai dengan bus dari Osaka/Kobe melalui jembatan Akashi-Kaikyō (~2 jam 30 menit).",
+    "when": "12–15 Agustus untuk Awa Odori; pasang surut perbani menghasilkan pusaran air terbesar.",
+    "word_meaning": "Festival tari besar Tokushima pada pertengahan Agustus",
+    "tip": "Pusaran air paling kuat sekitar pasang surut perbani di musim semi dan musim gugur — periksa jadwalnya.",
+    "blurb": ""
+  },
+  "kagawa": {
+    "lede": "Prefektur terkecil Jepang — mie udon dan pulau-pulau seni.",
+    "intro": "Kagawa terkenal dengan sanuki udon dan pulau-pulau seni kontemporer di Laut Seto Dalam, dengan Naoshima sebagai pusat utamanya.",
+    "see": [
+      "Pulau-pulau seni Naoshima dan Teshima",
+      "Ritsurin Garden",
+      "Kuil Kotohira-gū (Konpira)",
+      "Kastil Marugame"
+    ],
+    "eat": "Sanuki udon — kenyal, murah, dan tersedia di mana-mana.",
+    "getting": "Takamatsu berjarak sekitar 50 menit dari Okayama dengan kereta api melalui jembatan Seto-Ōhashi.",
+    "when": "Musim semi/musim panas/musim gugur untuk tahun-tahun festival seni Setouchi Triennale.",
+    "word_meaning": "mie gandum tebal — Kagawa adalah kerajaan udon",
+    "tip": "Banyak toko udon Kagawa melayani diri sendiri dan buka pagi — sarapan murah dan lezat.",
+    "blurb": ""
+  },
+  "ehime": {
+    "lede": "Salah satu pemandian air panas tertua di Jepang dan sebuah kastil di atas bukit di Matsuyama.",
+    "intro": "Dōgo Onsen milik Ehime adalah salah satu pemandian air panas tertua di Jepang. Matsuyama memiliki kastil asli yang indah, dan rute bersepeda Shimanami Kaidō adalah kelas dunia.",
+    "see": [
+      "Dōgo Onsen Honkan",
+      "Matsuyama Castle",
+      "Rute bersepeda Shimanami Kaidō",
+      "Kota pedagang lilin Uchiko"
+    ],
+    "eat": "Jeruk (mikan) dan taimeshi (nasi dengan ikan tai).",
+    "getting": "Matsuyama dapat dicapai dengan pesawat dari Tokyo/Osaka atau dengan kereta/bus di seluruh Shikoku.",
+    "when": "Musim semi hingga musim gugur untuk bersepeda di Shimanami Kaidō; kapan saja untuk onsen.",
+    "word_meaning": "salah satu pemandian air panas tertua di Jepang",
+    "tip": "Shimanami Kaidō menghubungkan Ehime ke Hiroshima melalui serangkaian jembatan — sewa sepeda sekali jalan.",
+    "blurb": ""
+  },
+  "oita": {
+    "lede": "Ibukota mata air panas Jepang — Beppu yang mengepul dan Yufuin yang bergaya.",
+    "intro": "Ōita menghasilkan lebih banyak air mata air panas daripada tempat lain di Jepang. 'Neraka' Beppu adalah mata air berwarna-warni yang hidup, sementara Yufuin adalah tempat peristirahatan onsen yang bergaya di bawah gunung kembar.",
+    "see": [
+      "Mata air panas 'Neraka' (jigoku) Beppu",
+      "Kota onsen Yufuin",
+      "Patung-patung Buddha batu Usuki",
+      "Mount Yufu"
+    ],
+    "eat": "Toriten (ayam tempura) dan daging sapi Bungo.",
+    "getting": "Beppu/Ōita berjarak ~2 jam dari Fukuoka (Hakata) dengan kereta ekspres terbatas.",
+    "when": "Sepanjang tahun — onsen sangat indah di bulan-bulan yang lebih sejuk.",
+    "word_meaning": "'neraka' — mata air panas Beppu yang berwarna-warni cerah (untuk dilihat)",
+    "tip": "Mata air panas 'neraka' Beppu adalah untuk dilihat, bukan untuk mandi — onsen terpisah tersedia untuk berendam.",
+    "blurb": ""
+  },
+  "miyazaki": {
+    "lede": "Pantai Pasifik yang cerah, selancar, dan kuil-kuil yang penuh mitos.",
+    "intro": "Miyazaki di pantai tenggara Kyūshū memiliki iklim yang lembut dan cerah, jalan-jalan yang dipenuhi pohon palem, serta hubungan mendalam dengan mitos penciptaan Jepang di Takachiho Gorge.",
+    "see": [
+      "Takachiho Gorge",
+      "Udo Shrine di sebuah gua tepi laut",
+      "Pulau Aoshima dan kuil",
+      "Pantai Nichinan"
+    ],
+    "eat": "Ayam nanban dan mangga Miyazaki.",
+    "getting": "Miyazaki dapat dicapai dengan pesawat dari kota-kota besar, atau dengan kereta ekspres terbatas di dalam Kyūshū.",
+    "when": "Musim panas untuk selancar dan mangga; musim apa pun untuk menikmati pantai yang lembut.",
+    "word_meaning": "sebuah ngarai dan situs mitologis dalam legenda penciptaan Jepang",
+    "tip": "Dayungi perahu ke Takachiho Gorge untuk pemandangan klasik air terjun dari dekat.",
+    "blurb": ""
+  },
+  "kagoshima": {
+    "lede": "Gunung berapi aktif di seberang teluk dan pintu gerbang ke pulau-pulau hutan kuno.",
+    "intro": "Kagoshima terletak di bawah gunung berapi Sakurajima yang mengepul, sering disebut 'Napoli dari Timur'. Ini adalah titik pemberangkatan menuju pulau hutan cedar Yakushima.",
+    "see": [
+      "Gunung berapi Sakurajima",
+      "Taman Sengan-en",
+      "Hutan cedar kuno Yakushima (UNESCO)",
+      "Pemandian pasir Ibusuki"
+    ],
+    "eat": "Kurobuta (babi hitam) dan kue ikan satsuma-age.",
+    "getting": "Kagoshima berjarak ~1 jam 40 menit dari Fukuoka dengan Kyūshū Shinkansen, atau terbang.",
+    "when": "Musim semi–musim gugur untuk pendakian Yakushima; musim apa pun untuk kota dan onsen.",
+    "word_meaning": "gunung berapi aktif yang menjulang di atas Teluk Kagoshima",
+    "tip": "Coba pemandian pasir Ibusuki — Anda akan dikubur dalam pasir vulkanik yang panas alami.",
+    "blurb": ""
+  },
+  "okinawa": {
+    "lede": "",
+    "intro": "",
+    "see": [],
+    "eat": "",
+    "getting": "",
+    "when": "",
+    "word_meaning": "",
+    "tip": "",
+    "blurb": "Pulau-pulau tropis dan budaya Ryukyu yang khas."
+  }
+}

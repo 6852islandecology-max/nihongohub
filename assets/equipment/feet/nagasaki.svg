@@ -1,0 +1,48 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Gunkanjima Boots</title>
+  
+  <!-- Left Boot -->
+  <g id="left-boot">
+    <!-- Boot sole -->
+    <rect x="4" y="40" width="16" height="4" fill="#2d2d2d"/>
+    <!-- Boot body -->
+    <rect x="6" y="28" width="12" height="12" fill="#1a1a1a"/>
+    <!-- Boot shaft -->
+    <rect x="8" y="20" width="8" height="8" fill="#3d3d3d"/>
+    <!-- Metal accent band -->
+    <rect x="6" y="26" width="12" height="2" fill="#4d8fbf"/>
+    <!-- Laces/detail -->
+    <rect x="10" y="22" width="2" height="4" fill="#4d8fbf"/>
+    <!-- Toe reinforcement -->
+    <rect x="6" y="38" width="12" height="2" fill="#4d8fbf"/>
+    <!-- Rivets -->
+    <rect x="8" y="30" width="2" height="2" fill="#8b8b8b"/>
+    <rect x="14" y="30" width="2" height="2" fill="#8b8b8b"/>
+    <rect x="8" y="36" width="2" height="2" fill="#8b8b8b"/>
+    <rect x="14" y="36" width="2" height="2" fill="#8b8b8b"/>
+  </g>
+  
+  <!-- Right Boot -->
+  <g id="right-boot">
+    <!-- Boot sole -->
+    <rect x="44" y="40" width="16" height="4" fill="#2d2d2d"/>
+    <!-- Boot body -->
+    <rect x="46" y="28" width="12" height="12" fill="#1a1a1a"/>
+    <!-- Boot shaft -->
+    <rect x="48" y="20" width="8" height="8" fill="#3d3d3d"/>
+    <!-- Metal accent band -->
+    <rect x="46" y="26" width="12" height="2" fill="#4d8fbf"/>
+    <!-- Laces/detail -->
+    <rect x="52" y="22" width="2" height="4" fill="#4d8fbf"/>
+    <!-- Toe reinforcement -->
+    <rect x="46" y="38" width="12" height="2" fill="#4d8fbf"/>
+    <!-- Rivets -->
+    <rect x="48" y="30" width="2" height="2" fill="#8b8b8b"/>
+    <rect x="54" y="30" width="2" height="2" fill="#8b8b8b"/>
+    <rect x="48" y="36" width="2" height="2" fill="#8b8b8b"/>
+    <rect x="54" y="36" width="2" height="2" fill="#8b8b8b"/>
+  </g>
+  
+  <!-- Frame border (rare rarity) -->
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#4d8fbf" stroke-width="2"/>
+</svg>

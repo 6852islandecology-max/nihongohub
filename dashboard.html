@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.nihongo-hub.com/dashboard.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:url" content="https://www.nihongo-hub.com/dashboard.html">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta property="og:site_name" content="NihongoHub">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Your JLPT Readiness — NihongoHub</title>
+<meta name="description" content="Your personal JLPT readiness dashboard: current level, weeks to N3, recent activity, and your due review pile.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--red:#bf3325;--gold:#e0a634;--gold-d:#c8911f;
+  --soft:#ddcfb6;--muted:#7a6a52;--white:#fdfaf3;--hud:#0d0a14;--green:#2a7a4b;
+  --pixel:'Press Start 2P',monospace;--dot:'DotGothic16',sans-serif;
+}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);
+  background:radial-gradient(circle at 85% 0%,rgba(224,166,52,.12),transparent 50%),var(--paper);min-height:100vh}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:center;padding:12px clamp(14px,4vw,26px);gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud .navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:14px}
+.hud a.back:hover{color:var(--gold)}
+.langbar{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;background:var(--white);border-bottom:1px solid var(--soft);padding:7px 10px}
+.langbar button{font-family:var(--dot);font-size:13px;background:none;border:none;cursor:pointer;color:var(--muted);padding:3px 8px;border-radius:5px}
+.langbar button.active{color:var(--ink);background:var(--soft);font-weight:700}
+.wrap{max-width:880px;margin:0 auto;padding:30px clamp(16px,4vw,26px) 60px}
+
+.intro{margin-bottom:24px}
+.intro .tag{font-family:var(--pixel);font-size:10px;color:var(--gold-d);letter-spacing:1px;margin-bottom:8px}
+.intro h1{font-family:var(--dot);font-size:clamp(26px,5vw,42px);line-height:1.18;margin-bottom:6px}
+.intro h1 em{color:var(--red);font-style:normal}
+.intro p{color:var(--muted);font-size:16px;line-height:1.6;max-width:680px}
+
+.eta{background:var(--hud);color:var(--white);border:3px solid var(--gold);border-radius:14px;
+  padding:22px 22px;margin-bottom:22px;box-shadow:0 0 0 3px var(--ink),6px 9px 0 rgba(22,16,10,.18);
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.eta .left{flex:1;min-width:240px}
+.eta .lbl{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:1px;margin-bottom:6px}
+.eta .big{font-family:var(--dot);font-size:clamp(28px,5vw,38px);line-height:1.15}
+.eta .big strong{color:var(--gold)}
+.eta .sub{color:rgba(255,255,255,.66);font-size:14px;margin-top:6px}
+.eta .btns{display:flex;flex-wrap:wrap;gap:10px}
+.eta .btn{font-family:var(--dot);font-size:15px;cursor:pointer;border:none;border-radius:8px;padding:13px 18px;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+.eta .btn.primary{background:var(--red);color:#fff;border-bottom:3px solid #7e1c12}
+.eta .btn.ghost{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+
+.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-bottom:20px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+
+.card{background:var(--white);border:2px solid var(--soft);border-radius:12px;padding:18px 18px}
+.card h2{font-family:var(--dot);font-size:18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.card h2 small{font-family:var(--pixel);font-size:9px;color:var(--muted);letter-spacing:1px}
+
+.bars{display:flex;flex-direction:column;gap:11px}
+.bar{display:grid;grid-template-columns:42px 1fr 56px;gap:9px;align-items:center}
+.bar .lab{font-family:var(--pixel);font-size:10px;color:var(--ink)}
+.bar .lab.cur{color:var(--red)}
+.bar .lab.tgt{color:var(--gold-d)}
+.bar .track{height:14px;background:#e9dec6;border:2px solid var(--soft);border-radius:7px;overflow:hidden;position:relative}
+.bar .fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--red));transition:width .55s}
+.bar .pct{font-family:var(--dot);font-size:13px;color:var(--muted);text-align:right}
+.bar .threshold{position:absolute;top:0;bottom:0;left:75%;width:2px;background:rgba(22,16,10,.42)}
+
+.spark{margin-top:10px}
+.spark svg{display:block;width:100%;height:90px}
+.weekly-tot{font-family:var(--dot);font-size:14px;color:var(--muted);margin-top:8px}
+.weekly-tot b{color:var(--ink);font-size:20px}
+
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+@media(max-width:520px){.actions{grid-template-columns:1fr}}
+.aciton-btn{font-family:var(--dot);font-size:15px;cursor:pointer;border:none;border-radius:9px;
+  padding:14px;text-decoration:none;text-align:center;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center}
+.action-train{background:var(--red);color:#fff;border-bottom:3px solid #7e1c12}
+.action-review{background:var(--white);color:var(--ink);border:2px solid var(--ink)}
+.action-review.disabled{opacity:.45;pointer-events:none}
+.action-btn small{font-family:var(--pixel);font-size:8px;letter-spacing:.5px;opacity:.7}
+
+.guide{background:var(--white);border:2px solid var(--soft);border-radius:12px;padding:18px 18px;margin-top:18px}
+.guide h2{font-family:var(--dot);font-size:18px;margin-bottom:10px}
+.guide ol{margin-left:20px;color:var(--muted);font-size:15px;line-height:1.7}
+.guide ol b{color:var(--ink)}
+
+footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-family:var(--dot);font-size:13px;margin-top:40px}
+footer a{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <div class="navlinks">
+    <a href="quiz.html" class="back" data-i18n="nav_quiz">⚔️ Quiz</a>
+    <a href="prefectures.html" class="back" data-i18n="nav_map">🗾 Explore</a>
+    <a href="blog/index.html" class="back" data-i18n="nav_blog">📖 Blog</a>
+    <a href="index.html#pricing" class="back" data-i18n="nav_pricing">💴 Pricing</a>
+  </div>
+</header>
+<div class="langbar" id="langbar"></div>
+
+<main class="wrap">
+  <div class="intro">
+    <div class="tag" data-i18n="tag">YOUR READINESS · UPDATED LIVE</div>
+    <h1><span data-i18n="hi">Hi there —</span> <em id="rank-line">N4 Apprentice</em></h1>
+    <p data-i18n="lede">Your JLPT readiness score updates after every quiz. Train daily, watch the bars climb, and the weeks-to-pass shrink.</p>
+  </div>
+
+  <div class="eta">
+    <div class="left">
+      <div class="lbl" data-i18n="eta_label">N3 ETA</div>
+      <div class="big" id="eta-headline">…</div>
+      <div class="sub" id="eta-sub"></div>
+    </div>
+    <div class="btns">
+      <a class="btn primary" id="btn-train" href="quiz.html" data-i18n="btn_train">⚔️ Train now</a>
+      <a class="btn ghost" id="btn-review" href="quiz.html?mode=review" data-i18n="btn_review">📚 Review mistakes</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2><span data-i18n="bars_h">Readiness by level</span> <small data-i18n="threshold">PASS · 75%</small></h2>
+      <div class="bars" id="bars"></div>
+    </div>
+    <div class="card">
+      <h2><span data-i18n="spark_h">Last 7 days</span></h2>
+      <div class="spark"><svg id="spark" viewBox="0 0 280 90" preserveAspectRatio="none"></svg></div>
+      <div class="weekly-tot" data-i18n="spark_total"><b id="weekly-total">0</b> questions this week</div>
+    </div>
+  </div>
+
+  <div class="card" id="monthly-card">
+    <h2><span data-i18n="month_h">Last 30 days</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin-bottom:12px">
+      <div><div style="font-family:var(--pixel);font-size:9px;color:var(--muted);letter-spacing:.5px" data-i18n="month_total">Total questions</div><div style="font-family:var(--dot);font-size:24px;color:var(--ink)" id="m-total">0</div></div>
+      <div><div style="font-family:var(--pixel);font-size:9px;color:var(--muted);letter-spacing:.5px" data-i18n="month_active">Active days</div><div style="font-family:var(--dot);font-size:24px;color:var(--ink)" id="m-active">0</div></div>
+      <div><div style="font-family:var(--pixel);font-size:9px;color:var(--muted);letter-spacing:.5px" data-i18n="month_streak">Longest streak</div><div style="font-family:var(--dot);font-size:24px;color:var(--red)" id="m-streak">0</div></div>
+      <div><div style="font-family:var(--pixel);font-size:9px;color:var(--muted);letter-spacing:.5px" data-i18n="month_acc">Accuracy</div><div style="font-family:var(--dot);font-size:24px;color:var(--green)" id="m-acc">0%</div></div>
+    </div>
+    <p style="font-family:var(--dot);font-size:12px;color:var(--muted);margin:0" data-i18n="streak_def">"Streak" counts consecutive days with at least 1 question answered.</p>
+  </div>
+
+  <div class="card">
+    <h2 data-i18n="next_h">What to do next</h2>
+    <p id="next-headline" style="font-family:var(--dot);font-size:15px;color:var(--ink);margin-bottom:10px"></p>
+    <div class="actions">
+      <a class="aciton-btn action-train" id="ax-train" href="quiz.html" data-i18n="ax_train">⚔️ Train 20 questions today</a>
+      <a class="aciton-btn action-review" id="ax-review" href="quiz.html?mode=review" data-i18n="ax_review">📚 Review (0 due)</a>
+    </div>
+  </div>
+
+  <div class="guide">
+    <h2 data-i18n="how_h">How your score is calculated</h2>
+    <ol>
+      <li data-i18n="how_1"><b>Diagnostic (40%)</b> — your initial 12-question test result.</li>
+      <li data-i18n="how_2"><b>Recent accuracy (40%)</b> — your last 50 answers at each level.</li>
+      <li data-i18n="how_3"><b>SRS retention (20%)</b> — how well you've held onto words you previously missed.</li>
+    </ol>
+  </div>
+
+  <div class="guide" id="sync-card" style="display:none">
+    <h2 data-i18n="sync_h">📲 Sync to another device</h2>
+    <p style="color:var(--muted);font-size:14.5px;line-height:1.55;margin-bottom:10px" data-i18n="sync_p">No account needed. Scan the QR code with your phone, or copy the link.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+      <div id="sync-qr" style="width:128px;height:128px;background:#fff;border:2px solid var(--soft);border-radius:7px;padding:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center"></div>
+      <div style="flex:1;min-width:200px">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <input type="text" id="sync-url" readonly style="flex:1;min-width:160px;padding:9px 11px;border:2px solid var(--soft);border-radius:7px;font-family:var(--dot);font-size:13px;background:var(--white)">
+          <button id="sync-copy" type="button" style="font-family:var(--dot);font-size:14px;background:var(--ink);color:#fff;border:none;border-radius:7px;padding:9px 14px;cursor:pointer" data-i18n="sync_copy">Copy link</button>
+        </div>
+        <p id="sync-status" style="font-size:12.5px;color:var(--muted);margin-top:8px"></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer><p>© 2026 NihongoHub · <a href="rpg.html">⚔ My Journey</a> · <a href="prefectures.html">Explore</a> · <a href="index.html">Home</a></p></footer>
+
+<link rel="stylesheet" href="styles/responsive.css">
+<script src="lib/hamburger.js" defer></script>
+<script src="lib/readiness.js"></script>
+<script src="lib/sync.js"></script>
+<script>
+const T = {
+  en:{label:'🇬🇧 English', nav_quiz:'⚔️ Quiz', nav_map:'🗾 Explore', nav_blog:'📖 Blog', nav_pricing:'💴 Pricing',
+    tag:'YOUR READINESS · UPDATED LIVE', hi:'Hi there —',
+    lede:'Your JLPT readiness score updates after every quiz. Train daily, watch the bars climb, and the weeks-to-pass shrink.',
+    eta_label:'N3 ETA', btn_train:'⚔️ Train now', btn_review:'📚 Review mistakes',
+    bars_h:'Readiness by level', threshold:'PASS · 75%', spark_h:'Last 7 days',
+    spark_total:'<b id="weekly-total">0</b> questions this week',
+    next_h:'What to do next', ax_train:'⚔️ Train 20 questions today', ax_review:'📚 Review',
+    how_h:'How your score is calculated',
+    how_1:'<b>Diagnostic (40%)</b> — your initial 12-question test result.',
+    how_2:'<b>Recent accuracy (40%)</b> — your last 50 answers at each level.',
+    how_3:'<b>SRS retention (20%)</b> — how well you\'ve held onto words you previously missed.',
+    eta_ready:'You\'re already at {pct}% — ready for {lvl}!', eta_weeks:'~{n} weeks at 20 questions/day',
+    eta_sub_ready:'Take the {lvl} mock test next.', eta_sub_weeks:'Stay consistent and your ETA will shrink each week.',
+    pace_personal:'Personal pace: +{pct}%/week (your data)', pace_default:'Baseline pace until 30+ answers logged',
+    month_h:'Last 30 days', month_total:'Total questions', month_active:'Active days', month_streak:'Longest streak', month_acc:'Accuracy',
+    streak_def:'"Streak" counts consecutive days with at least 1 question answered.',
+    reco_pre:'Start with N5 Greetings to anchor hiragana + everyday phrases.',
+    reco_solidify:'Solidify {lvl} first — your accuracy is still building. Aim for 60%+ before climbing.',
+    reco_mix:'Keep training {lvl} — you\'re close to ready. Mix in {next} when comfortable.',
+    reco_advance:'You\'re passing {lvl} — move up to {next}!',
+    reco_btn_pre:'⚔️ Start N5 Greetings →', reco_btn_solidify:'⚔️ Train {lvl} →', reco_btn_mix:'⚔️ Train {lvl} →', reco_btn_advance:'⚔️ Start {next} →',
+    sync_h:'📲 Sync to another device', sync_p:'No account needed. Scan the QR code with your phone, or copy the link.', sync_copy:'Copy link'},
+  ja:{label:'🇯🇵 日本語', nav_quiz:'⚔️ クイズ', nav_map:'🗾 探索', nav_blog:'📖 ブログ', nav_pricing:'💴 価格',
+    tag:'あなたの Readiness · ライブ更新', hi:'こんにちは —',
+    lede:'JLPT Readiness スコアはクイズごとに更新されます。毎日続けて、バーが伸び、予想週数が縮むのを見届けよう。',
+    eta_label:'N3 までの予想', btn_train:'⚔️ 今すぐ訓練', btn_review:'📚 復習する',
+    bars_h:'レベル別 Readiness', threshold:'合格 · 75%', spark_h:'直近 7 日',
+    spark_total:'<b id="weekly-total">0</b> 問 (今週)',
+    next_h:'次にすること', ax_train:'⚔️ 今日 20 問やる', ax_review:'📚 復習',
+    how_h:'スコアの計算方法',
+    how_1:'<b>診断 (40%)</b> — 最初の 12 問の結果。',
+    how_2:'<b>直近の正答率 (40%)</b> — 各レベル直近 50 問。',
+    how_3:'<b>SRS 定着 (20%)</b> — 一度間違えた語をどれだけ維持できているか。',
+    eta_ready:'すでに {pct}% — {lvl} 合格圏内!', eta_weeks:'1日20問で約 {n} 週間',
+    eta_sub_ready:'次は {lvl} 模試に挑戦しよう。', eta_sub_weeks:'毎日続ければ予想週数は毎週縮まります。',
+    pace_personal:'あなたのペース: 週 +{pct}%', pace_default:'30問以上回答するまでベースラインを使用',
+    month_h:'直近30日', month_total:'総問題数', month_active:'活動日', month_streak:'最長連続', month_acc:'正答率',
+    streak_def:'「連続」は1問以上回答した連続日数です。',
+    reco_pre:'まずは N5 の挨拶からスタート — ひらがなと日常表現を定着させよう。',
+    reco_solidify:'まずは {lvl} を固めよう — 60% 以上を目指してから次へ。',
+    reco_mix:'{lvl} を続けて — 合格圏が見えてきた。慣れたら {next} も混ぜよう。',
+    reco_advance:'{lvl} 合格圏！ — {next} に挑戦！',
+    reco_btn_pre:'⚔️ N5 挨拶を始める →', reco_btn_solidify:'⚔️ {lvl} を訓練 →', reco_btn_mix:'⚔️ {lvl} を訓練 →', reco_btn_advance:'⚔️ {next} を始める →',
+    sync_h:'📲 別の端末に同期', sync_p:'登録不要。QR コードをスマホで読み取るか、リンクをコピーして開いてください。', sync_copy:'リンクをコピー'},
+  zh:{label:'🇹🇼 繁體中文', nav_quiz:'⚔️ 題目', nav_map:'🗾 探索', nav_blog:'📖 部落格', nav_pricing:'💴 價格',
+    tag:'你的 Readiness · 即時更新', hi:'你好 —',
+    lede:'你的 JLPT Readiness 分數會在每次練習後更新。每日訓練，看著進度條成長、預估週數縮短。',
+    eta_label:'N3 預估', btn_train:'⚔️ 立即訓練', btn_review:'📚 複習錯題',
+    bars_h:'各等級 Readiness', threshold:'合格 · 75%', spark_h:'最近 7 天',
+    spark_total:'本週共 <b id="weekly-total">0</b> 題',
+    next_h:'下一步該做什麼', ax_train:'⚔️ 今天練 20 題', ax_review:'📚 複習',
+    how_h:'分數如何計算',
+    how_1:'<b>診斷 (40%)</b> — 最初 12 題的結果。',
+    how_2:'<b>近期正確率 (40%)</b> — 每等級最近 50 題的表現。',
+    how_3:'<b>SRS 留存 (20%)</b> — 過去答錯後是否仍記得。',
+    eta_ready:'已達 {pct}% — {lvl} 合格圈內！', eta_weeks:'每日 20 題約 {n} 週',
+    eta_sub_ready:'下一步挑戰 {lvl} 模擬題。', eta_sub_weeks:'每天堅持，預估週數會逐週縮短。',
+    pace_personal:'你的節奏: 每週 +{pct}%', pace_default:'答完 30 題後將以個人節奏估算',
+    month_h:'最近 30 天', month_total:'總題數', month_active:'活躍天數', month_streak:'最長連續', month_acc:'正確率',
+    streak_def:'「連續」指至少答 1 題的連續天數。',
+    reco_pre:'從 N5 招呼語開始 — 鞏固平假名與日常用語。',
+    reco_solidify:'先鞏固 {lvl} — 達 60% 以上再向上挑戰。',
+    reco_mix:'繼續訓練 {lvl} — 已接近合格圈。熟練後可加入 {next}。',
+    reco_advance:'{lvl} 通過！ — 進攻 {next}！',
+    reco_btn_pre:'⚔️ 開始 N5 招呼語 →', reco_btn_solidify:'⚔️ 訓練 {lvl} →', reco_btn_mix:'⚔️ 訓練 {lvl} →', reco_btn_advance:'⚔️ 開始 {next} →',
+    sync_h:'📲 同步到其他裝置', sync_p:'不需要帳號。用手機掃 QR 碼，或複製連結。', sync_copy:'複製連結'},
+  es:{label:'🇪🇸 Español', nav_quiz:'⚔️ Quiz', nav_map:'🗾 Explora', nav_blog:'📖 Blog', nav_pricing:'💴 Precios',
+    tag:'TU READINESS · ACTUALIZADO', hi:'Hola —',
+    lede:'Tu puntuación JLPT Readiness se actualiza tras cada quiz. Entrena a diario y verás las barras subir y las semanas reducirse.',
+    eta_label:'ETA a N3', btn_train:'⚔️ Entrenar', btn_review:'📚 Repasar errores',
+    bars_h:'Readiness por nivel', threshold:'APROBADO · 75%', spark_h:'Últimos 7 días',
+    spark_total:'<b id="weekly-total">0</b> preguntas esta semana',
+    next_h:'Qué hacer ahora', ax_train:'⚔️ Entrena 20 preguntas hoy', ax_review:'📚 Repasar',
+    how_h:'Cómo se calcula tu puntuación',
+    how_1:'<b>Diagnóstico (40%)</b> — tu resultado en las 12 preguntas iniciales.',
+    how_2:'<b>Precisión reciente (40%)</b> — tus últimas 50 respuestas en cada nivel.',
+    how_3:'<b>Retención SRS (20%)</b> — cómo retienes palabras que antes fallaste.',
+    eta_ready:'Ya estás al {pct}% — ¡listo para {lvl}!', eta_weeks:'~{n} semanas a 20 preguntas/día',
+    eta_sub_ready:'Haz el simulacro de {lvl}.', eta_sub_weeks:'Si eres constante, la ETA bajará cada semana.',
+    pace_personal:'Tu ritmo: +{pct}%/semana', pace_default:'Ritmo base hasta 30+ respuestas registradas',
+    month_h:'Últimos 30 días', month_total:'Preguntas totales', month_active:'Días activos', month_streak:'Racha más larga', month_acc:'Precisión',
+    streak_def:'La "racha" cuenta días consecutivos con al menos 1 pregunta respondida.',
+    reco_pre:'Empieza con N5 Saludos — ancla hiragana y frases del día a día.',
+    reco_solidify:'Consolida primero {lvl} — apunta a 60%+ antes de subir.',
+    reco_mix:'Sigue practicando {lvl} — ya casi listo. Cuando cómodo, mezcla {next}.',
+    reco_advance:'¡Aprobando {lvl}! — Sube a {next}.',
+    reco_btn_pre:'⚔️ Empezar N5 Saludos →', reco_btn_solidify:'⚔️ Entrenar {lvl} →', reco_btn_mix:'⚔️ Entrenar {lvl} →', reco_btn_advance:'⚔️ Empezar {next} →',
+    sync_h:'📲 Sincronizar con otro dispositivo', sync_p:'Sin cuenta. Escanea el código QR con tu móvil o copia el enlace.', sync_copy:'Copiar enlace'},
+  th:{label:'🇹🇭 ภาษาไทย', nav_quiz:'⚔️ ควิซ', nav_map:'🗾 สำรวจ', nav_blog:'📖 บล็อก', nav_pricing:'💴 ราคา',
+    tag:'READINESS ของคุณ · อัปเดตสด', hi:'สวัสดี —',
+    lede:'คะแนน JLPT Readiness อัปเดตทุกครั้งหลังทำควิซ ฝึกทุกวันแล้วบาร์จะขึ้น สัปดาห์ที่เหลือจะลดลง',
+    eta_label:'ETA สู่ N3', btn_train:'⚔️ ฝึกเลย', btn_review:'📚 ทบทวนข้อผิด',
+    bars_h:'Readiness ตามระดับ', threshold:'ผ่าน · 75%', spark_h:'7 วันล่าสุด',
+    spark_total:'สัปดาห์นี้ <b id="weekly-total">0</b> ข้อ',
+    next_h:'ทำอะไรต่อ', ax_train:'⚔️ วันนี้ฝึก 20 ข้อ', ax_review:'📚 ทบทวน',
+    how_h:'คะแนนคำนวณอย่างไร',
+    how_1:'<b>การวินิจฉัย (40%)</b> — ผล 12 ข้อแรก',
+    how_2:'<b>ความแม่นยำล่าสุด (40%)</b> — 50 ข้อล่าสุดต่อระดับ',
+    how_3:'<b>การคงไว้ SRS (20%)</b> — คุณจำคำที่เคยพลาดได้แค่ไหน',
+    eta_ready:'คุณอยู่ที่ {pct}% — พร้อมสอบ {lvl} แล้ว!', eta_weeks:'~{n} สัปดาห์ที่ 20 ข้อ/วัน',
+    eta_sub_ready:'ต่อไปทำแบบทดสอบจำลอง {lvl}', eta_sub_weeks:'ทำสม่ำเสมอ ETA จะลดลงทุกสัปดาห์',
+    pace_personal:'จังหวะของคุณ: +{pct}%/สัปดาห์', pace_default:'ใช้จังหวะมาตรฐานจนกว่าจะตอบครบ 30 ข้อ',
+    month_h:'30 วันล่าสุด', month_total:'จำนวนข้อทั้งหมด', month_active:'วันที่ฝึก', month_streak:'สตรีคยาวสุด', month_acc:'ความแม่นยำ',
+    streak_def:'"สตรีค" นับวันต่อเนื่องที่ตอบอย่างน้อย 1 ข้อ',
+    reco_pre:'เริ่มที่ N5 ทักทาย — ปูพื้นฮิรางานะและประโยคใช้ทุกวัน',
+    reco_solidify:'ปูพื้น {lvl} ให้แน่นก่อน — ตั้งเป้าให้ได้ 60%+',
+    reco_mix:'ฝึก {lvl} ต่อ — ใกล้ผ่านแล้ว เริ่มผสม {next} ได้เมื่อพร้อม',
+    reco_advance:'ผ่าน {lvl} แล้ว! — ไปต่อที่ {next}',
+    reco_btn_pre:'⚔️ เริ่ม N5 ทักทาย →', reco_btn_solidify:'⚔️ ฝึก {lvl} →', reco_btn_mix:'⚔️ ฝึก {lvl} →', reco_btn_advance:'⚔️ เริ่ม {next} →',
+    sync_h:'📲 ซิงค์กับอุปกรณ์อื่น', sync_p:'ไม่ต้องลงทะเบียน สแกน QR ด้วยมือถือ หรือคัดลอกลิงก์', sync_copy:'คัดลอกลิงก์'},
+  id:{label:'🇮🇩 Indonesia', nav_quiz:'⚔️ Kuis', nav_map:'🗾 Jelajah', nav_blog:'📖 Blog', nav_pricing:'💴 Harga',
+    tag:'READINESS-MU · DIPERBARUI LIVE', hi:'Halo —',
+    lede:'Skor JLPT Readiness diperbarui setiap selesai kuis. Latihan tiap hari, lihat bar naik dan estimasi minggu turun.',
+    eta_label:'ETA ke N3', btn_train:'⚔️ Latih sekarang', btn_review:'📚 Tinjau kesalahan',
+    bars_h:'Readiness per level', threshold:'LULUS · 75%', spark_h:'7 hari terakhir',
+    spark_total:'<b id="weekly-total">0</b> soal minggu ini',
+    next_h:'Lakukan berikutnya', ax_train:'⚔️ Latih 20 soal hari ini', ax_review:'📚 Tinjau',
+    how_h:'Cara skor dihitung',
+    how_1:'<b>Diagnostik (40%)</b> — hasil 12 soal awal.',
+    how_2:'<b>Akurasi terbaru (40%)</b> — 50 jawaban terakhir per level.',
+    how_3:'<b>Retensi SRS (20%)</b> — seberapa baik kamu mempertahankan kata yang pernah salah.',
+    eta_ready:'Sudah {pct}% — siap {lvl}!', eta_weeks:'~{n} minggu di 20 soal/hari',
+    eta_sub_ready:'Berikutnya: simulasi {lvl}.', eta_sub_weeks:'Konsisten, dan ETA akan turun tiap minggu.',
+    pace_personal:'Ritmemu: +{pct}%/minggu', pace_default:'Ritme baseline hingga 30+ jawaban tercatat',
+    month_h:'30 hari terakhir', month_total:'Total soal', month_active:'Hari aktif', month_streak:'Streak terpanjang', month_acc:'Akurasi',
+    streak_def:'"Streak" menghitung hari berurutan dengan minimal 1 soal terjawab.',
+    reco_pre:'Mulai dari N5 Salam — kunci hiragana dan frasa harian.',
+    reco_solidify:'Mantapkan {lvl} dulu — capai 60%+ sebelum naik.',
+    reco_mix:'Lanjut latih {lvl} — hampir siap. Campur {next} bila nyaman.',
+    reco_advance:'Lulus {lvl}! — Naik ke {next}!',
+    reco_btn_pre:'⚔️ Mulai N5 Salam →', reco_btn_solidify:'⚔️ Latih {lvl} →', reco_btn_mix:'⚔️ Latih {lvl} →', reco_btn_advance:'⚔️ Mulai {next} →',
+    sync_h:'📲 Sinkronkan ke perangkat lain', sync_p:'Tanpa akun. Pindai QR dengan ponsel, atau salin tautan.', sync_copy:'Salin tautan'}
+};
+const LANGS = ['en','ja','zh','es','th','id'];
+let LANG;
+try { LANG = localStorage.getItem('nh_lang'); } catch(e){}
+if(!LANGS.includes(LANG)) LANG = 'en';
+function tr(k){ return (T[LANG]&&T[LANG][k]) || T.en[k] || k; }
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n'); if(T[LANG]&&T[LANG][k]!==undefined) el.innerHTML = T[LANG][k];
+  });
+  renderAll();
+}
+function setLang(l){ if(!LANGS.includes(l)) return; LANG=l; try{localStorage.setItem('nh_lang',l);}catch(e){} buildLangbar(); applyLang(); }
+function buildLangbar(){
+  document.getElementById('langbar').innerHTML = LANGS.map(l=>`<button class="${l===LANG?'active':''}" onclick="setLang('${l}')">${T[l].label}</button>`).join('');
+}
+
+function fmt(template, vars){
+  return Object.keys(vars).reduce((s,k)=>s.replaceAll('{'+k+'}', vars[k]), template);
+}
+
+function renderEta(s){
+  const lvl = s.targetLevel;
+  const curScore = (s.scores[lvl] || 0);
+  const headline = document.getElementById('eta-headline');
+  const sub = document.getElementById('eta-sub');
+  if(s.weeksToTarget === 0){
+    headline.innerHTML = fmt(tr('eta_ready'), { pct: Math.round(curScore*100), lvl });
+    sub.textContent = fmt(tr('eta_sub_ready'), { lvl });
+  } else {
+    headline.innerHTML = `<strong>${lvl}</strong> · ${fmt(tr('eta_weeks'), { n: s.weeksToTarget })}`;
+    const paceLabel = s.isPersonalPace
+      ? fmt(tr('pace_personal'), { pct: (s.weeklyGrowth*100).toFixed(1) })
+      : tr('pace_default');
+    sub.innerHTML = tr('eta_sub_weeks') + ' <span style="opacity:.7">· ' + paceLabel + '</span>';
+  }
+}
+
+function renderBars(s){
+  const html = window.NH_READINESS.LEVELS.map(L=>{
+    const score = s.scores[L] || 0;
+    const pct = Math.round(score * 100);
+    const isCurrent = L === s.estimated;
+    const isTarget = L === s.targetLevel;
+    const cls = isCurrent ? 'cur' : (isTarget ? 'tgt' : '');
+    return `<div class="bar">
+      <span class="lab ${cls}">${L}</span>
+      <div class="track"><div class="threshold"></div><div class="fill" style="width:${pct}%"></div></div>
+      <span class="pct">${pct}%</span>
+    </div>`;
+  }).join('');
+  document.getElementById('bars').innerHTML = html;
+}
+
+function renderSparkline(counts){
+  const w = 280, h = 90, pad = 6;
+  const max = Math.max(1, ...counts);
+  const step = (w - pad*2) / (counts.length - 1);
+  const points = counts.map((c,i)=>{
+    const x = pad + i*step;
+    const y = h - pad - (c/max)*(h - pad*2);
+    return [x,y];
+  });
+  const path = points.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+  const dots = points.map((p,i)=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.5" fill="${i===points.length-1?'#bf3325':'#c8911f'}"/>`).join('');
+  const fill = 'M'+pad+','+(h-pad)+' '+points.map(p=>'L'+p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')+' L'+(w-pad)+','+(h-pad)+' Z';
+  const svg = `
+    <path d="${fill}" fill="rgba(224,166,52,.18)"/>
+    <path d="${path}" fill="none" stroke="#c8911f" stroke-width="2"/>
+    ${dots}
+  `;
+  document.getElementById('spark').innerHTML = svg;
+  const totalEl = document.getElementById('weekly-total');
+  if(totalEl) totalEl.textContent = counts.reduce((s,n)=>s+n,0);
+}
+
+function renderActions(s){
+  const review = document.getElementById('ax-review');
+  const baseLabel = tr('ax_review');
+  review.innerHTML = baseLabel + ' (' + s.dueToday + ')';
+  if(!s.mistakeCount) review.classList.add('disabled');
+  const btnRev = document.getElementById('btn-review');
+  if(!s.mistakeCount){
+    btnRev.style.opacity = 0.5;
+    btnRev.style.pointerEvents = 'none';
+  }
+  // Recommended learning path
+  const headline = document.getElementById('next-headline');
+  const train = document.getElementById('ax-train');
+  if(!headline || !train) return;
+  const lvl = s.estimated;
+  const score = s.scores[lvl] || 0;
+  let recoMsgKey, recoLink, recoBtnKey;
+  if(lvl === 'PRE'){
+    recoMsgKey = 'reco_pre'; recoLink = 'quiz.html?level=N5&topic=greetings'; recoBtnKey = 'reco_btn_pre';
+  } else if(score < 0.4){
+    recoMsgKey = 'reco_solidify'; recoLink = 'quiz.html?level=' + lvl; recoBtnKey = 'reco_btn_solidify';
+  } else if(score < 0.75){
+    recoMsgKey = 'reco_mix'; recoLink = 'quiz.html?level=' + lvl; recoBtnKey = 'reco_btn_mix';
+  } else {
+    recoMsgKey = 'reco_advance'; recoLink = 'quiz.html?level=' + s.targetLevel; recoBtnKey = 'reco_btn_advance';
+  }
+  headline.innerHTML = fmt(tr(recoMsgKey), { lvl, next: s.targetLevel });
+  train.href = recoLink;
+  train.textContent = fmt(tr(recoBtnKey), { lvl, next: s.targetLevel });
+}
+
+function renderRank(s){
+  document.getElementById('rank-line').textContent = s.estimated + ' ' + window.NH_READINESS.rankLabel(s.estimated);
+}
+
+function renderMonthly(){
+  if(!window.NH_READINESS.monthlySummary) return;
+  const m = window.NH_READINESS.monthlySummary();
+  const t = document.getElementById('m-total');     if(t) t.textContent = m.total;
+  const a = document.getElementById('m-active');    if(a) a.textContent = m.activeDays;
+  const s = document.getElementById('m-streak');    if(s) s.textContent = m.longestStreak;
+  const c = document.getElementById('m-acc');       if(c) c.textContent = m.correctPct + '%';
+}
+function renderAll(){
+  const s = window.NH_READINESS.summary();
+  renderRank(s);
+  renderEta(s);
+  renderBars(s);
+  renderSparkline(s.sparkline);
+  renderActions(s);
+  renderMonthly();
+}
+
+// Claim transfer from another device (?claim=<userId>) — runs before onboarding gate
+(async function(){
+  const p = new URLSearchParams(location.search);
+  const claim = p.get('claim');
+  if(!claim) return;
+  // Wait for NH_SYNC to be ready, then claim
+  let tries = 0;
+  while(tries < 25 && (!window.NH_SYNC || window.NH_SYNC.getStatus().status === 'idle' || window.NH_SYNC.getStatus().status === 'connecting')){
+    await new Promise(r=>setTimeout(r, 200));
+    tries++;
+  }
+  if(window.NH_SYNC && window.NH_SYNC.claimTransfer){
+    const ok = await window.NH_SYNC.claimTransfer(claim);
+    if(ok){
+      // remove ?claim from URL so reloads don't re-claim
+      history.replaceState({}, '', location.pathname);
+      renderAll();
+    }
+  }
+})();
+
+// First-time gate: if user lands on dashboard without doing onboarding, push them there
+(function(){
+  const p = new URLSearchParams(location.search);
+  if(p.get('claim')) return; // skip gate when claiming
+  let done = false;
+  try { done = localStorage.getItem('nh_onboarding_done') === '1'; } catch(e){}
+  if(!done){ location.replace('onboarding.html'); }
+})();
+
+// Load QR library lazily (one-time, with Subresource Integrity check)
+function loadQRLib(){
+  if(window.QRCode) return Promise.resolve(window.QRCode);
+  return new Promise((resolve)=>{
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
+    s.integrity = 'sha384-3zSEDfvllQohrq0PHL1fOXJuC/jSOO34H46t6UQfobFOmxE5BpjjaIJY5F2/bMnU';
+    s.crossOrigin = 'anonymous';
+    s.referrerPolicy = 'no-referrer';
+    s.onload = ()=>resolve(window.QRCode);
+    s.onerror = ()=>resolve(null);
+    document.head.appendChild(s);
+  });
+}
+
+// Sync card: show when Supabase auth available
+(function(){
+  async function pollSync(){
+    let tries = 0;
+    while(tries < 40){
+      await new Promise(r=>setTimeout(r, 300));
+      tries++;
+      if(window.NH_SYNC){
+        const st = window.NH_SYNC.getStatus();
+        if(st.status === 'connected'){
+          const card = document.getElementById('sync-card');
+          const input = document.getElementById('sync-url');
+          const status = document.getElementById('sync-status');
+          const qrBox = document.getElementById('sync-qr');
+          const url = window.NH_SYNC.transferUrl() || '';
+          if(card){ card.style.display = 'block'; }
+          if(input){ input.value = url; }
+          if(status){ status.textContent = '✅ Synced · anon ID ' + (st.userId || '').slice(0,8) + '…'; }
+          // QR code render
+          if(qrBox && url){
+            const QR = await loadQRLib();
+            if(QR && !qrBox._rendered){
+              qrBox._rendered = true;
+              qrBox.innerHTML = '';
+              new QR(qrBox, { text: url, width: 116, height: 116, colorDark:'#16100a', colorLight:'#ffffff', correctLevel: QR.CorrectLevel.M });
+            }
+          }
+          const copy = document.getElementById('sync-copy');
+          if(copy && !copy._wired){
+            copy._wired = true;
+            copy.addEventListener('click', ()=>{
+              if(input){ input.select(); try{ navigator.clipboard.writeText(input.value); }catch(e){} copy.textContent = '✅ Copied!'; setTimeout(()=>{ copy.textContent = (T[LANG]&&T[LANG].sync_copy) || 'Copy link'; }, 1400); }
+            });
+          }
+          return;
+        }
+        if(st.status === 'offline' || st.status === 'sdk_fail' || st.status === 'auth_fail' || st.status === 'error'){
+          return; // graceful: hide card
+        }
+      }
+    }
+  }
+  pollSync();
+})();
+
+buildLangbar(); applyLang();
+</script>
+</body>
+</html>

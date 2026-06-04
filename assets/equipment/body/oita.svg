@@ -1,0 +1,48 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Onsen Yukata</title>
+  
+  <!-- Frame border -->
+  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#9b9285" stroke-width="2"/>
+  
+  <!-- Yukata body - main garment color (indigo) -->
+  <rect x="12" y="16" width="40" height="36" fill="#4a5a7a"/>
+  
+  <!-- Left panel overlap -->
+  <rect x="12" y="16" width="20" height="36" fill="#3d4a6a"/>
+  
+  <!-- Right panel -->
+  <rect x="32" y="16" width="20" height="36" fill="#4a5a7a"/>
+  
+  <!-- Collar - left -->
+  <rect x="20" y="16" width="4" height="12" fill="#d4a574"/>
+  
+  <!-- Collar - right -->
+  <rect x="40" y="16" width="4" height="12" fill="#d4a574"/>
+  
+  <!-- Obi (belt) - cream color -->
+  <rect x="12" y="36" width="40" height="8" fill="#e8d9c3"/>
+  
+  <!-- Obi accent stripe -->
+  <rect x="12" y="38" width="40" height="2" fill="#9b9285"/>
+  
+  <!-- Sleeve - left -->
+  <rect x="4" y="20" width="8" height="24" fill="#4a5a7a"/>
+  
+  <!-- Sleeve - right -->
+  <rect x="52" y="20" width="8" height="24" fill="#4a5a7a"/>
+  
+  <!-- Sleeve cuff - left -->
+  <rect x="4" y="40" width="8" height="4" fill="#d4a574"/>
+  
+  <!-- Sleeve cuff - right -->
+  <rect x="52" y="40" width="8" height="4" fill="#d4a574"/>
+  
+  <!-- Decorative pattern - left panel -->
+  <rect x="16" y="24" width="4" height="4" fill="#e8d9c3"/>
+  <rect x="16" y="32" width="4" height="4" fill="#e8d9c3"/>
+  
+  <!-- Decorative pattern - right panel -->
+  <rect x="44" y="24" width="4" height="4" fill="#e8d9c3"/>
+  <rect x="44" y="32" width="4" height="4" fill="#e8d9c3"/>
+  
+</svg>

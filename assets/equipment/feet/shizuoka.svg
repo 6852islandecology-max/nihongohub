@@ -1,0 +1,34 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Izu Onsen Sandals</title>
+  
+  <!-- Left Sandal -->
+  <g id="left-sandal">
+    <!-- Sole -->
+    <rect x="8" y="32" width="16" height="12" fill="#8b7355"/>
+    <!-- Sole edge -->
+    <rect x="8" y="32" width="16" height="2" fill="#9b9285"/>
+    <!-- Thong left -->
+    <rect x="14" y="28" width="2" height="16" fill="#d4a574"/>
+    <!-- Thong accent -->
+    <rect x="14" y="28" width="2" height="2" fill="#9b9285"/>
+  </g>
+  
+  <!-- Right Sandal -->
+  <g id="right-sandal">
+    <!-- Sole -->
+    <rect x="40" y="32" width="16" height="12" fill="#8b7355"/>
+    <!-- Sole edge -->
+    <rect x="40" y="32" width="16" height="2" fill="#9b9285"/>
+    <!-- Thong right -->
+    <rect x="48" y="28" width="2" height="16" fill="#d4a574"/>
+    <!-- Thong accent -->
+    <rect x="48" y="28" width="2" height="2" fill="#9b9285"/>
+  </g>
+  
+  <!-- Frame border -->
+  <rect x="4" y="24" width="56" height="28" fill="none" stroke="#9b9285" stroke-width="2"/>
+  
+  <!-- Water ripple effect (hot spring) -->
+  <rect x="12" y="20" width="4" height="2" fill="#a8d8ea" opacity="0.6"/>
+  <rect x="48" y="20" width="4" height="2" fill="#a8d8ea" opacity="0.6"/>
+</svg>

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Dune Camel Boots</title>
+  
+  <!-- Left Boot -->
+  <g id="left-boot">
+    <!-- Sole -->
+    <rect x="4" y="44" width="16" height="4" fill="#5a4a3a"/>
+    <!-- Main boot body -->
+    <rect x="6" y="36" width="12" height="8" fill="#c9a877"/>
+    <!-- Boot cuff -->
+    <rect x="6" y="32" width="12" height="4" fill="#9b9285"/>
+    <!-- Boot accent stripe -->
+    <rect x="6" y="34" width="12" height="2" fill="#d4b896"/>
+    <!-- Lacing details -->
+    <rect x="8" y="36" width="2" height="4" fill="#8b7a6a"/>
+    <rect x="12" y="36" width="2" height="4" fill="#8b7a6a"/>
+  </g>
+  
+  <!-- Right Boot -->
+  <g id="right-boot">
+    <!-- Sole -->
+    <rect x="44" y="44" width="16" height="4" fill="#5a4a3a"/>
+    <!-- Main boot body -->
+    <rect x="46" y="36" width="12" height="8" fill="#c9a877"/>
+    <!-- Boot cuff -->
+    <rect x="46" y="32" width="12" height="4" fill="#9b9285"/>
+    <!-- Boot accent stripe -->
+    <rect x="46" y="34" width="12" height="2" fill="#d4b896"/>
+    <!-- Lacing details -->
+    <rect x="48" y="36" width="2" height="4" fill="#8b7a6a"/>
+    <rect x="52" y="36" width="2" height="4" fill="#8b7a6a"/>
+  </g>
+  
+  <!-- Sand dust effect (top) -->
+  <rect x="8" y="28" width="4" height="2" fill="#d4b896" opacity="0.6"/>
+  <rect x="52" y="28" width="4" height="2" fill="#d4b896" opacity="0.6"/>
+</svg>

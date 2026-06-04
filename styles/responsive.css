@@ -1,0 +1,125 @@
+/* styles/responsive.css — shared responsive layer for all pages.
+   Loaded after page-specific CSS so cascades win where needed.
+   Breakpoints: 480 / 768 / 1024 / 1440 */
+
+/* ── 1. font-size fluid baseline (does not override page <style> clamp) ── */
+html { -webkit-text-size-adjust: 100%; }
+
+/* ── 1.5 Thai font optimization: Noto Sans Thai for any element when UI lang is th ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap');
+[lang="th"], [lang="th"] * , [data-lang="th"], [data-lang="th"] *,
+html[lang="th"] body, html[lang="th"] body * {
+  font-family: 'Noto Sans Thai', 'DM Sans', sans-serif !important;
+  line-height: 1.75;
+}
+/* Restore Japanese font for Japanese content even on Thai pages */
+[lang="th"] .jp, [lang="th"] [class*="jp"], [lang="th"] .b-q,
+[data-lang="th"] .jp, [data-lang="th"] .b-q, [data-lang="th"] .qprompt {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+/* ── 2. Hamburger button (hidden by default, shown on small screens) ── */
+.nh-ham {
+  display: none;
+  background: none;
+  border: none;
+  color: #fdfaf3;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px 10px;
+  line-height: 1;
+}
+.nh-ham:focus { outline: 2px solid #e0a634; outline-offset: 2px; }
+
+/* ── 3. Tablet and below: collapse big navs ── */
+@media (max-width: 768px) {
+  /* App-style HUD nav (quiz.html, dashboard.html, onboarding.html, rank.html, prefectures.html) */
+  .hud .navlinks {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 0 4px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    margin-top: 8px;
+  }
+  .hud .navlinks.nh-open { display: flex; }
+  .hud .navlinks a { padding: 8px 4px; }
+  .hud .nh-ham { display: inline-block; }
+
+  /* LP nav (index.html) */
+  nav.nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 4px;
+    background: #0d0a14;
+    padding: 14px 20px 18px;
+    border-bottom: 2px solid #c8911f;
+  }
+  nav.nav .nav-links.nh-open { display: flex; }
+  nav.nav .nav-links li { width: 100%; }
+  nav.nav .nav-links a { display: block; padding: 11px 6px; font-size: 15px; }
+  nav.nav { position: relative; flex-wrap: wrap; }
+  nav.nav .nh-ham { display: inline-block; color: #fdfaf3; }
+  nav.nav .btn-nav { display: none; }
+
+  /* Hero grid → single column */
+  .hero {
+    grid-template-columns: 1fr !important;
+    padding-top: 64px;
+  }
+  .hero-right { padding: 40px 22px !important; }
+
+  /* prefectures.html mainGrid → single column */
+  .ex-shell .ex-side { grid-template-columns: 1fr !important; }
+}
+
+/* ── 4. Phone: tighten all padding, single-column option grids ── */
+@media (max-width: 480px) {
+  .wrap { padding-left: 14px !important; padding-right: 14px !important; }
+  .hud { padding-left: 12px !important; padding-right: 12px !important; }
+  .hud a.logo { font-size: 17px; }
+
+  /* Quiz battle card: tighter padding */
+  .battle { padding: 16px 14px !important; }
+  .b-q { font-size: 19px !important; }
+  .b-opt { padding: 11px 12px !important; font-size: 15px !important; }
+
+  /* Onboarding cards */
+  .qcard { padding: 18px 16px !important; }
+  .qprompt { font-size: 17px !important; }
+  .qopt { padding: 11px 12px !important; font-size: 14.5px !important; }
+
+  /* Dashboard ETA */
+  .eta { padding: 18px 16px !important; gap: 12px !important; }
+  .eta .big { font-size: 22px !important; }
+
+  /* Blog article: tighter padding, larger fonts for legibility */
+  article.wrap, .wrap article { padding: 20px 14px 50px !important; }
+  .lede { font-size: 16.5px !important; }
+  .jpbox { padding: 11px 13px !important; }
+  .jpbox .jp { font-size: 16px !important; }
+
+  /* Hide non-essential nav links on tiny screens (kept in hamburger menu) */
+  .navlinks a.back { font-size: 14px; }
+
+  /* prefecture index grid */
+  .cards { grid-template-columns: 1fr !important; }
+}
+
+/* ── 5. Big screens: cap max widths for readability ── */
+@media (min-width: 1440px) {
+  .wrap { max-width: 880px; }
+  article.wrap { max-width: 800px; }
+}
+
+/* ── 6. Touch-target accessibility ── */
+@media (hover: none) and (pointer: coarse) {
+  button, .btn, .b-opt, .qopt, .mbtn, .tpill, .lvpill, .map-btn, .phrase-btn {
+    min-height: 36px;
+  }
+}

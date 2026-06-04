@@ -1,0 +1,37 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Chagu Chagu Helm</title>
+<g id="helm">
+<!-- Left bell -->
+<rect x="8" y="20" width="4" height="4" fill="#FFD700"/>
+<rect x="4" y="24" width="4" height="4" fill="#FFC700"/>
+<rect x="8" y="24" width="4" height="4" fill="#FFE700"/>
+<!-- Right bell -->
+<rect x="52" y="20" width="4" height="4" fill="#FFD700"/>
+<rect x="56" y="24" width="4" height="4" fill="#FFC700"/>
+<rect x="52" y="24" width="4" height="4" fill="#FFE700"/>
+<!-- Helm crown base -->
+<rect x="16" y="12" width="32" height="4" fill="#4d8fbf"/>
+<rect x="12" y="16" width="40" height="4" fill="#4d8fbf"/>
+<rect x="12" y="20" width="40" height="4" fill="#3d6f9f"/>
+<!-- Helm peak center -->
+<rect x="24" y="8" width="16" height="4" fill="#5d9fcf"/>
+<rect x="20" y="12" width="24" height="4" fill="#4d8fbf"/>
+<!-- Face guard upper -->
+<rect x="20" y="24" width="24" height="4" fill="#2d5f8f"/>
+<!-- Face opening -->
+<rect x="24" y="28" width="16" height="8" fill="#1a1a1a"/>
+<!-- Face guard lower -->
+<rect x="20" y="36" width="24" height="4" fill="#3d6f9f"/>
+<!-- Cheek plates left -->
+<rect x="12" y="28" width="8" height="8" fill="#4d8fbf"/>
+<!-- Cheek plates right -->
+<rect x="44" y="28" width="8" height="8" fill="#4d8fbf"/>
+<!-- Neck guard -->
+<rect x="16" y="40" width="32" height="4" fill="#3d6f9f"/>
+<!-- Side accent straps -->
+<rect x="12" y="32" width="4" height="4" fill="#2d5f8f"/>
+<rect x="52" y="32" width="4" height="4" fill="#2d5f8f"/>
+<!-- Top crest decoration -->
+<rect x="28" y="4" width="8" height="4" fill="#FFD700"/>
+</g>
+</svg>

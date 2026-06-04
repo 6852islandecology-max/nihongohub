@@ -1,0 +1,52 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Hakata Obi Robe</title>
+  
+  <!-- Obi border frame -->
+  <g id="frame">
+    <rect x="4" y="4" width="56" height="56" fill="none" stroke="#4d8fbf" stroke-width="2"/>
+  </g>
+  
+  <!-- Main robe body - deep indigo -->
+  <g id="robe">
+    <!-- Left shoulder -->
+    <rect x="8" y="12" width="8" height="4" fill="#1a3a52"/>
+    <rect x="4" y="16" width="8" height="4" fill="#1a3a52"/>
+    <!-- Right shoulder -->
+    <rect x="48" y="12" width="8" height="4" fill="#1a3a52"/>
+    <rect x="52" y="16" width="8" height="4" fill="#1a3a52"/>
+    
+    <!-- Main torso -->
+    <rect x="12" y="12" width="40" height="28" fill="#2d5a7a"/>
+    
+    <!-- Obi sash accent - burgundy weave -->
+    <rect x="12" y="28" width="40" height="8" fill="#8b4545"/>
+    
+    <!-- Obi pattern details - lighter burgundy stripes -->
+    <rect x="16" y="28" width="4" height="8" fill="#a05555"/>
+    <rect x="24" y="28" width="4" height="8" fill="#a05555"/>
+    <rect x="32" y="28" width="4" height="8" fill="#a05555"/>
+    <rect x="40" y="28" width="4" height="8" fill="#a05555"/>
+    <rect x="48" y="28" width="4" height="8" fill="#a05555"/>
+    
+    <!-- Gold accent trim on obi -->
+    <rect x="12" y="27" width="40" height="1" fill="#d4af37"/>
+    <rect x="12" y="35" width="40" height="1" fill="#d4af37"/>
+    
+    <!-- Lower robe drape -->
+    <rect x="12" y="36" width="40" height="16" fill="#1a3a52"/>
+    
+    <!-- Robe hem accent -->
+    <rect x="12" y="51" width="40" height="1" fill="#4d8fbf"/>
+  </g>
+  
+  <!-- Collar detail -->
+  <g id="collar">
+    <rect x="28" y="8" width="8" height="4" fill="#4d8fbf"/>
+    <rect x="26" y="10" width="12" height="2" fill="#8b4545"/>
+  </g>
+  
+  <!-- Center front closure -->
+  <g id="closure">
+    <rect x="30" y="16" width="4" height="20" fill="#d4af37"/>
+  </g>
+</svg>

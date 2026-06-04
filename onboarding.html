@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.nihongo-hub.com/onboarding.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:url" content="https://www.nihongo-hub.com/onboarding.html">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta property="og:site_name" content="NihongoHub">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Find your level — NihongoHub</title>
+<meta name="description" content="Five-minute JLPT diagnostic. Get your current level and a personal weeks-to-pass estimate, free, no signup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--red:#bf3325;--gold:#e0a634;--gold-d:#c8911f;
+  --soft:#ddcfb6;--muted:#7a6a52;--white:#fdfaf3;--hud:#0d0a14;--green:#2a7a4b;
+  --pixel:'Press Start 2P',monospace;--dot:'DotGothic16',sans-serif;
+}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);
+  background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);min-height:100vh}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:center;padding:12px clamp(14px,4vw,26px);gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.skip{font-family:var(--dot);color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.hud a.skip:hover{color:var(--gold)}
+.langbar{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;background:var(--white);border-bottom:1px solid var(--soft);padding:7px 10px}
+.langbar button{font-family:var(--dot);font-size:13px;background:none;border:none;cursor:pointer;color:var(--muted);padding:3px 8px;border-radius:5px}
+.langbar button.active{color:var(--ink);background:var(--soft);font-weight:700}
+.wrap{max-width:680px;margin:0 auto;padding:30px clamp(16px,4vw,24px) 60px}
+.intro{text-align:center;margin-bottom:24px}
+.intro .tag{font-family:var(--pixel);font-size:10px;color:var(--gold-d);letter-spacing:1px;margin-bottom:10px}
+.intro h1{font-family:var(--dot);font-size:clamp(26px,5vw,40px);line-height:1.2;margin-bottom:10px}
+.intro p{color:var(--muted);font-size:16px;line-height:1.6;max-width:520px;margin:0 auto}
+
+.progress{display:flex;gap:5px;margin-bottom:18px}
+.progress .pdot{flex:1;height:7px;background:var(--soft);border-radius:4px;transition:background .25s}
+.progress .pdot.done{background:var(--gold)}
+.progress .pdot.current{background:var(--red)}
+
+.qcard{background:var(--hud);border:3px solid var(--gold);border-radius:14px;padding:22px 20px;color:var(--white);
+  box-shadow:0 0 0 3px var(--ink),6px 9px 0 rgba(22,16,10,.18);margin-bottom:18px}
+.qlevel{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.qlevel .ix{color:rgba(255,255,255,.5)}
+.qprompt{font-family:'Noto Sans JP',sans-serif;font-size:clamp(18px,3.5vw,22px);line-height:1.55;margin-bottom:18px;word-break:break-word}
+.qprompt b{color:var(--gold);font-weight:700}
+.qopts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+@media(max-width:520px){.qopts{grid-template-columns:1fr}}
+.qopt{font-family:'Noto Sans JP',sans-serif;font-size:16px;text-align:left;color:var(--white);
+  background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.2);border-radius:9px;
+  padding:13px 14px;cursor:pointer;transition:all .12s}
+.qopt:hover:not(:disabled){border-color:var(--gold);background:rgba(224,166,52,.14)}
+.qopt:disabled{cursor:default}
+.qopt.correct-ans{border-color:#6ac98d;background:rgba(106,201,141,.18)}
+.qopt.wrong-ans{border-color:var(--red);background:rgba(191,51,37,.16);opacity:.85}
+
+.note{font-family:var(--dot);font-size:13px;color:var(--muted);text-align:center;margin-top:18px;line-height:1.6}
+.note a{color:var(--gold-d)}
+
+/* result */
+.result-wrap{display:none;text-align:center;padding:30px 16px;opacity:0;transform:translateY(12px)}
+.result-wrap.show{display:block;animation:r-pop .55s ease-out forwards}
+@keyframes r-pop{0%{opacity:0;transform:translateY(12px) scale(.98)}60%{opacity:1;transform:translateY(0) scale(1.02)}100%{opacity:1;transform:translateY(0) scale(1)}}
+.r-headline em{display:inline-block;animation:r-pulse 1.6s ease-in-out infinite}
+@keyframes r-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+/* confetti dots */
+.r-confetti{position:fixed;inset:0;pointer-events:none;z-index:5}
+.r-confetti span{position:absolute;width:8px;height:8px;border-radius:2px;opacity:.9;animation:r-fall 1.6s ease-out forwards}
+@keyframes r-fall{0%{transform:translateY(-40px) rotate(0);opacity:1}100%{transform:translateY(420px) rotate(360deg);opacity:0}}
+.r-tag{font-family:var(--pixel);font-size:10px;color:var(--gold-d);letter-spacing:1px;margin-bottom:10px}
+.r-headline{font-family:var(--dot);font-size:clamp(28px,5vw,42px);line-height:1.2;margin-bottom:6px}
+.r-headline em{color:var(--red);font-style:normal}
+.r-sub{color:var(--muted);font-size:16px;margin-bottom:24px}
+.r-cta{display:inline-block;font-family:var(--dot);font-size:16px;background:var(--red);color:#fff;
+  text-decoration:none;padding:14px 22px;border-radius:8px;border-bottom:3px solid #7e1c12}
+.r-meta{margin-top:18px;color:var(--muted);font-size:13px}
+.r-acc{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px 0}
+.r-acc span{font-family:var(--pixel);font-size:10px;background:var(--white);border:2px solid var(--soft);
+  border-radius:6px;padding:8px 11px;color:var(--muted)}
+.r-acc span b{color:var(--ink)}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <a class="skip" href="#" id="skip-link" data-i18n="skip">Skip → use defaults</a>
+</header>
+<div class="langbar" id="langbar"></div>
+
+<main class="wrap">
+  <div class="intro" id="intro">
+    <div class="tag" data-i18n="tag">FIND YOUR LEVEL · 5 MIN · NO SIGNUP</div>
+    <h1 data-i18n="title">Where do you stand right now?</h1>
+    <p data-i18n="lede">12 quick questions. We'll estimate your current JLPT level and tell you how many weeks until N3-ready at your pace.</p>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <div class="qcard" id="qcard">
+    <div class="qlevel">
+      <span id="q-level">N5</span>
+      <span class="ix" id="q-ix">1 / 12</span>
+    </div>
+    <div class="qprompt" id="q-prompt">…</div>
+    <div class="qopts" id="q-opts"></div>
+  </div>
+
+  <div class="result-wrap" id="result">
+    <div class="r-tag" data-i18n="r_tag">DIAGNOSTIC COMPLETE</div>
+    <div class="r-headline"><span data-i18n="r_lead">Your level:</span> <em id="r-level">N4</em></div>
+    <div class="r-sub" id="r-sub"></div>
+    <div class="r-acc" id="r-acc"></div>
+    <a class="r-cta" href="dashboard.html" data-i18n="r_cta">⚔️ See your Readiness Dashboard →</a>
+    <div class="r-meta" data-i18n="r_meta">We saved your scores in your browser. Train daily to see your N3 ETA shrink.</div>
+    <details style="margin-top:18px;text-align:left;max-width:480px;margin-left:auto;margin-right:auto">
+      <summary style="cursor:pointer;font-family:var(--dot);color:var(--gold-d);font-size:13px" data-i18n="r_review_h">📖 Review your answers</summary>
+      <div id="r-review" style="margin-top:10px;font-size:13.5px;line-height:1.6;color:var(--muted)"></div>
+    </details>
+  </div>
+
+  <p class="note" data-i18n="note">Already know your level? <a href="quiz.html">Skip to free quiz →</a></p>
+</main>
+
+<link rel="stylesheet" href="styles/responsive.css">
+<script src="lib/hamburger.js" defer></script>
+<script src="data/onboarding-quiz.js"></script>
+<script src="lib/level-estimator.js"></script>
+<script src="lib/sync.js"></script>
+<script>
+const T = {
+  en:{ label:'🇬🇧 English', skip:'Skip → use defaults',
+    tag:'FIND YOUR LEVEL · 5 MIN · NO SIGNUP', title:'Where do you stand right now?',
+    lede:"About 20 quick questions. We'll estimate your current JLPT level and tell you how many weeks until N3-ready at your pace.",
+    r_tag:'DIAGNOSTIC COMPLETE', r_lead:'Your level:', r_cta:'⚔️ See your Readiness Dashboard →',
+    r_meta:'We saved your scores in your browser. Train daily to see your N3 ETA shrink.',
+    note:'Already know your level? <a href="quiz.html">Skip to free quiz →</a>', r_review_h:'📖 Review your answers' },
+  ja:{ label:'🇯🇵 日本語', skip:'スキップ → デフォルトを使う',
+    tag:'レベル診断 · 5分 · 登録不要', title:'今の実力はどこ？',
+    lede:'12問の診断であなたの JLPT レベルを推定し、N3 合格までの予想週数を表示します。',
+    r_tag:'診断完了', r_lead:'あなたのレベル:', r_cta:'⚔️ Readiness ダッシュボードを見る →',
+    r_meta:'スコアはブラウザに保存しました。毎日続けて N3 までの予想週数を縮めよう。',
+    note:'レベルがすでに分かる？ <a href="quiz.html">無料クイズへ →</a>', r_review_h:'📖 回答を振り返る' },
+  zh:{ label:'🇹🇼 繁體中文', skip:'跳過 → 使用預設',
+    tag:'測你的等級 · 5分鐘 · 免註冊', title:'你現在的實力在哪？',
+    lede:'12 道題目快速判定你的 JLPT 等級，並告訴你以你的節奏離 N3 合格還有幾週。',
+    r_tag:'診斷完成', r_lead:'你的等級:', r_cta:'⚔️ 查看 Readiness 儀表板 →',
+    r_meta:'分數已存在你的瀏覽器中。每天練習，看 N3 預計週數縮短。',
+    note:'已知道你的等級？ <a href="quiz.html">前往免費題目 →</a>', r_review_h:'📖 回顧你的答案' },
+  es:{ label:'🇪🇸 Español', skip:'Saltar → usar por defecto',
+    tag:'ENCUENTRA TU NIVEL · 5 MIN · SIN REGISTRO', title:'¿Dónde estás ahora mismo?',
+    lede:'12 preguntas rápidas. Estimaremos tu nivel JLPT actual y cuántas semanas faltan para N3 a tu ritmo.',
+    r_tag:'DIAGNÓSTICO COMPLETO', r_lead:'Tu nivel:', r_cta:'⚔️ Ver tu panel de Readiness →',
+    r_meta:'Guardamos tus puntuaciones en el navegador. Practica a diario para reducir las semanas hasta N3.',
+    note:'¿Ya conoces tu nivel? <a href="quiz.html">Ir al quiz gratis →</a>', r_review_h:'📖 Revisa tus respuestas' },
+  th:{ label:'🇹🇭 ภาษาไทย', skip:'ข้าม → ใช้ค่าเริ่มต้น',
+    tag:'ค้นหาระดับของคุณ · 5 นาที · ไม่ต้องสมัคร', title:'ตอนนี้คุณอยู่ระดับไหน?',
+    lede:'12 ข้อสั้นๆ เราจะประเมินระดับ JLPT ปัจจุบันและบอกจำนวนสัปดาห์ที่ต้องใช้จนพร้อมสอบ N3',
+    r_tag:'เสร็จสิ้นการวินิจฉัย', r_lead:'ระดับของคุณ:', r_cta:'⚔️ ดูแดชบอร์ด Readiness →',
+    r_meta:'คะแนนถูกบันทึกในเบราว์เซอร์ ฝึกทุกวันเพื่อลดสัปดาห์จนถึง N3',
+    note:'รู้ระดับของคุณแล้ว? <a href="quiz.html">ไปยังควิซฟรี →</a>', r_review_h:'📖 ทบทวนคำตอบของคุณ' },
+  id:{ label:'🇮🇩 Indonesia', skip:'Lewati → pakai default',
+    tag:'TEMUKAN LEVELMU · 5 MENIT · TANPA DAFTAR', title:'Di mana posisimu sekarang?',
+    lede:'12 soal singkat. Kami akan memperkirakan level JLPT-mu dan berapa minggu lagi sampai siap N3 di ritme-mu.',
+    r_tag:'DIAGNOSIS SELESAI', r_lead:'Levelmu:', r_cta:'⚔️ Lihat Dasbor Readiness-mu →',
+    r_meta:'Skor disimpan di browsermu. Latih tiap hari untuk memangkas minggu sampai N3.',
+    note:'Sudah tahu levelmu? <a href="quiz.html">Ke kuis gratis →</a>', r_review_h:'📖 Tinjau jawabanmu' }
+};
+const LANGS = ['en','ja','zh','es','th','id'];
+let LANG;
+try { LANG = localStorage.getItem('nh_lang'); } catch(e){}
+if(!LANGS.includes(LANG)) LANG = 'en';
+function tr(k){ return (T[LANG]&&T[LANG][k]) || T.en[k] || k; }
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n'); if(T[LANG]&&T[LANG][k]!==undefined) el.innerHTML = T[LANG][k];
+  });
+  if(!done) renderQuestion();
+}
+function setLang(l){ if(!LANGS.includes(l)) return; LANG=l; try{localStorage.setItem('nh_lang',l);}catch(e){} buildLangbar(); applyLang(); }
+function buildLangbar(){
+  document.getElementById('langbar').innerHTML = LANGS.map(l=>`<button class="${l===LANG?'active':''}" onclick="setLang('${l}')">${T[l].label}</button>`).join('');
+}
+
+const QUIZ = window.NH_ONBOARDING_QUIZ;
+let idx = 0;
+let answers = [];
+let done = false;
+
+function renderProgress(){
+  const html = QUIZ.map((_,i)=>{
+    const cls = i<idx ? 'done' : (i===idx ? 'current' : '');
+    return `<div class="pdot ${cls}"></div>`;
+  }).join('');
+  document.getElementById('progress').innerHTML = html;
+}
+
+let currentShuffleMap = []; // displayed index → original index
+
+function renderQuestion(){
+  if(idx >= QUIZ.length){ finish(); return; }
+  renderProgress();
+  const q = QUIZ[idx];
+  document.getElementById('q-level').textContent = q.level;
+  document.getElementById('q-ix').textContent = (idx+1) + ' / ' + QUIZ.length;
+  const prompt = (q.prompt && q.prompt[LANG]) || q.prompt.en;
+  document.getElementById('q-prompt').innerHTML = prompt;
+  let opts = q.options;
+  if(q.optionsI18n && q.optionsI18n[LANG]) opts = q.optionsI18n[LANG];
+  // Build a shuffle map [0,1,2,3] -> randomized so each render the answer position changes
+  const indices = opts.map((_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  currentShuffleMap = indices;
+  document.getElementById('q-opts').innerHTML = indices.map((origIdx, displayIdx)=>
+    `<button class="qopt" data-i="${displayIdx}" data-orig="${origIdx}">${escapeHTML(opts[origIdx])}</button>`
+  ).join('');
+}
+function escapeHTML(s){ return String(s).replace(/[&<>]/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+document.getElementById('q-opts').addEventListener('click', e=>{
+  const b = e.target.closest('.qopt'); if(!b || b.disabled) return;
+  const q = QUIZ[idx];
+  const origIdx = +b.dataset.orig;
+  const correct = (origIdx === q.answer);
+  answers.push({ id: q.id, level: q.level, correct });
+  document.querySelectorAll('.qopt').forEach(x=>x.disabled=true);
+  b.classList.add(correct ? 'correct-ans' : 'wrong-ans');
+  if(!correct){
+    const correctBtn = document.querySelector('.qopt[data-orig="'+q.answer+'"]');
+    if(correctBtn) correctBtn.classList.add('correct-ans');
+  }
+  setTimeout(()=>{ idx++; renderQuestion(); }, 750);
+});
+
+function finish(){
+  done = true;
+  document.getElementById('qcard').style.display = 'none';
+  document.getElementById('progress').style.display = 'none';
+  document.getElementById('intro').style.display = 'none';
+  const { level, acc } = window.NH_LEVEL_ESTIMATOR.saveResult(answers);
+  // Preload first quiz question in background so quiz.html opens instantly later
+  try {
+    const preloadLevel = level === 'PRE' ? 'N5' : level;
+    fetch('/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ level: preloadLevel, lang: LANG, topic: 'any' })
+    }).then(r => r.ok ? r.json() : null).then(data => {
+      if (data) {
+        try { sessionStorage.setItem('nh_preload_quiz', JSON.stringify({ data, level: preloadLevel, lang: LANG, ts: Date.now() })); } catch(e){}
+      }
+    }).catch(()=>{});
+  } catch(e){}
+  document.getElementById('r-level').textContent = level + ' · ' + window.NH_LEVEL_ESTIMATOR.rankLabel(level);
+  const subMsg = ({
+    en:'Trained at 20 questions a day, your N3 readiness will tick up every week.',
+    ja:'1日20問のペースで続ければ、N3 までの予想週数は毎週縮まります。',
+    zh:'每日 20 題的節奏練習，你的 N3 預估週數每週都會縮短。',
+    es:'A 20 preguntas por día, tu disposición a N3 mejora cada semana.',
+    th:'ฝึกวันละ 20 ข้อ ความพร้อม N3 จะเพิ่มขึ้นทุกสัปดาห์',
+    id:'Latihan 20 soal sehari membuat kesiapan N3-mu naik tiap minggu.'
+  })[LANG] || '';
+  document.getElementById('r-sub').textContent = subMsg;
+  const accDom = window.NH_LEVEL_ESTIMATOR.LEVELS.map(L=>{
+    const pct = Math.round((acc[L]||0) * 100);
+    return `<span>${L}: <b>${pct}%</b></span>`;
+  }).join('');
+  document.getElementById('r-acc').innerHTML = accDom;
+  // Build per-question review
+  const reviewHtml = answers.map((a, i) => {
+    const q = QUIZ[i];
+    const promptText = (q.prompt && (q.prompt[LANG] || q.prompt.en)).replace(/<[^>]+>/g,'');
+    const ico = a.correct ? '✅' : '❌';
+    return `<div style="padding:5px 0;border-bottom:1px dashed var(--soft)">${ico} <b>${q.level}</b> · ${escapeHTML(promptText)}</div>`;
+  }).join('');
+  document.getElementById('r-review').innerHTML = reviewHtml;
+  document.getElementById('result').classList.add('show');
+  // Confetti burst
+  spawnConfetti(28);
+}
+function spawnConfetti(n){
+  const colors = ['#bf3325','#e0a634','#2a7a4b','#4e8fc8','#c8911f'];
+  const c = document.createElement('div'); c.className = 'r-confetti';
+  for(let i=0;i<n;i++){
+    const s = document.createElement('span');
+    const x = Math.random()*100; const delay = Math.random()*0.3;
+    s.style.cssText = `left:${x}%;top:-12px;background:${colors[i%colors.length]};animation-delay:${delay}s;animation-duration:${1.2 + Math.random()*0.8}s`;
+    c.appendChild(s);
+  }
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(), 2500);
+}
+
+document.getElementById('skip-link').addEventListener('click', e=>{
+  e.preventDefault();
+  try {
+    localStorage.setItem('nh_onboarding_done','1');
+    localStorage.setItem('nh_estimated_level','N5');
+    localStorage.setItem('nh_diagnostic_scores', JSON.stringify({N5:0.0,N4:0.0,N3:0.0,N2:0.0,N1:0.0}));
+  } catch(e){}
+  location.href = 'dashboard.html';
+});
+
+buildLangbar(); applyLang(); renderProgress(); renderQuestion();
+</script>
+</body>
+</html>

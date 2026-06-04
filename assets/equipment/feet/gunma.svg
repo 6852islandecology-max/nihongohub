@@ -1,0 +1,30 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Kusatsu Onsen Geta</title>
+<g id="geta-left">
+<rect x="4" y="40" width="4" height="4" fill="#2c2416"/>
+<rect x="8" y="40" width="4" height="4" fill="#2c2416"/>
+<rect x="12" y="40" width="4" height="4" fill="#2c2416"/>
+<rect x="4" y="44" width="12" height="4" fill="#8b5a3c"/>
+<rect x="4" y="48" width="12" height="8" fill="#a67c52"/>
+<rect x="8" y="56" width="4" height="4" fill="#9b9285"/>
+<rect x="12" y="56" width="4" height="4" fill="#9b9285"/>
+<rect x="4" y="36" width="4" height="4" fill="#d4a574"/>
+<rect x="8" y="36" width="4" height="4" fill="#d4a574"/>
+<rect x="12" y="36" width="4" height="4" fill="#d4a574"/>
+</g>
+<g id="geta-right">
+<rect x="48" y="40" width="4" height="4" fill="#2c2416"/>
+<rect x="52" y="40" width="4" height="4" fill="#2c2416"/>
+<rect x="56" y="40" width="4" height="4" fill="#2c2416"/>
+<rect x="48" y="44" width="12" height="4" fill="#8b5a3c"/>
+<rect x="48" y="48" width="12" height="8" fill="#a67c52"/>
+<rect x="48" y="56" width="4" height="4" fill="#9b9285"/>
+<rect x="52" y="56" width="4" height="4" fill="#9b9285"/>
+<rect x="48" y="36" width="4" height="4" fill="#d4a574"/>
+<rect x="52" y="36" width="4" height="4" fill="#d4a574"/>
+<rect x="56" y="36" width="4" height="4" fill="#d4a574"/>
+</g>
+<g id="frame-border">
+<rect x="0" y="32" width="64" height="32" fill="none" stroke="#9b9285" stroke-width="2"/>
+</g>
+</svg>

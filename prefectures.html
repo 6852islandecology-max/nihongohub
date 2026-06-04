@@ -276,6 +276,11 @@ footer a{color:var(--gold);text-decoration:none}
 .langbar button{font-family:var(--dot);font-size:13px;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.6);padding:3px 8px;border-radius:5px}
 .langbar button.active{color:#fff;background:rgba(255,255,255,.14);font-weight:700}
 </style>
+<link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="styles/equipment.css">
+<script src="lib/hamburger.js" defer></script>
+<script src="data/equipment-metadata.js" defer></script>
+<script src="lib/equipment.js" defer></script>
 </head>
 <body data-lang="en">
 
@@ -771,6 +776,9 @@ if(legend){Object.keys(REGIONS).forEach(k=>{
 
 function titleParts(el){const t=(el.querySelector("title")?.textContent||"").split("/");return{kanji:(t[0]||"").trim(),romaji:(t[1]||el.classList[0]||"").trim()};}
 
+/* Pilot 5 prefectures get a walking-avatar animation when selected. */
+const PILOT_WALK = new Set(['hokkaido','tokyo','kyoto','osaka','okinawa']);
+
 function selectPref(el){
   prefs.forEach(p=>p.classList.remove("selected"));
   el.classList.add("selected");
@@ -779,6 +787,55 @@ function selectPref(el){
   const code=el.getAttribute("data-code");
   panel.innerHTML=data?renderReady(kanji,romaji,region,data,code,key):renderLocked(kanji,romaji,region);
   if(window.innerWidth<=880)panel.scrollIntoView({behavior:"smooth",block:"start"});
+  // Pilot: walk hero sprite to the selected prefecture
+  if (PILOT_WALK.has(key)) walkHeroTo(el);
+}
+
+/* Pixel-art hero overlay: starts hidden, walks to the selected pref via CSS transition.
+   Reads avatar + equipped weapon/head from NH_EQUIPMENT_API and renders on map. */
+function ensureHeroSprite(){
+  let host = document.getElementById('hero-overlay');
+  if (host) return host;
+  host = document.createElement('div');
+  host.id = 'hero-overlay';
+  host.style.cssText = 'position:absolute;pointer-events:none;width:48px;height:48px;left:0;top:0;transform:translate(-9999px,-9999px);transition:transform 1.4s cubic-bezier(.4,1,.4,1);z-index:5';
+  host.innerHTML = '<div class="hero-bounce" style="position:relative;width:48px;height:48px;animation:hero-walk 0.45s steps(2) infinite"></div>';
+  const map = document.getElementById('japan-map');
+  if (map && map.parentElement) map.parentElement.style.position = 'relative';
+  if (map && map.parentElement) map.parentElement.appendChild(host); else document.body.appendChild(host);
+  // CSS keyframes injection
+  if (!document.getElementById('hero-walk-style')) {
+    const s = document.createElement('style');
+    s.id = 'hero-walk-style';
+    s.textContent = '@keyframes hero-walk{0%{transform:translateY(0)}50%{transform:translateY(-3px)}100%{transform:translateY(0)}} .hero-bounce img{position:absolute;inset:0;image-rendering:pixelated}';
+    document.head.appendChild(s);
+  }
+  return host;
+}
+function refreshHeroLayers(){
+  if (!window.NH_EQUIPMENT_API) return;
+  const A = window.NH_EQUIPMENT_API;
+  const avatar = A.avatarParts(); if (!avatar) return;
+  const eq = A.getEquipped();
+  const host = ensureHeroSprite();
+  const inner = host.querySelector('.hero-bounce');
+  const layers = [`<img src="${avatar.src}" alt="" style="z-index:1">`];
+  if (eq.body)   layers.push(`<img src="${A.itemAssetPath('body',   eq.body  )}" alt="" style="z-index:2">`);
+  if (eq.head)   layers.push(`<img src="${A.itemAssetPath('head',   eq.head  )}" alt="" style="z-index:3">`);
+  if (eq.feet)   layers.push(`<img src="${A.itemAssetPath('feet',   eq.feet  )}" alt="" style="z-index:4">`);
+  if (eq.weapon) layers.push(`<img src="${A.itemAssetPath('weapon', eq.weapon)}" alt="" style="z-index:5">`);
+  inner.innerHTML = layers.join('');
+}
+function walkHeroTo(prefEl){
+  refreshHeroLayers();
+  const host = ensureHeroSprite();
+  const map = document.getElementById('japan-map');
+  if (!map) return;
+  const mapRect = map.getBoundingClientRect();
+  const targetRect = prefEl.getBoundingClientRect();
+  const cx = targetRect.left + targetRect.width/2 - mapRect.left - 24; // 48px sprite, center
+  const cy = targetRect.top + targetRect.height/2 - mapRect.top - 24;
+  host.style.transform = `translate(${cx}px, ${cy}px)`;
 }
 
 function regionBadge(r){return r?`<span class="pref-region" style="background:${regionColor(r)}">REGION · ${REGIONS[r].label}</span>`:"";}
@@ -885,7 +942,7 @@ panel.addEventListener("click",e=>{
   if(claim&&!claim.classList.contains("claimed")){
     const romaji=claim.dataset.romaji;
     const text=`I'm exploring ${romaji}, Japan with NihongoHub! 🗾 #NihongoHub #VisitJapan #${romaji.replace(/[^A-Za-z]/g,"")}`;
-    const done=()=>{claimTitle(romaji);claim.textContent=`✓ ${romaji} TITLE`;claim.classList.add("claimed");};
+    const done=()=>{claimTitle(romaji);awardEquipment(romaji,'random-share');claim.textContent=`✓ ${romaji} TITLE`;claim.classList.add("claimed");};
     if(navigator.share){navigator.share({title:"NihongoHub — Explore Japan",text,url:location.href}).then(done).catch(done);}
     else{window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`,"_blank","noopener");done();}
     return;
@@ -911,7 +968,7 @@ panel.addEventListener("click",e=>{
       res.textContent="✨ CRITICAL HIT!  +10 XP";res.className="battle-result win show";
       battle.querySelector(".battle-explain").classList.add("show");
       const rj=battle.dataset.romaji;
-      if(rj&&!getTitles().includes(rj)){claimTitle(rj);toast(`🏅 <b>${rj} title earned!</b> Quest cleared.`);}
+      if(rj&&!getTitles().includes(rj)){claimTitle(rj);awardEquipment(rj,'weapon');toast(`🏅 <b>${rj} title earned!</b> Quest cleared.`);}
     }else{
       opt.classList.add("wrong");opt.disabled=true;
       res.textContent="💥 MISSED! Pick another — clear it to earn the title.";res.className="battle-result lose show";
@@ -943,8 +1000,20 @@ teleBtn?.addEventListener("click",()=>{
   tick();
 });
 
-/* titles persist in localStorage (honor-system) */
+/* titles persist in localStorage (honor-system); also unlocks equipment via NH_EQUIPMENT_API */
 function getTitles(){try{return JSON.parse(localStorage.getItem("nh_titles")||"[]");}catch(e){return [];}}
+// Wrapper: quiz-clear → weapon; share → random head/body/feet
+function awardEquipment(romaji, slot){
+  const slug = (romaji || "").toLowerCase();
+  if (!window.NH_EQUIPMENT_API) return null;
+  let result;
+  if (slot === 'random-share') result = window.NH_EQUIPMENT_API.claimRandomShareReward(slug);
+  else result = window.NH_EQUIPMENT_API.claimReward(slug, slot);
+  if (result && result.added) {
+    try { window.NH_EQUIPMENT_API.showRewardToast(result); } catch(e){}
+  }
+  return result;
+}
 function claimBtnHtml(romaji){
   const claimed=getTitles().includes(romaji);
   return `<button class="claim-btn${claimed?" claimed":""}" data-romaji="${romaji}">${claimed?`✓ ${romaji} TITLE`:"📸 SHARE &amp; CLAIM TITLE"}</button>`;
@@ -970,7 +1039,7 @@ renderTitles();
 function npcSVG(name){
   const n=(name==="yukika")?"yukika":"akari";
   const alt=(n==="akari")?"Akari, the fox culture guide":"Yukika, the crane nature guide";
-  return `<img class="npc-img" src="assets/characters/${n}.png" alt="${alt}" loading="lazy">`;
+  return `<img class="npc-img" src="assets/characters/${n}.svg" alt="${alt}" loading="lazy">`;
 }
 function guidesBlock(d,romaji){
   const s=d.stats||{};

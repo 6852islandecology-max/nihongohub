@@ -1,0 +1,50 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Pilgrimage Waraji</title>
+  
+  <!-- Left Waraji (Sandal) -->
+  <g id="left-waraji">
+    <!-- Sole -->
+    <rect x="4" y="36" width="20" height="12" fill="#8B7355"/>
+    <!-- Straw texture on sole -->
+    <rect x="6" y="38" width="2" height="2" fill="#A0826D"/>
+    <rect x="10" y="40" width="2" height="2" fill="#A0826D"/>
+    <rect x="14" y="38" width="2" height="2" fill="#A0826D"/>
+    <rect x="18" y="40" width="2" height="2" fill="#A0826D"/>
+    
+    <!-- Straps (rope/fabric) -->
+    <rect x="8" y="32" width="3" height="6" fill="#9b9285"/>
+    <rect x="16" y="32" width="3" height="6" fill="#9b9285"/>
+    
+    <!-- Upper foot covering -->
+    <rect x="6" y="28" width="16" height="6" fill="#D4C5A9"/>
+    <!-- Straw weave pattern -->
+    <rect x="8" y="29" width="2" height="3" fill="#C9B89A"/>
+    <rect x="12" y="30" width="2" height="3" fill="#C9B89A"/>
+    <rect x="16" y="29" width="2" height="3" fill="#C9B89A"/>
+  </g>
+  
+  <!-- Right Waraji (Sandal) -->
+  <g id="right-waraji">
+    <!-- Sole -->
+    <rect x="40" y="36" width="20" height="12" fill="#8B7355"/>
+    <!-- Straw texture on sole -->
+    <rect x="42" y="38" width="2" height="2" fill="#A0826D"/>
+    <rect x="46" y="40" width="2" height="2" fill="#A0826D"/>
+    <rect x="50" y="38" width="2" height="2" fill="#A0826D"/>
+    <rect x="54" y="40" width="2" height="2" fill="#A0826D"/>
+    
+    <!-- Straps (rope/fabric) -->
+    <rect x="44" y="32" width="3" height="6" fill="#9b9285"/>
+    <rect x="52" y="32" width="3" height="6" fill="#9b9285"/>
+    
+    <!-- Upper foot covering -->
+    <rect x="42" y="28" width="16" height="6" fill="#D4C5A9"/>
+    <!-- Straw weave pattern -->
+    <rect x="44" y="29" width="2" height="3" fill="#C9B89A"/>
+    <rect x="48" y="30" width="2" height="3" fill="#C9B89A"/>
+    <rect x="52" y="29" width="2" height="3" fill="#C9B89A"/>
+  </g>
+  
+  <!-- Rarity Frame Border -->
+  <rect x="2" y="24" width="60" height="32" fill="none" stroke="#9b9285" stroke-width="2"/>
+</svg>

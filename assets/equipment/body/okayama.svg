@@ -1,0 +1,46 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Korakuen Garden Robe</title>
+  
+  <!-- Frame border -->
+  <g id="frame">
+    <rect x="0" y="0" width="64" height="64" fill="none" stroke="#9b9285" stroke-width="4"/>
+  </g>
+  
+  <!-- Robe body - cream/beige base -->
+  <g id="robe">
+    <!-- Main torso -->
+    <rect x="12" y="12" width="40" height="32" fill="#d4c9b8"/>
+    
+    <!-- Left sleeve -->
+    <rect x="4" y="16" width="8" height="20" fill="#c9bda8"/>
+    
+    <!-- Right sleeve -->
+    <rect x="52" y="16" width="8" height="20" fill="#c9bda8"/>
+    
+    <!-- Center front opening -->
+    <rect x="28" y="16" width="8" height="24" fill="#8b7355"/>
+    
+    <!-- Collar left -->
+    <rect x="16" y="12" width="4" height="4" fill="#9b9285"/>
+    
+    <!-- Collar right -->
+    <rect x="44" y="12" width="4" height="4" fill="#9b9285"/>
+    
+    <!-- Garden pattern - left accent -->
+    <rect x="16" y="24" width="4" height="8" fill="#6b8e23"/>
+    <rect x="20" y="28" width="4" height="4" fill="#8fbc8f"/>
+    
+    <!-- Garden pattern - right accent -->
+    <rect x="44" y="24" width="4" height="8" fill="#6b8e23"/>
+    <rect x="40" y="28" width="4" height="4" fill="#8fbc8f"/>
+    
+    <!-- Hem detail -->
+    <rect x="12" y="40" width="40" height="4" fill="#9b9285"/>
+    
+    <!-- Sleeve cuffs left -->
+    <rect x="4" y="32" width="8" height="4" fill="#9b9285"/>
+    
+    <!-- Sleeve cuffs right -->
+    <rect x="52" y="32" width="8" height="4" fill="#9b9285"/>
+  </g>
+</svg>

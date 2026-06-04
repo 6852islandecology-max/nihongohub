@@ -1,35 +1,148 @@
 /**
- * Generate /blog static prefecture guides from blog/guides-data.js.
- * - Emits blog/<slug>.html for every entry WITHOUT `full:true`
- *   (full:true = a richer bespoke page already exists; left untouched).
- * - Regenerates blog/index.html listing all 47, grouped by region.
+ * Generate /blog static prefecture guides + multilingual variants.
+ *
+ * English (non-full only): blog/<slug>.html — with enrichment from guides-enriched.json
+ * Per language (zh/es/th/id): blog/<lang>/<slug>.html — from translations/<lang>.json
+ * Index: blog/index.html (English) — full 47 list
+ *
+ * Affiliate blocks dispersed: one mid-article (after "What to see"), one at the end.
+ *
  * Run: node scripts/build-guides.mjs
  */
-import { writeFileSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { GUIDES, REGION_LABELS } from "../blog/guides-data.js";
 import { EXTRA } from "../blog/guides-extra.js";
-import { LANGS, translatedSlugs } from "../blog/i18n.js";
-
-// locales (other than en) that have translated this slug
-const langsFor = (slug) => LANGS.filter((l) => translatedSlugs(l.code).includes(slug));
-function hreflangFor(slug) {
-  const ls = langsFor(slug);
-  if (!ls.length) return "";
-  return `\n<link rel="alternate" hreflang="en" href="${slug}.html">\n` +
-    ls.map((l) => `<link rel="alternate" hreflang="${l.htmlLang}" href="${l.code}/${slug}.html">`).join("\n");
-}
-function switcherFor(slug) {
-  const ls = langsFor(slug);
-  if (!ls.length) return "";
-  return `\n  <span class="langsw"><a aria-current="page">EN</a> · ${ls.map((l) => `<a href="${l.code}/${slug}.html">${l.label}</a>`).join(" · ")}</span>`;
-}
 
 const BLOG_DIR = new URL("../blog/", import.meta.url);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+// Wrap the leading spot name (before " — " or " - ") in <b> so blog-quiz.js can inject Map+Phrases buttons.
+function wrapName(s) {
+  const text = String(s).trim();
+  // Strip any pre-existing **markdown bold** to plain
+  const m = text.match(/^\s*(.+?)\s+[—–-]\s+(.+)$/);
+  if (m) return `<b>${esc(m[1].replace(/\*\*/g, ""))}</b> — ${esc(m[2])}`;
+  return `<b>${esc(text.replace(/\*\*/g, ""))}</b>`;
+}
+
+// Build a visually striking kanji-based hero block per prefecture (no external images).
+function kanjiHero(g) {
+  // Region-based color theme for variety
+  const themes = {
+    "hokkaido":      ["#1d3a5f","#7fc4ff"], // arctic blue
+    "tohoku":        ["#3b2a4f","#c8a4ff"], // aurora purple
+    "kanto":         ["#2c1a4d","#ff7a3d"], // sunset coral
+    "chubu":         ["#1f3a2a","#7fd47f"], // alpine green
+    "kansai":        ["#4a1a2f","#ffb840"], // imperial gold
+    "chugoku":       ["#1a3a4a","#5fc8d8"], // seaside teal
+    "shikoku":       ["#3a2a1a","#ffd877"], // sandy warm
+    "kyushu-okinawa":["#4a2a1a","#ff6f3d"]  // volcanic ember
+  };
+  const [c1, c2] = themes[g.region] || ["#16100a","#c8911f"];
+  return `<div class="phero" style="background:linear-gradient(135deg,${c1} 0%,${c1} 60%,${c2}cc 100%);">
+    <div class="phero-kanji" aria-hidden="true">${esc(g.kanji)}</div>
+    <div class="phero-meta">
+      <div class="phero-region">${REGION_LABELS[g.region]}</div>
+      <div class="phero-romaji">${esc(g.romaji.toUpperCase())}</div>
+    </div>
+  </div>`;
+}
 const BY_SLUG = Object.fromEntries(GUIDES.map((g) => [g.slug, g]));
 
-const HEAD = (title, desc, extraHead = "") => `<!DOCTYPE html>
-<html lang="en">
+// Optional enrichment (English only)
+let ENRICHED = {};
+try { ENRICHED = JSON.parse(readFileSync(new URL("../blog/guides-enriched.json", import.meta.url), "utf8")); } catch(e){}
+
+// Languages with translation files
+const LANGS_INFO = [
+  { code:"zh", htmlLang:"zh-Hant", label:"繁中" },
+  { code:"es", htmlLang:"es",      label:"ES" },
+  { code:"th", htmlLang:"th",      label:"TH" },
+  { code:"id", htmlLang:"id",      label:"ID" }
+];
+
+const TRANSLATIONS = {};
+for (const li of LANGS_INFO) {
+  const p = new URL(`../blog/translations/${li.code}.json`, import.meta.url);
+  if (existsSync(p)) TRANSLATIONS[li.code] = JSON.parse(readFileSync(p, "utf8"));
+  else TRANSLATIONS[li.code] = {};
+}
+const availLangs = (slug) => LANGS_INFO.filter(li => TRANSLATIONS[li.code] && TRANSLATIONS[li.code][slug]);
+
+// Per-locale UI strings (minimal — section headings only)
+const UI = {
+  en: { allGuides:"← All prefecture guides", freeQuiz:"FREE QUIZ", exploreMap:"🗾 Explore map",
+        whatToSee:"What to see", whatToEat:"What to eat", history:"History & background",
+        gettingWhen:"Getting there & when to go", gettingThere:"Getting there", bestTime:"Best time",
+        seasons:"When to go — season by season", suggested:"A suggested visit",
+        learn:"LEARN THE JAPANESE", localWord:"LOCAL WORD", goodToKnow:"💡 Good to know", related:"Related guides",
+        planStay:"Plan your stay", findStay:"Find places to stay in Japan →",
+        source:"Source", sourceTail:"Facts kept to well-established highlights and checked against official tourism information; opinions are our own.",
+        disclose:"Some links above are affiliate links. We may earn a commission at no extra cost to you. We only list services we'd use ourselves.",
+        openMap:(n)=>`⚔️ Open ${n} on the Explore map →`,
+        h1Tail:"Travel Guide for Japanese Learners",
+        hiddenGems:"Hidden gems", culture:"Local culture", etiquette:"Local etiquette", season_tip:"Seasonal tip" },
+  zh: { allGuides:"← 所有縣份指南", freeQuiz:"免費測驗", exploreMap:"🗾 探索地圖",
+        whatToSee:"必看景點", whatToEat:"必吃美食", history:"歷史與背景",
+        gettingWhen:"如何前往與最佳季節", gettingThere:"如何前往", bestTime:"最佳季節",
+        seasons:"四季玩法", suggested:"建議行程",
+        learn:"學個日語", localWord:"在地詞彙", goodToKnow:"💡 小提醒", related:"相關指南",
+        planStay:"規劃住宿", findStay:"在日本尋找住宿 →",
+        source:"資料來源", sourceTail:"事實依官方旅遊資訊查核，觀點為我們所有。",
+        disclose:"上方部分連結為聯盟行銷連結，我們可能因此獲得報酬，您不會額外付費。我們只推薦自己也會使用的服務。",
+        openMap:(n)=>`⚔️ 在探索地圖開啟${n} →`, h1Tail:"旅遊指南（為日語學習者撰寫）" },
+  es: { allGuides:"← Todas las guías", freeQuiz:"CUESTIONARIO GRATIS", exploreMap:"🗾 Mapa Explorar",
+        whatToSee:"Qué ver", whatToEat:"Qué comer", history:"Historia y contexto",
+        gettingWhen:"Cómo llegar y cuándo ir", gettingThere:"Cómo llegar", bestTime:"Mejor época",
+        seasons:"Temporada por temporada", suggested:"Visita sugerida",
+        learn:"APRENDE EL JAPONÉS", localWord:"PALABRA LOCAL", goodToKnow:"💡 Bueno saber", related:"Guías relacionadas",
+        planStay:"Planifica tu estancia", findStay:"Encuentra alojamiento en Japón →",
+        source:"Fuente", sourceTail:"Datos contrastados con información turística oficial; opiniones nuestras.",
+        disclose:"Algunos enlaces son de afiliados. Podemos recibir una comisión sin coste adicional para ti. Solo listamos servicios que usaríamos.",
+        openMap:(n)=>`⚔️ Abrir ${n} en el Mapa Explorar →`, h1Tail:"Guía de viaje para estudiantes de japonés" },
+  th: { allGuides:"← คู่มือทุกจังหวัด", freeQuiz:"ควิซฟรี", exploreMap:"🗾 แผนที่สำรวจ",
+        whatToSee:"ต้องไปดู", whatToEat:"ต้องกิน", history:"ประวัติและที่มา",
+        gettingWhen:"การเดินทางและช่วงเวลาที่ดีที่สุด", gettingThere:"การเดินทาง", bestTime:"ช่วงเวลาที่ดีที่สุด",
+        seasons:"ฤดูแต่ละฤดู", suggested:"แนะนำการเที่ยว",
+        learn:"เรียนภาษาญี่ปุ่น", localWord:"คำท้องถิ่น", goodToKnow:"💡 รู้ไว้ดี", related:"คู่มือที่เกี่ยวข้อง",
+        planStay:"วางแผนที่พัก", findStay:"ค้นหาที่พักในญี่ปุ่น →",
+        source:"แหล่งที่มา", sourceTail:"ข้อมูลตรวจสอบกับสำนักงานท่องเที่ยวอย่างเป็นทางการ ความคิดเห็นเป็นของเรา",
+        disclose:"ลิงก์บางตัวเป็นลิงก์พันธมิตร เราอาจได้รับค่าตอบแทนโดยคุณไม่เสียค่าใช้จ่ายเพิ่ม เราแนะนำเฉพาะบริการที่เราใช้เอง",
+        openMap:(n)=>`⚔️ เปิด ${n} บนแผนที่สำรวจ →`, h1Tail:"คู่มือท่องเที่ยวสำหรับผู้เรียนภาษาญี่ปุ่น" },
+  id: { allGuides:"← Semua panduan prefektur", freeQuiz:"KUIS GRATIS", exploreMap:"🗾 Peta Jelajah",
+        whatToSee:"Yang wajib dilihat", whatToEat:"Yang wajib dicoba", history:"Sejarah & latar",
+        gettingWhen:"Cara ke sana & waktu terbaik", gettingThere:"Cara ke sana", bestTime:"Waktu terbaik",
+        seasons:"Musim demi musim", suggested:"Saran kunjungan",
+        learn:"Belajar bahasa Jepang", localWord:"Kata lokal", goodToKnow:"💡 Tips berguna", related:"Panduan terkait",
+        planStay:"Rencanakan menginap", findStay:"Cari tempat menginap di Jepang →",
+        source:"Sumber", sourceTail:"Fakta diperiksa terhadap informasi pariwisata resmi; opini adalah milik kami.",
+        disclose:"Beberapa tautan di atas adalah tautan afiliasi. Kami mungkin mendapat komisi tanpa biaya tambahan bagi Anda. Kami hanya mencantumkan layanan yang kami pakai sendiri.",
+        openMap:(n)=>`⚔️ Buka ${n} di Peta Jelajah →`, h1Tail:"Panduan Wisata untuk Pelajar Bahasa Jepang" }
+};
+
+function hreflangBlock(slug, currentLang){
+  const en = currentLang === "en" ? "" : `\n<link rel="alternate" hreflang="en" href="${currentLang === "en" ? "" : "../"}${slug}.html">`;
+  const langs = availLangs(slug).filter(li => li.code !== currentLang);
+  return en + (langs.length ? "\n" + langs.map(li => `<link rel="alternate" hreflang="${li.htmlLang}" href="${currentLang === "en" ? li.code + "/" : "../" + li.code + "/"}${slug}.html">`).join("\n") : "");
+}
+
+function switcherFor(slug, currentLang){
+  const langs = availLangs(slug);
+  const enHref = currentLang === "en" ? null : `../${slug}.html`;
+  const parts = [];
+  if (enHref) parts.push(`<a href="${enHref}">EN</a>`);
+  else parts.push(`<a aria-current="page">EN</a>`);
+  langs.forEach(li => {
+    if (li.code === currentLang) parts.push(`<a aria-current="page">${li.label}</a>`);
+    else parts.push(`<a href="${currentLang === "en" ? li.code + "/" : "../" + li.code + "/"}${slug}.html">${li.label}</a>`);
+  });
+  if (parts.length === 0) return "";
+  return `<span class="langsw">${parts.join(" · ")}</span>`;
+}
+
+const HEAD = (title, desc, htmlLang, extraHead, cssPrefix) => `<!DOCTYPE html>
+<html lang="${htmlLang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -40,115 +153,222 @@ const HEAD = (title, desc, extraHead = "") => `<!DOCTYPE html>
 <meta property="og:type" content="article">${extraHead}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="blog.css">
-<style>.langsw{font-family:var(--dot);font-size:13px}.langsw a{color:#fff;text-decoration:none;opacity:.8;cursor:pointer}.langsw a[aria-current]{color:var(--gold);opacity:1;font-weight:700}</style>
+<link rel="stylesheet" href="${cssPrefix}blog.css">
 </head>`;
 
-const navFor = (slug) => `<nav class="bnav">
-  <a class="logo" href="../index.html">Nihongo<span>Hub</span></a>
-  <a href="index.html">← All prefecture guides</a>${switcherFor(slug)}
-  <a class="cta" href="../index.html#practice">FREE QUIZ</a>
+const navFor = (slug, lang, ui, isLangPath) => {
+  const indexHref = isLangPath ? "index.html" : "index.html";
+  const homeHref = isLangPath ? "../../index.html" : "../index.html";
+  const quizHref = isLangPath ? "../../index.html#practice" : "../index.html#practice";
+  return `<nav class="bnav">
+  <a class="logo" href="${homeHref}">Nihongo<span>Hub</span></a>
+  <a href="${indexHref}">${ui.allGuides}</a>
+  ${switcherFor(slug, lang)}
+  <a class="cta" href="${quizHref}">${ui.freeQuiz}</a>
 </nav>`;
+};
 
-function articleHTML(g) {
-  const title = `${g.romaji} Travel Guide for Japanese Learners (2026) — NihongoHub`;
+function affiliateBlock(ui, slug, romaji){
+  return `<div class="aff">
+  <span class="pr">PR</span> <b style="font-family:inherit">${ui.planStay}</b>
+  <div>
+    <a href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(romaji)}+Japan" target="_blank" rel="sponsored noopener">${ui.findStay.replace(/Japan|日本|Jepang|日本 →/, romaji + ' →')}</a>
+  </div>
+  <p class="disclose">${ui.disclose}</p>
+</div>`;
+}
+
+function articleEN(g) {
+  const ui = UI.en;
+  const title = `${g.romaji} ${ui.h1Tail} (2026) — NihongoHub`;
   const desc = `${g.romaji} (${g.kanji}) for first-timers: what to see, what to eat, and a useful Japanese phrase. ${g.lede}`;
-  const see = g.see.map((s) => `<li>${esc(s)}</li>`).join("");
+  const see = (g.see || []).map(s => `<li>${wrapName(s)}</li>`).join("");
   const x = EXTRA[g.slug] || {};
-  const historyBlock = x.history ? `\n  <h2>History &amp; background</h2>\n  <p>${esc(x.history)}</p>` : "";
-  const seasonsBlock = x.seasons ? `\n  <h2>When to go — season by season</h2>\n  <p>${esc(x.seasons)}</p>` : "";
-  const itineraryBlock = x.itinerary ? `\n  <h2>A suggested visit</h2>\n  <p>${esc(x.itinerary)}</p>` : "";
+  const enr = ENRICHED[g.slug] || null;
+
+  const historyBlock = x.history ? `\n  <h2>${ui.history}</h2>\n  <p>${esc(x.history)}</p>` : "";
+  const seasonsBlock = x.seasons ? `\n  <h2>${ui.seasons}</h2>\n  <p>${esc(x.seasons)}</p>` : "";
+  const itineraryBlock = x.itinerary ? `\n  <h2>${ui.suggested}</h2>\n  <p>${esc(x.itinerary)}</p>` : "";
   const gettingBlock = (g.getting || g.when) ? `
-  <h2>Getting there &amp; when to go</h2>
-  ${g.getting ? `<p><b>Getting there:</b> ${esc(g.getting)}</p>` : ""}
-  ${g.when ? `<p><b>Best time:</b> ${esc(g.when)}</p>` : ""}` : "";
+  <h2>${ui.gettingWhen}</h2>
+  ${g.getting ? `<p><b>${ui.gettingThere}:</b> ${esc(g.getting)}</p>` : ""}
+  ${g.when ? `<p><b>${ui.bestTime}:</b> ${esc(g.when)}</p>` : ""}` : "";
+
   const wordBlock = g.word ? `
   <div class="jpbox">
-    <b>LOCAL WORD</b>
+    <b>${ui.localWord}</b>
     <div class="jp">${esc(g.word.jp)}</div>
     <div class="romaji">${esc(g.word.ro)} — ${esc(g.word.en)}</div>
   </div>` : "";
-  const tipBlock = g.tip ? `<div class="aff" style="background:#eef7ef;border-color:var(--green)"><b style="font-family:inherit;color:var(--green)">💡 Good to know</b><p style="margin:6px 0 0">${esc(g.tip)}</p></div>` : "";
-  const rel = (g.related || []).map((s) => BY_SLUG[s]).filter(Boolean);
+
+  const tipBlock = g.tip ? `<div class="aff" style="background:#eef7ef;border-color:var(--green)"><b style="font-family:inherit;color:var(--green)">${ui.goodToKnow}</b><p style="margin:6px 0 0">${esc(g.tip)}</p></div>` : "";
+
+  // Enrichment blocks (English only)
+  const formatBold = (s) => esc(s).replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+  const hiddenBlock = enr && enr.hidden_gems ? `\n  <h2>Hidden gems</h2>\n  <ul>${enr.hidden_gems.map(h => `<li>${formatBold(h)}</li>`).join("")}</ul>` : "";
+  const cultureBlock = enr && enr.culture_extras ? `\n  <h2>Local culture</h2>\n  ${enr.culture_extras.map(c => `<p>${esc(c)}</p>`).join("\n  ")}` : "";
+  const seasonalTipBlock = enr && enr.seasonal_tip ? `<p><b>Seasonal tip:</b> ${esc(enr.seasonal_tip)}</p>` : "";
+  const etiquetteBlock = enr && enr.etiquette ? `<p><b>Local etiquette:</b> ${esc(enr.etiquette)}</p>` : "";
+  const deeperPhraseBlock = enr && enr.deeper_phrase ? `
+  <div class="jpbox">
+    <b>LOCAL WORD · MORE</b>
+    <div class="jp">${esc(enr.deeper_phrase.jp)}</div>
+    <div class="romaji">${esc(enr.deeper_phrase.ro)} — ${esc(enr.deeper_phrase.en)}</div>
+  </div>` : "";
+
+  const rel = (g.related || []).map(s => BY_SLUG[s]).filter(Boolean);
   const relatedBlock = rel.length ? `
-  <h2>Related guides</h2>
-  <div class="cards">${rel.map((r) => `<a class="bcard" href="${r.slug}.html"><span class="bk">${esc(r.kanji)}</span><div class="br">${esc(r.romaji.toUpperCase())}</div></a>`).join("")}</div>` : "";
-  return `${HEAD(title, desc, hreflangFor(g.slug))}
+  <h2>${ui.related}</h2>
+  <div class="cards">${rel.map(r => `<a class="bcard" href="${r.slug}.html"><span class="bk">${esc(r.kanji)}</span><div class="br">${esc(r.romaji.toUpperCase())}</div></a>`).join("")}</div>` : "";
+
+  return `${HEAD(title, desc, "en", hreflangBlock(g.slug, "en"), "")}
 <body>
-${navFor(g.slug)}
+${navFor(g.slug, "en", ui, false)}
+${kanjiHero(g)}
 <article class="wrap">
-  <div class="tag">▶ ${REGION_LABELS[g.region]} · ${esc(g.romaji.toUpperCase())} ${esc(g.kanji)}</div>
-  <h1>${esc(g.romaji)} Travel Guide for Japanese Learners</h1>
+  <h1>${esc(g.romaji)} ${ui.h1Tail}</h1>
   <p class="lede">${esc(g.lede)}</p>
   <p>${esc(g.intro)}</p>
 ${historyBlock}
 
-  <h2>What to see</h2>
+  <h2>${ui.whatToSee}</h2>
   <ul>${see}</ul>
+${hiddenBlock}
 
-  <h2>What to eat</h2>
-  <p>${esc(g.eat)}</p>
+  ${affiliateBlock(ui, g.slug, g.romaji)}
+
+  <h2>${ui.whatToEat}</h2>
+  <p>${esc(g.eat || "")}</p>
 ${gettingBlock}
 ${seasonsBlock}
+${cultureBlock}
 ${itineraryBlock}
 
+${seasonalTipBlock}
+${etiquetteBlock}
+
   <div class="jpbox">
-    <b>LEARN THE JAPANESE</b>
-    <div class="jp">${esc(g.phrase.jp)}</div>
-    <div class="romaji">${esc(g.phrase.ro)} — "${esc(g.phrase.en)}"</div>
+    <b>${ui.learn}</b>
+    <div class="jp">${esc((g.phrase || {}).jp || "")}</div>
+    <div class="romaji">${esc((g.phrase || {}).ro || "")} — "${esc((g.phrase || {}).en || "")}"</div>
   </div>
 ${wordBlock}
+${deeperPhraseBlock}
 ${tipBlock}
 
-  <div class="aff">
-    <span class="pr">PR</span> <b style="font-family:inherit">Plan your stay</b>
-    <div>
-      <a href="https://www.booking.com/country/jp.html" target="_blank" rel="sponsored noopener">Find places to stay in Japan →</a>
-    </div>
-    <p class="disclose">Some links above are affiliate links. We may earn a commission at no extra cost to you. We only list services we'd use ourselves.</p>
-  </div>
+  ${affiliateBlock(ui, g.slug, g.romaji)}
 
   <div class="cta-box">
-    <a href="../prefectures.html?pref=${g.slug}">⚔️ Open ${esc(g.romaji)} on the Explore map →</a>
+    <a href="../prefectures.html?pref=${g.slug}">${ui.openMap(esc(g.romaji))}</a>
   </div>
 ${relatedBlock}
 
   <div class="sources">
-    Source: <a href="https://www.japan.travel/en/destinations/" target="_blank" rel="noopener">Japan National Tourism Organization (JNTO)</a>.
-    Facts kept to well-established highlights and checked against official tourism information; opinions are our own.
+    ${ui.source}: <a href="https://www.japan.travel/en/destinations/" target="_blank" rel="noopener">Japan National Tourism Organization (JNTO)</a>.
+    ${ui.sourceTail}
   </div>
 </article>
 <footer>© 2026 NihongoHub · <a href="index.html">All guides</a> · <a href="../index.html">Home</a></footer>
+<script src="blog-quiz.js"></script>
+</body>
+</html>
+`;
+}
+
+function articleLang(g, lang) {
+  const ui = UI[lang];
+  const li = LANGS_INFO.find(l => l.code === lang);
+  const tr = (TRANSLATIONS[lang] || {})[g.slug];
+  if (!tr) return null; // missing translation
+  const fb = (k) => (tr[k] && String(tr[k]).trim()) || g[k] || "";
+  const title = `${g.romaji} ${ui.h1Tail} (2026) — NihongoHub`;
+  const desc = `${g.romaji} (${g.kanji}): ${fb("lede")}`;
+  const see = (tr.see && tr.see.length ? tr.see : g.see || []).map(s => `<li>${wrapName(s)}</li>`).join("");
+
+  const gettingBlock = (fb("getting") || fb("when")) ? `
+  <h2>${ui.gettingWhen}</h2>
+  ${fb("getting") ? `<p><b>${ui.gettingThere}:</b> ${esc(fb("getting"))}</p>` : ""}
+  ${fb("when") ? `<p><b>${ui.bestTime}:</b> ${esc(fb("when"))}</p>` : ""}` : "";
+
+  const wordBlock = g.word ? `
+  <div class="jpbox">
+    <b>${ui.localWord}</b>
+    <div class="jp">${esc(g.word.jp)}</div>
+    <div class="romaji">${esc(g.word.ro)} — ${esc(tr.word_meaning || g.word.en || "")}</div>
+  </div>` : "";
+
+  const tipText = fb("tip");
+  const tipBlock = tipText ? `<div class="aff" style="background:#eef7ef;border-color:var(--green)"><b style="font-family:inherit;color:var(--green)">${ui.goodToKnow}</b><p style="margin:6px 0 0">${esc(tipText)}</p></div>` : "";
+
+  return `${HEAD(title, desc, li.htmlLang, hreflangBlock(g.slug, lang), "../")}
+<body>
+${navFor(g.slug, lang, ui, true)}
+${kanjiHero(g)}
+<article class="wrap">
+  <h1>${esc(g.romaji)} ${ui.h1Tail}</h1>
+  <p class="lede">${esc(fb("lede"))}</p>
+  <p>${esc(fb("intro"))}</p>
+
+  <h2>${ui.whatToSee}</h2>
+  <ul>${see}</ul>
+
+  ${affiliateBlock(ui, g.slug, g.romaji)}
+
+  <h2>${ui.whatToEat}</h2>
+  <p>${esc(fb("eat"))}</p>
+${gettingBlock}
+
+  <div class="jpbox">
+    <b>${ui.learn}</b>
+    <div class="jp">${esc((g.phrase || {}).jp || "")}</div>
+    <div class="romaji">${esc((g.phrase || {}).ro || "")} — "${esc(tr.word_meaning || (g.phrase || {}).en || "")}"</div>
+  </div>
+${wordBlock}
+${tipBlock}
+
+  ${affiliateBlock(ui, g.slug, g.romaji)}
+
+  <div class="cta-box">
+    <a href="../../prefectures.html?pref=${g.slug}">${ui.openMap(esc(g.romaji))}</a>
+  </div>
+
+  <div class="sources">
+    ${ui.source}: <a href="https://www.japan.travel/en/destinations/" target="_blank" rel="noopener">Japan National Tourism Organization (JNTO)</a>.
+    ${ui.sourceTail}
+  </div>
+</article>
+<footer>© 2026 NihongoHub · <a href="index.html">${ui.allGuides.replace('←','').trim()}</a> · <a href="../../index.html">Home</a></footer>
+<script src="../blog-quiz.js"></script>
 </body>
 </html>
 `;
 }
 
 function indexHTML() {
-  const order = ["hokkaido", "tohoku", "kanto", "chubu", "kansai", "chugoku", "shikoku", "kyushu-okinawa"];
+  const ui = UI.en;
+  const order = ["hokkaido","tohoku","kanto","chubu","kansai","chugoku","shikoku","kyushu-okinawa"];
   const byRegion = {};
   for (const g of GUIDES) (byRegion[g.region] ||= []).push(g);
-  const sections = order.map((r) => {
-    const cards = (byRegion[r] || []).map((g) => {
-      const tagline = g.full ? esc(g.blurb) : esc(g.lede);
-      return `<a class="bcard" href="${g.slug}.html"><span class="bk">${esc(g.kanji)}</span><div class="br">${esc(g.romaji.toUpperCase())}</div><p>${tagline}</p></a>`;
+  const sections = order.map(r => {
+    const cards = (byRegion[r] || []).map(g => {
+      const tag = g.full ? esc(g.blurb || "") : esc(g.lede || "");
+      return `<a class="bcard" href="${g.slug}.html"><span class="bk">${esc(g.kanji)}</span><div class="br">${esc(g.romaji.toUpperCase())}</div><p>${tag}</p></a>`;
     }).join("");
     return `<h2>${REGION_LABELS[r]}</h2><div class="cards">${cards}</div>`;
   }).join("\n");
-
   const title = "Japan Prefecture Travel Guides for Japanese Learners — NihongoHub";
-  const desc = "Free, honest travel guides to all 47 of Japan's prefectures, written for Japanese learners. Where to go, what to eat, and the Japanese phrases that help.";
-  return `${HEAD(title, desc)}
+  const desc = "Free, honest travel guides to all 47 of Japan's prefectures, written for Japanese learners.";
+  return `${HEAD(title, desc, "en", "", "")}
 <body>
 <nav class="bnav">
   <a class="logo" href="../index.html">Nihongo<span>Hub</span></a>
-  <a href="../prefectures.html">🗾 Explore map</a>
-  <a class="cta" href="../index.html#practice">FREE QUIZ</a>
+  <a href="../prefectures.html">${ui.exploreMap}</a>
+  <a class="cta" href="../index.html#practice">${ui.freeQuiz}</a>
 </nav>
 <div class="wrap">
   <div class="tag">▶ PREFECTURE GUIDES</div>
   <h1>Japan, one prefecture at a time</h1>
-  <p class="lede">Free, honest travel guides for Japanese learners — all 47 prefectures. Where to go, what to eat, and the Japanese that actually helps on the trip.</p>
+  <p class="lede">Free, honest travel guides for Japanese learners — all 47 prefectures.</p>
   ${sections}
   <div class="cta-box"><a href="../prefectures.html">⚔️ See them on the Explore map →</a></div>
 </div>
@@ -158,11 +378,30 @@ function indexHTML() {
 `;
 }
 
-let emitted = 0;
+// ── emit English (non-full) ──
+let emittedEn = 0;
 for (const g of GUIDES) {
-  if (g.full) continue; // bespoke page exists; don't overwrite
-  writeFileSync(new URL(`${g.slug}.html`, BLOG_DIR), articleHTML(g));
-  emitted++;
+  if (g.full) continue;
+  writeFileSync(new URL(`${g.slug}.html`, BLOG_DIR), articleEN(g));
+  emittedEn++;
 }
 writeFileSync(new URL("index.html", BLOG_DIR), indexHTML());
-console.log(`generated ${emitted} guide pages + index (total ${GUIDES.length} prefectures listed)`);
+
+// ── emit per-language (non-full) ──
+const langCounts = {};
+for (const li of LANGS_INFO) {
+  const dir = new URL(`${li.code}/`, BLOG_DIR);
+  try { mkdirSync(fileURLToPath(dir), { recursive: true }); } catch(e){}
+  let n = 0;
+  for (const g of GUIDES) {
+    if (g.full) continue;
+    const html = articleLang(g, li.code);
+    if (!html) continue;
+    writeFileSync(new URL(`${g.slug}.html`, dir), html);
+    n++;
+  }
+  langCounts[li.code] = n;
+}
+
+console.log(`English: emitted ${emittedEn} guide pages + index (total ${GUIDES.length} listed)`);
+for (const li of LANGS_INFO) console.log(`${li.code}: ${langCounts[li.code]} translated pages`);

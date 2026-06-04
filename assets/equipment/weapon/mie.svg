@@ -1,0 +1,50 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Ninja Kunai</title>
+  
+  <!-- Blade tip (dark gray) -->
+  <g id="blade-tip">
+    <rect x="28" y="4" width="8" height="4" fill="#2a2a2a"/>
+    <rect x="24" y="8" width="16" height="4" fill="#2a2a2a"/>
+  </g>
+  
+  <!-- Main blade (metallic silver) -->
+  <g id="blade-main">
+    <rect x="26" y="12" width="12" height="16" fill="#c0c0c0"/>
+    <rect x="28" y="12" width="8" height="16" fill="#e8e8e8"/>
+  </g>
+  
+  <!-- Blade edge (dark accent) -->
+  <g id="blade-edge">
+    <rect x="26" y="12" width="2" height="16" fill="#1a1a1a"/>
+    <rect x="36" y="12" width="2" height="16" fill="#1a1a1a"/>
+  </g>
+  
+  <!-- Cross-guard (purple epic rarity) -->
+  <g id="crossguard">
+    <rect x="20" y="28" width="24" height="4" fill="#a056d2"/>
+    <rect x="18" y="30" width="28" height="2" fill="#7a3fa8"/>
+  </g>
+  
+  <!-- Handle shaft (dark brown) -->
+  <g id="handle">
+    <rect x="28" y="32" width="8" height="20" fill="#4a3a2a"/>
+    <rect x="30" y="32" width="4" height="20" fill="#5a4a3a"/>
+  </g>
+  
+  <!-- Handle wrap (purple accent bands) -->
+  <g id="handle-wrap">
+    <rect x="28" y="36" width="8" height="2" fill="#a056d2"/>
+    <rect x="28" y="42" width="8" height="2" fill="#a056d2"/>
+  </g>
+  
+  <!-- Pommel (dark metal) -->
+  <g id="pommel">
+    <rect x="26" y="52" width="12" height="8" fill="#2a2a2a"/>
+    <rect x="28" y="52" width="8" height="4" fill="#3a3a3a"/>
+  </g>
+  
+  <!-- Ring detail on pommel (purple highlight) -->
+  <g id="pommel-ring">
+    <rect x="24" y="54" width="16" height="2" fill="#a056d2"/>
+  </g>
+</svg>

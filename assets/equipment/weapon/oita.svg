@@ -1,0 +1,45 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Beppu Hot Spring Staff</title>
+  
+  <!-- Staff shaft -->
+  <g id="shaft">
+    <rect x="28" y="8" width="8" height="40" fill="#8B4513"/>
+    <rect x="28" y="8" width="8" height="40" fill="#A0522D" opacity="0.5"/>
+  </g>
+  
+  <!-- Top ornament - hot spring symbol -->
+  <g id="top-ornament">
+    <!-- Blue steam wisps representing hot spring -->
+    <rect x="24" y="4" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="28" y="0" width="8" height="4" fill="#4d8fbf"/>
+    <rect x="36" y="4" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="24" y="8" width="16" height="4" fill="#6BA3D4"/>
+  </g>
+  
+  <!-- Middle band - decorative -->
+  <g id="middle-band">
+    <rect x="24" y="24" width="16" height="4" fill="#4d8fbf"/>
+    <rect x="26" y="26" width="12" height="2" fill="#2D5A8F"/>
+  </g>
+  
+  <!-- Bottom grip section -->
+  <g id="grip">
+    <rect x="26" y="44" width="12" height="4" fill="#654321"/>
+    <rect x="24" y="48" width="16" height="4" fill="#8B4513"/>
+    <rect x="20" y="52" width="24" height="4" fill="#A0522D"/>
+    <!-- Grip texture -->
+    <rect x="26" y="50" width="12" height="2" fill="#4d8fbf" opacity="0.6"/>
+  </g>
+  
+  <!-- Staff tip - water droplet shape -->
+  <g id="tip">
+    <rect x="28" y="56" width="8" height="4" fill="#4d8fbf"/>
+    <rect x="26" y="60" width="12" height="2" fill="#2D5A8F"/>
+    <rect x="28" y="62" width="8" height="2" fill="#4d8fbf"/>
+  </g>
+  
+  <!-- Highlight on shaft for dimension -->
+  <g id="highlight" opacity="0.4">
+    <rect x="30" y="12" width="2" height="32" fill="#D2B48C"/>
+  </g>
+</svg>

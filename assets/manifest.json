@@ -1,0 +1,357 @@
+{
+  "generatedAt": "2026-06-04T12:09:59.631Z",
+  "totalSprites": 203,
+  "avatars": [
+    "avatars/avatar-h1-s1.svg",
+    "avatars/avatar-h1-s2.svg",
+    "avatars/avatar-h1-s3.svg",
+    "avatars/avatar-h2-s1.svg",
+    "avatars/avatar-h2-s2.svg",
+    "avatars/avatar-h2-s3.svg",
+    "avatars/avatar-h3-s1.svg",
+    "avatars/avatar-h3-s2.svg",
+    "avatars/avatar-h3-s3.svg",
+    "avatars/avatar-h4-s1.svg",
+    "avatars/avatar-h4-s2.svg",
+    "avatars/avatar-h4-s3.svg",
+    "avatars/avatar-h5-s1.svg",
+    "avatars/avatar-h5-s2.svg",
+    "avatars/avatar-h5-s3.svg"
+  ],
+  "equipment": {
+    "hokkaido": {
+      "weapon": "equipment/weapon/hokkaido.svg",
+      "head": "equipment/head/hokkaido.svg",
+      "body": "equipment/body/hokkaido.svg",
+      "feet": "equipment/feet/hokkaido.svg"
+    },
+    "aomori": {
+      "weapon": "equipment/weapon/aomori.svg",
+      "head": "equipment/head/aomori.svg",
+      "body": "equipment/body/aomori.svg",
+      "feet": "equipment/feet/aomori.svg"
+    },
+    "iwate": {
+      "weapon": "equipment/weapon/iwate.svg",
+      "head": "equipment/head/iwate.svg",
+      "body": "equipment/body/iwate.svg",
+      "feet": "equipment/feet/iwate.svg"
+    },
+    "miyagi": {
+      "weapon": "equipment/weapon/miyagi.svg",
+      "head": "equipment/head/miyagi.svg",
+      "body": "equipment/body/miyagi.svg",
+      "feet": "equipment/feet/miyagi.svg"
+    },
+    "akita": {
+      "weapon": "equipment/weapon/akita.svg",
+      "head": "equipment/head/akita.svg",
+      "body": "equipment/body/akita.svg",
+      "feet": "equipment/feet/akita.svg"
+    },
+    "yamagata": {
+      "weapon": "equipment/weapon/yamagata.svg",
+      "head": "equipment/head/yamagata.svg",
+      "body": "equipment/body/yamagata.svg",
+      "feet": "equipment/feet/yamagata.svg"
+    },
+    "fukushima": {
+      "weapon": "equipment/weapon/fukushima.svg",
+      "head": "equipment/head/fukushima.svg",
+      "body": "equipment/body/fukushima.svg",
+      "feet": "equipment/feet/fukushima.svg"
+    },
+    "ibaraki": {
+      "weapon": "equipment/weapon/ibaraki.svg",
+      "head": "equipment/head/ibaraki.svg",
+      "body": "equipment/body/ibaraki.svg",
+      "feet": "equipment/feet/ibaraki.svg"
+    },
+    "tochigi": {
+      "weapon": "equipment/weapon/tochigi.svg",
+      "head": "equipment/head/tochigi.svg",
+      "body": "equipment/body/tochigi.svg",
+      "feet": "equipment/feet/tochigi.svg"
+    },
+    "gunma": {
+      "weapon": "equipment/weapon/gunma.svg",
+      "head": "equipment/head/gunma.svg",
+      "body": "equipment/body/gunma.svg",
+      "feet": "equipment/feet/gunma.svg"
+    },
+    "saitama": {
+      "weapon": "equipment/weapon/saitama.svg",
+      "head": "equipment/head/saitama.svg",
+      "body": "equipment/body/saitama.svg",
+      "feet": "equipment/feet/saitama.svg"
+    },
+    "chiba": {
+      "weapon": "equipment/weapon/chiba.svg",
+      "head": "equipment/head/chiba.svg",
+      "body": "equipment/body/chiba.svg",
+      "feet": "equipment/feet/chiba.svg"
+    },
+    "tokyo": {
+      "weapon": "equipment/weapon/tokyo.svg",
+      "head": "equipment/head/tokyo.svg",
+      "body": "equipment/body/tokyo.svg",
+      "feet": "equipment/feet/tokyo.svg"
+    },
+    "kanagawa": {
+      "weapon": "equipment/weapon/kanagawa.svg",
+      "head": "equipment/head/kanagawa.svg",
+      "body": "equipment/body/kanagawa.svg",
+      "feet": "equipment/feet/kanagawa.svg"
+    },
+    "niigata": {
+      "weapon": "equipment/weapon/niigata.svg",
+      "head": "equipment/head/niigata.svg",
+      "body": "equipment/body/niigata.svg",
+      "feet": "equipment/feet/niigata.svg"
+    },
+    "toyama": {
+      "weapon": "equipment/weapon/toyama.svg",
+      "head": "equipment/head/toyama.svg",
+      "body": "equipment/body/toyama.svg",
+      "feet": "equipment/feet/toyama.svg"
+    },
+    "ishikawa": {
+      "weapon": "equipment/weapon/ishikawa.svg",
+      "head": "equipment/head/ishikawa.svg",
+      "body": "equipment/body/ishikawa.svg",
+      "feet": "equipment/feet/ishikawa.svg"
+    },
+    "fukui": {
+      "weapon": "equipment/weapon/fukui.svg",
+      "head": "equipment/head/fukui.svg",
+      "body": "equipment/body/fukui.svg",
+      "feet": "equipment/feet/fukui.svg"
+    },
+    "yamanashi": {
+      "weapon": "equipment/weapon/yamanashi.svg",
+      "head": "equipment/head/yamanashi.svg",
+      "body": "equipment/body/yamanashi.svg",
+      "feet": "equipment/feet/yamanashi.svg"
+    },
+    "nagano": {
+      "weapon": "equipment/weapon/nagano.svg",
+      "head": "equipment/head/nagano.svg",
+      "body": "equipment/body/nagano.svg",
+      "feet": "equipment/feet/nagano.svg"
+    },
+    "gifu": {
+      "weapon": "equipment/weapon/gifu.svg",
+      "head": "equipment/head/gifu.svg",
+      "body": "equipment/body/gifu.svg",
+      "feet": "equipment/feet/gifu.svg"
+    },
+    "shizuoka": {
+      "weapon": "equipment/weapon/shizuoka.svg",
+      "head": "equipment/head/shizuoka.svg",
+      "body": "equipment/body/shizuoka.svg",
+      "feet": "equipment/feet/shizuoka.svg"
+    },
+    "aichi": {
+      "weapon": "equipment/weapon/aichi.svg",
+      "head": "equipment/head/aichi.svg",
+      "body": "equipment/body/aichi.svg",
+      "feet": "equipment/feet/aichi.svg"
+    },
+    "mie": {
+      "weapon": "equipment/weapon/mie.svg",
+      "head": "equipment/head/mie.svg",
+      "body": "equipment/body/mie.svg",
+      "feet": "equipment/feet/mie.svg"
+    },
+    "shiga": {
+      "weapon": "equipment/weapon/shiga.svg",
+      "head": "equipment/head/shiga.svg",
+      "body": "equipment/body/shiga.svg",
+      "feet": "equipment/feet/shiga.svg"
+    },
+    "kyoto": {
+      "weapon": "equipment/weapon/kyoto.svg",
+      "head": "equipment/head/kyoto.svg",
+      "body": "equipment/body/kyoto.svg",
+      "feet": "equipment/feet/kyoto.svg"
+    },
+    "osaka": {
+      "weapon": "equipment/weapon/osaka.svg",
+      "head": "equipment/head/osaka.svg",
+      "body": "equipment/body/osaka.svg",
+      "feet": "equipment/feet/osaka.svg"
+    },
+    "hyogo": {
+      "weapon": "equipment/weapon/hyogo.svg",
+      "head": "equipment/head/hyogo.svg",
+      "body": "equipment/body/hyogo.svg",
+      "feet": "equipment/feet/hyogo.svg"
+    },
+    "nara": {
+      "weapon": "equipment/weapon/nara.svg",
+      "head": "equipment/head/nara.svg",
+      "body": "equipment/body/nara.svg",
+      "feet": "equipment/feet/nara.svg"
+    },
+    "wakayama": {
+      "weapon": "equipment/weapon/wakayama.svg",
+      "head": "equipment/head/wakayama.svg",
+      "body": "equipment/body/wakayama.svg",
+      "feet": "equipment/feet/wakayama.svg"
+    },
+    "tottori": {
+      "weapon": "equipment/weapon/tottori.svg",
+      "head": "equipment/head/tottori.svg",
+      "body": "equipment/body/tottori.svg",
+      "feet": "equipment/feet/tottori.svg"
+    },
+    "shimane": {
+      "weapon": "equipment/weapon/shimane.svg",
+      "head": "equipment/head/shimane.svg",
+      "body": "equipment/body/shimane.svg",
+      "feet": "equipment/feet/shimane.svg"
+    },
+    "okayama": {
+      "weapon": "equipment/weapon/okayama.svg",
+      "head": "equipment/head/okayama.svg",
+      "body": "equipment/body/okayama.svg",
+      "feet": "equipment/feet/okayama.svg"
+    },
+    "hiroshima": {
+      "weapon": "equipment/weapon/hiroshima.svg",
+      "head": "equipment/head/hiroshima.svg",
+      "body": "equipment/body/hiroshima.svg",
+      "feet": "equipment/feet/hiroshima.svg"
+    },
+    "yamaguchi": {
+      "weapon": "equipment/weapon/yamaguchi.svg",
+      "head": "equipment/head/yamaguchi.svg",
+      "body": "equipment/body/yamaguchi.svg",
+      "feet": "equipment/feet/yamaguchi.svg"
+    },
+    "tokushima": {
+      "weapon": "equipment/weapon/tokushima.svg",
+      "head": "equipment/head/tokushima.svg",
+      "body": "equipment/body/tokushima.svg",
+      "feet": "equipment/feet/tokushima.svg"
+    },
+    "kagawa": {
+      "weapon": "equipment/weapon/kagawa.svg",
+      "head": "equipment/head/kagawa.svg",
+      "body": "equipment/body/kagawa.svg",
+      "feet": "equipment/feet/kagawa.svg"
+    },
+    "ehime": {
+      "weapon": "equipment/weapon/ehime.svg",
+      "head": "equipment/head/ehime.svg",
+      "body": "equipment/body/ehime.svg",
+      "feet": "equipment/feet/ehime.svg"
+    },
+    "kochi": {
+      "weapon": "equipment/weapon/kochi.svg",
+      "head": "equipment/head/kochi.svg",
+      "body": "equipment/body/kochi.svg",
+      "feet": "equipment/feet/kochi.svg"
+    },
+    "fukuoka": {
+      "weapon": "equipment/weapon/fukuoka.svg",
+      "head": "equipment/head/fukuoka.svg",
+      "body": "equipment/body/fukuoka.svg",
+      "feet": "equipment/feet/fukuoka.svg"
+    },
+    "saga": {
+      "weapon": "equipment/weapon/saga.svg",
+      "head": "equipment/head/saga.svg",
+      "body": "equipment/body/saga.svg",
+      "feet": "equipment/feet/saga.svg"
+    },
+    "nagasaki": {
+      "weapon": "equipment/weapon/nagasaki.svg",
+      "head": "equipment/head/nagasaki.svg",
+      "body": "equipment/body/nagasaki.svg",
+      "feet": "equipment/feet/nagasaki.svg"
+    },
+    "kumamoto": {
+      "weapon": "equipment/weapon/kumamoto.svg",
+      "head": "equipment/head/kumamoto.svg",
+      "body": "equipment/body/kumamoto.svg",
+      "feet": "equipment/feet/kumamoto.svg"
+    },
+    "oita": {
+      "weapon": "equipment/weapon/oita.svg",
+      "head": "equipment/head/oita.svg",
+      "body": "equipment/body/oita.svg",
+      "feet": "equipment/feet/oita.svg"
+    },
+    "miyazaki": {
+      "weapon": "equipment/weapon/miyazaki.svg",
+      "head": "equipment/head/miyazaki.svg",
+      "body": "equipment/body/miyazaki.svg",
+      "feet": "equipment/feet/miyazaki.svg"
+    },
+    "kagoshima": {
+      "weapon": "equipment/weapon/kagoshima.svg",
+      "head": "equipment/head/kagoshima.svg",
+      "body": "equipment/body/kagoshima.svg",
+      "feet": "equipment/feet/kagoshima.svg"
+    },
+    "okinawa": {
+      "weapon": "equipment/weapon/okinawa.svg",
+      "head": "equipment/head/okinawa.svg",
+      "body": "equipment/body/okinawa.svg",
+      "feet": "equipment/feet/okinawa.svg"
+    }
+  },
+  "palette": {
+    "hair": [
+      {
+        "id": "h1",
+        "name": "black",
+        "hex": "#1a1410"
+      },
+      {
+        "id": "h2",
+        "name": "brown",
+        "hex": "#6b4a2e"
+      },
+      {
+        "id": "h3",
+        "name": "blonde",
+        "hex": "#e8c378"
+      },
+      {
+        "id": "h4",
+        "name": "red",
+        "hex": "#a14524"
+      },
+      {
+        "id": "h5",
+        "name": "blue",
+        "hex": "#4267a8"
+      }
+    ],
+    "skin": [
+      {
+        "id": "s1",
+        "name": "fair",
+        "hex": "#f2d4b8"
+      },
+      {
+        "id": "s2",
+        "name": "olive",
+        "hex": "#c89878"
+      },
+      {
+        "id": "s3",
+        "name": "dark",
+        "hex": "#8b5a3c"
+      }
+    ],
+    "rarity": {
+      "common": "#9b9285",
+      "rare": "#4d8fbf",
+      "epic": "#a056d2",
+      "legendary": "#e0a634"
+    }
+  }
+}

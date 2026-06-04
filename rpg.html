@@ -77,6 +77,11 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 2
 
 footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-top:1px solid var(--hud-line);margin-top:20px}
 </style>
+<link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="styles/equipment.css">
+<script src="lib/hamburger.js" defer></script>
+<script src="data/equipment-metadata.js" defer></script>
+<script src="lib/equipment.js" defer></script>
 </head>
 <body>
 <nav>
@@ -84,6 +89,7 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
   <div class="nav-links">
     <a href="quiz.html">⚔ Battle</a>
     <a href="prefectures.html">🗾 Explore</a>
+    <a href="sources/japan-relocation-guide-v1.html">🏡 Relocation Guide</a>
     <a href="index.html">Home</a>
   </div>
 </nav>
@@ -91,7 +97,7 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 <div class="hero">
   <div class="char-wrap">
     <div class="char-glow"></div>
-    <img class="char-img" id="char-img" src="rpg-n5.png" alt="Your adventurer">
+    <img class="char-img" id="char-img" src="rpg-n5.svg" alt="Your adventurer">
   </div>
   <p class="char-stage" id="char-stage">STAGE 1 · TRAVELER</p>
   <h1 class="char-title" id="char-title">はじめての冒険者</h1>
@@ -122,9 +128,64 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
   </div>
 </div>
 
+<!-- ── Equipment / Inventory section ── -->
+<div class="pref-section" id="equip-section">
+  <p class="section-head">⚔️ EQUIPMENT <span id="eq-summary">0 / 188 items</span></p>
+  <div class="eq-shell">
+    <div>
+      <div class="avatar-stack" id="avatar-stack" title="Your adventurer">
+        <!-- layers injected by renderEquipment() -->
+      </div>
+      <div class="eq-stats">
+        <div><div class="s-lbl">ATK</div><div class="s-val" id="eq-atk">0</div></div>
+        <div><div class="s-lbl">DEF</div><div class="s-val" id="eq-def">0</div></div>
+      </div>
+      <div style="text-align:center;margin-top:12px">
+        <button class="btn-share" id="change-avatar-btn" style="display:inline-flex">⚙ Change avatar</button>
+      </div>
+    </div>
+    <div class="eq-slots" id="eq-slots">
+      <!-- 4 slot rows injected by renderEquipment() -->
+    </div>
+  </div>
+</div>
+
 <div class="pref-section">
   <p class="section-head">🗾 PREFECTURE CONQUEST <span id="pref-count">0 / 47 cleared</span></p>
   <div class="pref-grid" id="pref-grid"></div>
+</div>
+
+<!-- Avatar creation/edit modal -->
+<div class="avatar-modal" id="avatar-modal">
+  <div class="am-card">
+    <h2>Create your adventurer</h2>
+    <p>Pick hair and skin to start your Japan adventure. You can change it later.</p>
+    <div class="am-preview"><img id="am-preview" src="" alt="Avatar preview"></div>
+    <div class="am-group">
+      <div class="am-group-label">HAIR COLOR</div>
+      <div class="am-swatches" id="am-hair"></div>
+    </div>
+    <div class="am-group">
+      <div class="am-group-label">SKIN TONE</div>
+      <div class="am-swatches" id="am-skin"></div>
+    </div>
+    <div class="am-actions">
+      <button class="am-btn am-skip" id="am-skip">Skip</button>
+      <button class="am-btn am-confirm" id="am-confirm">⚔ Start adventure</button>
+    </div>
+  </div>
+</div>
+
+<!-- Inventory modal (per slot) -->
+<div class="inv-modal" id="inv-modal">
+  <div class="inv-card">
+    <h3 id="inv-title">Choose an item</h3>
+    <div id="inv-grid" class="inv-grid"></div>
+    <div class="inv-actions">
+      <button class="inv-unequip" id="inv-unequip">Unequip</button>
+      <button class="inv-close" id="inv-close">Close</button>
+    </div>
+  </div>
 </div>
 
 <div class="ctas">
@@ -139,11 +200,11 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 
 <script>
 const STAGES = [
-  { min:0,   max:99,  level:'N5', stage:1, title:'はじめての冒険者', label:'First Adventurer', img:'rpg-n5.png', next:'N4 at 100 XP' },
-  { min:100, max:299, level:'N4', stage:2, title:'旅の修行者',       label:'Traveling Practitioner', img:'rpg-n4.png', next:'N3 at 300 XP' },
-  { min:300, max:599, level:'N3', stage:3, title:'言葉の探検家',     label:'Word Explorer',  img:'rpg-n3.png', next:'N2 at 600 XP' },
-  { min:600, max:999, level:'N2', stage:4, title:'日本語の使者',     label:'Language Envoy', img:'rpg-n2.png', next:'N1 at 1000 XP' },
-  { min:1000,max:Infinity, level:'N1', stage:5, title:'伝説の日本語マスター', label:'Legendary Master', img:'rpg-n1.png', next:'MASTERED ✨' },
+  { min:0,   max:99,  level:'N5', stage:1, title:'はじめての冒険者', label:'First Adventurer', img:'rpg-n5.svg', next:'N4 at 100 XP' },
+  { min:100, max:299, level:'N4', stage:2, title:'旅の修行者',       label:'Traveling Practitioner', img:'rpg-n4.svg', next:'N3 at 300 XP' },
+  { min:300, max:599, level:'N3', stage:3, title:'言葉の探検家',     label:'Word Explorer',  img:'rpg-n3.svg', next:'N2 at 600 XP' },
+  { min:600, max:999, level:'N2', stage:4, title:'日本語の使者',     label:'Language Envoy', img:'rpg-n2.svg', next:'N1 at 1000 XP' },
+  { min:1000,max:Infinity, level:'N1', stage:5, title:'伝説の日本語マスター', label:'Legendary Master', img:'rpg-n1.svg', next:'MASTERED ✨' },
 ];
 
 const PREFS = [
@@ -221,7 +282,199 @@ function toast(msg,dur=2500){
   setTimeout(()=>el.classList.remove('show'),dur);
 }
 
+/* ════════════════════════════════════════
+   Avatar selection + Equipment rendering
+   Depends on window.NH_EQUIPMENT_API (lib/equipment.js)
+   ════════════════════════════════════════ */
+const HAIR_PALETTE = [
+  { id:'h1', hex:'#1a1410', name:'Black' },
+  { id:'h2', hex:'#6b4a2e', name:'Brown' },
+  { id:'h3', hex:'#e8c378', name:'Blonde' },
+  { id:'h4', hex:'#a14524', name:'Red' },
+  { id:'h5', hex:'#4267a8', name:'Blue' },
+];
+const SKIN_PALETTE = [
+  { id:'s1', hex:'#f2d4b8', name:'Fair' },
+  { id:'s2', hex:'#c89878', name:'Olive' },
+  { id:'s3', hex:'#8b5a3c', name:'Dark' },
+];
+
+let avatarSel = { hair: 'h1', skin: 's1' };
+
+function renderAvatarSelector(){
+  const restore = window.NH_EQUIPMENT_API && window.NH_EQUIPMENT_API.getAvatar();
+  if (restore) { const [h,s] = restore.split('-'); avatarSel = { hair: h, skin: s }; }
+  const hairWrap = document.getElementById('am-hair');
+  const skinWrap = document.getElementById('am-skin');
+  hairWrap.innerHTML = HAIR_PALETTE.map(c =>
+    `<button class="am-sw ${avatarSel.hair===c.id?'selected':''}" data-kind="hair" data-id="${c.id}" style="background:${c.hex}" aria-label="Hair ${c.name}"></button>`
+  ).join('');
+  skinWrap.innerHTML = SKIN_PALETTE.map(c =>
+    `<button class="am-sw ${avatarSel.skin===c.id?'selected':''}" data-kind="skin" data-id="${c.id}" style="background:${c.hex}" aria-label="Skin ${c.name}"></button>`
+  ).join('');
+  refreshAvatarPreview();
+}
+function refreshAvatarPreview(){
+  document.getElementById('am-preview').src = `assets/avatars/avatar-${avatarSel.hair}-${avatarSel.skin}.svg`;
+}
+document.getElementById('am-hair').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-kind="hair"]'); if(!b) return;
+  avatarSel.hair = b.dataset.id;
+  document.querySelectorAll('#am-hair .am-sw').forEach(x => x.classList.toggle('selected', x === b));
+  refreshAvatarPreview();
+});
+document.getElementById('am-skin').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-kind="skin"]'); if(!b) return;
+  avatarSel.skin = b.dataset.id;
+  document.querySelectorAll('#am-skin .am-sw').forEach(x => x.classList.toggle('selected', x === b));
+  refreshAvatarPreview();
+});
+document.getElementById('am-confirm').addEventListener('click', ()=>{
+  if (!window.NH_EQUIPMENT_API) return;
+  window.NH_EQUIPMENT_API.setAvatar(avatarSel.hair, avatarSel.skin);
+  document.getElementById('avatar-modal').classList.remove('show');
+  renderEquipment();
+});
+document.getElementById('am-skip').addEventListener('click', ()=>{
+  // Default if user skips
+  if (window.NH_EQUIPMENT_API && !window.NH_EQUIPMENT_API.getAvatar()) {
+    window.NH_EQUIPMENT_API.setAvatar('h1','s1');
+  }
+  document.getElementById('avatar-modal').classList.remove('show');
+  renderEquipment();
+});
+document.getElementById('change-avatar-btn').addEventListener('click', ()=>{
+  renderAvatarSelector();
+  document.getElementById('avatar-modal').classList.add('show');
+});
+
+/* Equipment rendering */
+const SLOT_LABELS = {
+  weapon: { en:'Weapon', icon:'⚔' },
+  head:   { en:'Head',   icon:'⛑' },
+  body:   { en:'Body',   icon:'🥋' },
+  feet:   { en:'Feet',   icon:'👟' }
+};
+function renderEquipment(){
+  if (!window.NH_EQUIPMENT_API) return;
+  const A = window.NH_EQUIPMENT_API;
+  const avatar = A.avatarParts();
+  const equipped = A.getEquipped();
+  const stack = document.getElementById('avatar-stack');
+  // Build layered images
+  const layers = [];
+  if (avatar) layers.push(`<img class="layer-base" src="${avatar.src}" alt="Avatar">`);
+  if (equipped.body)   layers.push(`<img class="layer-body" src="${A.itemAssetPath('body', equipped.body)}" alt="">`);
+  if (equipped.head)   layers.push(`<img class="layer-head" src="${A.itemAssetPath('head', equipped.head)}" alt="">`);
+  if (equipped.feet)   layers.push(`<img class="layer-feet" src="${A.itemAssetPath('feet', equipped.feet)}" alt="">`);
+  if (equipped.weapon) layers.push(`<img class="layer-weapon" src="${A.itemAssetPath('weapon', equipped.weapon)}" alt="">`);
+  stack.innerHTML = layers.join('');
+  // Stats
+  const stats = A.statsTotal();
+  document.getElementById('eq-atk').textContent = stats.atk;
+  document.getElementById('eq-def').textContent = stats.def;
+  // Slot rows
+  const rows = A.SLOTS.map(slot => {
+    const slug = equipped[slot];
+    const meta = slug && window.NH_EQUIPMENT[slug] && window.NH_EQUIPMENT[slug][slot];
+    const lbl = SLOT_LABELS[slot];
+    const iconHtml = meta
+      ? `<img src="${A.itemAssetPath(slot, slug)}" alt="">`
+      : `<span style="font-size:24px;opacity:.4">${lbl.icon}</span>`;
+    const name = meta ? meta.name.en : 'Empty';
+    const desc = meta ? meta.desc : 'Tap to choose an item';
+    const rarityCls = meta ? ` rarity-${meta.rarity}` : '';
+    const emptyCls  = meta ? '' : ' empty';
+    return `<div class="equipment-slot${emptyCls}${rarityCls}" data-slot="${slot}">
+      <div class="es-icon">${iconHtml}</div>
+      <div class="es-info">
+        <div class="es-slot-label">${lbl.icon} ${lbl.en.toUpperCase()}</div>
+        <div class="es-name">${name}</div>
+        <div class="es-desc">${desc}</div>
+      </div>
+      <div class="es-action">Change ›</div>
+    </div>`;
+  }).join('');
+  document.getElementById('eq-slots').innerHTML = rows;
+  const counts = A.progressCounts();
+  document.getElementById('eq-summary').textContent = counts.obtained + ' / ' + counts.totalPossible + ' items';
+}
+document.getElementById('eq-slots').addEventListener('click', e=>{
+  const row = e.target.closest('.equipment-slot'); if (!row) return;
+  openInventoryModal(row.dataset.slot);
+});
+
+/* Inventory picker */
+let currentInvSlot = null;
+function openInventoryModal(slot){
+  if (!window.NH_EQUIPMENT_API) return;
+  currentInvSlot = slot;
+  const A = window.NH_EQUIPMENT_API;
+  const inv = A.getInventory()[slot] || [];
+  const equipped = A.getEquipped()[slot];
+  document.getElementById('inv-title').textContent =
+    `Choose your ${SLOT_LABELS[slot].en} (${inv.length} owned)`;
+  const grid = document.getElementById('inv-grid');
+  if (!inv.length) {
+    grid.innerHTML = `<div class="inv-empty">No items yet. ${slot==='weapon'?'Clear prefecture quizzes':'Share prefecture pages'} to unlock!</div>`;
+  } else {
+    grid.innerHTML = inv.map(slug => {
+      const meta = window.NH_EQUIPMENT[slug] && window.NH_EQUIPMENT[slug][slot];
+      if (!meta) return '';
+      const isEq = slug === equipped;
+      return `<div class="inv-item rarity-${meta.rarity}${isEq?' equipped':''}" data-slug="${slug}" title="${meta.name.en} — ${meta.desc}">
+        <img src="${A.itemAssetPath(slot, slug)}" alt="">
+        <div class="inv-name">${meta.name.en}</div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('inv-unequip').style.display = equipped ? '' : 'none';
+  document.getElementById('inv-modal').classList.add('show');
+}
+document.getElementById('inv-grid').addEventListener('click', e=>{
+  const item = e.target.closest('.inv-item'); if (!item || !currentInvSlot) return;
+  window.NH_EQUIPMENT_API.equipItem(currentInvSlot, item.dataset.slug);
+  document.getElementById('inv-modal').classList.remove('show');
+  renderEquipment();
+});
+document.getElementById('inv-unequip').addEventListener('click', ()=>{
+  if (currentInvSlot) window.NH_EQUIPMENT_API.unequipSlot(currentInvSlot);
+  document.getElementById('inv-modal').classList.remove('show');
+  renderEquipment();
+});
+document.getElementById('inv-close').addEventListener('click', ()=>{
+  document.getElementById('inv-modal').classList.remove('show');
+});
+document.getElementById('inv-modal').addEventListener('click', e=>{
+  if (e.target.id === 'inv-modal') document.getElementById('inv-modal').classList.remove('show');
+});
+document.addEventListener('keydown', e=>{
+  if (e.key === 'Escape') {
+    document.getElementById('inv-modal').classList.remove('show');
+    document.getElementById('avatar-modal').classList.remove('show');
+  }
+});
+
 init();
+
+// First-visit check: open avatar modal
+window.addEventListener('load', ()=>{
+  function start(){
+    if (!window.NH_EQUIPMENT_API) return;
+    if (!window.NH_EQUIPMENT_API.getAvatar()) {
+      renderAvatarSelector();
+      document.getElementById('avatar-modal').classList.add('show');
+    } else {
+      renderEquipment();
+    }
+    // Direct deep link: rpg.html#equip scrolls to equipment section
+    if (location.hash === '#equip') {
+      document.getElementById('equip-section').scrollIntoView({ behavior:'smooth' });
+    }
+  }
+  if (window.NH_EQUIPMENT_API) start();
+  else setTimeout(start, 250);
+});
 </script>
 </body>
 </html>

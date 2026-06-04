@@ -1,0 +1,41 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Pearl Diver Fins</title>
+<g id="left-fin">
+<rect x="4" y="40" width="4" height="4" fill="#1a1a1a"/>
+<rect x="8" y="40" width="4" height="4" fill="#1a1a1a"/>
+<rect x="12" y="40" width="4" height="4" fill="#2d5a7b"/>
+<rect x="0" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="4" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="8" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="12" y="44" width="4" height="4" fill="#2d5a7b"/>
+<rect x="16" y="44" width="4" height="4" fill="#e8f4ff"/>
+<rect x="0" y="48" width="4" height="4" fill="#4d8fbf"/>
+<rect x="4" y="48" width="4" height="4" fill="#4d8fbf"/>
+<rect x="8" y="48" width="4" height="4" fill="#4d8fbf"/>
+<rect x="12" y="48" width="4" height="4" fill="#2d5a7b"/>
+<rect x="16" y="48" width="4" height="4" fill="#e8f4ff"/>
+<rect x="4" y="52" width="4" height="4" fill="#4d8fbf"/>
+<rect x="8" y="52" width="4" height="4" fill="#2d5a7b"/>
+<rect x="12" y="52" width="4" height="4" fill="#e8f4ff"/>
+<rect x="8" y="56" width="4" height="4" fill="#e8f4ff"/>
+</g>
+<g id="right-fin">
+<rect x="36" y="40" width="4" height="4" fill="#1a1a1a"/>
+<rect x="40" y="40" width="4" height="4" fill="#1a1a1a"/>
+<rect x="44" y="40" width="4" height="4" fill="#2d5a7b"/>
+<rect x="32" y="44" width="4" height="4" fill="#e8f4ff"/>
+<rect x="36" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="40" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="44" y="44" width="4" height="4" fill="#2d5a7b"/>
+<rect x="48" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="32" y="48" width="4" height="4" fill="#e8f4ff"/>
+<rect x="36" y="48" width="4" height="4" fill="#4d8fbf"/>
+<rect x="40" y="48" width="4" height="4" fill="#4d8fbf"/>
+<rect x="44" y="48" width="4" height="4" fill="#2d5a7b"/>
+<rect x="48" y="48" width="4" height="4" fill="#4d8fbf"/>
+<rect x="36" y="52" width="4" height="4" fill="#4d8fbf"/>
+<rect x="40" y="52" width="4" height="4" fill="#2d5a7b"/>
+<rect x="44" y="52" width="4" height="4" fill="#e8f4ff"/>
+<rect x="40" y="56" width="4" height="4" fill="#e8f4ff"/>
+</g>
+</svg>
