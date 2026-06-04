@@ -365,14 +365,19 @@ function renderEquipment(){
   const avatar = A.avatarParts();
   const equipped = A.getEquipped();
   const stack = document.getElementById('avatar-stack');
-  // Build layered images
-  const layers = [];
-  if (avatar) layers.push(`<img class="layer-base" src="${avatar.src}" alt="Avatar">`);
-  if (equipped.body)   layers.push(`<img class="layer-body" src="${A.itemAssetPath('body', equipped.body)}" alt="">`);
-  if (equipped.head)   layers.push(`<img class="layer-head" src="${A.itemAssetPath('head', equipped.head)}" alt="">`);
-  if (equipped.feet)   layers.push(`<img class="layer-feet" src="${A.itemAssetPath('feet', equipped.feet)}" alt="">`);
-  if (equipped.weapon) layers.push(`<img class="layer-weapon" src="${A.itemAssetPath('weapon', equipped.weapon)}" alt="">`);
-  stack.innerHTML = layers.join('');
+  // Guild-card layout: hero centered + equipped gear as 4 corner badges.
+  function badge(slot){
+    const slug = equipped[slot];
+    const meta = slug && window.NH_EQUIPMENT[slug] && window.NH_EQUIPMENT[slug][slot];
+    const rarity = meta ? ' rarity-' + meta.rarity : '';
+    const inner = slug
+      ? `<img src="${A.itemAssetPath(slot, slug)}" alt="${(meta && meta.name && meta.name.en) || slot}">`
+      : `<span class="ph">${SLOT_LABELS[slot].icon}</span>`;
+    return `<div class="av-badge ${slot}${rarity}" title="${SLOT_LABELS[slot].en}">${inner}</div>`;
+  }
+  stack.innerHTML =
+    (avatar ? `<img class="layer-base" src="${avatar.src}" alt="Avatar">` : '') +
+    badge('weapon') + badge('head') + badge('body') + badge('feet');
   // Stats
   const stats = A.statsTotal();
   document.getElementById('eq-atk').textContent = stats.atk;

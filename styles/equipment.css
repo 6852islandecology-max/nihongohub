@@ -86,21 +86,34 @@ img.pixel-sprite,
 .eq-shell { display: grid; grid-template-columns: 280px 1fr; gap: 22px; }
 @media (max-width: 720px) { .eq-shell { grid-template-columns: 1fr; } }
 
+/* Guild-card layout: hero centered, equipped gear as 4 corner badges.
+   (Equipment sprites are item icons, not paper-doll body layers, so we place
+   them as legible slot badges instead of overlapping them full-frame.) */
 .avatar-stack {
-  position: relative; width: 200px; height: 200px;
-  background: linear-gradient(135deg, rgba(224,166,52,.12), rgba(191,51,37,.08));
-  border: 3px solid var(--soft, #ddcfb6); border-radius: 12px;
-  margin: 0 auto;
+  position: relative; width: 220px; height: 220px;
+  background: radial-gradient(circle at 50% 42%, rgba(232,160,32,.16), transparent 62%),
+              linear-gradient(135deg, rgba(224,166,52,.10), rgba(191,51,37,.07));
+  border: 3px solid var(--hud-line, #3d2f1f); border-radius: 14px;
+  margin: 0 auto; overflow: hidden;
 }
-.avatar-stack img {
-  position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px);
-  object-fit: contain;
+.avatar-stack .layer-base {
+  position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%);
+  width: 58%; height: 58%; object-fit: contain; z-index: 2;
 }
-.avatar-stack .layer-base { z-index: 1; }
-.avatar-stack .layer-body { z-index: 2; }
-.avatar-stack .layer-head { z-index: 3; }
-.avatar-stack .layer-feet { z-index: 4; }
-.avatar-stack .layer-weapon { z-index: 5; }
+.av-badge {
+  position: absolute; width: 52px; height: 52px; border-radius: 11px;
+  background: rgba(0,0,0,.30); border: 2px solid var(--hud-line, #3d2f1f);
+  display: flex; align-items: center; justify-content: center; z-index: 3;
+}
+.av-badge img { width: 42px; height: 42px; object-fit: contain; }
+.av-badge .ph { font-size: 20px; opacity: .32; }
+.av-badge.weapon { top: 8px; right: 8px; }
+.av-badge.head   { top: 8px; left: 8px; }
+.av-badge.body   { bottom: 8px; left: 8px; }
+.av-badge.feet   { bottom: 8px; right: 8px; }
+.av-badge.rarity-rare      { border-color: var(--eq-rare); }
+.av-badge.rarity-epic      { border-color: var(--eq-epic); }
+.av-badge.rarity-legendary { border-color: var(--eq-legendary); box-shadow: 0 0 8px rgba(224,166,52,.45); }
 
 .eq-stats {
   margin-top: 12px; padding: 10px 14px;
