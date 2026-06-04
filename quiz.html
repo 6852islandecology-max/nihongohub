@@ -46,11 +46,12 @@ body{font-family:'DM Sans',sans-serif;color:var(--ink);
   border-radius:12px;padding:12px 14px;margin-bottom:18px}
 .party .ava{width:78px;height:78px;flex:0 0 78px;background:radial-gradient(circle at 50% 40%,rgba(224,166,52,.18),transparent 70%);
   border-radius:10px;display:flex;align-items:center;justify-content:center;transition:transform .3s}
-.party .ava img{width:100%;height:100%;object-fit:contain;image-rendering:auto}
+.party .ava img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}
 .party.power-2 .ava{transform:scale(1.04)} .party.power-3 .ava{transform:scale(1.09)}
 .party .pinfo{flex:1;min-width:0}
 .party .pname{font-family:var(--pixel);font-size:10px;color:var(--ink);letter-spacing:1px}
 .party .bubble{font-size:14px;color:var(--muted);margin:5px 0 8px;line-height:1.45}
+.party .bubble .guide-mini{width:24px;height:24px;border-radius:50%;vertical-align:-7px;margin-right:6px;image-rendering:auto;background:radial-gradient(circle at 50% 40%,#fff,#f3ead7)}
 .xp-track{height:12px;background:#e9dec6;border:2px solid var(--soft);border-radius:7px;overflow:hidden}
 .xp-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--red));transition:width .5s}
 .xp-meta{display:flex;justify-content:space-between;font-family:var(--dot);font-size:12px;color:var(--muted);margin-top:4px}
@@ -192,7 +193,7 @@ footer a{color:var(--gold);text-decoration:none}
   <p class="sub" data-i18n="sub">AI-generated Japanese questions, N5 → N1. Clear battles to earn XP and power up your guide — same world as the Explore map.</p>
 
   <div class="party" id="party">
-    <div class="ava"><img src="assets/characters/akari.png" alt="Akari, your fox guide"></div>
+    <div class="ava"><img id="party-hero" src="assets/avatars/avatar-h1-s1.svg" alt="Your adventurer"></div>
     <div class="pinfo">
       <div class="pname" id="p-name">AKARI · Lv.1</div>
       <div class="bubble" id="p-bubble">Pick a level and tap <b>New Question</b>, traveler!</div>
@@ -476,18 +477,33 @@ function sanitizeQuizHTML(s){
 /* ── character power / XP (seed of the character-growth RPG) ── */
 function getXP(){ try{ return parseInt(localStorage.getItem('nh_quiz_xp')||'0',10)||0; }catch(e){ return 0; } }
 function addXP(n){ try{ localStorage.setItem('nh_quiz_xp', String(getXP()+n)); }catch(e){} }
-function powerTier(xp){ return xp>=60?3 : xp>=20?2 : 1; }       // 3 tiers for now; full 5-stage art is future
+function powerTier(xp){ return xp>=60?3 : xp>=20?2 : 1; }       // 3 visual power tiers (avatar scale)
 function powerLevel(xp){ return 1 + Math.floor(xp/10); }         // +1 Lv every 10 XP
+// Earned JLPT growth stage of the hero (mirrors rpg.html), drives the badge that evolves N5→N1.
+function heroStage(xp){
+  if(xp>=1000) return 'N1'; if(xp>=600) return 'N2'; if(xp>=300) return 'N3'; if(xp>=100) return 'N4'; return 'N5';
+}
+// The player's own avatar (chosen on the RPG screen) is the battle hero/protagonist.
+function avatarSrc(){
+  let v='h1-s1';
+  try{ const x=localStorage.getItem('nh_avatar'); if(x && /^h[1-5]-s[1-3]$/.test(x)) v=x; }catch(e){}
+  return 'assets/avatars/avatar-'+v+'.svg';
+}
 function renderParty(extra){
-  const xp = getXP(), tier = powerTier(xp), lv = powerLevel(xp);
+  const xp = getXP(), tier = powerTier(xp), lv = powerLevel(xp), stage = heroStage(xp);
   const into = xp % 10, nextAt = (Math.floor(xp/10)+1)*10;
-  document.getElementById('p-name').textContent = `AKARI · Lv.${lv}`;
+  const hero = document.getElementById('party-hero');
+  if(hero){ const src = avatarSrc(); if(hero.getAttribute('src') !== src) hero.setAttribute('src', src); }
+  document.getElementById('p-name').textContent = `${stage} ADVENTURER · Lv.${lv}`;
   document.getElementById('xp-fill').style.width = (into*10) + '%';
   document.getElementById('xp-text').textContent = xp + ' XP';
   document.getElementById('xp-next').textContent = `${t('bnext')} ${nextAt} XP`;
   const party = document.getElementById('party');
   party.className = 'party power-' + tier;
-  document.getElementById('p-bubble').innerHTML = extra || t('tier'+tier);
+  // Akari stays as the guide voice (small icon) speaking the coaching line.
+  const line = extra || t('tier'+tier);
+  document.getElementById('p-bubble').innerHTML =
+    `<img class="guide-mini" src="assets/characters/akari.png" alt="Akari">` + line;
 }
 
 /* ── topic pills ── */
