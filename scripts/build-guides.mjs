@@ -77,7 +77,7 @@ const UI = {
         gettingWhen:"Getting there & when to go", gettingThere:"Getting there", bestTime:"Best time",
         seasons:"When to go — season by season", suggested:"A suggested visit",
         learn:"LEARN THE JAPANESE", localWord:"LOCAL WORD", goodToKnow:"💡 Good to know", related:"Related guides",
-        planStay:"Plan your stay", findStay:"Find places to stay in Japan →",
+        planStay:"Plan your stay", findStay:"Find places to stay in Japan →", tours:"Book tours & tickets →",
         source:"Source", sourceTail:"Facts kept to well-established highlights and checked against official tourism information; opinions are our own.",
         disclose:"Some links above are affiliate links. We may earn a commission at no extra cost to you. We only list services we'd use ourselves.",
         openMap:(n)=>`⚔️ Open ${n} on the Explore map →`,
@@ -88,7 +88,7 @@ const UI = {
         gettingWhen:"如何前往與最佳季節", gettingThere:"如何前往", bestTime:"最佳季節",
         seasons:"四季玩法", suggested:"建議行程",
         learn:"學個日語", localWord:"在地詞彙", goodToKnow:"💡 小提醒", related:"相關指南",
-        planStay:"規劃住宿", findStay:"在日本尋找住宿 →",
+        planStay:"規劃住宿", findStay:"在日本尋找住宿 →", tours:"預訂行程與門票 →",
         source:"資料來源", sourceTail:"事實依官方旅遊資訊查核，觀點為我們所有。",
         disclose:"上方部分連結為聯盟行銷連結，我們可能因此獲得報酬，您不會額外付費。我們只推薦自己也會使用的服務。",
         openMap:(n)=>`⚔️ 在探索地圖開啟${n} →`, h1Tail:"旅遊指南（為日語學習者撰寫）" },
@@ -97,7 +97,7 @@ const UI = {
         gettingWhen:"Cómo llegar y cuándo ir", gettingThere:"Cómo llegar", bestTime:"Mejor época",
         seasons:"Temporada por temporada", suggested:"Visita sugerida",
         learn:"APRENDE EL JAPONÉS", localWord:"PALABRA LOCAL", goodToKnow:"💡 Bueno saber", related:"Guías relacionadas",
-        planStay:"Planifica tu estancia", findStay:"Encuentra alojamiento en Japón →",
+        planStay:"Planifica tu estancia", findStay:"Encuentra alojamiento en Japón →", tours:"Reserva tours y entradas →",
         source:"Fuente", sourceTail:"Datos contrastados con información turística oficial; opiniones nuestras.",
         disclose:"Algunos enlaces son de afiliados. Podemos recibir una comisión sin coste adicional para ti. Solo listamos servicios que usaríamos.",
         openMap:(n)=>`⚔️ Abrir ${n} en el Mapa Explorar →`, h1Tail:"Guía de viaje para estudiantes de japonés" },
@@ -106,7 +106,7 @@ const UI = {
         gettingWhen:"การเดินทางและช่วงเวลาที่ดีที่สุด", gettingThere:"การเดินทาง", bestTime:"ช่วงเวลาที่ดีที่สุด",
         seasons:"ฤดูแต่ละฤดู", suggested:"แนะนำการเที่ยว",
         learn:"เรียนภาษาญี่ปุ่น", localWord:"คำท้องถิ่น", goodToKnow:"💡 รู้ไว้ดี", related:"คู่มือที่เกี่ยวข้อง",
-        planStay:"วางแผนที่พัก", findStay:"ค้นหาที่พักในญี่ปุ่น →",
+        planStay:"วางแผนที่พัก", findStay:"ค้นหาที่พักในญี่ปุ่น →", tours:"จองทัวร์และตั๋ว →",
         source:"แหล่งที่มา", sourceTail:"ข้อมูลตรวจสอบกับสำนักงานท่องเที่ยวอย่างเป็นทางการ ความคิดเห็นเป็นของเรา",
         disclose:"ลิงก์บางตัวเป็นลิงก์พันธมิตร เราอาจได้รับค่าตอบแทนโดยคุณไม่เสียค่าใช้จ่ายเพิ่ม เราแนะนำเฉพาะบริการที่เราใช้เอง",
         openMap:(n)=>`⚔️ เปิด ${n} บนแผนที่สำรวจ →`, h1Tail:"คู่มือท่องเที่ยวสำหรับผู้เรียนภาษาญี่ปุ่น" },
@@ -115,7 +115,7 @@ const UI = {
         gettingWhen:"Cara ke sana & waktu terbaik", gettingThere:"Cara ke sana", bestTime:"Waktu terbaik",
         seasons:"Musim demi musim", suggested:"Saran kunjungan",
         learn:"Belajar bahasa Jepang", localWord:"Kata lokal", goodToKnow:"💡 Tips berguna", related:"Panduan terkait",
-        planStay:"Rencanakan menginap", findStay:"Cari tempat menginap di Jepang →",
+        planStay:"Rencanakan menginap", findStay:"Cari tempat menginap di Jepang →", tours:"Pesan tur & tiket →",
         source:"Sumber", sourceTail:"Fakta diperiksa terhadap informasi pariwisata resmi; opini adalah milik kami.",
         disclose:"Beberapa tautan di atas adalah tautan afiliasi. Kami mungkin mendapat komisi tanpa biaya tambahan bagi Anda. Kami hanya mencantumkan layanan yang kami pakai sendiri.",
         openMap:(n)=>`⚔️ Buka ${n} di Peta Jelajah →`, h1Tail:"Panduan Wisata untuk Pelajar Bahasa Jepang" }
@@ -169,10 +169,16 @@ const navFor = (slug, lang, ui, isLangPath) => {
 };
 
 function affiliateBlock(ui, slug, romaji){
+  // Links are config-driven: lib/config.js rewrites data-aff="KEY" to the approved
+  // tracking URL once NH_CONFIG.AFFILIATES[KEY] is set; until then the data-aff-fallback
+  // (generic, non-tracked) link is used, so nothing breaks and no fake claim is made.
+  const bookingUrl = `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(romaji)}+Japan`;
+  const klookUrl = "https://www.klook.com/en-US/coureg/96-japan-things-to-do/";
   return `<div class="aff">
   <span class="pr">PR</span> <b style="font-family:inherit">${ui.planStay}</b>
   <div>
-    <a href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(romaji)}+Japan" target="_blank" rel="sponsored noopener">${ui.findStay.replace(/Japan|日本|Jepang|日本 →/, romaji + ' →')}</a>
+    <a data-aff="booking" data-aff-fallback="${bookingUrl}" href="${bookingUrl}" target="_blank" rel="sponsored noopener">${ui.findStay.replace(/Japan|日本|Jepang/, romaji)}</a>
+    <a data-aff="klook" data-aff-fallback="${klookUrl}" href="${klookUrl}" target="_blank" rel="sponsored noopener">${ui.tours}</a>
   </div>
   <p class="disclose">${ui.disclose}</p>
 </div>`;
@@ -269,6 +275,7 @@ ${relatedBlock}
   </div>
 </article>
 <footer>© 2026 NihongoHub · <a href="index.html">All guides</a> · <a href="../index.html">Home</a></footer>
+<script src="../lib/config.js"></script>
 <script src="blog-quiz.js"></script>
 </body>
 </html>
@@ -338,6 +345,7 @@ ${tipBlock}
   </div>
 </article>
 <footer>© 2026 NihongoHub · <a href="index.html">${ui.allGuides.replace('←','').trim()}</a> · <a href="../../index.html">Home</a></footer>
+<script src="../../lib/config.js"></script>
 <script src="../blog-quiz.js"></script>
 </body>
 </html>

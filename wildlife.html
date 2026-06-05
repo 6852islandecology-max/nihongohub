@@ -125,6 +125,12 @@
     </ul>
   </div>
 
+  <div class="win" id="wl-share" style="text-align:center">
+    <p class="pix" style="font-size:12px;color:var(--gold)" data-i18n="wl_share_h">★ SHARE THE QUEST</p>
+    <button id="wl-share-btn" data-i18n="wl_share_btn" style="cursor:pointer;font:inherit;font-size:13px;background:transparent;color:var(--gold);border:2px solid var(--gold);border-radius:8px;padding:8px 16px;margin:4px 0">📲 SHARE THE QUEST</button>
+    <span id="wl-share-toast" style="display:none;margin-left:8px;color:var(--exp);font-size:12px"></span>
+  </div>
+
   <p class="foot">いきものクエスト — 独立した非公式のデータ・ビジュアルです。Data: GBIF.org (2024), GADM, IUCN Red List categories.<br>© いきものクエスト</p>
 </div>
 
@@ -367,42 +373,48 @@ DATA.forEach(d=>{
       wl_leg2:'<span class="dot" style="background:var(--rare)"></span><b>レア度</b> 絶滅危惧種の数',
       wl_leg3:'<span class="dot" style="background:var(--exp)"></span><b>たんけん数</b> 観察記録の総数',
       wl_note:'▶ 各県を選ぶと「ステータス」＋<b>その県の代表レア生物（ドット絵）</b>が開きます。さらに「参照したデータを見る」で元データ（GBIF）と使用クエリまで確認できます。',
-      wl_rule_h:'★ クエストの注意書き' },
+      wl_rule_h:'★ クエストの注意書き',
+      wl_share_h:'★ クエストを共有', wl_share_btn:'📲 クエストを共有', wl_share_text:'いきものクエスト — GBIFの市民科学データで日本47都道府県の生き物をRPGステータスに。', wl_copied:'リンクをコピーしました' },
     en:{ label:'EN', wl_sub:'Ikimono Quest',
       wl_tagline:'▶ Turn "wildlife sightings" across Japan\'s 47 prefectures into RPG stats, using GBIF citizen-science data — each prefecture with its own <b>rare-creature champion</b>.<br>An effort-standardized <b>recorded-species richness (rarefied richness)</b> ranking · 2024 edition. <span class="blink">▼</span>',
       wl_leg1:'<span class="dot" style="background:var(--atk)"></span><b>Species Power</b> recorded species (effort-standardized)',
       wl_leg2:'<span class="dot" style="background:var(--rare)"></span><b>Rarity</b> number of threatened species',
       wl_leg3:'<span class="dot" style="background:var(--exp)"></span><b>Explored</b> total observation records',
       wl_note:'▶ Tap a prefecture to open its "stats" + <b>its champion rare creature (pixel art)</b>. "See the source data" reveals the underlying GBIF data and the query used.',
-      wl_rule_h:'★ QUEST NOTES' },
+      wl_rule_h:'★ QUEST NOTES',
+      wl_share_h:'★ SHARE THE QUEST', wl_share_btn:'📲 SHARE THE QUEST', wl_share_text:'Ikimono Quest — Japan\'s 47 prefectures as RPG wildlife stats, from GBIF citizen-science data.', wl_copied:'Link copied' },
     zh:{ label:'繁中', wl_sub:'生物任務',
       wl_tagline:'▶ 用 GBIF 公民科學數據，把日本 47 都道府縣的「生物觀察」變成 RPG 數值，每縣附<b>代表稀有生物</b>。<br>標準化觀察努力後的<b>記錄物種多樣性（rarefied richness）</b>排行 · 2024 版。<span class="blink">▼</span>',
       wl_leg1:'<span class="dot" style="background:var(--atk)"></span><b>物種力</b> 記錄物種數（努力標準化）',
       wl_leg2:'<span class="dot" style="background:var(--rare)"></span><b>稀有度</b> 瀕危物種數量',
       wl_leg3:'<span class="dot" style="background:var(--exp)"></span><b>探索數</b> 觀察記錄總數',
       wl_note:'▶ 點擊一個縣即可開啟「數值」＋<b>該縣的代表稀有生物（像素圖）</b>。點「查看參考數據」可看到原始 GBIF 數據與查詢。',
-      wl_rule_h:'★ 任務說明' },
+      wl_rule_h:'★ 任務說明',
+      wl_share_h:'★ 分享任務', wl_share_btn:'📲 分享任務', wl_share_text:'生物任務 — 用 GBIF 公民科學數據，把日本 47 都道府縣的生物變成 RPG 數值。', wl_copied:'已複製連結' },
     es:{ label:'ES', wl_sub:'Ikimono Quest',
       wl_tagline:'▶ Convierte los "avistamientos de fauna" de las 47 prefecturas de Japón en estadísticas RPG, con datos de ciencia ciudadana de GBIF — cada prefectura con su <b>criatura rara emblemática</b>.<br>Un ranking de <b>riqueza de especies registradas (rarefied richness)</b> estandarizado por esfuerzo · edición 2024. <span class="blink">▼</span>',
       wl_leg1:'<span class="dot" style="background:var(--atk)"></span><b>Poder de especies</b> especies registradas (estandarizado)',
       wl_leg2:'<span class="dot" style="background:var(--rare)"></span><b>Rareza</b> número de especies amenazadas',
       wl_leg3:'<span class="dot" style="background:var(--exp)"></span><b>Explorado</b> total de registros de observación',
       wl_note:'▶ Toca una prefectura para abrir sus "estadísticas" + <b>su criatura rara emblemática (pixel art)</b>. "Ver los datos fuente" muestra los datos de GBIF y la consulta usada.',
-      wl_rule_h:'★ NOTAS DE LA MISIÓN' },
+      wl_rule_h:'★ NOTAS DE LA MISIÓN',
+      wl_share_h:'★ COMPARTE LA MISIÓN', wl_share_btn:'📲 COMPARTIR', wl_share_text:'Ikimono Quest — las 47 prefecturas de Japón como estadísticas RPG de fauna, con datos de GBIF.', wl_copied:'Enlace copiado' },
     th:{ label:'TH', wl_sub:'Ikimono Quest',
       wl_tagline:'▶ เปลี่ยน "การพบเห็นสัตว์" ใน 47 จังหวัดของญี่ปุ่นให้เป็นค่าสถานะแบบ RPG ด้วยข้อมูลวิทยาศาสตร์พลเมืองจาก GBIF — แต่ละจังหวัดมี<b>สัตว์หายากประจำจังหวัด</b><br>อันดับ<b>ความหลากหลายของชนิดที่บันทึก (rarefied richness)</b> ที่ปรับมาตรฐานความพยายาม · ฉบับ 2024 <span class="blink">▼</span>',
       wl_leg1:'<span class="dot" style="background:var(--atk)"></span><b>พลังชนิด</b> จำนวนชนิดที่บันทึก (ปรับมาตรฐาน)',
       wl_leg2:'<span class="dot" style="background:var(--rare)"></span><b>ความหายาก</b> จำนวนชนิดที่ถูกคุกคาม',
       wl_leg3:'<span class="dot" style="background:var(--exp)"></span><b>สำรวจแล้ว</b> จำนวนบันทึกการสังเกตทั้งหมด',
       wl_note:'▶ แตะจังหวัดเพื่อเปิด "สถานะ" + <b>สัตว์หายากประจำจังหวัด (พิกเซลอาร์ต)</b> กด "ดูข้อมูลอ้างอิง" เพื่อดูข้อมูล GBIF และคิวรีที่ใช้',
-      wl_rule_h:'★ หมายเหตุเควสต์' },
+      wl_rule_h:'★ หมายเหตุเควสต์',
+      wl_share_h:'★ แชร์เควสต์', wl_share_btn:'📲 แชร์เควสต์', wl_share_text:'Ikimono Quest — 47 จังหวัดของญี่ปุ่นเป็นค่าสถานะสัตว์แบบ RPG จากข้อมูล GBIF', wl_copied:'คัดลอกลิงก์แล้ว' },
     id:{ label:'ID', wl_sub:'Ikimono Quest',
       wl_tagline:'▶ Ubah "perjumpaan satwa" di 47 prefektur Jepang menjadi statistik RPG, memakai data sains warga GBIF — tiap prefektur dengan <b>satwa langka andalannya</b>.<br>Peringkat <b>kekayaan spesies tercatat (rarefied richness)</b> yang distandarkan upaya · edisi 2024. <span class="blink">▼</span>',
       wl_leg1:'<span class="dot" style="background:var(--atk)"></span><b>Kekuatan Spesies</b> spesies tercatat (distandarkan)',
       wl_leg2:'<span class="dot" style="background:var(--rare)"></span><b>Kelangkaan</b> jumlah spesies terancam',
       wl_leg3:'<span class="dot" style="background:var(--exp)"></span><b>Dijelajahi</b> total catatan observasi',
       wl_note:'▶ Ketuk prefektur untuk membuka "statistik" + <b>satwa langka andalannya (pixel art)</b>. "Lihat data sumber" menampilkan data GBIF dan kueri yang dipakai.',
-      wl_rule_h:'★ CATATAN QUEST' }
+      wl_rule_h:'★ CATATAN QUEST',
+      wl_share_h:'★ BAGIKAN QUEST', wl_share_btn:'📲 BAGIKAN QUEST', wl_share_text:'Ikimono Quest — 47 prefektur Jepang sebagai statistik satwa RPG, dari data sains warga GBIF.', wl_copied:'Tautan disalin' }
   };
   const LANGS=['ja','en','zh','es','th','id'];
   let L; try{ L=localStorage.getItem('nh_lang'); }catch(e){}
@@ -416,6 +428,24 @@ DATA.forEach(d=>{
     document.getElementById('wlangbar').innerHTML = LANGS.map(l=>`<a onclick="setWlLang('${l}')" style="cursor:pointer;color:${l===L?'#ffd86b':'var(--mut)'};font-weight:${l===L?'700':'400'};text-decoration:none;margin-left:8px">${WL[l].label}</a>`).join('');
   }
   build(); apply();
+
+  // ── 1-tap share (additive; mirrors prefectures.html, board untouched) ──
+  function toast(msg){
+    const t=document.getElementById('wl-share-toast'); if(!t)return;
+    t.textContent=msg; t.style.display='inline';
+    setTimeout(()=>{t.style.display='none';},2200);
+  }
+  async function doShare(){
+    const w=WL[L]||WL.en;
+    const text=w.wl_share_text; const url=location.href;
+    if(navigator.share){
+      try{ await navigator.share({title:'Ikimono Quest',text,url}); return; }
+      catch(e){ if(e&&e.name==='AbortError') return; }
+    }
+    try{ await navigator.clipboard.writeText(text+' '+url); toast(w.wl_copied); }
+    catch(e){ window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(url),'_blank','noopener'); }
+  }
+  document.getElementById('wl-share-btn')?.addEventListener('click',doShare);
 })();
 </script>
 </body>
