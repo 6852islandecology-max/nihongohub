@@ -101,6 +101,7 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 <script src="lib/equipment.js" defer></script>
 <script src="data/titles-metadata.js" defer></script>
 <script src="lib/titles.js" defer></script>
+<script src="lib/sharecard.js" defer></script>
 </head>
 <body>
 <nav>
@@ -302,10 +303,12 @@ function init(){
 
 // Share
 document.getElementById('share-btn').addEventListener('click',()=>{
-  const xp   = parseInt(get('nh_quiz_xp','0'),10)||0;
-  let titles; try{ titles=JSON.parse(get('nh_titles','[]')); }catch(e){ titles=[]; }
+  // Open the guild-card image share (avatar + gear + composed title), with editable hashtags.
+  if(window.NH_SHARECARD){ window.NH_SHARECARD.open(); return; }
+  // Fallback: text share
+  const xp = parseInt(get('nh_quiz_xp','0'),10)||0;
   const stage = STAGES.find(s=>xp>=s.min&&xp<=s.max)||STAGES[0];
-  const text = `I'm on a Japanese learning quest! ${stage.level} adventurer · ${xp} XP · ${titles.length}/47 prefectures 🗾 #NihongoHub https://www.nihongo-hub.com/rpg.html`;
+  const text = `I'm on a Japanese learning quest! ${stage.level} · ${xp} XP 🗾 #NihongoHub #LearnJapanese https://www.nihongo-hub.com/rpg.html`;
   if(navigator.share){ navigator.share({title:'My Japan Journey',text,url:'https://www.nihongo-hub.com/rpg.html'}); }
   else if(navigator.clipboard){ navigator.clipboard.writeText(text).then(()=>toast('Copied to clipboard!')); }
   else{ toast('Share: ' + text); }
