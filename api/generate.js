@@ -52,8 +52,10 @@ export default async function handler(req, res) {
     });
   }
 
-  // 2. キャッシュ優先（Supabase 未設定時はスキップして 3 に進む）
-  if (isSupabaseConfigured()) {
+  // 2. キャッシュ優先（Supabase 未設定時 / トピック指定時はスキップして 3 = ライブ生成へ）
+  //    キャッシュ表は topic 列を持たないため、topic !== "any" のときは必ずライブ生成して
+  //    選択トピックを反映する（"any" のみキャッシュ優先でコストを抑える）。
+  if (isSupabaseConfigured() && topic === "any") {
     try {
       const cached = await fetchCachedQuiz({ level, lang });
       if (cached) {

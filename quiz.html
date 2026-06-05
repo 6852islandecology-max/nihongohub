@@ -604,7 +604,14 @@ async function newQuestion(){
     }
     if(!res.ok){ const er=await res.json().catch(()=>({})); throw new Error(er.error||('HTTP '+res.status)); }
     const data = await res.json();
-    const opts = shuffle([{t:data.correct,c:true}, ...(data.distractors||[]).slice(0,3).map(d=>({t:d,c:false}))]);
+    // Defensive option assembly: drop any distractor equal to the correct answer
+    // or duplicated, so we never render two identical-looking buttons (one of which
+    // would be marked wrong even though its text matches the correct answer).
+    const seenOpt = new Set([String(data.correct)]);
+    const cleanDistractors = (data.distractors||[]).map(d=>d==null?'':String(d))
+      .filter(d=>{ if(d===''||seenOpt.has(d)) return false; seenOpt.add(d); return true; })
+      .slice(0,3);
+    const opts = shuffle([{t:data.correct,c:true}, ...cleanDistractors.map(d=>({t:d,c:false}))]);
     current = { correctIndex: opts.findIndex(o=>o.c), correctText:data.correct, explanation:data.explanation||'', questionText: data.question };
     qEl.innerHTML = sanitizeQuizHTML(data.question);
     rEl.textContent = data.reading || '';

@@ -23,3 +23,6 @@ _original_handoff.zip
 
 # Stray agent scaffolding (must never be deployed)
 .claude/
+
+# One-off QA harness (local only, reads .env; never deploy)
+_qa/
