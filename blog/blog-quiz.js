@@ -112,6 +112,59 @@
   });
 })();
 
+// Affiliate link wiring — set IDs/URLs here once approved, applies to all blog pages automatically
+(function(){
+  var AFF = {
+    booking_aid: '', // Booking.com Partner ID → appended as ?aid=XXX to all booking.com links in .aff blocks
+    klook_aid:   '', // Klook AID (CJ Affiliate or Involve Asia) → appended as ?aid=XXX to klook.com links
+    jrpass_url:  '', // Full JR Pass affiliate URL → injected as first link in .aff link container
+    airalo_url:  '', // Full Airalo eSIM affiliate URL → injected into .aff link container
+    viator_url:  '', // Full Viator affiliate URL → injected into .aff link container
+  };
+
+  var hasAny = AFF.booking_aid || AFF.klook_aid || AFF.jrpass_url || AFF.airalo_url || AFF.viator_url;
+  if (!hasAny) return;
+
+  function addParam(url, key, val) {
+    return url + (url.indexOf('?') >= 0 ? '&' : '?') + key + '=' + encodeURIComponent(val);
+  }
+
+  function injectLink(container, href, label) {
+    if (!container || container.querySelector('[href="' + href + '"]')) return;
+    var a = document.createElement('a');
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'sponsored noopener';
+    a.textContent = label;
+    container.appendChild(a);
+  }
+
+  function wireAffs() {
+    document.querySelectorAll('.aff').forEach(function(div) {
+      var linkBox = div.querySelector(':scope > div');
+
+      div.querySelectorAll('a[href]').forEach(function(a) {
+        var h = a.getAttribute('href');
+        if (AFF.booking_aid && h.indexOf('booking.com') >= 0 && h.indexOf('aid=') < 0) {
+          a.setAttribute('href', addParam(h, 'aid', AFF.booking_aid));
+        }
+        if (AFF.klook_aid && h.indexOf('klook.com') >= 0 && h.indexOf('aid=') < 0) {
+          a.setAttribute('href', addParam(h, 'aid', AFF.klook_aid));
+        }
+      });
+
+      if (linkBox) {
+        if (AFF.jrpass_url) injectLink(linkBox, AFF.jrpass_url, 'JR Pass (save on rail travel) →');
+        if (AFF.airalo_url) injectLink(linkBox, AFF.airalo_url, 'Japan eSIM (Airalo) →');
+        if (AFF.viator_url) injectLink(linkBox, AFF.viator_url, 'Book experiences (Viator) →');
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wireAffs);
+  else wireAffs();
+})();
+
 // Google Maps pin + Phrases buttons for spot list items
 (function(){
   var m = window.location.pathname.match(/\/([^\/]+)\.html/);
