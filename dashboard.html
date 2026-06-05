@@ -162,6 +162,22 @@ footer a{color:var(--gold);text-decoration:none}
     <div id="cal-grid" style="overflow-x:auto"></div>
   </div>
 
+  <div class="card" id="rank-card" style="display:none">
+    <h2><span data-i18n="rank_h">My Ranking</span> <small id="rank-country" style="font-family:var(--pixel);font-size:9px;color:var(--muted)"></small></h2>
+    <div id="rank-optin">
+      <p style="font-size:14px;color:var(--muted);line-height:1.55;margin-bottom:10px" data-i18n="rank_optin_p">See how you compare — anonymously — with other learners in your country. We store only your country and a 0–1 score, never personal data.</p>
+      <button class="aciton-btn action-train" id="rank-enable" style="display:inline-flex" data-i18n="rank_enable">📊 Compare with my country</button>
+    </div>
+    <div id="rank-body" style="display:none">
+      <div style="text-align:center;margin-bottom:8px">
+        <div style="font-family:var(--dot);font-size:40px;color:var(--red);line-height:1" id="rank-pct">—</div>
+        <div style="font-size:13px;color:var(--muted)" id="rank-line"></div>
+      </div>
+      <div id="rank-top"></div>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px" data-i18n="rank_note">Anonymous · resets monthly · country from your connection.</p>
+    </div>
+  </div>
+
   <div class="card">
     <h2 data-i18n="next_h">What to do next</h2>
     <p id="next-headline" style="font-family:var(--dot);font-size:15px;color:var(--ink);margin-bottom:10px"></p>
@@ -216,6 +232,7 @@ const T = {
     spark_total:'<b id="weekly-total">0</b> questions this week',
     next_h:'What to do next', ax_train:'⚔️ Train 20 questions today', ax_review:'📚 Review', ax_pdf:'📄 Study sheet · Pro',
     weak_h:'Weak words — Top 10', weak_sub:'{n} tracked', weak_review:'📚 Drill these →', cal_h:'Study calendar', cal_sub:'{d} active days · {n} questions (9 wks)',
+    rank_h:'My Ranking', rank_optin_p:'See how you compare — anonymously — with other learners in your country. We store only your country and a 0–1 score, never personal data.', rank_enable:'📊 Compare with my country', rank_note:'Anonymous · resets monthly · country from your connection.', rank_line:'Top {pct}% of {n} learners in {c}', rank_none:'Not enough data in your country yet — check back soon.',
     how_h:'How your score is calculated',
     how_1:'<b>Diagnostic (40%)</b> — your initial 20-question test result.',
     how_2:'<b>Recent accuracy (40%)</b> — your last 50 answers at each level.',
@@ -239,6 +256,7 @@ const T = {
     spark_total:'<b id="weekly-total">0</b> 問 (今週)',
     next_h:'次にすること', ax_train:'⚔️ 今日 20 問やる', ax_review:'📚 復習', ax_pdf:'📄 学習シート · Pro',
     weak_h:'苦手な単語 — TOP10', weak_sub:'{n} 件', weak_review:'📚 まとめて復習 →', cal_h:'学習カレンダー', cal_sub:'{d} 日学習 · {n} 問（9週間）',
+    rank_h:'マイランキング', rank_optin_p:'同じ国の学習者と匿名で比較できます。保存するのは国コードと0〜1のスコアのみで、個人情報は一切保存しません。', rank_enable:'📊 同じ国で比較する', rank_note:'匿名 · 毎月リセット · 国は接続元から判定', rank_line:'{c} の学習者 {n} 人中 上位 {pct}%', rank_none:'あなたの国のデータがまだ不足しています。',
     how_h:'スコアの計算方法',
     how_1:'<b>診断 (40%)</b> — 最初の 20 問の結果。',
     how_2:'<b>直近の正答率 (40%)</b> — 各レベル直近 50 問。',
@@ -567,6 +585,50 @@ function renderCalendar(){
   b.innerHTML = '<span style="font-family:var(--dot);font-size:14px">🎯 Take the free 5-minute level test to personalize your readiness scores.</span>'+
     '<a href="onboarding.html" style="background:var(--red);color:#fff;text-decoration:none;font-family:var(--dot);font-size:14px;padding:9px 16px;border-radius:7px;white-space:nowrap">Find my level →</a>';
   main.insertBefore(b, main.firstChild);
+})();
+
+/* ── My Ranking (anonymous, country-level; opt-in; fail-open) ── */
+(function(){
+  const card=document.getElementById('rank-card'); if(!card) return;
+  let cfg=null, client=null;
+  async function getCfg(){ if(cfg!==null) return cfg; try{ cfg=await fetch('/api/public-config').then(r=>r.json()); }catch(e){ cfg=false; } return cfg; }
+  async function getClient(){
+    if(client) return client;
+    const c=await getCfg(); if(!c||!c.authEnabled) return null;
+    if(!(window.supabase&&window.supabase.createClient)) return null;
+    client=window.supabase.createClient(c.supabaseUrl,c.supabaseAnonKey,{auth:{persistSession:true,autoRefreshToken:true,storageKey:'nh_supabase_auth'}});
+    return client;
+  }
+  async function token(){
+    const cl=await getClient(); if(!cl) return null;
+    let s=(await cl.auth.getSession()).data.session;
+    if(!s){ try{ await cl.auth.signInAnonymously(); }catch(e){} s=(await cl.auth.getSession()).data.session; }
+    return s?s.access_token:null;
+  }
+  function myScore(){ try{ const sc=window.NH_READINESS.summary().scores; const v=['N5','N4','N3','N2','N1'].map(k=>sc[k]||0); return v.reduce((a,b)=>a+b,0)/v.length; }catch(e){ return 0; } }
+  async function flow(){
+    const c=await getCfg(); if(!c||!c.authEnabled){ card.style.display='none'; return; }
+    card.style.display='';
+    const optin=(()=>{try{return localStorage.getItem('nh_rank_optin')==='1';}catch(e){return false;}})();
+    if(!optin){ document.getElementById('rank-optin').style.display=''; document.getElementById('rank-body').style.display='none'; return; }
+    document.getElementById('rank-optin').style.display='none';
+    const tk=await token(); if(!tk){ card.style.display='none'; return; }
+    const lvl=(()=>{try{return localStorage.getItem('nh_estimated_level')||'N5';}catch(e){return 'N5';}})();
+    try{
+      await fetch('/api/rank-submit',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+tk},body:JSON.stringify({score:myScore(),level:lvl})});
+      const r=await fetch('/api/rank',{headers:{Authorization:'Bearer '+tk}}).then(x=>x.json());
+      if(!r||!r.available){ card.style.display='none'; return; }
+      document.getElementById('rank-body').style.display='';
+      document.getElementById('rank-country').textContent=r.country||'';
+      if(!r.ranked){ document.getElementById('rank-pct').textContent='—'; document.getElementById('rank-line').textContent=tr('rank_none'); document.getElementById('rank-top').innerHTML=''; return; }
+      document.getElementById('rank-pct').textContent='Top '+r.percentile+'%';
+      document.getElementById('rank-line').textContent=fmt(tr('rank_line'),{pct:r.percentile,n:r.total,c:r.country});
+      document.getElementById('rank-top').innerHTML=(r.top10||[]).map(t=>'<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--soft);font-size:13px"><span style="color:var(--muted)">#'+t.rank+(t.level?(' · '+t.level):'')+'</span><span style="font-family:var(--dot);color:var(--ink)">'+Math.round((t.score||0)*100)+'%</span></div>').join('');
+    }catch(e){ card.style.display='none'; }
+  }
+  const en=document.getElementById('rank-enable');
+  if(en) en.addEventListener('click',()=>{ try{localStorage.setItem('nh_rank_optin','1');}catch(e){} flow(); });
+  window.addEventListener('load',()=>{ setTimeout(flow, 900); });
 })();
 
 // Load QR library lazily (one-time, with Subresource Integrity check)
