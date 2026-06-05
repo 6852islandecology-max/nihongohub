@@ -1312,7 +1312,10 @@ function scrollToRoadmap() {
     const wantsPaid = pendingPlan === 'pro' || pendingPlan === 'lifetime';
     $('nhStartTrial').style.display = (wantsFree && st.trial_status === 'never_started' && st.plan === 'free') ? '' : 'none';
     $('nhStartTrial').disabled = false;
-    $('nhUpgrade').style.display = (wantsPaid && st.plan === 'free') ? '' : 'none';
+    // Always offer the upgrade to anyone not already paid (free or trialing),
+    // regardless of how they opened the panel — opening via "My account" must
+    // still expose Pro. Lifetime is still reachable via its pricing-card button.
+    $('nhUpgrade').style.display = (st.plan === 'free') ? '' : 'none';
     const upgradeLabel = pendingPlan === 'lifetime' ? '⭐ Buy Lifetime — $149' : '⭐ Upgrade to Pro — $9.99/mo';
     $('nhUpgrade').textContent = cfg.stripeEnabled ? upgradeLabel : '⭐ Upgrade (opening soon)';
   }
