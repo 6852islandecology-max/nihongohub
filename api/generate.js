@@ -3,7 +3,7 @@
 
 import { VALID_LEVELS, VALID_LANGS, VALID_TOPICS, generateQuiz } from "../lib/anthropic.js";
 import { fetchCachedQuiz, getSupabase, isSupabaseConfigured } from "../lib/supabase.js";
-import { checkGuestDailyLimit, extractIp } from "../lib/ratelimit.js";
+import { checkGuestDailyLimit, extractIp, FREE_LEVELS } from "../lib/ratelimit.js";
 import { applyCors } from "../lib/cors.js";
 import { initSentry, captureApiError } from "../lib/sentry.js";
 import { getAuthedUser, isAuthConfigured } from "../lib/auth.js";
@@ -52,10 +52,11 @@ export default async function handler(req, res) {
     });
   }
 
-  // 2. キャッシュ優先（Supabase 未設定時 / トピック指定時はスキップして 3 = ライブ生成へ）
-  //    キャッシュ表は topic 列を持たないため、topic !== "any" のときは必ずライブ生成して
-  //    選択トピックを反映する（"any" のみキャッシュ優先でコストを抑える）。
-  if (isSupabaseConfigured() && topic === "any") {
+  // 2. キャッシュ優先。キャッシュ表は topic 列を持たないため、capped レベル (N3/N2/N1) で
+  //    topic 指定時はライブ生成して選択トピックを反映する。N5/N4 は日次上限が無く (FREE_LEVELS)
+  //    青天井のコスト源になり得るため、topic 指定でも必ずキャッシュのみ（ライブ生成しない）。
+  const useCacheOnly = topic === "any" || FREE_LEVELS.includes(level);
+  if (isSupabaseConfigured() && useCacheOnly) {
     try {
       const cached = await fetchCachedQuiz({ level, lang });
       if (cached) {
