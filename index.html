@@ -1188,7 +1188,13 @@ function scrollToRoadmap() {
     return;
   }
   const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
-  const sb = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
+  // Disable navigator.locks coordination: supabase-js v2 can deadlock here —
+  // a lock held by a stale tab / interrupted token refresh makes every later
+  // signIn/signUp/getSession hang forever with no error. A passthrough lock
+  // runs the operation immediately (single-page auth doesn't need cross-tab locking).
+  const sb = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, {
+    auth: { lock: (_name, _acquireTimeout, fn) => fn() }
+  });
 
   const fab = $('nhAuthFab'), ov = $('nhAuthOv');
   fab.hidden = false;

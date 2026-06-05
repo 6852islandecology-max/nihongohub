@@ -596,7 +596,7 @@ function renderCalendar(){
     if(client) return client;
     const c=await getCfg(); if(!c||!c.authEnabled) return null;
     if(!(window.supabase&&window.supabase.createClient)) return null;
-    client=window.supabase.createClient(c.supabaseUrl,c.supabaseAnonKey,{auth:{persistSession:true,autoRefreshToken:true,storageKey:'nh_supabase_auth'}});
+    client=window.supabase.createClient(c.supabaseUrl,c.supabaseAnonKey,{auth:{persistSession:true,autoRefreshToken:true,storageKey:'nh_supabase_auth',lock:(_n,_t,fn)=>fn()}});
     return client;
   }
   async function token(){
