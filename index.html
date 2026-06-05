@@ -1196,6 +1196,10 @@ function scrollToRoadmap() {
   const sb = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, {
     auth: { lock: (_name, _acquireTimeout, fn) => fn() }
   });
+  // Expose this single client so site-chrome.js reuses it instead of spinning up
+  // a second GoTrueClient on the same storageKey (the "multiple instances" warning,
+  // whose competing token refresh corrupts the session and hangs auth).
+  window.__NH_AUTH_CLIENT = sb;
 
   const fab = $('nhAuthFab'), ov = $('nhAuthOv');
   fab.hidden = false;
