@@ -1165,6 +1165,7 @@ function scrollToRoadmap() {
       <button class="primary" id="nhStartTrial" style="display:none">🚀 Start 7-day Free Trial</button>
       <button class="primary" id="nhUpgrade" style="display:none">⭐ Upgrade to Pro</button>
       <div id="nhAuthMsg2" style="font-size:13px;margin-top:10px"></div>
+      <button class="ghost" id="nhManage" style="display:none">Manage / cancel subscription</button>
       <button class="ghost" id="nhLogout">Log out</button>
     </div>
   </div>
@@ -1236,6 +1237,17 @@ function scrollToRoadmap() {
       msg('', 'ok'); await render();
     } catch (e) { msg('Something went wrong. Try again.', 'err'); }
     $('nhSubmit').disabled = false;
+  };
+
+  $('nhManage').onclick = async () => {
+    $('nhManage').disabled = true; $('nhAuthMsg2').textContent = 'Opening billing…';
+    try {
+      const r = await authedFetch('/api/stripe-portal', { method: 'POST' });
+      const j = await r.json();
+      if (j.portal_url) location.href = j.portal_url;
+      else $('nhAuthMsg2').textContent = j.error || 'Billing portal unavailable.';
+    } catch { $('nhAuthMsg2').textContent = 'Network error.'; }
+    $('nhManage').disabled = false;
   };
 
   $('nhLogout').onclick = async () => { await sb.auth.signOut(); await render(); };
@@ -1318,6 +1330,9 @@ function scrollToRoadmap() {
     $('nhUpgrade').style.display = (st.plan === 'free') ? '' : 'none';
     const upgradeLabel = pendingPlan === 'lifetime' ? '⭐ Buy Lifetime — $149' : '⭐ Upgrade to Pro — $9.99/mo';
     $('nhUpgrade').textContent = cfg.stripeEnabled ? upgradeLabel : '⭐ Upgrade (opening soon)';
+    // Show billing management (cancel anytime — 特商法) to anyone who has a Stripe
+    // customer/subscription, independent of the plan flag (robust to webhook lag).
+    $('nhManage').style.display = (cfg.stripeEnabled && st.has_billing) ? '' : 'none';
   }
 
   sb.auth.onAuthStateChange(() => render());

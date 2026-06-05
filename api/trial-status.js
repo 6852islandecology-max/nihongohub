@@ -12,11 +12,14 @@ export default async function handler(req, res) {
 
   const db = getSupabase();
   const { data: p } = await db
-    .from("users").select("trial_status, trial_end_date, plan").eq("id", user.id).single();
+    .from("users").select("trial_status, trial_end_date, plan, stripe_customer_id, stripe_subscription_id").eq("id", user.id).single();
 
-  if (!p) return res.status(200).json({ plan: "free", trial_status: "never_started", days_remaining: 0 });
+  if (!p) return res.status(200).json({ plan: "free", trial_status: "never_started", days_remaining: 0, has_billing: false });
 
   let { trial_status, plan } = p;
+  // has_billing: the user has gone through Stripe (trial-with-customer or checkout),
+  // so the billing portal can manage / cancel even if a webhook hasn't flipped `plan` yet.
+  const hasBilling = !!(p.stripe_customer_id || p.stripe_subscription_id);
   let daysRemaining = 0;
   if (trial_status === "active" && p.trial_end_date) {
     const ms = new Date(p.trial_end_date).getTime() - Date.now();
@@ -28,5 +31,5 @@ export default async function handler(req, res) {
       daysRemaining = Math.ceil(ms / 86400000);
     }
   }
-  return res.status(200).json({ plan, trial_status, days_remaining: daysRemaining });
+  return res.status(200).json({ plan, trial_status, days_remaining: daysRemaining, has_billing: hasBilling });
 }
