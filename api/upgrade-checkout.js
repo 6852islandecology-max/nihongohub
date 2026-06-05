@@ -29,8 +29,18 @@ export default async function handler(req, res) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { httpClient: Stripe.createFetchHttpClient(), timeout: 20000 });
 
   try {
-    // ensure a customer exists
+    // ensure a customer exists AND is valid in the current Stripe mode.
+    // A stored id created in test mode (or a deleted customer) will not resolve
+    // under a live key, so verify it and recreate if it's stale.
     let customerId = profile?.stripe_customer_id;
+    if (customerId) {
+      try {
+        const existing = await stripe.customers.retrieve(customerId);
+        if (existing?.deleted) customerId = null;
+      } catch {
+        customerId = null; // wrong mode / no longer exists → recreate below
+      }
+    }
     if (!customerId) {
       const c = await stripe.customers.create({ email: user.email, metadata: { user_id: user.id } });
       customerId = c.id;
