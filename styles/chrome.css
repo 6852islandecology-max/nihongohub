@@ -46,3 +46,22 @@ footer[data-nh-footer] .nh-foot-links a {
 }
 footer[data-nh-footer] .nh-foot-links a:hover { text-decoration: underline; }
 footer[data-nh-footer] .nh-foot-tag { font-size: 12px; color: rgba(255, 255, 255, .4); }
+
+/* Mobile: shapes the hamburger doesn't collapse (prefectures .hud-right, rpg bare <nav> .nav-links)
+   would wrap the 9 injected nav links into a very tall header / overflow horizontally.
+   Keep them on one horizontally-scrollable row so the header stays short and nothing overflows. */
+@media (max-width: 680px) {
+  header.hud .hud-right,
+  nav:not(.nav) > .nav-links {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    min-width: 0;
+    scrollbar-width: none;
+  }
+  header.hud .hud-right > *,
+  nav:not(.nav) > .nav-links > * { flex: 0 0 auto; }
+  header.hud .hud-right::-webkit-scrollbar,
+  nav:not(.nav) > .nav-links::-webkit-scrollbar { height: 0; width: 0; }
+}
