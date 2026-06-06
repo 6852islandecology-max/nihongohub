@@ -227,7 +227,9 @@ footer a{color:var(--gold);text-decoration:none}
       <button class="b-easy"  data-rate="4" data-i18n-html="srs_easy">Easy<small>1w</small></button>
     </div>
     <div class="autonext-wrap">
+      <button class="btn ghost" id="btn-reveal" style="display:none;padding:8px 14px;font-size:14px"></button>
       <label class="autonext-label"><input type="checkbox" id="autonext-toggle"> Auto-next (2s)</label>
+      <label class="autonext-label"><input type="checkbox" id="instant-toggle"> <span id="instant-label">Instant explanation</span></label>
       <span class="autonext-cd" id="autonext-cd"></span>
     </div>
     <div class="b-type" id="b-type"></div>
@@ -573,6 +575,7 @@ async function newQuestion(){
   const optsWrap = document.getElementById('b-opts'), resEl = document.getElementById('b-result'), expEl = document.getElementById('b-explain');
   btn.disabled = true; btn.innerHTML = '<span class="spin"></span> '+t('summon');
   resEl.textContent=''; resEl.className='b-result'; expEl.className='b-explain'; expEl.innerHTML='';
+  { const rbtn=document.getElementById('btn-reveal'); if(rbtn) rbtn.style.display='none'; }
   optsWrap.style.display='grid'; optsWrap.innerHTML='<button class="b-opt" disabled>…</button>'.repeat(4);
   qEl.textContent='…'; rEl.textContent='';
   document.getElementById('b-level').textContent = level;
@@ -636,6 +639,21 @@ async function newQuestion(){
 }
 function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
+/* ── "dots → line": predict-first explanation gating (generation effect) ── */
+const REVEAL_TXT={en:'🔍 Reveal why',ja:'🔍 種明かし',zh:'🔍 揭曉原因',es:'🔍 Ver por qué',th:'🔍 ดูเหตุผล',id:'🔍 Lihat alasannya'};
+const INSTANT_TXT={en:'Instant explanation',ja:'即解説',zh:'即時解說',es:'Explicación al instante',th:'อธิบายทันที',id:'Penjelasan instan'};
+function getInstant(){ try{ return localStorage.getItem('nh_instant_explain')==='1'; }catch(e){ return false; } }
+function setInstant(v){ try{ localStorage.setItem('nh_instant_explain', v?'1':'0'); }catch(e){} }
+(function wireReveal(){
+  const inst=document.getElementById('instant-toggle'), lab=document.getElementById('instant-label'), rb=document.getElementById('btn-reveal');
+  if(lab) lab.textContent = INSTANT_TXT[LANG]||INSTANT_TXT.en;
+  if(inst){ inst.checked=getInstant(); inst.addEventListener('change',()=>setInstant(inst.checked)); }
+  if(rb) rb.addEventListener('click',()=>{
+    const ex=document.getElementById('b-explain'); if(ex) ex.classList.add('show');
+    rb.style.display='none';
+    if(!reviewMode) scheduleAutoNext();
+  });
+})();
 document.getElementById('b-opts').addEventListener('click', e=>{
   const opt = e.target.closest('.b-opt'); if(!opt || opt.disabled || !current) return;
   const i = +opt.dataset.i;
@@ -670,13 +688,24 @@ document.getElementById('b-opts').addEventListener('click', e=>{
   if(window.NH_READINESS){
     window.NH_READINESS.pushQuizLog({ level, correct: isCorrect });
   }
-  if(current.explanation){ expEl.innerHTML = sanitizeQuizHTML(current.explanation); expEl.classList.add('show'); }
+  // "dots → line": after the learner commits a guess, show only win/lose; reveal the
+  // WHY on demand (generation effect). Instant mode restores the old immediate reveal.
+  if(current.explanation){
+    expEl.innerHTML = sanitizeQuizHTML(current.explanation);
+    if(getInstant()){ expEl.classList.add('show'); }
+    else {
+      expEl.classList.remove('show');
+      const rb=document.getElementById('btn-reveal');
+      if(rb){ rb.style.display=''; rb.disabled=false; rb.textContent=(REVEAL_TXT[LANG]||REVEAL_TXT.en); }
+    }
+  }
   renderMistakeLine();
-  // In review mode, show SRS rate buttons instead of auto-next
+  // In review mode, show SRS rate buttons. Otherwise auto-next now ONLY in instant mode
+  // (or when there's no explanation to reveal); predict-first waits for "Reveal why".
   if(reviewMode){
     document.getElementById('srs-rate').classList.add('show');
     cancelAutoNext();
-  } else {
+  } else if(getInstant() || !current.explanation){
     scheduleAutoNext();
   }
 });
