@@ -207,7 +207,7 @@ function renderProgress(){
 let currentShuffleMap = []; // displayed index → original index
 
 function renderQuestion(){
-  if(idx >= QUIZ.length){ finish(); return; }
+  if(idx >= QUIZ.length){ showPredict(); return; }
   renderProgress();
   const q = QUIZ[idx];
   document.getElementById('q-level').textContent = q.level;
@@ -244,6 +244,26 @@ document.getElementById('q-opts').addEventListener('click', e=>{
   setTimeout(()=>{ idx++; renderQuestion(); }, 750);
 });
 
+/* "dots → line": before revealing the result, have the learner COMMIT a guess.
+   Predicting then seeing the answer makes the reveal land harder (generation effect). */
+const PREDICT_TXT={en:'Before the reveal — what level do you think you reached?',ja:'種明かしの前に — 自分のレベルは何だと思う？',zh:'揭曉前 — 你覺得自己到了哪個等級？',es:'Antes de revelar — ¿qué nivel crees que alcanzaste?',th:'ก่อนเฉลย — คุณคิดว่าตัวเองอยู่ระดับไหน?',id:'Sebelum hasil — menurutmu kamu di level berapa?'};
+let predictedLevel = null;
+function showPredict(){
+  document.getElementById('progress').style.display='none';
+  document.getElementById('intro').style.display='none';
+  const card=document.getElementById('qcard');
+  card.style.display='';
+  card.innerHTML='<div class="qlevel"><span>🎯</span><span class="ix">'+QUIZ.length+' / '+QUIZ.length+'</span></div>'
+    +'<div class="qprompt">'+(PREDICT_TXT[LANG]||PREDICT_TXT.en)+'</div>'
+    +'<div class="qopts" id="predict-opts">'
+    +['PRE','N5','N4','N3','N2','N1'].map(l=>'<button class="qopt" data-lvl="'+l+'">'+l+'</button>').join('')
+    +'</div>';
+  document.getElementById('predict-opts').addEventListener('click',function(e){
+    const b=e.target.closest('.qopt'); if(!b) return;
+    predictedLevel=b.dataset.lvl;
+    finish();
+  });
+}
 function finish(){
   done = true;
   document.getElementById('qcard').style.display = 'none';
@@ -274,7 +294,15 @@ function finish(){
     th:'ฝึกวันละ 20 ข้อ ความพร้อม N3 จะเพิ่มขึ้นทุกสัปดาห์',
     id:'Latihan 20 soal sehari membuat kesiapan N3-mu naik tiap minggu.'
   })[LANG] || '';
-  document.getElementById('r-sub').textContent = subMsg;
+  let guessLine='';
+  if(predictedLevel){
+    const hit=(predictedLevel===level);
+    const GT=hit
+      ? ({en:'🎯 You nailed your guess!',ja:'🎯 予想的中！',zh:'🎯 你猜對了！',es:'🎯 ¡Acertaste!',th:'🎯 ทายถูก!',id:'🎯 Tebakanmu tepat!'}[LANG]||'🎯 You nailed your guess!')
+      : ({en:'You guessed '+predictedLevel+' → actual '+level,ja:'予想 '+predictedLevel+' → 実際 '+level,zh:'你猜 '+predictedLevel+' → 實際 '+level,es:'Adivinaste '+predictedLevel+' → real '+level,th:'คุณทาย '+predictedLevel+' → จริง '+level,id:'Tebakanmu '+predictedLevel+' → asli '+level}[LANG]||('You guessed '+predictedLevel+' → actual '+level));
+    guessLine='<div style="font-family:var(--dot);color:var(--gold-d);margin-bottom:6px">'+GT+'</div>';
+  }
+  document.getElementById('r-sub').innerHTML = guessLine + subMsg;
   const accDom = window.NH_LEVEL_ESTIMATOR.LEVELS.map(L=>{
     const pct = Math.round((acc[L]||0) * 100);
     return `<span>${L}: <b>${pct}%</b></span>`;
