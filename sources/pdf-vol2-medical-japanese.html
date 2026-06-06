@@ -20,6 +20,13 @@ body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);l
   .emergency-card{break-inside:avoid;page-break-inside:avoid}
   .phrase-row{break-inside:avoid}
 }
+@media screen and (max-width:520px){
+  /* stack wide phrase tables into cards on phones (print/PDF unaffected) */
+  .phrase-table thead,.phrase-table th{display:none}
+  .phrase-table,.phrase-table tbody,.phrase-table tr,.phrase-table td{display:block;width:100%}
+  .phrase-table tr{border:1px solid var(--soft);border-radius:6px;margin:0 0 8px;padding:6px 9px}
+  .phrase-table td{border:none;padding:3px 0}
+}
 
 /* COVER */
 .cover{background:var(--ink);color:var(--paper);padding:44px 36px;border-radius:8px;margin-bottom:32px;position:relative;overflow:hidden}
@@ -41,7 +48,7 @@ ul{margin:8px 0 8px 20px}li{margin:4px 0}
 
 /* PHRASE TABLE */
 .phrase-table{width:100%;border-collapse:collapse;margin:12px 0}
-.phrase-table th{font-family:'Press Start 2P',monospace;font-size:7px;background:var(--ink);color:var(--gold);padding:7px 10px;text-align:left}
+.phrase-table th{font-family:'DotGothic16',sans-serif;font-size:11px;letter-spacing:.5px;background:var(--ink);color:var(--gold);padding:7px 10px;text-align:left}
 .phrase-table td{padding:8px 10px;border-bottom:1px solid var(--soft);vertical-align:top;font-size:13px}
 .phrase-table tr:hover td{background:#fdf6ec}
 .phrase-jp{font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;display:block;line-height:1.4}
@@ -87,7 +94,7 @@ ul{margin:8px 0 8px 20px}li{margin:4px 0}
 
 /* ALLERGY TABLE */
 .allergy-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
-.allergy-table th{background:var(--red);color:#fff;font-family:'Press Start 2P',monospace;font-size:7px;padding:6px 10px;text-align:left}
+.allergy-table th{background:var(--red);color:#fff;font-family:'DotGothic16',sans-serif;font-size:11px;padding:6px 10px;text-align:left}
 .allergy-table td{padding:7px 10px;border-bottom:1px solid var(--soft)}
 
 /* DISCLAIMER */
@@ -132,7 +139,7 @@ ul{margin:8px 0 8px 20px}li{margin:4px 0}
 <div style="page-break-before:always;border:3px solid #c8911f;border-radius:8px;padding:18px 20px;margin:24px 0;background:#fdfaf3">
   <div style="font-family:'Press Start 2P',monospace;font-size:9px;color:#c8911f;letter-spacing:1px;margin-bottom:12px">★ VISUAL QUICK REFERENCE</div>
   <h3 style="font-family:'DotGothic16',sans-serif;font-size:18px;color:#bf3325;margin:0 0 6px">Point-to-Where-It-Hurts Body Map</h3>
-  <p style="font-size:12.5px;color:#7a6a52;margin:0 0 14px">Show this page to the doctor and point. Say <b>「ここが痛いです」</b> <span style="color:#7a6a52">(koko ga itai desu)</span> = “It hurts here.”</p>
+  <p style="font-size:12.5px;color:#7a6a52;margin:0 0 14px">Show this page to the doctor and point. Say <b>「ここが痛いです」</b> <span style="color:#7a6a52">(koko ga itai desu)</span> = “It hurts here.” The numbered list below is the precise reference; the dots show the approximate area only.</p>
   <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start">
     <svg viewBox="0 0 200 360" width="168" style="flex:0 0 auto;background:#fff;border:1px solid #ddcfb6;border-radius:6px">
       <!-- silhouette -->
@@ -310,7 +317,7 @@ ul{margin:8px 0 8px 20px}li{margin:4px 0}
   <tr><td>Rash/hives</td><td><span class="phrase-jp">発疹が出ています。</span><span class="phrase-ro">Hasshin ga dete imasu.</span></td><td>Skin rash</td></tr>
   <tr><td>Swelling</td><td><span class="phrase-jp">腫れています。</span><span class="phrase-ro">Harete imasu.</span></td><td>Point to the area</td></tr>
   <tr><td>Bleeding</td><td><span class="phrase-jp">出血しています。</span><span class="phrase-ro">Shukketsu shite imasu.</span></td><td></td></tr>
-  <tr><td>Can't sleep</td><td><span class="phrase-jp">眠れません。</span><span class="phrase-ro">Nemuremansen.</span></td><td>Insomnia</td></tr>
+  <tr><td>Can't sleep</td><td><span class="phrase-jp">眠れません。</span><span class="phrase-ro">Nemuremasen.</span></td><td>Insomnia</td></tr>
   <tr><td>Since when</td><td><span class="phrase-jp">___日前から続いています。</span><span class="phrase-ro">___ nichi mae kara tsuzuite imasu.</span></td><td>Fill in number of days</td></tr>
   <tr><td>Getting worse</td><td><span class="phrase-jp">だんだん悪くなっています。</span><span class="phrase-ro">Dandan waruku natte imasu.</span></td><td></td></tr>
   <tr><td>After eating</td><td><span class="phrase-jp">食後に悪くなります。</span><span class="phrase-ro">Shokugo ni waruku narimasu.</span></td><td>Symptoms worse after meals</td></tr>
@@ -482,9 +489,9 @@ ul{margin:8px 0 8px 20px}li{margin:4px 0}
       <div class="en">I'm having an allergic reaction!</div>
     </div>
     <div class="ep">
-      <div class="jp">エピペンを使ってください。</div>
-      <div class="ro">Epipen o tsukatte kudasai.</div>
-      <div class="en">Please use my EpiPen.</div>
+      <div class="jp">エピペンを太ももに打ってください。アナフィラキシーです。</div>
+      <div class="ro">Epipen o futomomo ni utte kudasai. Anafirakishī desu.</div>
+      <div class="en">Please inject my EpiPen into my (outer) thigh — I'm having anaphylaxis.</div>
     </div>
     <div class="ep">
       <div class="jp">転んで頭を打ちました。</div>
@@ -511,7 +518,7 @@ ul{margin:8px 0 8px 20px}li{margin:4px 0}
   <tr><td>Broken tooth</td><td><span class="phrase-jp">歯が欠けました。</span><span class="phrase-ro">Ha ga kakemashita.</span></td><td>My tooth chipped/broke.</td></tr>
   <tr><td>Lost filling</td><td><span class="phrase-jp">詰め物が取れました。</span><span class="phrase-ro">Tsumemono ga toremashita.</span></td><td>My filling fell out.</td></tr>
   <tr><td>Wisdom tooth pain</td><td><span class="phrase-jp">親知らずが痛いです。</span><span class="phrase-ro">Oyashirazu ga itai desu.</span></td><td>My wisdom tooth hurts.</td></tr>
-  <tr><td>Injection fear</td><td><span class="phrase-jp">注射が怖いです。できれば麻酔を先に教えてください。</span><span class="phrase-ro">Chūsha ga kowai desu. Dekeba masui o saki ni oshiete kudasai.</span></td><td>I'm nervous about injections. Please warn me before the anesthetic.</td></tr>
+  <tr><td>Injection fear</td><td><span class="phrase-jp">注射が怖いです。できれば麻酔を先に教えてください。</span><span class="phrase-ro">Chūsha ga kowai desu. Dekireba masui o saki ni oshiete kudasai.</span></td><td>I'm nervous about injections. Please warn me before the anesthetic.</td></tr>
 </table>
 
 <!-- ─── MENTAL HEALTH ─── -->
@@ -521,7 +528,7 @@ ul{margin:8px 0 8px 20px}li{margin:4px 0}
   <tr><th>SITUATION</th><th>JAPANESE + ROMAJI</th><th>ENGLISH</th></tr>
   <tr><td>Anxiety / stress</td><td><span class="phrase-jp">不安感やストレスが続いています。</span><span class="phrase-ro">Fuankan ya sutoresu ga tsuzuite imasu.</span></td><td>I've been experiencing anxiety and stress.</td></tr>
   <tr><td>Feeling depressed</td><td><span class="phrase-jp">気分が沈んでいます。</span><span class="phrase-ro">Kibun ga shizunde imasu.</span></td><td>I've been feeling low/depressed.</td></tr>
-  <tr><td>Can't sleep</td><td><span class="phrase-jp">ストレスで眠れません。</span><span class="phrase-ro">Sutoresu de nemuremansen.</span></td><td>Stress is affecting my sleep.</td></tr>
+  <tr><td>Can't sleep</td><td><span class="phrase-jp">ストレスで眠れません。</span><span class="phrase-ro">Sutoresu de nemuremasen.</span></td><td>Stress is affecting my sleep.</td></tr>
   <tr><td>Want counseling</td><td><span class="phrase-jp">カウンセリングを受けたいのですが。</span><span class="phrase-ro">Kaunseringu o uketai no desu ga.</span></td><td>I'd like to try counseling.</td></tr>
   <tr><td>English counselor?</td><td><span class="phrase-jp">英語が話せるカウンセラーはいますか？</span><span class="phrase-ro">Eigo ga hanaseru kaunserā wa imasu ka?</span></td><td>Is there an English-speaking counselor?</td></tr>
 </table>
