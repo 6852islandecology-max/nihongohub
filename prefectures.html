@@ -121,6 +121,10 @@ body.nh-vip #invite-btn::after{content:"✓ GOLD";font-family:var(--pixel);font-
 #japan-map .prefecture:hover path,#japan-map .prefecture:hover polygon{stroke:var(--ink);stroke-width:1}
 #japan-map .prefecture.selected path,#japan-map .prefecture.selected polygon{stroke:var(--red);stroke-width:2.6}
 #japan-map .prefecture.selected{opacity:1;filter:saturate(1.3) drop-shadow(0 0 4px rgba(191,51,37,.6))}
+/* fog-of-war: conquered prefectures (quiz cleared) light up gold — the map fills in as you explore */
+#japan-map .prefecture:not(.nh-explored):not(.selected):not(:hover) path,#japan-map .prefecture:not(.nh-explored):not(.selected):not(:hover) polygon{filter:grayscale(.66) opacity(.78)}
+#japan-map .prefecture.nh-explored{opacity:1!important;animation:none!important;filter:brightness(1.13) saturate(1.45) drop-shadow(0 0 7px rgba(224,166,52,.95))}
+#japan-map .prefecture.nh-explored path,#japan-map .prefecture.nh-explored polygon{stroke:#16100a;stroke-width:3.4;paint-order:stroke}
 @keyframes glow{0%,100%{filter:saturate(1)}50%{filter:saturate(1.35) brightness(1.08)}}
 @media(prefers-reduced-motion:reduce){#japan-map .prefecture.has-content{animation:none}}
 
@@ -292,6 +296,7 @@ footer a{color:var(--gold);text-decoration:none}
   <a href="index.html" class="hud-logo">Nihongo<span>Hub</span></a>
   <div class="hud-right">
     <span class="hud-counter"><span data-i18n="px_unlocked">AREAS UNLOCKED</span> <b id="hud-count">0/47</b></span>
+    <span class="hud-counter" title="Prefectures you've conquered (cleared the quiz)">🏅 <b id="conq-count">0/47</b></span>
     <a href="quiz.html" class="hud-back">⚔ Battle</a>
     <a href="rpg.html" class="hud-back">⚔ Journey</a>
     <a href="dashboard.html" class="hud-back">📊 Dashboard</a>
@@ -773,6 +778,18 @@ prefs.forEach(el=>{
 });
 document.getElementById("hud-count").textContent=unlocked+"/47";
 
+/* fog-of-war: conquered prefectures (earned title) light up gold; counter fills as you explore */
+function applyFog(){
+  let conquered=0; const titles=getTitles();
+  prefs.forEach(el=>{
+    const r=titleParts(el).romaji;
+    if(r && titles.includes(r)){ el.classList.add("nh-explored"); conquered++; }
+    else el.classList.remove("nh-explored");
+  });
+  const cc=document.getElementById("conq-count"); if(cc) cc.textContent=conquered+"/47";
+}
+applyFog();
+
 const legend=document.getElementById("region-legend");
 if(legend){Object.keys(REGIONS).forEach(k=>{
   const c=document.createElement("span");c.className="lg";
@@ -1035,6 +1052,7 @@ function claimTitle(romaji){
   const t=getTitles();
   if(!t.includes(romaji)){t.push(romaji);localStorage.setItem("nh_titles",JSON.stringify(t));}
   renderTitles();
+  if(typeof applyFog==="function") applyFog();
   if(t.length>=47&&!isVip()){grantVip();toast("🏅 <b>All 47 prefectures cleared!</b> Gold party frame unlocked 🎉",6000);}
 }
 renderTitles();
