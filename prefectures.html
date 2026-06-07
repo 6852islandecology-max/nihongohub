@@ -782,8 +782,8 @@ document.getElementById("hud-count").textContent=unlocked+"/47";
 function applyFog(){
   let conquered=0; const titles=getTitles();
   prefs.forEach(el=>{
-    const r=titleParts(el).romaji;
-    if(r && titles.includes(r)){ el.classList.add("nh-explored"); conquered++; }
+    const slug=el.classList[0]; // canonical lowercase prefecture key
+    if(slug && titles.includes(slug)){ el.classList.add("nh-explored"); conquered++; }
     else el.classList.remove("nh-explored");
   });
   const cc=document.getElementById("conq-count"); if(cc) cc.textContent=conquered+"/47";
@@ -965,7 +965,7 @@ panel.addEventListener("click",e=>{
   if(claim&&!claim.classList.contains("claimed")){
     const romaji=claim.dataset.romaji;
     const text=`I'm exploring ${romaji}, Japan with NihongoHub! 🗾 #NihongoHub #VisitJapan #${romaji.replace(/[^A-Za-z]/g,"")}`;
-    const done=()=>{claimTitle(romaji);awardEquipment(romaji,'random-share');claim.textContent=`✓ ${romaji} TITLE`;claim.classList.add("claimed");};
+    const done=()=>{awardEquipment(romaji,'random-share');claimTitle(romaji);claim.textContent=`✓ ${romaji} TITLE`;claim.classList.add("claimed");};
     if(navigator.share){navigator.share({title:"NihongoHub — Explore Japan",text,url:location.href}).then(done).catch(done);}
     else{window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`,"_blank","noopener");done();}
     return;
@@ -990,8 +990,8 @@ panel.addEventListener("click",e=>{
       battle.querySelectorAll(".battle-opt").forEach((b,i)=>{b.disabled=true;if(i===answer)b.classList.add("correct");});
       res.textContent="✨ CRITICAL HIT!  +10 XP";res.className="battle-result win show";
       battle.querySelector(".battle-explain").classList.add("show");
-      const rj=battle.dataset.romaji;
-      if(rj&&!getTitles().includes(rj)){claimTitle(rj);awardEquipment(rj,'weapon');toast(`🏅 <b>${rj} title earned!</b> Quest cleared.`);}
+      const rj=battle.dataset.romaji, slug=String(rj||"").toLowerCase();
+      if(slug&&!getTitles().includes(slug)){awardEquipment(rj,'weapon');claimTitle(rj);toast(`🏅 <b>${rj} title earned!</b> Quest cleared.`);}
     }else{
       opt.classList.add("wrong");opt.disabled=true;
       res.textContent="💥 MISSED! Pick another — clear it to earn the title.";res.className="battle-result lose show";
@@ -1024,7 +1024,11 @@ teleBtn?.addEventListener("click",()=>{
 });
 
 /* titles persist in localStorage (honor-system); also unlocks equipment via NH_EQUIPMENT_API */
-function getTitles(){try{return JSON.parse(localStorage.getItem("nh_titles")||"[]");}catch(e){return [];}}
+// Titles are stored as canonical lowercase prefecture slugs (same key as equipment + SVG class).
+// De-dupe + lowercase on read so any legacy mixed-case data (["Tokyo","tokyo"]) reads as one.
+function getTitles(){try{const a=JSON.parse(localStorage.getItem("nh_titles")||"[]");return [...new Set((Array.isArray(a)?a:[]).map(s=>String(s).toLowerCase()))];}catch(e){return [];}}
+// Display label for a slug (e.g. "tokyo" → "Tokyo") via the SVG <title>.
+function slugRomaji(slug){const el=document.querySelector(".prefecture."+slug);return el?titleParts(el).romaji:slug;}
 // Wrapper: quiz-clear → weapon; share → random head/body/feet
 function awardEquipment(romaji, slot){
   const slug = (romaji || "").toLowerCase();
@@ -1038,7 +1042,7 @@ function awardEquipment(romaji, slot){
   return result;
 }
 function claimBtnHtml(romaji){
-  const claimed=getTitles().includes(romaji);
+  const claimed=getTitles().includes(String(romaji).toLowerCase());
   return `<button class="claim-btn${claimed?" claimed":""}" data-romaji="${romaji}">${claimed?`✓ ${romaji} TITLE`:"📸 SHARE &amp; CLAIM TITLE"}</button>`;
 }
 function renderTitles(){
@@ -1046,11 +1050,12 @@ function renderTitles(){
   if(!grid)return;
   const t=getTitles();
   if(cnt)cnt.textContent=`${t.length}/47`;
-  grid.innerHTML=t.length?t.map(x=>`<span class="title-badge">🏅 ${x}</span>`).join(""):`<span class="title-empty">No titles yet — your collection starts with your first trip.</span>`;
+  grid.innerHTML=t.length?t.map(x=>`<span class="title-badge">🏅 ${slugRomaji(x)}</span>`).join(""):`<span class="title-empty">No titles yet — your collection starts with your first trip.</span>`;
 }
 function claimTitle(romaji){
+  const slug=String(romaji||"").toLowerCase();
   const t=getTitles();
-  if(!t.includes(romaji)){t.push(romaji);localStorage.setItem("nh_titles",JSON.stringify(t));}
+  if(slug&&!t.includes(slug)){t.push(slug);localStorage.setItem("nh_titles",JSON.stringify(t));}
   renderTitles();
   if(typeof applyFog==="function") applyFog();
   if(t.length>=47&&!isVip()){grantVip();toast("🏅 <b>All 47 prefectures cleared!</b> Gold party frame unlocked 🎉",6000);}
