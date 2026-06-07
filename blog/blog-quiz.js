@@ -112,47 +112,61 @@
   });
 })();
 
-// Affiliate link wiring — set IDs/URLs here once approved, applies to all blog pages automatically
+// Affiliate link wiring — set IDs/URLs here ONCE (after approval); applies to every blog
+// page and killer page automatically. Until set, links stay as honest non-affiliate fallbacks.
 (function(){
   var AFF = {
-    booking_aid: '', // Booking.com Partner ID → appended as ?aid=XXX to all booking.com links in .aff blocks
-    klook_aid:   '', // Klook AID (CJ Affiliate or Involve Asia) → appended as ?aid=XXX to klook.com links
-    jrpass_url:  '', // Full JR Pass affiliate URL → injected as first link in .aff link container
-    airalo_url:  '', // Full Airalo eSIM affiliate URL → injected into .aff link container
-    viator_url:  '', // Full Viator affiliate URL → injected into .aff link container
+    // (A) Deep-link networks — set your partner/affiliate ID; it is appended as a query param,
+    //     preserving the destination page the link already points to.
+    booking_aid:      '', // Booking.com Partner ID        → ?aid=XXX on booking.com links
+    klook_aid:        '', // Klook AID (CJ / Involve Asia) → ?aid=XXX on klook.com links
+    agoda_cid:        '', // Agoda CID                     → ?cid=XXX on agoda.com links
+    getyourguide_pid: '', // GetYourGuide partner_id       → ?partner_id=XXX on getyourguide.com links
+    viator_pid:       '', // Viator pid (Travelpayouts)    → ?pid=XXX on viator.com links
+    // (B) Single-landing partners — set ONE full tracking URL; any link with the matching
+    //     data-aff key is redirected to it (use for programs without deep-link params).
+    gogonihon_url:    '', // Go! Go! Nihon (study-abroad lead) full affiliate URL
+    italki_url:       '', // italki full affiliate URL
+    preply_url:       '', // Preply (PartnerStack) full affiliate URL
+    // (C) Legacy link-box injection on prefecture articles (adds a labelled link to .aff > div)
+    jrpass_url:       '', // Full JR Pass affiliate URL
+    airalo_url:       '', // Full Airalo eSIM affiliate URL
+    viator_url:       '', // Full Viator affiliate URL (generic "book experiences" link)
   };
-
-  var hasAny = AFF.booking_aid || AFF.klook_aid || AFF.jrpass_url || AFF.airalo_url || AFF.viator_url;
-  if (!hasAny) return;
 
   function addParam(url, key, val) {
     return url + (url.indexOf('?') >= 0 ? '&' : '?') + key + '=' + encodeURIComponent(val);
   }
-
   function injectLink(container, href, label) {
     if (!container || container.querySelector('[href="' + href + '"]')) return;
     var a = document.createElement('a');
-    a.href = href;
-    a.target = '_blank';
-    a.rel = 'sponsored noopener';
-    a.textContent = label;
+    a.href = href; a.target = '_blank'; a.rel = 'sponsored noopener'; a.textContent = label;
     container.appendChild(a);
   }
 
+  var DOMAIN_PARAM = [
+    ['booking.com',      'aid',        AFF.booking_aid],
+    ['klook.com',        'aid',        AFF.klook_aid],
+    ['agoda.com',        'cid',        AFF.agoda_cid],
+    ['getyourguide.com', 'partner_id', AFF.getyourguide_pid],
+    ['viator.com',       'pid',        AFF.viator_pid],
+  ];
+  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url };
+
   function wireAffs() {
     document.querySelectorAll('.aff').forEach(function(div) {
-      var linkBox = div.querySelector(':scope > div');
-
       div.querySelectorAll('a[href]').forEach(function(a) {
+        var key = a.getAttribute('data-aff');
+        if (key && FULL[key]) { a.setAttribute('href', FULL[key]); return; } // single-landing override
         var h = a.getAttribute('href');
-        if (AFF.booking_aid && h.indexOf('booking.com') >= 0 && h.indexOf('aid=') < 0) {
-          a.setAttribute('href', addParam(h, 'aid', AFF.booking_aid));
-        }
-        if (AFF.klook_aid && h.indexOf('klook.com') >= 0 && h.indexOf('aid=') < 0) {
-          a.setAttribute('href', addParam(h, 'aid', AFF.klook_aid));
+        for (var i = 0; i < DOMAIN_PARAM.length; i++) {
+          var dom = DOMAIN_PARAM[i][0], param = DOMAIN_PARAM[i][1], val = DOMAIN_PARAM[i][2];
+          if (val && h.indexOf(dom) >= 0 && h.indexOf(param + '=') < 0) {
+            a.setAttribute('href', addParam(h, param, val)); break;
+          }
         }
       });
-
+      var linkBox = div.querySelector(':scope > div');
       if (linkBox) {
         if (AFF.jrpass_url) injectLink(linkBox, AFF.jrpass_url, 'JR Pass (save on rail travel) →');
         if (AFF.airalo_url) injectLink(linkBox, AFF.airalo_url, 'Japan eSIM (Airalo) →');
@@ -163,6 +177,35 @@
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wireAffs);
   else wireAffs();
+})();
+
+// Killer-page cross-links ("cushion pages") — append a planning block to each of the 47
+// prefecture articles so readers flow from a free guide into a high-intent comparison page.
+(function(){
+  var EXCLUDE = {
+    'index':1, 'japan-premium-experiences':1, 'luxury-ryokan-guide':1,
+    'study-japanese-in-japan':1, 'moving-to-japan-guide':1,
+  };
+  var m = (window.location.pathname.match(/\/([^\/]+)\.html/) || [])[1];
+  if (!m || EXCLUDE[m]) return;
+  function run() {
+    var article = document.querySelector('article.wrap') || document.querySelector('article');
+    if (!article || document.getElementById('nh-killer-links')) return;
+    var box = document.createElement('div');
+    box.id = 'nh-killer-links';
+    box.className = 'aff';
+    box.style.cssText = 'background:#0d0a14;border-color:#e0a634';
+    box.innerHTML =
+      '<span class="pr">PLAN</span> <b style="font-family:inherit;color:#e0a634">Ready to plan the trip itself?</b>' +
+      '<div style="margin-top:6px">' +
+      '<a href="japan-premium-experiences.html" style="color:#fdf6e3">✨ Premium tours &amp; experiences →</a>' +
+      '<a href="luxury-ryokan-guide.html" style="color:#fdf6e3">🏯 Luxury ryokan &amp; onsen stays →</a>' +
+      '<a href="study-japanese-in-japan.html" style="color:#fdf6e3">🎓 Study Japanese in Japan →</a>' +
+      '</div>';
+    article.appendChild(box);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
 })();
 
 // Google Maps pin + Phrases buttons for spot list items
