@@ -86,6 +86,28 @@ body{font-family:'DM Sans',sans-serif;color:var(--ink);
 .action-review.disabled{opacity:.45;pointer-events:none}
 .action-btn small{font-family:var(--pixel);font-size:8px;letter-spacing:.5px;opacity:.7}
 
+/* ── Today's Mission ── */
+.mission{background:var(--hud);color:var(--white);border:3px solid var(--gold);border-radius:14px;
+  padding:18px 20px 20px;margin-bottom:22px;box-shadow:0 0 0 3px var(--ink),6px 9px 0 rgba(22,16,10,.18)}
+.mission-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.mission-title{font-family:var(--dot);font-size:clamp(19px,3.5vw,24px)}
+.mission-prog{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;white-space:nowrap}
+.mission-coach{font-size:14.5px;line-height:1.5;color:#f4ead2;background:rgba(224,166,52,.12);
+  border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:9px 12px;margin-bottom:14px;min-height:20px}
+.mission-coach .who{font-family:var(--pixel);font-size:8px;color:var(--gold);letter-spacing:.5px;display:block;margin-bottom:3px}
+.mission-coach.loading{opacity:.6}
+.mission-tasks{display:flex;flex-direction:column;gap:10px}
+.mtask{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:2px solid rgba(224,166,52,.35);
+  border-radius:10px;padding:11px 13px;text-decoration:none;color:var(--white);transition:border-color .2s,background .2s}
+.mtask:hover{border-color:var(--gold);background:rgba(255,255,255,.09)}
+.mtask.done{opacity:.62;border-color:var(--green)}
+.mtask .mt-ico{font-size:22px;flex:0 0 auto;width:30px;text-align:center}
+.mtask .mt-body{flex:1;min-width:0}
+.mtask .mt-t{display:block;font-family:var(--dot);font-size:15.5px;line-height:1.25}
+.mtask .mt-s{display:block;font-size:12.5px;color:rgba(255,255,255,.62);margin-top:3px}
+.mtask .mt-go{font-family:var(--dot);font-size:13px;color:var(--gold);flex:0 0 auto;white-space:nowrap}
+.mtask.done .mt-go{color:var(--green)}
+.mission-done{font-family:var(--dot);font-size:15px;color:var(--gold);text-align:center;padding:6px 0 2px}
 .guide{background:var(--white);border:2px solid var(--soft);border-radius:12px;padding:18px 18px;margin-top:18px}
 .guide h2{font-family:var(--dot);font-size:18px;margin-bottom:10px}
 .guide ol{margin-left:20px;color:var(--muted);font-size:15px;line-height:1.7}
@@ -114,6 +136,15 @@ footer a{color:var(--gold);text-decoration:none}
     <div class="tag" data-i18n="tag">YOUR READINESS · UPDATED LIVE</div>
     <h1><span data-i18n="hi">Hi there —</span> <em id="rank-line">N4 Apprentice</em></h1>
     <p data-i18n="lede">Your JLPT readiness score updates after every quiz. Train daily, watch the bars climb, and the weeks-to-pass shrink.</p>
+  </div>
+
+  <div class="mission" id="mission-card">
+    <div class="mission-head">
+      <div class="mission-title" data-i18n="mission_h">🎯 Today's Mission</div>
+      <div class="mission-prog" id="mission-prog"></div>
+    </div>
+    <div class="mission-coach loading" id="mission-coach"></div>
+    <div class="mission-tasks" id="mission-tasks"></div>
   </div>
 
   <div class="eta">
@@ -221,6 +252,7 @@ footer a{color:var(--gold);text-decoration:none}
 <script src="lib/site-chrome.js" defer></script>
 <script src="lib/hamburger.js" defer></script>
 <script src="lib/readiness.js"></script>
+<script src="lib/daily-mission.js"></script>
 <script src="lib/sync.js"></script>
 <script>
 const T = {
@@ -247,6 +279,15 @@ const T = {
     reco_mix:'Keep training {lvl} — you\'re close to ready. Mix in {next} when comfortable.',
     reco_advance:'You\'re passing {lvl} — move up to {next}!',
     reco_btn_pre:'⚔️ Start N5 Greetings →', reco_btn_solidify:'⚔️ Train {lvl} →', reco_btn_mix:'⚔️ Train {lvl} →', reco_btn_advance:'⚔️ Start {next} →',
+    mission_h:'🎯 Today\'s Mission', mission_who:'AKARI', mission_prog:'{done} / {total} DONE',
+    m_quiz_t:'Today\'s quiz', m_quiz_s:'{level} · {topic}',
+    m_review_t:'Review your weak words', m_review_s:'{n} due now',
+    m_read_t:'Read today\'s guide', m_read_s:'{name} — {hook}',
+    m_go:'Start →', m_done:'Done ✓', m_alldone:'All done for today — see you tomorrow! 🎉',
+    coach_streak:'You\'re on a {n}-day streak — keep the flame alive with today\'s quiz!',
+    coach_due:'You have {n} words waiting for review. Clear them first, then train fresh.',
+    coach_weak:'“{w}” is still tripping you up — let\'s nail it today.',
+    coach_default:'A few minutes today beats an hour next week. Let\'s get one quiz in!',
     sync_h:'📲 Sync to another device', sync_p:'No account needed. Scan the QR code with your phone, or copy the link.', sync_copy:'Copy link'},
   ja:{label:'🇯🇵 日本語', nav_quiz:'⚔️ クイズ', nav_map:'🗾 探索', nav_blog:'📖 ブログ', nav_pricing:'💴 価格',
     tag:'あなたの Readiness · ライブ更新', hi:'こんにちは —',
@@ -271,6 +312,15 @@ const T = {
     reco_mix:'{lvl} を続けて — 合格圏が見えてきた。慣れたら {next} も混ぜよう。',
     reco_advance:'{lvl} 合格圏！ — {next} に挑戦！',
     reco_btn_pre:'⚔️ N5 挨拶を始める →', reco_btn_solidify:'⚔️ {lvl} を訓練 →', reco_btn_mix:'⚔️ {lvl} を訓練 →', reco_btn_advance:'⚔️ {next} を始める →',
+    mission_h:'🎯 今日のミッション', mission_who:'アカリ', mission_prog:'{done} / {total} 達成',
+    m_quiz_t:'今日のクイズ', m_quiz_s:'{level} · {topic}',
+    m_review_t:'苦手な単語を復習', m_review_s:'{n} 件',
+    m_read_t:'今日のガイドを読む', m_read_s:'{name} — {hook}',
+    m_go:'始める →', m_done:'完了 ✓', m_alldone:'今日のミッション完了！また明日 🎉',
+    coach_streak:'{n}日連続中！この勢いのまま今日のクイズもいこう。',
+    coach_due:'復習待ちの単語が {n} 件。まず片付けてから新しい問題へ。',
+    coach_weak:'「{w}」がまだ苦手みたい。今日でしっかり覚えよう。',
+    coach_default:'来週の1時間より、今日の数分。まずは1問やってみよう！',
     sync_h:'📲 別の端末に同期', sync_p:'登録不要。QR コードをスマホで読み取るか、リンクをコピーして開いてください。', sync_copy:'リンクをコピー'},
   zh:{label:'🇹🇼 繁體中文', nav_quiz:'⚔️ 題目', nav_map:'🗾 探索', nav_blog:'📖 部落格', nav_pricing:'💴 價格',
     tag:'你的 Readiness · 即時更新', hi:'你好 —',
@@ -480,8 +530,59 @@ function renderMonthly(){
   const s = document.getElementById('m-streak');    if(s) s.textContent = m.longestStreak;
   const c = document.getElementById('m-acc');       if(c) c.textContent = m.correctPct + '%';
 }
+/* ── Today's Mission (AI task auto-suggestion) ── */
+const COACH_INFLIGHT = {};
+function escapeHtml(s){ const d=document.createElement('div'); d.textContent=String(s==null?'':s); return d.innerHTML; }
+function cap(s){ s=String(s||''); return s.charAt(0).toUpperCase()+s.slice(1); }
+function coachCache(){ try { return JSON.parse(localStorage.getItem('nh_daily_coach')||'null'); } catch(e){ return null; } }
+function coachFallback(m){
+  if(m.streak >= 2) return fmt(tr('coach_streak'), {n:m.streak});
+  if(m.dueToday > 0) return fmt(tr('coach_due'), {n:m.dueToday});
+  if(m.weak && m.weak.q) return fmt(tr('coach_weak'), {w:m.weak.q});
+  return tr('coach_default');
+}
+function setCoach(text){
+  const el = document.getElementById('mission-coach'); if(!el) return;
+  el.classList.remove('loading');
+  el.innerHTML = '<span class="who">'+escapeHtml(tr('mission_who'))+'</span>'+escapeHtml(text);
+}
+async function ensureCoach(m){
+  const c = coachCache();
+  if(c && c.date===window.NH_MISSION.todayKey() && c.lang===LANG && c.line){ setCoach(c.line); return; }
+  setCoach(coachFallback(m)); // show instantly, then try to upgrade with AI
+  if(COACH_INFLIGHT[LANG]) return; COACH_INFLIGHT[LANG]=true;
+  try {
+    const sig = window.NH_MISSION.coachSignals(m);
+    const r = await fetch('/api/daily-coach', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign({}, sig, {lang:LANG}))}).then(x=>x.json());
+    if(r && r.ok && r.line){
+      try { localStorage.setItem('nh_daily_coach', JSON.stringify({date:window.NH_MISSION.todayKey(), lang:LANG, line:r.line})); } catch(e){}
+      setCoach(r.line);
+    }
+  } catch(e){ /* keep deterministic fallback */ }
+  finally { COACH_INFLIGHT[LANG]=false; }
+}
+function renderMission(){
+  const wrap = document.getElementById('mission-tasks'); if(!wrap || !window.NH_MISSION) return;
+  const m = window.NH_MISSION.build();
+  const doneCount = m.tasks.filter(t=>t.done).length;
+  const prog = document.getElementById('mission-prog');
+  if(prog) prog.textContent = fmt(tr('mission_prog'), {done:doneCount, total:m.tasks.length});
+  wrap.innerHTML = m.tasks.map(t=>{
+    let title='', sub='';
+    if(t.kind==='quiz'){ title=tr('m_quiz_t'); sub=fmt(tr('m_quiz_s'), {level:t.level, topic:cap(t.topic)}); }
+    else if(t.kind==='review'){ title=tr('m_review_t'); sub=fmt(tr('m_review_s'), {n:t.count}); }
+    else { title=tr('m_read_t'); sub=fmt(tr('m_read_s'), {name:t.article.name, hook:t.article.hook}); }
+    return '<a class="mtask'+(t.done?' done':'')+'" href="'+t.href+'" onclick="window.NH_MISSION.markDone(\''+t.id+'\')">'
+      +'<span class="mt-ico">'+t.icon+'</span>'
+      +'<span class="mt-body"><span class="mt-t">'+escapeHtml(title)+'</span><span class="mt-s">'+escapeHtml(sub)+'</span></span>'
+      +'<span class="mt-go">'+(t.done?tr('m_done'):tr('m_go'))+'</span></a>';
+  }).join('') + (m.allDone ? '<div class="mission-done">'+escapeHtml(tr('m_alldone'))+'</div>' : '');
+  ensureCoach(m);
+}
+
 function renderAll(){
   const s = window.NH_READINESS.summary();
+  renderMission();
   renderRank(s);
   renderEta(s);
   renderBars(s);
