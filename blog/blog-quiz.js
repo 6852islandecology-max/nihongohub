@@ -386,3 +386,25 @@
     });
   });
 })();
+
+// Constellation MVP — auto-loaded once per blog page. Records token sightings
+// from the article body + faintly highlights any tokens that have already met
+// threshold in another surface, so cross-surface aha moments can fire here too.
+(function(){
+  function fire(){
+    if (!window.NH_CONSTELLATION) return;
+    var scope = document.querySelector('article, main, .wrap') || document.body;
+    var plain = scope.textContent || '';
+    window.NH_CONSTELLATION.TOKENS.forEach(function(t){ if (plain.indexOf(t) >= 0) window.NH_CONSTELLATION.see(t, 'blog'); });
+    window.NH_CONSTELLATION.decorate(scope);
+  }
+  function loadLib(){
+    if (window.NH_CONSTELLATION) { fire(); return; }
+    var s = document.createElement('script');
+    s.src = '../lib/constellation.js';
+    s.onload = fire;
+    document.head.appendChild(s);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadLib);
+  else loadLib();
+})();

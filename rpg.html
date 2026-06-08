@@ -90,6 +90,14 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 .tword.rarity-epic{border-color:#a056d2;color:#d3a8ee}
 .tword.rarity-legendary{border-color:var(--gold);color:#f0c860}
 .title-empty{color:var(--soft);font-size:13px;text-align:center;padding:8px}
+.cn-card{max-width:760px;margin:18px auto 0;padding:16px 18px;background:rgba(13,10,20,.5);border:2px solid var(--gold);border-radius:10px;color:var(--parch)}
+.cn-head{font-family:'DotGothic16',sans-serif;font-size:18px;color:var(--gold);display:flex;align-items:center;gap:8px}
+.cn-head small{margin-left:auto;font-family:'Press Start 2P',monospace;font-size:9px;color:var(--soft);letter-spacing:1px}
+.cn-hint{font-size:13px;color:var(--soft);margin:6px 0 10px}
+.cn-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.cn-list li{display:inline-flex;align-items:center;gap:6px;background:rgba(224,166,52,.12);border:1px solid var(--gold);border-radius:8px;padding:6px 11px;font-family:'Noto Sans JP',sans-serif;font-size:14px;color:#fdf6e3}
+.cn-list .cn-k{font-weight:700;color:var(--gold)}
+.cn-list .cn-n{font-family:'Press Start 2P',monospace;font-size:9px;color:var(--soft)}
 </style>
 <link rel="stylesheet" href="styles/responsive.css">
 <link rel="stylesheet" href="styles/equipment.css">
@@ -102,6 +110,7 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 <script src="data/titles-metadata.js" defer></script>
 <script src="lib/titles.js" defer></script>
 <script src="lib/sharecard.js" defer></script>
+<script src="lib/constellation.js" defer></script>
 </head>
 <body>
 <nav>
@@ -222,6 +231,13 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
       <button class="inv-close" id="inv-close">Close</button>
     </div>
   </div>
+</div>
+
+<!-- Constellation: discovered cross-surface lines (auto-hidden until first notice) -->
+<div id="cn-card" class="cn-card" style="display:none">
+  <div class="cn-head">🔭 <span>Discovery log</span> <small id="cn-count"></small></div>
+  <p class="cn-hint">Tap any twinkling kanji you spot across the site to add a connection here.</p>
+  <ul id="cn-list" class="cn-list"></ul>
 </div>
 
 <div class="ctas">
@@ -555,6 +571,22 @@ window.addEventListener('load', ()=>{
   if (window.NH_EQUIPMENT_API) start();
   else setTimeout(start, 250);
 });
+
+// Constellation: render the discovery log card (auto-hides until first notice).
+function renderConstellationLog(){
+  const card = document.getElementById('cn-card');
+  const list = document.getElementById('cn-list');
+  const cnt  = document.getElementById('cn-count');
+  if (!card || !list || !window.NH_CONSTELLATION) return;
+  const items = window.NH_CONSTELLATION.log();
+  if (!items.length) { card.style.display = 'none'; return; }
+  card.style.display = '';
+  cnt.textContent = items.length + ' line' + (items.length>1?'s':'');
+  list.innerHTML = items.map(n =>
+    '<li><span class="cn-k">' + n.k + '</span> <span class="cn-n">' + n.surfaces + ' surfaces</span></li>'
+  ).join('');
+}
+window.addEventListener('load', () => setTimeout(renderConstellationLog, 300));
 </script>
 </body>
 </html>

@@ -89,6 +89,7 @@
 <script src="lib/i18n-core.js" defer></script>
 <script src="lib/site-chrome.js" defer></script>
 <script src="lib/hamburger.js" defer></script>
+<script src="lib/constellation.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -349,6 +350,13 @@ DATA.forEach(d=>{
   row.dataset.pref = String(en).toLowerCase();
   board.appendChild(row);
 });
+
+// Constellation MVP: record any MVP tokens that appeared on this surface + decorate already-lit ones.
+if (window.NH_CONSTELLATION) {
+  const plain = board.textContent || '';
+  window.NH_CONSTELLATION.TOKENS.forEach(t => { if (plain.includes(t)) window.NH_CONSTELLATION.see(t, 'wildlife'); });
+  window.NH_CONSTELLATION.decorate(board);
+}
 
 /* Deep-link from NihongoHub Explore map: ?pref=<romaji> opens & highlights that prefecture's row. */
 (function(){

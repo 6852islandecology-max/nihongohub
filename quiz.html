@@ -263,6 +263,7 @@ footer a{color:var(--gold);text-decoration:none}
 <script src="lib/hamburger.js" defer></script>
 <script src="lib/srs-browser.js"></script>
 <script src="lib/readiness.js"></script>
+<script src="lib/constellation.js"></script>
 <script src="lib/sync.js"></script>
 <script>
 /* ═══ JLPT BATTLE — reuses /api/generate (same contract as the homepage demo) ═══ */
@@ -619,6 +620,8 @@ async function newQuestion(){
     qEl.innerHTML = sanitizeQuizHTML(data.question);
     rEl.textContent = data.reading || '';
     optsWrap.innerHTML = opts.map((o,i)=>`<button class="b-opt" data-i="${i}">${sanitizeQuizHTML(o.t)}</button>`).join('');
+    // Constellation MVP: record token sightings + decorate already-lit tokens.
+    if(window.NH_CONSTELLATION){ const plain=(qEl.textContent||''); window.NH_CONSTELLATION.TOKENS.forEach(t=>{ if(plain.includes(t)) window.NH_CONSTELLATION.see(t,'quiz'); }); window.NH_CONSTELLATION.decorate(qEl); }
     if(typeEl && data.type) typeEl.textContent = 'TYPE: '+data.type.replace(/_/g,' ').toUpperCase();
     const remEl=document.getElementById('b-rem');
     if(remEl){
@@ -801,6 +804,7 @@ function loadNextReview(){
   qEl.innerHTML = sanitizeQuizHTML(m.question);
   rEl.textContent = '';
   resEl.textContent = ''; resEl.className = 'b-result'; expEl.classList.remove('show'); expEl.innerHTML = '';
+  if(window.NH_CONSTELLATION){ const plain=(qEl.textContent||''); window.NH_CONSTELLATION.TOKENS.forEach(t=>{ if(plain.includes(t)) window.NH_CONSTELLATION.see(t,'quiz'); }); window.NH_CONSTELLATION.decorate(qEl); }
   const opts = shuffle((m.options||[m.answer,'…','…','…']).map(o=>({t:o, c: o===m.answer})));
   current = { correctIndex: opts.findIndex(o=>o.c), correctText: m.answer, explanation:'', questionText: m.question };
   optsWrap.style.display = 'grid';

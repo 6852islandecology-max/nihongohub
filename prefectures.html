@@ -288,6 +288,7 @@ footer a{color:var(--gold);text-decoration:none}
 <script src="lib/hamburger.js" defer></script>
 <script src="data/equipment-metadata.js" defer></script>
 <script src="lib/equipment.js" defer></script>
+<script src="lib/constellation.js" defer></script>
 </head>
 <body data-lang="en">
 
@@ -809,6 +810,8 @@ function selectPref(el){
   const key=el.classList[0],region=regionOf(el),data=PREF_DATA[key];
   const code=el.getAttribute("data-code");
   panel.innerHTML=data?renderReady(kanji,romaji,region,data,code,key):renderLocked(kanji,romaji,region);
+  // Constellation MVP: record token sightings from the panel + decorate already-lit tokens.
+  if(window.NH_CONSTELLATION){ const plain=panel.textContent||''; window.NH_CONSTELLATION.TOKENS.forEach(t=>{ if(plain.includes(t)) window.NH_CONSTELLATION.see(t,'pref'); }); window.NH_CONSTELLATION.decorate(panel); }
   if(window.innerWidth<=880)panel.scrollIntoView({behavior:"smooth",block:"start"});
   // Pilot: walk hero sprite to the selected prefecture
   if (PILOT_WALK.has(key)) walkHeroTo(el);
