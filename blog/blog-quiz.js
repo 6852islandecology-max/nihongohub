@@ -171,7 +171,11 @@
         }
       });
       var linkBox = div.querySelector(':scope > div');
-      if (linkBox) {
+      // Only inject tourist extras (WiFi rental, food tours) into sightseeing-context boxes,
+      // identified by a Klook "tours & tickets" link (the 47 prefecture travel articles).
+      // This keeps them out of tutoring boxes AND the relocation guide's apartment box.
+      var isTravelBox = !!div.querySelector('a[data-aff="klook"]');
+      if (linkBox && isTravelBox) {
         if (AFF.jrpass_url) injectLink(linkBox, AFF.jrpass_url, 'JR Pass (save on rail travel) →');
         if (AFF.airalo_url) injectLink(linkBox, AFF.airalo_url, 'Japan eSIM (Airalo) →');
         if (AFF.viator_url) injectLink(linkBox, AFF.viator_url, 'Book experiences (Viator) →');
