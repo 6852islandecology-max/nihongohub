@@ -26,3 +26,5 @@ _original_handoff.zip
 
 # One-off QA harness (local only, reads .env; never deploy)
 _qa/
+
+.vercel
