@@ -208,6 +208,43 @@
   else run();
 })();
 
+// Lead magnet — email capture on every blog / killer page. Building an owned email
+// list is the one asset we keep (affiliate clicks aren't ours); it also pre-qualifies
+// the high-intent "move to / study in Japan" segment we monetise via study-abroad
+// affiliates. Posts to the existing Substack so there's no new backend.
+(function(){
+  var SUBSTACK = 'https://ikimonohakasefamily.substack.com/subscribe';
+  function run(){
+    var article = document.querySelector('article, main, .wrap') || document.body;
+    if (!article || document.getElementById('nh-leadmagnet')) return;
+    var st = document.createElement('style');
+    st.textContent =
+      '#nh-leadmagnet{background:#fff7e6;border:2px solid #e0a634;border-radius:10px;padding:18px 18px;margin:26px 0}' +
+      '#nh-leadmagnet .lm-k{font-family:"Press Start 2P",monospace;font-size:9px;color:#c8911f;letter-spacing:.5px}' +
+      '#nh-leadmagnet h3{font-family:"DotGothic16",sans-serif;font-size:19px;margin:8px 0 4px;color:#16100a}' +
+      '#nh-leadmagnet p{font-size:14px;color:#7a6a52;margin:0 0 12px;line-height:1.55}' +
+      '#nh-leadmagnet form{display:flex;gap:8px;flex-wrap:wrap}' +
+      '#nh-leadmagnet input{flex:1;min-width:180px;padding:11px 13px;border:2px solid #ddcfb6;border-radius:7px;font:15px "DM Sans",sans-serif;background:#fff}' +
+      '#nh-leadmagnet button{font-family:"DotGothic16",sans-serif;font-size:15px;background:#bf3325;color:#fff;border:none;border-radius:7px;padding:11px 18px;cursor:pointer;white-space:nowrap}' +
+      '#nh-leadmagnet small{display:block;color:#7a6a52;font-size:12px;margin-top:8px}';
+    document.head.appendChild(st);
+    var box = document.createElement('div');
+    box.id = 'nh-leadmagnet';
+    box.innerHTML =
+      '<div class="lm-k">FREE DOWNLOAD</div>' +
+      '<h3>Living &amp; studying in Japan — the 1-page checklist</h3>' +
+      '<p>Visas, schools, housing, bank, SIM and the first-week to-dos, on one page. Join the weekly note from a family walking all 47 prefectures and we\'ll send it.</p>' +
+      '<form action="' + SUBSTACK + '" method="get" target="_blank" rel="noopener">' +
+      '<input type="email" name="email" required placeholder="your@email.com" aria-label="Email address">' +
+      '<button type="submit">Send me the checklist →</button>' +
+      '</form>' +
+      '<small>Free. One short email a week. Unsubscribe anytime.</small>';
+    article.appendChild(box);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+
 // Google Maps pin + Phrases buttons for spot list items
 (function(){
   var m = window.location.pathname.match(/\/([^\/]+)\.html/);
