@@ -155,21 +155,24 @@
     ['getyourguide.com', 'partner_id', AFF.getyourguide_pid],
     ['viator.com',       'pid',        AFF.viator_pid],
   ];
-  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url };
+  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url, byfood: AFF.byfood_url };
 
   function wireAffs() {
-    document.querySelectorAll('.aff').forEach(function(div) {
-      div.querySelectorAll('a[href]').forEach(function(a) {
-        var key = a.getAttribute('data-aff');
-        if (key && FULL[key]) { a.setAttribute('href', FULL[key]); return; } // single-landing override
-        var h = a.getAttribute('href');
-        for (var i = 0; i < DOMAIN_PARAM.length; i++) {
-          var dom = DOMAIN_PARAM[i][0], param = DOMAIN_PARAM[i][1], val = DOMAIN_PARAM[i][2];
-          if (val && h.indexOf(dom) >= 0 && h.indexOf(param + '=') < 0) {
-            a.setAttribute('href', addParam(h, param, val)); break;
-          }
+    // Rewrite every affiliate anchor on the page — including ones outside .aff boxes,
+    // e.g. the comparison-table cells on the premium-experiences page. Empty IDs/URLs are
+    // skipped, so unconfigured links keep their honest non-affiliate fallback.
+    document.querySelectorAll('a[data-aff]').forEach(function(a) {
+      var key = a.getAttribute('data-aff');
+      if (key && FULL[key]) { a.setAttribute('href', FULL[key]); return; } // single-landing override
+      var h = a.getAttribute('href') || '';
+      for (var i = 0; i < DOMAIN_PARAM.length; i++) {
+        var dom = DOMAIN_PARAM[i][0], param = DOMAIN_PARAM[i][1], val = DOMAIN_PARAM[i][2];
+        if (val && h.indexOf(dom) >= 0 && h.indexOf(param + '=') < 0) {
+          a.setAttribute('href', addParam(h, param, val)); break;
         }
-      });
+      }
+    });
+    document.querySelectorAll('.aff').forEach(function(div) {
       var linkBox = div.querySelector(':scope > div');
       // Only inject tourist extras (WiFi rental, food tours) into sightseeing-context boxes,
       // identified by a Klook "tours & tickets" link (the 47 prefecture travel articles).
@@ -180,13 +183,39 @@
         if (AFF.airalo_url) injectLink(linkBox, AFF.airalo_url, 'Japan eSIM (Airalo) →');
         if (AFF.viator_url) injectLink(linkBox, AFF.viator_url, 'Book experiences (Viator) →');
         if (AFF.ninjawifi_url) injectLink(linkBox, AFF.ninjawifi_url, 'Pocket WiFi rental (NINJA WiFi) →');
-        if (AFF.byfood_url) injectLink(linkBox, AFF.byfood_url, 'Food tours & experiences (byFood) →');
       }
     });
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wireAffs);
-  else wireAffs();
+  // byFood belongs in the food context, not the hotel box: drop a byFood CTA right under
+  // the "What to eat" section. Matched by the localized heading (en/zh/es/th/id) so it lands
+  // correctly regardless of layout or language; prefecture pages only (they carry a Klook link).
+  var EAT_HEADINGS = ['what to eat', '必吃美食', 'qué comer', 'ต้องกิน', 'yang wajib dicoba'];
+  function injectFoodAff() {
+    if (!AFF.byfood_url) return;
+    if (!document.querySelector('a[data-aff="klook"]')) return; // prefecture travel pages only
+    if (document.querySelector('a[data-aff="byfood"]')) return; // already placed
+    var h2s = document.querySelectorAll('h2'), foodH2 = null;
+    for (var i = 0; i < h2s.length; i++) {
+      if (EAT_HEADINGS.indexOf(h2s[i].textContent.trim().toLowerCase()) >= 0) { foodH2 = h2s[i]; break; }
+    }
+    if (!foodH2) return;
+    var p = foodH2.nextElementSibling;
+    var anchor = (p && p.tagName === 'P') ? p : foodH2;
+    var box = document.createElement('div');
+    box.className = 'aff'; box.style.cssText = 'margin-top:8px';
+    box.innerHTML = '<span class="pr">PR</span> ';
+    var a = document.createElement('a');
+    a.href = AFF.byfood_url; a.target = '_blank'; a.rel = 'sponsored noopener';
+    a.setAttribute('data-aff', 'byfood');
+    a.textContent = 'Join a local food tour or cooking class (byFood) →';
+    box.appendChild(a);
+    anchor.insertAdjacentElement('afterend', box);
+  }
+
+  function run() { wireAffs(); injectFoodAff(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
 })();
 
 // Killer-page cross-links ("cushion pages") — append a planning block to each of the 47
