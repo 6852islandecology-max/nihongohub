@@ -387,18 +387,7 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
 <!-- NAV -->
 <nav class="nav">
   <div class="logo">Nihongo<span>Hub</span></div>
-  <ul class="nav-links">
-    <li><a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a></li>
-    <li><a href="#learn" data-i18n="nav_learn">Learn</a></li>
-    <li><a href="blog/index.html" data-i18n="nav_culture">Culture</a></li>
-    <li><a href="#travel" data-i18n="nav_travel">Travel Japan</a></li>
-    <li><a href="prefectures.html" data-i18n="nav_explore">Explore 🗾</a></li>
-    <li><a href="quiz.html" data-i18n="nav_quiz">⚔️ Quiz</a></li>
-    <li><a href="rpg.html">⚔ My Journey</a></li>
-    <li><a href="blog/moving-to-japan-guide.html">🏡 Relocation</a></li>
-    <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
-    <li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" class="nav-shadowing" data-i18n="nav_shadowing">🎙 Shadowing</a></li>
-  </ul>
+  <div class="nav-links"><!-- grouped nav injected by lib/site-chrome.js (Learn / Explore Japan / My Journey + Pricing) --></div>
   <button class="btn-nav" data-i18n="nav_cta" onclick="scrollToPractice()">Start Free →</button>
 </nav>
 
@@ -437,14 +426,14 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
         </div>
       </div>
       <div class="quiz-card">
-        <div class="quiz-level-tag">JLPT N3 · <span data-i18n="quiz_label">Daily Quiz</span></div>
-        <div class="quiz-q">彼女は毎朝＿＿起きます。</div>
-        <div class="quiz-r" data-i18n="quiz_sub">She wakes up every morning ___.</div>
+        <div class="quiz-level-tag">JLPT N5 · <span data-i18n="quiz_label">Daily Quiz</span></div>
+        <div class="quiz-q">毎朝　コーヒーを＿＿。</div>
+        <div class="quiz-r" data-i18n="quiz_sub">Every morning, I ___ coffee.</div>
         <div class="quiz-opts">
-          <button class="quiz-opt" onclick="heroQuiz(this,false)">ゆっくり</button>
-          <button class="quiz-opt" onclick="heroQuiz(this,true)">はやく</button>
-          <button class="quiz-opt" onclick="heroQuiz(this,false)">おそく</button>
-          <button class="quiz-opt" onclick="heroQuiz(this,false)">しずかに</button>
+          <button class="quiz-opt" onclick="heroQuiz(this,true)">飲みます</button>
+          <button class="quiz-opt" onclick="heroQuiz(this,false)">食べます</button>
+          <button class="quiz-opt" onclick="heroQuiz(this,false)">見ます</button>
+          <button class="quiz-opt" onclick="heroQuiz(this,false)">聞きます</button>
         </div>
       </div>
       <div class="progress-widget">
@@ -478,19 +467,14 @@ footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:
   <div class="guide-inner">
     <div class="reveal">
       <p class="section-tag" style="color:var(--gold)" data-i18n="gd_tag">Start Here</p>
-      <h2 class="section-title" data-i18n="gd_title">What's inside NihongoHub</h2>
-      <p class="section-sub" data-i18n="gd_sub">One place to learn the language and explore the country. Here's the whole map — pick where to begin.</p>
+      <h2 class="section-title" data-i18n="gd_title">Where do you want to start?</h2>
+      <p class="section-sub" data-i18n="gd_sub">NihongoHub does four things. Pick what you're here for — we'll take you straight to it.</p>
     </div>
     <div class="guide-grid reveal">
-      <a class="guide-card" href="#roadmap"><span class="gc-ico">🧭</span><span class="gc-title" data-i18n="gd1_title">Roadmap</span><span class="gc-desc" data-i18n="gd1_desc">Your step-by-step path from zero to N3 in six months — know exactly what's next.</span><span class="gc-go" data-i18n="gd1_go">See the path →</span></a>
-      <a class="guide-card" href="#learn"><span class="gc-ico">📚</span><span class="gc-title" data-i18n="gd2_title">Learn</span><span class="gc-desc" data-i18n="gd2_desc">Every study tool in one place — streaks, AI quiz battles, 47-prefecture quest and shadowing practice.</span><span class="gc-go" data-i18n="gd2_go">What we offer →</span></a>
-      <a class="guide-card" href="blog/index.html"><span class="gc-ico">🎎</span><span class="gc-title" data-i18n="gd3_title">Culture</span><span class="gc-desc" data-i18n="gd3_desc">Etiquette, seasons and everyday life — read it on the blog, one prefecture at a time.</span><span class="gc-go" data-i18n="gd3_go">Open the blog →</span></a>
-      <a class="guide-card" href="#travel"><span class="gc-ico">✈️</span><span class="gc-title" data-i18n="gd4_title">Travel Japan</span><span class="gc-desc" data-i18n="gd4_desc">Language plus trip planning for Tokyo, Kyoto, Hokkaido and beyond.</span><span class="gc-go" data-i18n="gd4_go">Plan a trip →</span></a>
-      <a class="guide-card" href="prefectures.html"><span class="gc-ico">🗾</span><span class="gc-title" data-i18n="gd5_title">Explore</span><span class="gc-desc" data-i18n="gd5_desc">A clickable map of all 47 prefectures with data-grounded stats and quiz battles.</span><span class="gc-go" data-i18n="gd5_go">Open the map →</span></a>
-      <a class="guide-card" href="wildlife.html"><span class="gc-ico">🦋</span><span class="gc-title" data-i18n="gd6_title">Wildlife</span><span class="gc-desc" data-i18n="gd6_desc">Each prefecture's rare creatures from GBIF, drawn as pixel art. Yukika's territory.</span><span class="gc-go" data-i18n="gd6_go">Meet them →</span></a>
-      <a class="guide-card" href="quiz.html"><span class="gc-ico">⚔️</span><span class="gc-title" data-i18n="gd7_title">Quiz</span><span class="gc-desc" data-i18n="gd7_desc">AI-generated JLPT battles, N5 to N1. Earn XP and power up your guide Akari.</span><span class="gc-go" data-i18n="gd7_go">Start a battle →</span></a>
-      <a class="guide-card" href="#pricing"><span class="gc-ico">💴</span><span class="gc-title" data-i18n="gd8_title">Pricing</span><span class="gc-desc" data-i18n="gd8_desc">Start free. Go Pro monthly, or own it forever with Lifetime.</span><span class="gc-go" data-i18n="gd8_go">See plans →</span></a>
-      <a class="guide-card" href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener"><span class="gc-ico">🎙</span><span class="gc-title" data-i18n="gd9_title">Shadowing</span><span class="gc-desc" data-i18n="gd9_desc">Practice speaking with YouTube shadowing in our sister app, Echo.</span><span class="gc-go" data-i18n="gd9_go">Open Echo →</span></a>
+      <a class="guide-card" href="onboarding.html"><span class="gc-ico">🇯🇵</span><span class="gc-title" data-i18n="pc1_title">Learn Japanese</span><span class="gc-desc" data-i18n="pc1_desc">Find your JLPT level in 5 minutes, then practise with AI quizzes that adapt to you — N5 to N1, free to start.</span><span class="gc-go" data-i18n="pc1_go">Find my level →</span></a>
+      <a class="guide-card" href="blog/index.html"><span class="gc-ico">⛩️</span><span class="gc-title" data-i18n="pc2_title">Understand Japan</span><span class="gc-desc" data-i18n="pc2_desc">Etiquette, seasons, food and everyday life — honest culture guides for all 47 prefectures, written by people who live here.</span><span class="gc-go" data-i18n="pc2_go">Read the guides →</span></a>
+      <a class="guide-card" href="prefectures.html"><span class="gc-ico">✈️</span><span class="gc-title" data-i18n="pc3_title">Plan a trip</span><span class="gc-desc" data-i18n="pc3_desc">A clickable map of every prefecture with what to see, the local words to know, and where to stay and book.</span><span class="gc-go" data-i18n="pc3_go">Open the map →</span></a>
+      <a class="guide-card" href="rpg.html"><span class="gc-ico">🎮</span><span class="gc-title" data-i18n="pc4_title">Play &amp; collect</span><span class="gc-desc" data-i18n="pc4_desc">Turn study into a quest: clear quizzes, earn titles and gear, light up the map and grow your own character.</span><span class="gc-go" data-i18n="pc4_go">Start your journey →</span></a>
     </div>
   </div>
 </section>
@@ -632,7 +616,11 @@ const T = {
     rm2_month:"Month 2–3", rm2_goal:"Grammar & Kanji", rm2_desc:"100 essential Kanji, basic grammar patterns, and conversational phrases for real situations.", rm2_badge:"✓ N5 Ready",
     rm3_month:"Month 4–5", rm3_goal:"Intermediate Fluency", rm3_desc:"Expand to 500+ Kanji, complex grammar, and reading authentic Japanese texts and media.", rm3_badge:"✓ N4 Ready",
     rm4_month:"Month 6", rm4_goal:"N3 Exam Prep", rm4_desc:"Full mock exams, weak-area drilling, and listening practice. Walk into the JLPT with confidence.", rm4_badge:"🎯 N3 Target",
-    gd_tag:"Start Here", gd_title:"What's inside NihongoHub", gd_sub:"One place to learn the language and explore the country. Here's the whole map — pick where to begin.",
+    gd_tag:"Start Here", gd_title:"Where do you want to start?", gd_sub:"NihongoHub does four things. Pick what you're here for — we'll take you straight to it.",
+    pc1_title:"Learn Japanese", pc1_desc:"Find your JLPT level in 5 minutes, then practise with AI quizzes that adapt to you — N5 to N1, free to start.", pc1_go:"Find my level →",
+    pc2_title:"Understand Japan", pc2_desc:"Etiquette, seasons, food and everyday life — honest culture guides for all 47 prefectures, written by people who live here.", pc2_go:"Read the guides →",
+    pc3_title:"Plan a trip", pc3_desc:"A clickable map of every prefecture with what to see, the local words to know, and where to stay and book.", pc3_go:"Open the map →",
+    pc4_title:"Play & collect", pc4_desc:"Turn study into a quest: clear quizzes, earn titles and gear, light up the map and grow your own character.", pc4_go:"Start your journey →",
     gd1_title:"Roadmap", gd1_desc:"Your step-by-step path from zero to N3 in six months — know exactly what's next.", gd1_go:"See the path →",
     gd2_title:"Learn", gd2_desc:"Every study tool in one place — streaks, AI quiz battles, 47-prefecture quest and shadowing practice.", gd2_go:"What we offer →",
     gd3_title:"Culture", gd3_desc:"Etiquette, seasons and everyday life — read it on the blog, one prefecture at a time.", gd3_go:"Open the blog →",
@@ -705,7 +693,11 @@ const T = {
     rm2_month:"第2-3個月", rm2_goal:"文法與漢字", rm2_desc:"100個必學漢字、基礎文法句型，以及日常會話用語。", rm2_badge:"✓ N5 合格",
     rm3_month:"第4-5個月", rm3_goal:"中級流利度", rm3_desc:"擴展到500+漢字、複雜文法，並閱讀真實日語文本和各類媒體。", rm3_badge:"✓ N4 合格",
     rm4_month:"第6個月", rm4_goal:"N3 考試準備", rm4_desc:"完整模擬考試、弱點專項練習和聽力訓練。自信走進JLPT考場。", rm4_badge:"🎯 N3 目標",
-    gd_tag:"從這裡開始", gd_title:"NihongoHub 的全貌", gd_sub:"學習語言與探索日本，集中在一個地方。地圖在這裡 — 從你想開始的地方點進去。",
+    gd_tag:"從這裡開始", gd_title:"你想從哪裡開始？", gd_sub:"NihongoHub 做四件事。選你來的目的 — 我們直接帶你過去。",
+    pc1_title:"學日語", pc1_desc:"5 分鐘測出 JLPT 程度，再用會隨你調整的 AI 測驗練習 — N5 到 N1，免費開始。", pc1_go:"測我的程度 →",
+    pc2_title:"認識日本", pc2_desc:"禮儀、季節、飲食與日常 — 由住在當地的人撰寫的 47 縣誠實文化指南。", pc2_go:"閱讀指南 →",
+    pc3_title:"規劃旅行", pc3_desc:"可點擊的各縣地圖：看點、當地用語、住宿與訂房一次到位。", pc3_go:"打開地圖 →",
+    pc4_title:"遊玩・收集", pc4_desc:"把學習變成任務：通關測驗、獲得稱號與裝備、點亮地圖、培養自己的角色。", pc4_go:"開始旅程 →",
     gd1_title:"學習路線", gd1_desc:"從零開始，6 個月達到 N3 的逐步路徑 — 下一步永遠清楚。", gd1_go:"看路線 →",
     gd2_title:"開始學習", gd2_desc:"連續學習、AI 測驗對戰、47 都道府縣探索、跟讀練習 — 全部一站式。", gd2_go:"我們的服務 →",
     gd3_title:"日本文化", gd3_desc:"禮儀、季節、日常生活 — 在部落格上，一個都道府縣一篇文章慢慢讀。", gd3_go:"打開部落格 →",
@@ -778,7 +770,11 @@ const T = {
     rm2_month:"Mes 2–3", rm2_goal:"Gramática y Kanji", rm2_desc:"100 Kanji esenciales, patrones gramaticales básicos y frases de conversación cotidiana.", rm2_badge:"✓ N5 Listo",
     rm3_month:"Mes 4–5", rm3_goal:"Fluidez Intermedia", rm3_desc:"Expande a 500+ Kanji, gramática compleja y lectura de textos auténticos y diversos medios.", rm3_badge:"✓ N4 Listo",
     rm4_month:"Mes 6", rm4_goal:"Preparación Examen N3", rm4_desc:"Exámenes de práctica completos, ejercicios de puntos débiles y práctica de escucha.", rm4_badge:"🎯 Objetivo N3",
-    gd_tag:"Empieza Aquí", gd_title:"Qué hay dentro de NihongoHub", gd_sub:"Un solo lugar para aprender el idioma y explorar el país. Aquí está el mapa completo — elige por dónde empezar.",
+    gd_tag:"Empieza Aquí", gd_title:"¿Por dónde quieres empezar?", gd_sub:"NihongoHub hace cuatro cosas. Elige a qué vienes — te llevamos directo.",
+    pc1_title:"Aprende japonés", pc1_desc:"Descubre tu nivel JLPT en 5 minutos y practica con quizzes de IA que se adaptan a ti — de N5 a N1, gratis.", pc1_go:"Ver mi nivel →",
+    pc2_title:"Entiende Japón", pc2_desc:"Etiqueta, estaciones, comida y vida diaria — guías culturales honestas de las 47 prefecturas, por quienes viven aquí.", pc2_go:"Leer las guías →",
+    pc3_title:"Planea un viaje", pc3_desc:"Un mapa de cada prefectura con qué ver, las palabras locales y dónde alojarte y reservar.", pc3_go:"Abrir el mapa →",
+    pc4_title:"Juega y colecciona", pc4_desc:"Convierte el estudio en una misión: supera quizzes, gana títulos y equipo, ilumina el mapa y haz crecer tu personaje.", pc4_go:"Empezar mi viaje →",
     gd1_title:"Ruta", gd1_desc:"Tu camino paso a paso desde cero hasta N3 en seis meses — sabe exactamente qué sigue.", gd1_go:"Ver la ruta →",
     gd2_title:"Aprender", gd2_desc:"Todas las herramientas de estudio en un solo lugar — rachas, batallas de quiz IA, misión por las 47 prefecturas y shadowing.", gd2_go:"Qué ofrecemos →",
     gd3_title:"Cultura", gd3_desc:"Etiqueta, estaciones y vida cotidiana — léelo en el blog, una prefectura a la vez.", gd3_go:"Abrir el blog →",
@@ -851,7 +847,11 @@ const T = {
     rm2_month:"เดือนที่ 2-3", rm2_goal:"ไวยากรณ์และคันจิ", rm2_desc:"คันจิ 100 ตัวที่จำเป็น รูปแบบไวยากรณ์พื้นฐาน และวลีสนทนาในชีวิตจริง", rm2_badge:"✓ พร้อมสอบ N5",
     rm3_month:"เดือนที่ 4-5", rm3_goal:"ความคล่องระดับกลาง", rm3_desc:"ขยายไปถึงคันจิ 500+ ตัว ไวยากรณ์ซับซ้อน และอ่านข้อความญี่ปุ่นจริงและสื่อต่างๆ", rm3_badge:"✓ พร้อมสอบ N4",
     rm4_month:"เดือนที่ 6", rm4_goal:"เตรียมสอบ N3", rm4_desc:"ข้อสอบจำลองเต็มรูปแบบ ฝึกจุดอ่อน และฝึกฟัง เข้าห้องสอบ JLPT อย่างมั่นใจ", rm4_badge:"🎯 เป้าหมาย N3",
-    gd_tag:"เริ่มที่นี่", gd_title:"ในนี้มีอะไรบ้างใน NihongoHub", gd_sub:"ที่เดียวสำหรับเรียนภาษาและสำรวจประเทศ นี่คือแผนผังทั้งหมด — เลือกได้ว่าจะเริ่มจากตรงไหน",
+    gd_tag:"เริ่มที่นี่", gd_title:"อยากเริ่มจากตรงไหน？", gd_sub:"NihongoHub ทำ 4 อย่าง เลือกสิ่งที่คุณมาหา — เราพาไปถึงเลย",
+    pc1_title:"เรียนภาษาญี่ปุ่น", pc1_desc:"วัดระดับ JLPT ใน 5 นาที แล้วฝึกกับควิซ AI ที่ปรับตามคุณ — N5 ถึง N1 เริ่มฟรี", pc1_go:"วัดระดับของฉัน →",
+    pc2_title:"เข้าใจญี่ปุ่น", pc2_desc:"มารยาท ฤดูกาล อาหาร และชีวิตประจำวัน — ไกด์วัฒนธรรมจริงใจครบ 47 จังหวัด เขียนโดยคนที่อยู่ที่นี่", pc2_go:"อ่านไกด์ →",
+    pc3_title:"วางแผนเที่ยว", pc3_desc:"แผนที่จังหวัดแบบคลิกได้ พร้อมจุดเที่ยว คำท้องถิ่นที่ควรรู้ และที่พักที่จองได้", pc3_go:"เปิดแผนที่ →",
+    pc4_title:"เล่นและสะสม", pc4_desc:"เปลี่ยนการเรียนเป็นเควสต์: ผ่านควิซ รับฉายาและไอเทม จุดไฟแผนที่ และปั้นตัวละครของคุณ", pc4_go:"เริ่มการผจญภัย →",
     gd1_title:"แผนการเรียน", gd1_desc:"เส้นทางทีละขั้นจากศูนย์ถึง N3 ใน 6 เดือน — รู้ชัดเสมอว่าก้าวต่อไปคืออะไร", gd1_go:"ดูเส้นทาง →",
     gd2_title:"เรียน", gd2_desc:"เครื่องมือเรียนทุกอย่างในที่เดียว — สตรีค, ควิซ AI, เควสต์ 47 จังหวัด, ฝึก shadowing", gd2_go:"ที่เรานำเสนอ →",
     gd3_title:"วัฒนธรรม", gd3_desc:"มารยาท ฤดูกาล และชีวิตประจำวัน — อ่านที่บล็อก ทีละจังหวัด", gd3_go:"เปิดบล็อก →",
@@ -924,7 +924,11 @@ const T = {
     rm2_month:"Bulan 2–3", rm2_goal:"Tata Bahasa & Kanji", rm2_desc:"100 Kanji esensial, pola tata bahasa dasar, dan frasa percakapan untuk situasi nyata.", rm2_badge:"✓ Siap N5",
     rm3_month:"Bulan 4–5", rm3_goal:"Kefasihan Menengah", rm3_desc:"Perluas ke 500+ Kanji, tata bahasa kompleks, dan membaca teks Jepang asli dan beragam media.", rm3_badge:"✓ Siap N4",
     rm4_month:"Bulan 6", rm4_goal:"Persiapan Ujian N3", rm4_desc:"Ujian simulasi lengkap, latihan titik lemah, dan praktik mendengarkan. Masuki JLPT dengan penuh keyakinan.", rm4_badge:"🎯 Target N3",
-    gd_tag:"Mulai Dari Sini", gd_title:"Apa saja di dalam NihongoHub", gd_sub:"Satu tempat untuk belajar bahasa sekaligus menjelajahi Jepang. Ini peta lengkapnya — pilih dari mana Anda ingin mulai.",
+    gd_tag:"Mulai Dari Sini", gd_title:"Mau mulai dari mana?", gd_sub:"NihongoHub melakukan empat hal. Pilih tujuanmu — kami antar langsung ke sana.",
+    pc1_title:"Belajar bahasa Jepang", pc1_desc:"Cek level JLPT dalam 5 menit, lalu berlatih dengan kuis AI yang menyesuaikan diri — N5 sampai N1, gratis.", pc1_go:"Cek levelku →",
+    pc2_title:"Memahami Jepang", pc2_desc:"Etiket, musim, makanan, dan kehidupan sehari-hari — panduan budaya jujur untuk 47 prefektur, ditulis oleh yang tinggal di sini.", pc2_go:"Baca panduannya →",
+    pc3_title:"Rencanakan trip", pc3_desc:"Peta tiap prefektur yang bisa diklik: tempat wisata, kata lokal penting, dan tempat menginap & pesan.", pc3_go:"Buka peta →",
+    pc4_title:"Main & koleksi", pc4_desc:"Ubah belajar jadi quest: tuntaskan kuis, raih gelar dan perlengkapan, nyalakan peta, dan kembangkan karaktermu.", pc4_go:"Mulai petualangan →",
     gd1_title:"Peta Belajar", gd1_desc:"Jalur langkah demi langkah dari nol sampai N3 dalam enam bulan — selalu tahu langkah berikutnya.", gd1_go:"Lihat jalurnya →",
     gd2_title:"Belajar", gd2_desc:"Semua alat belajar dalam satu tempat — streak, pertempuran kuis AI, petualangan 47 prefektur, dan shadowing.", gd2_go:"Yang kami tawarkan →",
     gd3_title:"Budaya", gd3_desc:"Etiket, musim, dan kehidupan sehari-hari — baca di blog, satu prefektur dalam satu artikel.", gd3_go:"Buka blog →",
@@ -997,7 +1001,11 @@ const T = {
     rm2_month:"2–3 ヶ月目", rm2_goal:"文法と漢字", rm2_desc:"必須漢字 100 + 基礎文法パターン + 日常会話フレーズ。", rm2_badge:"✓ N5 合格レベル",
     rm3_month:"4–5 ヶ月目", rm3_goal:"中級の流暢さ", rm3_desc:"漢字 500+、複雑な文法、本物の日本語テキストや各種メディアを読む。", rm3_badge:"✓ N4 合格レベル",
     rm4_month:"6 ヶ月目", rm4_goal:"N3 試験対策", rm4_desc:"模試・弱点ドリル・リスニング演習。自信を持って JLPT 当日へ。", rm4_badge:"🎯 N3 目標",
-    gd_tag:"ここから始める", gd_title:"NihongoHub の中身", gd_sub:"言葉を学ぶ場所と、国を歩く場所を、ひとつに。地図はここに全部あります — 入りたいところから入ってください。",
+    gd_tag:"ここから始める", gd_title:"何から始めますか？", gd_sub:"NihongoHub にできることは4つ。目的を選べば、そこへ直接ご案内します。",
+    pc1_title:"日本語を学ぶ", pc1_desc:"5分でJLPTレベルを診断 → あなたに合わせて変化するAIクイズで練習。N5〜N1、無料で開始。", pc1_go:"レベルを測定 →",
+    pc2_title:"日本を知る", pc2_desc:"マナー・季節・食・暮らし — 現地に住む人が書く、47都道府県の誠実な文化ガイド。", pc2_go:"ガイドを読む →",
+    pc3_title:"旅行を計画する", pc3_desc:"クリックできる県別マップ。見どころ・現地の言葉・泊まる場所と予約までひとつに。", pc3_go:"マップを開く →",
+    pc4_title:"遊ぶ・集める", pc4_desc:"学習をクエストに。クイズをクリアして称号や装備を獲得、地図を点灯させ、自分のキャラを育てよう。", pc4_go:"冒険を始める →",
     gd1_title:"ロードマップ", gd1_desc:"ゼロから 6 ヶ月で N3 までの一歩ずつの道筋 — 次に何をするかが常にはっきり。", gd1_go:"道筋を見る →",
     gd2_title:"学ぶ", gd2_desc:"ストリーク、AI クイズバトル、47 都道府県クエスト、シャドーイング — 学習ツールを一か所に。", gd2_go:"提供する機能 →",
     gd3_title:"文化", gd3_desc:"マナー、季節、暮らし — ブログで、47 都道府県をひとつずつ。", gd3_go:"ブログを開く →",
@@ -1051,12 +1059,16 @@ const T = {
 let currentLang = 'en';
 
 function setLang(lang) {
+  if (!T[lang]) lang = 'en';
   currentLang = lang;
   document.body.setAttribute('data-lang', lang);
+  try { localStorage.setItem('nh_lang', lang); } catch (e) {}   // sync with the rest of the site (site-chrome reads nh_lang)
 
-  // Update lang buttons
+  // Update lang buttons (match by the lang in the button's onclick — works on click AND on init)
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  event.currentTarget.classList.add('active');
+  var active = [].slice.call(document.querySelectorAll('.lang-btn'))
+    .filter(b => (b.getAttribute('onclick') || '').indexOf("'" + lang + "'") >= 0)[0];
+  if (active) active.classList.add('active');
 
   const d = T[lang];
 
@@ -1073,8 +1085,13 @@ function setLang(lang) {
   });
 
   // Update html lang
-  document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang === 'th' ? 'th' : lang === 'id' ? 'id' : lang === 'es' ? 'es' : lang === 'ja' ? 'ja' : 'en';
+  document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang;
 }
+
+// On load, honour the language saved elsewhere on the site (header, quiz, dashboard all use nh_lang).
+(function () {
+  try { var l = localStorage.getItem('nh_lang'); if (l && T[l] && l !== 'en') setLang(l); } catch (e) {}
+})();
 
 /* ═══════════════════════════════════════════
    SCROLL REVEAL
