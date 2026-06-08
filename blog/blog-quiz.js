@@ -127,12 +127,15 @@
     //     data-aff key is redirected to it (use for programs without deep-link params).
     gogonihon_url:    '', // Go! Go! Nihon (study-abroad lead) full affiliate URL
     italki_url:       '', // italki full affiliate URL
-    preply_url:       'https://invl.app/clnitht', // Preply (Involve Asia, CPS 56%) — spare link: https://invl.us/clnithx
-    klook_url:        'https://invl.me/clnitig', // Klook (Involve Asia deeplink) — overrides every data-aff="klook" link
+    preply_url:       '', // Preply (Involve Asia) — 申請中/pending, no link yet
+    klook_url:        '', // Klook (Involve Asia) — 申請中/pending; KKday below fills the slot until approved
+    kkday_url:        'https://invl.me/clnitig', // KKday (Involve Asia) — Japan tours & tickets; substitutes in data-aff="klook" slots
     // (C) Legacy link-box injection on prefecture articles (adds a labelled link to .aff > div)
     jrpass_url:       '', // Full JR Pass affiliate URL
     airalo_url:       '', // Full Airalo eSIM affiliate URL
     viator_url:       '', // Full Viator affiliate URL (generic "book experiences" link)
+    ninjawifi_url:    'https://invl.app/clnitht', // NINJA WiFi (Involve Asia) — pocket WiFi rental
+    byfood_url:       'https://invl.us/clnithx', // byFood (Involve Asia) — Japan food tours & experiences
   };
 
   function addParam(url, key, val) {
@@ -152,7 +155,7 @@
     ['getyourguide.com', 'partner_id', AFF.getyourguide_pid],
     ['viator.com',       'pid',        AFF.viator_pid],
   ];
-  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url };
+  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url };
 
   function wireAffs() {
     document.querySelectorAll('.aff').forEach(function(div) {
@@ -172,6 +175,8 @@
         if (AFF.jrpass_url) injectLink(linkBox, AFF.jrpass_url, 'JR Pass (save on rail travel) →');
         if (AFF.airalo_url) injectLink(linkBox, AFF.airalo_url, 'Japan eSIM (Airalo) →');
         if (AFF.viator_url) injectLink(linkBox, AFF.viator_url, 'Book experiences (Viator) →');
+        if (AFF.ninjawifi_url) injectLink(linkBox, AFF.ninjawifi_url, 'Pocket WiFi rental (NINJA WiFi) →');
+        if (AFF.byfood_url) injectLink(linkBox, AFF.byfood_url, 'Food tours & experiences (byFood) →');
       }
     });
   }
