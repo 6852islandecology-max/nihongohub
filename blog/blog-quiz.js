@@ -119,7 +119,7 @@
     // (A) Deep-link networks — set your partner/affiliate ID; it is appended as a query param,
     //     preserving the destination page the link already points to.
     booking_aid:      '', // Booking.com Partner ID        → ?aid=XXX on booking.com links
-    klook_aid:        '', // Klook AID (CJ / Involve Asia) → ?aid=XXX on klook.com links
+    klook_aid:        '', // (unused: Involve Asia gives a redirect link, not an aid → see klook_url)
     agoda_cid:        '', // Agoda CID                     → ?cid=XXX on agoda.com links
     getyourguide_pid: '', // GetYourGuide partner_id       → ?partner_id=XXX on getyourguide.com links
     viator_pid:       '', // Viator pid (Travelpayouts)    → ?pid=XXX on viator.com links
@@ -127,7 +127,8 @@
     //     data-aff key is redirected to it (use for programs without deep-link params).
     gogonihon_url:    '', // Go! Go! Nihon (study-abroad lead) full affiliate URL
     italki_url:       '', // italki full affiliate URL
-    preply_url:       '', // Preply (PartnerStack) full affiliate URL
+    preply_url:       'https://invl.app/clnitht', // Preply (Involve Asia, CPS 56%) — spare link: https://invl.us/clnithx
+    klook_url:        'https://invl.me/clnitig', // Klook (Involve Asia deeplink) — overrides every data-aff="klook" link
     // (C) Legacy link-box injection on prefecture articles (adds a labelled link to .aff > div)
     jrpass_url:       '', // Full JR Pass affiliate URL
     airalo_url:       '', // Full Airalo eSIM affiliate URL
@@ -151,7 +152,7 @@
     ['getyourguide.com', 'partner_id', AFF.getyourguide_pid],
     ['viator.com',       'pid',        AFF.viator_pid],
   ];
-  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url };
+  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url };
 
   function wireAffs() {
     document.querySelectorAll('.aff').forEach(function(div) {
