@@ -1,0 +1,60 @@
+{
+  "name": "International Money-Transfer Cost Facts for Remote Workers",
+  "description": "Neutral, sourced facts about what it costs a freelancer or remote worker to move income across borders. Anchored on the World Bank's Remittance Prices Worldwide channel averages. Provider statements are quoted from each provider's own public pages. This is informational data, not financial advice.",
+  "url": "https://www.nihongo-hub.com/data/track-f.json",
+  "publisher": "NihongoHub",
+  "attribution": "NihongoHub (https://www.nihongo-hub.com)",
+  "disclaimer": "Informational only, not financial advice. Fees and rates change; verify on each provider's current pricing page before acting. Costs depend on amount, currency pair, and payment method.",
+  "lastUpdated": "2026-06-12",
+  "anchorStatistic": {
+    "fact": "Average cost of sending money internationally, by channel",
+    "values": {
+      "globalAverage": "6.36%",
+      "banks": "9.50%",
+      "digitalProviders": "3.65%",
+      "basis": "USD 200 send amount"
+    },
+    "sdgTarget": "3% (UN Sustainable Development Goal 10.c)",
+    "source": "World Bank — Remittance Prices Worldwide, Q3 2025",
+    "sourceUrl": "https://remittanceprices.worldbank.org/",
+    "retrieved": "2026-06-12",
+    "confidence": "verified (figures via search summary of the World Bank Q3 2025 report; re-confirm against the primary PDF for citation)"
+  },
+  "facts": [
+    {
+      "fact": "Wise states it uses only the live mid-market (interbank) rate plus a small, upfront fee",
+      "quote": "We only use the live mid-market rate, and a small, upfront fee to cover our costs.",
+      "variableFeeRange": "approximately 0.33%–2% depending on currency pair and payment method; automatic discount above USD 25,000",
+      "source": "Wise — official pricing page",
+      "sourceUrl": "https://wise.com/us/pricing/send-money",
+      "retrieved": "2026-06-12",
+      "confidence": "verified (direct quote); fee range is a secondary aggregation, treat as approximate"
+    },
+    {
+      "fact": "PayPal adds a currency-conversion spread on top of a wholesale rate",
+      "values": {"personalPayments": "about 4%", "other": "about 3%"},
+      "source": "PayPal — official money hub / help center",
+      "sourceUrl": "https://www.paypal.com/us/money-hub/article/currency-conversion-fees",
+      "retrieved": "2026-06-12",
+      "confidence": "verified (PayPal official)"
+    },
+    {
+      "fact": "Traditional bank international transfers typically add a 2–4% exchange-rate markup plus wire and intermediary fees",
+      "illustrativeExample": "On a USD 1,000 transfer this can total roughly USD 80–120 all-in via a bank, versus roughly USD 5–15 via a low-cost digital provider",
+      "source": "Exiap / Wise blog comparison (secondary estimate)",
+      "sourceUrl": "https://exiap.com/reviews/wise-vs-international-bank-transfer",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary, not a primary statistic — use the World Bank channel averages as the authoritative figure)"
+    }
+  ],
+  "providers": [
+    {
+      "name": "Wise",
+      "whatItIs": "Multi-currency account and international transfers using the mid-market rate plus an upfront fee.",
+      "whyItCanHelp": "For cross-border income, the mid-market rate plus a transparent fee is typically cheaper than a bank's 2–4% exchange markup (see World Bank channel averages above).",
+      "learnMore": "https://www.nihongo-hub.com/blog/moving-to-japan-guide.html",
+      "affiliate": {"isAffiliate": true, "status": "pending", "note": "Outbound links on NihongoHub pages may be affiliate links, disclosed on-page. Conversions are handled on nihongo-hub.com, not in this data file."}
+    }
+  ],
+  "complianceNote": "Per provider affiliate guidelines, this dataset does not present a NihongoHub-authored competitor comparison as a provider's marketing claim, and does not embed raw affiliate deep-links or real-time rate feeds. It cites neutral third-party statistics and each provider's own public statements, and points readers to on-site pages where any affiliate links and disclosures live."
+}

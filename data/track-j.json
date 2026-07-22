@@ -1,0 +1,84 @@
+{
+  "name": "Moving to Japan — Neutral Procedural Facts",
+  "description": "Neutral, sourced facts about relocating to Japan: visa/residence timelines, residence-card issuance, and bank-account barriers. Each item names its source and a confidence level. No manufactured urgency: timelines are presented as 'according to source X, the standard processing is about N', never as a reason to act through any particular link.",
+  "url": "https://www.nihongo-hub.com/data/track-j.json",
+  "publisher": "NihongoHub",
+  "attribution": "NihongoHub (https://www.nihongo-hub.com)",
+  "disclaimer": "Informational only, not immigration or legal advice. Procedures and timelines change and vary by case and nationality. Always confirm against the Immigration Services Agency of Japan, the Ministry of Foreign Affairs, and your local Japanese embassy/consulate. NihongoHub does not prepare documents or give individual case advice.",
+  "lastUpdated": "2026-06-12",
+  "facts": [
+    {
+      "fact": "Certificate of Eligibility (COE) standard processing time",
+      "value": "approximately 1–3 months",
+      "source": "Immigration Services Agency of Japan (widely cited standard processing time)",
+      "sourceUrl": "https://english.visajapan.jp/nintei.html",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary; the .go.jp primary page could not be fetched directly — confirm against the official Immigration Services Agency page)"
+    },
+    {
+      "fact": "A COE must be used to enter Japan within a fixed window after issuance",
+      "value": "within 3 months of the designated date on the COE",
+      "source": "visajapan.jp (secondary)",
+      "sourceUrl": "https://english.visajapan.jp/nintei.html",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary)"
+    },
+    {
+      "fact": "Visa issuance at an embassy/consulate after holding a COE, when there are no issues",
+      "value": "standard 5 business days from the day after the application is accepted; longer if additional review is required",
+      "source": "Ministry of Foreign Affairs of Japan standard wording (secondary citation)",
+      "sourceUrl": "https://www.mofa.go.jp/j_info/visit/visa/",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary; MOFA primary page returned 403 to automated fetch — confirm wording on the official page)"
+    },
+    {
+      "fact": "Residence Card (Zairyu Card) issuance on arrival",
+      "value": "issued on the spot at major airports (Narita, Haneda, Kansai, Chubu, Fukuoka, New Chitose, Hiroshima); otherwise mailed to your registered address after you register your residence",
+      "source": "Japan Living Guide (secondary)",
+      "sourceUrl": "https://www.japanlivingguide.com/expatinfo/official-issues/residencecard/",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary)"
+    },
+    {
+      "fact": "Residence registration deadline after entry",
+      "value": "register at your municipal (city/ward) office within 14 days, with your residence card and passport",
+      "source": "japan-dev (secondary)",
+      "sourceUrl": "https://japan-dev.com/blog/zairyu-card",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary)"
+    },
+    {
+      "fact": "Bank-account barriers for new arrivals",
+      "value": "major banks (MUFG/SMBC/Mizuho) commonly require 6+ months of residence; Japan Post Bank (Yucho) is a common exception that opens accounts for newer arrivals. Language, hanko (seal), proof of address, and My Number are typical additional requirements.",
+      "source": "multiple expat guides (secondary)",
+      "sourceUrl": "https://www.mailmate.jp/blog/top-japanese-banks-foreigners",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary, general practice — varies by branch)"
+    },
+    {
+      "fact": "Upcoming change: a new Specified Residence Card (Tokutei Zairyu Card) begins operation",
+      "value": "from 2026-06-14",
+      "source": "japan-dev (secondary)",
+      "sourceUrl": "https://japan-dev.com/blog/zairyu-card",
+      "retrieved": "2026-06-12",
+      "confidence": "estimate (secondary)"
+    }
+  ],
+  "providers": [
+    {
+      "name": "SafetyWing (Nomad Insurance)",
+      "whatItIs": "Travel medical insurance for nomads and long-stay travelers, designed to cover gaps before you are enrolled in a local health system.",
+      "whyItCanHelp": "New arrivals can face a coverage gap before Japanese National Health Insurance enrollment; gap-period travel medical insurance is one way people bridge it.",
+      "learnMore": "https://www.nihongo-hub.com/blog/moving-to-japan-guide.html",
+      "affiliate": {"isAffiliate": true, "status": "live", "note": "Outbound links on NihongoHub pages may be affiliate links, disclosed on-page. Conversions are handled on nihongo-hub.com, not in this data file."}
+    },
+    {
+      "name": "Wise",
+      "whatItIs": "Multi-currency account and international transfers at the mid-market rate plus an upfront fee.",
+      "whyItCanHelp": "Useful for moving funds for deposits, proof of funds, or ongoing income while a local bank account is not yet available (see /data/track-f.json for sourced cost facts).",
+      "learnMore": "https://www.nihongo-hub.com/blog/moving-to-japan-guide.html",
+      "affiliate": {"isAffiliate": true, "status": "pending", "note": "Conversions handled on nihongo-hub.com, not in this data file."}
+    }
+  ],
+  "complianceNote": "Timelines are stated as neutral, sourced facts, never as a causal reason to act through a particular link. Items whose .go.jp/mofa.go.jp primary sources could not be fetched are marked as secondary estimates pending manual confirmation. No affiliate deep-links are embedded here; conversions occur on-site with on-page disclosure."
+}

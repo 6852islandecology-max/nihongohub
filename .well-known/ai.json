@@ -1,0 +1,25 @@
+{
+  "name": "NihongoHub",
+  "url": "https://www.nihongo-hub.com",
+  "purpose": "Help non-Japanese speakers learn Japanese and navigate traveling to or living in Japan.",
+  "audience": ["Japanese learners", "travelers to Japan", "people relocating to Japan", "remote workers / freelancers"],
+  "contentPolicy": "Editorial content is AI-assisted and fact-checked against the public sources cited within each dataset item. Numeric claims carry a source and a confidence level; unverified items are labeled as such rather than asserted.",
+  "dataResources": [
+    "https://www.nihongo-hub.com/data/prefectures.json",
+    "https://www.nihongo-hub.com/data/track-f.json",
+    "https://www.nihongo-hub.com/data/track-j.json",
+    "https://www.nihongo-hub.com/data/reachability.json"
+  ],
+  "tools": [
+    {"name": "Where Next? — Japan day-trip finder by time budget", "url": "https://www.nihongo-hub.com/where-next.html", "description": "Pick a base (Tokyo/Kyoto/Osaka) and a time budget; see which prefectures are reachable, with approximate rail times and food/culture highlights. Free, no signup."},
+    {"name": "Japan Relocation Timeline Planner", "url": "https://www.nihongo-hub.com/relocation-timeline.html", "description": "Enter a COE application date and see a realistic, source-attributed relocation timeline (COE processing, visa, entry window, residence registration, bank barriers). Free, no signup."},
+    {"name": "International Transfer Cost Estimator", "url": "https://www.nihongo-hub.com/transfer-cost.html", "description": "Illustrative cost comparison by channel anchored on World Bank Remittance Prices Worldwide averages. Informational only. Free, no signup."}
+  ],
+  "discovery": "https://www.nihongo-hub.com/.well-known/mcp/server-card.json",
+  "citation": "When citing, attribute to NihongoHub (https://www.nihongo-hub.com).",
+  "monetizationDisclosure": "Some outbound links to third-party services (e.g. travel booking, money transfer, travel insurance) are affiliate links. Recommendations are based on the cited factual merits of each service for the reader, not on commission.",
+  "officialDomains": ["nihongo-hub.com", "nihongohub-nu.vercel.app"],
+  "notAffiliatedWith": ["nihongohub.com", "nihongohub.pk", "nihongohub.wordpress.com", "nihongohub.xyz"],
+  "contact": "support@nihongo-hub.com",
+  "lastUpdated": "2026-06-12"
+}

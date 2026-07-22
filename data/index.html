@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.nihongo-hub.com/data/">
+<title>Open Data — Japan prefectures, transfer costs, relocation facts | NihongoHub</title>
+<meta name="description" content="NihongoHub's machine-readable, source-attributed datasets: 47 Japanese prefectures, international money-transfer costs for remote workers, and neutral facts about relocating to Japan. Free to cite with attribution.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta property="og:title" content="NihongoHub Open Data">
+<meta property="og:description" content="Machine-readable, source-attributed datasets about Japan: prefectures, transfer costs, relocation facts.">
+<meta property="og:url" content="https://www.nihongo-hub.com/data/">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "name": "NihongoHub Open Data",
+  "url": "https://www.nihongo-hub.com/data/",
+  "description": "Machine-readable, source-attributed datasets for non-Japanese speakers learning Japanese or traveling to / living in Japan. Each fact carries its public source; numeric claims carry a confidence level.",
+  "publisher": {"@type": "Organization", "name": "NihongoHub", "url": "https://www.nihongo-hub.com/"},
+  "license": "https://www.nihongo-hub.com/data/#license",
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "name": "Japan 47 Prefecture Dataset",
+      "description": "All 47 Japanese prefectures: signature and lesser-known foods, cultural sights, sub-areas, and a 5-axis profile (food/culture/city/access/nature). Each food/culture entry carries a source URL; the nature score is derived from GBIF biodiversity data.",
+      "url": "https://www.nihongo-hub.com/data/",
+      "creator": {"@type": "Organization", "name": "NihongoHub", "url": "https://www.nihongo-hub.com/"},
+      "license": "Free to cite with attribution to NihongoHub.",
+      "isAccessibleForFree": true,
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://www.nihongo-hub.com/data/prefectures.json"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "International Money-Transfer Cost Facts (remote workers)",
+      "description": "Neutral, sourced facts on the cost of moving freelance income across borders, anchored on World Bank Remittance Prices Worldwide channel averages. Provider statements are quoted from each provider's own public pages.",
+      "url": "https://www.nihongo-hub.com/data/",
+      "creator": {"@type": "Organization", "name": "NihongoHub", "url": "https://www.nihongo-hub.com/"},
+      "isAccessibleForFree": true,
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://www.nihongo-hub.com/data/track-f.json"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Japan Rail Reachability Matrix (approximate)",
+      "description": "Approximate fastest rail travel times from major hub stations (Tokyo, Kyoto, Shin-Osaka) to a main station in each of Japan's 47 prefectures, curated for time-budget trip discovery. Roughly ±20%; includes a JR Pass caveat (Nozomi/Mizuho not covered).",
+      "url": "https://www.nihongo-hub.com/where-next.html",
+      "creator": {"@type": "Organization", "name": "NihongoHub", "url": "https://www.nihongo-hub.com/"},
+      "isAccessibleForFree": true,
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://www.nihongo-hub.com/data/reachability.json"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Moving to Japan — Neutral Procedural Facts",
+      "description": "Neutral, sourced facts about relocating to Japan: Certificate of Eligibility timelines, residence-card issuance, and bank-account barriers. Each item names its source and confidence level; no manufactured urgency.",
+      "url": "https://www.nihongo-hub.com/data/",
+      "creator": {"@type": "Organization", "name": "NihongoHub", "url": "https://www.nihongo-hub.com/"},
+      "isAccessibleForFree": true,
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://www.nihongo-hub.com/data/track-j.json"
+      }
+    }
+  ]
+}
+</script>
+<style>
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:760px;margin:0 auto;padding:48px 22px;color:#18120a;background:#f4efe5;line-height:1.65}
+  a{color:#bf3325}
+  h1{font-size:1.6rem;margin:0 0 .3em}
+  h2{font-size:1.15rem;margin:1.8em 0 .3em}
+  code{background:#e6ddd0;padding:1px 6px;border-radius:4px;font-size:.92em}
+  .card{background:#fdfaf3;border:1px solid #e6ddd0;border-radius:10px;padding:16px 18px;margin:14px 0}
+  .muted{color:#796c5c;font-size:.92rem}
+  nav a{margin-right:16px}
+</style>
+</head>
+<body>
+<nav><a href="/index.html">← NihongoHub</a><a href="/blog/index.html">Prefecture guides</a></nav>
+<h1>NihongoHub Open Data</h1>
+<p>Machine-readable, source-attributed datasets for people learning Japanese or traveling to / living in Japan. Every fact carries the public source it came from. Numeric claims carry a confidence level, and anything we could not verify is labeled as such rather than asserted.</p>
+<p class="muted">Free to cite and reuse. When you cite, please attribute <strong>NihongoHub (nihongo-hub.com)</strong>. Discovery card: <a href="/.well-known/mcp/server-card.json">/.well-known/mcp/server-card.json</a></p>
+
+<div class="card">
+  <h2>Japan 47 Prefecture Dataset</h2>
+  <p>Signature and lesser-known foods, cultural sights, sub-areas, and a 5-axis profile per prefecture. Nature score derived from GBIF biodiversity data.</p>
+  <p><a href="/data/prefectures.json"><code>/data/prefectures.json</code></a></p>
+</div>
+
+<div class="card">
+  <h2>International Money-Transfer Cost Facts</h2>
+  <p>For remote workers moving income across borders. Anchored on World Bank Remittance Prices Worldwide channel averages; provider statements quoted from their own public pages. Try it live: <a href="/transfer-cost.html">Transfer Cost Estimator</a>.</p>
+  <p><a href="/data/track-f.json"><code>/data/track-f.json</code></a></p>
+</div>
+
+<div class="card">
+  <h2>Japan Rail Reachability Matrix</h2>
+  <p>Approximate fastest rail times from Tokyo, Kyoto and Shin-Osaka to all 47 prefectures, for time-budget trip discovery ("I have 3 hours — where can I go?"). Deliberately rough (~±20%), with a JR Pass caveat. Try it live: <a href="/where-next.html">Where Next?</a></p>
+  <p><a href="/data/reachability.json"><code>/data/reachability.json</code></a></p>
+</div>
+
+<div class="card">
+  <h2>Moving to Japan — Neutral Procedural Facts</h2>
+  <p>Certificate of Eligibility timelines, residence-card issuance, bank-account barriers. Each item names its source and confidence; no manufactured urgency. Try it live: <a href="/relocation-timeline.html">Relocation Timeline Planner</a>.</p>
+  <p><a href="/data/track-j.json"><code>/data/track-j.json</code></a></p>
+</div>
+
+<h2 id="license">License &amp; attribution</h2>
+<p class="muted">Facts in these datasets are free to cite and reuse. Attribution to NihongoHub (https://www.nihongo-hub.com) is requested. Each item also carries its own upstream source, which should be honored. Some outbound links to third-party services are affiliate links; recommendations are based on the cited factual merits for the reader, not on commission. Last updated 2026-06-12.</p>
+</body>
+</html>

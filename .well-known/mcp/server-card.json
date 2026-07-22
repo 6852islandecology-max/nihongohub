@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "2026-03",
+  "name": "NihongoHub",
+  "title": "NihongoHub — Japan learning, travel & relocation data",
+  "description": "Read-only, machine-readable datasets about learning Japanese and living in / traveling Japan, compiled for non-Japanese speakers. Each fact is attributed to the public source listed alongside it. This is a static data catalog (downloadable JSON resources), not a live tool server.",
+  "url": "https://www.nihongo-hub.com",
+  "type": "static-data-catalog",
+  "publisher": {
+    "name": "NihongoHub",
+    "url": "https://www.nihongo-hub.com",
+    "contact": "support@nihongo-hub.com"
+  },
+  "officialDomains": ["nihongo-hub.com", "nihongohub-nu.vercel.app"],
+  "license": "Facts are free to cite. Attribution to NihongoHub (https://www.nihongo-hub.com) is requested when reused.",
+  "attribution": "NihongoHub (https://www.nihongo-hub.com)",
+  "resources": [
+    {
+      "name": "prefectures",
+      "title": "47 Japanese prefectures dataset",
+      "url": "https://www.nihongo-hub.com/data/prefectures.json",
+      "format": "application/json",
+      "description": "All 47 prefectures: signature and lesser-known foods, cultural sights, a 5-axis profile (food/culture/city/access/nature), sub-areas, and a GBIF-derived nature score. Every food/culture entry carries a source URL.",
+      "updateFrequency": "monthly"
+    },
+    {
+      "name": "track-f-transfer-costs",
+      "title": "International money-transfer cost facts (freelancers / remote workers)",
+      "url": "https://www.nihongo-hub.com/data/track-f.json",
+      "format": "application/json",
+      "description": "Sourced, neutral facts about the cost of moving freelance income across borders, anchored on World Bank Remittance Prices Worldwide channel averages. Provider statements are quoted from each provider's own public pages.",
+      "updateFrequency": "quarterly"
+    },
+    {
+      "name": "track-j-relocation",
+      "title": "Moving to Japan — neutral procedural facts",
+      "url": "https://www.nihongo-hub.com/data/track-j.json",
+      "format": "application/json",
+      "description": "Neutral, sourced facts about relocating to Japan (Certificate of Eligibility timelines, residence card issuance, bank-account barriers). No manufactured urgency; each item names its source and a confidence level.",
+      "updateFrequency": "quarterly"
+    },
+    {
+      "name": "reachability",
+      "title": "Japan Rail Reachability Matrix (approximate)",
+      "url": "https://www.nihongo-hub.com/data/reachability.json",
+      "format": "application/json",
+      "description": "Approximate fastest rail times from Tokyo, Kyoto and Shin-Osaka to a main station in each of the 47 prefectures, for time-budget trip discovery. Deliberately rough (about ±20%), with a JR Pass caveat. Interactive explorer: https://www.nihongo-hub.com/where-next.html",
+      "updateFrequency": "quarterly"
+    },
+    {
+      "name": "sitemap",
+      "url": "https://www.nihongo-hub.com/sitemap.xml",
+      "format": "application/xml",
+      "description": "Full URL index including 47 prefecture guides across en/es/id/th/zh-Hant."
+    },
+    {
+      "name": "robots",
+      "url": "https://www.nihongo-hub.com/robots.txt",
+      "format": "text/plain",
+      "description": "Crawler policy."
+    }
+  ],
+  "lastUpdated": "2026-06-12"
+}

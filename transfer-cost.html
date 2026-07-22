@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.nihongo-hub.com/transfer-cost.html">
+<title>International Transfer Cost Estimator — bank vs digital | NihongoHub</title>
+<meta name="description" content="How much does it really cost to send money across borders? Illustrative estimates anchored on World Bank channel averages (banks 9.50% vs digital providers 3.65%), with sources and honest caveats. For freelancers, students and people moving to Japan.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta property="og:title" content="International Transfer Cost Estimator">
+<meta property="og:description" content="Bank vs digital provider transfer costs, anchored on World Bank averages. Sourced, neutral, no scare tactics.">
+<meta property="og:url" content="https://www.nihongo-hub.com/transfer-cost.html">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"International Transfer Cost Estimator","url":"https://www.nihongo-hub.com/transfer-cost.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","isAccessibleForFree":true,"description":"Illustrative international money-transfer cost comparison by channel, anchored on the World Bank Remittance Prices Worldwide channel averages (banks 9.50%, digital providers 3.65%, global average 6.36%, USD 200 basis). Informational only, not financial advice.","provider":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/"},"about":{"@type":"Dataset","name":"International Money-Transfer Cost Facts","distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://www.nihongo-hub.com/data/track-f.json"}}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#18120a;--paper:#f4efe5;--red:#bf3325;--gold:#c8911f;--gold-l:#e0a634;--soft:#e6ddd0;--muted:#796c5c;--white:#fdfaf3;--hud:#0d0a14;--ok:#2a7a4b;--dot:'DotGothic16',sans-serif}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);line-height:1.6}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold-l);display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold-l)}
+.wrap{max-width:740px;margin:0 auto;padding:30px 18px 70px}
+h1{font-family:var(--dot);font-size:27px;letter-spacing:1px}
+.sub{color:var(--muted);margin:6px 0 20px}
+.panel{background:var(--white);border:2px solid var(--soft);border-radius:14px;padding:18px;margin-bottom:20px}
+label{font-family:var(--dot);font-size:14px;display:block;margin-bottom:8px}
+input[type=number]{font-family:'DM Sans';font-size:18px;padding:9px 12px;border:2px solid var(--soft);border-radius:9px;background:var(--paper);width:180px}
+.note{font-size:12.5px;color:var(--muted);margin-top:12px}
+.row{margin:16px 0}
+.rlabel{display:flex;justify-content:space-between;font-family:var(--dot);font-size:14px;margin-bottom:5px}
+.rlabel .cost{color:var(--red)}
+.bar{height:20px;border-radius:6px;background:var(--soft);overflow:hidden}
+.bar>span{display:block;height:100%;background:var(--red);transition:width .25s}
+.row.best .bar>span{background:var(--ok)}
+.row.best .rlabel .cost{color:var(--ok)}
+.quote{font-size:13px;color:#4a4036;border-left:3px solid var(--gold-l);padding:6px 12px;margin:10px 0;background:var(--paper);border-radius:0 8px 8px 0}
+.quote .src{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
+.cta{display:inline-block;background:var(--red);color:var(--white);font-family:var(--dot);text-decoration:none;padding:10px 18px;border-radius:10px;margin-top:6px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+footer a{color:var(--red)}
+</style>
+</head>
+<body>
+<nav class="hud">
+  <a class="logo" href="/index.html">Nihongo<span>Hub</span></a>
+  <a class="back" href="/relocation-timeline.html">RELOCATION TIMELINE →</a>
+</nav>
+<div class="wrap">
+  <h1>TRANSFER COST ESTIMATOR</h1>
+  <p class="sub">Sending money across borders — what does each channel typically cost? Illustrative math anchored on World Bank channel averages. No scare tactics, sources below.</p>
+
+  <div class="panel">
+    <label for="amt">💸 Amount to send (USD)</label>
+    <input type="number" id="amt" value="1000" min="1" step="50">
+    <div id="bars"></div>
+    <p class="note">⚠️ Illustrative, not a quote and not financial advice. The World Bank averages are measured on USD 200 transfers; percentage costs typically fall as amounts grow, so treat these as an upper-bound illustration. Fees vary by corridor, provider and payment method — always check the provider's live price.</p>
+  </div>
+
+  <div class="panel">
+    <h3 style="font-family:var(--dot);font-size:16px">What providers say about their own pricing</h3>
+    <div class="quote">"We only use the live mid-market rate, and a small, upfront fee to cover our costs."<span class="src">Wise — official pricing page (verified quote, 2026-06-12)</span></div>
+    <div class="quote">PayPal applies a currency-conversion spread of about 4% (personal payments) or about 3% (other cases) on top of a wholesale rate.<span class="src">PayPal — official help pages (verified, 2026-06-12)</span></div>
+    <div class="quote">Traditional bank transfers typically add a 2–4% exchange-rate markup plus wire and intermediary fees.<span class="src">secondary estimate (Exiap / Wise blog) — use the World Bank channel averages above as the authoritative figure</span></div>
+    <a class="cta" href="/blog/moving-to-japan-guide.html">MOVING-TO-JAPAN MONEY GUIDE →</a>
+  </div>
+
+  <footer>
+    Anchor statistic: World Bank — Remittance Prices Worldwide, Q3 2025 (global avg 6.36%, banks 9.50%, digital providers 3.65%, USD 200 basis; UN SDG target 3%; figures pending re-confirmation against the primary report PDF). Full sourced facts: <a href="/data/track-f.json">track-f.json</a>. Free to cite with attribution to NihongoHub. <a href="/data/">About our open data</a>.
+  </footer>
+</div>
+<script>
+(async function(){
+  const tf = await fetch('/data/track-f.json').then(r=>r.json()).catch(()=>null);
+  const pct = (s) => parseFloat(String(s).replace('%',''));
+  const v = tf && tf.anchorStatistic && tf.anchorStatistic.values;
+  const CH = [
+    {name:'🏦 Banks (avg)', p: v ? pct(v.banks) : 9.50},
+    {name:'🌍 Global average', p: v ? pct(v.globalAverage) : 6.36},
+    {name:'📱 Digital providers (avg)', p: v ? pct(v.digitalProviders) : 3.65, best:true}
+  ];
+  const amt = document.getElementById('amt');
+  const bars = document.getElementById('bars');
+  const fmt = (n) => '$' + n.toLocaleString('en-US',{maximumFractionDigits:0});
+  function render(){
+    const a = Math.max(1, +amt.value || 0);
+    const maxP = Math.max(...CH.map(c=>c.p));
+    bars.innerHTML = CH.map(c => {
+      const cost = a * c.p / 100;
+      return `<div class="row${c.best?' best':''}"><div class="rlabel"><span>${c.name} · ${c.p.toFixed(2)}%</span><span class="cost">≈ ${fmt(cost)}</span></div><div class="bar"><span style="width:${(c.p/maxP*100).toFixed(1)}%"></span></div></div>`;
+    }).join('');
+  }
+  amt.addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>
