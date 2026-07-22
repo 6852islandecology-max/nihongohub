@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <link rel="canonical" href="https://www.nihongo-hub.com/quiz.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Quiz","name":"JLPT Battle — NihongoHub Quiz Quest","url":"https://www.nihongo-hub.com/quiz.html","description":"RPG-style JLPT quiz quest (N5–N1) with AI-generated Japanese questions to practice vocabulary, grammar and reading.","inLanguage":"en","about":{"@type":"Thing","name":"Japanese-Language Proficiency Test (JLPT)"},"educationalLevel":"JLPT N5–N1","learningResourceType":"Quiz","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/"}}
+</script>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -102,6 +105,8 @@ footer a{color:var(--gold);text-decoration:none}
 .langbar button.active{color:var(--ink);background:var(--soft);font-weight:700}
 /* ── topic pills ── */
 .topic-label{font-family:var(--pixel);font-size:8px;color:var(--muted);letter-spacing:.5px;margin-bottom:6px;text-transform:uppercase}
+.topic-wip{font-family:inherit;font-size:7px;color:#ffb454;border:1px solid rgba(255,180,84,.4);border-radius:6px;padding:2px 5px;margin-left:6px;text-transform:none;letter-spacing:0;white-space:nowrap}
+.topic-wip:empty{display:none}
 .topics{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
 .tpill{font-family:var(--dot);font-size:13px;cursor:pointer;color:var(--muted);
   background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:8px 12px;
@@ -166,6 +171,57 @@ footer a{color:var(--gold);text-decoration:none}
 .modal .mbtn.gold{background:var(--gold);color:var(--ink);border-bottom:3px solid var(--gold-d)}
 .modal .mbtn.ghost{background:transparent;color:var(--muted);border:2px solid var(--soft)}
 .modal .mclose{background:none;border:none;color:var(--muted);font-family:var(--dot);font-size:13px;margin-top:10px;cursor:pointer;text-decoration:underline}
+
+/* ── Retro battle skin (data-battle-mode="retro") ── */
+.battle[data-battle-mode="retro"]{
+  background:#000;border-color:#fff;color:#fff;
+  box-shadow:0 0 0 3px #000,6px 9px 0 rgba(0,0,0,.45)
+}
+.battle[data-battle-mode="retro"] .b-tag{color:#FFD700;font-size:10px}
+.battle[data-battle-mode="retro"] .b-q{font-family:var(--pixel);font-size:18px;line-height:1.7;color:#fff;letter-spacing:.5px}
+.battle[data-battle-mode="retro"] .b-reading{color:rgba(255,255,255,.5);font-family:var(--dot)}
+.battle[data-battle-mode="retro"] .b-opt{
+  background:#000;border:2px solid #fff;color:#fff;font-family:var(--dot);
+  border-radius:2px
+}
+.battle[data-battle-mode="retro"] .b-opt:hover:not(:disabled){
+  background:#FFD700;color:#000;border-color:#FFD700
+}
+.battle[data-battle-mode="retro"] .b-opt.correct-ans{
+  border-color:#FFD700;background:#FFD700;color:#000;
+  animation:ut-mercy 1.2s ease-out
+}
+.battle[data-battle-mode="retro"] .b-opt.wrong-ans{
+  border-color:#bf3325;background:rgba(191,51,37,.25);color:#fff
+}
+.battle[data-battle-mode="retro"] .b-result.win{color:#FFD700;font-family:var(--pixel);font-size:13px}
+.battle[data-battle-mode="retro"] .b-result.lose{color:#bf3325;font-family:var(--pixel);font-size:13px}
+.battle[data-battle-mode="retro"] .b-explain{
+  background:rgba(255,255,255,.05);border-left-color:#FFD700;color:rgba(255,255,255,.8);
+  font-family:var(--dot)
+}
+@keyframes ut-mercy{
+  0%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,215,0,.7)}
+  60%{transform:scale(1.06);box-shadow:0 0 0 12px rgba(255,215,0,0)}
+  100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,215,0,0)}
+}
+/* typing cursor for retro text reveal */
+.battle[data-battle-mode="retro"] .b-q::after{
+  content:'';display:inline-block;width:8px;height:18px;background:#FFD700;
+  margin-left:4px;animation:ut-cursor .6s steps(2) infinite;vertical-align:middle
+}
+.battle[data-battle-mode="retro"] .b-q.typed::after{display:none}
+@keyframes ut-cursor{50%{opacity:0}}
+/* toggle-feedback pulse: fires on every Retro Battle toggle so the press is unmistakable */
+.battle.retro-flash{animation:retro-flash .5s ease-out}
+@keyframes retro-flash{0%{box-shadow:0 0 0 0 rgba(255,215,0,.85)}100%{box-shadow:0 0 0 18px rgba(255,215,0,0)}}
+/* mode toggle button */
+.ut-toggle{
+  font-family:var(--pixel);font-size:9px;cursor:pointer;
+  background:transparent;border:2px solid var(--ink);color:var(--ink);
+  border-radius:6px;padding:7px 12px;margin-bottom:10px;letter-spacing:1px
+}
+.ut-toggle.on{background:#000;border-color:#FFD700;color:#FFD700}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -173,17 +229,11 @@ footer a{color:var(--gold);text-decoration:none}
 <header class="hud">
   <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
   <div class="navlinks">
+    <!-- declutter (2026-06-26): site-chrome.js replaces these with the grouped dropdown nav
+         at runtime; keep only Home as a JS-failure fallback so the static header isn't an
+         11-link wall on cold load. Dashboard / Explore / Wildlife / Blog / Pricing / My
+         Journey / Level test / Relocation all live in the injected nav; About/Contact in the footer. -->
     <a href="index.html" class="back">← Home</a>
-    <a href="dashboard.html" class="back">📊 Dashboard</a>
-    <a href="prefectures.html" class="back">🗾 Explore</a>
-    <a href="wildlife.html" class="back">🦋 Wildlife</a>
-    <a href="blog/index.html" class="back">📖 Blog</a>
-    <a href="index.html#pricing" class="back">💴 Pricing</a>
-    <a href="rpg.html" class="back">⚔ My Journey</a>
-    <a href="onboarding.html" class="back">🎯 Level test</a>
-    <a href="blog/moving-to-japan-guide.html" class="back">🏡 Relocation</a>
-    <a href="about.html" class="back">About</a>
-    <a href="contact.html" class="back">Contact</a>
   </div>
 </header>
 
@@ -191,7 +241,7 @@ footer a{color:var(--gold);text-decoration:none}
 
 <main class="wrap">
   <h1 class="title">⚔️ JLPT <em>BATTLE</em></h1>
-  <p class="sub" data-i18n="sub">AI-generated Japanese questions, N5 → N1. Clear battles to earn XP and power up your guide — same world as the Explore map.</p>
+  <p class="sub" data-i18n="sub">AI-generated Japanese questions, N5 → N1.</p>
 
   <div class="party" id="party">
     <div class="ava"><img id="party-hero" src="assets/avatars/avatar-h1-s1.svg" alt="Your adventurer"></div>
@@ -206,11 +256,13 @@ footer a{color:var(--gold);text-decoration:none}
 
   <div class="mistake-line" id="mistake-line"></div>
 
-  <p class="topic-label">Topic</p>
+  <p class="topic-label">Topic <span class="topic-wip" data-i18n="topic_wip"></span></p>
   <div class="topics" id="topics"></div>
   <div class="levels" id="levels"></div>
 
-  <div class="battle">
+  <button type="button" class="ut-toggle" id="ut-toggle" title="Retro 8-bit battle skin">▸ RETRO BATTLE</button>
+
+  <div class="battle" id="battle-card">
     <div class="b-tag"><span class="blink">⚔️</span> <span id="b-level">N5</span> <span data-i18n="battle">BATTLE</span><span class="b-rem" id="b-rem"></span></div>
     <div class="b-q" id="b-q" data-i18n="start">Select a level and start your first battle.</div>
     <div class="b-reading" id="b-reading"></div>
@@ -219,6 +271,7 @@ footer a{color:var(--gold);text-decoration:none}
     <div class="b-explain" id="b-explain"></div>
     <div class="b-actions">
       <button class="btn primary" id="btn-new" onclick="newQuestion()" data-i18n="btn_new">⚡ New Question</button>
+      <a class="btn ghost" href="dashboard.html" data-i18n="btn_dash">📊 My progress</a>
       <a class="btn ghost" href="prefectures.html" data-i18n="btn_map">🗾 Quest the map</a>
     </div>
     <div class="srs-rate" id="srs-rate">
@@ -251,14 +304,14 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
   </div>
 
-  <p class="note"><span data-i18n="note">Daily free questions are rate-limited. Want unlimited practice and to evolve Akari through every JLPT level?</span>
-    <a href="index.html#pricing" data-i18n="note_link">See NihongoHub Pro →</a></p>
+  <p class="note"><a href="index.html#pricing" data-i18n="note_link">See NihongoHub Pro →</a></p>
 </main>
 
-<footer><p>© 2026 NihongoHub · <a href="rpg.html">⚔ My Journey</a> · <a href="prefectures.html">Explore</a> · <a href="index.html">Home</a> · AI questions avoid copyrighted material.</p></footer>
+<footer><p>© 2026 NihongoHub · <a href="rpg.html">⚔ My Journey</a> · <a href="prefectures.html">Explore</a> · <a href="blog/n4-grammar-hardest-points.html">N4 grammar guide</a> · <a href="index.html">Home</a> · AI questions avoid copyrighted material.</p></footer>
 
 <link rel="stylesheet" href="styles/responsive.css">
 <link rel="stylesheet" href="styles/chrome.css">
+<link rel="stylesheet" href="styles/equipment.css"><!-- reward toast styling for JLPT gear drops -->
 <script src="lib/i18n-core.js" defer></script>
 <script src="lib/site-chrome.js" defer></script>
 <script src="lib/hamburger.js" defer></script>
@@ -266,17 +319,21 @@ footer a{color:var(--gold);text-decoration:none}
 <script src="lib/readiness.js"></script>
 <script src="lib/constellation.js"></script>
 <script src="lib/sync.js"></script>
+<!-- equipment system so correct JLPT answers can drop gear (same as rpg.html) -->
+<script src="data/equipment-metadata.js" defer></script>
+<script src="lib/equipment.js" defer></script>
 <script>
 /* ═══ JLPT BATTLE — reuses /api/generate (same contract as the homepage demo) ═══ */
 /* ── i18n: shared UI strings in 6 languages; LANG also drives API explanation language ── */
 const QT = {
-  en:{ label:'🇬🇧 English', sub:'AI-generated Japanese questions, N5 → N1. Clear battles to earn XP and power up your guide — same world as the Explore map.',
-    btn_new:'⚡ New Question', btn_map:'🗾 Quest the map',
+  en:{ label:'🇬🇧 English', sub:'AI-generated Japanese questions, N5 → N1.',
+    btn_new:'⚡ New Question', btn_map:'🗾 Quest the map', btn_dash:'📊 My progress',
     note:'N5 & N4 are always free with no limit. N3–N1 are limited to 30 questions/day.', note_link:'Go Pro for unlimited →',
     battle:'BATTLE', start:'Select a level and start your first battle.', summon:'Summoning…',
     rate:'N3–N1 daily limit reached — come back tomorrow or go Pro for unlimited battles.', fail:'Battle failed to load — ',
     hit:'✨ CRITICAL HIT! +10 XP', miss:'💥 Missed. Correct: ', bnext:'Next power-up:',
     tier1:'Pick a level and clear battles to power me up!', tier2:"We're getting stronger together — keep going!", tier3:"Master rank! You're reading Japanese like a local.",
+    sb1:'Building your foundations — pick a level and keep going!', sb2:"Your basics are clicking — you're starting to read!", sb3:'Intermediate level — everyday Japanese is making sense.', sb4:"Advanced — you're handling complex sentences now.", sb5:'Master class — near-native reading. Incredible!',
     bubble_hit:"✨ Nice! That's a critical hit — I leveled up!", bubble_miss:"Don't worry — read the hint and try the next battle!",
     p_intro:'Pick a level and tap <b>New Question</b>, traveler!',
     m_tag:'DAILY LIMIT REACHED', m_h_1:"Today's 30 free questions complete.",
@@ -294,14 +351,16 @@ const QT = {
     topic_desc_shopping:'Markets, sizes, prices, returns. N5–N3, polite request patterns.',
     topic_desc_travel:'Hotels, sightseeing, check-in. N4–N3, situational vocabulary.',
     topic_desc_nature:'Seasons, weather, animals, parks. N5–N3, plus poetic registers at N2.',
-    topic_desc_numbers:'Counters, dates, money. N5 essential — the silent killer of beginner JLPT.' },
-  ja:{ label:'🇯🇵 日本語', sub:'AI が作る日本語の問題、N5 → N1。バトルをクリアして XP を稼ぎ、ガイドを育てよう — Explore マップと同じ世界。',
-    btn_new:'⚡ 新しい問題', btn_map:'🗾 マップを冒険',
+    topic_desc_numbers:'Counters, dates, money. N5 essential — the silent killer of beginner JLPT.',
+    topic_wip:'In development · active at N3 and above' },
+  ja:{ label:'🇯🇵 日本語', sub:'AI が作る日本語の問題、N5 → N1。',
+    btn_new:'⚡ 新しい問題', btn_map:'🗾 マップを冒険', btn_dash:'📊 学習記録',
     note:'N5・N4 は無制限で無料。N3〜N1 は 1 日 30 問まで無料。', note_link:'Pro で無制限に →',
     battle:'バトル', start:'レベルを選んで最初のバトルを始めよう。', summon:'召喚中…',
     rate:'N3〜N1 の本日の上限に達しました — 明日また来るか、Pro で無制限バトルを。', fail:'バトルの読み込みに失敗 — ',
     hit:'✨ クリティカル！ +10 XP', miss:'💥 ミス。正解: ', bnext:'次の強化まで:',
     tier1:'レベルを選んでバトルで私を強くして！', tier2:'一緒に強くなってるね — この調子！', tier3:'マスターランク！ もう現地の人みたいに読めてる。',
+    sb1:'基礎を作っているところ！レベルを選んで続けよう。', sb2:'基本が身についてきたね。少しずつ読めてる！', sb3:'中級レベル！日常の日本語がだいぶ分かってきた。', sb4:'上級者だね。複雑な文も読みこなしてる。', sb5:'マスター級！ ほぼネイティブの読解力だね。',
     bubble_hit:'✨ いいね！ クリティカル — レベルアップした！', bubble_miss:'大丈夫、ヒントを読んで次のバトルへ！',
     p_intro:'レベルを選んで <b>新しい問題</b> をタップ、旅人さん！',
     m_tag:'本日の上限に到達', m_h_1:'今日の無料 30 問が完了。',
@@ -319,14 +378,16 @@ const QT = {
     topic_desc_shopping:'市場・サイズ・価格・返品。N5-N3、丁寧な依頼表現。',
     topic_desc_travel:'宿・観光・チェックイン。N4-N3、場面別語彙。',
     topic_desc_nature:'季節・天気・動物・公園。N5-N3、N2 で詩的表現。',
-    topic_desc_numbers:'助数詞・日付・お金。N5 必須 — 初学者の壁。' },
-  zh:{ label:'🇹🇼 繁體中文', sub:'AI 生成的日語題目，N5 → N1。通關獲得 XP，培養你的嚮導 — 與 Explore 地圖同一個世界。',
-    btn_new:'⚡ 新題目', btn_map:'🗾 探索地圖',
+    topic_desc_numbers:'助数詞・日付・お金。N5 必須 — 初学者の壁。',
+    topic_wip:'作成中 · N3 以上で利用可' },
+  zh:{ label:'🇹🇼 繁體中文', sub:'AI 生成的日語題目，N5 → N1。',
+    btn_new:'⚡ 新題目', btn_map:'🗾 探索地圖', btn_dash:'📊 我的進度',
     note:'N5、N4 永久免費無限作答。N3–N1 每日免費 30 題。', note_link:'升級 Pro 無限作答 →',
     battle:'對戰', start:'選擇等級，開始你的第一場對戰。', summon:'召喚中…',
     rate:'N3–N1 今日上限已達 — 明天再來或升級 Pro 享受無限對戰。', fail:'對戰載入失敗 — ',
     hit:'✨ 暴擊！ +10 XP', miss:'💥 答錯。正解: ', bnext:'下次強化還需:',
     tier1:'選個等級，用對戰把我練強吧！', tier2:'我們一起變強了 — 繼續加油！', tier3:'大師級！ 你讀日語已經像當地人了。',
+    sb1:'正在打基礎 — 選個等級繼續加油！', sb2:'基礎漸漸上手了，開始讀得懂了！', sb3:'中級程度！日常日語大致都懂了。', sb4:'高手了，複雜的句子也讀得懂。', sb5:'大師級！ 幾乎是母語者的閱讀力。',
     bubble_hit:'✨ 讚！ 暴擊 — 我升級了！', bubble_miss:'別擔心，看提示，挑戰下一場！',
     p_intro:'選個等級，點 <b>新題目</b>，旅人！',
     m_tag:'今日上限已達', m_h_1:'今日免費 30 題完成。',
@@ -343,14 +404,16 @@ const QT = {
     topic_desc_shopping:'市場、尺寸、價格、退貨。N5–N3 禮貌請求。',
     topic_desc_travel:'住宿、觀光、入住。N4–N3 情境詞彙。',
     topic_desc_nature:'季節、天氣、動物、公園。N5–N3，N2 詩意表達。',
-    topic_desc_numbers:'量詞、日期、金錢。N5 必備 — 初學者隱形殺手。' },
-  es:{ label:'🇪🇸 Español', sub:'Preguntas de japonés generadas por IA, N5 → N1. Gana XP y mejora a tu guía — el mismo mundo que el mapa Explore.',
-    btn_new:'⚡ Nueva pregunta', btn_map:'🗾 Explora el mapa',
+    topic_desc_numbers:'量詞、日期、金錢。N5 必備 — 初學者隱形殺手。',
+    topic_wip:'開發中 · N3 以上可用' },
+  es:{ label:'🇪🇸 Español', sub:'Preguntas de japonés generadas por IA, N5 → N1.',
+    btn_new:'⚡ Nueva pregunta', btn_map:'🗾 Explora el mapa', btn_dash:'📊 Mi progreso',
     note:'N5 y N4 siempre gratis e ilimitados. N3–N1 limitado a 30 preguntas/día.', note_link:'Pro para ilimitado →',
     battle:'BATALLA', start:'Elige un nivel y empieza tu primera batalla.', summon:'Invocando…',
     rate:'Límite diario N3–N1 alcanzado — vuelve mañana o hazte Pro.', fail:'Error al cargar la batalla — ',
     hit:'✨ ¡GOLPE CRÍTICO! +10 XP', miss:'💥 Fallaste. Correcto: ', bnext:'Próxima mejora:',
     tier1:'¡Elige un nivel y gana batallas para potenciarme!', tier2:'¡Nos hacemos más fuertes juntos — sigue así!', tier3:'¡Rango maestro! Lees japonés como un local.',
+    sb1:'¡Construyendo tus bases — elige un nivel y sigue!', sb2:'¡Tus bases empiezan a encajar — ya lees un poco!', sb3:'Nivel intermedio: el japonés cotidiano tiene sentido.', sb4:'Avanzado: ya manejas frases complejas.', sb5:'¡Nivel maestro! Lectura casi nativa.',
     bubble_hit:'✨ ¡Bien! Golpe crítico — ¡subí de nivel!', bubble_miss:'Tranquilo — lee la pista e intenta la siguiente batalla.',
     p_intro:'¡Elige un nivel y toca <b>Nueva pregunta</b>, viajero!',
     m_tag:'LÍMITE DIARIO ALCANZADO', m_h_1:'Hoy completaste las 30 preguntas gratuitas.',
@@ -367,14 +430,16 @@ const QT = {
     topic_desc_shopping:'Mercados, tallas, precios, devoluciones. N5–N3, peticiones corteses.',
     topic_desc_travel:'Hoteles, turismo, check-in. N4–N3, vocabulario situacional.',
     topic_desc_nature:'Estaciones, clima, animales, parques. N5–N3, registros poéticos en N2.',
-    topic_desc_numbers:'Contadores, fechas, dinero. N5 esencial — el gran tropiezo de principiantes.' },
-  th:{ label:'🇹🇭 ภาษาไทย', sub:'คำถามภาษาญี่ปุ่นที่ AI สร้าง N5 → N1 ผ่านด่านเพื่อรับ XP และพัฒนาไกด์ของคุณ — โลกเดียวกับแผนที่ Explore',
-    btn_new:'⚡ คำถามใหม่', btn_map:'🗾 ผจญภัยบนแผนที่',
+    topic_desc_numbers:'Contadores, fechas, dinero. N5 esencial — el gran tropiezo de principiantes.',
+    topic_wip:'En desarrollo · disponible desde N3' },
+  th:{ label:'🇹🇭 ภาษาไทย', sub:'คำถามภาษาญี่ปุ่นที่ AI สร้าง N5 → N1',
+    btn_new:'⚡ คำถามใหม่', btn_map:'🗾 ผจญภัยบนแผนที่', btn_dash:'📊 ความคืบหน้าของฉัน',
     note:'N5 และ N4 ฟรีไม่จำกัด N3–N1 จำกัด 30 คำถาม/วัน', note_link:'Pro เพื่อไม่จำกัด →',
     battle:'ด่าน', start:'เลือกระดับแล้วเริ่มด่านแรกของคุณ', summon:'กำลังเรียก…',
     rate:'ถึงขีดจำกัด N3–N1 รายวันแล้ว — กลับมาพรุ่งนี้หรือสมัคร Pro', fail:'โหลดด่านไม่สำเร็จ — ',
     hit:'✨ คริติคอล! +10 XP', miss:'💥 พลาด คำตอบ: ', bnext:'อัปเกรดถัดไป:',
     tier1:'เลือกระดับแล้วผ่านด่านเพื่อทำให้ฉันแข็งแกร่งขึ้น!', tier2:'เราแข็งแกร่งขึ้นด้วยกัน — ไปต่อ!', tier3:'ระดับมาสเตอร์! คุณอ่านภาษาญี่ปุ่นได้เหมือนคนท้องถิ่นแล้ว',
+    sb1:'กำลังสร้างพื้นฐาน — เลือกระดับแล้วไปต่อ!', sb2:'พื้นฐานเริ่มเข้าที่แล้ว เริ่มอ่านออกแล้ว!', sb3:'ระดับกลาง! ภาษาญี่ปุ่นในชีวิตประจำวันเข้าใจมากขึ้น', sb4:'ระดับสูง อ่านประโยคซับซ้อนได้แล้ว', sb5:'ระดับมาสเตอร์! อ่านได้เกือบเท่าเจ้าของภาษา',
     bubble_hit:'✨ เยี่ยม! คริติคอล — ฉันเลเวลอัป!', bubble_miss:'ไม่เป็นไร อ่านคำใบ้แล้วลองด่านต่อไป!',
     p_intro:'เลือกระดับแล้วแตะ <b>คำถามใหม่</b> นักเดินทาง!',
     m_tag:'ครบโควต้ารายวัน', m_h_1:'วันนี้คุณตอบ 30 ข้อฟรีครบแล้ว',
@@ -391,14 +456,16 @@ const QT = {
     topic_desc_shopping:'ตลาด ขนาด ราคา คืนของ N5–N3 รูปขอแบบสุภาพ',
     topic_desc_travel:'โรงแรม ท่องเที่ยว เช็คอิน N4–N3 คำศัพท์เชิงสถานการณ์',
     topic_desc_nature:'ฤดูกาล อากาศ สัตว์ สวน N5–N3 ภาษาเชิงกวีที่ N2',
-    topic_desc_numbers:'ลักษณะนาม วันที่ เงิน N5 จำเป็น — ปราการของผู้เริ่มต้น' },
-  id:{ label:'🇮🇩 Indonesia', sub:'Soal bahasa Jepang buatan AI, N5 → N1. Selesaikan pertempuran untuk XP dan kuatkan pemandumu — dunia yang sama dengan peta Explore.',
-    btn_new:'⚡ Soal Baru', btn_map:'🗾 Jelajahi peta',
+    topic_desc_numbers:'ลักษณะนาม วันที่ เงิน N5 จำเป็น — ปราการของผู้เริ่มต้น',
+    topic_wip:'กำลังพัฒนา · ใช้ได้ที่ N3 ขึ้นไป' },
+  id:{ label:'🇮🇩 Indonesia', sub:'Soal bahasa Jepang buatan AI, N5 → N1.',
+    btn_new:'⚡ Soal Baru', btn_map:'🗾 Jelajahi peta', btn_dash:'📊 Progres saya',
     note:'N5 & N4 selalu gratis tanpa batas. N3–N1 dibatasi 30 soal/hari.', note_link:'Pro untuk tanpa batas →',
     battle:'PERTEMPURAN', start:'Pilih level dan mulai pertempuran pertamamu.', summon:'Memanggil…',
     rate:'Batas harian N3–N1 tercapai — kembali besok atau jadi Pro.', fail:'Gagal memuat pertempuran — ',
     hit:'✨ SERANGAN KRITIS! +10 XP', miss:'💥 Meleset. Benar: ', bnext:'Penguatan berikutnya:',
     tier1:'Pilih level dan menangkan pertempuran untuk menguatkanku!', tier2:'Kita makin kuat bersama — terus lanjut!', tier3:'Peringkat master! Kamu membaca Jepang seperti penduduk lokal.',
+    sb1:'Sedang membangun dasar — pilih level dan lanjut!', sb2:'Dasarmu mulai nyambung — kamu mulai bisa membaca!', sb3:'Level menengah! Bahasa Jepang sehari-hari makin masuk akal.', sb4:'Tingkat lanjut — kamu sudah bisa menangani kalimat kompleks.', sb5:'Kelas master! Membaca hampir seperti penutur asli.',
     bubble_hit:'✨ Bagus! Serangan kritis — aku naik level!', bubble_miss:'Tenang — baca petunjuk dan coba pertempuran berikutnya!',
     p_intro:'Pilih level dan ketuk <b>Soal Baru</b>, pengembara!',
     m_tag:'BATAS HARIAN TERCAPAI', m_h_1:'Hari ini 30 soal gratis-mu selesai.',
@@ -415,7 +482,8 @@ const QT = {
     topic_desc_shopping:'Pasar, ukuran, harga, retur. N5–N3 pola permintaan sopan.',
     topic_desc_travel:'Hotel, wisata, check-in. N4–N3 kosakata situasional.',
     topic_desc_nature:'Musim, cuaca, hewan, taman. N5–N3, register puitis di N2.',
-    topic_desc_numbers:'Satuan, tanggal, uang. N5 esensial — jebakan klasik pemula.' }
+    topic_desc_numbers:'Satuan, tanggal, uang. N5 esensial — jebakan klasik pemula.',
+    topic_wip:'Dalam pengembangan · aktif di N3 ke atas' }
 };
 const QLANGS = ['en','ja','zh','es','th','id'];
 let LANG;
@@ -478,11 +546,26 @@ function sanitizeQuizHTML(s){
   return t;
 }
 
+// The underlined <u> marks the answer target — its reading IS the question. If the AI also
+// furigana-annotated the target (e.g. <u>前<rt>まえ</rt></u> or <ruby><u>前</u><rt>まえ</rt></ruby>),
+// the <rt> reading gives the answer away. Strip furigana from/around any <u> target while
+// keeping furigana on every other (non-target) word.
+function hideTargetFurigana(html){
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  tmp.querySelectorAll('u').forEach(u=>{
+    u.querySelectorAll('rt, rp').forEach(el=>el.remove());                 // <rt> nested inside the <u>
+    const ruby = u.closest('ruby');                                        // <u> wrapped by a <ruby>
+    if(ruby) ruby.querySelectorAll(':scope > rt, :scope > rp').forEach(el=>el.remove());
+  });
+  return tmp.innerHTML;
+}
+
 /* ── character power / XP (seed of the character-growth RPG) ── */
 function getXP(){ try{ return parseInt(localStorage.getItem('nh_quiz_xp')||'0',10)||0; }catch(e){ return 0; } }
 function addXP(n){ try{ localStorage.setItem('nh_quiz_xp', String(getXP()+n)); }catch(e){} }
 function powerTier(xp){ return xp>=60?3 : xp>=20?2 : 1; }       // 3 visual power tiers (avatar scale)
-function powerLevel(xp){ return 1 + Math.floor(xp/10); }         // +1 Lv every 10 XP
+function powerLevel(xp){ return 1 + Math.floor(xp/50); }         // +1 Lv every 50 XP (5 correct answers)
 // Earned JLPT growth stage of the hero (mirrors rpg.html), drives the badge that evolves N5→N1.
 function heroStage(xp){
   if(xp>=1000) return 'N1'; if(xp>=600) return 'N2'; if(xp>=300) return 'N3'; if(xp>=100) return 'N4'; return 'N5';
@@ -495,19 +578,21 @@ function avatarSrc(){
 }
 function renderParty(extra){
   const xp = getXP(), tier = powerTier(xp), lv = powerLevel(xp), stage = heroStage(xp);
-  const into = xp % 10, nextAt = (Math.floor(xp/10)+1)*10;
+  const into = xp % 50, nextAt = (Math.floor(xp/50)+1)*50;
   const hero = document.getElementById('party-hero');
   if(hero){ const src = avatarSrc(); if(hero.getAttribute('src') !== src) hero.setAttribute('src', src); }
   document.getElementById('p-name').textContent = `${stage} ADVENTURER · Lv.${lv}`;
-  document.getElementById('xp-fill').style.width = (into*10) + '%';
+  document.getElementById('xp-fill').style.width = (into*2) + '%';
   document.getElementById('xp-text').textContent = xp + ' XP';
   document.getElementById('xp-next').textContent = `${t('bnext')} ${nextAt} XP`;
   const party = document.getElementById('party');
   party.className = 'party power-' + tier;
-  // Akari stays as the guide voice (small icon) speaking the coaching line.
-  const line = extra || t('tier'+tier);
-  document.getElementById('p-bubble').innerHTML =
-    `<img class="guide-mini" src="assets/characters/akari.png" alt="Akari">` + line;
+  // Akari is already shown in the party panel (avatar + name); the bubble is just her line.
+  // Encouragement is tied to the ACTUAL JLPT stage (N5→N1), not the 3-step avatar scale —
+  // so "near-native" only shows at N1, never at an early N5/N4 character.
+  const stageMsg = { N5:'sb1', N4:'sb2', N3:'sb3', N2:'sb4', N1:'sb5' }[stage] || 'sb1';
+  const line = extra || t(stageMsg);
+  document.getElementById('p-bubble').textContent = line;
 }
 
 /* ── topic pills ── */
@@ -548,7 +633,17 @@ function onCorrect(){
   try{localStorage.setItem('nh_streak',String(n));}catch(e){}
   const b=getBestStreak(); if(n>b) try{localStorage.setItem('nh_best_streak',String(n));}catch(e){}
   // running total of correct answers — drives weapon milestones (reconciled on the RPG screen)
-  try{ localStorage.setItem('nh_correct_total', String((parseInt(localStorage.getItem('nh_correct_total')||'0',10)||0)+1)); }catch(e){}
+  let total=0;
+  try{ total=(parseInt(localStorage.getItem('nh_correct_total')||'0',10)||0)+1; localStorage.setItem('nh_correct_total', String(total)); }catch(e){}
+  // Reward: the very FIRST correct answer drops gear immediately (hook a cold first-time
+  // visitor before they bounce), then every 3rd correct answer after that. Shown instantly
+  // (previously JLPT correct answers granted nothing visible until the RPG screen).
+  try{
+    if((total===1 || total%3===0) && !reviewMode && window.NH_EQUIPMENT_API && window.NH_EQUIPMENT_API.claimRandomDrop){
+      const drop=window.NH_EQUIPMENT_API.claimRandomDrop();
+      if(drop && drop.added) window.NH_EQUIPMENT_API.showRewardToast(drop, LANG);
+    }
+  }catch(e){}
   renderStreak();
 }
 function onWrong(){
@@ -595,9 +690,13 @@ async function newQuestion(){
         }
       }
     } catch(e){}
-    // Trial 50 問/日への緩和はサーバ側で検証 (Supabase users.trial_status)。クライアントは送信しない。
+    // 認証トークンを付与してサーバが plan を判定できるようにする (無いと paid/trial も
+    // ゲスト 30 問/日扱いになる)。判定自体はサーバ側 (Supabase) のみ、フラグ詐称は不可。
+    const nhToken = (window.NH_AUTH && await window.NH_AUTH.getToken()) || null;
+    const genHeaders = { 'Content-Type': 'application/json' };
+    if (nhToken) genHeaders['Authorization'] = 'Bearer ' + nhToken;
     const res = preloaded ? { status: 200, ok: true, json: async () => preloaded } : await fetch('/api/generate', {
-      method:'POST', headers:{'Content-Type':'application/json'}, credentials:'include',
+      method:'POST', headers: genHeaders, credentials:'include',
       body: JSON.stringify({ level, lang: LANG, topic })
     });
     if(res.status===429){
@@ -618,7 +717,7 @@ async function newQuestion(){
       .slice(0,3);
     const opts = shuffle([{t:data.correct,c:true}, ...cleanDistractors.map(d=>({t:d,c:false}))]);
     current = { correctIndex: opts.findIndex(o=>o.c), correctText:data.correct, explanation:data.explanation||'', questionText: data.question };
-    qEl.innerHTML = sanitizeQuizHTML(data.question);
+    qEl.innerHTML = hideTargetFurigana(sanitizeQuizHTML(data.question));
     rEl.textContent = data.reading || '';
     optsWrap.innerHTML = opts.map((o,i)=>`<button class="b-opt" data-i="${i}">${sanitizeQuizHTML(o.t)}</button>`).join('');
     // Constellation MVP: record token sightings + decorate already-lit tokens.
@@ -648,6 +747,7 @@ const REVEAL_TXT={en:'🔍 Reveal why',ja:'🔍 種明かし',zh:'🔍 揭曉原
 const INSTANT_TXT={en:'Instant explanation',ja:'即解説',zh:'即時解說',es:'Explicación al instante',th:'อธิบายทันที',id:'Penjelasan instan'};
 function getInstant(){ try{ return localStorage.getItem('nh_instant_explain')==='1'; }catch(e){ return false; } }
 function setInstant(v){ try{ localStorage.setItem('nh_instant_explain', v?'1':'0'); }catch(e){} }
+function autoNextOn(){ const t=document.getElementById('autonext-toggle'); return !!(t && t.checked); }
 (function wireReveal(){
   const inst=document.getElementById('instant-toggle'), lab=document.getElementById('instant-label'), rb=document.getElementById('btn-reveal');
   if(lab) lab.textContent = INSTANT_TXT[LANG]||INSTANT_TXT.en;
@@ -696,21 +796,30 @@ document.getElementById('b-opts').addEventListener('click', e=>{
   // WHY on demand (generation effect). Instant mode restores the old immediate reveal.
   if(current.explanation){
     expEl.innerHTML = sanitizeQuizHTML(current.explanation);
+    // Explanation reveal is controlled ONLY by "Instant explanation". Auto-next is
+    // independent: with Instant OFF it advances WITHOUT showing the explanation
+    // (rapid drill — 2s is too short to read it); with Instant ON it shows then advances.
     if(getInstant()){ expEl.classList.add('show'); }
     else {
       expEl.classList.remove('show');
       const rb=document.getElementById('btn-reveal');
-      if(rb){ rb.style.display=''; rb.disabled=false; rb.textContent=(REVEAL_TXT[LANG]||REVEAL_TXT.en); }
+      // Predict-first: offer "Reveal why" — but not when auto-next will whisk the
+      // question away in 2s (no time to read), so we skip the button in that case.
+      if(rb){
+        if(autoNextOn()){ rb.style.display='none'; }
+        else { rb.style.display=''; rb.disabled=false; rb.textContent=(REVEAL_TXT[LANG]||REVEAL_TXT.en); }
+      }
     }
   }
   renderMistakeLine();
-  // In review mode, show SRS rate buttons. Otherwise auto-next now ONLY in instant mode
-  // (or when there's no explanation to reveal); predict-first waits for "Reveal why".
+  // Review mode shows SRS buttons. Otherwise schedule auto-next when the user opted in
+  // (auto-next toggle), in instant mode, or when there's no explanation to reveal.
+  // Predict-first (auto-next OFF, instant OFF, has explanation) still waits for "Reveal why".
   if(reviewMode){
     document.getElementById('srs-rate').classList.add('show');
     cancelAutoNext();
-  } else if(getInstant() || !current.explanation){
-    scheduleAutoNext();
+  } else {
+    scheduleAutoNext();   // self-gates on the Auto-next toggle; independent of Instant
   }
 });
 
@@ -802,7 +911,7 @@ function loadNextReview(){
   document.getElementById('b-level').textContent = level;
   const qEl = document.getElementById('b-q'), rEl = document.getElementById('b-reading');
   const optsWrap = document.getElementById('b-opts'), resEl = document.getElementById('b-result'), expEl = document.getElementById('b-explain');
-  qEl.innerHTML = sanitizeQuizHTML(m.question);
+  qEl.innerHTML = hideTargetFurigana(sanitizeQuizHTML(m.question));
   rEl.textContent = '';
   resEl.textContent = ''; resEl.className = 'b-result'; expEl.classList.remove('show'); expEl.innerHTML = '';
   if(window.NH_CONSTELLATION){ const plain=(qEl.textContent||''); window.NH_CONSTELLATION.TOKENS.forEach(t=>{ if(plain.includes(t)) window.NH_CONSTELLATION.see(t,'quiz'); }); window.NH_CONSTELLATION.decorate(qEl); }
@@ -868,6 +977,123 @@ document.getElementById('b-level').textContent = level;
     setTimeout(()=>enterReviewMode(), 200);
   }
 })();
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Retro 8-bit battle skin (data-battle-mode="retro")
+   Surgical add-on: toggles a CSS attribute on .battle, plays a chiptune SE
+   on correct, types the question text 1 character at a time, offers a
+   shareable battle card after a victory streak.
+   ═══════════════════════════════════════════════════════════════════════════ */
+(function(){
+  const card = document.getElementById('battle-card');
+  const btn  = document.getElementById('ut-toggle');
+  if(!card || !btn) return;
+
+  const KEY = 'nh_ut_mode';
+  const isOn = () => { try { return localStorage.getItem(KEY) === '1'; } catch(e){ return false; } };
+  const apply = (on) => {
+    card.setAttribute('data-battle-mode', on ? 'retro' : '');
+    btn.classList.toggle('on', on);
+    btn.textContent = (on ? '◉' : '▸') + ' RETRO BATTLE';
+  };
+  apply(isOn());
+  // A visible pulse on every toggle so the change reads as deliberate even when the
+  // battle card is idle (without it, dark→black is nearly imperceptible and the toggle
+  // looks broken).
+  const flash = () => { card.classList.remove('retro-flash'); void card.offsetWidth; card.classList.add('retro-flash'); };
+  btn.addEventListener('click', () => {
+    const next = !isOn();
+    try { localStorage.setItem(KEY, next ? '1' : '0'); } catch(e){}
+    apply(next);
+    flash();
+  });
+
+  // ── Web Audio chiptune SE: tiny square-wave bleeps. No external assets.
+  let ac = null;
+  const ctxAudio = () => {
+    if(!ac){
+      try { ac = new (window.AudioContext||window.webkitAudioContext)(); } catch(e){ return null; }
+    }
+    return ac;
+  };
+  function bleep(freq, dur, type){
+    const a = ctxAudio(); if(!a) return;
+    const o = a.createOscillator(), g = a.createGain();
+    o.type = type || 'square'; o.frequency.value = freq;
+    g.gain.value = 0.08;
+    o.connect(g); g.connect(a.destination);
+    const t = a.currentTime;
+    g.gain.setValueAtTime(0.08, t);
+    g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    o.start(t); o.stop(t + dur + 0.02);
+  }
+  function seType(){ bleep(420, 0.04); }
+  function seMercy(){ bleep(660, 0.08); setTimeout(()=>bleep(880, 0.10), 70); setTimeout(()=>bleep(1175, 0.16), 160); }
+  function seMiss(){ bleep(180, 0.20, 'sawtooth'); }
+
+  // ── Typing effect on the question text
+  const qEl = document.getElementById('b-q');
+  if(qEl){
+    // Guard against self-retrigger: restoring innerHTML at the end of a typing
+    // run (and NH_CONSTELLATION.decorate()'s span-wrapping) fires this observer
+    // again. Comparing textContent against the last fully-typed text breaks the
+    // loop: decoration changes markup but not text, and the restore step types
+    // the same text we just finished.
+    let lastTyped = '';
+    const mo = new MutationObserver(() => {
+      if(!isOn()) return;
+      if(qEl.dataset.typing === '1') return;       // already mid-typing
+      const full = qEl.innerHTML;
+      const txt = qEl.textContent || '';
+      if(full === '…' || full === '⚠️' || txt === '') return;
+      if(txt === lastTyped) return;                 // restore/decorate echo — skip
+      qEl.dataset.typing = '1';
+      qEl.classList.remove('typed');
+      lastTyped = txt;
+      qEl.textContent = '';
+      let i = 0;
+      const tick = () => {
+        if(i >= txt.length){
+          qEl.innerHTML = full;                    // restore furigana <u> etc.
+          qEl.classList.add('typed');
+          qEl.dataset.typing = '0';
+          return;
+        }
+        qEl.textContent += txt.charAt(i);
+        if(i % 2 === 0) seType();
+        i++;
+        setTimeout(tick, 28);
+      };
+      tick();
+    });
+    mo.observe(qEl, { childList: true, characterData: true, subtree: true });
+  }
+
+  // ── Hook win/miss SE + offer battle card after MERCY
+  const opts = document.getElementById('b-opts');
+  if(opts){
+    opts.addEventListener('click', (e) => {
+      if(!isOn()) return;
+      const opt = e.target.closest('.b-opt'); if(!opt) return;
+      // Defer 50ms so quiz.html's click handler labels win/lose first
+      setTimeout(() => {
+        const result = document.getElementById('b-result');
+        if(!result) return;
+        if(result.classList.contains('win')){
+          seMercy();
+          // 3-streak: offer the battle card
+          let cur = 0; try { cur = parseInt(localStorage.getItem('nh_streak')||'0', 10) || 0; } catch(_){}
+          if(cur > 0 && cur % 3 === 0 && window.NH_BATTLE_SHARECARD){
+            setTimeout(() => window.NH_BATTLE_SHARECARD.offer(), 600);
+          }
+        } else if(result.classList.contains('lose')){
+          seMiss();
+        }
+      }, 50);
+    });
+  }
+})();
 </script>
+<script src="lib/level-sharecard.js" defer></script>
 </body>
 </html>
