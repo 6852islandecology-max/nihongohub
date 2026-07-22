@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.nihongo-hub.com/where-next.html">
+<title>Where Next? — Japan day-trip finder by time budget | NihongoHub</title>
+<meta name="description" content="Pick your base (Tokyo, Kyoto, Osaka) and how much time you have — see which of Japan's 47 prefectures you can reach. Approximate rail times, JR Pass notes, and what to eat and see when you get there.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta property="og:title" content="Where Next? — Japan day-trip finder by time budget">
+<meta property="og:description" content="I have 3 hours — where can I go? Time-budget trip discovery across all 47 prefectures.">
+<meta property="og:url" content="https://www.nihongo-hub.com/where-next.html">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Where Next? — Japan day-trip finder","url":"https://www.nihongo-hub.com/where-next.html","applicationCategory":"TravelApplication","operatingSystem":"Web","isAccessibleForFree":true,"description":"Pick a base station (Tokyo, Kyoto, Osaka) and a time budget; see which Japanese prefectures are reachable, with approximate rail times and food/culture highlights.","provider":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/"},"about":{"@type":"Dataset","name":"Japan Rail Reachability Matrix (approximate)","distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://www.nihongo-hub.com/data/reachability.json"}}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#18120a;--paper:#f4efe5;--red:#bf3325;--gold:#c8911f;--gold-l:#e0a634;--soft:#e6ddd0;--muted:#796c5c;--white:#fdfaf3;--hud:#0d0a14;--dot:'DotGothic16',sans-serif}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);line-height:1.55}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold-l);display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold-l)}
+.wrap{max-width:860px;margin:0 auto;padding:30px 18px 70px}
+h1{font-family:var(--dot);font-size:30px;letter-spacing:1px}
+.sub{color:var(--muted);margin:6px 0 22px}
+.panel{background:var(--white);border:2px solid var(--soft);border-radius:14px;padding:18px;margin-bottom:22px;box-shadow:0 2px 0 var(--soft)}
+.hubs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.hub{font-family:var(--dot);font-size:16px;padding:10px 18px;border:2px solid var(--soft);border-radius:10px;background:var(--paper);cursor:pointer;transition:.15s}
+.hub.on{background:var(--red);color:var(--white);border-color:var(--red)}
+.tline{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+input[type=range]{flex:1;min-width:200px;accent-color:var(--red)}
+.tbadge{font-family:var(--dot);font-size:24px;min-width:120px;color:var(--red)}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+.count{font-family:var(--dot);font-size:15px;margin:18px 2px 10px;color:var(--muted)}
+.mapbox{background:var(--white);border:2px solid var(--soft);border-radius:14px;padding:10px 12px 4px;margin-bottom:6px}
+.mtabs{display:flex;gap:8px;margin-bottom:8px}
+.mtab{font-family:var(--dot);font-size:13px;padding:7px 14px;border:2px solid var(--soft);border-radius:9px;background:var(--paper);cursor:pointer}
+.mtab.on{background:var(--hud);color:var(--white);border-color:var(--hud)}
+.card .route{display:inline-block;margin-top:7px;font-size:12px;color:var(--red);text-decoration:none;font-family:var(--dot)}
+.card .route:hover{text-decoration:underline}
+.mapbox svg{width:100%;height:auto;display:block}
+.mapbox .prefecture{transition:fill .2s}
+.mapbox .prefecture.hit{cursor:pointer}
+.mapbox .prefecture.hit:hover{opacity:.75}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);padding:8px 4px 10px}
+.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px;background:var(--lg,#ccc)}
+.card.flash{border-color:var(--red);box-shadow:0 0 0 3px rgba(191,51,37,.25)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:12px}
+.card{display:block;text-decoration:none;color:var(--ink);background:var(--white);border:2px solid var(--soft);border-radius:12px;padding:13px 14px;transition:.15s}
+.card:hover{border-color:var(--gold-l);transform:translateY(-2px)}
+.row1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.pname{font-family:var(--dot);font-size:18px}
+.ptime{font-family:var(--dot);font-size:15px;color:var(--red);white-space:nowrap}
+.fact{font-size:13px;color:var(--muted);margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empty{padding:26px;text-align:center;color:var(--muted);font-family:var(--dot)}
+footer{margin-top:40px;font-size:12px;color:var(--muted)}
+footer a{color:var(--red)}
+</style>
+</head>
+<body>
+<nav class="hud">
+  <a class="logo" href="/index.html">Nihongo<span>Hub</span></a>
+  <a class="back" href="/prefectures.html">EXPLORE MAP →</a>
+</nav>
+<div class="wrap">
+  <h1>WHERE NEXT?</h1>
+  <p class="sub">I have <em>this much</em> time — where can I go? Pick a base, slide your time budget. Times are approximate (think "about"), so go easy.</p>
+
+  <div class="panel">
+    <div class="hubs" id="hubs"></div>
+    <div class="tline">
+      <span class="tbadge" id="tbadge">~3h00m</span>
+      <input type="range" id="slider" min="30" max="480" step="15" value="180" aria-label="time budget in minutes">
+    </div>
+    <p class="note">⏱ Fastest typical rail incl. transfers, roughly ±20%. ✈ = flying is the realistic option. 🎫 JR Pass holders: fastest Tokaido/Sanyo trains (Nozomi/Mizuho) aren't covered — add ~15–25% on those routes. Always confirm in a transit app.</p>
+  </div>
+
+  <div class="mapbox" id="mapbox" hidden>
+    <div class="mtabs">
+      <button class="mtab on" id="tab-rpg" type="button">🗾 RPG MAP</button>
+      <button class="mtab" id="tab-g" type="button">🌍 GOOGLE MAP</button>
+    </div>
+    <div id="mapsvg" role="img" aria-label="Map of Japan colored by reachable travel time"></div>
+    <div class="legend" id="legend-rpg">
+      <span style="--lg:#bf3325">≤ 1h</span>
+      <span style="--lg:#d98c5f">≤ 2h</span>
+      <span style="--lg:#e0a634">within budget</span>
+      <span style="--lg:#e9e2d4">out of range</span>
+      <span>⭐ = your base · tap a prefecture ↓</span>
+    </div>
+    <div id="gmap" hidden>
+      <div id="gframe-slot"></div>
+      <p class="legend" style="display:block">Route view by Google Maps — pick a destination card below to update. Times shown by Google are live and may differ from our rough estimates.</p>
+    </div>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    Data: <a href="/data/reachability.json">reachability.json</a> (approximate, curated) + <a href="/data/prefectures.json">prefectures.json</a> (sourced). Free to cite with attribution to NihongoHub. <a href="/data/">About our open data</a>.
+  </footer>
+</div>
+<script>
+(async function(){
+  const [reach, prefs] = await Promise.all([
+    fetch('/data/reachability.json').then(r=>r.json()),
+    fetch('/data/prefectures.json').then(r=>r.json())
+  ]);
+  const pmap = {};
+  for (const p of prefs.prefectures) pmap[p.slug] = p;
+  const hubsEl = document.getElementById('hubs');
+  const slider = document.getElementById('slider');
+  const tbadge = document.getElementById('tbadge');
+  const grid = document.getElementById('grid');
+  const count = document.getElementById('count');
+  let hub = 'tokyo';
+
+  for (const h of reach.hubs) {
+    const b = document.createElement('button');
+    b.className = 'hub' + (h.id===hub?' on':'');
+    b.textContent = h.city.toUpperCase();
+    b.dataset.id = h.id;
+    b.onclick = () => { hub = h.id; document.querySelectorAll('.hub').forEach(x=>x.classList.toggle('on', x.dataset.id===hub)); render(); };
+    hubsEl.appendChild(b);
+  }
+
+  const fmt = (m) => m===0 ? 'HOME' : (m>=60 ? `~${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}m` : `~${m}m`);
+
+  // Google view: keyless directions embed (no API key, no billing).
+  const HUB_STATION = { tokyo: 'Tokyo Station', kyoto: 'Kyoto Station', osaka: 'Shin-Osaka Station' };
+  const gmapEl = document.getElementById('gmap');
+  // The iframe is created lazily on first Google-view open: a src-less iframe in
+  // the initial DOM is blocked by our CSP frame-src and can hang page capture.
+  let gframe = null;
+  function ensureGframe(){
+    if (gframe) return gframe;
+    gframe = document.createElement('iframe');
+    gframe.id = 'gframe'; gframe.title = 'Google Maps route';
+    gframe.width = '100%'; gframe.height = '430';
+    gframe.style.cssText = 'border:0;border-radius:10px';
+    gframe.referrerPolicy = 'no-referrer-when-downgrade';
+    gframe.allowFullscreen = true;
+    document.getElementById('gframe-slot').appendChild(gframe);
+    return gframe;
+  }
+  const dirURL = (slug) => `https://www.google.com/maps/dir/${encodeURIComponent(HUB_STATION[hub])}/${encodeURIComponent((reach.mainStations||{})[slug] || pmap[slug].name + ' Japan')}`;
+  const dirEmbed = (slug) => `https://maps.google.com/maps?saddr=${encodeURIComponent(HUB_STATION[hub])}&daddr=${encodeURIComponent((reach.mainStations||{})[slug] || pmap[slug].name + ' Japan')}&output=embed`;
+  const hubEmbed = () => `https://maps.google.com/maps?q=${encodeURIComponent(HUB_STATION[hub])}&z=7&output=embed`;
+
+  const tabRpg = document.getElementById('tab-rpg');
+  const tabG = document.getElementById('tab-g');
+  const mapsvgEl = document.getElementById('mapsvg');
+  const legendRpg = document.getElementById('legend-rpg');
+  function setView(g){
+    tabRpg.classList.toggle('on', !g); tabG.classList.toggle('on', g);
+    mapsvgEl.hidden = g; legendRpg.hidden = g; gmapEl.hidden = !g;
+    if (g) { const f = ensureGframe(); if (!f.src) f.src = hubEmbed(); }
+  }
+  tabRpg.onclick = () => setView(false);
+  tabG.onclick = () => setView(true);
+
+  // Map view: shared geolonia SVG, colored by time band each render.
+  const mapbox = document.getElementById('mapbox');
+  let mapReady = false;
+  try {
+    const svg = await fetch('/assets/japan-map.svg').then(r=>r.ok?r.text():null);
+    if (svg) { document.getElementById('mapsvg').innerHTML = svg; mapbox.hidden = false; mapReady = true; }
+  } catch(e) {}
+
+  const band = (m) => m<=60 ? '#bf3325' : m<=120 ? '#d98c5f' : '#e0a634';
+
+  function paintMap(budget, times){
+    if(!mapReady) return;
+    for (const slug of Object.keys(pmap)) {
+      const g = document.querySelector(`#mapsvg .${slug}.prefecture`);
+      if (!g) continue;
+      const t = times[slug];
+      const isHub = t && t.min === 0;
+      const hit = t && t.min > 0 && t.min <= budget;
+      g.setAttribute('fill', isHub ? '#0d0a14' : hit ? band(t.min) : '#e9e2d4');
+      g.setAttribute('stroke', isHub ? '#e0a634' : '#9a8f7d');
+      g.setAttribute('stroke-width', isHub ? '2.5' : '1.0');
+      g.classList.toggle('hit', !!hit);
+      let ti = g.querySelector('title');
+      if (!ti) { ti = document.createElementNS('http://www.w3.org/2000/svg','title'); g.appendChild(ti); }
+      ti.textContent = isHub ? `${pmap[slug].name} — your base` : t ? `${pmap[slug].name} ${(t.mode==='flight'?'✈ ':'')}${fmt(t.min)}` : pmap[slug].name;
+      g.onclick = hit ? () => {
+        const card = document.getElementById('card-'+slug);
+        if (card) { card.scrollIntoView({behavior:'smooth',block:'center'}); card.classList.add('flash'); setTimeout(()=>card.classList.remove('flash'),1400); }
+      } : null;
+    }
+  }
+
+  function render(){
+    const budget = +slider.value;
+    tbadge.textContent = fmt(budget);
+    const times = reach.times[hub];
+    paintMap(budget, times);
+    if (!gmapEl.hidden) ensureGframe().src = hubEmbed();
+    const hits = Object.entries(times)
+      .filter(([slug,t]) => t.min>0 && t.min<=budget)
+      .sort((a,b)=>a[1].min-b[1].min);
+    grid.innerHTML = '';
+    count.textContent = hits.length ? `▶ ${hits.length} PREFECTURES IN RANGE` : '';
+    if(!hits.length){ grid.innerHTML = '<div class="empty">Slide right — Japan is bigger than that ▶</div>'; return; }
+    for (const [slug,t] of hits){
+      const p = pmap[slug]; if(!p) continue;
+      const food = p.foods && p.foods[0] ? p.foods[0].name : '';
+      const see = p.culture && p.culture[0] ? p.culture[0].name : '';
+      const card = document.createElement('div');
+      card.className='card'; card.id = 'card-'+slug;
+      const guide = p.guideUrl.replace('https://www.nihongo-hub.com','');
+      card.innerHTML = `<a class="main" href="${guide}" style="display:block;text-decoration:none;color:inherit">`+
+        `<div class="row1"><span class="pname">${p.name.toUpperCase()}</span><span class="ptime">${t.mode==='flight'?'✈ ':''}${fmt(t.min)}</span></div>`+
+        (food?`<div class="fact">🍜 ${food}</div>`:'')+(see?`<div class="fact">🏯 ${see}</div>`:'')+`</a>`+
+        `<a class="route" href="${dirURL(slug)}" target="_blank" rel="noopener">🗺 ROUTE ON GOOGLE MAPS</a>`;
+      card.querySelector('.route').addEventListener('click', (e) => {
+        if (!gmapEl.hidden) { e.preventDefault(); ensureGframe().src = dirEmbed(slug); mapbox.scrollIntoView({behavior:'smooth'}); }
+      });
+      grid.appendChild(card);
+    }
+  }
+  slider.addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>

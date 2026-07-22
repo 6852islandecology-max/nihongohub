@@ -1,0 +1,78 @@
+{
+  "name": "Japan Rail Reachability Matrix (approximate)",
+  "description": "Approximate fastest door-of-station travel times from major tourist hub stations (Tokyo, Kyoto, Shin-Osaka) to a main station in each of the 47 prefectures. Built for time-budget trip discovery: 'I have 3 hours — where can I go?'. Times are deliberately rough, in the spirit of quick planning.",
+  "url": "https://www.nihongo-hub.com/data/reachability.json",
+  "publisher": "NihongoHub",
+  "attribution": "NihongoHub (https://www.nihongo-hub.com)",
+  "methodology": "Curated from publicly available JR and major-operator timetable patterns (June 2026 era): fastest typical service including standard transfers, rounded to ~5 minutes. Pairs where rail is impractical (7h+) and virtually everyone flies are marked mode=flight and include rough airport-access time.",
+  "disclaimer": "Approximate, roughly plus or minus 20%. Times vary by service, transfer luck, and season. Not a journey planner — verify exact connections in a transit app before traveling.",
+  "jrPassNote": "Times on the Tokaido/Sanyo shinkansen assume the fastest trains (Nozomi/Mizuho), which the nationwide Japan Rail Pass does NOT cover. With a JR Pass, add roughly 15-25% on those segments (Hikari/Sakura).",
+  "license": "Free to cite and reuse with attribution to NihongoHub (https://www.nihongo-hub.com).",
+  "confidence": "estimate (curated approximation, not an official timetable)",
+  "lastUpdated": "2026-06-12",
+  "hubs": [
+    {"id": "tokyo", "station": "Tokyo Station", "city": "Tokyo"},
+    {"id": "kyoto", "station": "Kyoto Station", "city": "Kyoto"},
+    {"id": "osaka", "station": "Shin-Osaka / Umeda", "city": "Osaka"}
+  ],
+  "unit": "minutes",
+  "defaultMode": "rail",
+  "mainStations": {
+    "hokkaido": "Sapporo Station", "aomori": "Shin-Aomori Station", "iwate": "Morioka Station", "miyagi": "Sendai Station",
+    "akita": "Akita Station", "yamagata": "Yamagata Station", "fukushima": "Fukushima Station", "ibaraki": "Mito Station",
+    "tochigi": "Utsunomiya Station", "gunma": "Takasaki Station", "saitama": "Omiya Station", "chiba": "Chiba Station",
+    "tokyo": "Tokyo Station", "kanagawa": "Yokohama Station", "niigata": "Niigata Station", "toyama": "Toyama Station",
+    "ishikawa": "Kanazawa Station", "fukui": "Fukui Station", "yamanashi": "Kofu Station", "nagano": "Nagano Station",
+    "gifu": "Gifu Station", "shizuoka": "Shizuoka Station", "aichi": "Nagoya Station", "mie": "Tsu Station",
+    "shiga": "Otsu Station", "kyoto": "Kyoto Station", "osaka": "Shin-Osaka Station", "hyogo": "Sannomiya Station",
+    "nara": "Nara Station", "wakayama": "Wakayama Station", "tottori": "Tottori Station", "shimane": "Matsue Station",
+    "okayama": "Okayama Station", "hiroshima": "Hiroshima Station", "yamaguchi": "Shin-Yamaguchi Station", "tokushima": "Tokushima Station",
+    "kagawa": "Takamatsu Station", "ehime": "Matsuyama Station", "kochi": "Kochi Station", "fukuoka": "Hakata Station",
+    "saga": "Saga Station", "nagasaki": "Nagasaki Station", "kumamoto": "Kumamoto Station", "oita": "Oita Station",
+    "miyazaki": "Miyazaki Station", "kagoshima": "Kagoshima-Chuo Station", "okinawa": "Naha Airport"
+  },
+  "times": {
+    "tokyo": {
+      "hokkaido": {"min": 465}, "aomori": {"min": 180}, "iwate": {"min": 135}, "miyagi": {"min": 95},
+      "akita": {"min": 225}, "yamagata": {"min": 150}, "fukushima": {"min": 90}, "ibaraki": {"min": 75},
+      "tochigi": {"min": 50}, "gunma": {"min": 50}, "saitama": {"min": 25}, "chiba": {"min": 40},
+      "tokyo": {"min": 0}, "kanagawa": {"min": 25}, "niigata": {"min": 100}, "toyama": {"min": 125},
+      "ishikawa": {"min": 150}, "fukui": {"min": 175}, "yamanashi": {"min": 90}, "nagano": {"min": 85},
+      "gifu": {"min": 120}, "shizuoka": {"min": 60}, "aichi": {"min": 95}, "mie": {"min": 155},
+      "shiga": {"min": 140}, "kyoto": {"min": 130}, "osaka": {"min": 140}, "hyogo": {"min": 160},
+      "nara": {"min": 175}, "wakayama": {"min": 215}, "tottori": {"min": 295}, "shimane": {"min": 350},
+      "okayama": {"min": 195}, "hiroshima": {"min": 230}, "yamaguchi": {"min": 270}, "tokushima": {"min": 320},
+      "kagawa": {"min": 260}, "ehime": {"min": 365}, "kochi": {"min": 350}, "fukuoka": {"min": 300},
+      "saga": {"min": 345}, "nagasaki": {"min": 390}, "kumamoto": {"min": 345}, "oita": {"min": 375},
+      "miyazaki": {"min": 470}, "kagoshima": {"min": 395}, "okinawa": {"min": 195, "mode": "flight"}
+    },
+    "kyoto": {
+      "hokkaido": {"min": 210, "mode": "flight"}, "aomori": {"min": 335}, "iwate": {"min": 290}, "miyagi": {"min": 245},
+      "akita": {"min": 375}, "yamagata": {"min": 300}, "fukushima": {"min": 235}, "ibaraki": {"min": 215},
+      "tochigi": {"min": 195}, "gunma": {"min": 195}, "saitama": {"min": 160}, "chiba": {"min": 180},
+      "tokyo": {"min": 135}, "kanagawa": {"min": 115}, "niigata": {"min": 245}, "toyama": {"min": 170},
+      "ishikawa": {"min": 130}, "fukui": {"min": 85}, "yamanashi": {"min": 200}, "nagano": {"min": 230},
+      "gifu": {"min": 60}, "shizuoka": {"min": 115}, "aichi": {"min": 35}, "mie": {"min": 120},
+      "shiga": {"min": 10}, "kyoto": {"min": 0}, "osaka": {"min": 15}, "hyogo": {"min": 30},
+      "nara": {"min": 45}, "wakayama": {"min": 105}, "tottori": {"min": 175}, "shimane": {"min": 220},
+      "okayama": {"min": 65}, "hiroshima": {"min": 105}, "yamaguchi": {"min": 145}, "tokushima": {"min": 195},
+      "kagawa": {"min": 130}, "ehime": {"min": 235}, "kochi": {"min": 220}, "fukuoka": {"min": 170},
+      "saga": {"min": 210}, "nagasaki": {"min": 260}, "kumamoto": {"min": 210}, "oita": {"min": 235},
+      "miyazaki": {"min": 335}, "kagoshima": {"min": 230}, "okinawa": {"min": 195, "mode": "flight"}
+    },
+    "osaka": {
+      "hokkaido": {"min": 210, "mode": "flight"}, "aomori": {"min": 345}, "iwate": {"min": 300}, "miyagi": {"min": 255},
+      "akita": {"min": 385}, "yamagata": {"min": 310}, "fukushima": {"min": 245}, "ibaraki": {"min": 225},
+      "tochigi": {"min": 200}, "gunma": {"min": 200}, "saitama": {"min": 165}, "chiba": {"min": 185},
+      "tokyo": {"min": 140}, "kanagawa": {"min": 125}, "niigata": {"min": 255}, "toyama": {"min": 175},
+      "ishikawa": {"min": 135}, "fukui": {"min": 80}, "yamanashi": {"min": 210}, "nagano": {"min": 245},
+      "gifu": {"min": 70}, "shizuoka": {"min": 125}, "aichi": {"min": 50}, "mie": {"min": 90},
+      "shiga": {"min": 25}, "kyoto": {"min": 15}, "osaka": {"min": 0}, "hyogo": {"min": 15},
+      "nara": {"min": 45}, "wakayama": {"min": 65}, "tottori": {"min": 150}, "shimane": {"min": 200},
+      "okayama": {"min": 45}, "hiroshima": {"min": 85}, "yamaguchi": {"min": 125}, "tokushima": {"min": 170},
+      "kagawa": {"min": 110}, "ehime": {"min": 215}, "kochi": {"min": 200}, "fukuoka": {"min": 150},
+      "saga": {"min": 190}, "nagasaki": {"min": 240}, "kumamoto": {"min": 190}, "oita": {"min": 215},
+      "miyazaki": {"min": 315}, "kagoshima": {"min": 225}, "okinawa": {"min": 195, "mode": "flight"}
+    }
+  }
+}
