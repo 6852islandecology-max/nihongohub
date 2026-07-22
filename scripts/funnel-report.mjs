@@ -1,0 +1,152 @@
+// scripts/funnel-report.mjs — daily funnel report (Upstash counters + Supabase actuals).
+// Usage: node scripts/funnel-report.mjs [days]    (default 7; dates are UTC)
+//
+// Counters (Upstash, written by lib/funnel-server.js):
+//   pv_*            page views from the client beacon, with first-touch source
+//   trial_start     api/trial-start.js (server-side, by user id)
+//   checkout_*      api/upgrade-checkout.js (server-side, by user id + source)
+//   paid_* / churn_pro  api/stripe-webhook.js (server-side = money truth from Stripe)
+// Actuals (Supabase trial_events): trial_started / upgraded_pro / upgraded_lifetime —
+// cross-check that Redis counters and the DB agree.
+import { readFileSync } from "node:fs";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+try {
+  for (const line of readFileSync(resolve(root, ".env"), "utf8").split(/\r?\n/)) {
+    const m = line.match(/^([A-Z0-9_]+)\s*=\s*(.*)$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, "");
+  }
+} catch { /* .env optional when env vars are already set */ }
+
+const R_URL = process.env.UPSTASH_REDIS_REST_URL;
+const R_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+const S_URL = process.env.SUPABASE_URL;
+const S_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!R_URL || !R_TOKEN) {
+  console.error("UPSTASH_REDIS_REST_URL / _TOKEN not set (check .env)");
+  process.exit(1);
+}
+
+const days = Math.max(1, Math.min(60, Number(process.argv[2]) || 7));
+const dates = [];
+for (let i = days - 1; i >= 0; i--) {
+  dates.push(new Date(Date.now() - i * 86400000).toISOString().slice(0, 10));
+}
+
+async function redis(cmds) {
+  const r = await fetch(`${R_URL}/pipeline`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${R_TOKEN}`, "Content-Type": "application/json" },
+    body: JSON.stringify(cmds),
+  });
+  if (!r.ok) throw new Error(`upstash ${r.status}`);
+  return (await r.json()).map((x) => x.result);
+}
+
+function toObj(flat) {
+  const o = {};
+  for (let i = 0; flat && i < flat.length; i += 2) o[flat[i]] = Number(flat[i + 1]);
+  return o;
+}
+
+const UNIQ_STAGES = ["pv_lp", "pv_blog", "pv_onboarding", "pv_quiz"];
+const rows = [];
+for (const day of dates) {
+  const cmds = [["HGETALL", `nh:f:${day}`], ["HGETALL", `nh:fsrc:${day}`], ["HGETALL", `nh:fnav:${day}`]];
+  for (const s of UNIQ_STAGES) cmds.push(["PFCOUNT", `nh:fu:${day}:${s}`]);
+  const out = await redis(cmds);
+  const uniq = {};
+  UNIQ_STAGES.forEach((s, i) => (uniq[s] = Number(out[3 + i]) || 0));
+  rows.push({ day, counts: toObj(out[0]), bySrc: toObj(out[1]), nav: toObj(out[2]), uniq });
+}
+
+// Supabase actuals
+const actuals = {};
+if (S_URL && S_KEY) {
+  try {
+    const since = `${dates[0]}T00:00:00Z`;
+    const r = await fetch(
+      `${S_URL}/rest/v1/trial_events?select=event_type,created_at&created_at=gte.${since}&limit=10000`,
+      { headers: { apikey: S_KEY, Authorization: `Bearer ${S_KEY}` } },
+    );
+    if (r.ok) {
+      for (const e of await r.json()) {
+        const day = String(e.created_at).slice(0, 10);
+        (actuals[day] = actuals[day] || {})[e.event_type] =
+          (actuals[day][e.event_type] || 0) + 1;
+      }
+    }
+  } catch { /* report still useful without DB cross-check */ }
+}
+
+const COLS = [
+  ["lp", (r) => r.counts.pv_lp],
+  ["lp_u", (r) => r.uniq.pv_lp],
+  ["blog", (r) => r.counts.pv_blog],
+  ["onbrd", (r) => r.counts.pv_onboarding],
+  ["quiz", (r) => r.counts.pv_quiz],
+  ["trial", (r) => r.counts.trial_start],
+  ["chkout", (r) => (r.counts.checkout_pro || 0) + (r.counts.checkout_lifetime || 0)],
+  ["paid", (r) => (r.counts.paid_pro || 0) + (r.counts.paid_lifetime || 0)],
+  ["upOK", (r) => r.counts.upgrade_success],
+  ["db:trial", (r) => (actuals[r.day] || {}).trial_started],
+  ["db:paid", (r) => ((actuals[r.day] || {}).upgraded_pro || 0) + ((actuals[r.day] || {}).upgraded_lifetime || 0)],
+];
+
+const pad = (v, w) => String(v ?? 0).padStart(w);
+console.log(`\nNihongoHub funnel — last ${days} days (UTC)\n`);
+console.log("date       " + COLS.map(([n]) => n.padStart(8)).join(""));
+for (const r of rows) {
+  console.log(r.day + " " + COLS.map(([, f]) => pad(f(r), 8)).join(""));
+}
+
+// window totals + CVR
+const tot = {};
+for (const r of rows) for (const [k, v] of Object.entries(r.counts)) tot[k] = (tot[k] || 0) + v;
+const lp = tot.pv_lp || 0;
+const trial = tot.trial_start || 0;
+const chk = (tot.checkout_pro || 0) + (tot.checkout_lifetime || 0);
+const paid = (tot.paid_pro || 0) + (tot.paid_lifetime || 0);
+const pct = (a, b) => (b > 0 ? ((100 * a) / b).toFixed(1) + "%" : "-");
+console.log(`\nwindow: LP ${lp} → trial ${trial} (${pct(trial, lp)}) → checkout ${chk} (${pct(chk, trial)}) → paid ${paid} (${pct(paid, chk)})`);
+if (tot.churn_pro) console.log(`churn_pro: ${tot.churn_pro}`);
+
+// per-source totals (all events with a source dimension)
+const srcTot = {};
+for (const r of rows) {
+  for (const [k, v] of Object.entries(r.bySrc)) {
+    const [, s] = k.split("|");
+    srcTot[s] = (srcTot[s] || 0) + v;
+  }
+}
+const top = Object.entries(srcTot).sort((a, b) => b[1] - a[1]);
+if (top.length) {
+  console.log("\nby first-touch source (all events): " + top.map(([s, v]) => `${s}=${v}`).join("  "));
+}
+
+// page views by type (all pv_* events this window) — "which pages get used"
+const pageTot = {};
+for (const r of rows) for (const [k, v] of Object.entries(r.counts)) if (k.startsWith("pv_")) pageTot[k.slice(3)] = (pageTot[k.slice(3)] || 0) + v;
+const pages = Object.entries(pageTot).sort((a, b) => b[1] - a[1]);
+if (pages.length) console.log("\npage views by type: " + pages.map(([s, v]) => `${s}=${v}`).join("  "));
+
+// in-site transitions (nh:fnav) — "does the site get walked around" (回遊)
+const navTot = {};
+for (const r of rows) for (const [k, v] of Object.entries(r.nav || {})) navTot[k] = (navTot[k] || 0) + v;
+const navs = Object.entries(navTot).sort((a, b) => b[1] - a[1]);
+if (navs.length) {
+  console.log("\nin-site transitions (from>to, top 20): " + navs.slice(0, 20).map(([s, v]) => `${s}=${v}`).join("  "));
+  const trans = navs.reduce((a, [, v]) => a + v, 0);
+  const pv = Object.values(pageTot).reduce((a, v) => a + v, 0);
+  if (pv > 0) console.log(`transition rate: ${trans} transitions / ${pv} page views = ${((100 * trans) / pv).toFixed(1)}% of views came from another page on the site`);
+}
+
+// affiliate clicks (aff_* events this window)
+const affTot = {};
+for (const r of rows) for (const [k, v] of Object.entries(r.counts)) if (k.startsWith("aff_")) affTot[k.slice(4)] = (affTot[k.slice(4)] || 0) + v;
+const affs = Object.entries(affTot).sort((a, b) => b[1] - a[1]);
+console.log("affiliate clicks: " + (affs.length ? affs.map(([s, v]) => `${s}=${v}`).join("  ") : "0"));
+
+console.log("");

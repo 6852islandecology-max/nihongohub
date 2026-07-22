@@ -484,3 +484,66 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadLib);
   else loadLib();
 })();
+
+
+// First-party affiliate-click beacon: attribute affiliate/sponsored clicks to
+// their traffic source via window.NH_FUNNEL (defined by the blog beacon below).
+// Guarded so a page never double-counts if another copy of this hook loads.
+(function () {
+  if (window.__NH_AFFCLICK__) return;
+  window.__NH_AFFCLICK__ = true;
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest && e.target.closest('a[data-aff],a[rel~="sponsored"]');
+    if (!a) return;
+    var key = a.getAttribute('data-aff') || 'link';
+    try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('aff_' + key); } catch (e2) {}
+  }, true);
+})();
+
+// --- NihongoHub funnel beacon (counters only, no PII) ---
+// Compact copy of lib/site-chrome.js section (E): blog pages don't load site-chrome.
+// Guarded by window.__NH_FUNNEL__ so a page never double-counts.
+(function () {
+  if (window.__NH_FUNNEL__) return;
+  window.__NH_FUNNEL__ = true;
+  try {
+    var aid = localStorage.getItem('nh_aid') || '';
+    if (!aid) {
+      for (var i = 0; i < 16; i++) aid += Math.floor(Math.random() * 16).toString(16);
+      try { localStorage.setItem('nh_aid', aid); } catch (e) {}
+    }
+    var src = localStorage.getItem('nh_src') || '';
+    if (!src) {
+      var utm = '';
+      try {
+        var q = new URLSearchParams(location.search);
+        utm = (q.get('utm_source') || q.get('ref') || '').toLowerCase();
+      } catch (e) {}
+      var refHost = '';
+      try { refHost = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+      var KNOWN = ['producthunt', 'reddit', 'google', 'bing', 'pinterest', 'instagram', 'threads', 'youtube', 'substack', 'medium'];
+      var classify = function (s) {
+        if (!s) return '';
+        for (var j = 0; j < KNOWN.length; j++) if (s.indexOf(KNOWN[j]) >= 0) return KNOWN[j];
+        if (s === 't.co' || s === 'x.com' || s.indexOf('twitter') >= 0) return 'x';
+        if (s.indexOf('youtu.be') >= 0) return 'youtube';
+        return '';
+      };
+      src = classify(utm) || classify(refHost) ||
+        (refHost && refHost.indexOf('nihongo-hub') < 0 && refHost.indexOf('localhost') < 0 ? 'other' : 'direct');
+      try { localStorage.setItem('nh_src', src); } catch (e) {}
+    }
+    var send = function (ev, from) {
+      try { fetch('/api/count?ev=' + ev + '&src=' + src + '&aid=' + aid + (from ? '&from=' + from : ''), { keepalive: true }).catch(function () {}); } catch (e) {}
+    };
+    window.NH_FUNNEL = { track: send, src: src };
+    // In-site journey: remember this tab's previous page class so the server
+    // can count from>to transitions (nh:fnav). sessionStorage = per-tab, no PII.
+    var prev = '';
+    try {
+      prev = sessionStorage.getItem('nh_pv_prev') || '';
+      sessionStorage.setItem('nh_pv_prev', 'blog');
+    } catch (e) {}
+    send('pv_blog', prev);
+  } catch (e) {}
+})();
