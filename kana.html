@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.nihongo-hub.com/kana.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LearningResource","name":"Learn かな (Hiragana & Katakana) — start from zero","url":"https://www.nihongo-hub.com/kana.html","description":"A free, self-paced recognition trainer for reading hiragana and katakana from zero — the foundation every JLPT level builds on.","inLanguage":"en","teaches":["Hiragana","Katakana","Japanese kana reading"],"educationalLevel":"Beginner","learningResourceType":"Interactive trainer","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/"}}
+</script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:url" content="https://www.nihongo-hub.com/kana.html">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="NihongoHub">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn かな (Hiragana & Katakana) — start from zero — NihongoHub</title>
+<meta name="description" content="Brand new to Japanese? Learn to read hiragana and katakana from zero — a free, self-paced recognition trainer. The foundation every JLPT level builds on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=DM+Sans:wght@300;400;500;600;700&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#18120a;--paper:#f4efe5;--red:#bf3325;--gold:#c8911f;--gold-l:#e0a634;--soft:#e6ddd0;--muted:#796c5c;--white:#fdfaf3;--hud:#0d0a14;--ok:#3f9142;--dot:'DotGothic16',sans-serif}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);line-height:1.6}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold-l);display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold-l)}
+.page{max-width:680px;margin:0 auto;padding:40px 20px 80px}
+.tag{font-family:var(--dot);font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:8px}
+h1{font-family:'Shippori Mincho',serif;font-size:clamp(27px,5vw,40px);line-height:1.2;margin-bottom:14px}
+.lead{font-size:17px;color:#3a3125;margin-bottom:24px}
+.lead b{color:var(--ink)}
+/* mode + script tabs */
+.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.tab{font-family:var(--dot);font-size:14px;border:2px solid var(--soft);background:var(--white);color:var(--muted);border-radius:8px;padding:9px 16px;cursor:pointer}
+.tab.on{background:var(--ink);color:var(--white);border-color:var(--ink)}
+/* progress */
+.prog-wrap{margin:6px 0 22px}
+.prog-bar{height:12px;background:var(--soft);border-radius:99px;overflow:hidden}
+.prog-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-l));transition:width .35s}
+.prog-txt{font-family:var(--dot);font-size:13px;color:var(--muted);margin-top:7px;display:flex;justify-content:space-between}
+/* practice card */
+.card{background:var(--white);border:2px solid var(--soft);border-radius:14px;padding:30px 22px;text-align:center;box-shadow:0 8px 22px rgba(24,18,10,.05)}
+.kana-big{font-family:'Shippori Mincho',serif;font-size:96px;line-height:1;margin:6px 0 22px;color:var(--ink)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt{font-family:var(--dot);font-size:20px;background:var(--paper);border:2px solid var(--soft);border-radius:10px;padding:16px 10px;cursor:pointer;transition:transform .08s,background .15s,border-color .15s}
+.opt:hover{border-color:var(--gold)}
+.opt:active{transform:scale(.97)}
+.opt.right{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.wrong{background:#e8d9d6;border-color:var(--red);color:var(--red)}
+.opt:disabled{cursor:default}
+.hint{font-family:var(--dot);font-size:13px;color:var(--muted);margin-top:16px;min-height:20px}
+.hint b{color:var(--ink)}
+.done{display:none;text-align:center;background:var(--white);border:2px solid var(--gold);border-radius:14px;padding:34px 22px}
+.done .big{font-size:54px}
+.done h2{font-family:'Shippori Mincho',serif;font-size:26px;margin:10px 0}
+/* chart */
+.sec-h{font-family:var(--dot);font-size:14px;color:var(--gold);letter-spacing:1px;margin:34px 0 12px;border-top:1px solid var(--soft);padding-top:24px}
+.chart{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.cell{background:var(--white);border:1px solid var(--soft);border-radius:8px;padding:9px 4px;text-align:center}
+.cell .k{font-family:'Shippori Mincho',serif;font-size:26px;line-height:1.1}
+.cell .r{font-family:var(--dot);font-size:11px;color:var(--muted);text-transform:uppercase}
+.cell.mastered{background:#eef5ec;border-color:var(--ok)}
+.cell.mastered .r{color:var(--ok)}
+.cell.empty{visibility:hidden}
+.btn{font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;text-decoration:none;border-radius:8px;padding:13px 22px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:none}
+.btn.primary{background:var(--red);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--soft)}
+.btn.ghost:hover{border-color:var(--gold)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;justify-content:center}
+.reset{font-family:var(--dot);font-size:12px;color:var(--muted);background:none;border:none;cursor:pointer;text-decoration:underline;margin-top:18px}
+footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-family:var(--dot);font-size:13px;margin-top:30px}
+footer a{color:var(--gold-l);text-decoration:none}
+@media(max-width:430px){.kana-big{font-size:78px}.chart{grid-template-columns:repeat(5,1fr);gap:5px}.cell .k{font-size:22px}}
+</style>
+<link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="styles/chrome.css">
+<script src="lib/i18n-core.js" defer></script>
+<script src="lib/site-chrome.js" defer></script>
+<script src="lib/hamburger.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <a href="index.html" class="back">← Home</a>
+</header>
+<main class="page">
+  <p class="tag">START FROM ZERO</p>
+  <h1>Learn to read かな</h1>
+  <p class="lead">Brand new to Japanese? Start right here. <b>Hiragana</b> and <b>katakana</b> are the two basic alphabets — about 46 characters each. Learn to read them and every quiz, road sign, and lesson opens up. No account, no Japanese needed yet.</p>
+
+  <div class="tabs" id="script-tabs">
+    <button class="tab on" data-script="hira">ひらがな Hiragana</button>
+    <button class="tab" data-script="kata">カタカナ Katakana</button>
+  </div>
+
+  <div class="prog-wrap">
+    <div class="prog-bar"><div class="prog-fill" id="prog-fill"></div></div>
+    <div class="prog-txt"><span id="prog-label">Learned 0 / 46</span><span id="prog-pct">0%</span></div>
+  </div>
+
+  <div class="card" id="practice">
+    <div class="kana-big" id="kana-big">あ</div>
+    <div class="opts" id="opts"></div>
+    <div class="hint" id="hint">Tap the correct sound (rōmaji).</div>
+  </div>
+
+  <div class="done" id="done">
+    <div class="big">🎉</div>
+    <h2>You can read かな!</h2>
+    <p>You've recognised all 46. That's the hardest first step — done. Now try real N5 questions (every kanji shows furigana, so your かな does the work).</p>
+    <div class="cta-row">
+      <a class="btn primary" href="quiz.html?level=N5">Try N5 quiz →</a>
+      <button class="btn ghost" id="again-btn">Practise again</button>
+    </div>
+  </div>
+
+  <button class="reset" id="reset-btn">Reset my progress</button>
+
+  <div class="sec-h" id="chart-h">FULL CHART — ひらがな</div>
+  <div class="chart" id="chart"></div>
+
+  <p style="margin-top:26px;font-size:14px;color:var(--muted)">Once both charts feel comfortable, the next steps are dakuten (が, ぱ…) and small combos (きゃ, しゅ…) — you'll pick those up naturally inside the N5 quizzes.</p>
+</main>
+<footer>
+  Nihongo<span style="color:var(--red)">Hub</span> — learn Japanese, discover Japan. · <a href="index.html">Home</a> · <a href="onboarding.html">Find my level</a>
+</footer>
+
+<script>
+/* ── kana data (46 gojūon monographs each) ── */
+const HIRA = [
+  ['あ','a'],['い','i'],['う','u'],['え','e'],['お','o'],
+  ['か','ka'],['き','ki'],['く','ku'],['け','ke'],['こ','ko'],
+  ['さ','sa'],['し','shi'],['す','su'],['せ','se'],['そ','so'],
+  ['た','ta'],['ち','chi'],['つ','tsu'],['て','te'],['と','to'],
+  ['な','na'],['に','ni'],['ぬ','nu'],['ね','ne'],['の','no'],
+  ['は','ha'],['ひ','hi'],['ふ','fu'],['へ','he'],['ほ','ho'],
+  ['ま','ma'],['み','mi'],['む','mu'],['め','me'],['も','mo'],
+  ['や','ya'],['ゆ','yu'],['よ','yo'],
+  ['ら','ra'],['り','ri'],['る','ru'],['れ','re'],['ろ','ro'],
+  ['わ','wa'],['を','wo'],['ん','n']
+];
+const KATA = [
+  ['ア','a'],['イ','i'],['ウ','u'],['エ','e'],['オ','o'],
+  ['カ','ka'],['キ','ki'],['ク','ku'],['ケ','ke'],['コ','ko'],
+  ['サ','sa'],['シ','shi'],['ス','su'],['セ','se'],['ソ','so'],
+  ['タ','ta'],['チ','chi'],['ツ','tsu'],['テ','te'],['ト','to'],
+  ['ナ','na'],['ニ','ni'],['ヌ','nu'],['ネ','ne'],['ノ','no'],
+  ['ハ','ha'],['ヒ','hi'],['フ','fu'],['ヘ','he'],['ホ','ho'],
+  ['マ','ma'],['ミ','mi'],['ム','mu'],['メ','me'],['モ','mo'],
+  ['ヤ','ya'],['ユ','yu'],['ヨ','yo'],
+  ['ラ','ra'],['リ','ri'],['ル','ru'],['レ','re'],['ロ','ro'],
+  ['ワ','wa'],['ヲ','wo'],['ン','n']
+];
+const MASTER_AT = 2;            // correct answers needed to count a kana as learned
+const STORE_KEY = 'nh_kana_progress_v1';
+
+let script = 'hira';
+let cur = null;                 // current [kana, romaji]
+let progress = load();
+
+function load(){
+  try{ return JSON.parse(localStorage.getItem(STORE_KEY)) || {hira:{},kata:{}}; }
+  catch(e){ return {hira:{},kata:{}}; }
+}
+function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(progress)); }catch(e){} }
+function deck(){ return script==='hira'?HIRA:KATA; }
+function scoreOf(r){ return (progress[script] && progress[script][r]) || 0; }
+function learnedCount(){ return deck().filter(([k,r])=>scoreOf(r)>=MASTER_AT).length; }
+
+function pick(){
+  // weight unmastered kana so they appear more; never repeat the exact previous one
+  const d = deck();
+  const pool = [];
+  d.forEach(item=>{
+    const s = scoreOf(item[1]);
+    const weight = s>=MASTER_AT ? 1 : (MASTER_AT - s + 2); // unseen/weak appear more
+    for(let i=0;i<weight;i++) pool.push(item);
+  });
+  let next;
+  let guard=0;
+  do{ next = pool[Math.floor(Math.random()*pool.length)]; guard++; }
+  while(cur && next[0]===cur[0] && guard<20);
+  return next;
+}
+
+function buildOptions(correct){
+  const d = deck();
+  const opts = [correct];
+  const others = d.filter(([k,r])=>r!==correct[1]);
+  while(opts.length<4 && others.length){
+    const i = Math.floor(Math.random()*others.length);
+    opts.push(others.splice(i,1)[0]);
+  }
+  for(let i=opts.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [opts[i],opts[j]]=[opts[j],opts[i]]; }
+  return opts;
+}
+
+function renderProgress(){
+  const total = deck().length;
+  const n = learnedCount();
+  document.getElementById('prog-fill').style.width = Math.round(n/total*100)+'%';
+  document.getElementById('prog-label').textContent = `Learned ${n} / ${total}`;
+  document.getElementById('prog-pct').textContent = Math.round(n/total*100)+'%';
+}
+
+function renderChart(){
+  const wrap = document.getElementById('chart');
+  document.getElementById('chart-h').textContent = 'FULL CHART — ' + (script==='hira'?'ひらがな':'カタカナ');
+  wrap.innerHTML = '';
+  deck().forEach(([k,r])=>{
+    const c = document.createElement('div');
+    c.className = 'cell' + (scoreOf(r)>=MASTER_AT?' mastered':'');
+    c.innerHTML = `<div class="k">${k}</div><div class="r">${r}</div>`;
+    wrap.appendChild(c);
+  });
+}
+
+function nextQuestion(){
+  if(learnedCount() >= deck().length){ showDone(); return; }
+  document.getElementById('practice').style.display = '';
+  document.getElementById('done').style.display = 'none';
+  cur = pick();
+  document.getElementById('kana-big').textContent = cur[0];
+  const opts = buildOptions(cur);
+  const box = document.getElementById('opts');
+  box.innerHTML = '';
+  opts.forEach(([k,r])=>{
+    const b = document.createElement('button');
+    b.className = 'opt'; b.textContent = r; b.dataset.r = r;
+    b.onclick = ()=>answer(b, r);
+    box.appendChild(b);
+  });
+  document.getElementById('hint').innerHTML = 'Tap the correct sound (rōmaji).';
+}
+
+function answer(btn, r){
+  const correct = cur[1];
+  const buttons = document.querySelectorAll('#opts .opt');
+  buttons.forEach(b=>b.disabled = true);
+  if(r===correct){
+    btn.classList.add('right');
+    progress[script][correct] = scoreOf(correct)+1;
+    save(); renderProgress(); renderChart();
+    document.getElementById('hint').innerHTML = `<b>${cur[0]}</b> = <b>${correct}</b> ✓`;
+  } else {
+    btn.classList.add('wrong');
+    buttons.forEach(b=>{ if(b.dataset.r===correct) b.classList.add('right'); });
+    progress[script][correct] = 0;   // reset this kana — see it again soon
+    save(); renderProgress();
+    document.getElementById('hint').innerHTML = `<b>${cur[0]}</b> = <b>${correct}</b> — keep going.`;
+  }
+  setTimeout(nextQuestion, r===correct ? 650 : 1300);
+}
+
+function showDone(){
+  document.getElementById('practice').style.display = 'none';
+  document.getElementById('done').style.display = 'block';
+}
+
+/* ── wiring ── */
+document.querySelectorAll('#script-tabs .tab').forEach(tab=>{
+  tab.onclick = ()=>{
+    document.querySelectorAll('#script-tabs .tab').forEach(t=>t.classList.remove('on'));
+    tab.classList.add('on');
+    script = tab.dataset.script;
+    renderProgress(); renderChart(); nextQuestion();
+  };
+});
+document.getElementById('again-btn').onclick = ()=>{ progress[script]={}; save(); renderProgress(); renderChart(); nextQuestion(); };
+document.getElementById('reset-btn').onclick = ()=>{
+  if(confirm('Reset your かな progress on this device?')){ progress={hira:{},kata:{}}; save(); renderProgress(); renderChart(); nextQuestion(); }
+};
+
+renderProgress(); renderChart(); nextQuestion();
+</script>
+</body>
+</html>
