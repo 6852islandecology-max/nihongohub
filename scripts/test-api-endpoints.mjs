@@ -64,5 +64,57 @@ try {
   check("count reports enabled:false / count:0 when unset", res.body && res.body.enabled === false && res.body.count === 0, res.body);
 } catch (e) { fail++; console.log(`  ✗ count enabled:false — THREW: ${e.message}`); }
 
+// ── 課金まわりの判定（2026-07-24 追加）─────────────────────────────
+// lib/billing-rules.js は api ハンドラから切り出した純粋関数。
+// Stripe も Supabase も要らないので、ここで実際の分岐を検証できる。
+console.log("\nBilling rules (pure functions, no external services):");
+const { isGiftPurchase, entitlementFromProfile, trialRemaining } =
+  await import("../lib/billing-rules.js");
+
+const giftBase = { amount_total: 500, currency: "usd", mode: "payment", metadata: {} };
+
+check("gift: metadata product_type=gift_x10 は金額に関係なくギフト",
+  isGiftPurchase({ ...giftBase, amount_total: 9999, metadata: { product_type: "gift_x10" } }) === true);
+check("gift: $5.00 USD の一回払いで app 由来の情報が無ければギフト",
+  isGiftPurchase(giftBase) === true);
+check("gift: user_id が付いていればギフトではない（通常購入）",
+  isGiftPurchase({ ...giftBase, metadata: { user_id: "u1" } }) === false);
+check("gift: plan が付いていればギフトではない",
+  isGiftPurchase({ ...giftBase, metadata: { plan: "pro" } }) === false);
+check("gift: client_reference_id が付いていればギフトではない",
+  isGiftPurchase({ ...giftBase, client_reference_id: "u1" }) === false);
+check("gift: $9.99 (Pro) はギフトではない",
+  isGiftPurchase({ ...giftBase, amount_total: 999 }) === false);
+check("gift: 通貨が USD でなければギフトではない",
+  isGiftPurchase({ ...giftBase, currency: "jpy" }) === false);
+check("gift: subscription モードはギフトではない",
+  isGiftPurchase({ ...giftBase, mode: "subscription" }) === false);
+check("gift: session が無ければ false", isGiftPurchase(null) === false);
+
+const NOW = Date.parse("2026-07-24T00:00:00Z");
+const future = new Date(NOW + 3 * 86400000).toISOString();
+const past = new Date(NOW - 1000).toISOString();
+
+check("entitlement: pro は paid",
+  JSON.stringify(entitlementFromProfile({ plan: "pro" }, NOW)) === JSON.stringify({ paid: true, trialActive: false }));
+check("entitlement: lifetime は paid",
+  entitlementFromProfile({ plan: "lifetime" }, NOW).paid === true);
+check("entitlement: 有効なトライアルは paid ではなく trialActive",
+  JSON.stringify(entitlementFromProfile({ plan: "free", trial_status: "active", trial_end_date: future }, NOW))
+    === JSON.stringify({ paid: false, trialActive: true }));
+check("entitlement: 期限切れトライアルは両方 false",
+  entitlementFromProfile({ plan: "free", trial_status: "active", trial_end_date: past }, NOW).trialActive === false);
+check("entitlement: プロフィール無し（未ログイン）は両方 false",
+  entitlementFromProfile(null, NOW).paid === false);
+check("entitlement: trial_end_date 欠落は trialActive にしない",
+  entitlementFromProfile({ plan: "free", trial_status: "active", trial_end_date: null }, NOW).trialActive === false);
+
+check("trial: 残り 3 日",
+  trialRemaining({ trial_status: "active", trial_end_date: future }, NOW).daysRemaining === 3);
+check("trial: 期限切れは expired=true / 残り 0",
+  JSON.stringify(trialRemaining({ trial_status: "active", trial_end_date: past }, NOW)) === JSON.stringify({ expired: true, daysRemaining: 0 }));
+check("trial: 未開始は expired=false / 残り 0",
+  trialRemaining({ trial_status: "never_started" }, NOW).expired === false);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

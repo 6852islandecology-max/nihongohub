@@ -6,7 +6,11 @@
   "description": "Japanese language learning SaaS — 5-language LP + AI-generated JLPT quizzes (Vercel Serverless + Anthropic Haiku 4.5)",
   "scripts": {
     "dev": "vercel dev",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "test": "node scripts/test-srs.mjs && node scripts/test-api-endpoints.mjs",
+    "blog:photos:fetch": "node scripts/fetch-wikimedia.mjs",
+    "blog:photos:inject": "node scripts/inject-lead-photo.mjs --all",
+    "blog:photos:sheet": "node scripts/contact-sheet.mjs"
   },
   "dependencies": {
     "@sentry/node": "^8.55.2",
