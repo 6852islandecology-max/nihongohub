@@ -27,4 +27,11 @@ _original_handoff.zip
 # One-off QA harness (local only, reads .env; never deploy)
 _qa/
 
+# ブログ画像のビルド入力（2026-07-24 追加）
+# blog/img/*.webp は scripts/inject-lead-photo.mjs がここから生成する配信物で、追跡する。
+# img-src/ は Wikimedia から取得した原本 54MB で、.vercelignore 済み＝本番には出ない。
+# git に入れる利点が無いので除外する（ローカルには残る）。
+blog/img-src/
+blog/img/_contact-sheet.png
+
 .vercel

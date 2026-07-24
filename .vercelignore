@@ -1,8 +1,67 @@
-dev-server.mjs
-logs/
-api/generate-batch.js
+# Vercel デプロイ除外リスト
+#
+# 注意: .vercelignore が存在する場合、Vercel CLI は .gitignore ではなくこちらを使う。
+# .gitignore に書いてあっても、ここに書かなければ本番に配信される。
+#
+# 2026-07-24 追加分の経緯:
+#   本番で https://www.nihongo-hub.com/drafts/PR-12-handbook-ch1-2-en-v1.md が 200 を返し、
+#   有料商品(生活ハンドブック)の原稿本文がそのまま読める状態だった。
+#   PHASE_B_DEPLOYMENT.md / ui-references/ / supabase/schema.sql / CLAUDE.md /
+#   content-pipeline/ も同様に公開されていた。
+#   サイト内からこれらへのリンクは一件も無いことを grep で確認済み。
 
+# ── ローカル専用ツール ──────────────────────────────────
+dev-server.mjs
 scripts/regen-bank.mjs
 _qa/
 _commitmsg.txt
 _original_handoff.zip
+
+# ── 生成ログ・作業成果物 ──────────────────────────────
+logs/
+design-proposals/
+blog/img-src/
+blog/img/_contact-sheet.png
+
+# ── Vercel Hobby の 12 関数上限を守るための除外 ────────────
+# api/ に 13 ファイルあるが、上限は 12。これを外すとデプロイ全体が凍結する。
+api/generate-batch.js
+
+# ── 内部ドキュメント（本番に出す必要がない）────────────────
+# 有料商品の原稿本文
+drafts/
+# 不採用となった外部 LLM 提案のデザイン素材
+ui-references/
+# 仕様書
+specs/
+# 未実装のまま残った旧パイプライン仕様
+content-pipeline/
+# DB スキーマと DDL
+supabase/
+# エージェントのセッション記録
+.claude/
+blog/.claude/
+
+# ── ルート直下の運用・戦略ドキュメント ────────────────────
+# いずれもサイト内からリンクされていない
+CLAUDE.md
+README.md
+EXTERNAL_REVIEW_v1.md
+GO-LIVE-OWNER-STEPS.md
+PAY-IT-FORWARD-OWNER-STEPS.md
+PHASE_B_DEPLOYMENT.md
+PHASE_B_DEPLOYMENT_WEB_UI.md
+STRIPE-SETUP.md
+competitive-analysis-2026-06-15.md
+handbook-free-preview-plan-2026-06-10.md
+persona-interview-template.md
+product-hunt-launch-plan.md
+refund-policy-draft.md
+spec-v1-draft.md
+strategic-review-2026-04-30.md
+
+# ── 公開のまま残すもの（誤って足さないこと）─────────────────
+# sources/    … blog/moving-to-japan-guide.html からリンク
+# downloads/  … exam-prep.html と blog 4 記事からリンク
+# data/       … 公開オープンデータページ (data/index.html)
+# .well-known/ mcp/ … AEO マニフェスト

@@ -23,7 +23,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 
 生成例（形式のみ参考、実値は毎回異なる）:
 ```
-a090b6a8592602ab558a5ce3ec36bf6c96c07a044d766fe94ceb7737fa7e9b03
+<ADMIN_KEY_64HEX_REDACTED_2026-07-24>
 ```
 
 本手順書内のコマンド例で `$ADMIN_KEY` と出てくる箇所は、生成した値を貼り付ける。
@@ -118,7 +118,7 @@ vercel env add UPSTASH_REDIS_REST_TOKEN production
 # 貼り付け: AX...
 
 vercel env add ADMIN_KEY production
-# 貼り付け: e33711650754e7d478dbe40aab1b0c429787146bcd3a974aadb8ece4d993e90d
+# 貼り付け: <ADMIN_KEY_64HEX_REDACTED_2026-07-24>
 ```
 
 ---
@@ -169,7 +169,7 @@ curl.exe https://<DEPLOY_URL>/api/health
 ```powershell
 # 英語のみ 5 レベル × 100 問 = 500 問
 curl.exe -X POST https://<DEPLOY_URL>/api/generate-batch `
-  -H "x-admin-key: e33711650754e7d478dbe40aab1b0c429787146bcd3a974aadb8ece4d993e90d" `
+  -H "x-admin-key: <ADMIN_KEY_64HEX_REDACTED_2026-07-24>" `
   -H "Content-Type: application/json" `
   -d '{\"langs\":[\"en\"],\"perCombo\":100}'
 
