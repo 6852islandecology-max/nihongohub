@@ -13,6 +13,10 @@
  *
  * Usage: node scripts/inject-hreflang.mjs            (writes changes)
  *        node scripts/inject-hreflang.mjs --dry       (report only)
+ *        node scripts/inject-hreflang.mjs --slugs=a,b (対象スラッグを限定)
+ *
+ * 2026-07-24: --slugs を追加。全体に流すと 271 ファイルを書き換えるので、
+ * 一部のクラスタだけを直したいときに影響範囲を絞れるようにした。
  */
 import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -22,6 +26,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BLOG = join(ROOT, 'blog');
 const BASE = 'https://www.nihongo-hub.com';
 const DRY = process.argv.includes('--dry');
+const slugArg = process.argv.find((a) => a.startsWith('--slugs='));
+const ONLY = slugArg ? new Set(slugArg.slice(8).split(',').map((s) => s.trim()).filter(Boolean)) : null;
 
 // location id -> { dir relative to blog/, urlPrefix, fallbackLang }
 const LOCATIONS = [
@@ -46,6 +52,7 @@ for (const loc of LOCATIONS) {
     if (!name.endsWith('.html') || name === 'index.html') continue;
     const file = join(abs, name);
     const slug = name.replace(/\.html$/, '');
+    if (ONLY && !ONLY.has(slug)) continue;
     const lang = htmlLang(file) || loc.fallbackLang;
     const url = `${BASE}${loc.urlPrefix}/${name}`;
     if (!slugMap.has(slug)) slugMap.set(slug, []);
