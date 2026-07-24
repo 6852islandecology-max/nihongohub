@@ -1,45 +1,68 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Shirakawa-go Cape</title>
-  
-  <!-- Frame border (rare - blue) -->
-  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#4d8fbf" stroke-width="2"/>
-  
-  <!-- Cape body - cream/off-white -->
-  <g id="cape">
-    <!-- Left shoulder -->
-    <rect x="12" y="12" width="4" height="4" fill="#e8dcc8"/>
-    <rect x="8" y="16" width="8" height="4" fill="#e8dcc8"/>
-    <rect x="8" y="20" width="4" height="4" fill="#e8dcc8"/>
-    
-    <!-- Right shoulder (mirrored) -->
-    <rect x="48" y="12" width="4" height="4" fill="#e8dcc8"/>
-    <rect x="48" y="16" width="8" height="4" fill="#e8dcc8"/>
-    <rect x="52" y="20" width="4" height="4" fill="#e8dcc8"/>
-    
-    <!-- Center cape drape -->
-    <rect x="24" y="16" width="16" height="4" fill="#d4c4b0"/>
-    <rect x="20" y="20" width="24" height="4" fill="#d4c4b0"/>
-    <rect x="16" y="24" width="32" height="4" fill="#c0a890"/>
-    <rect x="16" y="28" width="32" height="4" fill="#c0a890"/>
-    <rect x="20" y="32" width="24" height="4" fill="#a89070"/>
-    
-    <!-- Left edge accent (darker) -->
-    <rect x="8" y="20" width="4" height="4" fill="#8b7355"/>
-    <rect x="8" y="24" width="4" height="4" fill="#8b7355"/>
-    <rect x="12" y="28" width="4" height="4" fill="#8b7355"/>
-    
-    <!-- Right edge accent (darker) -->
-    <rect x="52" y="20" width="4" height="4" fill="#8b7355"/>
-    <rect x="52" y="24" width="4" height="4" fill="#8b7355"/>
-    <rect x="48" y="28" width="4" height="4" fill="#8b7355"/>
-  </g>
-  
-  <!-- Blue accent stripes (gassho pattern) -->
-  <rect x="24" y="24" width="4" height="4" fill="#4d8fbf"/>
-  <rect x="36" y="24" width="4" height="4" fill="#4d8fbf"/>
-  <rect x="20" y="28" width="4" height="4" fill="#4d8fbf"/>
-  <rect x="40" y="28" width="4" height="4" fill="#4d8fbf"/>
-  
-  <!-- Neck area (darker brown) -->
-  <rect x="28" y="12" width="8" height="4" fill="#6b5344"/>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Shirakawa-go Cape (rare)</title>
+<rect x="12" y="8" width="40" height="4" fill="#2a1a0c"/>
+<rect x="4" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="8" height="4" fill="#e8dcc8"/>
+<rect x="16" y="12" width="4" height="4" fill="#f5f0e8"/>
+<rect x="20" y="12" width="20" height="4" fill="#e8dcc8"/>
+<rect x="40" y="12" width="4" height="4" fill="#f5f0e8"/>
+<rect x="44" y="12" width="8" height="4" fill="#e8dcc8"/>
+<rect x="52" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#e8dcc8"/>
+<rect x="12" y="16" width="4" height="4" fill="#d4c4a0"/>
+<rect x="16" y="16" width="4" height="4" fill="#c4a882"/>
+<rect x="20" y="16" width="4" height="4" fill="#d4c4a0"/>
+<rect x="24" y="16" width="16" height="4" fill="#e8dcc8"/>
+<rect x="40" y="16" width="4" height="4" fill="#d4c4a0"/>
+<rect x="44" y="16" width="4" height="4" fill="#c4a882"/>
+<rect x="48" y="16" width="4" height="4" fill="#d4c4a0"/>
+<rect x="52" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#e8dcc8"/>
+<rect x="12" y="20" width="4" height="4" fill="#d4c4a0"/>
+<rect x="16" y="20" width="8" height="4" fill="#c4a882"/>
+<rect x="24" y="20" width="4" height="4" fill="#d4c4a0"/>
+<rect x="28" y="20" width="8" height="4" fill="#e8dcc8"/>
+<rect x="36" y="20" width="4" height="4" fill="#d4c4a0"/>
+<rect x="40" y="20" width="8" height="4" fill="#c4a882"/>
+<rect x="48" y="20" width="4" height="4" fill="#d4c4a0"/>
+<rect x="52" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#8b6b42"/>
+<rect x="12" y="24" width="4" height="4" fill="#d4c4a0"/>
+<rect x="16" y="24" width="12" height="4" fill="#c4a882"/>
+<rect x="28" y="24" width="8" height="4" fill="#e8dcc8"/>
+<rect x="36" y="24" width="8" height="4" fill="#c4a882"/>
+<rect x="44" y="24" width="4" height="4" fill="#d4c4a0"/>
+<rect x="48" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#8b6b42"/>
+<rect x="16" y="28" width="28" height="4" fill="#c4a882"/>
+<rect x="44" y="28" width="4" height="4" fill="#8b6b42"/>
+<rect x="48" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="4" height="4" fill="#8b6b42"/>
+<rect x="20" y="32" width="24" height="4" fill="#c4a882"/>
+<rect x="44" y="32" width="4" height="4" fill="#8b6b42"/>
+<rect x="48" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="4" height="4" fill="#8b6b42"/>
+<rect x="24" y="36" width="16" height="4" fill="#c4a882"/>
+<rect x="40" y="36" width="4" height="4" fill="#8b6b42"/>
+<rect x="44" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="40" width="4" height="4" fill="#8b6b42"/>
+<rect x="28" y="40" width="8" height="4" fill="#c4a882"/>
+<rect x="36" y="40" width="4" height="4" fill="#8b6b42"/>
+<rect x="40" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="44" width="4" height="4" fill="#8b6b42"/>
+<rect x="32" y="44" width="4" height="4" fill="#c4a882"/>
+<rect x="36" y="44" width="4" height="4" fill="#8b6b42"/>
+<rect x="40" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="48" width="8" height="4" fill="#8b6b42"/>
+<rect x="40" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="52" width="4" height="4" fill="#2a1a0c"/>
 </svg>

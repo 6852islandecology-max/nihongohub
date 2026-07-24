@@ -1,0 +1,52 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Carp Helmet</title>
+  
+  <!-- Main helmet body - dark red/maroon -->
+  <g id="helmet">
+    <!-- Top dome -->
+    <rect x="16" y="8" width="32" height="4" fill="#8B0000"/>
+    <rect x="12" y="12" width="40" height="4" fill="#A52A2A"/>
+    <rect x="8" y="16" width="48" height="4" fill="#B22222"/>
+    
+    <!-- Face guard - darker -->
+    <rect x="12" y="20" width="40" height="20" fill="#8B0000"/>
+    
+    <!-- Eye openings -->
+    <rect x="20" y="24" width="8" height="8" fill="#1a1a1a"/>
+    <rect x="36" y="24" width="8" height="8" fill="#1a1a1a"/>
+    
+    <!-- Cheek guards -->
+    <rect x="8" y="20" width="4" height="16" fill="#A52A2A"/>
+    <rect x="52" y="20" width="4" height="16" fill="#A52A2A"/>
+  </g>
+  
+  <!-- Carp details - gold/yellow accent with blue frame -->
+  <g id="carp-accent">
+    <!-- Blue rare frame/border -->
+    <rect x="8" y="16" width="48" height="24" fill="none" stroke="#4d8fbf" stroke-width="0"/>
+    <rect x="10" y="18" width="44" height="4" fill="#4d8fbf"/>
+    
+    <!-- Carp mouth detail - gold -->
+    <rect x="20" y="32" width="24" height="4" fill="#FFD700"/>
+    
+    <!-- Carp gill marks - gold -->
+    <rect x="12" y="28" width="4" height="8" fill="#FFD700"/>
+    <rect x="52" y="28" width="4" height="8" fill="#FFD700"/>
+    
+    <!-- Central carp scale pattern -->
+    <rect x="28" y="24" width="8" height="4" fill="#FFD700"/>
+    <rect x="24" y="28" width="4" height="4" fill="#FFA500"/>
+    <rect x="36" y="28" width="4" height="4" fill="#FFA500"/>
+  </g>
+  
+  <!-- Chin guard and base -->
+  <g id="chin">
+    <rect x="16" y="36" width="32" height="4" fill="#8B0000"/>
+    <rect x="12" y="40" width="40" height="4" fill="#A52A2A"/>
+    <rect x="16" y="44" width="32" height="4" fill="#4d8fbf"/>
+  </g>
+  
+  <!-- Side ornaments/whiskers for carp appearance -->
+  <rect x="4" y="26" width="4" height="8" fill="#FFD700"/>
+  <rect x="56" y="26" width="4" height="8" fill="#FFD700"/>
+</svg>

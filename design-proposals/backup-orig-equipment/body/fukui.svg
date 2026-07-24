@@ -1,0 +1,31 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Tojinbo Cliff Robe</title>
+  <g>
+    <!-- Outer robe frame/border -->
+    <rect x="20" y="12" width="24" height="32" fill="#9b9285"/>
+    <!-- Inner robe body - light cream -->
+    <rect x="24" y="16" width="16" height="28" fill="#e8dcc8"/>
+    <!-- Left sleeve -->
+    <rect x="12" y="16" width="12" height="20" fill="#c9a876"/>
+    <!-- Right sleeve -->
+    <rect x="40" y="16" width="12" height="20" fill="#c9a876"/>
+    <!-- Collar -->
+    <rect x="24" y="12" width="16" height="4" fill="#8b7355"/>
+    <!-- Waist tie accent -->
+    <rect x="20" y="28" width="24" height="3" fill="#6b5a4a"/>
+    <!-- Left chest detail - wave pattern -->
+    <rect x="24" y="20" width="4" height="4" fill="#9b8b78"/>
+    <!-- Right chest detail - wave pattern -->
+    <rect x="36" y="20" width="4" height="4" fill="#9b8b78"/>
+    <!-- Wind/cliff texture - left side -->
+    <rect x="28" y="24" width="3" height="3" fill="#a0907d"/>
+    <!-- Wind/cliff texture - right side -->
+    <rect x="33" y="26" width="3" height="3" fill="#a0907d"/>
+    <!-- Bottom hem detail -->
+    <rect x="24" y="40" width="16" height="2" fill="#7a6a5a"/>
+    <!-- Sleeve cuff left -->
+    <rect x="12" y="32" width="12" height="2" fill="#7a6a5a"/>
+    <!-- Sleeve cuff right -->
+    <rect x="40" y="32" width="12" height="2" fill="#7a6a5a"/>
+  </g>
+</svg>

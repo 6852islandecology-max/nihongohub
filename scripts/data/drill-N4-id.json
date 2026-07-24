@@ -1,0 +1,1272 @@
+{
+  "level": "N4",
+  "lang": "id",
+  "count": 115,
+  "items": [
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>友達<rt>ともだち</rt></ruby>が<ruby>遊び<rt>あそび</rt></ruby>に来た（　）、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を見ました。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ので",
+      "distractors": [
+        "から",
+        "のに",
+        "ばかりか"
+      ],
+      "explanation": "「ので」adalah bentuk kausal yang menunjukkan sebab-akibat dengan nada objektif dan alami: teman datang bermain (sebab), lalu kami menonton film bersama (akibat). Ini cocok untuk menceritakan peristiwa masa lalu yang terhubung. 「から」(kara) juga menyatakan sebab tetapi terdengar lebih eksplisit dan formal untuk konteks santai seperti ini; meski mungkin, 「ので」lebih wajar. 「のに」(noni) memiliki makna berlawanan/kontras (\"padahal\"), bukan sebab-akibat—contohnya akan berarti \"padahal teman datang bermain, kami menonton film\", yang tidak masuk akal di sini. 「ばかりか」(bakari ka) berarti \"tidak hanya... tetapi juga\", struktur untuk perbandingan, bukan hubungan sebab-akibat."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>ごはんを食べ<u>（　）</u>、<ruby>学校<rt>がっこう</rt></ruby>へ出かけた。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "てから",
+      "distractors": [
+        "ながら",
+        "ばかりに",
+        "ところに"
+      ],
+      "explanation": "ておいてから（「てから」）menyatakan bahwa suatu tindakan selesai terlebih dahulu sebelum tindakan berikutnya terjadi; di sini makan sarapan diselesaikan, lalu pergi ke sekolah—urutan waktu yang jelas. ながら (sambil) menunjukkan dua tindakan terjadi bersamaan, tetapi \"makan sarapan sambil pergi ke sekolah\" tidak logis secara alami. ばかりに (hanya karena) menyatakan alasan/akibat negatif dan memerlukan konteks konsekuensi buruk, yang tidak ada di sini. ところに (ketika/pada saat) menggambarkan sesuatu yang terjadi pada titik waktu tertentu, bukan urutan tindakan yang satu diselesaikan sebelum yang lain."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>は<ruby>時間<rt>じかん</rt></ruby>がないので、<ruby>駅<rt>えき</rt></ruby>へ（　）いきました。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat sesuai konteks.",
+      "correct": "走って",
+      "distractors": [
+        "歩いて",
+        "乗って",
+        "飛んで"
+      ],
+      "explanation": "走って（はしって）adalah jawaban yang tepat karena menunjukkan cara bergerak cepat ketika waktu terbatas di pagi hari—ini adalah konteks alami untuk menggunakan 走る（berlari）. 歩いて（あるいて、berjalan kaki）adalah cara bergerak yang lambat, tidak cocok dengan konteks 時間がない（tidak ada waktu）. 乗って（のって、naik）memerlukan objek seperti 車（mobil）atau 自転車（sepeda），tidak sesuai dengan pergi ke stasiun tanpa disebutkan kendaraan apa pun. 飛んで（とんで、terbang）adalah kata yang tidak realistis untuk manusia dalam kehidupan sehari-hari dan tidak diterima secara natural dalam kalimat ini."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に合わせるために、<ruby>今晩<rt>こんばん</rt></ruby><ruby>仕事<rt>しごと</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "終わら",
+      "distractors": [
+        "始まら",
+        "続け",
+        "進め"
+      ],
+      "explanation": "「終わらせます」（owari-asasemasu：selesaikan/rampungkan）adalah pilihan yang tepat karena konteks menunjukkan pembicara perlu menyelesaikan pekerjaan malam ini agar tidak terlambat untuk rapat besok. Ini mengungkapkan niat untuk menutup pekerjaan sebelum waktu rapat. 「始まら」（hajimara：mulai/dimulai）bermakna sebaliknya—memulai pekerjaan, bukan menyelesaikannya, sehingga tidak sesuai konteks. 「続け」（tsuzuke：lanjutkan）menyiratkan pekerjaan terus berlanjut tanpa selesai, yang bertentangan dengan tujuan tidak terlambat. 「進め」（susume：maju/berkembang）merujuk pada kemajuan pekerjaan secara umum tanpa menekankan penyelesaian, dan nuansanya kurang cocok untuk situasi yang mendesak ini."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に着いたとき、雨が降っていたので、<ruby>傘<rt>かさ</rt></ruby>を持って<ruby>会社<rt>かいしゃ</rt></ruby>に行った。この<ruby>雨<rt>あめ</rt></ruby>のおかげで、<ruby>花<rt>はな</rt></ruby>が元気に育つ（　）だ。",
+      "reading": "Pilih bentuk tata bahasa yang benar untuk melengkapi kalimat.",
+      "correct": "ことができる",
+      "distractors": [
+        "ことがある",
+        "ことにする",
+        "ことになる"
+      ],
+      "explanation": "ことができる menunjukkan kemampuan atau kemungkinan—di sini, \"bunga dapat tumbuh dengan sehat\" karena hujan memungkinkan pertumbuhan tersebut. ことがある (いままでに pengalaman tertentu pernah terjadi) tidak cocok karena bukan tentang menceritakan pengalaman masa lalu yang spesifik. ことにする (memutuskan atau menentukan untuk melakukan sesuatu) salah karena kalimat berbicara tentang hasil alami, bukan keputusan yang dibuat. ことになる (menjadi situasi/keadaan tertentu secara otomatis atau akibat keputusan pihak lain) terlalu menunjukkan perubahan status eksternal daripada kemampuan yang dimungkinkan oleh hujan."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>に<u>出席</u>することが<ruby>大切</ruby>です。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しゅっせき",
+      "distractors": [
+        "でたせき",
+        "しゅつせき",
+        "でしゅっせき"
+      ],
+      "explanation": "しゅっせき (出席) adalah bacaan yang benar untuk 「出席」yang berarti \"kehadiran\" atau \"menghadiri\". Ini adalah kata benda yang tepat dalam konteks perlu menghadiri pertemuan bisnis. でたせき salah karena bukan bacaan resmi kanji 出 dalam kata 出席 (出 dibaca 「しゅつ」atau 「で」, tetapi kombinasi 「でたせき」tidak ada dalam bahasa Jepang). しゅつせき (dengan つ) adalah bacaan yang salah untuk kanji ini—meskipun しゅ benar untuk 出, ですう harus dalam bentuk -せき, bukan -つせき. でしゅっせき salah karena menggabungkan pembacaan yang tidak sesuai dan terlalu panjang untuk kata tersebut."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>朝</ruby>、<ruby>駅</ruby>で<ruby>友達</ruby>に<u>会</u>います。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang bergaris bawah.",
+      "correct": "あいます",
+      "distractors": [
+        "あきます",
+        "まわります",
+        "かいます"
+      ],
+      "explanation": "会う (あう) berarti \"bertemu\" dan merupakan versi ます dari 会（あ）う. Bacaan あいます adalah bentuk polite future tense yang tepat untuk konteks \"akan bertemu teman di stasiun besok pagi\". Distraktor あきます (dari 開く, \"membuka\") memiliki kanji berbeda dan arti sama sekali tidak sesuai. Distraktor まわります (dari 回る, \"berputar/berkeliling\") juga kanji dan arti berbeda, tidak cocok di konteks ini. Distraktor かいます (dari 買う, \"membeli\") adalah kata nyata tetapi artinya tidak sesuai dengan situasi bertemu orang; di sini butuh \"bertemu\", bukan \"membeli\"."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はし</rt></ruby>る（　）、<ruby>健康<rt>けんこう</rt></ruby>になりました。",
+      "reading": "Pilih bentuk grammar yang tepat untuk melengkapi kalimat.",
+      "correct": "ようになった",
+      "distractors": [
+        "ために",
+        "ことができた",
+        "ながら"
+      ],
+      "explanation": "「ようになった」（~yō ni natta）adalah pola yang menunjukkan perubahan keadaan atau hasil dari tindakan berulang—dalam hal ini, rutinitas berlari setiap hari MENGHASILKAN peningkatan kesehatan. Pola ini sempurna untuk menyatakan 'sebagai hasilnya, menjadi' atau 'mengalami perubahan menjadi'. — 「ために」(tame ni, untuk/karena) menunjukkan tujuan atau alasan, tetapi di sini bermakna 'untuk MENJADI sehat', bukan 'MENJADI sehat sebagai hasil'; tidak cocok untuk pola sebab-akibat dalam konteks ini. — 「ことができた」(koto ga dekita, bisa/mampu melakukan) menunjukkan kemampuan, bukan perubahan keadaan; kalimat ini tidak berbicara tentang kemampuan baru, melainkan transformasi kesehatan. — 「ながら」(nagara, sambil/sedangkan) menunjukkan dua tindakan terjadi bersamaan, tetapi tidak cocok untuk menyatakan hasil akhir dari kebiasaan; bermakna 'sambil berlari setiap hari, (melakukan hal lain)' yang tidak sesuai konteks."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>母<rt>はは</rt></ruby>が<ruby>駅<rt>えき</rt></ruby>で<ruby>荷物<rt>にもつ</rt></ruby>を（<u>　</u>）ました。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "受け取り",
+      "distractors": [
+        "借り",
+        "返し",
+        "送り"
+      ],
+      "explanation": "受け取り（うけとり）adalah bentuk dasar verb 受け取る yang berarti 'menerima/mengambil sesuatu dari seseorang', dan sesuai dengan konteks ibu menerima paket di stasiun. 借り（かり）berarti 'meminjam', yang salah karena ibu tidak meminjam barang melainkan menerimanya. 返し（かえし）berarti 'mengembalikan', tidak tepat karena tidak ada konteks mengembalikan sesuatu di sini. 送り（おくり）berarti 'mengirim', berlawanan dengan makna kalimat—ibu menerima barang, bukan mengirimnya."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>は<ruby>午前</ruby>十<ruby>時</ruby>に<u>開始</u>されます。",
+      "reading": "Pilih pembacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "かいし",
+      "distractors": [
+        "かいじ",
+        "ひらき",
+        "かいしょ"
+      ],
+      "explanation": "かいし (開始) adalah pembacaan yang benar untuk kata majemuk kanji yang berarti 'memulai' atau 'dimulai', dan cocok dalam konteks kalimat tentang waktu dimulainya pertemuan. かいじ adalah pembacaan yang salah karena meskipun kanji pertama sama, kata ini berarti 'pembicara' atau 'orang yang berbicara' dan tidak sesuai dengan konteks waktu. ひらき (buka/membuka) adalah pembacaan alternative untuk kanji pertama 開 tetapi bukan merupakan pembacaan dari 開始 sebagai satu kata majemuk yang tepat. かいしょ (kantor/tempat) adalah pembacaan yang salah karena merupakan komposisi kanji yang berbeda (開所) dan berarti tempat pembukaan, bukan tentang waktu dimulainya sesuatu."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>は<u>重要</u>なことばかりでした。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "おもよう",
+        "じゅうぎょう",
+        "ちょうよう"
+      ],
+      "explanation": "じゅうよう (重要) berarti \"penting\" atau \"krusial\", dan merupakan kata sifat-i yang umum dalam konteks bisnis dan akademis. Bacaan ini menggabungkan kanji 重 (じゅう = berat/penting) dan 要 (よう = diperlukan/esensi), yang adalah kolokasi standar untuk \"sangat penting\". おもよう (おも = terasa; よう = gaya) bukan bacaan yang benar untuk 重要 dan terdengar seperti penggabungan yang salah. じゅうぎょう (ぎょう = bisnis/pekerjaan) adalah bacaan yang salah karena 要 tidak pernah dibaca sebagai ぎょう dalam konteks ini—ini adalah distraksi berbasis kanji yang mirip. ちょうよう (ちょう = panjang/dihargai) adalah bacaan yang tidak tepat karena kanji 重 tidak dibaca sebagai ちょう dalam kombinasi ini; ini merupakan bacaan alternatif dari kanji lain yang mungkin membingungkan pelajar."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きることができる（　）、<ruby>健康<rt>けんこう</rt></ruby>になります。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ようになる",
+      "distractors": [
+        "ようにする",
+        "ためになる",
+        "ことになる"
+      ],
+      "explanation": "「～ようになる」adalah pola tata bahasa N4 yang menunjukkan perubahan kondisi atau kemampuan yang terjadi secara bertahap setelah melakukan sesuatu dengan konsisten. Dalam kalimat ini, \"setiap hari bangun pagi\" menyebabkan perubahan menjadi sehat, sehingga \"ようになる\" adalah jawaban yang tepat. \"ようにする\" (berusaha melakukan) salah karena kalimat berbicara tentang perubahan natural, bukan usaha sengaja. \"ためになる\" (menjadi bermanfaat) salah karena tidak menunjukkan perubahan kondisi kesehatan seseorang. \"ことになる\" (akan menjadi situasi) salah karena mengacu pada keputusan atau situasi yang sudah ditentukan, bukan hasil natural dari kebiasaan."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>に<u>行く</u>前に、いつも<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "寝",
+        "作り"
+      ],
+      "explanation": "「食べます」（makan) adalah jawaban yang benar karena コロケーション standar dalam bahasa Jepang adalah「朝食を食べる」(makan sarapan)；朝食 (sarapan) adalah makanan padat, bukan minuman. 「飲み」(nomu, minum) salah karena sarapan dimakan, bukan diminum—kolokasinya adalah「水を飲む」atau「牛乳を飲む」. 「寝」(neru, tidur) salah karena maknanya sama sekali tidak sesuai; kalimat berbicara tentang aktivitas pagi hari sebelum sekolah, bukan tidur. 「作り」(tsukuru, membuat) mungkin tidak masuk akal secara tata bahasa karena memerlukan objek tambahan (misalnya「朝食を作ります」= membuat sarapan)—di sini menyiratkan orang lain membuat sarapan untuk pembicara, yang tidak sesuai dengan konteks kalimat."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>しているのに、<ruby>体<rt>からだ</rt></ruby>が<ruby>元気<rt>げんき</rt></ruby>にならない（　）、<ruby>医者<rt>いしゃ</rt></ruby>に<ruby>相談<rt>そうだん</rt></ruby>することにした。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ので",
+      "distractors": [
+        "から",
+        "のに",
+        "ため"
+      ],
+      "explanation": "「ので」adalah bentuk yang tepat untuk menunjukkan sebab atau alasan yang objektif di sini: 'Karena tubuhku tidak menjadi sehat meskipun berolahraga setiap hari, aku memutuskan berkonsultasi dengan dokter.' Bentuk「から」(kara) juga menyatakan sebab, tetapi dalam konteks ini kurang natural; 「から」lebih cocok untuk alasan yang subjektif atau keputusan pribadi yang sederhana, sedangkan 「ので」lebih objektif dan formal. Bentuk「のに」(noni) berarti 'meskipun/padahal' dan menyatakan kontras, bukan sebab, jadi maknanya salah di sini. Bentuk「ため」(tame) berarti 'untuk tujuan' atau 'karena' dalam konteks sebab-akibat jangka panjang, tetapi memerlukan struktur berbeda (biasanya 「～ために～」) dan tidak sesuai dengan konstruksi kalimat ini."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>に<ruby>行く</ruby>ので、<ruby>疲</ruby>れています。",
+      "reading": "Pilih pembacaan kanji yang digarisbawahi dengan benar.",
+      "correct": "しごと",
+      "distractors": [
+        "しごく",
+        "しぎょう",
+        "じぎょう"
+      ],
+      "explanation": "しごと adalah pembacaan yang benar untuk 仕事 (pekerjaan/kerja). Kompon 仕事 selalu dibaca しごと dalam konteks \"pergi bekerja\" (仕事に行く), yang merupakan ungkapan sehari-hari standar di N4. しごく (arti lain: sangat, ekstrem) adalah pembacaan salah untuk kanji ini dalam konteks ini. しぎょう adalah pembacaan yang tidak ada untuk 仕事. じぎょう adalah bacaan alternatif kanji 事業 (bisnis/usaha), bukan 仕事, dan tidak cocok di sini."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いた<u>（　）</u>、<ruby>友<rt>とも</rt></ruby>だちがまだ<ruby>来<rt>き</rt></ruby>ていなかった。",
+      "reading": "Pilih bentuk grammar yang tepat untuk melengkapi kalimat.",
+      "correct": "ばかり",
+      "distractors": [
+        "ばかりか",
+        "ころ",
+        "ほうが"
+      ],
+      "explanation": "ばかり (sebelum tanda baca) mengungkapkan bahwa sebuah tindakan baru saja terjadi dan segera diikuti oleh peristiwa berikutnya (『着いたばかり』= 'baru saja tiba'), cocok untuk konteks 'Baru saja tiba di stasiun, teman belum datang'. ばかりか (bakarika) berarti 'tidak hanya... bahkan', memerlukan kalimat negatif atau pola yang berbeda, tidak sesuai di sini. ころ (waktu/periode) memang bisa bermakna 'ketika', tetapi di N4 tidak dipakai tanpa partikel 「の」 dan terasa tidak alami dalam konteks ini. ほうが meminta perbandingan ('lebih baik... daripada'), yang tidak sesuai dengan makna kalimat tentang urutan peristiwa."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は<ruby>大変<rt>たいへん</rt></ruby>ですが、<ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>と<ruby>公園<rt>こうえん</rt></ruby>で（　）ことが<ruby>好き<rt>すき</rt></ruby>です。",
+      "reading": "Pilih kata kerja yang tepat sesuai konteks.",
+      "correct": "遊ぶ",
+      "distractors": [
+        "働く",
+        "勉強する",
+        "休む"
+      ],
+      "explanation": "「遊ぶ」（あそぶ）adalah jawaban yang tepat karena menunjukkan aktivitas santai dan menyenangkan yang dilakukan dengan teman di taman pada akhir pekan setelah pekerjaan yang melelahkan — ini adalah hobi yang alami dan realistis. 「働く」（はたらく、bekerja）salah karena kalimat sudah menyebutkan bahwa pekerjaan harian sudah melelahkan, jadi tidak masuk akal jika itu yang dilakukan untuk bersenang-senang di akhir pekan. 「勉強する」（べんきょうする、belajar）salah karena aktivitas belajar tidak cocok dengan konteks \"dengan teman di taman\" sebagai hobi menyenangkan — lebih formal dan serius, bukan rekreasi santai. 「休む」（やすむ、istirahat）salah karena meskipun bermakna rileks, kata ini menyiratkan tidur atau tidak melakukan apa-apa, bukan aktivitas spesifik \"bersama teman di taman\"."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそ</rt></ruby>しいから、<ruby>友<rt>とも</rt></ruby>だちに<ruby>電話<rt>でんわ</rt></ruby>を（　）<ruby>時間<rt>じかん</rt></ruby>がない。",
+      "reading": "Pilih kata kerja yang tepat sesuai konteks kalimat.",
+      "correct": "かけて",
+      "distractors": [
+        "かいて",
+        "かぶって",
+        "かたて"
+      ],
+      "explanation": "「かけて」（〜ながら の意味で「～しながら」の形）は「電話をかけながら時間がない」で、「電話をかけるのに時間がない」という意味になり、文脈に合う。相手に連絡できないほど忙しいという状況を正確に表現している。「かいて」（かく＝書く）は電話ではなく文字を書く意味なので、「電話」と合わない。「かぶって」（かぶる＝被る）は帽子などをかぶる意味で、電話と無関係である。「かたて」は実在しない造語であり、日本語として成立しない。"
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>朝</ruby>、<ruby>電車</ruby>で<ruby>駅</ruby>の<ruby>近く</ruby>の<u>会社</u>に<ruby>行</ruby>きます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "かいしゃ",
+      "distractors": [
+        "かいしゃく",
+        "あいしゃ",
+        "かいがい"
+      ],
+      "explanation": "「会社」dibaca 「かいしゃ」karena 「会」(あ-u) artinya 'berkumpul/bertemu' dan 「社」(しゃ) artinya 'perusahaan/organisasi', sehingga gabungannya adalah 'perusahaan' — kata benda standar dalam konteks pekerjaan di level N4. 「かいしゃく」adalah bacaan yang salah karena 「社」tidak pernah dibaca 「く」pada level ini, dan ini bukan bentuk yang nyata dalam bahasa Jepang. 「あいしゃ」terdengar mirip tetapi 「会」di sini dibaca 「かい」bukan 「あい」dalam konteks kanji majemuk 「会社」; bacaan ini akan menghasilkan makna yang tidak tepat. 「かいがい」artinya 'luar negeri' dan merupakan kanji majemuk yang berbeda (外 bukan 社); meskipun dimulai dengan 「かい」, kanji keduanya tidak cocok dalam kalimat yang berbicara tentang lokasi kantor."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>朝</ruby>、<ruby>駅</ruby>の<ruby>近く</ruby>にある<u>新しい</u><ruby>店</ruby>へ<ruby>行く</ruby>つもりです。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "にいしい"
+      ],
+      "explanation": "「新しい」(あたらしい) adalah bentuk i-adjektif standar yang berarti \"baru\" dan cocok dengan konteks kalimat yang berbicara tentang toko baru. Distraktor pertama (しんしい) adalah kesalahan umum karena kanji 新 sering dibaca しん dalam kata benda (seperti 新年), tetapi sebagai adjektif harus あたらしい. Distraktor kedua (あらたしい) terdengar mirip dengan jawaban benar, tetapi pembacaan 新 sebagai あらた tidak benar untuk adjektif standar—「あらた」hanya digunakan dalam konteks tertentu atau sebagai nama. Distraktor ketiga (にいしい) adalah kesalahan fonetik yang tidak memiliki pembacaan yang sah untuk kanji 新 dalam konteks apa pun."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に合わせるために、私は早く<ruby>起<rt>お</rt></ruby>きた（　）。",
+      "reading": "Pilih bentuk grammar yang tepat untuk melengkapi kalimat.",
+      "correct": "い",
+      "distractors": [
+        "いる",
+        "いた",
+        "ける"
+      ],
+      "explanation": "文法「～たい」は「～したいです」という欲望や目的を表す形容詞で、この場合「早く起きたい」は「早く起きたいです」という意味で「朝の会議に間に合わせるために、早く起きたい」は「～ために」の後に来る目的を示す文として自然です。「いる」は進行形を意味するため「起きている」という別の意味になり不自然です。「いた」は過去形ですが、ここは現在の希望（～たい）を表しているため文法が合いません。「ける」は動詞の可能形の語幹であり、この文脈では何の役割も果たさないため不正解です。"
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いた（　）、すぐに<ruby>仕事<rt>しごと</rt></ruby>を<ruby>始<rt>はじ</rt></ruby>めました。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "とたんに",
+      "distractors": [
+        "ばかりか",
+        "ところで",
+        "ながら"
+      ],
+      "explanation": "「とたんに」（=すぐに、直後に）は「～した直後に」という意味で、朝駅に着いた後すぐに仕事を始めたという時間の流れを自然に表します。「ばかりか」（～だけでなく、さらに）は付加的な意味を加える接続詞で、ここでは文脈に合いません。「ところで」（=その時、その場で）は「～したところに」という形で使う必要があり、単独では不自然です。「ながら」（同時進行）は二つの動作が同時に起きることを表しますが、「着いた後に始める」という順序関係を示すここでは不適切です。"
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>まで<ruby>走<rt>はし</rt></ruby>る（　）<ruby>健康<rt>けんこう</rt></ruby>になりました。",
+      "reading": "Pilih bentuk tata bahasa yang benar untuk melengkapi kalimat.",
+      "correct": "ようになって",
+      "distractors": [
+        "ことができて",
+        "ために",
+        "ながら"
+      ],
+      "explanation": "ようになって (bentuk: ~ようになって) menunjukkan perubahan keadaan atau hasil dari tindakan berulang—'menjadi sehat' adalah hasil alami dari berlari setiap pagi selama waktu lama, cocok dengan konteks 'menjadi' (kennen = menjadi sehat). ことができて (koto ga deki-te, artinya 'dapat melakukan') mengungkapkan kemampuan, bukan perubahan keadaan, sehingga salah di sini. ために (tujuan, 'untuk') akan bermakna 'berlari untuk menjadi sehat', tetapi struktur kalimatnya tidak sesuai karena ために biasanya muncul sebelum verba tujuan, bukan sebagai penanda hasil akhir. ながら (sambil, bentuk '-naga-ra') berarti 'sambil berlari', melucuti makna perubahan atau hasil yang dimaksudkan."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>で<ruby>友達<rt>ともだち</rt></ruby>に会った<u>（　）</u>、一緒に<ruby>会社<rt>かいしゃ</rt></ruby>に行きました。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ので",
+      "distractors": [
+        "から",
+        "ために",
+        "ばかり"
+      ],
+      "explanation": "「ので」adalah bentuk yang tepat di sini karena menyatakan sebab-akibat dengan nuansa alami dan objektif (因果関係)—karena bertemu teman di stasiun, mereka pergi ke perusahaan bersama-sama adalah konsekuensi wajar yang mengikuti. 「から」(kara) juga menyatakan sebab, tetapi dalam konteks ini terasa lebih lemah dan kurang alami untuk menghubungkan dua peristiwa berurutan; itu lebih sering untuk alasan yang lebih eksplisit atau perintah. 「ために」(tame ni) berarti \"untuk tujuan\" atau \"demi\", bukan untuk menyatakan sebab dari suatu hasil yang sudah terjadi—kalimat ini menjelaskan apa yang terjadi akibat pertemuan, bukan tujuan dari pertemuan itu. 「ばかり」(bakari) berarti \"hanya\" atau \"baru saja\", tidak cocok sama sekali di posisi ini karena tidak menyatakan hubungan sebab-akibat."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>出席<rt>しゅっせき</rt></ruby>できなかった（　）、<ruby>上司<rt>じょうし</rt></ruby>に<ruby>謝罪<rt>しゃざい</rt></ruby>した。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ので",
+      "distractors": [
+        "から",
+        "ために",
+        "ばかり"
+      ],
+      "explanation": "ので (karena) adalah bentuk kausal yang tepat untuk menunjukkan alasan di belakangnya; kalimat ini mengatakan \"karena tidak bisa menghadiri rapat kemarin, aku meminta maaf kepada atasan.\" から (dari/karena) juga bentuk kausal tetapi dalam konteks ini lebih kasar atau tidak formal dibanding ので. ために memiliki makna \"untuk tujuan\" (purposive), bukan kausal, sehingga tidak tepat di sini. ばかり berarti \"hanya\" atau \"sebatas,\" dan digunakan untuk menunjukkan jumlah atau batas, sama sekali tidak cocok untuk hubungan sebab-akibat."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang sesuai dengan konteks kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "「飲む」（飲み）adalah kata kerja yang benar karena minuman seperti 牛乳 harus diminum, bukan dimakan atau dilakukan tindakan lain. Distraktor pertama 「食べ」（たべ：makan）adalah kata kerja untuk makanan padat, tidak cocok untuk minuman. Distraktor kedua 「読み」（よみ：membaca）tidak masuk akal dalam konteks ini karena tidak ada hubungan antara membaca dan minum susu. Distraktor ketiga 「聞き」（きき：mendengar）juga salah karena mendengar tidak berkaitan dengan mengonsumsi minuman pada pagi hari."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>時間<rt>じかん</rt></ruby>がなかった（　）、<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>り<ruby>遅<rt>おく</rt></ruby>れた。",
+      "reading": "Pilih bentuk tata bahasa yang benar untuk melengkapi kalimat.",
+      "correct": "ので",
+      "distractors": [
+        "から",
+        "のに",
+        "ながら"
+      ],
+      "explanation": "「ので」(karena/sebab) adalah bentuk yang tepat untuk menunjukkan hubungan sebab-akibat yang objektif dan alami. Kalimat ini menjelaskan bahwa karena tidak ada waktu di pagi hari, maka tertinggal kereta — ini adalah penyebab langsung dari akibat yang objektif. 「から」(dari/karena) juga menunjukkan sebab, tetapi lebih sering digunakan dalam konteks penjelasan yang lebih subjektif atau alasan yang diceritakan pembicara, bukan situasi objektif yang terjadi dengan sendirinya. 「のに」(meskipun/padahal) menunjukkan kontras atau pertentangan, tetapi di sini tidak ada pertentangan — kedua kalimat berhubungan sebagai sebab dan akibat yang sejalan. 「ながら」(sambil/seraya) menunjukkan dua tindakan yang terjadi secara bersamaan, bukan hubungan sebab-akibat, jadi tidak cocok untuk menjelaskan mengapa seseorang tertinggal kereta."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>は<u>重要</u>な<ruby>話題</ruby>が<ruby>多</ruby>いです。",
+      "reading": "Pilih pembacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "ちょうよう",
+        "おもよう",
+        "じゅうかい"
+      ],
+      "explanation": "じゅうよう adalah pembacaan yang benar untuk 重要 (penting/signifikan), kompaun yang umum dalam konteks rapat dan diskusi bisnis di tingkat N4. ちょうよう (chōyō) terdengar mirip tetapi bukan pembacaan kanji ini; 長 memiliki pembacaan cho, tetapi 重要 tidak pernah dibaca demikian dalam konteks standar. おもよう (omoyō) menggabungkan pembacaan on-yomi dan kun-yomi yang tidak konsisten (omoi adalah arti 'berat' tetapi bukan bagian dari pembacaan 重要 sebagai nomina). じゅうかい (jūkai) salah memanfaatkan kanji 重 dengan 会 (pertemuan), menciptakan kata yang tidak ada; meskipun 重 dapat dibaca ju, penggabungan ini tidak menghasilkan kata yang valid."
+    },
+    {
+      "question": "<ruby>毎日</ruby>の<u>仕事</u>は<ruby>大変</ruby>ですが、<ruby>頑張</ruby>っています。",
+      "reading": "Pilih bacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しごく",
+        "じぎょう",
+        "しぎょう"
+      ],
+      "explanation": "しごと (仕事) adalah bacaan yang benar untuk kata yang berarti 'pekerjaan' atau 'tugas'. Ini adalah kanji gabungan N4 dasar yang menggunakan bacaan on-kun campuran: し(pembacaan go-on dari 仕) + ごと(bacaan kun dari 事). Distractor しごく adalah bacaan salah yang tidak sesuai dengan kanji ini. Distractor じぎょう adalah bacaan alternatif dari 事業 (bisnis/perusahaan), bukan 仕事, sehingga maknanya berbeda meskipun berbagi satu kanji. Distractor しぎょう adalah kombinasi pembacaan yang tidak ada—meskipun bunyi mirip dengan pilihan yang benar, urutan dan pelafalan pada kanji 仕 tidak menghasilkan pembacaan ini."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>朝</ruby>から<u>仕事</u>をしていました。",
+      "reading": "Pilih bacaan yang benar untuk kanji bergaris bawah.",
+      "correct": "しごと",
+      "distractors": [
+        "しごく",
+        "しぎょう",
+        "しぐと"
+      ],
+      "explanation": "しごと adalah bacaan standar untuk 仕事 yang berarti 'pekerjaan' atau 'tugas', dan di sini menunjukkan aktivitas yang dilakukan sepanjang hari. しごく (salah—artinya adalah kata kerja 'hingga tuntas') adalah bacaan salah untuk kanji ini dalam konteks ini. しぎょう (salah—ini bacaan yang tidak ada untuk 仕事, dan meskipun mirip dengan 事業 yang berarti bisnis, bukan bacaan yang tepat) tidak sesuai dengan struktur kalimat. しぐと (salah—bacaan yang dibuat-buat dan tidak sesuai dengan pelafalan kanji Jepang standar) bukan bacaan yang valid untuk kanji ini."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>は<ruby>午後</ruby>2<ruby>時</ruby>から<u>始</u>まります。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "はじ",
+      "distractors": [
+        "し",
+        "かい",
+        "じ"
+      ],
+      "explanation": "始まります (はじまります) adalah bentuk present tense dari 始まる yang berarti 'dimulai'. Kanji 始 dibaca 「はじ」 sebagai bagian dari kata kerja 始まる. Distractor し adalah bacaan on-yomi dari kanji 始, namun digunakan dalam konteks yang berbeda (misal dalam kata 始まり/はじまり, 始めて/はじめて), bukan dalam posisi ini sebagai stem. Distractor かい adalah bacaan salah yang berbunyi mirip dengan 会議 (かいぎ) yang sudah ada di kalimat—ini adalah jebakan visual bagi pelajar yang kurang perhatian. Distractor じ adalah bacaan dari kanji 時 dalam kalimat yang sama, sehingga mudah membingungkan pelajar yang tergesa-gesa membaca, meskipun 時 sudah memiliki kanji sendiri di depannya."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>が<ruby>大変</ruby>だから、<ruby>週末</ruby>は<ruby>休</ruby>みたいです。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しぎょう",
+        "じぎょう",
+        "しぎょ"
+      ],
+      "explanation": "しごと（仕事）adalah bacaan yang benar untuk kanji majemuk 仕事, yang berarti \"pekerjaan\" atau \"tugas\". Ini adalah kata benda standar N4 yang sering digunakan dalam konteks pekerjaan sehari-hari. Distractor しぎょう adalah pembacaan yang salah karena tidak sesuai dengan cara baca kanji 仕 dan 事 dalam kombinasi ini—bacaan yang benar adalah し+ご, bukan し+ぎょう. Distractor じぎょう (事業, \"bisnis\") adalah kata nyata tetapi menggunakan kanji yang berbeda dan bacaan berbeda; meskipun mirip, kanji 仕事 tidak pernah dibaca じぎょう. Distractor しぎょ adalah bacaan yang tidak lengkap dan tidak membentuk kata yang bermakna—kata benda dalam bahasa Jepang memerlukan bacaan lengkap."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きる（　）、<ruby>健康<rt>けんこう</rt></ruby>になることができます。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ことで",
+      "distractors": [
+        "ことに",
+        "ことが",
+        "ことを"
+      ],
+      "explanation": "「毎日朝早く起きることで、健康になることができます」は pola 「～ことで」yang menunjukkan cara atau sarana untuk mencapai hasil. Disini, 'bangun pagi setiap hari' adalah cara/sarana untuk mencapai 'menjadi sehat', sehingga 「ことで」tepat. 「ことに」(menyadari/mengetahui) mengubah makna kalimat menjadi 'ketika menyadari bahwa bangun pagi setiap hari, dia bisa menjadi sehat' — salah konteks. 「ことが」(subjek) akan menghasilkan 'bangun pagi setiap hari itu bisa menjadi sehat' — struktur tidak cocok di sini karena sudah ada 「ができます」. 「ことを」(objek) mengubah makna menjadi 'membuat/melakukan untuk mencapai bangun pagi setiap hari' — tujuan terbalik dan salah makna."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそ</rt></ruby>しかった（　）、<ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ったのは<ruby>夜<rt>よる</rt></ruby>の10<ruby>時<rt>じ</rt></ruby>でした。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ので",
+      "distractors": [
+        "のに",
+        "から",
+        "ため"
+      ],
+      "explanation": "「ので」adalah bentuk yang tepat untuk menyatakan alasan atau sebab yang mengakibatkan hasil tertentu. Di sini, kalimat menjelaskan bahwa 'karena pekerjaan sibuk kemarin, (maka) pulang ke rumah pada jam 10 malam'—hubungan sebab-akibat yang jelas. 「のに」(noni) menyatakan kontras atau pertentangan ('meski...'), bukan sebab-akibat, jadi salah di sini—yang diinginkan adalah alasan mengapa pulang terlambat, bukan pertentangan. 「から」(kara) juga dapat menyatakan alasan, tetapi dalam konteks ini 「ので」lebih alami dan menunjukkan sebab yang objektif, sedangkan 「から」cenderung terasa lebih kasual atau subjektif. 「ため」(tame) berarti 'untuk/demi', digunakan untuk menyatakan tujuan (例：勉強するため), bukan alasan terjadinya sesuatu yang sudah selesai, jadi tidak cocok dengan konteks past tense di sini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に行く前に<ruby>コーヒー<rt>こーひー</rt></ruby>を飲む（　）、<ruby>仕事<rt>しごと</rt></ruby>に行きます。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ことにしている",
+      "distractors": [
+        "ことができる",
+        "ことにした",
+        "ことにして"
+      ],
+      "explanation": "「ことにしている」（menjadi kebiasaan rutin yang dipilih secara sadar) adalah bentuk yang tepat di sini karena menjelaskan tindakan berulang yang disengaja—pembicaraan melakukan rutinitas setiap hari: minum kopi sebelum pergi ke stasiun. \"ことができる\" (dapat melakukan) mengacu pada kemampuan, bukan kebiasaan; konteks menunjukkan tindakan yang disengaja dan berulang, bukan kemampuan. \"ことにした\" (memutuskan/mengambil keputusan) adalah bentuk lampau yang tidak sesuai karena kalimat menggambarkan kebiasaan berlangsung, bukan keputusan satu kali yang sudah selesai. \"ことにして\" (dengan maksud/dengan alasan) adalah bentuk gerund yang mengacu pada tujuan sesaat, bukan rutinitas berkelanjutan yang dinyatakan dengan \"毎日\" (setiap hari)."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>病院</ruby>で<u>診察</u>を<ruby>受</ruby>けました。",
+      "reading": "Pilih bacaan hiragana yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しんさつ",
+      "distractors": [
+        "しんせつ",
+        "けんさつ",
+        "しんさく"
+      ],
+      "explanation": "しんさつ (診察) adalah istilah medis standar yang berarti 'pemeriksaan medis oleh dokter', cocok untuk konteks rumah sakit dalam kalimat ini. しんせつ (親切) berarti 'kebaikan/kesopanan' — meskipun kanji pertama sama, bacaan dan makna sama sekali berbeda, dan tidak masuk akal dalam konteks menerima layanan medis. けんさつ (検察) adalah bacaan kanji berbeda yang berarti 'penuntutan hukum' — tidak relevan dengan rumah sakit. しんさく (審作) bukan kata nyata yang umum digunakan dan tidak sesuai konteks medis. Siswa yang paham kanji medis akan memilih しんさつ dengan percaya diri."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>に<ruby>出席</ruby>するために、<u>早起き</u>しなければなりません。",
+      "reading": "Pilih pembacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "はやおき",
+      "distractors": [
+        "さきおき",
+        "はやあき",
+        "そうおき"
+      ],
+      "explanation": "「早起き」は kata benda yang berarti \"bangun pagi\" atau \"bangun lebih awal dari biasanya\". Pembacaan yang benar adalah はやおき—「早」(はや) berarti \"cepat/awal\" dan「起き」(おき) adalah bentuk nomina dari verba 起きる \"bangun\". Distractor さきおき (先起き) menggunakan kanji 先 yang berbeda dengan 早, meskipun keduanya bisa berarti \"cepat\" dalam konteks tertentu, 先起き bukan kata yang standar. Distractor はやあき (早秋) akan membaca 秋 sebagai \"musim gugur\", yang mengubah arti keseluruhan menjadi \"musim gugur awal\"—kanji yang sama sekali berbeda dari 起き. Distractor そうおき (早起き dengan pembacaan そう) adalah pembacaan non-standar untuk 早; そう adalah pembacaan on-yomi yang jarang muncul pada posisi ini dan akan terdengar tidak wajar bagi penutur asli."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>で、<ruby>先輩</ruby>が<u>新しい</u><ruby>仕事</ruby>の<ruby>方法</ruby>を<ruby>教</ruby>えてくれました。",
+      "reading": "Pilih pembacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたりしい",
+        "にいしい"
+      ],
+      "explanation": "あたらしい adalah pembacaan yang tepat untuk 新しい ketika digunakan sebagai adjektif i untuk mendeskripsikan sesuatu yang belum pernah ada sebelumnya atau baru dibuat. しんしい bukan pembacaan yang ada—mengira kanji pertama 新 memiliki on-yomi 'shin' adalah kesalahan umum tetapi harus diikuti oleh pembacaan kanji kedua yang valid, yang tidak ada. あたりしい mencampur kun-yomi yang benar 'atara' (tidak umum dalam adjektif ini) dengan sufiks yang salah. にいしい adalah pembacaan yang salah sepenuhnya—kanji 新 tidak pernah dibaca sebagai 'nii' dalam konteks adjektif deskriptif standar."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>での<ruby>会議</ruby>は<u>重要</u>な<ruby>内容</ruby>ばかりでした。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digaris bawahi.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "おもよう",
+        "じゅうぎょう",
+        "ちょうよう"
+      ],
+      "explanation": "「重要」(じゅうよう) berarti \"penting\" atau \"krusial\" — adjektiva umum untuk mendeskripsikan sesuatu yang memiliki nilai atau kepentingan tinggi. Ini cocok dalam konteks rapat bisnis yang berisi banyak hal penting. 「おもよう」(meski terdengar seperti pola ja, bukan bacaan resmi kanji 重要) adalah bacaan palsu yang tidak ada dalam kamus standar. 「じゅうぎょう」(じゅうぎょう = \"pekerjaan berat\") adalah bacaan berbeda dari kanji 重 + 業, bukan 重要, sehingga makna sama sekali berubah dan tidak sesuai konteks. 「ちょうよう」(ちょうよう) adalah bacaan salah dari 重要 — meski 重 bisa dibaca \"ちょう\" dalam beberapa kata, bacaan 重要 yang benar adalah じゅうよう, bukan ちょうよう."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>早起き</u>して<ruby>勉強</ruby>しています。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digaris bawahi.",
+      "correct": "はやおき",
+      "distractors": [
+        "そうおき",
+        "はやき",
+        "さきおき"
+      ],
+      "explanation": "はやおき（早起き）adalah pembacaan yang tepat untuk kanji 「早起き」yang berarti 'bangun pagi'. Kata ini menggabungkan 「早い」(はやい, awal/pagi) dengan 「起きる」(おきる, bangun), dan bentuk nomina-nya adalah「はやおき」yang digunakan dalam konteks 「早起きして」(bangun pagi dan...). そうおき bukan pembacaan yang benar untuk 「早」pada konteks ini — 「早」biasanya dibaca「はや」bukan「そう」ketika membentuk kata majemuk 「早起き」. はやき adalah pembacaan yang salah karena mengubah bentuk asli: kata kerja 「起きる」tidak berubah menjadi「き」dalam kombinasi ini; bentuk yang benar tetap「おき」. さきおき adalah pembacaan yang salah karena 「早」tidak pernah dibaca「さき」dalam konteks 「早起き」; 「さき」adalah pembacaan yang berbeda untuk kanji lain seperti 「先」."
+    },
+    {
+      "question": "私は毎日<ruby>朝<rt>あさ</rt></ruby>6時に<u>起床</u>して、<ruby>仕事<rt>しごと</rt></ruby>に行きます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digaris bawahi.",
+      "correct": "きしょう",
+      "distractors": [
+        "きしょく",
+        "おきしょう",
+        "きせい"
+      ],
+      "explanation": "起床（きしょう）berarti 'bangun tidur' dan merupakan kata benda yang menggambarkan tindakan bangkit dari tempat tidur di pagi hari. Ini adalah bacaan standar untuk frasa '6時に起床する' yang sangat umum dalam konteks rutinitas pagi. きしょく（起色）adalah bacaan yang salah — itu kanji berbeda dengan makna yang tidak sesuai di sini. おきしょう bukan bacaan yang benar karena いくら— meskipun 起 bisa dibaca おき dalam beberapa konteks, kombinasi おきしょう tidak ada dalam bahasa Jepang standar dan akan terdengar tidak alami. きせい（起清 atau membaca lain）adalah bacaan lain yang salah karena tidak sesuai dengan makna 'bangun tidur' dan bukan bacaan yang diakui untuk 起床."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）<ruby>飲<rt>の</rt></ruby>みます。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat berdasarkan konteks.",
+      "correct": "温めて",
+      "distractors": [
+        "冷やして",
+        "混ぜて",
+        "注いで"
+      ],
+      "explanation": "温めて（あたためて）adalah jawaban yang tepat karena menunjukkan tindakan mempersiapkan susu pagi hari dengan cara yang alami dan umum—susu hangat adalah minuman pagi yang khas. 冷やして（ひやして）berarti 'mendinginkan', yang bertentangan dengan kebiasaan minum susu hangat di pagi hari dalam budaya Jepang. 混ぜて（まぜて）berarti 'mencampur', tetapi tidak ada konteks tentang pencampuran sesuatu ke dalam susu. 注いで（そそいで）berarti 'menuang', yang mendeskripsikan cara minum bukan mempersiapkan minuman—kalimat ini membutuhkan deskripsi tentang bagaimana susu disiapkan, bukan cara meminumnya."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>に<u>出席</u>します。",
+      "reading": "Pilih pembacaan kanji yang digaris bawahi dengan benar.",
+      "correct": "しゅっせき",
+      "distractors": [
+        "しゅつせき",
+        "でっせき",
+        "しゅくせき"
+      ],
+      "explanation": "「出席」(しゅっせき) adalah bacaan yang benar untuk kanji ini, yang berarti 'menghadiri' atau 'hadir'—ini adalah kolokasi standar dalam konteks rapat atau acara resmi. 「しゅつせき」 terdengar mirip tetapi merupakan pembacaan yang salah; meskipun 「出」 bisa dibaca しゅつ dalam beberapa kata, 「出席」 secara konsisten menggunakan しゅっ (dengan kata kerja dobel konsonan). 「でっせき」 adalah pembacaan yang sepenuhnya tidak tepat—kanji 「出」 tidak dibaca で dalam senyawa kata ini, dan pembacaan ini tidak sesuai dengan pola bahasa Jepang. 「しゅくせき」 terdengar plausibel karena menggunakan 「出」 sebagai しゅ, tetapi okurigana yang salah; ini mengubah makna dan bukan kata yang benar-benar ada."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>は<ruby>午前</ruby>10<ruby>時</ruby>に<u>開始</u>します。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "かいし",
+      "distractors": [
+        "かいじ",
+        "ひらき",
+        "あきはじ"
+      ],
+      "explanation": "かいし（開始）adalah bacaan yang benar karena 開始 adalah kanji majemuk yang berarti 'memulai' atau 'dimulai', dan diikuti oleh ます untuk menunjukkan bentuk polite. Distractor pertama かいじ (kaisai/persidangan) adalah bacaan salah dari kanji 開示 yang berarti 'pengungkapan', bukan 'memulai'. Distractor kedua ひらき (hirak/terbuka) adalah bacaan on-yomi salah dan memberikan makna yang berbeda sama sekali. Distractor ketiga あきはじ bukan bacaan yang ada untuk 開始 dan merupakan percobaan yang tidak masuk akal untuk membaca dua karakter terpisah."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きる（　）、<ruby>仕事<rt>しごと</rt></ruby>に<ruby>遅<rt>おく</rt></ruby>れません。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ことで",
+      "distractors": [
+        "ことが",
+        "ために",
+        "ばかりか"
+      ],
+      "explanation": "ことで mengungkapkan cara atau kondisi yang menyebabkan hasil positif—'dengan bangun pagi, (saya) tidak terlambat ke pekerjaan'. Bentuk ini menunjukkan sebab-akibat dengan nuansa bahwa tindakan/cara tertentu menghasilkan keberhasilan atau pencegahan masalah. ことが (hasil sesuatu) salah di sini karena membuat kalimat ambigu dan tidak menunjukkan hubungan sebab-akibat cara dengan hasil yang diinginkan; biasanya diikuti oleh verb lain, bukan pernyataan hasil. ために (untuk tujuan) tidak cocok karena menyiratkan tujuan yang berbeda atau keinginan, padahal kalimat ini menyatakan cara alami untuk menghindari keterlambatan, bukan niat eksplisit. ばかりか (bukan hanya) salah karena pola ini menyatakan penambahan atau kontras, bukan metode atau kondisi yang membawa hasil; maknanya sama sekali berbeda (bukan hanya...tetapi juga...)."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>毎日<rt>まいにち</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "飲み（のみ）は kata kerja yang benar untuk \"minum\" cairan seperti susu. Bentuk 飲みます menunjukkan tindakan rutin di pagi hari. 食べ（たべ）artinya \"makan\" untuk makanan padat, bukan minuman — susu tidak dimakan. 見（み）artinya \"melihat/menonton\", tidak ada kaitannya dengan konsumsi susu. 聞き（きき）artinya \"mendengarkan\", jelas tidak cocok untuk tindakan minum — sepenuhnya tidak relevan secara semantik."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>で<ruby>友達<rt>ともだち</rt></ruby>に会う（　）、一緒に<ruby>会社<rt>かいしゃ</rt></ruby>へ行った。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ために",
+      "distractors": [
+        "ばかりに",
+        "ところに",
+        "ように"
+      ],
+      "explanation": "ために (tame ni) benar di sini karena menyatakan tujuan atau alasan: 'karena/untuk tujuan bertemu teman di stasiun, (kami) pergi bersama ke perusahaan.' Ini adalah penggunaan ために yang paling umum pada level N4. ばかりに (bakari ni) berarti 'hanya karena' atau 'semata-mata karena' dengan implikasi negatif atau tidak disengaja, yang tidak cocok untuk menyatakan tujuan positif seperti ini. ところに (tokoro ni) berarti 'pada saat/ketika' dan menggambarkan momen suatu peristiwa terjadi, bukan tujuan aksi; tidak dapat dipakai di sini. ように (you ni) menyatakan cara/metode atau 'seolah-olah', bukan tujuan dari aksi; kalimat ini memerlukan pola tujuan, bukan cara, sehingga ように salah."
+    },
+    {
+      "question": "<ruby>毎日</ruby>の<u>仕事</u>は大変ですが、<ruby>頑張</ruby>っています。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しごく",
+        "しごろ",
+        "しぎょう"
+      ],
+      "explanation": "しごと（仕事）adalah bacaan standar untuk kanji gabungan yang berarti 'pekerjaan' atau 'tugas', dan cocok dalam konteks kalimat ini yang membicarakan pekerjaan sehari-hari. しごく adalah bacaan on-yomi yang tidak umum dan tidak digunakan dalam kata benda tunggal seperti ini—itu adalah verba yang berarti 'memproses' atau 'menangani'. しごろ bukan bacaan asli dari 仕事; meskipun 頃（ころ）ada dalam bahasa Jepang, kombinasi ini tidak membentuk kata yang bermakna. しぎょう (しぎょう) terdengar mirip namun adalah kanji berbeda (事業) dan berarti 'bisnis' atau 'usaha'—terlalu formal dan merujuk pada skala yang lebih besar daripada 'pekerjaan sehari-hari' dalam konteks kalimat ini."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に合わせるため、<ruby>今夜<rt>こんや</rt></ruby><ruby>報告書<rt>ほうこくしょ</rt></ruby>を（　）<ruby>終<rt>お</rt></ruby>わらなければならない。",
+      "reading": "Pilih bentuk grammar yang benar untuk melengkapi kalimat.",
+      "correct": "書き",
+      "distractors": [
+        "書いて",
+        "書いた",
+        "書く"
+      ],
+      "explanation": "「書き終わる」adalah pola V(stem) + 終わる yang berarti \"menyelesaikan menulis\". Stem \"書き\" (kaki) harus digunakan sebelum \"終わらなければならない\" karena 終わる adalah verba berikutnya yang akan berkenjung sebagai 終わらなければならない. 「書いて」(kaite) adalah bentuk te-form, tapi di sini tidak sesuai karena menghubungkan dua aksi secara berurutan, bukan menyelesaikan satu aksi — kalimat akan bermakna \"menulis dan harus menyelesaikan\" yang tidak alami. 「書いた」(kaita) adalah bentuk lampau sederhana, tapi tidak dapat langsung bergabung dengan 終わらなければならない tanpa bentuk penyambung — akan menghasilkan \"sudah menulis harus menyelesaikan\" yang gramatikal salah. 「書く」(kaku) adalah bentuk dasar/dictionary form, tapi di sini memerlukan stem \"書き\" untuk membentuk pola V + 終わる dengan benar."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会議</ruby>で<ruby>新</ruby>しい<u>企画</u>が<ruby>発表</ruby>されました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "きかく",
+      "distractors": [
+        "きぎ",
+        "きけい",
+        "こうかく"
+      ],
+      "explanation": "企画（きかく）adalah bacaan yang tepat untuk kata yang berarti \"rencana\" atau \"proposal bisnis\". Ini adalah kata benda majemuk standar yang sering digunakan dalam konteks bisnis dan pertemuan resmi di level N4. Distractor きぎ adalah bacaan kanji yang tidak sesuai—kanji 議 dibaca ぎ tetapi kanji 企 tidak pernah dibaca き sendirian dalam konteks ini. Distractor きけい terdengar mirip tetapi merupakan bacaan yang salah; kanji 企 tidak pernah menghasilkan suara ini. Distractor こうかく mencerminkan salah pengucapan kanji pertama sebagai こう (seperti dalam 構造) padahal 企 dibaca き, bukan こう—ini adalah kesalahan kanji yang umum pada pelajar pemula."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>で（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "帰ります",
+        "乗ります"
+      ],
+      "explanation": "「行きます」adalah jawaban yang tepat karena menunjukkan pergerakan dari lokasi sekarang (rumah) menuju lokasi tujuan (stasiun), dan ini adalah pola yang sangat umum dalam konteks rutinitas harian. 「来ます」(kuru: datang) menunjukkan pergerakan menuju posisi pembicara atau pusat referensi, bukan ke arah stasiun jauh dari rumah. 「帰ります」(kaeru: pulang) berarti kembali ke rumah, tetapi di sini tujuannya adalah stasiun, bukan rumah. 「乗ります」(norimasu: naik) adalah verba aksi tetapi memerlukan objek langsung (naik apa), sementara kalimat ini sudah menentukan \"dengan sepeda\" (de), jadi verba pergerakan \"go\" lebih alami untuk konteks ini."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に<u>コーヒーを飲む（　）</u>、<ruby>仕事<rt>しごと</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。",
+      "reading": "Pilih bentuk tata bahasa yang benar untuk melengkapi kalimat.",
+      "correct": "ことにした",
+      "distractors": [
+        "ことができた",
+        "ことがある",
+        "ことにしている"
+      ],
+      "explanation": "「ことにした」(koto ni shita) adalah bentuk yang menunjukkan sebuah keputusan atau rencana yang telah dibuat, cocok untuk menjelaskan tindakan 'memutuskan untuk minum kopi sebelum pergi ke kantor'. 「ことができた」(koto ga dekita) berarti 'dapat/mampu melakukan', tetapi di sini tidak sesuai karena kalimat berbicara tentang keputusan, bukan kemampuan. 「ことがある」(koto ga aru) berarti 'pernah melakukan', tetapi konteks menunjukkan tindakan tertentu pada pagi itu, bukan pengalaman berulang. 「ことにしている」(koto ni shite iru) menunjukkan kebiasaan atau aturan berkelanjutan, tetapi kalimat menceritakan peristiwa spesifik di masa lalu (akhir kalimat 「いきました」)."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>朝</ruby>、<ruby>駅</ruby>の<ruby>近</ruby>くで<u>友達</u>と<ruby>会</ruby>う<ruby>約束</ruby>をしました。",
+      "reading": "Pilih bacaan yang benar untuk kanji garis bawah.",
+      "correct": "ともだち",
+      "distractors": [
+        "ゆうだち",
+        "とうだち",
+        "ゆうたち"
+      ],
+      "explanation": "友達（ともだち）adalah kata baku untuk 'teman' dalam bahasa Jepang modern. Bacaan ともだち terdiri dari ふりがな on'yomi dan kun'yomi yang standar: とも（kun）+ だち（kun). Distractor ゆうだち adalah bacaan salah yang terdengar mirip tetapi sebenarnya merujuk pada 'hujan petang' (夕立), bukan 'teman'. Distractor とうだち tidak memiliki arti nyata dan menggunakan on'yomi yang tidak sesuai untuk kanji 友 dalam konteks ini. Distractor ゆうたち menggabungkan bacaan 友 yang salah (ゆう seharusnya digunakan untuk kata lain seperti 勇気) dengan たち yang tidak pas secara fonologis untuk bentuk plural 'teman-teman'."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>会社</ruby>で<u>重要</u>な<ruby>会議</ruby>がありました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "おもよう",
+        "じゅぎょう",
+        "かさねよう"
+      ],
+      "explanation": "じゅうよう (penting/krusial) adalah bacaan yang tepat untuk 重要 dalam konteks ini — kata ini menggambarkan sifat rapat yang penting. おもよう bukanlah bacaan kanji 重 yang standar dan tidak ada dalam kamus; 重 dibaca おも- hanya dalam kata-kata khusus seperti おもさ (berat, keadaan berat), bukan di sini. じゅぎょう (pelajaran/kelas) adalah bacaan yang salah — ini merujuk pada sesi belajar, bukan pentingnya sesuatu, dan tidak cocok dengan konteks rapat kantor. かさねよう bukan bacaan kanji yang ada; 重ねる (kasaneru, menumpuk) ada tetapi かさねよう bukan bentuk standar dan tidak terpakai di sini."
+    },
+    {
+      "question": "<ruby>来週</ruby>の<ruby>金曜日</ruby>に<ruby>大切</ruby>な<u>会議</u>があります。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digaris bawahi.",
+      "correct": "かいぎ",
+      "distractors": [
+        "かいい",
+        "えんぎ",
+        "かいしゃ"
+      ],
+      "explanation": "かいぎ adalah bacaan yang benar untuk 会議（かいぎ）yang berarti rapat atau pertemuan resmi tempat orang berkumpul membahas sesuatu — ini adalah konteks bisnis/kantor yang natural di N4. かいい (bukan kata nyata; mencoba campuran salah dari 会 dan 議) adalah konstruksi hiragana yang tidak ada dalam bahasa Jepang. えんぎ adalah kata lain (演技 = akting/pertunjukan) yang berbeda kanji dan makna sepenuhnya, meskipun 議 muncul di sini. かいしゃ (会社 = perusahaan) adalah kata N4 nyata yang umum, tetapi itu adalah kanji berbeda (社, bukan 議) dan makna berbeda — dalam kalimat ini, \"会議\" (rapat) jauh lebih alami daripada \"会社\" (perusahaan)."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>家<rt>いえ</rt></ruby>を（　）して<ruby>会社<rt>かいしゃ</rt></ruby>に行きます。",
+      "reading": "文脈に合う正しい動詞を選んでください。",
+      "correct": "出ます",
+      "distractors": [
+        "入ります",
+        "帰ります",
+        "立ちます"
+      ],
+      "explanation": "「毎日朝、家を出ます」は、朝に家から外へ移動して会社に向かう自然な表現です。「出る」は「ある場所から離れて外に出る」という意味で、家を去って出発する文脈に最適です。「入ります」（いります）は「中に入る」という意味であり、家を出ていく動作の反対なので不適切です。「帰ります」（かえります）は「家に戻る」という意味で、既に家にいる状態から使えないため、ここでは間違いです。「立ちます」（たちます）は「立つ」という意味で、確かに朝の準備の一部かもしれませんが、「家を〇〇する」という文脈では「立つ」ではなく「出る」が自然で、家を離れるという重要な情報を伝えられません。"
+    },
+    {
+      "question": "<ruby>毎</ruby><ruby>日</ruby>の<u>仕事</u>は<ruby>大変</ruby>ですが、<ruby>やりがい</ruby>があります。",
+      "reading": "Pilih bacaan yang benar untuk kanji gabungan yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しぎょう",
+        "じぎょう",
+        "しごう"
+      ],
+      "explanation": "「仕事」(しごと) adalah bacaan standar untuk kata yang berarti 'pekerjaan' atau 'tugas kerja' dalam konteks sehari-hari. Bacaan ini cocok dengan tingkat N4 dan muncul dalam frasa umum seperti 「毎日の仕事」(pekerjaan sehari-hari). 「しぎょう」adalah bacaan yang tidak ada untuk kanji ini — ini adalah pengecoh fonologis yang terdengar mirip tetapi tidak benar. 「じぎょう」(事業) adalah kanji yang berbeda dan berarti 'bisnis/usaha', bukan 'pekerjaan'; meskipun 事 (じ) adalah bacaan kunyomi alternatif, kombinasi じぎょう tidak berlaku untuk 仕事. 「しごう」adalah pengecoh yang menggabungkan bacaan yang benar (し) dengan okurigana yang salah; ini bukan bacaan kanji yang valid."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>駅<rt>えき</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <ruby>前<rt>まえ</rt></ruby>に <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat sesuai konteks kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "飲みます（のむ = minum）adalah jawaban benar karena 牛乳（ぎゅうにゅう = susu）adalah minuman dan harus diminum, bukan dimakan atau digunakan dengan kata kerja lainnya. Konteks 'setiap pagi sebelum pergi ke stasiun' menunjukkan rutinitas minum minuman. 食べます（たべる = makan）salah karena susu adalah minuman, bukan makanan padat. 読みます（よむ = membaca）salah karena tidak ada hubungan logis antara membaca susu. 聞きます（きく = mendengar）salah karena tidak relevan dengan minuman."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に合わせるために、<ruby>資料<rt>しりょう</rt></ruby>を<u>準備</u>（　）ければならない。",
+      "reading": "Pilih bentuk tata bahasa yang benar untuk melengkapi kalimat.",
+      "correct": "し",
+      "distractors": [
+        "する",
+        "した",
+        "している"
+      ],
+      "explanation": "Bentuk yang benar adalah 準備し（し）ければならない。Pola～なければならない memerlukan bentuk i-form (ren'yōkei) dari verba; 準備する adalah verba grup 3 (suru), jadi i-form-nya adalah 準備し。Ini berarti \"harus menyiapkan\" dengan makna kewajiban. Distractor する adalah bentuk kamus (bukan i-form) dan menghasilkan 準備するければならない yang tata bahasanya salah. Distractor した adalah bentuk ta (lampau) dan menghasilkan 準備したければならない yang berarti \"ingin telah menyiapkan\" (makna salah). Distractor している adalah bentuk progresif dan menghasilkan 準備しているければならない yang tidak hanya tata bahasanya salah tetapi juga makna/kolokasinya tidak sesuai dengan kewajiban mempersiapkan."
+    },
+    {
+      "question": "<ruby>毎日</ruby>の<ruby>仕事</ruby>が<ruby>忙</ruby>しいので、<ruby>友</ruby>だちと<ruby>会</ruby>う<ruby>時間</ruby>を（　）ことができません。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat berdasarkan konteks.",
+      "correct": "作る",
+      "distractors": [
+        "探す",
+        "借りる",
+        "直す"
+      ],
+      "explanation": "作る（つくる）は berarti 'membuat/mengalokasikan' dan merupakan pilihan yang tepat karena konteks membicarakan tentang mengalokasikan waktu untuk bertemu teman di tengah pekerjaan yang sibuk. Kalimat ini menunjukkan bahwa subjek tidak dapat mengalokasikan waktu karena sibuk. 探す（さがす）berarti 'mencari', yang tidak sesuai karena masalahnya bukan tentang mencari waktu tetapi mengalokasikannya. 借りる（かりる）berarti 'meminjam', yang salah secara kontekstual karena tidak ada makna meminjam waktu dalam kalimat ini. 直す（なおす）berarti 'memperbaiki/menyesuaikan', yang tidak cocok karena kalimatnya berbicara tentang kesulitan mengalokasikan waktu, bukan memperbaiki atau menyesuaikan sesuatu."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>母<rt>はは</rt></ruby>が<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "作りました",
+      "distractors": [
+        "掃除しました",
+        "洗濯しました",
+        "運びました"
+      ],
+      "explanation": "「作りました」（つくりました）adalah jawaban yang tepat karena merujuk pada aktivitas menyiapkan makanan—「朝食を作る」adalah kolokasi standar yang berarti \"menyiapkan sarapan\". 「掃除しました」（そうじしました、membersihkan) salah karena tidak berhubungan dengan sarapan; ini adalah pekerjaan rumah tangga yang berbeda. 「洗濯しました」（せんたくしました、mencuci pakaian) juga salah karena merujuk pada mencuci baju, bukan menyiapkan makanan. 「運びました」（はこびました、membawa/mengangkut) salah karena meskipun bisa merujuk pada makanan, tidak sesuai dengan konteks \"menyiapkan sarapan\"—ibu menyiapkan (tidak hanya membawa) sarapan di pagi hari."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang benar sesuai konteks kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "飲みました",
+        "飲みながら"
+      ],
+      "explanation": "「飲みます」adalah jawaban yang benar karena menunjukkan kebiasaan harian (毎日) dalam bentuk kalimat aktual—kalimat ini menceritakan rutinitas pagi kami dengan pola waktu kini. 「食べます」(makan) salah karena susu diminum, bukan dimakan, meskipun keduanya merupakan verba tindakan konsumsi. 「飲みました」(bentuk lampau) salah di sini karena konteks 「毎日」menunjukkan tindakan berulang sekarang, bukan peristiwa tunggal masa lalu. 「飲みながら」(sambil minum, bentuk -nagara) salah karena menunjukkan aksi simultan, padahal kalimat bermakna urutan (pergi ke stasiun SETELAH minum), bukan dua aksi bersamaan."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>する（　）、<ruby>試験<rt>しけん</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>することができた。",
+      "reading": "Pilih bentuk tata bahasa yang benar untuk melengkapi kalimat.",
+      "correct": "ことで",
+      "distractors": [
+        "ことが",
+        "ことに",
+        "ことを"
+      ],
+      "explanation": "「毎日勉強することで、試験に合格することができた」は「ことで」を使い、「～することによって/その結果として」（melalui/sebagai hasil dari）という意味で、sebab-akibat hubungan yang kuat antara tindakan (belajar setiap hari) dan hasil (lulus ujian) dinyatakan. 「ことが」(kata benda + partikel nominatif) tidak menunjukkan hubungan sebab-akibat; hanya menyatakan \"hal yang\" tanpa menghubungkan dua peristiwa; bacanya kok-to-ga. 「ことに」(kata benda + partikel target) mengubah arti menjadi \"terhadap hal/fakta itu\" atau \"menyadari bahwa\", tidak tepat untuk sebab-akibat; bacanya kok-to-ni. 「ことを」(kata benda + partikel objek) membuat kalimat tidak gramatikal di sini karena memerlukan verba transif yang jelas dan menghilangkan koneksi sebab-akibat; bacanya kok-to-wo."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>での<ruby>会議</ruby>で、<ruby>部長</ruby>は<u>重要</u>な<ruby>決定</ruby>を<ruby>発表</ruby>しました。",
+      "reading": "Pilih pembacaan kanji yang digarisbawahi dengan benar.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "おもよう",
+        "しげよう",
+        "ちょうよう"
+      ],
+      "explanation": "じゅうよう (重要) adalah pembacaan yang benar untuk kanji ini, yang berarti \"penting\" atau \"signifikan\" dalam konteks bisnis. Ini adalah compound kanji standar N4 dan cocok dengan struktur kalimat yang menyebutkan \"keputusan penting\" dalam rapat perusahaan. おもよう (bukan kanji yang tepat; \"omoi\" = berat, tetapi tidak bergabung dengan 要 dengan cara ini) adalah distraksi yang salah karena kanji 重 memang bisa dibaca \"omo-\" tetapi tidak dipasangkan dengan 要 dengan cara ini dalam penggunaan standar. しげよう (shige = nama atau prefix langka; tidak digunakan untuk 重要) adalah kesalahan karena pembacaan \"shige\" tidak sesuai dengan konteks dan bukan pembacaan standar dari 重 dalam compound ini. ちょうよう (chō = panjang/premium; tidak cocok untuk 重) adalah kesalahan karena pembacaan ini merujuk ke kanji lain (長) dan tidak sesuai untuk 重 dalam compound bernilai \"penting\"."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>で、<u>新しい</u><ruby>企画</ruby>について<ruby>説明</ruby>します。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたらしく",
+        "しんらしい"
+      ],
+      "explanation": "あたらしい adalah bacaan i-adjektif yang benar untuk kanji 新しい dalam konteks ini. Kata ini menggambarkan sifat dari 企画 (rencana baru), dan i-adjektif dalam bentuk attributif (sebelum nomina) menggunakan bentuk dasar あたらしい tanpa perubahan. Distractor しんしい adalah gabungan salah dari on-yomi 新 (shin) dan akhiran adjektif yang tidak ada dalam bahasa Jepang — meskipun 新 dibaca shin dalam beberapa kata, 新しい tidak pernah dibaca dengan cara ini. Distractor あたらしく adalah bentuk -ku (adverbial) dari adjektif yang sama, tetapi di sini diperlukan bentuk attributif sebelum nomina 企画, bukan bentuk adverbial. Distractor しんらしい terkesan seperti on-yomi 新 (shin) diikuti sufiks -らしい (berarti \"seperti\" atau \"tampak\"), tetapi ini bukan bacaan atau kata yang valid untuk 新しい dalam konteks ini."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>友達</ruby>と<ruby>一緒</ruby>に<u>映画館</u>へ<ruby>行</ruby>きました。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "えいがかん",
+      "distractors": [
+        "えいがけん",
+        "えいしんかん",
+        "えいがどう"
+      ],
+      "explanation": "えいがかん（映画館）adalah pembacaan yang benar untuk gedung bioskop. Kata ini merupakan gabungan dari 映画（えいが）= film dan 館（かん）= gedung/bangunan, sehingga dibaca えいがかん dengan jelas. えいがけん (keliru: 館 tidak pernah dibaca けん; ini bukan pembacaan kanji yang benar) tidak sesuai karena kanji 館 selalu dibaca かん dalam konteks bangunan. えいしんかん (keliru: 映 tidak dibaca えいしん; ini mencampur dengan kata lain) adalah pembacaan fiktif yang tidak ada dalam bahasa Jepang dan bukan cara membaca 映画館 yang umum. えいがどう (keliru: 館 tidak dibaca どう; どう biasanya merujuk pada 道 atau 堂, bukan 館) salah karena 館 dalam 映画館 dibaca かん, bukan どう, meskipun どう adalah pembacaan alternatif kanji yang berbeda."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>で<u>新しい</u><ruby>仕事</ruby>を<ruby>習</ruby>いました。",
+      "reading": "Pilih bacaan hiragana yang tepat untuk kanji yang digarisbawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたりしい",
+        "あたらしき"
+      ],
+      "explanation": "「新しい」dibaca 「あたらしい」 karena ini adalah i-adjektiva umum N4 yang berarti 'baru'. Distractor pertama 「しんしい」 menggunakan elemen 「新」(shin) tetapi bukan pembacaan yang benar untuk kata sifat lengkap ini. Distractor kedua 「あたりしい」 menambahkan suku kata tambahan yang tidak ada di kanji asli, sehingga mengubah arti keseluruhan. Distractor ketiga 「あたらしき」 adalah bentuk klasik/bungo dari adjektiva yang tidak digunakan dalam percakapan modern N4."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会議</ruby>で、<ruby>部長</ruby>は<u>重要</u>な<ruby>提案</ruby>をしました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "ちょうよう",
+        "おもよう",
+        "じゅぎょう"
+      ],
+      "explanation": "じゅうよう (重要) adalah bacaan yang benar untuk \"penting\" atau \"signifikan\", dan cocok dalam konteks diskusi bisnis formal tentang proposal yang berarti. ちょうよう bukan bacaan asli untuk kanji ini dan tidak memiliki makna yang cocok. おもよう terdengar seperti kombinasi おも (berat) dan よう, tetapi itu bukan bacaan standar untuk 重要 dan tidak digunakan dalam bahasa Jepang modern. じゅぎょう (授業) berarti \"kelas\" atau \"pelajaran\", kanji yang sama sekali berbeda dan tidak sesuai dengan konteks proposal bisnis di sini."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>に<ruby>必要</ruby>な<u>書類</u>を<ruby>送</ruby>ってください。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しょるい",
+      "distractors": [
+        "しょうるい",
+        "かきるい",
+        "しょもく"
+      ],
+      "explanation": "しょるい (書類) adalah bacaan yang benar untuk dokumen atau berkas resmi. Kata ini terdiri dari kanji 書 (tulis) dan 類 (jenis), yang bersama-sama berarti \"dokumen\" atau \"catatan tertulis\" dalam konteks administrasi atau bisnis. しょうるい (mengucapkan う panjang yang salah pada 書) adalah bacaan salah yang menyerupai, namun 書 dibaca しょ bukan しょう. かきるい bukan bacaan kanji yang valid; 書 tidak dibaca かき dalam compound ini (かき adalah cara lain untuk 書 dalam konteks berbeda seperti 描く). しょもく (pembacaan 類 sebagai もく bukan るい) adalah salah; 類 selalu dibaca るい ketika digunakan sebagai suffix dalam compound formal."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会社</ruby>での<ruby>大切</ruby>な<u>仕事</u>に<ruby>向</ruby>かって、<ruby>今晩</ruby>は<ruby>早</ruby>く<ruby>寝</ruby>ることにしました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しぎょう",
+        "じぎょう",
+        "しぎゃく"
+      ],
+      "explanation": "仕事（しごと）adalah bacaan standar untuk kata kerja atau pekerjaan dalam konteks sehari-hari seperti ini. Kalimat menyatakan persiapan untuk pekerjaan penting besok, dan しごと adalah pembacaan yang tepat dan paling umum digunakan dalam N4. しぎょう (pengucapan yang tidak ada) bukan bacaan kanji 仕事 yang benar — ini adalah kesalahan pengucapan total. じぎょう (jigyo) adalah bacaan alternatif dari 事業 (bisnis/perusahaan), tetapi kanji di sini adalah 仕事 dan konteksnya menuntut しごと. しぎゃく adalah bacaan yang tidak ada dan tidak pernah digunakan untuk 仕事 — ini adalah pengecoh murni berdasarkan kesamaan fonetik."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>することができ（　）、とても<ruby>残念<rt>ざんねん</rt></ruby>だった。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "なかった",
+      "distractors": [
+        "ない",
+        "ませんでした",
+        "なかったら"
+      ],
+      "explanation": "「することができなかった」adalah bentuk negatif masa lalu dari「～ことができる」(dapat melakukan), yang menunjukkan bahwa seseorang tidak mampu melakukan sesuatu di masa lalu. Distraktor「ない」adalah bentuk negatif sekarang (bukan masa lalu yang sesuai dengan konteks「昨日」). Distraktor「ませんでした」adalah konjugasi polite yang tidak cocok dalam konteks kalimat bercerita santai dengan ta-form lainnya. Distraktor「なかったら」adalah bentuk kondisional (\"jika tidak\") yang mengubah makna menjadi hipotesis, padahal kalimat ini melaporkan fakta masa lalu yang sudah terjadi."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>家<rt>いえ</rt></ruby>の<ruby>電気<rt>でんき</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "消しました",
+      "distractors": [
+        "切りました",
+        "閉めました",
+        "直しました"
+      ],
+      "explanation": "「消しました」（けしました）adalah jawaban yang tepat karena artinya 'mematikan/menyalakan off', yang cocok untuk 電気（listrik）. Orang biasanya mematikan listrik rumah sebelum pergi. 「切りました」（きりました）berarti 'memotong' dan digunakan untuk benda yang dapat dipotong seperti kertas atau sayuran, bukan listrik. 「閉めました」（しめました）berarti 'menutup/membanting', cocok untuk pintu atau jendela, tetapi tidak untuk listrik. 「直しました」（なおしました）berarti 'memperbaiki', yang hanya digunakan ketika sesuatu rusak dan perlu diperbaiki, bukan untuk aktivitas sehari-hari mematikan listrik."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、私は<ruby>朝</ruby>7<ruby>時</ruby>に<u>起床</u>します。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "きしょう",
+      "distractors": [
+        "きしゃ",
+        "おきとこ",
+        "きこう"
+      ],
+      "explanation": "起床（きしょう）adalah bacaan yang tepat untuk frasa 'bangun tidur / bangun dari tempat tidur'. Ini adalah kata benda yang menggabungkan 起（ki = memulai/bangun）dan 床（しょう = tempat tidur）, dan merupakan perilaku pagi yang umum di level N4. きしゃ（kisha）berarti 'kereta api'—salah membaca kanji 起 dan menggunakan kanji 車 yang sama sekali berbeda. おきとこ bukan bacaan standar untuk 起床; itu percobaan membaca literal yang tidak lazim dalam bahasa Jepang modern. きこう（kiko）adalah bacaan yang mungkin dikenal dari 気候（iklim）atau 機構（organisasi）tetapi tidak pernah dipakai untuk 起床."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>は<ruby>忙<rt>いそ</rt></ruby>しいので、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat.",
+      "correct": "食べて",
+      "distractors": [
+        "食べながら",
+        "食べたら",
+        "食べるまで"
+      ],
+      "explanation": "「食べて会社に行きます」adalah bentuk yang benar karena menggunakan te-form untuk menunjukkan urutan dua tindakan yang berturut-turut dalam satu rangkaian aktivitas: pertama makan sarapan, kemudian pergi ke kantor. Distractor pertama「食べながら」(sambil makan) mengindikasikan dua tindakan terjadi bersamaan, tetapi tidak wajar mengatakan 'sambil makan pergi ke kantor'. Distractor kedua「食べたら」(setelah makan) secara gramatikal mungkin tetapi menghasilkan makna kondisional yang tidak sesuai dengan konteks rutinitas pagi. Distractor ketiga「食べるまで」(sampai/hingga makan) menunjukkan durasi atau batas waktu yang salah—kalimatnya akan berarti 'sampai makan, (saya) pergi ke kantor', yang tidak masuk akal."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く <ruby>起<rt>お</rt></ruby>きて、<ruby>駅<rt>えき</rt></ruby>に （　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "来ました",
+        "行きました"
+      ],
+      "explanation": "「行きます」（いきます）adalah jawaban yang tepat karena kalimat menggunakan pola 「～て、～」untuk menggambarkan tindakan berurutan dalam rutinitas sehari-hari. Konteks \"毎日 朝早く起きて\" menunjukkan kebiasaan sekarang, sehingga memerlukan bentuk present positif 「行きます」. 「来ます」（くる）berarti \"datang\" dan tidak sesuai secara semantik dengan konteks \"ke stasiun\" dalam rutinitas pergi kerja. 「来ました」（くる dalam bentuk lampau）salah karena baik makna \"datang\" tidak cocok, maupun bentuk ta tidak sesuai dengan pola 「～て、～ます」yang membutuhkan bentuk present. 「行きました」（いく dalam bentuk lampau）salah karena meskipun \"pergi\" adalah makna yang tepat, bentuk ta tidak cocok dengan konteks rutinitas sehari-hari yang memerlukan bentuk present 「行きます」."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>新聞<rt>しんぶん</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "読みます",
+      "distractors": [
+        "聞きます",
+        "見ます",
+        "書きます"
+      ],
+      "explanation": "「読みます」adalah jawaban yang benar karena kalimat ini berbicara tentang kegiatan melihat isi tulisan di surat kabar (shinbun/新聞) dengan membacanya — verba 「読む」 (yomu) berarti membaca. 「聞きます」(kikimasu, mendengarkan) salah karena surat kabar adalah media visual, bukan audio. 「見ます」(mimasu, melihat/menonton) salah karena meskipun orang bisa \"melihat\" surat kabar secara fisik, verba yang tepat untuk interaksi dengan tulisan adalah \"membaca\" bukan hanya \"melihat\". 「書きます」(kakimasu, menulis) salah karena kalimat menunjukkan tindakan menerima informasi dari surat kabar, bukan menulis atau menciptakan konten."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>仕事</ruby>から<ruby>帰宅</ruby>した<ruby>後</ruby>、<ruby>家族</ruby>と<u>夕食</u>を<ruby>食</ruby>べます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ゆうしょく",
+      "distractors": [
+        "ゆうたべ",
+        "ばんしょく",
+        "こんしょく"
+      ],
+      "explanation": "ゆうしょく（夕食）adalah pembacaan standar untuk \"makan malam\" — 夕（ゆう）berarti \"sore/malam\" dan 食（しょく）berarti \"makanan/makan\". Ini adalah kata benda majemuk N4 yang umum digunakan dalam konteks kehidupan sehari-hari. ゆうたべ adalah bacaan yang tidak ada dalam bahasa Jepang — 食 tidak dibaca \"たべ\" sebagai bagian dari kata benda majemuk (meskipun 食べる adalah verba, konstruksi ini tidak valid). ばんしょく adalah bacaan alternatif yang secara teknis benar secara individual (晩＝ばん juga berarti \"malam\"), tetapi dalam konteks kalimat ini, 夕食 selalu dibaca ゆうしょく, bukan ばんしょく; ini adalah kesalahan pembacaan kanji yang sama. こんしょく bukan bacaan yang valid untuk 夕食 — こん biasanya muncul pada kata seperti 今日 (きょう) atau 今晩 (こんばん), tetapi tidak cocok untuk 夕 dalam konteks ini."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>で<u>新しい</u><ruby>企画</ruby>を<ruby>発表</ruby>します。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "あたりしい"
+      ],
+      "explanation": "「新しい」dibaca 「あたらしい」 — ini adalah i-adjective standar N4 yang berarti \"baru/muncul baru-baru ini\". Distractor pertama 「しんしい」 menggabungkan on-yomi 「しん」 dengan i-adjective inflection yang tidak ada — 「新」 tidak pernah dibaca 「しんしい」 dalam Jepang standar. Distractor kedua 「あらたしい」 adalah bacaan yang terdengar mirip dengan adjective sesungguhnya 「あらた\" (bentuk lama/puitis untuk \"baru\"), tapi menambah okurigana 「しい」 secara keliru — tidak menghasilkan kata yang valid. Distractor ketiga 「あたりしい」 terdengar dekat dengan jawaban benar tetapi menambah 「り」 yang tidak ada, menghasilkan bacaan fiktif."
+    },
+    {
+      "question": "<ruby>昨日</ruby>、<ruby>駅</ruby>の<ruby>近く</ruby>にある<ruby>新しい</ruby><u>図書館</u>に行きました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "としょかん",
+      "distractors": [
+        "ずしょかん",
+        "としょけん",
+        "とかんしょ"
+      ],
+      "explanation": "「図書館」(としょかん) adalah bacaan yang benar untuk bangunan tempat menyimpan dan meminjam buku — ini adalah kata majemuk kanji standar N4 yang terdiri dari 図 (zu = gambar/peta) + 書 (sho = buku/tulisan) + 館 (kan = bangunan). Distractor pertama 「ずしょかん」 salah karena 図 dibaca 「ず」 hanya dalam kata-kata khusus seperti 「図面」, bukan dalam 「図書館」. Distractor kedua 「としょけん」 adalah salah membaca 館: kata ini memakai 館 (kan) bukan 券 (ken/ken = tiket), dan 「けん」 tidak cocok dalam konteks bangunan perpustakaan. Distractor ketiga 「とかんしょ」 mengubah urutan kanji dan membaca 館 di tengah, yang tidak sesuai dengan struktur morfologis kata — ini bukan bacaan yang ada di dalam 図書館."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>する（　）、<ruby>健康<rt>けんこう</rt></ruby>になることができます。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ことで",
+      "distractors": [
+        "ことが",
+        "ことに",
+        "ことを"
+      ],
+      "explanation": "「毎日運動することで、健康になることができます」では、「ことで」は pola 「〜することで」 yang menunjukkan 'dengan cara/melalui melakukan sesuatu, hasil berikut terjadi' — dalam kasus ini, melalui olahraga harian, seseorang dapat menjadi sehat. Ini adalah penggunaan yang tepat untuk menunjukkan sarana atau cara mencapai hasil. — 「ことが」(ことが, 'hal/perkara yang') tidak cocok di sini karena itu akan mengubah makna menjadi 'hal olahraga harian adalah [sesuatu]', yang tidak logis secara semantik dalam konteks ini. — 「ことに」(ことに, 'mengenai hal/dalam hal') tidak mengekspresikan hubungan sebab-akibat yang diperlukan; itu lebih cocok untuk topik atau perubahan keadaan, bukan untuk menunjukkan sarana. — 「ことを」(ことを, bentuk akusatif/objek) akan membuat kalimat secara gramatikal tidak masuk akal karena 「健康になることができます」 tidak dapat menerima objek langsung dengan 「を」 dalam konteks ini."
+    },
+    {
+      "question": "<ruby>来週</ruby>の<ruby>月曜日</ruby>に<u>重要</u>な<ruby>会議</ruby>があります。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "おもよう",
+        "じゅうぎ",
+        "おもい"
+      ],
+      "explanation": "じゅうよう（重要）adalah bacaan yang tepat untuk kanji majemuk yang berarti \"penting\" atau \"krusial.\" Kata ini sering digunakan dalam konteks bisnis dan akademis untuk menekankan pentingnya sesuatu. おもよう (bacaan tidak ada) terdengar mirip tetapi bukan bacaan resmi kanji 重要. じゅうぎ adalah bacaan yang salah karena 義 tidak termasuk dalam kanji target (kanji target hanya 重要, bukan 重義). おもい adalah bacaan i-adjektif \"berat\" (omoi), yang merupakan bacaan on-yomi atau kun-yomi salah untuk 重要 dalam konteks ini—meskipun 重 dapat dibaca \"omoi\", bacaan 重要 sebagai adjektif-na adalah selalu じゅうよう, bukan おもい."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会社</ruby>での<ruby>大切</ruby>な<ruby>会議</ruby>のために、<u>資料</u>を<ruby>準備</ruby>しなければなりません。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しりょう",
+      "distractors": [
+        "しろう",
+        "しぎょう",
+        "ししょう"
+      ],
+      "explanation": "しりょう (資料) adalah bacaan yang tepat untuk kanji yang berarti \"dokumen\" atau \"bahan referensi\" — kata benda standar N4 yang sering digunakan dalam konteks pekerjaan dan sekolah. Distractor しろう (tidak ada kanji ini dalam N4) adalah bacaan yang tidak sesuai dengan kanji 資料. Distractor しぎょう (事業/しぎょう = \"bisnis/usaha\") adalah bacaan dari kanji yang berbeda dan tidak cocok untuk konteks dokumen. Distractor ししょう (資性/ししょう) adalah kombinasi bacaan yang tidak standar dan tidak muncul dalam N4."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>新聞</u>を<ruby>読</ruby>むのが<ruby>習慣</ruby>です。",
+      "reading": "Pilih pembacaan kanji yang digarisbawahi dengan benar.",
+      "correct": "しんぶん",
+      "distractors": [
+        "あたらしいぶん",
+        "しんぶ",
+        "しんかみ"
+      ],
+      "explanation": "「新聞」(しんぶん) adalah kata benda yang berarti 'surat kabar' — kanji 新 (baru) + 聞 (berita) membentuk satu kata majemuk dengan pembacaan on-yomi. Distraktor pertama 「あたらしいぶん」 salah karena 新 saja tidak pernah dibaca 「あたらしい」dalam konteks kata majemuk (itu adalah pembacaan kun-yomi dan artinya berbeda — 'baru' sebagai sifat). Distraktor kedua 「しんぶ」 terdengar mirip tetapi memotong suku kata terakhir dan bukan pembacaan yang valid untuk 聞. Distraktor ketiga 「しんかみ」 mencoba mengombinasikan on-yomi 新 dengan pembacaan alternatif 紙 (kertas), tetapi 聞 tidak pernah dibaca 「かみ」dan ini bukan kata yang ada."
+    },
+    {
+      "question": "この<ruby>病院</ruby>では、<ruby>毎日</ruby><u>朝</u>の7時に<ruby>診察</ruby>が始まります。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "あさ",
+      "distractors": [
+        "あした",
+        "ちょう",
+        "ぎょう"
+      ],
+      "explanation": "朝（あさ）adalah bacaan yang tepat untuk kanji ini dalam konteks 「毎日朝の7時」（setiap hari jam 7 pagi）. Kata あした berarti 「besok」 dan merupakan bacaan onyomi berbeda dari kanji yang sama, tetapi tidak cocok dalam kalimat ini karena kami berbicara tentang waktu setiap hari, bukan waktu di masa depan. ちょう adalah bacaan on'yomi alternatif dari 朝 (seperti dalam 朝鮮), tetapi tidak digunakan dalam konteks waktu harian seperti ini. ぎょう adalah bacaan yang sepenuhnya tidak sesuai dan bukan bacaan standar dari kanji 朝."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いた<u>（　）</u>、<ruby>友<rt>とも</rt></ruby>だちが<ruby>待<rt>ま</rt></ruby>っていた。",
+      "reading": "Pilih bentuk grammar yang benar untuk melengkapi kalimat.",
+      "correct": "とたんに",
+      "distractors": [
+        "ばかりか",
+        "ところに",
+        "ときに"
+      ],
+      "explanation": "とたんに (tatsutanに) menyatakan bahwa dua peristiwa terjadi hampir bersamaan dengan makna 'segera setelah' atau 'pada saat yang sama'. Kalimat ini menjelaskan bahwa teman sudah menunggu di saat penulis tiba, jadi とたんに adalah pilihan paling tepat. ばかりか (hanya/tidak hanya) memiliki makna kontras atau penambahan, bukan waktu bersamaan, sehingga salah di sini. ところに (persis saat/pada saat itu) serupa secara makna tetapi lebih formal dan lebih sering digunakan dalam narasi tertulis; dalam percakapan sehari-hari, とたんに lebih natural. ときに (saat/ketika) adalah bentuk kondisional umum yang kurang tepat karena tidak mengungkapkan makna 'segera setelah' dengan jelas seperti とたんに."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）<ruby>健康<rt>けんこう</rt></ruby>になりたいです。",
+      "reading": "Pilih kata kerja yang sesuai dengan konteks kalimat.",
+      "correct": "飲んで",
+      "distractors": [
+        "食べて",
+        "見て",
+        "聞いて"
+      ],
+      "explanation": "飲んで（のんで）adalah bentuk te dari 飲む yang menunjukkan tindakan minum susu sebagai cara untuk menjadi sehat—sesuai dengan konstruksi 「…て…になりたい」（melakukan sesuatu untuk mencapai keadaan tertentu）. 食べて（たべて）berarti makan, tetapi susu diminum, bukan dimakan, jadi tidak cocok secara semantik dengan objek 牛乳. 見て（みて）berarti melihat, yang tidak bermakna dalam konteks asupan gizi untuk kesehatan. 聞いて（きいて）berarti mendengarkan, sepenuhnya tidak sesuai dengan 牛乳 sebagai objek dan tujuan kesehatan."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>が<ruby>大変</ruby>ですが、<ruby>頑張</ruby>っています。",
+      "reading": "Pilih bacaan yang tepat untuk kanji yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しじき",
+        "しぎょう",
+        "じぎょう"
+      ],
+      "explanation": "しごと（仕事）adalah bacaan yang benar untuk kata yang berarti 'pekerjaan' atau 'kerja'—ini adalah kata benda umum N4 yang sering digunakan dalam kehidupan sehari-hari. しじき bukan bacaan yang ada untuk kanji 仕事, meskipun 仕 bisa dibaca し. しぎょう adalah bacaan alternatif (bisnis/perusahaan) namun tidak cocok di konteks kalimat ini yang bicara tentang kerja harian yang berat; selain itu ini bacaan yang lebih jarang dan tidak N4 dasar. じぎょう (bacaan on-yomi dobel) bukan bacaan standar untuk 仕事—ini adalah kombinasi yang tidak benar dan akan terdengar aneh bagi penutur asli."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>朝</ruby>、私は<u>洗顔</u>してから<ruby>朝食</ruby>を食べます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "せんがん",
+      "distractors": [
+        "あらいがお",
+        "せんおう",
+        "あらおがお"
+      ],
+      "explanation": "正答「せんがん」は「顔を洗う」という意味の複合語で、N4レベルの日常的な動作を表します。毎日の習慣文脈で自然に使われます。「あらいがお」は「洗う」と「顔」を分けて読もうとする誤りで、複合語としての正しい音読みではありません。「せんおう」は「洗」と「王」の取り違いで、「王」は「おう」と読みますが、この文脈に無関係で意味をなしません。「あらおがお」は複数の誤った読みを組み合わせたもので、自然な日本語の複合語ではありません。"
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いた（　）、<ruby>友<rt>とも</rt></ruby>だちがもう<ruby>待<rt>ま</rt></ruby>っていた。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ときに",
+      "distractors": [
+        "ように",
+        "ところに",
+        "たびに"
+      ],
+      "explanation": "「着いたときに」（tsuita toki ni = ketika tiba) menunjukkan titik waktu spesifik ketika kejadian lain terjadi bersamaan. Pola ～たときに digunakan untuk menyatakan suatu peristiwa yang terjadi pada saat yang sama dengan peristiwa lain yang baru selesai. Distractor pertama 「ように」（yo ni = seolah-olah) digunakan untuk membandingkan cara atau tujuan, bukan untuk menyatakan waktu bersamaan. Distractor kedua 「ところに」（tokoro ni = tepat saat) secara tata bahasa mirip namun 「ところ」merujuk pada fase tengah suatu proses, sedangkan di sini tindakan sudah selesai (着いた = sudah tiba), sehingga tidak sesuai. Distractor ketiga 「たびに」（tabi ni = setiap kali) menekankan pengulangan, bukan kejadian sekali yang bersamaan."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>での<ruby>会議</ruby>は<u>長時間</u>だったので、みんな<ruby>疲</ruby>れていました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ちょうじかん",
+      "distractors": [
+        "ながじかん",
+        "ちょうじあん",
+        "ちょうじかい"
+      ],
+      "explanation": "「長時間」(ちょうじかん) adalah bacaan yang benar karena 「長」dibaca ちょう (sering dalam kata majemuk waktu), dan 「時間」dibaca じかん, membentuk frasa umum yang berarti 'durasi waktu yang lama.' 「ながじかん」(ながじかん) salah karena 「長」tidak pernah dibaca ながい dalam bentuk majemuk nomina seperti ini — ながい adalah bentuk i-adjektif standalone, bukan pembacaan kanji dalam komposisi. 「ちょうじあん」(ちょうじあん) salah karena 「間」dibaca ん bukan あん dalam kata 「時間」; ini adalah pembacaan fiktif yang menggabungkan cara baca yang tidak ada. 「ちょうじかい」(ちょうじかい) salah karena 「間」tidak pernah dibaca かい dalam konteks waktu — pembacaan itu tidak sesuai dengan kanji ini dalam kata majemuk ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>走<rt>はし</rt></ruby>って（　）。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat berdasarkan konteks.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "帰ります",
+        "進みます"
+      ],
+      "explanation": "「走って行きます」は ekspresi umum N4 yang menunjukkan pergerakan menuju suatu tempat (dari perspektif pembicara) sambil melakukan tindakan 「走る」 (berlari). Te-form 「走って」 + 「行きます」 menunjukkan bahwa pembicara bergerak MENJAUH menuju stasiun dengan berlari. 「来ます」 (datang) salah karena menunjukkan pergerakan MENDEKATI pembicara, bukan menjauhi menuju stasiun yang dituju. 「帰ります」 (pulang) salah karena berarti kembali ke rumah, bukan pergi ke stasiun sebagai tujuan awal. 「進みます」 (melanjutkan/maju) salah karena tidak mengekspresikan tujuan (ke stasiun) dengan jelas—hanya berarti bergerak maju tanpa konteks destinasi yang pasti."
+    },
+    {
+      "question": "<ruby>昨日</ruby>、<ruby>友達</ruby>と<ruby>一緒</ruby>に<ruby>駅</ruby>の<ruby>近く</ruby>の<u>喫茶店</u>で<ruby>珈琲</ruby>を<ruby>飲</ruby>みました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digaris bawahi.",
+      "correct": "きっさてん",
+      "distractors": [
+        "こうひうどん",
+        "きってんしゃ",
+        "きつさどころ"
+      ],
+      "explanation": "「喫茶店」(きっさてん) adalah bacaan yang benar untuk toko kopi tradisional Jepang — ini adalah kata majemuk standar N4 dengan makna spesifik: 喫 (minuman), 茶 (teh/kopi), 店 (toko). Distractor pertama 「こうひうどん」 mencampurkan 「珈琲」(kōhī/kopi) dari kalimat sebelumnya dengan kata tak relevan dan bukan bacaan kanji yang tepat. Distractor kedua 「きってんしゃ」 terdengar seperti kata asosiasi dengan 「喫」 tetapi bukan bacaan maupun kata nyata dalam konteks toko minuman. Distractor ketiga 「きつさどころ」 menggunakan salah satu komponen kanji (喫) dengan benar tetapi mengganti 茶店 dengan bacaan yang tidak ada dan memberikan makna tempat yang berbeda."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>きながら、<ruby>音楽<rt>おんがく</rt></ruby>を（　）。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat sesuai konteks.",
+      "correct": "聞きます",
+      "distractors": [
+        "見ます",
+        "読みます",
+        "話します"
+      ],
+      "explanation": "「聞きます」(mendengarkan) adalah jawaban yang tepat karena kolokasi yang alami dalam konteks mendengarkan musik saat berjalan — 「音楽を聞く」adalah ungkapan baku dalam bahasa Jepang. 「見ます」(melihat) salah karena musik adalah sesuatu yang didengar, bukan dilihat, dan kolokasi yang benar untuk musik adalah 「聞く」bukan 「見る」. 「読みます」(membaca) tidak masuk akal karena musik tidak dibaca; ini mengacu pada teks atau dokumen. 「話します」(berbicara/membicarakan) salah karena tidak menunjukkan tindakan menerima musik melainkan mengeluarkan suara sendiri, dan tidak berkolokasi dengan 「音楽」dalam konteks pasif mendengarkan."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>を出る前に、お<ruby>母<rt>かあ</rt></ruby>さんが「<ruby>傘<rt>かさ</rt></ruby>を持って行きなさい」と言った。だから、傘を持って行った（　）、雨に濡れなかった。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ので",
+      "distractors": [
+        "のに",
+        "ばかりか",
+        "ところで"
+      ],
+      "explanation": "「持って行った～、雨に濡れなかった」は sebab-akibat (alasan dan hasil). 「～ので」mengungkapkan bahwa tindakan pertama (membawa payung) adalah ALASAN mengapa hasil kedua terjadi (tidak basah oleh hujan)—ini adalah pola sebab-akibat yang natural. 「のに」(noni) berarti 'meskipun/padahal', yang menunjukkan kontras, bukan sebab-akibat—kalimat menjadi 'meskipun membawa payung, saya tidak basah' yang tidak natural karena keduanya sejalan. 「ばかりか」(bakari ka) berarti 'bukan hanya... tetapi juga', untuk menambahkan informasi berlebihan, bukan untuk menunjukkan hubungan sebab-akibat. 「ところで」(tokoro de) berarti 'omong-omong/sedangkan', untuk mengubah topik percakapan, tidak untuk menjelaskan sebab hasil."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はし</rt></ruby>る（　）、<ruby>体<rt>からだ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くなりました。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ことで",
+      "distractors": [
+        "ことに",
+        "ことから",
+        "ことは"
+      ],
+      "explanation": "「～ことで」menyatakan hasil atau akibat dari suatu tindakan yang dilakukan berulang kali. Dalam kalimat ini, \"berlari setiap hari\" menghasilkan akibat \"tubuh menjadi kuat\", sehingga \"ことで\" adalah jawaban yang tepat. 「ことに」(nｊ: bersiap / dengan / pada saat) memiliki makna berbeda—tidak menunjukkan hubungan sebab-akibat dengan jelas. 「ことから」(kara: dari / karena) menunjukkan alasan, tetapi dalam konteks ini terasa kurang natural dan tidak sesuai dengan nuansa \"hasil dari tindakan berulang\". 「ことは」(wa: topik) hanya menandai topik tanpa menunjukkan hubungan sebab-akibat yang dimaksud."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩い<rt>あるい</rt></ruby>て（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "いきます",
+      "distractors": [
+        "きます",
+        "もどります",
+        "たちます"
+      ],
+      "explanation": "「歩いていきます」adalah kolokasi wajar yang berarti 'berjalan kaki (pergi) ke stasiun'; 「いきます」mengungkapkan pergerakan menuju tujuan setelah aktivitas pendahulu (te-form). 「きます」(きます = datang) secara logika salah karena pembicara tidak tiba dari stasiun tetapi menuju ke sana. 「もどります」(kembali) tidak sesuai konteks karena tujuannya adalah stasiun, bukan pulang dari mana-mana. 「たちます」(berdiri) adalah verba intransitif yang tidak menunjukkan pergerakan ke lokasi, hanya postur tubuh."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>図書館<rt>としょかん</rt></ruby>で <ruby>友達<rt>ともだち</rt></ruby>に <ruby>本<rt>ほん</rt></ruby>を（　）ました。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "貸し",
+      "distractors": [
+        "借り",
+        "返し",
+        "送り"
+      ],
+      "explanation": "「貸します」（かしますう = memberikan sesuatu kepada seseorang untuk digunakan sementara）adalah jawaban yang tepat karena kalimat menunjukkan bahwa penulis memberikan buku kepada teman. Distractor 「借り」（かり = meminjam）adalah kebalikan dari arti yang dibutuhkan — orang yang meminjam, bukan yang memberikan. Distractor 「返し」（かえし = mengembalikan）mengandaikan buku sudah dipinjam sebelumnya dan harus dikembalikan, tetapi konteks hanya mengatakan pemberian di perpustakaan. Distractor 「送り」（おくり = mengirim）menyiratkan pengiriman dari jarak jauh, bukan pemberian langsung kepada teman di tempat yang sama."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>に<ruby>行く</ruby>ことが<ruby>大切</ruby>です。",
+      "reading": "Pilih pembacaan kanji yang tepat untuk kata yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しぎょう",
+        "しわく",
+        "じぎょう"
+      ],
+      "explanation": "仕事（しごと）adalah pembacaan standar untuk kanji 仕事 yang berarti \"pekerjaan\" atau \"tugas\". Dalam kalimat ini, frasa 仕事に行く（pergi ke pekerjaan）menunjukkan konteks pekerjaan sehari-hari, dan しごと adalah satu-satunya pembacaan yang benar. しぎょう bukanlah pembacaan yang valid untuk kanji ini, meskipun terdengar mirip dengan pembacaan yang benar. しわく adalah pembacaan yang salah dan tidak sesuai dengan kanji 仕事. じぎょう adalah pembacaan dari 事業（じぎょう, bisnis/perusahaan), sebuah kanji berbeda dengan makna yang berbeda, meskipun berbagi kanji kedua."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）のが<ruby>習慣<rt>しゅうかん</rt></ruby>です。",
+      "reading": "Pilih kata kerja yang sesuai dengan konteks kalimat.",
+      "correct": "飲む",
+      "distractors": [
+        "食べる",
+        "作る",
+        "注ぐ"
+      ],
+      "explanation": "飲む（のむ）adalah jawaban yang benar karena menunjukkan tindakan mengkonsumsi minuman—牛乳（susu）adalah minuman, bukan makanan padat yang dapat dimakan. Kalimat ini mendeskripsikan kebiasaan sehari-hari pagi, dan 飲む adalah kata kerja yang secara alami digunakan dengan minuman. 食べる（たべる）berarti makan dan digunakan untuk makanan padat, bukan minuman—salah karena konteks. 作る（つくる）berarti membuat atau memasak, tetapi kalimatnya tidak menyebutkan membuat susu, hanya mengkonsumsinya—tidak cocok. 注ぐ（そそぐ）berarti menuangkan atau mengalirkan, sebuah tindakan persiapan, bukan kebiasaan utama yang biasanya dikatakan—terlalu sempit dan tidak alami untuk 習慣（kebiasaan）."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>朝</ruby>、<ruby>駅</ruby>の<u>近<ruby>所</ruby></u>で<ruby>友達</ruby>と<ruby>会</ruby>う<ruby>予定</ruby>です。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "きんじょ",
+      "distractors": [
+        "ちかしょ",
+        "きんしょ",
+        "こんじょ"
+      ],
+      "explanation": "きんじょ（近所）adalah bacaan yang benar untuk kata yang menunjukkan \"area sekitar\" atau \"lingkungan di dekat suatu tempat\". Ini adalah kanji majemuk standar N4 yang paling umum digunakan. ちかしょ salah karena ちか（近）biasanya dibaca as ちか hanya dalam 「近い」（dekat）dan tidak berlaku pada 所；ちかしょ adalah bacaan palsu. きんしょ menggabungkan bacaan on-yomi yang benar きん dengan kanji yang salah—しょ seharusnya merupakan bacaan khusus dari 所（しょ）tetapi in this position kombinasinya menghasilkan makna yang tidak ada di JLPT N4. こんじょ adalah bacaan salah yang terdengar mirip tetapi bukan bacaan standar 近所；こん tidak adalah bacaan kanji 近 dalam konteks ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>き（　）、<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih bentuk grammar yang tepat untuk melengkapi kalimat.",
+      "correct": "ながら",
+      "distractors": [
+        "ながらに",
+        "ながらも",
+        "ながらで"
+      ],
+      "explanation": "ながら menunjukkan dua tindakan yang terjadi secara bersamaan atau paralel. Kalimat ini mendeskripsikan mempercepat bangun pagi sambil (di saat yang sama) pergi ke kantor setiap hari—kedua aksi berlangsung dalam urutan berkesinambungan. ながらに (pembacaan: ながらに) adalah bentuk yang lebih formal/sastra dan tidak cocok untuk cerita sehari-hari yang sederhana ini. ながらも (pembacaan: ながらも) bermakna \"meskipun\" atau \"sambil tetap\", menunjukkan kontras—tidak sesuai di sini karena tidak ada nuansa pertentangan. ながらで (bukan bentuk grammar standar yang baku untuk pola ini—ながら tidak biasanya diikuti で dalam konteks aksi paralel) adalah kombinasi yang tidak alami dan menghasilkan kalimat yang tidak wajar."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>に<ruby>行</ruby>く<ruby>前</ruby>に、<ruby>朝食</ruby>を<ruby>食</ruby>べます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しごと",
+      "distractors": [
+        "しごく",
+        "しぎょう",
+        "しごい"
+      ],
+      "explanation": "しごと（仕事）adalah bacaan yang benar untuk kata kerja/pekerjaan sehari-hari. Ini adalah kata benda umum N4 yang berarti \"pekerjaan\" atau \"tugas\", dan cocok dalam konteks \"毎日仕事に行く（pergi bekerja setiap hari）\". しごく adalah bacaan salah karena しごく berarti \"menggesek/menggosok\" (verba berbeda) meskipun menggunakan kanji serupa. しぎょう bukan bacaan standar dari 仕事 dan lebih mirip seperti bunyi yang dipaksa. しごい bukan bacaan kanji yang dikenal dan tidak memiliki arti yang jelas dalam konteks ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>きながら<u>コーヒー</u>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "聞きます",
+        "読みます"
+      ],
+      "explanation": "「飲みます」（のみます）adalah jawaban yang benar karena コーヒー（kopi）adalah minuman dan hanya dapat dikombinasikan dengan verba 飲む (minum); kalimat ini mendeskripsikan aktivitas sehari-hari yang wajar—berjalan sambil minum kopi. 「食べます」（たべます、makan）digunakan untuk makanan padat, bukan minuman, sehingga salah dalam konteks ini. 「聞きます」（ききます、mendengar）tidak berkaitan dengan kopi dan tidak masuk akal dalam kalimat. 「読みます」（よみます、membaca）juga tidak relevan dengan kopi dan tidak sesuai dengan konteks aktivitas sehari-hari yang digambarkan."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しいので、<ruby>友<rt>とも</rt></ruby>だちと<ruby>遊<rt>あそ</rt></ruby>ぶ<ruby>時間<rt>じかん</rt></ruby>が（　）。",
+      "reading": "Pilih kata yang paling sesuai dengan konteks kalimat.",
+      "correct": "ありません",
+      "distractors": [
+        "あります",
+        "いります",
+        "できます"
+      ],
+      "explanation": "「ありません」（keadaan negatif—tidak ada) adalah jawaban tepat karena kalimat menyatakan bahwa karena sibuk setiap hari, waktu bermain dengan teman menjadi tidak tersedia/hilang. Keadaan ini cocok dengan pola 「...の時間がない」yang bermakna \"tidak punya waktu untuk...\". あります (ada) adalah lawan dari ありません dan akan mengubah makna menjadi positif, bertentangan dengan konteks kalimat yang negatif. いります (ada kebutuhan/diperlukan) tidak cocok di sini karena tidak mengacu pada ketersediaan atau kehadiran waktu. できます (bisa/dapat) berarti \"sanggup\" atau \"mampu\", bukan tentang adanya waktu; kalimat ini fokus pada kehadiran waktu, bukan kemampuan."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>では、<ruby>新</ruby>しい<u>商品</u>について<ruby>説明</ruby>します。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "しょうひん",
+      "distractors": [
+        "しょうぎん",
+        "しょうもつ",
+        "しょうりん"
+      ],
+      "explanation": "しょうひん（商品）adalah bacaan standar untuk produk atau barang dagangan yang ditawarkan di pasar, sangat umum dalam konteks bisnis dan ritel. しょうぎん adalah bacaan yang tidak ada untuk kombinasi kanji ini—meskipun 銀（ぎん）berarti perak, 商銀 bukan istilah bisnis yang umum. しょうもつ adalah bacaan yang salah karena meskipun 物（もつ）berarti benda, 商物 bukan kata baku yang digunakan dalam konteks presentasi produk perusahaan. しょうりん adalah bacaan yang tidak sesuai karena 林（りん）berarti hutan; kombinasi 商林 tidak ada dalam kosakata Jepang standar dan tidak cocok untuk topik pertemuan bisnis."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>を出る前に、<ruby>電気<rt>でんき</rt></ruby>を消す（　）にしています。",
+      "reading": "Pilih bentuk tata bahasa yang tepat untuk melengkapi kalimat.",
+      "correct": "ことにしている",
+      "distractors": [
+        "ようにしている",
+        "ためにしている",
+        "ばかりにしている"
+      ],
+      "explanation": "「ことにしている」menunjukkan kebiasaan atau keputusan yang telah ditetapkan dan dijalankan secara konsisten. Dalam kalimat ini, penutur menjelaskan rutinitas hariannya yaitu selalu mematikan lampu sebelum meninggalkan rumah. 「ようにしている」(seperti/seolah-olah) tidak tepat karena menyarankan usaha atau kebiasaan yang sedang dikembangkan, bukan keputusan tetap yang sudah mapan; di sini penutur sudah pasti melakukannya, bukan sedang berusaha. 「ためにしている」(melakukan untuk/demi) mengubah makna menjadi \"melakukan sesuatu dengan tujuan\", yang tidak cocok karena mematikan lampu adalah tindakan itu sendiri, bukan sarana untuk tujuan lain. 「ばかりにしている」(hanya karena/semata-mata karena) adalah bentuk yang sangat jarang dan tidak alami dalam konteks ini; ini menunjukkan sebab tunggal yang berlebihan, bukan kebiasaan yang disengaja."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>決まった</u><ruby>時間</ruby>に<ruby>起床</ruby>します。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "きまった",
+      "distractors": [
+        "さだまった",
+        "きめられた",
+        "きていた"
+      ],
+      "explanation": "「決まった」dibaca きまった karena verba 「決まる」(kimaru/sudah ditentukan) dalam bentuk ta-form lampau mengikuti pola regu­ler: 「決ま(ru)」→ 「決ま(tta)」 menjadi きまった. Ini berarti \"waktu yang sudah pasti/tetap\" dan cocok dengan konteks rutinitas harian. Pilihan さだまった (sadamaatta) adalah bacaan yang salah—kanji 「定」 dibaca さだ, bukan 「決」. Pilihan きめられた (kimerarета) adalah bentuk pasif yang salah; meskipun 「決める」 (kimeru/menentukan) adalah verba transitif yang bisa dipasifkan, kalimat ini memerlukan adjektif predikatif 「決まった」 (sudah tersetel), bukan pasif 「決められた」 (ditentukan oleh orang lain). Pilihan きていた (kite ita) adalah bacaan yang tidak ada untuk kanji ini—itu adalah bentuk te iru dari verba 「来る」 (kuru/datang), yang tidak sesuai dengan konteks waktu tetap."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）<ruby>学校<rt>がっこう</rt></ruby>に行きます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲んで",
+      "distractors": [
+        "飲まれて",
+        "飲ませて",
+        "飲ませ"
+      ],
+      "explanation": "「飲んで」adalah bentuk te dari 「飲む」yang menunjukkan dua tindakan berurutan dalam satu kalimat: minum susu, kemudian pergi ke sekolah. Ini adalah pola N4 yang tepat untuk menghubungkan dua peristiwa (V-te V). 「飲まれて」(nomanakute) adalah bentuk pasif yang berarti \"diminum\" — salah karena subjeknya tetap aktif (saya yang minum, bukan diminum). 「飲ませて」(nomasete) berarti \"membuat minum\" — ini salah karena tidak ada alasan di konteks untuk menyarankan seseorang minum susu sebelum pergi sekolah. 「飲ませ」adalah bentuk perintah kasar dari bentuk kausatif yang tidak sesuai dalam konteks ini dan tidak akan membentuk struktur kalimat yang benar."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>6時<rt>ろくじ</rt></ruby>に <ruby>起<rt>お</rt></ruby>きて、<ruby>顔<rt>かお</rt></ruby>を（　）<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "洗ってから",
+      "distractors": [
+        "洗ったら",
+        "洗うから",
+        "洗う時に"
+      ],
+      "explanation": "「洗ってから」は bentuk te-form + 「から」yang menunjukkan urutan dua tindakan — mencuci wajah LALU pergi ke sekolah. Ini jelas mengekspresikan tindakan berurutan yang wajar. 「洗ったら」(若し setelah / jika) berarti 'jika mencuci', menyarankan kondisional (salah konteks — bukan 'lalu'). 「洗うから」(karenanya) artinya 'karena mencuci', tidak pas untuk menunjukkan urutan (seharusnya 'karena itu saya pergi'). 「洗う時に」(waktu mencuci) berarti 'pada saat yang sama dengan mencuci', bukan 'setelah mencuci' — jadi tidak menangkap urutan yang dimaksud di sini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しいので、<ruby>友<rt>とも</rt></ruby>だちとの<ruby>約束<rt>やくそく</rt></ruby>を（　）しました。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat sesuai konteks.",
+      "correct": "キャンセル",
+      "distractors": [
+        "延期",
+        "削除",
+        "中止"
+      ],
+      "explanation": "「キャンセル」（キャンセルする = membatalkan/cancel）adalah jawaban yang tepat karena konteks menunjukkan bahwa pembicara ingin membatalkan janji dengan teman karena sibuk bekerja. Ini adalah istilah umum dalam bahasa Jepang sehari-hari untuk membatalkan rencana atau janji yang sudah dibuat. 「延期」（えんき = menunda/postpone）berarti menunda ke waktu lain, bukan membatalkan sepenuhnya, sehingga tidak sesuai karena pembicara tidak mengatakan akan bertemu di lain waktu. 「削除」（さくじょ = menghapus data/delete）adalah istilah teknis yang hanya digunakan untuk menghapus data atau file, tidak untuk membatalkan janji manusia. 「中止」（ちゅうし = menghentikan/stop）adalah kata yang lebih formal dan digunakan untuk menghentikan acara besar atau rencana resmi, bukan untuk membatalkan janji pribadi dengan teman."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を<u>（　）</u>。",
+      "reading": "Pilih kata kerja yang tepat sesuai konteks kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "買います"
+      ],
+      "explanation": "「飲みます」（のみます）adalah kata kerja yang benar karena konteks menunjukkan aksi \"minum susu setiap pagi\" — kolokasi standar antara \"牛乳\" (susu) dan \"飲む\" (minum). \"食べます\" berarti \"makan\" dan tidak cocok dengan objek \"牛乳\"; meskipun susu bisa dimakan dalam bentuk yoghurt, kata standar untuk susu cair adalah \"飲む\". \"読みます\" berarti \"membaca\" dan semantik sama sekali tidak sesuai dengan susu. \"買います\" berarti \"membeli\" tetapi dalam struktur kalimat ini, yang dimaksud adalah kebiasaan rutin minum, bukan membeli — pembeli biasanya ditunjukkan dengan konteks waktu belanja atau toko, bukan \"毎日朝\" (setiap pagi)."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>朝</ruby>、<ruby>駅</ruby>で<ruby>友達</ruby>に<u>会</u>う<ruby>約束</ruby>をしました。",
+      "reading": "Pilih bacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "あう",
+      "distractors": [
+        "あわう",
+        "あおう",
+        "あいう"
+      ],
+      "explanation": "「会う」(あう) adalah bacaan standar untuk kanji ini yang berarti \"bertemu\". Kata ini muncul dalam konteks \"bertemu dengan teman di stasiun besok pagi\", di mana \"会う\" (bertemu) adalah pilihan alami dan paling umum. 「あわう」 adalah distraksi yang terdengar mirip tetapi bukan bacaan nyata dari kanji ini. 「あおう」 adalah bacaan hiragana yang tidak sesuai dengan kanji 会 dan akan menghasilkan kata yang tidak bermakna dalam kalimat ini. 「あいう」 terdengar seperti bacaan hiragana biasa tetapi bukan bacaan yang benar untuk 会, dan penggunaan di sini akan tidak grammatis dan tidak masuk akal."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>に<u>出席</u>する<ruby>予定</ruby>です。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "しゅっせき",
+      "distractors": [
+        "しゅつせき",
+        "でっせき",
+        "しゅっきん"
+      ],
+      "explanation": "しゅっせき adalah pembacaan yang benar untuk 出席。Kata ini berarti \"menghadiri\" atau \"hadir di suatu acara,\" dan dalam konteks pertemuan kantor, ini adalah pilihan yang paling natural dan standar. しゅつせき (shutsuseiki) adalah variasi pembacaan yang salah—meskipun kanji-nya sama, pembacaan on-reading untuk 出 adalah しゅ bukan しゅつ dalam kata senyawa ini. でっせき (desseiki) adalah pembacaan yang sepenuhnya salah; 出 tidak pernah dibaca sebagai で dalam konteks kanji tunggal modern, dan kombinasi ini tidak menghasilkan kata yang bermakna. しゅっきん (shukin) adalah kata yang benar-benar berbeda yang berarti \"kehadiran kerja\" atau \"jam kerja,\" tetapi pembacaan 席 sebagai きん adalah salah—席 dibaca せき, bukan きん."
+    },
+    {
+      "question": "<ruby>明日</ruby>は<ruby>友達</ruby>と<u>一緒</u>に<ruby>映画</ruby>を<ruby>見</ruby>に<ruby>行</ruby>きます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "いっしょ",
+      "distractors": [
+        "いちぐみ",
+        "いっそう",
+        "ひとかたまり"
+      ],
+      "explanation": "一緒（いっしょ）adalah bacaan yang benar karena kata ini berarti \"bersama-sama\" dan merupakan kata N4 standar yang sering digunakan dalam konteks melakukan sesuatu dengan orang lain. いちぐみ（いち＝satu、ぐみ＝grup）adalah bacaan yang salah karena 一緒 bukan berarti \"satu grup\" dan bacaan ini tidak termasuk kosakata N4 yang umum. いっそう（いっ＝sekali、そう＝seolah-olah）adalah bacaan yang salah karena kata ini memiliki arti yang berbeda sekali (\"sebaliknya\" atau \"malah\") dan tidak cocok dalam kalimat ini. ひとかたまり（ひと＝manusia、かたまり＝kelompok/gumpalan）adalah bacaan yang salah karena meskipun menggunakan kanji 一 dan mengandung makna \"grup\", struktur dan penggunaan 一緒 sebagai kata sifat-na memerlukan bacaan いっしょ, bukan pembacaan on'yomi yang berbeda ini."
+    },
+    {
+      "question": "<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>必<rt>かなら</rt></ruby>ず<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "食べます",
+      "distractors": [
+        "飲みます",
+        "作ります",
+        "用意します"
+      ],
+      "explanation": "「食べます」(たべます) adalah jawaban yang benar karena 朝食（ちょうしょく）adalah sarapan yang merupakan makanan dan harus dimakan, bukan diminum atau hanya disiapkan. Kata ini menunjukkan tindakan menelan makanan yang sesuai dengan konteks kalimat. 「飲みます」(のみます) berarti minum, tetapi sarapan adalah makanan padat sehingga tidak tepat untuk diminum. 「作ります」(つくります) berarti membuat, padahal kalimat menekankan rutinitas melakukan tindakan sarapan sebelum pergi ke stasiun, bukan membuat sarapan. 「用意します」(よういします) berarti menyiapkan, yang menunjukkan persiapan tetapi tidak menunjukkan bahwa penutur benar-benar mengonsumsi sarapan tersebut."
+    }
+  ]
+}

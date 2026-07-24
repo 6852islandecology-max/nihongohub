@@ -1,43 +1,48 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Yamakasa Festival Pole</title>
-  
-  <!-- Main pole shaft -->
-  <rect x="28" y="8" width="8" height="40" fill="#8b4513"/>
-  
-  <!-- Pole highlight -->
-  <rect x="30" y="8" width="2" height="40" fill="#d4a574"/>
-  
-  <!-- Top decorative head - fabric-like structure -->
-  <rect x="20" y="4" width="24" height="6" fill="#a056d2"/>
-  <rect x="22" y="6" width="20" height="2" fill="#d946d8"/>
-  
-  <!-- Upper tier of the yamakasa -->
-  <rect x="18" y="10" width="28" height="4" fill="#a056d2"/>
-  <rect x="20" y="10" width="24" height="2" fill="#d946d8"/>
-  
-  <!-- Middle decorative tier -->
-  <rect x="16" y="14" width="32" height="3" fill="#a056d2"/>
-  <rect x="18" y="14" width="28" height="1" fill="#d946d8"/>
-  
-  <!-- Lower decorative section -->
-  <rect x="24" y="17" width="16" height="2" fill="#c084fc"/>
-  
-  <!-- Grip wrap detail - upper -->
-  <rect x="26" y="38" width="12" height="2" fill="#654321"/>
-  
-  <!-- Grip wrap detail - lower -->
-  <rect x="26" y="42" width="12" height="2" fill="#654321"/>
-  
-  <!-- Grip highlight -->
-  <rect x="30" y="38" width="2" height="8" fill="#a0826d"/>
-  
-  <!-- Bottom ferrule -->
-  <rect x="28" y="48" width="8" height="2" fill="#6b3410"/>
-  
-  <!-- Bottom point -->
-  <rect x="30" y="50" width="4" height="2" fill="#3d1f0a"/>
-  
-  <!-- Rarity frame accent borders -->
-  <rect x="18" y="8" width="2" height="6" fill="#a056d2"/>
-  <rect x="44" y="8" width="2" height="6" fill="#a056d2"/>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Yamakasa Festival Pole (epic)</title>
+<rect x="16" y="4" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="8" width="4" height="4" fill="#c8832a"/>
+<rect x="16" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="12" width="4" height="4" fill="#c8832a"/>
+<rect x="24" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="8" height="4" fill="#c8832a"/>
+<rect x="28" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="20" width="8" height="4" fill="#c8832a"/>
+<rect x="32" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="24" width="8" height="4" fill="#c8832a"/>
+<rect x="32" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="28" width="4" height="4" fill="#c8832a"/>
+<rect x="32" y="28" width="4" height="4" fill="#e8b96a"/>
+<rect x="36" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="32" width="8" height="4" fill="#e8b96a"/>
+<rect x="36" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="36" width="8" height="4" fill="#e8b96a"/>
+<rect x="32" y="36" width="4" height="4" fill="#f5dfa0"/>
+<rect x="36" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="40" width="4" height="4" fill="#7a4a18"/>
+<rect x="24" y="40" width="4" height="4" fill="#e8b96a"/>
+<rect x="28" y="40" width="4" height="4" fill="#7a4a18"/>
+<rect x="32" y="40" width="4" height="4" fill="#f5dfa0"/>
+<rect x="36" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="16" height="4" fill="#7a4a18"/>
+<rect x="32" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="48" width="4" height="4" fill="#7a4a18"/>
+<rect x="20" y="48" width="4" height="4" fill="#f0e040"/>
+<rect x="24" y="48" width="4" height="4" fill="#d4a030"/>
+<rect x="28" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="52" width="4" height="4" fill="#d4a030"/>
+<rect x="20" y="52" width="4" height="4" fill="#f0e040"/>
+<rect x="24" y="52" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="56" width="12" height="4" fill="#2a1a0c"/>
 </svg>

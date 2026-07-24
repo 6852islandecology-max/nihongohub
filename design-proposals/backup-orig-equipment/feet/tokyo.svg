@@ -1,0 +1,37 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Tokyo Sneakers</title>
+  <g id="left-sneaker">
+    <!-- Shoe sole -->
+    <rect x="4" y="40" width="20" height="4" fill="#2c2c2c"/>
+    <!-- Shoe body -->
+    <rect x="6" y="32" width="16" height="8" fill="#e74c3c"/>
+    <!-- Shoe toe -->
+    <rect x="4" y="36" width="4" height="4" fill="#e74c3c"/>
+    <!-- Stripe accent -->
+    <rect x="6" y="34" width="16" height="2" fill="#9b9285"/>
+    <!-- Highlight -->
+    <rect x="8" y="32" width="4" height="2" fill="#ff6b6b"/>
+  </g>
+  <g id="right-sneaker">
+    <!-- Shoe sole -->
+    <rect x="40" y="40" width="20" height="4" fill="#2c2c2c"/>
+    <!-- Shoe body -->
+    <rect x="42" y="32" width="16" height="8" fill="#e74c3c"/>
+    <!-- Shoe toe -->
+    <rect x="56" y="36" width="4" height="4" fill="#e74c3c"/>
+    <!-- Stripe accent -->
+    <rect x="42" y="34" width="16" height="2" fill="#9b9285"/>
+    <!-- Highlight -->
+    <rect x="52" y="32" width="4" height="2" fill="#ff6b6b"/>
+  </g>
+  <g id="frame-border">
+    <!-- Top frame -->
+    <rect x="0" y="0" width="64" height="4" fill="#9b9285"/>
+    <!-- Bottom frame -->
+    <rect x="0" y="60" width="64" height="4" fill="#9b9285"/>
+    <!-- Left frame -->
+    <rect x="0" y="4" width="4" height="56" fill="#9b9285"/>
+    <!-- Right frame -->
+    <rect x="60" y="4" width="4" height="56" fill="#9b9285"/>
+  </g>
+</svg>

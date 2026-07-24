@@ -39,6 +39,8 @@
   footer{text-align:center;color:var(--muted);font-size:13px;padding:20px}
   a{color:var(--red)}
   small{color:var(--muted)}
+/* phones: wide tables scroll sideways instead of overflowing the page */
+@media(max-width:768px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>

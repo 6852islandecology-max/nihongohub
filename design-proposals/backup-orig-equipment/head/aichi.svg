@@ -1,0 +1,50 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Nagoya Castle Helm</title>
+  
+  <!-- Base helm structure -->
+  <g id="helm">
+    <!-- Main golden dome -->
+    <rect x="12" y="12" width="4" height="4" fill="#d4af37"/>
+    <rect x="16" y="8" width="4" height="4" fill="#ffd700"/>
+    <rect x="20" y="8" width="8" height="4" fill="#ffd700"/>
+    <rect x="28" y="8" width="4" height="4" fill="#ffd700"/>
+    <rect x="32" y="12" width="4" height="4" fill="#d4af37"/>
+    
+    <rect x="8" y="16" width="4" height="4" fill="#d4af37"/>
+    <rect x="12" y="16" width="20" height="8" fill="#ffd700"/>
+    <rect x="32" y="16" width="4" height="4" fill="#d4af37"/>
+    
+    <!-- Face opening -->
+    <rect x="16" y="24" width="4" height="4" fill="#2a1a3a"/>
+    <rect x="20" y="24" width="8" height="4" fill="#2a1a3a"/>
+    <rect x="28" y="24" width="4" height="4" fill="#2a1a3a"/>
+    
+    <!-- Side guards (fukikaeshi) -->
+    <rect x="4" y="20" width="4" height="12" fill="#d4af37"/>
+    <rect x="8" y="24" width="4" height="8" fill="#ffd700"/>
+    
+    <rect x="52" y="20" width="4" height="12" fill="#d4af37"/>
+    <rect x="48" y="24" width="4" height="8" fill="#ffd700"/>
+    
+    <!-- Bottom plate (fukikaeshi lower) -->
+    <rect x="8" y="32" width="4" height="4" fill="#a056d2"/>
+    <rect x="12" y="32" width="20" height="4" fill="#d4af37"/>
+    <rect x="32" y="32" width="4" height="4" fill="#a056d2"/>
+    
+    <!-- Shachihoko (golden ornament) left -->
+    <rect x="12" y="4" width="4" height="4" fill="#ffd700"/>
+    <rect x="8" y="8" width="4" height="4" fill="#d4af37"/>
+    
+    <!-- Shachihoko (golden ornament) right -->
+    <rect x="36" y="4" width="4" height="4" fill="#ffd700"/>
+    <rect x="40" y="8" width="4" height="4" fill="#d4af37"/>
+    
+    <!-- Central crest ornament (shachihoko peak) -->
+    <rect x="20" y="4" width="8" height="4" fill="#ffd700"/>
+    <rect x="24" y="0" width="4" height="4" fill="#a056d2"/>
+    
+    <!-- Visor accent lines (epic purple) -->
+    <rect x="16" y="20" width="4" height="4" fill="#a056d2"/>
+    <rect x="28" y="20" width="4" height="4" fill="#a056d2"/>
+  </g>
+</svg>

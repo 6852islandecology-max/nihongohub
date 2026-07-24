@@ -1,0 +1,40 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Alps Trekking Boots</title>
+<g id="boots">
+<!-- Left boot -->
+<rect x="4" y="36" width="4" height="4" fill="#2c2c2c"/>
+<rect x="8" y="36" width="4" height="4" fill="#2c2c2c"/>
+<rect x="12" y="36" width="4" height="4" fill="#2c2c2c"/>
+<rect x="4" y="40" width="4" height="4" fill="#3d5a7a"/>
+<rect x="8" y="40" width="4" height="4" fill="#4d8fbf"/>
+<rect x="12" y="40" width="4" height="4" fill="#3d5a7a"/>
+<rect x="4" y="44" width="4" height="4" fill="#3d5a7a"/>
+<rect x="8" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="12" y="44" width="4" height="4" fill="#3d5a7a"/>
+<rect x="4" y="48" width="4" height="4" fill="#2c2c2c"/>
+<rect x="8" y="48" width="4" height="4" fill="#3d5a7a"/>
+<rect x="12" y="48" width="4" height="4" fill="#2c2c2c"/>
+<rect x="4" y="52" width="12" height="4" fill="#8b6f47"/>
+<!-- Left sole -->
+<rect x="4" y="56" width="12" height="4" fill="#1a1a1a"/>
+<!-- Right boot -->
+<rect x="48" y="36" width="4" height="4" fill="#2c2c2c"/>
+<rect x="52" y="36" width="4" height="4" fill="#2c2c2c"/>
+<rect x="56" y="36" width="4" height="4" fill="#2c2c2c"/>
+<rect x="48" y="40" width="4" height="4" fill="#3d5a7a"/>
+<rect x="52" y="40" width="4" height="4" fill="#4d8fbf"/>
+<rect x="56" y="40" width="4" height="4" fill="#3d5a7a"/>
+<rect x="48" y="44" width="4" height="4" fill="#3d5a7a"/>
+<rect x="52" y="44" width="4" height="4" fill="#4d8fbf"/>
+<rect x="56" y="44" width="4" height="4" fill="#3d5a7a"/>
+<rect x="48" y="48" width="4" height="4" fill="#2c2c2c"/>
+<rect x="52" y="48" width="4" height="4" fill="#3d5a7a"/>
+<rect x="56" y="48" width="4" height="4" fill="#2c2c2c"/>
+<rect x="48" y="52" width="12" height="4" fill="#8b6f47"/>
+<!-- Right sole -->
+<rect x="48" y="56" width="12" height="4" fill="#1a1a1a"/>
+<!-- Rarity frame accent -->
+<rect x="2" y="34" width="20" height="28" fill="none" stroke="#4d8fbf" stroke-width="1"/>
+<rect x="42" y="34" width="20" height="28" fill="none" stroke="#4d8fbf" stroke-width="1"/>
+</g>
+</svg>

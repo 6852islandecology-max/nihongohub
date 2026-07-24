@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Shimanto River Boots</title>
+  
+  <!-- Left Boot -->
+  <g id="left-boot">
+    <!-- Sole -->
+    <rect x="4" y="48" width="16" height="4" fill="#3d3d3d"/>
+    
+    <!-- Boot Body -->
+    <rect x="4" y="40" width="4" height="8" fill="#8b6f47"/>
+    <rect x="8" y="36" width="8" height="12" fill="#8b6f47"/>
+    <rect x="16" y="40" width="4" height="8" fill="#8b6f47"/>
+    
+    <!-- Upper Cuff -->
+    <rect x="6" y="32" width="12" height="4" fill="#9b9285"/>
+    
+    <!-- Water Detail -->
+    <rect x="8" y="44" width="4" height="4" fill="#4a7c9e"/>
+    <rect x="12" y="44" width="4" height="4" fill="#5a8cae"/>
+  </g>
+  
+  <!-- Right Boot -->
+  <g id="right-boot">
+    <!-- Sole -->
+    <rect x="44" y="48" width="16" height="4" fill="#3d3d3d"/>
+    
+    <!-- Boot Body -->
+    <rect x="44" y="40" width="4" height="8" fill="#8b6f47"/>
+    <rect x="48" y="36" width="8" height="12" fill="#8b6f47"/>
+    <rect x="56" y="40" width="4" height="8" fill="#8b6f47"/>
+    
+    <!-- Upper Cuff -->
+    <rect x="46" y="32" width="12" height="4" fill="#9b9285"/>
+    
+    <!-- Water Detail -->
+    <rect x="48" y="44" width="4" height="4" fill="#4a7c9e"/>
+    <rect x="52" y="44" width="4" height="4" fill="#5a8cae"/>
+  </g>
+  
+  <!-- Highlight Detail (river shimmer) -->
+  <rect x="10" y="38" width="4" height="2" fill="#c4b5a0" opacity="0.7"/>
+  <rect x="50" y="38" width="4" height="2" fill="#c4b5a0" opacity="0.7"/>
+</svg>

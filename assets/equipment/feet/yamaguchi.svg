@@ -1,30 +1,46 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-  <title>Akiyoshido Cave Boots</title>
-  
-  <!-- Left Boot -->
-  <g id="left-boot">
-    <!-- Sole -->
-    <rect x="4" y="44" width="16" height="4" fill="#5a5a5a"/>
-    <!-- Boot body -->
-    <rect x="6" y="36" width="12" height="8" fill="#8b7d6b"/>
-    <!-- Boot upper -->
-    <rect x="8" y="28" width="8" height="8" fill="#9b9285"/>
-    <!-- Highlight/detail -->
-    <rect x="10" y="32" width="4" height="4" fill="#b5aca3"/>
-  </g>
-  
-  <!-- Right Boot -->
-  <g id="right-boot">
-    <!-- Sole -->
-    <rect x="44" y="44" width="16" height="4" fill="#5a5a5a"/>
-    <!-- Boot body -->
-    <rect x="46" y="36" width="12" height="8" fill="#8b7d6b"/>
-    <!-- Boot upper -->
-    <rect x="48" y="28" width="8" height="8" fill="#9b9285"/>
-    <!-- Highlight/detail -->
-    <rect x="50" y="32" width="4" height="4" fill="#b5aca3"/>
-  </g>
-  
-  <!-- Frame border accent -->
-  <rect x="6" y="26" width="52" height="26" fill="none" stroke="#9b9285" stroke-width="2"/>
+<title>Akiyoshido Cave Boots (common)</title>
+<rect x="8" y="8" width="12" height="4" fill="#2a1a0c"/>
+<rect x="32" y="8" width="12" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="8" height="4" fill="#8b6914"/>
+<rect x="20" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="12" width="8" height="4" fill="#8b6914"/>
+<rect x="40" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="8" height="4" fill="#8b6914"/>
+<rect x="20" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="16" width="8" height="4" fill="#8b6914"/>
+<rect x="40" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="8" height="4" fill="#8b6914"/>
+<rect x="20" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="28" y="20" width="12" height="4" fill="#8b6914"/>
+<rect x="40" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="24" width="24" height="4" fill="#8b6914"/>
+<rect x="40" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#5a3d1a"/>
+<rect x="20" y="28" width="16" height="4" fill="#8b6914"/>
+<rect x="36" y="28" width="4" height="4" fill="#5a3d1a"/>
+<rect x="40" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="4" height="4" fill="#5a3d1a"/>
+<rect x="20" y="32" width="4" height="4" fill="#3d6b5a"/>
+<rect x="24" y="32" width="12" height="4" fill="#8b6914"/>
+<rect x="36" y="32" width="4" height="4" fill="#5a3d1a"/>
+<rect x="40" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="4" height="4" fill="#5a3d1a"/>
+<rect x="20" y="36" width="8" height="4" fill="#3d6b5a"/>
+<rect x="28" y="36" width="8" height="4" fill="#8b6914"/>
+<rect x="36" y="36" width="4" height="4" fill="#5a3d1a"/>
+<rect x="40" y="36" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="24" height="4" fill="#5a3d1a"/>
+<rect x="40" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="32" height="4" fill="#2a1a0c"/>
 </svg>

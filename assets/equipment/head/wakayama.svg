@@ -1,37 +1,56 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-<title>Mountain Mystic Hood</title>
-<g id="hood">
-<!-- Hood main body - dark indigo -->
-<rect x="12" y="12" width="40" height="28" fill="#2c3e50"/>
-<!-- Hood peak - darker shade -->
-<rect x="16" y="8" width="32" height="8" fill="#1a2332"/>
-<!-- Left side curve of hood -->
-<rect x="8" y="16" width="4" height="16" fill="#2c3e50"/>
-<!-- Right side curve of hood -->
-<rect x="52" y="16" width="4" height="16" fill="#2c3e50"/>
-<!-- Center front panel - rarity accent -->
-<rect x="24" y="16" width="16" height="12" fill="#4d8fbf"/>
-<!-- Left accent stripe -->
-<rect x="16" y="20" width="4" height="8" fill="#4d8fbf"/>
-<!-- Right accent stripe -->
-<rect x="44" y="20" width="4" height="8" fill="#4d8fbf"/>
-<!-- Top ridge detail -->
-<rect x="20" y="8" width="24" height="4" fill="#4d8fbf"/>
-<!-- Center vertical emblem -->
-<rect x="28" y="18" width="8" height="4" fill="#f4d03f"/>
-<!-- Chin guard left -->
-<rect x="12" y="36" width="8" height="4" fill="#1a2332"/>
-<!-- Chin guard right -->
-<rect x="44" y="36" width="8" height="4" fill="#1a2332"/>
-<!-- Lower edge binding -->
-<rect x="16" y="38" width="32" height="4" fill="#4d8fbf"/>
-<!-- Face opening - left side -->
-<rect x="16" y="24" width="4" height="8" fill="#3d5a7a"/>
-<!-- Face opening - right side -->
-<rect x="44" y="24" width="4" height="8" fill="#3d5a7a"/>
-<!-- Shadow on hood left -->
-<rect x="12" y="24" width="4" height="8" fill="#1a2332"/>
-<!-- Shadow on hood right -->
-<rect x="52" y="24" width="4" height="8" fill="#1a2332"/>
-</g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Mountain Mystic Hood (rare)</title>
+<rect x="16" y="8" width="32" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="12" width="32" height="4" fill="#8b5e3c"/>
+<rect x="48" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="8" height="4" fill="#8b5e3c"/>
+<rect x="20" y="16" width="12" height="4" fill="#c49a6c"/>
+<rect x="32" y="16" width="16" height="4" fill="#8b5e3c"/>
+<rect x="48" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#8b5e3c"/>
+<rect x="16" y="20" width="24" height="4" fill="#c49a6c"/>
+<rect x="40" y="20" width="8" height="4" fill="#8b5e3c"/>
+<rect x="48" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#8b5e3c"/>
+<rect x="16" y="24" width="24" height="4" fill="#c49a6c"/>
+<rect x="40" y="24" width="8" height="4" fill="#8b5e3c"/>
+<rect x="48" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#8b5e3c"/>
+<rect x="16" y="28" width="24" height="4" fill="#6b3f1f"/>
+<rect x="40" y="28" width="8" height="4" fill="#8b5e3c"/>
+<rect x="48" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#8b5e3c"/>
+<rect x="16" y="32" width="24" height="4" fill="#6b3f1f"/>
+<rect x="40" y="32" width="4" height="4" fill="#8b5e3c"/>
+<rect x="44" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="4" height="4" fill="#8b5e3c"/>
+<rect x="20" y="36" width="16" height="4" fill="#6b3f1f"/>
+<rect x="36" y="36" width="4" height="4" fill="#8b5e3c"/>
+<rect x="40" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="40" width="16" height="4" fill="#6b3f1f"/>
+<rect x="36" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="44" width="16" height="4" fill="#6b3f1f"/>
+<rect x="36" y="44" width="4" height="4" fill="#8b5e3c"/>
+<rect x="40" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="48" width="4" height="4" fill="#2e5c8a"/>
+<rect x="24" y="48" width="8" height="4" fill="#d4a820"/>
+<rect x="32" y="48" width="4" height="4" fill="#2e5c8a"/>
+<rect x="36" y="48" width="4" height="4" fill="#8b5e3c"/>
+<rect x="40" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="52" width="4" height="4" fill="#2e5c8a"/>
+<rect x="28" y="52" width="4" height="4" fill="#4a8ab0"/>
+<rect x="32" y="52" width="4" height="4" fill="#8b5e3c"/>
+<rect x="36" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="56" width="12" height="4" fill="#2a1a0c"/>
 </svg>

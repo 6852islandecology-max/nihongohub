@@ -1,50 +1,65 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Hikone Castle Naginata</title>
-  
-  <!-- Frame border (epic rarity) -->
-  <g id="frame">
-    <rect x="2" y="2" width="60" height="60" fill="none" stroke="#a056d2" stroke-width="2"/>
-    <rect x="4" y="4" width="56" height="56" fill="none" stroke="#a056d2" stroke-width="1"/>
-  </g>
-  
-  <!-- Weapon: Naginata polearm -->
-  <g id="naginata">
-    <!-- Shaft (brown wood) -->
-    <rect x="29" y="8" width="6" height="44" fill="#6b4423"/>
-    <rect x="30" y="8" width="4" height="44" fill="#8b5a2b"/>
-    
-    <!-- Grip wrapping (red cloth) -->
-    <rect x="28" y="44" width="8" height="12" fill="#c41e3a"/>
-    <rect x="29" y="45" width="6" height="2" fill="#8b0000"/>
-    <rect x="29" y="50" width="6" height="2" fill="#8b0000"/>
-    
-    <!-- Pommel (gold accent) -->
-    <rect x="27" y="54" width="10" height="4" fill="#d4af37"/>
-    <rect x="28" y="55" width="8" height="2" fill="#ffd700"/>
-    
-    <!-- Blade base (steel grey) -->
-    <rect x="18" y="6" width="28" height="4" fill="#4a4a4a"/>
-    
-    <!-- Main blade (curved naginata blade - red steel) -->
-    <rect x="14" y="4" width="4" height="6" fill="#c41e3a"/>
-    <rect x="10" y="8" width="4" height="4" fill="#c41e3a"/>
-    <rect x="8" y="10" width="4" height="4" fill="#c41e3a"/>
-    <rect x="8" y="14" width="4" height="2" fill="#c41e3a"/>
-    
-    <rect x="50" y="4" width="4" height="6" fill="#c41e3a"/>
-    <rect x="50" y="8" width="4" height="4" fill="#c41e3a"/>
-    <rect x="50" y="12" width="4" height="4" fill="#c41e3a"/>
-    <rect x="50" y="16" width="4" height="2" fill="#c41e3a"/>
-    
-    <!-- Blade highlight (brighter red) -->
-    <rect x="14" y="5" width="4" height="2" fill="#ff6b6b"/>
-    <rect x="10" y="9" width="4" height="2" fill="#ff6b6b"/>
-    <rect x="50" y="5" width="4" height="2" fill="#ff6b6b"/>
-    <rect x="50" y="13" width="4" height="2" fill="#ff6b6b"/>
-    
-    <!-- Tsuba (handguard) - purple gold rim -->
-    <rect x="22" y="40" width="20" height="6" fill="#6b4423"/>
-    <rect x="20" y="41" width="24" height="4" fill="#8b7355"/>
-    <rect x="21" y="42" width="22" height="2" fill="#a056d2"/>
-  </g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Hikone Castle Naginata (epic)</title>
+<rect x="28" y="4" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="8" width="4" height="4" fill="#c0392b"/>
+<rect x="32" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="12" width="4" height="4" fill="#c0392b"/>
+<rect x="32" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="16" width="4" height="4" fill="#e8c06a"/>
+<rect x="28" y="16" width="4" height="4" fill="#c0392b"/>
+<rect x="32" y="16" width="4" height="4" fill="#e8c06a"/>
+<rect x="36" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="4" height="4" fill="#e8c06a"/>
+<rect x="24" y="20" width="4" height="4" fill="#f5e6a0"/>
+<rect x="28" y="20" width="4" height="4" fill="#e8c06a"/>
+<rect x="32" y="20" width="4" height="4" fill="#c0392b"/>
+<rect x="36" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="24" width="4" height="4" fill="#e8c06a"/>
+<rect x="24" y="24" width="4" height="4" fill="#f5e6a0"/>
+<rect x="28" y="24" width="4" height="4" fill="#e8c06a"/>
+<rect x="32" y="24" width="4" height="4" fill="#c0392b"/>
+<rect x="36" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#e8c06a"/>
+<rect x="20" y="28" width="4" height="4" fill="#f5e6a0"/>
+<rect x="24" y="28" width="4" height="4" fill="#e8c06a"/>
+<rect x="28" y="28" width="4" height="4" fill="#f5e6a0"/>
+<rect x="32" y="28" width="4" height="4" fill="#c0392b"/>
+<rect x="36" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="4" height="4" fill="#e8c06a"/>
+<rect x="20" y="32" width="4" height="4" fill="#f5e6a0"/>
+<rect x="24" y="32" width="4" height="4" fill="#e8c06a"/>
+<rect x="28" y="32" width="4" height="4" fill="#f5e6a0"/>
+<rect x="32" y="32" width="4" height="4" fill="#c0392b"/>
+<rect x="36" y="32" width="4" height="4" fill="#8b1a1a"/>
+<rect x="40" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="4" height="4" fill="#5a3a1a"/>
+<rect x="24" y="36" width="4" height="4" fill="#8a6a3a"/>
+<rect x="28" y="36" width="4" height="4" fill="#5a3a1a"/>
+<rect x="32" y="36" width="4" height="4" fill="#c0392b"/>
+<rect x="36" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="40" width="4" height="4" fill="#8a6a3a"/>
+<rect x="28" y="40" width="4" height="4" fill="#5a3a1a"/>
+<rect x="32" y="40" width="4" height="4" fill="#8a6a3a"/>
+<rect x="36" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="44" width="4" height="4" fill="#5a3a1a"/>
+<rect x="32" y="44" width="4" height="4" fill="#8a6a3a"/>
+<rect x="36" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="48" width="4" height="4" fill="#5a3a1a"/>
+<rect x="32" y="48" width="4" height="4" fill="#8a6a3a"/>
+<rect x="36" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="52" width="4" height="4" fill="#8a6a3a"/>
+<rect x="36" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="56" width="8" height="4" fill="#2a1a0c"/>
 </svg>

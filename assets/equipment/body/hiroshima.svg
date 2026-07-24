@@ -1,52 +1,60 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Peace Memorial Cloak</title>
-  
-  <!-- Base cloak body - dark blue -->
-  <rect x="12" y="16" width="40" height="32" fill="#2d5a7b"/>
-  
-  <!-- Left shoulder -->
-  <rect x="8" y="12" width="8" height="8" fill="#4d8fbf"/>
-  <rect x="4" y="20" width="8" height="12" fill="#4d8fbf"/>
-  
-  <!-- Right shoulder -->
-  <rect x="48" y="12" width="8" height="8" fill="#4d8fbf"/>
-  <rect x="52" y="20" width="8" height="12" fill="#4d8fbf"/>
-  
-  <!-- Center front panel -->
-  <rect x="20" y="20" width="24" height="24" fill="#3d6f9b"/>
-  
-  <!-- Left front edge detail -->
-  <rect x="16" y="24" width="4" height="16" fill="#4d8fbf"/>
-  
-  <!-- Right front edge detail -->
-  <rect x="44" y="24" width="4" height="16" fill="#4d8fbf"/>
-  
-  <!-- Collar accent - light blue -->
-  <rect x="24" y="12" width="16" height="4" fill="#7eb3d9"/>
-  
-  <!-- Left collar -->
-  <rect x="20" y="16" width="4" height="4" fill="#7eb3d9"/>
-  
-  <!-- Right collar -->
-  <rect x="40" y="16" width="4" height="4" fill="#7eb3d9"/>
-  
-  <!-- Center chest ornament - memorial symbol (circle-like) -->
-  <rect x="28" y="24" width="4" height="4" fill="#e8d5b7"/>
-  <rect x="32" y="24" width="4" height="4" fill="#e8d5b7"/>
-  <rect x="24" y="28" width="4" height="4" fill="#e8d5b7"/>
-  <rect x="28" y="28" width="4" height="4" fill="#d4af37"/>
-  <rect x="32" y="28" width="4" height="4" fill="#d4af37"/>
-  <rect x="36" y="28" width="4" height="4" fill="#e8d5b7"/>
-  <rect x="28" y="32" width="4" height="4" fill="#e8d5b7"/>
-  <rect x="32" y="32" width="4" height="4" fill="#e8d5b7"/>
-  
-  <!-- Bottom hem detail -->
-  <rect x="16" y="44" width="32" height="4" fill="#4d8fbf"/>
-  
-  <!-- Left hem corner -->
-  <rect x="12" y="44" width="4" height="4" fill="#3d6f9b"/>
-  
-  <!-- Right hem corner -->
-  <rect x="52" y="44" width="4" height="4" fill="#3d6f9b"/>
-  
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Peace Memorial Cloak (rare)</title>
+<rect x="16" y="4" width="32" height="4" fill="#2a1a0c"/>
+<rect x="12" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="8" width="4" height="4" fill="#f0e8c8"/>
+<rect x="20" y="8" width="28" height="4" fill="#c8a878"/>
+<rect x="48" y="8" width="4" height="4" fill="#f0e8c8"/>
+<rect x="52" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="8" height="4" fill="#c8a878"/>
+<rect x="20" y="12" width="20" height="4" fill="#2a1a0c"/>
+<rect x="40" y="12" width="8" height="4" fill="#c8a878"/>
+<rect x="48" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="4" height="4" fill="#c8a878"/>
+<rect x="16" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="20" height="4" fill="#784830"/>
+<rect x="40" y="16" width="8" height="4" fill="#c8a878"/>
+<rect x="48" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#a07848"/>
+<rect x="16" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="20" height="4" fill="#784830"/>
+<rect x="40" y="20" width="4" height="4" fill="#c8a878"/>
+<rect x="44" y="20" width="4" height="4" fill="#a07848"/>
+<rect x="48" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#a07848"/>
+<rect x="16" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="24" width="20" height="4" fill="#784830"/>
+<rect x="40" y="24" width="4" height="4" fill="#c8a878"/>
+<rect x="44" y="24" width="4" height="4" fill="#a07848"/>
+<rect x="48" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="8" height="4" fill="#a07848"/>
+<rect x="20" y="28" width="4" height="4" fill="#784830"/>
+<rect x="24" y="28" width="4" height="4" fill="#c8b040"/>
+<rect x="28" y="28" width="4" height="4" fill="#784830"/>
+<rect x="32" y="28" width="4" height="4" fill="#c8b040"/>
+<rect x="36" y="28" width="4" height="4" fill="#784830"/>
+<rect x="40" y="28" width="8" height="4" fill="#a07848"/>
+<rect x="48" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="8" height="4" fill="#a07848"/>
+<rect x="24" y="32" width="4" height="4" fill="#784830"/>
+<rect x="28" y="32" width="4" height="4" fill="#e87840"/>
+<rect x="32" y="32" width="4" height="4" fill="#784830"/>
+<rect x="36" y="32" width="8" height="4" fill="#a07848"/>
+<rect x="44" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="20" height="4" fill="#a07848"/>
+<rect x="40" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="40" width="12" height="4" fill="#a07848"/>
+<rect x="36" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="44" width="4" height="4" fill="#a07848"/>
+<rect x="32" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="48" width="4" height="4" fill="#2a1a0c"/>
 </svg>

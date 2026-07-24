@@ -55,7 +55,8 @@ Generate EXTRA original content (no overlap with above) as JSON:
   "culture_extras": [<2 short paragraphs (~40 words each) about authentic local culture, craft, or daily-life facts a traveler would actually notice>],
   "seasonal_tip": "<one practical sentence about a specific seasonal consideration (weather, timing, crowds) — concrete and dated where possible>",
   "etiquette": "<one practical etiquette note specific to this prefecture or its main attractions — concrete situation>",
-  "deeper_phrase": { "jp":"<Japanese phrase, JLPT N5-N4 level>", "ro":"<romaji>", "en":"<English meaning>" }
+  "deeper_phrase": { "jp":"<Japanese phrase, JLPT N5-N4 level>", "ro":"<romaji>", "en":"<English meaning>" },
+  "faq": [<exactly 3 objects {"q":"a real question a first-time traveler or Japanese learner asks about this prefecture (transport, timing, what's worth it, etiquette, food)","a":"~30-word answer that leads with a concrete number or a proper noun from the context and gives one non-obvious, practical insight"}>]
 }
 
 STRICT RULES:
@@ -65,14 +66,36 @@ STRICT RULES:
 - ALL fields required. Reply with ONLY the JSON object, no markdown fences.`;
 }
 
-async function callOnce(g) {
+// FAQ-only prompt — used to add a GEO FAQ to prefectures that already have enrichment (preserves existing fields).
+function buildFaqPrompt(g) {
+  return `You write a short FAQ for a Japan travel guide about ${g.romaji} (${g.kanji}).
+
+CONTEXT (already in our article — stay consistent with it, invent nothing):
+- Region: ${g.region}
+- Lede: ${g.lede}
+- Intro: ${g.intro}
+- See: ${(g.see||[]).join("; ")}
+- Eat: ${g.eat || "n/a"}
+- Getting there: ${g.getting || "n/a"}
+- When to go: ${g.when || "n/a"}
+
+Generate JSON: { "faq": [<exactly 3 objects {"q","a"}>] }
+
+RULES for each Q&A:
+- q = a real question a first-time traveler or Japanese learner asks about ${g.romaji} (transport, timing, what is worth it, etiquette, or food).
+- a = about 30 words; lead with a concrete number or a proper noun drawn from the context above; give one non-obvious, practical insight.
+- Real places only. No anime, manga, brand names, or copyrighted material. Do not invent facts not supported by the context.
+- Reply with ONLY the JSON object, no markdown fences.`;
+}
+
+async function callOnce(g, prompt = buildPrompt(g)) {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": API_KEY, "anthropic-version": "2023-06-01", "Content-Type": "application/json" },
     body: JSON.stringify({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 800,
-      messages: [{ role: "user", content: buildPrompt(g) }],
+      messages: [{ role: "user", content: prompt }],
     }),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0,200)}`);
@@ -84,10 +107,10 @@ async function callOnce(g) {
   return JSON.parse(cleaned.slice(first, last+1));
 }
 
-async function withRetry(g) {
+async function withRetry(g, prompt) {
   let lastErr;
   for (let i = 0; i < RETRIES; i++) {
-    try { return await callOnce(g); }
+    try { return await callOnce(g, prompt || buildPrompt(g)); }
     catch (e) { lastErr = e; await new Promise(r => setTimeout(r, 500 * Math.pow(2, i))); }
   }
   throw lastErr;
@@ -114,17 +137,24 @@ async function runConcurrent(items, fn, n) {
 }
 
 const targets = GUIDES.filter(g => !g.full);
-console.log(`Enriching ${targets.length} prefectures with concurrency ${CONCURRENCY}…`);
-
 const existing = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : {};
-
-const remaining = targets.filter(g => !existing[g.slug]);
-console.log(`${Object.keys(existing).length} already enriched, ${remaining.length} new to fetch`);
-
-const results = await runConcurrent(remaining, withRetry, CONCURRENCY);
-
 const merged = { ...existing };
-remaining.forEach((g, i) => { if (results[i]) merged[g.slug] = results[i]; });
+
+// Pass 1 — brand-new prefectures: full enrichment (now includes faq).
+const newFull = targets.filter(g => !existing[g.slug]);
+// Pass 2 — already enriched but missing the GEO faq: generate faq only, preserve existing fields.
+const needFaq = targets.filter(g => existing[g.slug] && !Array.isArray(existing[g.slug].faq));
+console.log(`${Object.keys(existing).length} already enriched · ${newFull.length} new (full) · ${needFaq.length} need faq`);
+
+if (newFull.length) {
+  const r1 = await runConcurrent(newFull, g => withRetry(g, buildPrompt(g)), CONCURRENCY);
+  newFull.forEach((g, i) => { if (r1[i]) merged[g.slug] = r1[i]; });
+}
+if (needFaq.length) {
+  const r2 = await runConcurrent(needFaq, g => withRetry(g, buildFaqPrompt(g)), CONCURRENCY);
+  needFaq.forEach((g, i) => { if (r2[i] && Array.isArray(r2[i].faq)) merged[g.slug] = { ...merged[g.slug], faq: r2[i].faq }; });
+}
 
 writeFileSync(OUT, JSON.stringify(merged, null, 2));
-console.log(`\n✓ Wrote ${Object.keys(merged).length} enrichments to blog/guides-enriched.json`);
+const withFaq = Object.values(merged).filter(e => Array.isArray(e.faq)).length;
+console.log(`\n✓ Wrote ${Object.keys(merged).length} enrichments (${withFaq} with faq) to blog/guides-enriched.json`);

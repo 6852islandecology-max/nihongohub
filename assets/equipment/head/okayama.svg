@@ -1,48 +1,57 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Bizen Pottery Helm</title>
-  
-  <!-- Main helm body - earthen brown -->
-  <g id="helm">
-    <!-- Top dome -->
-    <rect x="20" y="8" width="24" height="4" fill="#8B6F47"/>
-    <rect x="16" y="12" width="32" height="4" fill="#9D7E52"/>
-    <rect x="12" y="16" width="40" height="4" fill="#8B6F47"/>
-    
-    <!-- Main face plate -->
-    <rect x="12" y="20" width="40" height="16" fill="#A0826D"/>
-    <rect x="12" y="20" width="40" height="2" fill="#4d8fbf"/>
-    
-    <!-- Left side plate -->
-    <rect x="8" y="24" width="4" height="12" fill="#8B6F47"/>
-    <rect x="8" y="24" width="4" height="2" fill="#4d8fbf"/>
-    
-    <!-- Right side plate -->
-    <rect x="52" y="24" width="4" height="12" fill="#8B6F47"/>
-    <rect x="52" y="24" width="4" height="2" fill="#4d8fbf"/>
-    
-    <!-- Face opening - dark -->
-    <rect x="20" y="24" width="24" height="8" fill="#5C4A3D"/>
-    
-    <!-- Eye slots -->
-    <rect x="24" y="26" width="4" height="4" fill="#2C2416"/>
-    <rect x="36" y="26" width="4" height="4" fill="#2C2416"/>
-    
-    <!-- Nose guard -->
-    <rect x="30" y="30" width="4" height="2" fill="#5C4A3D"/>
-    
-    <!-- Cheek guards -->
-    <rect x="16" y="28" width="4" height="8" fill="#9D7E52"/>
-    <rect x="44" y="28" width="4" height="8" fill="#9D7E52"/>
-    
-    <!-- Bottom rim -->
-    <rect x="12" y="36" width="40" height="4" fill="#7A6340"/>
-    <rect x="12" y="36" width="40" height="1" fill="#4d8fbf"/>
-    
-    <!-- Neck guard flare -->
-    <rect x="14" y="40" width="36" height="4" fill="#8B6F47"/>
-    
-    <!-- Texture detail lines -->
-    <rect x="18" y="22" width="2" height="12" fill="#6B5A4D" opacity="0.4"/>
-    <rect x="44" y="22" width="2" height="12" fill="#6B5A4D" opacity="0.4"/>
-  </g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Bizen Pottery Helm (rare)</title>
+<rect x="24" y="8" width="16" height="4" fill="#2a1a0c"/>
+<rect x="20" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="12" width="4" height="4" fill="#8b5e3c"/>
+<rect x="28" y="12" width="8" height="4" fill="#c4845a"/>
+<rect x="36" y="12" width="4" height="4" fill="#8b5e3c"/>
+<rect x="40" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="4" height="4" fill="#8b5e3c"/>
+<rect x="24" y="16" width="4" height="4" fill="#c4845a"/>
+<rect x="28" y="16" width="8" height="4" fill="#e8b48a"/>
+<rect x="36" y="16" width="4" height="4" fill="#c4845a"/>
+<rect x="40" y="16" width="4" height="4" fill="#8b5e3c"/>
+<rect x="44" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="4" height="4" fill="#8b5e3c"/>
+<rect x="24" y="20" width="4" height="4" fill="#c4845a"/>
+<rect x="28" y="20" width="8" height="4" fill="#e8b48a"/>
+<rect x="36" y="20" width="4" height="4" fill="#c4845a"/>
+<rect x="40" y="20" width="4" height="4" fill="#8b5e3c"/>
+<rect x="44" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="24" width="4" height="4" fill="#8b5e3c"/>
+<rect x="24" y="24" width="4" height="4" fill="#c4845a"/>
+<rect x="28" y="24" width="4" height="4" fill="#e8b48a"/>
+<rect x="32" y="24" width="8" height="4" fill="#c4845a"/>
+<rect x="40" y="24" width="4" height="4" fill="#8b5e3c"/>
+<rect x="44" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="28" width="20" height="4" fill="#8b5e3c"/>
+<rect x="40" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="32" width="20" height="4" fill="#8b5e3c"/>
+<rect x="40" y="32" width="12" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="8" height="4" fill="#8b5e3c"/>
+<rect x="24" y="36" width="4" height="4" fill="#c4845a"/>
+<rect x="28" y="36" width="8" height="4" fill="#8b5e3c"/>
+<rect x="36" y="36" width="4" height="4" fill="#c4845a"/>
+<rect x="40" y="36" width="8" height="4" fill="#8b5e3c"/>
+<rect x="48" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="36" height="4" fill="#8b5e3c"/>
+<rect x="52" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="4" height="4" fill="#8b5e3c"/>
+<rect x="20" y="44" width="4" height="4" fill="#d4a96a"/>
+<rect x="24" y="44" width="4" height="4" fill="#7a4a2a"/>
+<rect x="28" y="44" width="8" height="4" fill="#8b5e3c"/>
+<rect x="36" y="44" width="4" height="4" fill="#d4a96a"/>
+<rect x="40" y="44" width="4" height="4" fill="#7a4a2a"/>
+<rect x="44" y="44" width="4" height="4" fill="#8b5e3c"/>
+<rect x="48" y="44" width="4" height="4" fill="#7a4a2a"/>
+<rect x="52" y="44" width="4" height="4" fill="#d4a96a"/>
+<rect x="16" y="48" width="40" height="4" fill="#2a1a0c"/>
 </svg>

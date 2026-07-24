@@ -1,0 +1,942 @@
+{
+  "level": "N5",
+  "lang": "id",
+  "count": 85,
+  "items": [
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く<u>前に</u>、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "読み"
+      ],
+      "explanation": "「食べ」adalah jawaban yang benar karena kalimat menjelaskan aktivitas makan sarapan setiap pagi sebelum pergi ke sekolah; konjugasi dengan ます cocok. 「飲み」(minum) adalah kata kerja berbeda tetapi tidak sesuai konteks—sarapan biasanya dimakan, bukan diminum (meskipun dapat minum minuman dengan sarapan, kata kerja utama di sini harus 食べる). 「見」(melihat) adalah kata kerja sama sekali berbeda dan tidak masuk akal dalam konteks sarapan. 「読み」(membaca) juga tidak cocok—orang tidak membaca sarapan mereka."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "飲み（のみ）adalah bentuk dasar verba 飲む yang berarti 'minum', cocok dengan konteks 牛乳を（minum susu setiap hari pagi). Ini menunjukkan kebiasaan rutin dengan struktur 毎日＋nama minuman＋飲みます. 食べ（たべ）berarti 'makan' dan digunakan untuk makanan padat, bukan minuman cair seperti susu—salah konteks. 見（み）berarti 'melihat' dan tidak sesuai dengan benda yang dikonsumsi—maknanya sama sekali berbeda. 聞き（きき）berarti 'mendengarkan' dan tidak ada hubungan dengan konsumsi minuman—juga maknanya salah di sini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "こうがく",
+        "がっこく"
+      ],
+      "explanation": "学校 dibaca がっこう (gakkō) — kombinasi dari 学 (gaku = belajar) dan 校 (kō = sekolah), kata majemuk standar untuk \"sekolah\". Distractor がくこう (gakukō) membalikkan urutan mora dari bunyi yang benar, sebuah kesalahan akibat mendengarkan tidak cermat. Distractor こうがく (kōgaku) membaca 学校 sebaliknya dan secara kebetulan terdengar seperti kata nyata 工学 (teknik), tetapi di sini salah tempat. Distractor がっこく (gakkoku) mencampurkan 学校 dengan pembacaan 国 (koku = negara), sebuah substitusi kanji yang tidak relevan dalam konteks ini. Hanya がっこう yang sesuai dengan makna \"sekolah\" dalam kalimat sehari-hari."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<u>食べます</u>。",
+      "reading": "Pilih pembacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "たべます",
+      "distractors": [
+        "しょくべます",
+        "たおべます",
+        "くべます"
+      ],
+      "explanation": "「食べます」adalah bentuk polite dari verba dasar 「食べる」(makan), yang merupakan i-adjective verb dengan okurigana 「べ」. Jawaban benar adalah たべます karena ini adalah cara standar membaca 食 dalam konteks makan sesuai dengan pola N5. 「しょくべます」(shokubemasru) adalah pembacaan on-yomi yang salah untuk 食 dalam verba ini — meskipun 食 dapat dibaca しょく dalam kata benda seperti 食事, di sini itu salah secara konteks dan tidak alami. 「たおべます」(taobemasru) menggabungkan pembacaan kanji yang tidak ada (た+お) dan bukan bentuk nyata dari kata apapun. 「くべます」(kubemasru) adalah pembacaan on-yomi lain untuk 食 (seperti dalam 食べ物), tetapi di verba 食べる, pembacaan yang benar adalah kun-yomi たべ, bukan く."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>友達</u>と<ruby>遊<rt>あそ</rt></ruby>びます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "ともだち",
+      "distractors": [
+        "ともだ",
+        "ゆうたち",
+        "ゆうだち"
+      ],
+      "explanation": "「友達」(ともだち) dibaca sebagai teman yang bermakna \"teman\" — ini adalah pembacaan standar Jepang N5 untuk kanji majemuk yang menggabungkan 友 (tomo/yuu) dan 達 (tatsu/tachi) dalam konteks teman. Distractor ともだ (tomoda) menghilangkan bagian akhir dan bukan pembacaan kanji yang lengkap atau valid. Distractor ゆうたち (yuutachi) menggunakan kunyomi 友 yang salah (seharusnya kunyomi tomo, bukan yuu dalam kata majemuk ini) dan 達 dibaca tachi, padahal kombinasi ini tidak umum dalam N5. Distractor ゆうだち (yuudachi) juga menggunakan pembacaan yang salah dan malah menyerupai nama fenomena cuaca (夕立), bukan arti \"teman\"."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行く</u>ので、<ruby>早く<rt>はやく</rt></ruby><ruby>寝<rt>ね</rt></ruby>ます。",
+      "reading": "Pilih pembacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "いく",
+      "distractors": [
+        "ゆく",
+        "あく",
+        "こく"
+      ],
+      "explanation": "「行く」の pembacaan yang tepat adalah「いく」karena ini adalah verba dasar yang paling umum digunakan dalam kehidupan sehari-hari untuk berarti \"pergi\". Distractor pertama「ゆく」(ゆく) adalah pembacaan kanji yang sama tetapi jarang digunakan dan bersifat lebih formal atau sastra. Distractor kedua「あく」(membuka) adalah pembacaan kanji yang berbeda dan tidak sesuai dengan konteks kalimat tentang pergi ke sekolah. Distractor ketiga「こく」tidak ada pembacaan kanji yang valid untuk「行く」dan merupakan pilihan yang sepenuhnya salah."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行く<rt>いく</rt></ruby> <ruby>前<rt>まえ</rt></ruby>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「食べます」(makan) adalah jawaban yang benar karena kalimat meminta apa yang dilakukan dengan 朝食 (sarapan) sebelum pergi ke sekolah—dalam konteks ini, sarapan dimakan, bukan diminum atau diamati. 「飲み」(minum) salah karena meskipun beberapa minuman bisa dikonsumsi saat sarapan, sarapan itu sendiri secara umum dimakan, bukan diminum. 「見」(melihat) tidak sesuai di sini karena tidak masuk akal untuk 'melihat' sarapan sebagai kegiatan utama; itu adalah konteks yang salah untuk makna dari 見る. 「聞き」(mendengarkan) sama sekali tidak relevan dengan sarapan dan tidak cocok dalam kalimat ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>に行きます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata bergaris.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこえ",
+        "がくしょ"
+      ],
+      "explanation": "がっこう adalah pembacaan yang benar untuk 学校 (sekolah). Komponen 学 (がく/がっ) bermakna belajar dan 校 (こう) bermakna sekolah/institusi; bersama-sama membentuk kata sehari-hari yang sangat umum di N5. がくこう salah karena menggunakan on-reading yang keliru—校 dibaca こう bukan こえ dalam konteks ini. がっこえ secara fonetik mirip tapi bukan pembacaan resmi kanji 校 dalam kata ini. がくしょ adalah pembacaan yang ada tapi merujuk pada arti lain (perpustakaan/ruang tulis) dan bukan makna yang tepat untuk 学校 di sini."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<u>朝食</u>を食べます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうかり",
+        "あさごはん"
+      ],
+      "explanation": "ちょうしょく（朝食）adalah istilah umum dan resmi untuk makanan pagi dalam bahasa Jepang N5. Kanji 朝（ちょう）berarti \"pagi\" dan 食（しょく）berarti \"makanan\", sehingga bacaan ini tepat. あさしょく (asashoku) terdengar mirip tetapi pengucapan kanji 朝 di sini adalah ちょう, bukan あさ dalam konteks komposisi kata. ちょうかり (choukarite) bukan bacaan yang tepat karena 食 tidak dibaca かり; ini adalah distraksi fonetik. あさごはん (asagohan) adalah istilah kasual untuk \"sarapan\" tetapi menggunakan 御飯 (gohan), bukan kanji 食, jadi bukan jawaban yang benar untuk soal ini yang menunjukkan kanji 朝食."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>朝食</u>を<ruby>食べ<rt>たべ</rt></ruby>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "朝食（ちょうしょく）adalah istilah standar N5 yang berarti \"sarapan\"—kombinasi 朝（ちょう、pagi）dan 食（しょく、makanan），mengikuti pola baca on-yomi untuk compound kanji. あさしょく (asashoku) menggabungkan kun-yomi untuk kanji pertama dengan on-yomi untuk kanji kedua, yang tidak sesuai dengan pola pembacaan standar compound kanji dalam kalimat formal; meski \"asashoku\" terdengar seperti bisa berarti \"sarapan\", tidak ada pembacaan resmi seperti ini di N5. ちょうたべ (chōtabe) mencoba menggabungkan on-yomi dari 朝 dengan bentuk verba 食べ, yang salah karena 食 di sini adalah bagian dari nomina majemuk, bukan verba mandiri. あさたべ (asatabe) menggunakan kun-yomi untuk kedua kanji dan menambahkan bentuk verba, yang merupakan kesalahan kategori gramatikal—ini bukan nomina yang sesuai dengan partikel を dan verba 食べます."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>学校<rt>がっこう</rt></ruby>へ <u>行く</u> <ruby>前<rt>まえ</rt></ruby>に、<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「飲み」(のみ、意味：minum) adalah jawaban yang benar karena dalam konteks ini berkonjugasi dengan ます dan secara semantik cocok—牛乳 (susu) adalah minuman yang diminum. 「食べ」(たべ、makan) salah karena susu diminum, bukan dimakan; kesalahan kolokasi. 「見」(み、melihat) salah karena secara semantik tidak masuk akal—tidak ada konteks visual di sini; kesalahan makna. 「聞き」(きき、mendengarkan) salah karena mendengarkan bukan aktivitas yang dilakukan pada susu; kesalahan kolokasi dan makna."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>本<rt>ほん</rt></ruby>を<ruby>読み<rt>よみ</rt></ruby>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji garis bawah.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "にいしい"
+      ],
+      "explanation": "「新しい」dibaca「あたらしい」karena ini adalah kata sifat i-dasar yang sangat umum di N5, berarti 'baru'. Distractor「しんしい」menggunakan bacaan on (しん) yang ada dalam kanji, tetapi okurigana「しい」tidak sesuai dengan pola reguler kata sifat i — bacaan on kanji tunggal jarang digabungkan langsung dengan okurigana untuk membentuk kata sifat i. Distractor「あらたしい」adalah kesalahan umum karena terdengar mirip (けれど itu salah — bentuk yang benar adalah「あたらしい」tanpa suara 'ta' yang panjang). Distractor「にいしい」mencoba menggunakan bacaan alternatif yang tidak ada; bacaan「にい」tidak berlaku di sini dan menghasilkan kata yang tidak berarti."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>食<rt>しょく</rt></ruby>を（　）。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat.",
+      "correct": "食べます",
+      "distractors": [
+        "飲みます",
+        "読みます",
+        "見ます"
+      ],
+      "explanation": "「朝食を食べます」adalah ungkapan kolokasi standar yang berarti 'makan sarapan'. Kata 「食べます」(tabemasu) adalah verba yang benar untuk makanan. 「飲みます」(nomimasu, minum) cocok untuk minuman bukan makanan, jadi tidak sesuai dengan 「朝食」(sarapan/makanan pagi). 「読みます」(yomimasu, membaca) adalah verba yang sama sekali berbeda dan tidak logis untuk makanan. 「見ます」(mimasu, melihat) juga tidak sesuai karena sarapan harus dimakan, bukan dilihat."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang sesuai dengan konteks kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "「飲みます」(のみます) adalah jawaban yang benar karena 牛乳（ぎゅうにゅう）adalah minuman, dan verba 飲む (minum) adalah collocation standar untuk minuman dalam bahasa Jepang sehari-hari. 「食べます」(たべます) berarti makan, digunakan untuk makanan padat, bukan minuman—konteks salah. 「読みます」(よみます) berarti membaca, digunakan untuk buku atau dokumen, tidak ada hubungan dengan minuman. 「聞きます」(ききます) berarti mendengar atau menanyakan, sama sekali tidak relevan dengan aktivitas mengonsumsi minuman."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "「飲む」（のむ、minum) adalah verba yang tepat untuk zat cair seperti susu. Bentuk stem 「飲み」cocok dengan pola 「～ます」 karena memberikan 「飲みます」(saya minum). 「食べ」(makan) salah karena susu diminum, bukan dimakan—zat cair tidak digunakan dengan verba ini meski sama-sama konsumsi. 「読み」(membaca, yomu) salah karena susu tidak bisa dibaca; digunakan untuk buku dan dokumen saja. 「聞き」(mendengar, kiku) salah karena tidak ada hubungan semantik antara susu dan mendengarkan."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata bergaris bawah.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたらい",
+        "にいしい"
+      ],
+      "explanation": "Jawaban yang benar adalah あたらしい karena itu adalah pembacaan standar kata sifat い 新しい yang berarti 'baru'. Kata ini adalah salah satu dari 100 kanji N5 yang paling dasar dan pembacaannya selalu あたらしい. Distractor しんしい (shin-shii) adalah pembacaan salah karena meskipun 新 memiliki on-yomi しん, kata sifat ini menggunakan kun-yomi あたらしい, bukan on-yomi; selain itu, akhiran -しい tidak alami pada bentuk ini. Distractor あたらい (ataraii) salah karena menghilangkan ん di tengah kata dan mengubah s menjadi hanya vokal, menghasilkan bentuk yang tidak ada dalam bahasa Jepang. Distractor にいしい (niishii) salah karena い dari 新 tidak dibaca に dalam konteks apapun; ini adalah pembacaan yang sepenuhnya tidak valid untuk kanji ini."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行きます</u>。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "いきます",
+      "distractors": [
+        "ゆきます",
+        "こうきます",
+        "あるきます"
+      ],
+      "explanation": "いきます (iku-masu) adalah bacaan yang benar untuk 行く dalam bentuk sopan masa kini. Kata kerja 行く berarti \"pergi\" dan dalam konteks kalimat \"明日は学校へ行きます\" (Besok saya akan pergi ke sekolah), itu adalah bentuk yang wajar dan alami. ゆきます salah karena 雪 (yuki = salju) memiliki bacaan ゆ, bukan 行; ini merupakan pembacaan kanji yang sama sekali tidak tepat untuk 行. こうきます bukan bacaan yang ada; meskipun 行 dapat dibaca こう dalam beberapa kata majemuk tertentu (seperti 行動 kōdō), tidak ada kata kerja こう-kimasu dalam bahasa Jepang standar. あるきます salah karena meskipun 歩く (aruku) berarti \"berjalan kaki\" dan memiliki bentuk sopan arukimasu, kanji yang digunakan dalam kalimat ini adalah 行, bukan 歩, dan \"berjalan kaki ke sekolah\" memiliki makna yang berbeda dari \"pergi ke sekolah\"."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>食<rt>しょく</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat ini.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「食べます」（たべます）adalah jawaban yang benar karena 朝食（あさしょく）berarti 'sarapan'—makanan yang harus dimakan, bukan diminumkan atau dilihat. Kata kerja 「飲み」（のみ）berarti 'minum' dan tidak sesuai untuk makanan padat seperti sarapan. 「見」（み）berarti 'melihat' dan secara semantik salah dalam konteks ini (tidak masuk akal untuk 'melihat sarapan' dalam aktivitas sehari-hari). 「聞き」（きき）berarti 'mendengar' dan jelas tidak relevan dengan makan sarapan."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>へ<ruby>行き<rt>いき</rt></ruby>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくせい",
+        "がくしゃ",
+        "こうがく"
+      ],
+      "explanation": "がっこう (学校) adalah bacaan standar untuk 「学校」yang berarti sekolah, tempat di mana seseorang pergi untuk belajar setiap hari, cocok dengan konteks kalimat「毎日学校へ行きます」. がくせい (がくせい) adalah salah — itu berarti「siswa」bukan「sekolah」, dan meskipun menggunakan kanji pertama yang sama, bacaannya berbeda sepenuhnya. がくしゃ (がくしゃ) salah — itu berarti「sarjana」atau「ilmuwan」dan bukan nama bangunan tempat belajar, jadi tidak cocok di sini. こうがく (こうがく) salah — itu adalah bacaan on-yomi yang tidak benar untuk 学校; bacaan on yang tepat adalah がく, bukan こう."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行き</u>ます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "いき",
+      "distractors": [
+        "ぎょう",
+        "こう",
+        "いく"
+      ],
+      "explanation": "いき (iku + okurigana) adalah bentuk stem dari 行く yang benar ketika diikuti oleh ます dalam pola reguler ～ます. Distraktor ぎょう (gyō) adalah pembacaan on-yomi dari 行 yang digunakan dalam kata-kata lain seperti 旅行 (ryokō: perjalanan) tetapi tidak cocok untuk verb ini dalam bentuk polis. こう adalah bentuk on-yomi lain dari 行 yang juga tidak cocok untuk ～ます pattern ini. いく terlihat mirip tetapi merupakan bentuk dasar penuh (infinitif/bentuk kamus), bukan stem yang diperlukan sebelum ます, dan akan menghasilkan いくます yang tidak standar."
+    },
+    {
+      "question": "毎日 <ruby>朝<rt>あさ</rt></ruby> コーヒーを（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "「飲み」adalah bentuk akar dari 飲む (nomu = minum), yang merupakan verba yang tepat untuk minuman seperti kopi. Konstruksi 「毎日朝 コーヒーを飲みます」adalah frase umum dan alami dalam bahasa Jepang sehari-hari. 「食べ」(taberu = makan) digunakan untuk makanan padat, bukan minuman, sehingga tidak cocok di sini. 「読み」(yomu = membaca) digunakan untuk buku atau teks, bukan minuman, jadi konteksnya salah. 「聞き」(kiku = mendengar) adalah verba untuk bunyi atau musik, sama sekali tidak sesuai dengan kopi."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>　<ruby>朝<rt>あさ</rt></ruby>　<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "「飲みます」(のみます) adalah jawaban yang benar karena 牛乳 (susu) adalah minuman yang harus diminum, bukan dimakan atau dilihat — ini adalah kolokasi standar dalam bahasa Jepang sehari-hari. 「食べます」(たべます, makan) adalah kata kerja yang digunakan untuk makanan padat, bukan minuman, sehingga tidak sesuai di sini. 「見ます」(みます, melihat) berarti melihat dengan mata, bukan mengkonsumsi minuman — tujuannya sama sekali berbeda. 「聞きます」(ききます, mendengar) adalah verba pendengaran dan tidak ada kaitannya dengan mengkonsumsi atau minuman."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>朝食</u>を食べてから<ruby>学校<rt>がっこう</rt></ruby>に行きます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "朝食（ちょうしょく）adalah istilah standar dan resmi untuk makanan pagi dalam bahasa Jepang, dan membaca kanji 朝 sebagai ちょう dan 食 sebagai しょく adalah cara yang benar. あさしょく salah karena 朝 dalam konteks makanan pagi selalu dibaca ちょう, bukan あさ (meski あさ adalah bacaan onyomi umum lainnya). ちょうたべ salah karena kanji 食 sebagai bagian dari kata benda majemuk untuk makanan dibaca しょく, bukan たべ (たべ adalah bentuk verba). あさたべ salah karena ini bukan kata benda standar — kanji harus dibaca dalam pola resmi 朝食, dan bacaan onyomi ちょう untuk 朝 dalam konteks ini tidak dapat digantikan dengan kunyomi あさ."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行き</u>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digaris bawahi.",
+      "correct": "いき",
+      "distractors": [
+        "こう",
+        "ぎょう",
+        "あき"
+      ],
+      "explanation": "「行き」dalam konteks ini adalah bentuk dasar verba「行く」(pergi) yang digunakan sebelum「ます」untuk membentuk present polite。Bacaan yang benar adalah「いき」karena ini adalah stem verba yang akan ditambah suffix「ます」menjadi「行きます」。Distractor「こう」(読みonomi) adalah bacaan alternatif dari kanji「行」tetapi tidak sesuai dalam posisi verba bentuk present。Distractor「ぎょう」(suatu pekerjaan) adalah bacaan yang berbeda sama sekali dan tidak pernah digunakan dalam konteks verba「行く」。Distractor「あき」(musim gugur) adalah kanji homofon tetapi merujuk makna yang sama sekali berbeda dan tidak bisa berupa bacaan dari kanji「行」di sini。"
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>　<ruby>朝<rt>あさ</rt></ruby>　<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「飲む」（のむ — minum） adalah kata kerja yang benar karena 牛乳（ぎゅうにゅう — susu） adalah minuman yang dikonsumsi dengan minum, bukan makan. Dalam konteks ini, 「飲みます」（akan minum） cocok dengan rutinitas harian. 「食べ」（たべ — makan） salah karena susu diminum, bukan dimakan, meskipun kata kerja konsumsi ini. 「見」（み — melihat） salah karena tidak logis dalam konteks konsumsi minuman; artinya menggunakan indera mata, bukan rasa. 「聞き」（きき — mendengar） juga salah karena merujuk pada indera pendengaran dan tidak ada hubungan dengan minum susu."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ <u>いく</u> <ruby>前<rt>まえ</rt></ruby>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を <ruby>食べ<rt>たべ</rt></ruby>ます。",
+      "reading": "Pilih kata kerja yang benar untuk melengkapi kalimat.",
+      "correct": "行く",
+      "distractors": [
+        "来る",
+        "見る",
+        "読む"
+      ],
+      "explanation": "「行く」（いく = pergi）adalah jawaban benar karena kalimat menjelaskan rutinitas: seseorang makan sarapan SEBELUM PERGI ke sekolah — ini adalah arah perjalanan dari rumah ke tempat lain. 「来る」（くる = datang）salah karena menyatakan arah sebaliknya (kembali/tiba), tidak cocok dalam konteks 'sebelum pergi ke sekolah'. 「見る」（みる = melihat）salah karena merupakan verba persepsi, bukan perjalanan. 「読む」（よむ = membaca）salah karena menyatakan aktivitas membaca, sama sekali tidak sesuai dengan konteks perjalanan ke sekolah."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>の<ruby>父<rt>ちち</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><u>会社</u>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih bacaan yang tepat untuk kanji yang digarisbawahi.",
+      "correct": "かいしゃ",
+      "distractors": [
+        "あいしゃ",
+        "かいや",
+        "がっこう"
+      ],
+      "explanation": "会社（かいしゃ）adalah tempat kerja kantor, bacaan yang paling umum dan sesuai dalam konteks kalimat ini di mana seseorang pergi ke tempat kerja setiap hari. Distraktor あいしゃ salah karena meskipun bunyi mirip, itu bukan bacaan standar untuk kanji 会社. Distraktor かいや (bukan kata yang bermakna dalam konteks ini; や berarti toko, tetapi tidak cocok dengan 会) salah karena struktur kanji tidak sesuai. Distraktor がっこう (sekolah) adalah kata yang benar-benar ada dan bacaan N5, tetapi bermakna sekolah, bukan perusahaan—konteks kalimat menunjukkan pekerjaan orang dewasa, bukan sekolah."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ <u>（　）</u>で <ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat.",
+      "correct": "電車",
+      "distractors": [
+        "本",
+        "水",
+        "山"
+      ],
+      "explanation": "「電車」（でんしゃ、kereta listrik) adalah pilihan yang tepat karena merupakan alat transportasi yang cocok untuk pergi ke sekolah dengan pola 「～で行く」 (pergi menggunakan/dengan ~). 「本」 (ほん, buku) adalah benda, bukan alat transportasi, sehingga tidak bisa digunakan dengan pola ini. 「水」 (みず, air) adalah cairan, bukan alat untuk pergi, dan tidak masuk akal dalam konteks ini. 「山」 (やま, gunung) adalah tempat, bukan cara/alat untuk berpergian, jadi tidak sesuai dengan partikel 「で」 yang menunjukkan cara melakukan aksi."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>食<rt>しょく</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "読み"
+      ],
+      "explanation": "「朝食を食べます」adalah kolokasi standar yang berarti 'makan sarapan pagi'. Verba 食べ (taberu, makan) adalah jawaban yang tepat karena 朝食 (asagohan, sarapan) adalah makanan yang dimakan, bukan diminum atau dilihat. 飲み (nomu, minum) secara gramatikal dapat dikonjugasikan tetapi secara semantik salah—makanan dimakan, bukan diminum. 見 (miru, melihat) adalah kata kerja yang sama sekali berbeda dan tidak memiliki arti dalam konteks ini. 読み (yomu, membaca) juga tidak sesuai karena makanan tidak dibaca melainkan dimakan."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行く<rt>いく</rt></ruby>前に<u>牛乳</u>を<ruby>飲み<rt>のみ</rt></ruby>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ぎゅうにゅう",
+      "distractors": [
+        "うしちち",
+        "ぎゅうぢ",
+        "おうにゅう"
+      ],
+      "explanation": "牛乳 (ぎゅうにゅう) adalah bacaan standar untuk minuman susu segar—kata benda majemuk dari 牛 (ushii, sapi) + 乳 (nyū, susu), yang secara alami dibaca dengan on-yomi untuk keduanya. うしちち salah karena mencampur kun-yomi 牛 (ushi) dengan kun-yomi 乳 (chi), suatu kombinasi yang tidak wajar dalam bahasa Jepang modern. ぎゅうぢ menggunakan on-yomi yang salah untuk kanji kedua (乳 tidak pernah dibaca ぢ dalam konteks standar). おうにゅう adalah salah pembacaan on-yomi dari 牛 (牛 adalah ぎゅう, bukan おう) dan akan mengubah makna menjadi nonsens dalam kalimat ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<u>学校</u>に行きます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がっこ",
+        "がくせい",
+        "きょういく"
+      ],
+      "explanation": "がっこう adalah bacaan yang benar untuk 学校 yang berarti 'sekolah'. Ini adalah kanji dasar N5 yang sangat sering digunakan dalam kehidupan sehari-hari. がっこ (tanpa o pada akhir) adalah bacaan yang tidak lengkap—kanji 学校 selalu dibaca sebagai 「がっこう」dengan vokal panjang. がくせい (gakusei) berarti 'murid/siswa' dan menggunakan kanji berbeda (学生), jadi meskipun 学 sama, gabungannya salah di sini. きょういく (kyoiku) berarti 'pendidikan' dan merupakan kata yang sama sekali berbeda—tidak ada hubungan dengan 学校 dalam konteks kalimat ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>へ行きます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこく",
+        "がくしょう"
+      ],
+      "explanation": "Jawaban yang benar adalah がっこう karena ini adalah pembacaan on'yomi standar untuk kanji 学校 (sekolah), yang merupakan kosakata N5 paling dasar. がくこう (distractor 1) adalah variasi pembacaan yang tidak lazim dan bukan cara standar melafalkan kanji ini — meskipun 学 bisa dibaca gaku, kombinasi ini tidak digunakan dalam bahasa Jepang modern. がっこく (distractor 2) terlihat mirip tetapi sebenarnya adalah pembacaan kanji berbeda (国 = kuni/negara) dan tidak ada hubungannya dengan 学校. がくしょう (distractor 3) mencampur pembacaan kun'yomi yang tidak tepat dan menciptakan bentuk yang tidak ada — 学 tidak pernah dibaca しょう dalam konteks ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>に<ruby>行き<rt>いき</rt></ruby>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこく",
+        "がくしょう"
+      ],
+      "explanation": "「学校」dibaca「がっこう」karena kedua kanji ini adalah bentuk dasar N5 yang sangat umum: 学 (学ぶ) = belajar, 校 (こう) = sekolah. Distraktor「がくこう」salah karena mengubah 校 menjadi こう yang tidak sesuai dalam kata majemuk ini. Distraktor「がっこく」salah karena 国 (くに) berarti negara, bukan bagian dari kata 学校. Distraktor「がくしょう」salah karena 庁 atau 章 bukanlah kanji yang benar di sini, dan bacaan ini tidak ada dalam kosakata N5 dasar."
+    },
+    {
+      "question": "私は毎日<ruby>学校<rt>がっこう</rt></ruby>へ<u>行き</u>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "いき",
+      "distractors": [
+        "ぎょう",
+        "こう",
+        "あき"
+      ],
+      "explanation": "「行き」dalam konteks ini adalah bentuk stem dari verba 行く (pergi), yang digunakan sebelum ます untuk membentuk bentuk sopan present tense 「行きます」. Bacaan yang benar adalah いき. Distractor 「ぎょう」(ぎょう) adalah bacaan on-yomi alternatif dari 行 tetapi tidak digunakan dalam bentuk masu verb sehari-hari. Distractor 「こう」(こう) adalah bacaan on-yomi lain dari 行 tetapi juga tidak cocok untuk konteks verba ini. Distractor 「あき」(あき) adalah bacaan yang sepenuhnya salah dan merujuk ke musim gugur, bukan kegiatan pergi ke sekolah."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>朝食</u>を食べます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "朝食（ちょうしょく）adalah kata majemuk yang berarti \"makanan pagi\" dan merupakan pembacaan on'yomi standar untuk kedua kanji. Distractor あさしょく menggunakan kun'yomi untuk 朝（あさ）yang salah karena 朝食 selalu dibaca dengan on'yomi penuh dalam bahasa Jepang standar. Distractor ちょうたべ salah karena 食 dalam 朝食 tidak pernah dibaca sebagai たべ（yang merupakan kun'yomi dasar verb 食べる）—komponen noun compound ini memerlukan on'yomi ショク. Distractor あさたべ menggabungkan dua pembacaan yang salah dan merusak struktur kata majemuk yang mapan."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>大切<rt>たいせつ</rt></ruby>な<u>時間</u>です。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "じかん",
+      "distractors": [
+        "じぎょう",
+        "ときかん",
+        "じかんい"
+      ],
+      "explanation": "じかん (時間) adalah bacaan standar untuk kata majemuk yang berarti 'waktu' atau 'jam'. Ini adalah kolokasi N5 dasar yang sering digunakan dalam kalimat harian seperti 「時間がありません」(tidak punya waktu). じぎょう adalah bacaan yang sama sekali tidak relevan—itu adalah kata lain yang berarti 'bisnis/usaha' dan tidak cocok dalam konteks kalimat ini. ときかん bukan bacaan kanji yang valid; pembaca mungkin mencampur ことば 'waktu' yang berbeda dengan だいじな 'penting'. じかんい juga bukan bacaan standar untuk kanji ini dan bukan kata Jepang yang umum—ini adalah kesalahan pembacaan yang melampaui N5."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "「飲みます」(のみます) adalah jawaban benar karena 牛乳 (susu) adalah minuman yang diminum, bukan dimakan atau dilihat. Struktur 「～を飲みます」adalah kolokasi standar untuk minuman dalam bahasa Jepang N5. 「食べます」(tabemasu, makan) salah karena susu diminum, bukan dimakan meskipun keduanya berkaitan dengan konsumsi. 「見ます」(mimasu, melihat) salah karena tidak ada koneksi logis antara melihat susu dan rutinitas pagi setiap hari. 「聞きます」(kikimasu, mendengarkan) jelas salah karena susu bukan objek yang dapat didengarkan—ini adalah kata kerja untuk suara atau informasi."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>大切<rt>たいせつ</rt></ruby>な<u>友達</u>と<ruby>公園<rt>こうえん</rt></ruby>で<ruby>遊び<rt>あそび</rt></ruby>ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ともだち",
+      "distractors": [
+        "ともだ",
+        "ゆうたち",
+        "ともたち"
+      ],
+      "explanation": "友達（ともだち）adalah pembacaan standar untuk kata yang berarti teman — komponen 友 dibaca tomo dan 達 dibaca dachi dalam konteks ini, membentuk satu kata bersama. ともだ（hanya membaca 友 dan setengah dari 達） adalah pembacaan tidak lengkap yang menghasilkan kata tidak bermakna. ゆうたち（yu-u-ta-chi） mengacaukan pembacaan 友; meskipun 友 bisa dibaca yu dalam konteks lain, di sini harus tomo sesuai cara baca umum pada N5. ともたち（to-mo-ta-chi） salah menukar hiragana ち menjadi た dalam suku kata terakhir, menciptakan bacaan yang tidak ada dalam bahasa Jepang standar."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きて、<ruby>顔<rt>かお</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "洗い",
+      "distractors": [
+        "拭き",
+        "磨き",
+        "濯ぎ"
+      ],
+      "explanation": "「顔を洗う」 adalah kolokasi standar yang berarti mencuci wajah — ini adalah aktivitas rutin pagi yang sesuai dengan konteks 「毎日朝」 (setiap pagi). Bentuk 「洗い」 adalah stem i-form yang melekat dengan sempurna ke 「ます」 untuk membentuk 「洗います」. 「拭き」 (ふきき, mengusap/mengeringkan) merujuk pada mengeringkan wajah yang sudah bersih, bukan membersihkannya — urutan aktivitas salah di sini. 「磨き」 (みがき, menggosok/memoles) digunakan untuk gigi atau benda, tidak untuk wajah dalam konteks perawatan pagi. 「濯ぎ」 (すすぎ, membilas) adalah langkah sekunder setelah menyabun, dan jarang digunakan sebagai aktivitas pagi utama sendirian — ia memerlukan objek seperti 「口を濯ぐ」 (membilas mulut) untuk terasa alami."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行きます</u>。",
+      "reading": "Pilih bacaan yang benar untuk kata yang digaris bawah.",
+      "correct": "いきます",
+      "distractors": [
+        "ゆきます",
+        "おこなます",
+        "くます"
+      ],
+      "explanation": "いきます (行きます) adalah bentuk polite present dari 行く, verba dasar yang berarti \"pergi\". Kalimat ini menunjukkan tindakan rutin setiap hari dengan subjek \"saya\" yang pergi ke sekolah, sehingga bentuk -ます yang sopan adalah yang tepat. ゆきます (雪/yuki) mengacu pada salju atau cuaca bersalju, bukan verba \"pergi\", sehingga secara semantik salah untuk konteks ini. おこなます (行なう/okonau, \"melakukan\") adalah verba berbeda dengan arti \"melaksanakan\" atau \"menjalankan\", bukan \"pergi\", dan tidak cocok dengan partikel へ yang menunjukkan arah menuju tempat. くます bukan bentuk kanji nyata dan tidak dikenali sebagai kata kerja standar dalam bahasa Jepang, membuat pilihan ini jelas salah secara morfologis."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>友達<rt>ともだち</rt></ruby>が来ます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "あたしい"
+      ],
+      "explanation": "「新しい」dibaca 「あたらしい」karena merupakan i-adjektif dasar N5 yang menunjukkan \"baru/segar\". Bentuk 「しんしい」salah karena kanji 新 tidak memiliki bacaan on-yomi 「しん」dalam konteks adjektif ini — itu hanya bacaan on-yomi kanji tanpa okurigana adjektif. 「あらたしい」salah karena menggabungkan bacaan kun-yomi partikal 「あらた」dengan sufiks adjektif yang tidak valid — bacaan yang tepat adalah 「あたらしい」sebagai satu kesatuan. 「あたしい」salah karena merupakan pengurangan suku kata yang tidak lazim; bacaan lengkap dan standar adalah 「あたらしい」."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行く<rt>いく</rt></ruby> <ruby>前<rt>まえ</rt></ruby>に、<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「飲み」adalah bentuk i-kei (ren'yōkei) dari 「飲む」 (minum), yang benar karena 「飲む + ます」 menghasilkan 「飲みます」 (minum dengan polite) — tindakan alami memasukkan cairan ke mulut sebelum pergi ke sekolah. 「食べ」(taberu, makan) salah karena susu biasanya diminum, bukan dimakan, meski susu adalah cairan nutrisi. 「見」(mi-kei dari 「見る」melihat) salah secara konteks — melihat susu tidak masuk akal dalam rutinitas pagi sebelum sekolah. 「聞き」(kiki-kei dari 「聞く」mendengarkan) jelas salah — tidak mungkin mendengarkan susu."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>朝<rt>あさ</rt></ruby>おいしい<ruby>水<rt>みず</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang sesuai dengan konteks kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "「飲みます」(minum) adalah jawaban yang tepat karena air (水) adalah sesuatu yang diminum, bukan dimakan atau dilihat — ini adalah kolokasi standar dalam bahasa Jepang sehari-hari. 「食べます」 (tabemasu, makan) salah karena air tidak dimakan melainkan diminum. 「見ます」 (mimasu, melihat) salah karena konteks menunjukkan tindakan mengonsumsi, bukan mengamati. 「聞きます」 (kikimasu, mendengar) salah karena air bukan sesuatu yang didengar — ini verba yang tidak cocok dengan objek 「水」."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang sesuai dengan konteks.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "「飲み」adalah bentuk stem dari「飲む」（minum）yang paling cocok untuk melengkapi「毎日朝、私は牛乳を（　）ます」— kalimat ini menunjukkan tindakan minum susu setiap pagi, yang merupakan pola kebiasaan sehari-hari dengan rasa alami. 「食べ」（たべ, makan）salah karena susu diminum, bukan dimakan — walaupun keduanya terkait makanan, kolokasinya berbeda. 「読み」（よみ, membaca）salah karena tidak mungkin membaca susu dalam konteks ini. 「聞き」（きき, mendengarkan）salah karena tidak ada hubungan antara susu dan mendengarkan — ini adalah kata kerja yang sama sekali tidak relevan."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>先生<rt>せんせい</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います。",
+      "reading": "Pilih bacaan yang benar untuk kanji bergaris bawah.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたりしい",
+        "あたらしう"
+      ],
+      "explanation": "「新しい」dibaca「あたらしい」karena ini adalah i-keiyōshi (adjektiva i) standar yang berarti 'baru'. Distractor「しんしい」salah karena kanji 新(shin) tidak pernah dibaca sebagai 「しん」dalam bentuk adjektiva ini—itu adalah bacaan on yang tidak sesuai dengan pola conjugasi i-keiyōshi. Distractor「あたりしい」salah karena 「あたり」adalah stem yang benar-benar berbeda (berarti 'sekitar/berdekatan') dan tidak ada kanji 新 yang menjadi 「あたり」. Distractor「あたらしう」salah karena itu mencoba menambahkan okurigana 「う」pada stem, padahal i-keiyōshi yang tepat harus berakhir 「い」, bukan「う」."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<u>朝食</u>を<ruby>食<rt>た</rt></ruby>べます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "ちょうしょく adalah bacaan yang benar untuk 朝食 (sarapan pagi). Kata ini adalah senyawa kanji N5 dasar yang menggabungkan 朝 (chō = pagi) dan 食 (shoku = makanan), dibaca dengan on'yomi. Distractor あさしょく (asashoku) keliru karena menggunakan reading kunyomi untuk 朝 (asa) padahal 朝食 harus selalu dibaca dengan on'yomi chō, bukan asa. Distractor ちょうたべ (chōtabe) salah karena mencoba menggabungkan on'yomi dengan bagian verba; 食 dalam 朝食 adalah nomina (shoku), bukan bentuk verba. Distractor あさたべ (asatabe) keliru karena menggabungkan kunyomi asa dan bentuk verba tabenya, padahal 朝食 adalah nomina majemuk yang tidak pernah dibaca dengan cara ini dalam konteks sehari-hari."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>勉強</u>します。",
+      "reading": "Pilih bacaan kanji yang benar untuk kata yang digaris bawahi.",
+      "correct": "べんきょう",
+      "distractors": [
+        "べんこう",
+        "べんきゅう",
+        "べんぎょう"
+      ],
+      "explanation": "べんきょう adalah bacaan yang tepat untuk kanji 勉強 yang berarti 'belajar' atau 'studi'. Ini adalah kanji dasar N5 yang sering digunakan dalam konteks pendidikan. Distractor べんこう (dengan furigana kô) adalah kombinasi yang tidak ada dalam bahasa Jepang — meskipun 勉 bisa dibaca ben, 強 tidak pernah dibaca ko dalam kata majemuk ini. Distractor べんきゅう mengubah suara bunyi akhir menjadi きゅう, tetapi bacaan yang benar untuk 強 dalam kata majemuk ini adalah きょう, bukan きゅう, dan kombinasi べんきゅう bukan merupakan kata nyata. Distractor べんぎょう (dengan perubahan sound dari き menjadi ぎ) terlihat mirip tetapi mengubah konsonan pertama dari suku kata kedua — bunyi yang benar untuk kanji 強 dalam konteks ini adalah きょう, bukan ぎょう, dan べんぎょう bukanlah bacaan standar untuk 勉強."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "見ます"
+      ],
+      "explanation": "飲みます（のみます）adalah jawaban yang benar karena 牛乳（ぎゅうにゅう）adalah minuman, dan kata kerja 飲む berarti 'minum'—kolokasi standar untuk minuman. 食べます（たべます、 'makan'）digunakan untuk makanan padat, bukan minuman, sehingga tidak sesuai konteks. 読みます（よみます、 'membaca'）memerlukan objek seperti buku atau surat, bukan minuman. 見ます（みます、 'melihat/menonton'）adalah verba persepsi visual dan tidak cocok untuk konsumsi minuman."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、私は <u>毎日</u>（　）に <ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat sesuai konteks.",
+      "correct": "学校",
+      "distractors": [
+        "水",
+        "本",
+        "車"
+      ],
+      "explanation": "「毎日学校に行きます」 adalah ungkapan alami yang berarti 'setiap hari saya pergi ke sekolah'—kata 学校 (sekolah) adalah tempat tujuan logis setelah partikel に (ke). 水（みず）adalah air, tidak bisa menjadi tujuan perjalanan rutin. 本（ほん）adalah buku, sebuah benda yang dibaca bukan tempat untuk pergi. 車（くるま）adalah mobil, alat transportasi tetapi bukan destinasi saat diikuti partikel に dalam konteks ini."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>友達<rt>ともだち</rt></ruby>と<u>一緒</u>に<ruby>行<rt>い</rt></ruby>きたいです。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "いっしょ",
+      "distractors": [
+        "いっしゅ",
+        "ひとつ",
+        "いちご"
+      ],
+      "explanation": "いっしょ (一緒) berarti \"bersama-sama\" dan merupakan bacaan On'yomi yang tepat untuk kanji 一 dan 緒 ketika digabungkan sebagai satu kata benda yang menyatakan \"kebersamaan\". Distractor いっしゅ (salah) adalah bacaan yang tidak sesuai dengan kanji 緒; kanji ini tidak pernah dibaca demikian dalam konteks standar N5. Distractor ひとつ (salah) adalah bacaan alternatif untuk 一, tetapi di sini 一 adalah bagian dari kata majemuk 一緒, bukan berdiri sendiri sebagai \"satu buah\", jadi bacaan Kun'yomi ini tidak cocok. Distractor いちご (salah) adalah nama buah strawberry yang terdengar mirip \"いち\" (一) + \"go\", tetapi bukan bacaan kanji yang benar dan tidak bermakna dalam kalimat ini."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は <ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「飲みます」（のみます）adalah jawaban yang benar karena dalam konteks ini, subjek melakukan tindakan terhadap 牛乳（ぎゅうにゅう／susu）setiap pagi, dan orang minum susu, tidak melakukan hal lain dengannya. 「食べます」（たべます／makan）adalah kata kerja yang salah karena susu adalah minuman, bukan makanan yang dimakan, meskipun keduanya adalah benda yang dikonsumsi. 「見ます」（みます／melihat）tidak sesuai konteks karena tidak ada makna bahwa seseorang \"melihat\" susu setiap pagi sebagai rutinitas harian. 「聞きます」（ききます／mendengar）sama sekali tidak cocok karena susu bukan sesuatu yang didengar; kata kerja ini digunakan untuk suara atau informasi."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>先生<rt>せんせい</rt></ruby>は<u>新しい</u><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。",
+      "reading": "Pilih bacaan kanji yang benar untuk kata bergaris bawah.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたしい",
+        "にいしい"
+      ],
+      "explanation": "あたらしい adalah bacaan yang benar untuk 新しい (atarashii), berarti 'baru'. Kata sifat ini umum di N5 dan merujuk pada sesuatu yang baru atau belum pernah digunakan. Distractor しんしい (shinshii) terdengar seperti kanji 新 (shin) tetapi bunyinya tidak sesuai dengan pola membaca い-adjective yang benar dan bukan bacaan standar. Distractor あたしい (atashii) adalah kesalahan pengucapan umum dari あたらしい, tetapi okurigana yang benar adalah -らしい, bukan -しい. Distractor にいしい (niishii) mencoba menggunakan bacaan alternatif kanji 新 (ni), tetapi bacaan ini tidak ada dan tidak menghasilkan kata sifat yang valid dalam konteks ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>御飯<rt>ごはん</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「食べます」(tabemasu) adalah jawaban yang benar karena 「朝御飯」(asagohan / sarapan) adalah makanan yang harus dimakan, bukan diminum atau dilihat. Pengisian kata kerja 「飲み」(nomu / minum) menghasilkan kalimat yang bermakna salah — sarapan tidak diminum melainkan dimakan. Opsi 「見」(miru / melihat) juga tidak cocok karena sarapan tidak dilihat melainkan dimakan; ini adalah kesalahan tipe kegiatan. Opsi 「聞き」(kiku / mendengar) juga salah karena sarapan tidak didengar; ini adalah kesalahan kategori aktivitas yang sama sekali tidak relevan dengan makanan."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行く<rt>いく</rt></ruby> <ruby>前<rt>まえ</rt></ruby>に、<ruby>水<rt>みず</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang paling sesuai untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "見ます",
+        "聞きます",
+        "食べます"
+      ],
+      "explanation": "飲みます (のみます) adalah jawaban yang benar karena 水を飲む (minum air) adalah kolokasi yang alami dan bermakna dalam konteks pagi sebelum pergi ke sekolah—minum air adalah kegiatan sehari-hari yang masuk akal. 見ます (みます, melihat) salah karena tidak bermakna untuk 'melihat air' dalam konteks ini. 聞きます (ききます, mendengar) salah karena Anda tidak mendengarkan air. 食べます (たべます, makan) salah karena Anda tidak makan air—makan digunakan untuk makanan padat, bukan minuman."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "飲み（のみ）adalah bentuk stem dari 飲む yang berarti 'minum', dan cocok untuk objek 牛乳（susu）dalam konteks aktivitas harian pagi. Makna dan kolokasi jelas: orang minum susu, bukan makan atau membaca atau mendengarkan susu. 食べ（たべ、makan）tidak cocok karena susu diminum, tidak dimakan meskipun keduanya kata kerja tindakan dasar. 読み（よみ、membaca）adalah aktivitas yang sepenuhnya tidak relevan dengan susu atau minuman. 聞き（きき、mendengarkan）juga tidak cocok karena tidak ada hubungan semantik antara mendengarkan dan minum susu di pagi hari."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<u>朝食</u>を<ruby>食<rt>た</rt></ruby>べます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "朝食（ちょうしょく）adalah bacaan yang benar untuk istilah 'sarapan pagi' dalam bahasa Jepang. Ini adalah kata benda compound yang mengombinasikan 朝 (pagi/morning) dan 食 (makan/food), dan diucapkan sebagai ちょうしょく dalam konteks sehari-hari. あさしょく (bacaan on-yomi dan kun-yomi yang dicampur secara tidak tepat) adalah kesalahan pembacaan gabungan yang tidak ada dalam bahasa Jepang standar—朝 dibaca あさ dalam konteks kasual tetapi dalam istilah formal seperti ini harus 朝食 menggunakan bacaan チョウ. ちょうたべ (jika ada, akan berarti 'pagi makan' tetapi bukan istilah standar) menciptakan struktur morfologis yang tidak valid karena 食 dalam compound ini harus dibaca しょく, bukan たべ. あさたべ menggabungkan kun-yomi dan kun-yomi tetapi tidak sesuai dengan norma bacaan compound formal untuk istilah makanan; ini terdengar seperti percakapan informal yang tidak benar dan bukan istilah kamus yang diakui."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくせい",
+        "こうがく",
+        "がっこく"
+      ],
+      "explanation": "がっこう adalah pembacaan yang benar untuk 学校 (sekolah), yang terdiri dari kanji 学 (gaku = pelajaran) dan 校 (kō = sekolah/institusi). Kata ini adalah kata benda dasar N5 yang mengacu pada tempat belajar. がくせい (gakusei) adalah kata berbeda yang berarti siswa/pelajar, bukan nama tempat. こうがく (kōgaku) bukan kata nyata dalam konteks ini dan tidak sesuai dengan pola pembacaan kanji standar. がっこく (gakkoku) adalah pembacaan salah yang menggabungkan elemen kanji tetapi menghasilkan kata yang tidak bermakna atau merujuk ke negara (国 = negara), bukan sekolah."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は毎日<ruby>学校<rt>がっこう</rt></ruby>へ<u>電車</u>で（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "乗ります",
+        "見ます"
+      ],
+      "explanation": "「行きます」（いきます）adalah jawaban yang benar karena ungkapan「～へ...で行く」berarti「pergi ke suatu tempat dengan sarana transportasi tertentu」. Pada konteks ini, penutur mengatakan mereka pergi ke sekolah setiap hari menggunakan kereta. 「来ます」（きます）berarti datang, tetapi tidak sesuai karena penutur tidak mengatakan mereka datang ke sekolah—mereka pergi ke sana. 「乗ります」（のります）berarti naik/menaiki, tetapi jika digunakan di sini akan bermakna「naik kereta」saja, tanpa menunjukkan tujuan akhirnya（sekolah）. 「見ます」（みます）berarti melihat, yang sama sekali salah dalam konteks perjalanan ke sekolah."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は毎<ruby>朝<rt>あさ</rt></ruby><ruby>牛<rt>ぎゅう</rt></ruby><ruby>乳<rt>にゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "「飲みます」（飲む, minum) adalah jawaban yang benar karena susu (牛乳) adalah minuman yang diminum, bukan dimakan atau dilihat. Pola 「～を飲む」 adalah kolokasi standar untuk minuman. 「食べます」(makan) salah karena susu tidak dimakan dengan cara yang sama seperti makanan padat. 「見ます」(melihat) salah karena aktivitas pagi kita adalah minum susu, bukan melihatnya. 「聞きます」(mendengar) salah karena sama sekali tidak relevan dengan susu."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ <ruby>電車<rt>でんしゃ</rt></ruby>で（　）。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "乗ります",
+        "走ります"
+      ],
+      "explanation": "「行きます」（いきます）adalah jawaban yang tepat karena kalimat menjelaskan tindakan pergi ke sekolah setiap hari — 「～へ行く」 adalah pola standar untuk menyatakan 'pergi ke suatu tempat'. 「来ます」（くます）berarti 'datang/pulang' dan digunakan untuk gerakan menuju pembicara, bukan menjauh ke lokasi tujuan seperti sekolah. 「乗ります」（のります）berarti 'naik' dan merujuk pada tindakan menaiki kendaraan, bukan tujuan akhir perjalanan. 「走ります」（はしります）berarti 'berlari' dan mengubah makna kalimat menjadi 'berlari ke sekolah', bukan cara transportasi normal sehari-hari."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は <ruby>学校<rt>がっこう</rt></ruby>へ <ruby>電車<rt>でんしゃ</rt></ruby>で（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "行き",
+      "distractors": [
+        "来し",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「行く」(iku/pergi) adalah kata kerja yang cocok dalam konteks perjalanan ke sekolah dengan kereta setiap hari. Bentuk 「行き」adalah stem (i-form) yang harus digunakan sebelum 「ます」untuk membentuk 「行きます」. 「来し」bukanlah conjugation yang benar dari 「来る」(datang); bentuk yang tepat adalah 「来て」atau 「来」, bukan 「来し」. 「見」(melihat) mengubah makna kalimat — kalimat menjadi tentang menonton sesuatu di kereta, bukan perjalanan ke sekolah. 「聞き」(mendengarkan) juga tidak sesuai karena menggambarkan aktivitas mendengarkan, bukan perjalanan menuju tujuan."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は <ruby>学校<rt>がっこう</rt></ruby>へ <ruby>電車<rt>でんしゃ</rt></ruby>で（　）。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "見ます",
+        "飲みます"
+      ],
+      "explanation": "「行きます」（いきます）adalah jawaban yang benar karena menunjukkan pergerakan dari rumah ke sekolah menggunakan transportasi, yang merupakan kolokasi alami dengan partikel 「へ」 (tujuan). 「来ます」（きます）berarti 'datang/tiba' tetapi mengimplikasikan bergerak menuju tempat pembicara, bukan ke tempat umum seperti sekolah; juga tidak cocok dengan konteks rutinitas harian ini. 「見ます」（みます）berarti 'melihat' dan merupakan verba intransitif yang tidak dapat menerima partikel tujuan 「へ」 dengan makna yang tepat. 「飲みます」（のみます）berarti 'minum' dan sama sekali tidak sesuai dengan konteks perjalanan ke sekolah menggunakan kereta."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>食<rt>しょく</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "「食べます」（makan) adalah kata kerja yang tepat untuk 朝食 (sarapan). Blank memerlukan bentuk dasar (i-form) karena diikuti oleh ます. 「飲み」(minum) secara gramatikal cocok tetapi semantik salah — sarapan dimakan, bukan diminum. 「読み」(membaca) tidak sesuai dengan objek 朝食 (sarapan). 「聞き」(mendengarkan) juga tidak cocok — sarapan tidak didengarkan. Hanya 「食べ」yang memberikan makna alami dan benar."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に<ruby>朝<rt>あさ</rt></ruby><ruby>食<rt>しょく</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang paling sesuai dengan konteks kalimat.",
+      "correct": "食べます",
+      "distractors": [
+        "飲みます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "「朝食を食べます」adalah ungkapan kolokasi standar dalam bahasa Jepang sehari-hari — sarapan adalah sesuatu yang dimakan, bukan diminum, dibaca, atau didengar. 「飲みます」(minum) secara gramatikal mungkin menerima cairan, tetapi 「朝食」adalah makanan padat yang tidak diminum. 「読みます」(membaca) adalah aktivitas yang sama sekali berbeda dan tidak ada hubungannya dengan konsumsi makanan. 「聞きます」(mendengarkan) juga merupakan aktivitas sensorik yang berbeda dan tidak pernah dipairing dengan makanan atau minuman. Hanya 「食べます」mengekspresikan tindakan makan sarapan dengan benar."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>、私は<u>学校</u>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digaris bawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくしょう",
+        "がっこゆ",
+        "がくこう"
+      ],
+      "explanation": "学校（がっこう）adalah pembacaan standar untuk kanji ini yang berarti \"sekolah\" — kata paling dasar dan paling sering digunakan dalam N5. Distraktor \"がくしょう\" adalah pembacaan kanji yang salah secara fonologis (音読み yang tidak ada untuk 学校). Distraktor \"がっこゆ\" menggabungkan pembacaan pertama yang hampir benar tetapi dengan okurigana akhir yang salah (学校 tidak memiliki okurigana ゆ). Distraktor \"がくこう\" adalah kesalahan umum pemula yang menukar urutan atau membaca kanji pertama dengan cara yang kurang alami; meskipun terdengar mirip, pembacaan yang benar harus \"がっこう\" dengan geminate k (っ) yang jelas di tengahnya."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "歩きます",
+        "乗ります"
+      ],
+      "explanation": "「行きます」(いきます) adalah jawaban yang tepat karena menunjukkan tindakan berpindah dari tempat asal (rumah) menuju tujuan (学校/sekolah), yang sesuai dengan konteks kalimat tentang pergi ke sekolah setiap hari. 「来ます」(きます) berarti 'datang/tiba', menunjukkan arah masuk ke tempat pembicara, tidak sesuai konteks 'pergi ke sekolah'. 「歩きます」(あるきます) berarti 'berjalan kaki', tetapi bukan cara utama yang diungkapkan dalam kalimat ini—kalimat menanyakan peristiwa pergi ke sekolah secara umum, bukan spesifik cara berpergian. 「乗ります」(のります) berarti 'naik/mengendarai' (kendaraan), dan meskipun kadang digunakan dalam konteks transportasi, tanpa objek yang jelas (bus, kereta) kalimat menjadi tidak natural dan incomplete."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ行く<u>前</u>に、朝ごはんを食べます。",
+      "reading": "Pilih bacaan yang benar untuk kanji bergaris bawah.",
+      "correct": "まえ",
+      "distractors": [
+        "ぜん",
+        "さき",
+        "すすむ"
+      ],
+      "explanation": "「前」dalam kalimat ini berarti 'sebelum' dalam arti urutan waktu, dibaca 「まえ」. Kata 「～の前に」adalah ungkapan umum N5 yang menunjukkan sesuatu terjadi lebih dulu dari hal lain. 「ぜん」(ぜん) adalah bacaan Sino-Jepang yang hanya muncul dalam kata majemuk formal seperti 「前日」(ぜんじつ), bukan dalam ungkapan 「～の前に」 sehari-hari. 「さき」(先) adalah kanji lain yang berarti 'sebelum', tetapi di sini kanji yang dipakai adalah 「前」, bukan 「先」. 「すすむ」(進む) adalah makna yang sama sekali berbeda—itu berarti 'maju/melanjutkan', bukan 'sebelum'. Bentuk kalimat 「～の前に」selalu membaca 「前」sebagai 「まえ」."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<u>学校</u>へ行きます。",
+      "reading": "Pilih bacaan kanji yang benar untuk kata bergaris bawah.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこわ",
+        "がっこあ"
+      ],
+      "explanation": "「学校」dibaca 「がっこう」karena ini adalah kanji dasar N5 yang menggabungkan 「学」(gaku, belajar) dan 「校」(kō, sekolah) dengan pola baca on'yomi standar. Distractor 「がくこう」(salah menempatkan aksen dan mengubah bunyi 「校」menjadi kō tanpa doubling—bukan bacaan yang benar untuk kanji ini). Distractor 「がっこわ」(menambahkan wa yang tidak ada dalam kanji dan bukan bacaan on'yomi maupun kun'yomi—tidak ada kaitan dengan makna). Distractor 「がっこあ」(menambahkan vokal a yang tidak sesuai dengan struktur kanji dan bukan bacaan standar yang diakui)."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "飲みます（のみます）adalah jawaban yang tepat karena 牛乳（ぎゅうにゅう）= susu adalah minuman yang diminum dengan kata kerja 飲む（のむ）. Makna kalimat adalah 'Setiap pagi saya minum susu', yang natural dan sesuai N5. 食べます（たべます）berarti 'makan' — digunakan untuk makanan padat, bukan minuman, sehingga salah di sini. 見ます（みます）berarti 'melihat/menonton' — tidak tepat untuk susu. 聞きます（ききます）berarti 'mendengar' — sama sekali tidak cocok dengan objek 牛乳."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>　<ruby>学校<rt>がっこう</rt></ruby>へ　<ruby>電車<rt>でんしゃ</rt></ruby>で　（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "見ます",
+        "乗ります"
+      ],
+      "explanation": "「行きます」（いきます）adalah jawaban yang tepat karena menunjukkan pergerakan menuju ke tujuan (学校へ = ke sekolah) dari perspektif pembicara, yang merupakan pola dasar dengan 「～へ行く」. 「来ます」（くる）berarti datang/bergerak menuju pembicara, tidak sesuai konteks karena sekolah adalah tujuan akhir, bukan tempat pembicara berada. 「見ます」（みる）berarti melihat, sama sekali tidak cocok—kalimat membicarakan perjalanan, bukan aktivitas melihat. 「乗ります」（のる）berarti naik/menggunakan kendaraan, tetapi perlu objek 「を」; ungkapan yang benar adalah 「電車に乗ります」, bukan 「電車で乗ります」, jadi tidak cocok dalam struktur kalimat ini."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>先生</u>に<ruby>会<rt>あ</rt></ruby>います。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digaris bawahi.",
+      "correct": "せんせい",
+      "distractors": [
+        "そんせい",
+        "せんしょう",
+        "せんすい"
+      ],
+      "explanation": "「先生」(せんせい) adalah kata standar N5 yang berarti guru atau pengajar, dan merupakan bacaan yang paling umum untuk kanji ini dalam konteks sekolah. 「そんせい」 (sonsei) bukan bacaan yang ada untuk kanji ini dan terdengar asing. 「せんしょう」 (senshō) adalah bacaan kanji yang berbeda (seperti dalam 先頭) dan tidak cocok untuk kata ini. 「せんすい」 (sensu) adalah bacaan yang salah secara fonetik dan tidak sesuai dengan makna guru dalam konteks ini."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>電車<rt>でんしゃ</rt></ruby>で（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "乗ります",
+        "歩きます"
+      ],
+      "explanation": "「行きます」adalah jawaban yang tepat karena menunjukkan perjalanan dari rumah menuju sekolah; partikel へ menandakan arah tujuan dan「毎日」(setiap hari) memerlukan verba yang menyatakan pergerakan reguler ke tempat tertentu. 「来ます」(datang) berarti bergerak menuju pembicara atau tempat acuan, bukan menuju sekolah dari rumah — konteks salah. 「乗ります」(naik) berarti menaiki kendaraan, tetapi dalam kalimat ini kendaraan sudah disebutkan (電車), sehingga verba ini hanya menjelaskan satu bagian dari perjalanan dan tidak menjawab \"bagaimana cara sampai ke sekolah.\" 「歩きます」(berjalan) bertentangan dengan frasa \"dengan kereta\" (電車で) — kalimat menunjukkan menggunakan transportasi, bukan berjalan kaki."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<u>先生</u>は<ruby>図書館<rt>としょかん</rt></ruby>にいます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "せんせい",
+      "distractors": [
+        "しんせい",
+        "さんせい",
+        "せんしょう"
+      ],
+      "explanation": "先生（せんせい）adalah bacaan yang benar untuk kata yang berarti 'guru' dalam konteks sekolah. Ini merupakan komponen dasar N5 yang menggabungkan kanji先（before/ahead）dan生（life/birth）dengan arti khusus 'guru'. Distractor しんせい tidak ada dalam bahasa Jepang sehari-hari dan bukan bacaan standar dari kedua kanji ini. Distractor さんせい terdengar mirip pada suku pertama tetapi mengubah konsonan pertama dan bukan bacaan yang benar untuk 先生. Distractor せんしょう menggunakan bacaan yang tidak benar untuk kanji 生—生 dibaca しょう dalam konteks terbatas (seperti 生涯), tetapi dalam kata 先生, bacaan yang tepat adalah せい, bukan しょう."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みました",
+      "distractors": [
+        "食べました",
+        "見ました",
+        "聞きました"
+      ],
+      "explanation": "「飲みました」（いのみました、past tense of minum）adalah jawaban yang benar karena dalam konteks kalimat tentang pagi hari, tindakan yang dilakukan terhadap 牛乳 (susu) secara alami adalah meminumnya. Distractor pertama 「食べました」（たべました, makan dalam bentuk lampau）salah karena meskipun susu bisa dikonsumsi, \"makan\" bukan cara yang alami untuk merepresentasikan tindakan dengan minuman. Distractor kedua 「見ました」（みました, melihat dalam bentuk lampau）salah karena tidak bermakna untuk \"melihat\" susu dalam konteks aktivitas pagi yang rutin; ini bukan tentang mengamati melainkan mengonsumsi. Distractor ketiga 「聞きました」（ききました, mendengar dalam bentuk lampau）salah karena tidak mungkin \"mendengar\" minuman; kata kerja ini memerlukan objek yang berbeda seperti musik atau berita."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "飲みます（のみます）adalah jawaban yang tepat karena 牛乳（ぎゅうにゅう）= susu adalah minuman, dan kata kerja yang cocok untuk minuman adalah 飲む「to drink」. 食べます（たべます）berarti \"makan\" dan digunakan untuk makanan padat, bukan minuman, sehingga tidak tepat dalam konteks ini. 読みます（よみます）berarti \"membaca\" dan hanya digunakan untuk buku, surat, atau teks tertulis—tidak bisa dipasangkan dengan susu. 聞きます（ききます）berarti \"mendengar\" atau \"bertanya\" dan sama sekali tidak sesuai dengan aktivitas minum sesuatu."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>大切<rt>たいせつ</rt></ruby>な<u>会議</u>があります。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "かいぎ",
+      "distractors": [
+        "かいきょう",
+        "あいぎ",
+        "かいけい"
+      ],
+      "explanation": "会議（かいぎ）adalah bacaan yang benar untuk compound kanji ini, artinya 'pertemuan' atau 'rapat' dalam konteks bisnis atau formal. Distractors: かいきょう (bacaan yang tidak ada untuk kanji 会議; terdengar seperti compound yang mungkin tetapi bukan)、あいぎ (salah membaca 会 sebagai あい, padahal 会 dibaca かい dalam kata-kata umum seperti 会議)、かいけい (salah membaca 議 sebagai けい, padahal itu adalah bacaan dari 計 atau 経, bukan 議; いけい juga merupakan bacaan kanji 計 yang berbeda, tetapi di sini melanggar konteks kata-kata N5)."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>朝<rt>あさ</rt></ruby><u>七時</u>に<ruby>起<rt>お</rt></ruby>きます。",
+      "reading": "Pilih pembacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "しちじ",
+      "distractors": [
+        "ななじ",
+        "しちどき",
+        "ひちじ"
+      ],
+      "explanation": "「七時」dibaca「しちじ」karena angka 七 dalam konteks waktu menggunakan pembacaan on-yomi「シチ」→「しち」diikuti「時」「じ」(jam). 「ななじ」adalah pembacaan kun-yomi dari 七 yang biasanya muncul dalam frasa nominal murni (例：七つ),bukan dalam kata waktu berikat. 「しちどき」mencampurkan pembacaan yang benar dengan kanji salah (どき bukan cara membaca 時 dalam konteks jam/waktu). 「ひちじ」adalah pengucapan yang tidak ada dalam bahasa Jepang standar—混同 dengan pembacaan kanji lain."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>大切<rt>たいせつ</rt></ruby>な<ruby>会議<rt>かいぎ</rt></ruby>があります。<ruby>時間<rt>じかん</rt></ruby>に<u>遅刻</u>しないでください。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "ちこく",
+      "distractors": [
+        "ちかく",
+        "おくれ",
+        "おそい"
+      ],
+      "explanation": "ちこく (遅刻) adalah istilah standar N5 yang berarti 'terlambat tiba' pada waktu yang ditentukan (sekolah, pekerjaan, acara). Dalam kalimat ini, diminta agar tidak ちこく (terlambat), yang cocok dengan konteks 会議 (rapat). ちかく (близко / dekat) adalah homonim dengan kanji berbeda 近く — salah bentuk kanji dan bermakna tempat, bukan keterlambatan. おくれ (おくれ / keterlambatan umum) adalah kata kerja i-adjective lama yang jarang digunakan dalam konteks ini; bentuk standar untuk perintah negatif menggunakan ちこく. おそい (遅い / lambat, terlambat secara umum sebagai sifat) adalah i-adjective dasar, bukan nomina kerja; tidak cocok setelah diikuti しないでください (perintah negatif berbentuk nomina)."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>に（　）<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "起きます",
+      "distractors": [
+        "寝ます",
+        "食べます",
+        "読みます"
+      ],
+      "explanation": "起きます (okimasu, bangun tidur) adalah jawaban yang benar karena konteks menunjukkan waktu pagi (朝七時) sebelum pergi ke sekolah — hal wajar yang dilakukan orang di pagi hari adalah bangun tidur terlebih dahulu. 寝ます (nemasu, tidur) bermakna berlawanan dengan konteks waktu pagi; orang tidak tidur sebelum pergi ke sekolah pagi. 食べます (tabemasu, makan) tidak logis dalam urutan waktu karena tidak ada hubungan langsung antara makan dan pergi ke sekolah pada jam tujuh pagi. 読みます (yomimasu, membaca) juga tidak cocok karena membaca bukan tindakan yang harus dilakukan sebelum pergi ke sekolah setiap pagi."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>、<u>学校</u>へ行きます。",
+      "reading": "Pilih bacaan kanji yang benar untuk kata yang digarisbawahi.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくせい",
+        "がっこく",
+        "がくしゃ"
+      ],
+      "explanation": "がっこう（学校）adalah bacaan yang benar untuk 学校 yang berarti \"sekolah\". Ini adalah kanji dasar N5 yang diajarkan di awal pembelajaran. がくせい（学生） berarti \"siswa\" dan merupakan kanji berbeda meski berbagi 学, jadi bukan bacaan 学校 di sini. がっこく（学国） bukan bacaan nyata dan kesalahan fonetik. がくしゃ（学者） berarti \"sarjana\" dan juga bukan bacaan untuk 学校, meskipun keduanya dimulai dengan 学."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>友達<rt>ともだち</rt></ruby>ができました。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたらい",
+        "にいしい"
+      ],
+      "explanation": "あたらしい adalah bacaan yang benar untuk 新しい (atarashii), yang berarti 'baru'. Kata sifat い-adjektif ini adalah kata dasar untuk menyatakan sesuatu yang baru atau belum pernah ada sebelumnya, dan cocok dalam konteks membuat teman baru. しんしい bukan bacaan yang tepat untuk kanji ini—meskipun 新 dapat dibaca shin, penggabungan dengan い tidak menghasilkan bentuk standar ini. あたらい adalah kesalahan pembacaan yang menghilangkan salah satu suku kata dari bentuk yang benar, sehingga bukan kata sifat yang valid. にいしい adalah pembacaan yang salah dan tidak digunakan untuk 新しい dalam bahasa Jepang standar."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は毎日<ruby>学校<rt>がっこう</rt></ruby>へ<u>（　）</u>。",
+      "reading": "Pilih kata yang tepat untuk melengkapi kalimat.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "歩きます",
+        "乗ります"
+      ],
+      "explanation": "行きます (いきます, pergi) adalah jawaban yang tepat karena kalimat ini menjelaskan perjalanan rutin dari rumah ke sekolah menggunakan partikel へ (ke/menuju), yang menunjukkan arah perjalanan. Kata 来ます (きます, datang) salah karena 'datang' menunjukkan perjalanan menuju pembicara atau tempat saat ini, bukan menuju sekolah dari perspektif orang yang berangkat. Kata 歩きます (あるきます, berjalan) adalah salah satu cara mencapai sekolah, tetapi terlalu spesifik mengenai metode (hanya berjalan kaki) — kalimat dengan へ meminta kata kerja perjalanan yang lebih umum. Kata 乗ります (のります, naik/menggunakan kendaraan) juga terlalu khusus tentang metode transportasi dan biasanya diikuti oleh objek (contoh: バスに乗ります), bukan hanya partikel へ."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。",
+      "reading": "Pilih bacaan kanji yang benar untuk kata yang digaris bawahi.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "さたらしい"
+      ],
+      "explanation": "「新しい」dibaca 「あたらしい」karena ini adalah pembacaan on-yomi dan kun-yomi gabungan yang standar untuk adjektif 「新」dalam konteks sehari-hari yang menggambarkan benda baru. Distractor 「しんしい」menggunakan pembacaan on-yomi 「しん」saja tetapi penambahan vokal ganda yang salah; 「新」memiliki on-yomi 「しん」tetapi tidak pernah dikombinasikan dengan 「しい」dengan cara ini dalam frasa adjektif. Distractor 「あらたしい」mengganti bagian kun-yomi dengan bentuk yang mirip tetapi tidak ada dalam penggunaan standar Jepang—ini adalah campuran bentuk yang tidak valid. Distractor 「さたらしい」adalah campuran konsonan yang tidak sesuai dengan pembacaan kanji 「新」mana pun dan hanya terlihat mirip karena kebetulan bunyi saja."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Pilih kata kerja yang tepat untuk melengkapi kalimat.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "「飲み」(nomи, minum) adalah bentuk stem yang benar karena dilanjutkan dengan「ます」untuk membentuk konjugasi polite present「飲みます」(minum). Kalimat berarti \"Setiap pagi saya minum susu.\" 「食べ」(tabе, makan) adalah verb stem tetapi tidak cocok secara semantik karena susu diminum, bukan dimakan. 「見」(miru, melihat) adalah verb stem yang salah karena susu diminum, bukan dilihat. 「聞き」(kiki, mendengar) adalah verb stem yang salah karena susu diminum, bukan didengar."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>、<ruby>友達<rt>ともだち</rt></ruby>と<u>図書館</u>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Pilih bacaan yang benar untuk kanji yang digarisbawahi.",
+      "correct": "としょかん",
+      "distractors": [
+        "ずしょかん",
+        "とうしょかん",
+        "としょけん"
+      ],
+      "explanation": "図書館 dibaca「としょかん」karena 図 (ず) + 書 (しょ) + 館 (かん) digabungkan menjadi「としょかん」. Ini adalah kanji majemuk standar N5 untuk tempat menyimpan buku. Distractor「ずしょかん」salah karena 図 dibaca「と」bukan「ず」dalam konteks ini — kaisho (おんよみ) 図書館 adalah「としょかん」. Distractor「とうしょかん」salah karena 書 dibaca「しょ」bukan「しょう」(pengucapan panjang tidak ada di sini). Distractor「としょけん」salah karena kanji terakhir 館 dibaca「かん」bukan「けん」— 館 adalah gedung/bangunan (かん), bukan hak atau kuasa (けん)."
+    }
+  ]
+}

@@ -1,32 +1,81 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-<title>Apple Orchard Sandals</title>
-<g id="sandals">
-<!-- Left sandal base -->
-<rect x="8" y="40" width="20" height="12" fill="#8b7355"/>
-<!-- Left sandal strap -->
-<rect x="10" y="38" width="16" height="4" fill="#9b9285"/>
-<!-- Left sandal toe post -->
-<rect x="14" y="52" width="4" height="4" fill="#6b5345"/>
-<!-- Right sandal base -->
-<rect x="36" y="40" width="20" height="12" fill="#8b7355"/>
-<!-- Right sandal strap -->
-<rect x="38" y="38" width="16" height="4" fill="#9b9285"/>
-<!-- Right sandal toe post -->
-<rect x="46" y="52" width="4" height="4" fill="#6b5345"/>
-<!-- Left apple accent -->
-<rect x="12" y="28" width="4" height="4" fill="#d63031"/>
-<rect x="12" y="32" width="4" height="4" fill="#c92a2a"/>
-<rect x="16" y="30" width="4" height="4" fill="#d63031"/>
-<!-- Left leaf -->
-<rect x="20" y="28" width="4" height="4" fill="#27ae60"/>
-<!-- Right apple accent -->
-<rect x="48" y="28" width="4" height="4" fill="#d63031"/>
-<rect x="48" y="32" width="4" height="4" fill="#c92a2a"/>
-<rect x="44" y="30" width="4" height="4" fill="#d63031"/>
-<!-- Right leaf -->
-<rect x="40" y="28" width="4" height="4" fill="#27ae60"/>
-<!-- Frame border accent - top -->
-<rect x="8" y="36" width="20" height="2" fill="#9b9285"/>
-<rect x="36" y="36" width="20" height="2" fill="#9b9285"/>
-</g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Apple Orchard Sandals (common)</title>
+<rect x="8" y="8" width="24" height="4" fill="#2a1a0c"/>
+<rect x="36" y="8" width="24" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="4" height="4" fill="#c8845a"/>
+<rect x="16" y="12" width="4" height="4" fill="#f0c890"/>
+<rect x="20" y="12" width="8" height="4" fill="#c8845a"/>
+<rect x="28" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="12" width="4" height="4" fill="#c8845a"/>
+<rect x="44" y="12" width="4" height="4" fill="#f0c890"/>
+<rect x="48" y="12" width="8" height="4" fill="#c8845a"/>
+<rect x="56" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="16" height="4" fill="#c8845a"/>
+<rect x="28" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="16" width="16" height="4" fill="#c8845a"/>
+<rect x="56" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#c8845a"/>
+<rect x="16" y="20" width="8" height="4" fill="#e8a868"/>
+<rect x="24" y="20" width="4" height="4" fill="#c8845a"/>
+<rect x="28" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="20" width="4" height="4" fill="#c8845a"/>
+<rect x="44" y="20" width="8" height="4" fill="#e8a868"/>
+<rect x="52" y="20" width="4" height="4" fill="#c8845a"/>
+<rect x="56" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#a06040"/>
+<rect x="16" y="24" width="8" height="4" fill="#e8a868"/>
+<rect x="24" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="24" width="4" height="4" fill="#a06040"/>
+<rect x="44" y="24" width="8" height="4" fill="#e8a868"/>
+<rect x="52" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="8" height="4" fill="#a06040"/>
+<rect x="24" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="40" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="28" width="8" height="4" fill="#a06040"/>
+<rect x="52" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="4" height="4" fill="#7a4828"/>
+<rect x="20" y="32" width="8" height="4" fill="#a06040"/>
+<rect x="28" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="32" width="4" height="4" fill="#7a4828"/>
+<rect x="48" y="32" width="8" height="4" fill="#a06040"/>
+<rect x="56" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="12" height="4" fill="#7a4828"/>
+<rect x="28" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="36" width="12" height="4" fill="#7a4828"/>
+<rect x="56" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="4" height="4" fill="#5a8c3a"/>
+<rect x="20" y="40" width="4" height="4" fill="#3a6020"/>
+<rect x="24" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="40" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="40" width="4" height="4" fill="#5a8c3a"/>
+<rect x="48" y="40" width="4" height="4" fill="#3a6020"/>
+<rect x="52" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="44" width="4" height="4" fill="#5a8c3a"/>
+<rect x="24" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="44" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="48" y="44" width="4" height="4" fill="#5a8c3a"/>
+<rect x="52" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="48" width="4" height="4" fill="#3a6020"/>
+<rect x="24" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="44" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="48" y="48" width="4" height="4" fill="#3a6020"/>
+<rect x="52" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="52" width="16" height="4" fill="#2a1a0c"/>
+<rect x="44" y="52" width="16" height="4" fill="#2a1a0c"/>
 </svg>

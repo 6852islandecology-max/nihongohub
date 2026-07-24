@@ -1,0 +1,37 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Hitachi Seaside Sandals</title>
+  
+  <!-- Left Sandal -->
+  <g id="left-sandal">
+    <!-- Sole -->
+    <rect x="4" y="32" width="20" height="12" fill="#8b7d6b"/>
+    <!-- Strap bridge -->
+    <rect x="8" y="28" width="4" height="8" fill="#9b9285"/>
+    <rect x="16" y="28" width="4" height="8" fill="#9b9285"/>
+    <!-- Toe post -->
+    <rect x="12" y="26" width="4" height="6" fill="#9b9285"/>
+    <!-- Nemophila accent (blue flower) -->
+    <rect x="10" y="34" width="4" height="4" fill="#4a90e2"/>
+    <rect x="14" y="34" width="4" height="4" fill="#6ba3f0"/>
+  </g>
+  
+  <!-- Right Sandal -->
+  <g id="right-sandal">
+    <!-- Sole -->
+    <rect x="40" y="32" width="20" height="12" fill="#8b7d6b"/>
+    <!-- Strap bridge -->
+    <rect x="44" y="28" width="4" height="8" fill="#9b9285"/>
+    <rect x="52" y="28" width="4" height="8" fill="#9b9285"/>
+    <!-- Toe post -->
+    <rect x="48" y="26" width="4" height="6" fill="#9b9285"/>
+    <!-- Nemophila accent (blue flower) -->
+    <rect x="46" y="34" width="4" height="4" fill="#4a90e2"/>
+    <rect x="50" y="34" width="4" height="4" fill="#6ba3f0"/>
+  </g>
+  
+  <!-- Frame/Border accent (rarity indicator) -->
+  <g id="frame" opacity="0.6">
+    <rect x="2" y="24" width="60" height="36" fill="none" stroke="#9b9285" stroke-width="1"/>
+  </g>
+  
+</svg>

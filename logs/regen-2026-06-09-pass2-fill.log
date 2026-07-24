@@ -1,0 +1,83 @@
+=== PASS2 fill start 2026-06-09T14:50:14Z ===
+REGEN START 2026-06-09T14:50:14.696Z · 70/combo · 1×5 combos (levels=N2 langs=en,zh,es,th,id) · validate=true
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 示す and 表す are natural and grammatically correct here), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C, D) are all grammatically natural and acceptable), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are grammatically natural and acceptable), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 際して and 伴って make grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A: 築く, B: 保つ) are both natural and grammatical), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all natural and grammatically acceptable), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (納得, 受け入れ) are both natural and acceptable), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all grammatical and natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options A and D both grammatically fit the sentence), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 必要 and 必須 work naturally with がある; not unique.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: に当たって and に際して both grammatically correct and natural), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both produce natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and C also produce natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A (必要) and B (べき) are grammatical and natural here), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options are natural and grammatical; not uniquely correct.), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A is noun phrase, others are clausal; forms incompatible), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B, C, D all make grammatical, natural sentences), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and C make grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all natural and acceptable), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically acceptable and natural), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options A and C both grammatical and natural; answer not unique), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+  N2/en: generated 65, inserted 65  [running total inserted 65, failed 5]
+=== N3/id topup start 2026-06-09T15:04:32Z ===
+REGEN START 2026-06-09T15:04:32.610Z · 20/combo · 1×1 combos (levels=N3 langs=id) · validate=true
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A (仕組み) doesn't fit; should be 導入することで), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B) create natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Mark CORRECT is wrong; ために is the natural choice here), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options naturally replace 大変だ (difficult/demanding)), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+  N3/id: generated 19, inserted 19  [running total inserted 19, failed 1]
+REGEN DONE 2026-06-09T15:08:18.572Z · generated 19, inserted 19, failed 1
+=== N3/id topup DONE 2026-06-09T15:08:18Z ===

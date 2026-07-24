@@ -66,6 +66,18 @@ body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);l
 
 .disclaimer{font-size:11px;color:#999;border-top:1px dashed var(--soft);padding-top:10px;margin-top:24px}
 .print-btn{display:inline-block;font-family:'Press Start 2P',monospace;font-size:9px;background:var(--red);color:#fff;text-decoration:none;padding:12px 18px;border-radius:4px;border-bottom:3px solid #7e1c12;cursor:pointer;margin-bottom:20px}
+
+/* NEWSLETTER (optional, non-gating — kit is already downloadable above) */
+.nl{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:16px 18px;margin:0 0 22px}
+.nl-tag{font-family:'Press Start 2P',monospace;font-size:7px;color:var(--green);display:block;margin-bottom:6px}
+.nl h3{font-family:'DotGothic16',sans-serif;font-size:17px;margin-bottom:4px}
+.nl p{font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.55}
+.nl-form{display:flex;max-width:420px;gap:0}
+.nl-input{flex:1;padding:10px 12px;border:1.5px solid var(--soft);border-right:none;border-radius:4px 0 0 4px;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);outline:none;min-width:0}/* ≥16px: iOS Safari zooms the page on focus below that */
+.nl-input:focus{border-color:var(--red)}
+.nl-btn{background:var(--red);color:#fff;border:none;padding:10px 16px;border-radius:0 4px 4px 0;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.nl-btn:hover{background:#a22b1e}
+.nl-note{font-size:11px;color:var(--muted);margin-top:8px}
 </style>
 <script src="../lib/config.js" defer></script>
     <script defer src="/_vercel/insights/script.js"></script>
@@ -75,6 +87,18 @@ body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);l
 <div class="no-print" style="background:#f0f0f0;padding:10px 14px;border-radius:6px;margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
   <span style="font-size:13px">Save as PDF via browser Print → "Save as PDF"</span>
   <button class="print-btn" onclick="window.print()">🖨 SAVE AS PDF</button>
+</div>
+
+<!-- NEWSLETTER (optional, non-gating — the kit above is already free to save) -->
+<div class="nl no-print">
+  <span class="nl-tag">✓ OPTIONAL — NO SIGN-UP NEEDED TO SAVE THE KIT</span>
+  <h3>Want more moving &amp; Japanese tips?</h3>
+  <p>The kit is yours to keep. If you'd like the occasional note on settling in, paperwork, and useful Japanese as you go, join our free weekly letter — three of us slowly walking through all 47 prefectures.</p>
+  <form class="nl-form" action="https://ikimonohakasefamily.substack.com/subscribe" method="get" target="_blank">
+    <input class="nl-input" type="email" name="email" required placeholder="your@email.com">
+    <button class="nl-btn" type="submit">Subscribe</button>
+  </form>
+  <p class="nl-note">Weekly. Free. Unsubscribe whenever you like.</p>
 </div>
 
 <!-- COVER -->

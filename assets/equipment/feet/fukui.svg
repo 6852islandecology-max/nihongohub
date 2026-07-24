@@ -1,27 +1,48 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-<title>Dinosaur Fossil Boots</title>
-<g id="boots">
-<rect x="8" y="40" width="20" height="16" fill="#8b7355"/>
-<rect x="36" y="40" width="20" height="16" fill="#8b7355"/>
-<rect x="8" y="36" width="20" height="4" fill="#a0826d"/>
-<rect x="36" y="36" width="20" height="4" fill="#a0826d"/>
-<rect x="6" y="44" width="4" height="12" fill="#4d8fbf"/>
-<rect x="54" y="44" width="4" height="12" fill="#4d8fbf"/>
-<rect x="12" y="48" width="8" height="8" fill="#6b5344"/>
-<rect x="44" y="48" width="8" height="8" fill="#6b5344"/>
-<rect x="14" y="52" width="4" height="4" fill="#d4a574"/>
-<rect x="46" y="52" width="4" height="4" fill="#d4a574"/>
-<rect x="12" y="44" width="3" height="4" fill="#4d8fbf"/>
-<rect x="49" y="44" width="3" height="4" fill="#4d8fbf"/>
-<rect x="16" y="40" width="4" height="2" fill="#4d8fbf"/>
-<rect x="44" y="40" width="4" height="2" fill="#4d8fbf"/>
-<rect x="10" y="38" width="16" height="2" fill="#a0826d"/>
-<rect x="38" y="38" width="16" height="2" fill="#a0826d"/>
-<rect x="14" y="36" width="3" height="2" fill="#4d8fbf"/>
-<rect x="47" y="36" width="3" height="2" fill="#4d8fbf"/>
-<rect x="20" y="44" width="4" height="4" fill="#d4a574"/>
-<rect x="40" y="44" width="4" height="4" fill="#d4a574"/>
-<rect x="18" y="36" width="8" height="4" fill="#7a6b5d"/>
-<rect x="38" y="36" width="8" height="4" fill="#7a6b5d"/>
-</g>
+<title>Dinosaur Fossil Boots (rare)</title>
+<rect x="8" y="8" width="12" height="4" fill="#2a1a0c"/>
+<rect x="36" y="8" width="12" height="4" fill="#2a1a0c"/>
+<rect x="4" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="8" height="4" fill="#8b6914"/>
+<rect x="16" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="12" width="8" height="4" fill="#8b6914"/>
+<rect x="40" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="8" height="4" fill="#8b6914"/>
+<rect x="16" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="16" width="8" height="4" fill="#8b6914"/>
+<rect x="40" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="8" height="4" fill="#8b6914"/>
+<rect x="16" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="28" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="20" width="8" height="4" fill="#8b6914"/>
+<rect x="40" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="12" height="4" fill="#8b6914"/>
+<rect x="20" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="28" y="24" width="16" height="4" fill="#8b6914"/>
+<rect x="44" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="32" height="4" fill="#8b6914"/>
+<rect x="40" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="4" height="4" fill="#b07840"/>
+<rect x="12" y="32" width="20" height="4" fill="#8b6914"/>
+<rect x="32" y="32" width="4" height="4" fill="#b07840"/>
+<rect x="36" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="4" height="4" fill="#e8d070"/>
+<rect x="12" y="36" width="20" height="4" fill="#c49a2a"/>
+<rect x="32" y="36" width="4" height="4" fill="#e8d070"/>
+<rect x="36" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="28" height="4" fill="#c49a2a"/>
+<rect x="36" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="24" height="4" fill="#5a3e1b"/>
+<rect x="32" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="48" width="24" height="4" fill="#2a1a0c"/>
 </svg>

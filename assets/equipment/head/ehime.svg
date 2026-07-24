@@ -1,49 +1,57 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Matsuyama Castle Helm</title>
-  <g id="helm">
-    <!-- Gold base color -->
-    <rect x="12" y="20" width="40" height="28" fill="#d4af37"/>
-    
-    <!-- Main helm dome -->
-    <rect x="16" y="12" width="32" height="12" fill="#c9a227"/>
-    
-    <!-- Castle tower peak - left -->
-    <rect x="20" y="8" width="4" height="4" fill="#4d8fbf"/>
-    <rect x="20" y="4" width="4" height="4" fill="#3d6fa0"/>
-    
-    <!-- Castle tower peak - center -->
-    <rect x="28" y="4" width="8" height="8" fill="#4d8fbf"/>
-    <rect x="28" y="0" width="8" height="4" fill="#2d4f80"/>
-    
-    <!-- Castle tower peak - right -->
-    <rect x="40" y="8" width="4" height="4" fill="#4d8fbf"/>
-    <rect x="40" y="4" width="4" height="4" fill="#3d6fa0"/>
-    
-    <!-- Face guard front -->
-    <rect x="18" y="20" width="28" height="16" fill="#b8941f"/>
-    
-    <!-- Eye slots - left -->
-    <rect x="20" y="24" width="6" height="4" fill="#1a1a1a"/>
-    
-    <!-- Eye slots - right -->
-    <rect x="38" y="24" width="6" height="4" fill="#1a1a1a"/>
-    
-    <!-- Mouth guard opening -->
-    <rect x="24" y="32" width="16" height="4" fill="#1a1a1a"/>
-    
-    <!-- Side guards - left -->
-    <rect x="12" y="24" width="4" height="12" fill="#a07a15"/>
-    
-    <!-- Side guards - right -->
-    <rect x="48" y="24" width="4" height="12" fill="#a07a15"/>
-    
-    <!-- Accent blue band -->
-    <rect x="16" y="36" width="32" height="4" fill="#4d8fbf"/>
-    
-    <!-- Bottom chin guard -->
-    <rect x="18" y="40" width="28" height="4" fill="#8b6f1a"/>
-    
-    <!-- Highlight on dome -->
-    <rect x="20" y="12" width="8" height="4" fill="#e5c158"/>
-  </g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Matsuyama Castle Helm (rare)</title>
+<rect x="24" y="8" width="16" height="4" fill="#2a1a0c"/>
+<rect x="20" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="12" width="8" height="4" fill="#8a7a5a"/>
+<rect x="32" y="12" width="4" height="4" fill="#c4a96e"/>
+<rect x="36" y="12" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="4" height="4" fill="#8a7a5a"/>
+<rect x="24" y="16" width="12" height="4" fill="#c4a96e"/>
+<rect x="36" y="16" width="4" height="4" fill="#e8d4a0"/>
+<rect x="40" y="16" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="4" height="4" fill="#8a7a5a"/>
+<rect x="24" y="20" width="12" height="4" fill="#c4a96e"/>
+<rect x="36" y="20" width="4" height="4" fill="#e8d4a0"/>
+<rect x="40" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="24" width="4" height="4" fill="#8a7a5a"/>
+<rect x="24" y="24" width="12" height="4" fill="#c4a96e"/>
+<rect x="36" y="24" width="4" height="4" fill="#e8d4a0"/>
+<rect x="40" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#6a5a3a"/>
+<rect x="20" y="28" width="4" height="4" fill="#8a7a5a"/>
+<rect x="24" y="28" width="8" height="4" fill="#c4a96e"/>
+<rect x="32" y="28" width="8" height="4" fill="#e8d4a0"/>
+<rect x="40" y="28" width="12" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="8" height="4" fill="#6a5a3a"/>
+<rect x="24" y="32" width="4" height="4" fill="#8a7a5a"/>
+<rect x="28" y="32" width="4" height="4" fill="#c4a96e"/>
+<rect x="32" y="32" width="8" height="4" fill="#e8d4a0"/>
+<rect x="40" y="32" width="12" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="8" height="4" fill="#6a5a3a"/>
+<rect x="24" y="36" width="4" height="4" fill="#8a7a5a"/>
+<rect x="28" y="36" width="4" height="4" fill="#c4a96e"/>
+<rect x="32" y="36" width="4" height="4" fill="#e8d4a0"/>
+<rect x="36" y="36" width="16" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="16" height="4" fill="#4a3a2a"/>
+<rect x="28" y="40" width="4" height="4" fill="#d4a030"/>
+<rect x="32" y="40" width="8" height="4" fill="#4a3a2a"/>
+<rect x="40" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="8" height="4" fill="#4a3a2a"/>
+<rect x="20" y="44" width="4" height="4" fill="#d4a030"/>
+<rect x="24" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="44" width="8" height="4" fill="#d4a030"/>
+<rect x="36" y="44" width="4" height="4" fill="#4a3a2a"/>
+<rect x="40" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="48" width="16" height="4" fill="#4a3a2a"/>
+<rect x="36" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="52" width="24" height="4" fill="#2a1a0c"/>
 </svg>

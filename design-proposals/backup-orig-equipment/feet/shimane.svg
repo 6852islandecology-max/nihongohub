@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Oki Islands Boots</title>
+<g id="left-boot">
+<rect x="4" y="36" width="4" height="4" fill="#2c1810"/>
+<rect x="8" y="36" width="4" height="4" fill="#2c1810"/>
+<rect x="12" y="36" width="4" height="4" fill="#2c1810"/>
+<rect x="4" y="40" width="4" height="4" fill="#3d2817"/>
+<rect x="8" y="40" width="4" height="4" fill="#4a3520"/>
+<rect x="12" y="40" width="4" height="4" fill="#3d2817"/>
+<rect x="4" y="44" width="4" height="4" fill="#5a4a38"/>
+<rect x="8" y="44" width="4" height="4" fill="#6b5a48"/>
+<rect x="12" y="44" width="4" height="4" fill="#5a4a38"/>
+<rect x="4" y="48" width="4" height="4" fill="#7a6a58"/>
+<rect x="8" y="48" width="4" height="4" fill="#8b7a68"/>
+<rect x="12" y="48" width="4" height="4" fill="#7a6a58"/>
+<rect x="4" y="52" width="12" height="4" fill="#9b9285"/>
+<rect x="4" y="56" width="12" height="4" fill="#8b7a68"/>
+</g>
+<g id="right-boot">
+<rect x="48" y="36" width="4" height="4" fill="#2c1810"/>
+<rect x="52" y="36" width="4" height="4" fill="#2c1810"/>
+<rect x="56" y="36" width="4" height="4" fill="#2c1810"/>
+<rect x="48" y="40" width="4" height="4" fill="#3d2817"/>
+<rect x="52" y="40" width="4" height="4" fill="#4a3520"/>
+<rect x="56" y="40" width="4" height="4" fill="#3d2817"/>
+<rect x="48" y="44" width="4" height="4" fill="#5a4a38"/>
+<rect x="52" y="44" width="4" height="4" fill="#6b5a48"/>
+<rect x="56" y="44" width="4" height="4" fill="#5a4a38"/>
+<rect x="48" y="48" width="4" height="4" fill="#7a6a58"/>
+<rect x="52" y="48" width="4" height="4" fill="#8b7a68"/>
+<rect x="56" y="48" width="4" height="4" fill="#7a6a58"/>
+<rect x="48" y="52" width="12" height="4" fill="#9b9285"/>
+<rect x="48" y="56" width="12" height="4" fill="#8b7a68"/>
+</g>
+<g id="accent-left">
+<rect x="8" y="32" width="4" height="4" fill="#9b9285"/>
+<rect x="12" y="32" width="4" height="4" fill="#9b9285"/>
+</g>
+<g id="accent-right">
+<rect x="48" y="32" width="4" height="4" fill="#9b9285"/>
+<rect x="52" y="32" width="4" height="4" fill="#9b9285"/>
+</g>
+</svg>

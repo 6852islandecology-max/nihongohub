@@ -1,0 +1,423 @@
+REGEN START 2026-06-09T02:15:12.667Z · 70/combo · 3×5 combos (levels=N5,N4,N3 langs=en,zh,es,th,id) · validate=true
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix different conjugation forms; cannot all fill blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A 'いき' creates incomplete verb form; Option D 'いく' is correct), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A (ひらいています) and B (あいています) are grammatically correct and natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A (い) alone cannot form a grammatical verb; Option D (いく) is complete and correct.), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+  N5/en: generated 70, inserted 70  [running total inserted 70, failed 0]
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; blank requires 行き+ます stem), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; blank requires same form for all), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix verb stems and kanji; cannot all fill blank), retrying in 500ms
+  N5/zh: generated 70, inserted 70  [running total inserted 140, failed 0]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically correct: A (いき) and D (いく) both work), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms: 行き/聞き vs 来/見 inconsistent), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically correct and natural here.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Marked answer 'い' is incorrect; 'ゆ' makes the only correct sentence), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+  N5/es: generated 69, inserted 69  [running total inserted 209, failed 1]
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix different conjugation forms; blank requires て-form いき), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Marked answer いき is incomplete verb form; いく is correct), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A is a verb stem, not a complete conjugation form), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; blank requires 'いく' (dictionary form)), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; cannot all slot into blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A 'いき' is incomplete; should be 'いきます' form), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Sentence itself is ungrammatical; should be 明日は学校へ行きますか), retrying in 500ms
+  N5/th: generated 70, inserted 70  [running total inserted 279, failed 1]
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option B (いく) also makes a grammatical, natural sentence), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; blank requires iku/いく not stem いき), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Marked option is incomplete conjugation form; C is the correct answer), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A (いき) is incomplete; D (いく) is the correct base form needed.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; cannot all slot into blank), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 食べます (A) and 飲みます (B) are natural and grammatical), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; cannot all fit blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix different conjugation forms; not all fit the blank), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; not all fit the blank), retrying in 1000ms
+  N5/id: generated 70, inserted 70  [running total inserted 349, failed 1]
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and C both produce grammatical, natural sentences.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and D are grammatically natural; answer is not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and C are identical (つける); mixing conjugation forms), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Sentence has grammatical errors independent of blank), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B and A both naturally fit; 'made breakfast' or 'ate breakfast' both work.), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both grammatically fit; not uniquely correct), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and D both make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms: 出ます vs 入ります/帰ります/建てます), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C, D) are all grammatically natural and acceptable), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; cannot all slot into blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: No option reads as a word; marking error or typo in options), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C) are all grammatical and natural), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option D (待ちました) also works naturally with から), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Both A (ことで) and B (ために) are grammatically correct and natural), retrying in 2000ms
+  N4/en: generated 69, inserted 69  [running total inserted 418, failed 2]
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatical and natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A and B) create natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options C and D also make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options C and D are identical in meaning; two correct answers exist), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A marked CORRECT but kanji reading is wrong: 起床=きしょう is incorrect), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatical: C and D also work naturally), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and D are grammatically correct and natural.), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (準備し, 確認し, 整理し) are all natural and grammatical), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Both ために and ので produce natural, grammatical sentences), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and D both make grammatical, natural sentences uniquely.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically natural and acceptable.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both A (ために) and B (ように) are grammatical and natural), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options (A and D) are both grammatical and natural), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically natural; 後で、後に、その後 all work), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+  N4/zh: generated 68, inserted 68  [running total inserted 486, failed 4]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A is incomplete stem; needs conjugation form like 頑張っ), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Sentence structure error: 出かけます前に is ungrammatical), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Option A 'きしょう' is not a valid Japanese word or conjugation), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B, C, D also grammatically fit and sound natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and C also make grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both ときに and たびに are grammatical and natural here), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and C both make natural sentences; answer not unique.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Option A marked correct but should be 起床(きしょう) reading; blank needs 起), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and D are both grammatically correct and natural), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatical and natural; not uniquely correct.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A 'きしょう' is not a real word; correct is 'きしょく'), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Marked answer 'ので' creates unnatural causality; 'から' is more natural here.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Option A is incomplete kanji; should be はじまる or similar), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A is blank; cannot evaluate correctness of marked answer), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A 'なん' does not form correct word 東南), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix different grammatical forms; not all fit the blank structure), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+  N4/es: generated 70, inserted 70  [running total inserted 556, failed 4]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and C also produce natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and C both produce grammatical, natural sentences.), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A (ころ) and D (ところ) are grammatical and natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and D are identical; lack of uniqueness), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and D both grammatically correct; answer not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; cannot all fit the blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and D are grammatically natural for habitual actions), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Sentence has grammatical error: 'は' should not appear between 私 and 朝), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both grammatically fit and are natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both create grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatical: ところ, ので, から all natural and acceptable), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options grammatically fit; ことができた and たびに also work naturally), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A (きしょう) is not a real word; correct form is おきます), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix incompatible conjugation forms for the blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Sentence is incomplete/malformed; unclear what している modifies), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A そう and B ように produce natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: 朝起床 is redundant; 朝 means morning, 起床 means to wake up. The sentence is unnatural.), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatical and natural (寝た, 休んだ)), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A reading incorrect for 起床; B is correct reading), retrying in 500ms
+  N4/th: generated 69, inserted 69  [running total inserted 625, failed 5]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both ので and から are grammatically correct and natural here), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix verb conjugation forms; cannot all fit blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and C are equally natural and grammatical alternatives), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and C both create grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatical and natural (飲みます, 作ります, 買います)), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Option C (のに) also makes the sentence grammatical and natural), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: 出ます should be 出て, conjugation mismatch with other options), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatically natural: 行きます, 出かけます both fit context), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A, C, D all grammatically correct and natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options C and A both grammatical and natural; not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatical: A (食べてから) and D (食べながら) both natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and B are grammatically natural and acceptable here.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix hiragana and kanji forms; D is also grammatically correct), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: 飲みながら is unnatural; 食べながら and 歩きながら both work naturally), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both create grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+  N4/id: generated 69, inserted 69  [running total inserted 694, failed 6]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both 読む and 聞く are natural; multiple answers fit.), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatically acceptable; answer not unique), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C, D) are all grammatically natural and acceptable), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options fit naturally; answer is not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (必要/重要/大切/大事) all make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Marked answer 'かかさず' is incorrect; should be 'かかさず' or 'けつかさず'), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A (制策) is not a real word; C (政策) is correct), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options C and D also make grammatical, natural sentences), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: B 研修 also fits naturally and is more commonly used), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are natural and grammatical; プラン and 計画 are redundant), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both らしい and ようだ are natural and grammatical here.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option B (維持する) also makes a grammatical, natural sentence), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both 計画 and 企画 are synonymous; 計画 also fits naturally.), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatical and natural; not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 制限 and 制約 are natural; 制約 already in sentence), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options C and D both grammatical; D is duplicate of B), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both A and B are grammatically natural and acceptable here), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Both のに and ように make the sentence natural and grammatical), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options create grammatical sentences; answer lacks uniqueness), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options C and D also form grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options fit naturally: 手助け, サポート, 指導 all work.), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (B, C, D) are natural and grammatically acceptable), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and B are grammatical and natural; answer not unique), retrying in 500ms
+  N3/en: generated 66, inserted 66  [running total inserted 760, failed 10]
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and C both make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options D (こと) also makes grammatical and natural sentence), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and D both produce grammatical sentences with similar meanings), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all natural and grammatically correct), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all grammatically natural and acceptable), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B are both grammatically correct and natural), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and D both fit naturally and idiomatically.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all natural and acceptable), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options mix hiragana/kanji forms; multiple could be correct), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Marked answer ように doesn't fit grammatically in this blank position.), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and C also make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix hiragana/kanji; cannot all fit the blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatical and natural here), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options C and D both work naturally; answer not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) all make grammatical and natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A, B, C all make natural sentences; answer is not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and D also make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C, D) create natural sentences), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options B and C both produce natural, grammatical sentences), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatical and natural; not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options fit grammatically. 進行させる, 中断する, 延期する all work.), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, D) are both natural and acceptable here), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 行う and 開く work naturally; answer not unique), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options C and D also fit naturally; answer is not unique), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Both 到着する (B) and 到達する (A) are natural and equally acceptable), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C, D) are all natural and acceptable), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+  N3/zh: generated 65, inserted 65  [running total inserted 825, failed 15]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and B are natural and grammatically correct; answer is not unique), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options mix conjugation forms; cannot all fit the blank equally.), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C, D) are all grammatically correct and natural), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options A and B both fit grammatically; multiple answers acceptable), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options B and D also make natural, grammatical sentences), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Correct answer 'ほぜん' is not a valid reading of 保全), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option C has different grammatical structure (は particle); others fit the blank consistently), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 学ぶ and 教わる make grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options fit naturally; uniqueness violated), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options are natural and grammatical in context), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Both 述べます and 伝えます are natural and grammatically correct), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A (必ず毎日) repeats meaning; 毎日 already in sentence), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options A and B both fit naturally; answer not unique.), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Both A (ために) and D (ように) are grammatically correct and natural), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B and D also produce natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both に and で work naturally here), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options are noun phrases, not fill-in-the-blank answers for sentence blank), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+  N3/es: generated 68, inserted 68  [running total inserted 893, failed 17]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all grammatically natural and acceptable.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically natural and acceptable), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A uses 使われる (passive), but 使うことが求められている is already passive structure. The marked CORRECT option is not grammatica), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Sentence has typo: ほうこく should be ほうこう. Options unrelated.), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B and C are equally natural and grammatical), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A and D) are both natural and grammatical.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Marked answer 'まわりに' doesn't fit the blank position grammatically), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A uses noun form; blank requires verb conjugation), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options are noun phrases, not fillers for the blank in the sentence), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C) all make natural sentences), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C, D) all make natural sentences), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and B create natural, grammatically correct sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both A (ことで) and B (ために) are natural and grammatical), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B (尋ねる) and D (問う) also fit naturally here), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both 渡します and 贈ります are natural and commonly used), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A is hiragana only; others are kanji. Formatting inconsistent.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both 企画 and 計画 are natural and grammatically correct here), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A uses ようになると (become/come to), but sentence structure requires conditional ようになると fits poorly here grammatically), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C) are all grammatical and natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options fit naturally; B and D also work contextually.), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options are definitions, not fillable blanks for the sentence), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option D (するなら) also makes a grammatical, natural sentence), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are natural and acceptable (prepare, organize, confirm, distribute).), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options fit naturally; not uniquely correct.), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+  N3/th: generated 70, inserted 70  [running total inserted 963, failed 17]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Daruma Mask</title>
+  
+  <!-- Border frame in rarity blue -->
+  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#4d8fbf" stroke-width="4"/>
+  
+  <!-- Main red daruma face -->
+  <rect x="12" y="12" width="40" height="40" fill="#d63031"/>
+  
+  <!-- Left white eye -->
+  <rect x="16" y="20" width="12" height="12" fill="#ffffff"/>
+  
+  <!-- Right white eye -->
+  <rect x="36" y="20" width="12" height="12" fill="#ffffff"/>
+  
+  <!-- Left eye pupil -->
+  <rect x="18" y="22" width="6" height="6" fill="#000000"/>
+  
+  <!-- Right eye pupil -->
+  <rect x="38" y="22" width="6" height="6" fill="#000000"/>
+  
+  <!-- Smile arc - left part -->
+  <rect x="20" y="36" width="4" height="4" fill="#000000"/>
+  <rect x="16" y="40" width="4" height="4" fill="#000000"/>
+  
+  <!-- Smile arc - center -->
+  <rect x="24" y="40" width="16" height="4" fill="#000000"/>
+  
+  <!-- Smile arc - right part -->
+  <rect x="44" y="40" width="4" height="4" fill="#000000"/>
+  <rect x="40" y="36" width="4" height="4" fill="#000000"/>
+  
+  <!-- Gold accent stripe (gunma touch) -->
+  <rect x="12" y="52" width="40" height="4" fill="#ffd700"/>
+</svg>

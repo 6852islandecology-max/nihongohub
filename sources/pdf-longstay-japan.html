@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Japan Long-Stay Playbook — NihongoHub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16100a;--paper:#efe6d3;--white:#fdfaf3;--red:#bf3325;--gold:#c8911f;
+  --muted:#7a6a52;--soft:#ddcfb6;--green:#3fae6b;--blue:#1d4ed8;
+}
+body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.65;background:#fff;max-width:830px;margin:0 auto;padding:28px 24px 60px}
+@media print{
+  body{padding:0;max-width:100%;font-size:11pt}
+  .no-print{display:none!important}
+  .page-break{page-break-before:always}
+  @page{margin:15mm 15mm 15mm 15mm;size:A4}
+}
+.cover{background:var(--ink);color:var(--paper);padding:44px 36px;border-radius:8px;margin-bottom:32px;position:relative;overflow:hidden}
+.cover::after{content:"滞";font-family:'Noto Sans JP',sans-serif;font-size:200px;color:rgba(255,255,255,0.04);position:absolute;right:-10px;top:-20px;line-height:1}
+.cover-vol{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--gold);letter-spacing:2px;display:block;margin-bottom:10px}
+.cover-title{font-family:'DotGothic16',sans-serif;font-size:clamp(22px,4vw,34px);color:#fdfaf3;margin-bottom:10px;line-height:1.2}
+.cover-sub{color:#bbb;font-size:14px;line-height:1.6;margin-bottom:16px}
+.cover-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.badge{background:rgba(200,145,31,.2);border:1px solid var(--gold);color:var(--gold);font-family:'Press Start 2P',monospace;font-size:7px;padding:4px 8px;border-radius:3px}
+.cover-meta{font-size:11px;color:#888;border-top:1px solid #333;padding-top:10px;margin-top:16px}
+.sec{border-bottom:3px solid var(--gold);padding-bottom:8px;margin:32px 0 18px;display:flex;align-items:center;gap:12px}
+.sec-icon{font-size:22px;line-height:1}
+.sec h2{font-family:'DotGothic16',sans-serif;font-size:20px}
+h3{font-family:'DotGothic16',sans-serif;font-size:16px;margin:20px 0 10px;color:var(--red)}
+p{font-size:14px;margin:8px 0}
+ul,ol{margin:8px 0 8px 20px}li{margin:5px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th{background:var(--ink);color:var(--gold);font-family:'Press Start 2P',monospace;font-size:7px;padding:7px 10px;text-align:left;vertical-align:top}
+td{padding:8px 10px;border-bottom:1px solid var(--soft);font-size:13px;vertical-align:top}
+tr:nth-child(even) td{background:#fdf9f3}
+.warn{background:#fff7e6;border:2px solid #e09000;border-radius:6px;padding:12px 16px;margin:14px 0}
+.warn strong{font-family:'Press Start 2P',monospace;font-size:7px;color:#b06800;display:block;margin-bottom:5px}
+.tip{background:#f0fdf4;border:2px solid var(--green);border-radius:6px;padding:10px 14px;margin:12px 0}
+.tip strong{font-family:'Press Start 2P',monospace;font-size:7px;color:var(--green);display:block;margin-bottom:4px}
+.cl{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:14px 18px;margin:14px 0}
+.cl-title{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--green);margin-bottom:10px;display:block}
+.cl ul{list-style:none;margin:0;padding:0}
+.cl li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--soft);font-size:13.5px}
+.cl li:last-child{border-bottom:none}
+.cl li::before{content:"☐";position:absolute;left:0;top:6px;color:var(--gold);font-size:17px;line-height:1}
+.phrase-jp{font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;display:block;line-height:1.4}
+.phrase-ro{color:var(--muted);font-size:12px;font-style:italic;display:block}
+.aff{background:#0d0a14;color:#fdf6e3;border-radius:6px;padding:12px 16px;margin:14px 0}
+.aff .pr{font-family:'Press Start 2P',monospace;font-size:7px;color:#e0a634;border:1px solid #e0a634;border-radius:3px;padding:2px 5px;margin-right:6px}
+.aff a{color:#ffd86b;font-weight:600;text-decoration:none}
+.aff .lbl{font-family:'DotGothic16',sans-serif;color:#fdf6e3;font-size:14px}
+.aff small{display:block;color:#9a8f7e;font-size:11px;margin-top:6px}
+.disclaimer{background:#f9f9f9;border:1px dashed #ccc;border-radius:4px;padding:12px 16px;margin:28px 0;font-size:11.5px;color:#666}
+.print-btn{display:inline-block;font-family:'Press Start 2P',monospace;font-size:9px;background:var(--red);color:#fff;text-decoration:none;padding:12px 18px;border-radius:4px;border-bottom:3px solid #7e1c12;cursor:pointer;margin-bottom:24px}
+.lead{font-size:14px;color:var(--muted);font-style:italic;margin:6px 0 14px}
+/* phones: wide tables scroll sideways instead of overflowing the page */
+@media(max-width:768px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}
+</style>
+</head>
+<body>
+
+<div class="no-print" style="background:#f0f0f0;padding:12px 16px;border-radius:6px;margin-bottom:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+  <span style="font-size:13px">Print → "Save as PDF" for the best result</span>
+  <button class="print-btn" onclick="window.print()">🖨 PRINT / SAVE AS PDF</button>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-vol">NIHONGOHUB GUIDE SERIES · LONG-STAY EDITION</span>
+  <div class="cover-title">The Japan Long-Stay<br>Playbook</div>
+  <div class="cover-sub">For the 3-to-6-month stay — the gap between a two-week holiday and moving in for good. Where to base yourself, where to sleep by the month, how to stay connected and pay for things, and how to live like a temporary local. Written for remote workers, sabbatical travellers, and slow-travel retirees.</div>
+  <div class="cover-badges">
+    <span class="badge">CITY COMPARISON</span>
+    <span class="badge">MONTHLY HOUSING</span>
+    <span class="badge">STAY CONNECTED</span>
+    <span class="badge">MONEY & HEALTH</span>
+    <span class="badge">MONTH-BY-MONTH PLAN</span>
+  </div>
+  <div class="cover-meta">nihongo-hub.com · Long-Stay Edition · Updated June 2026</div>
+</div>
+
+<div class="disclaimer">
+  This guide is general travel and lifestyle information for short-to-medium stays, not legal, immigration, tax, or medical advice. <b>It does not cover visa applications or residency procedures.</b> Whether you may stay 90 days visa-free or need a visa depends on your nationality and purpose — confirm your eligibility and the length of stay you are permitted with an official source (your nearest Japanese embassy / the Immigration Services Agency, isa.go.jp) before you book. If your plan requires a visa or you intend to become a resident, consult a qualified professional.
+</div>
+
+<!-- INTRO -->
+<div class="sec"><span class="sec-icon">🧭</span><h2>Who this is for</h2></div>
+<p>There is a whole way of experiencing Japan that the guidebooks miss. Too long for a hotel, too short to move in — the <strong>three-to-six-month stay</strong>. The remote worker doing a season from Japan. The traveller on a sabbatical or a career break. The retiree who wants one long, slow autumn in Kyoto instead of a rushed week.</p>
+<p>This playbook is for that stay. It assumes you have already sorted out <em>how long you are legally allowed to be in Japan</em> (see the note above) and focuses on the part nobody explains well: how to actually <strong>live</strong> here for months without the full machinery of relocation — no city-hall residence registration, no apartment lease guarantor, no local bank account required.</p>
+<div class="tip"><strong>THE BIG IDEA</strong>A long stay is not a long holiday. The trick is to stop paying tourist prices for everything: book accommodation by the month, get a real data plan, pick one base and travel from it, and shop where locals shop. Do that and Japan becomes dramatically cheaper than a two-week trip — per day.</div>
+
+<!-- SECTION 1: BASE -->
+<div class="sec page-break"><span class="sec-icon">📍</span><h2>1 · Choosing your base</h2></div>
+<p class="lead">Pick one city to live in and take day/weekend trips from it. Constantly moving is exhausting and expensive; a single base is how a long stay pays off.</p>
+<table>
+  <thead><tr><th>City</th><th>Best for</th><th>Rough monthly base cost*</th><th>Watch-outs</th></tr></thead>
+  <tbody>
+    <tr><td><b>Tokyo</b></td><td>Remote workers, nightlife, every convenience, fastest internet</td><td>Highest — ¥180k–300k+</td><td>Small rooms, crowds</td></tr>
+    <tr><td><b>Kyoto</b></td><td>Culture, walkability, a slow, beautiful base</td><td>¥150k–230k</td><td>Tourist-season crowds; summer is hot</td></tr>
+    <tr><td><b>Osaka</b></td><td>Food, friendliness, value vs Tokyo, central for Kansai trips</td><td>¥130k–200k</td><td>Busy, less English than Tokyo</td></tr>
+    <tr><td><b>Fukuoka</b></td><td>Digital nomads — compact, cheap, great food, gateway to Kyushu</td><td>¥110k–180k</td><td>Smaller international scene</td></tr>
+    <tr><td><b>Sapporo</b></td><td>Cool summers, space, nature, winter sports</td><td>¥110k–170k</td><td>Cold, snowy winters; further from the rest of Japan</td></tr>
+    <tr><td><b>Naha (Okinawa)</b></td><td>Beaches, mild winters, slow pace</td><td>¥120k–190k</td><td>Island logistics; you'll fly to leave</td></tr>
+  </tbody>
+</table>
+<p style="font-size:11.5px;color:var(--muted)">*Very rough all-in monthly cost for one person living modestly: monthly accommodation + food + transport + data. Excludes flights and big trips. Exchange rates and season swing these a lot.</p>
+<div class="tip"><strong>NOMAD PICK</strong>For first-time long-stayers who work online, <b>Fukuoka</b> and <b>Osaka</b> hit the sweet spot: low cost, easy to get around, warm and food-obsessed, and well connected by air and rail to the rest of the country.</div>
+
+<!-- SECTION 2: HOUSING -->
+<div class="sec page-break"><span class="sec-icon">🏠</span><h2>2 · Where to sleep — by the month, not the night</h2></div>
+<p class="lead">This is the single biggest money decision. Booking nightly for months is how people overpay by thousands. Match the option to your stay length.</p>
+<table>
+  <thead><tr><th>Option</th><th>How it works</th><th>Good for</th><th>Roughly</th></tr></thead>
+  <tbody>
+    <tr><td><b>Monthly mansion</b> (マンスリーマンション)</td><td>Furnished flat rented by the month, utilities &amp; Wi-Fi usually included, no guarantor or key money</td><td>1–6 months, working/living alone</td><td>¥90k–220k/mo</td></tr>
+    <tr><td><b>Serviced apartment / aparthotel</b></td><td>Hotel-like, cleaning included, front desk, easy monthly rates</td><td>Comfort &amp; zero hassle</td><td>¥150k–350k/mo</td></tr>
+    <tr><td><b>Share house</b> (シェアハウス)</td><td>Private room, shared kitchen/bath, instant community, flexible terms</td><td>Solo travellers who want people</td><td>¥50k–90k/mo</td></tr>
+    <tr><td><b>Long-stay hotel / weekly rate</b></td><td>Discounted nightly rate for 28+ nights at business hotels</td><td>Short end (1–2 months), city-hopping</td><td>¥120k–250k/mo</td></tr>
+    <tr><td><b>Onsen-town / countryside monthly</b></td><td>Off-season rural inns and rentals go cheap for slow stays</td><td>Writers, retirees, deep slow travel</td><td>¥70k–160k/mo</td></tr>
+  </tbody>
+</table>
+<div class="warn"><strong>BOOK FOR THE STAY LENGTH</strong>Many vacation-rental and hotel platforms automatically apply a <b>weekly or monthly discount</b> once you enter 7+ or 28+ nights — sometimes 20–50% off the nightly rate. Always enter your real dates before comparing. For monthly mansions, search the operator directly; for flexible weeks, the big booking platforms are simplest.</p></div>
+<p>Two honest notes. First, the cheapest monthly-mansion operators often have Japanese-only sites — a translation browser extension handles it. Second, "no guarantor, no key money" is the phrase that separates a stay-friendly listing from a standard 2-year lease you do <em>not</em> want.</p>
+
+<!-- SECTION 3: CONNECTED -->
+<div class="sec page-break"><span class="sec-icon">📶</span><h2>3 · Staying connected</h2></div>
+<p class="lead">For a long stay you need reliable data from the minute you land — for maps, translation, bookings, and (if you work) video calls.</p>
+<h3>Data: eSIM vs pocket Wi-Fi</h3>
+<p>An <b>eSIM</b> activates on your phone before you even land — no physical SIM, no queue at the airport. It's the simplest option for one device. If you carry a laptop and a phone, or travel as a couple, a <b>pocket Wi-Fi</b> router shares one connection across several devices and is rented per day or month.</p>
+<div class="aff"><span class="pr">PR</span> <span class="lbl">Get online before you land</span><br>
+  <a href="https://yesim.tpx.lu/nIn4jqFi" target="_blank">→ Japan eSIM (Yesim) — install before departure, top up as you go</a><br>
+  <a href="https://invl.app/clnitht" target="_blank">→ Pocket Wi-Fi rental (NINJA WiFi) — share data across your devices</a>
+  <small>These are affiliate links — if you sign up we may earn a small commission at no extra cost to you. We only list services we'd use ourselves.</small>
+</div>
+<h3>Working from Japan</h3>
+<p>If you're here to work remotely, two things matter: the time zone (Japan is UTC+9 — great for Asia-Pacific teams, brutal for US-morning calls) and a place to work. Coworking spaces in Tokyo, Osaka and Fukuoka offer day passes (¥1,000–2,500) and monthly memberships; many cafés tolerate laptops, but Japan has its own café etiquette — buy something, don't camp at peak times, keep calls quiet (or step outside).</p>
+<div class="tip"><strong>FREE BACK-UP</strong>Major train stations, convenience stores, and city tourist offices have free Wi-Fi. It's not enough to work on, but it's a lifesaver if your data runs out mid-trip.</div>
+
+<!-- SECTION 4: MONEY -->
+<div class="sec page-break"><span class="sec-icon">💴</span><h2>4 · Money without becoming a resident</h2></div>
+<p class="lead">You don't need a Japanese bank account for a long stay. You need a plan for cash, cards, and the one transport card that runs your daily life.</p>
+<ul>
+  <li><b>Japan still loves cash.</b> Many restaurants, small shops, shrines, and rural buses are cash-only. Carry more than you think — ¥10,000–20,000 on you is normal.</li>
+  <li><b>Where to withdraw:</b> <b>7-Bank ATMs</b> (inside every 7-Eleven) and <b>Japan Post Bank ATMs</b> reliably accept foreign cards, in English, 24/7. Most other bank ATMs reject foreign cards.</li>
+  <li><b>Cards:</b> bring a <b>no-foreign-fee debit/credit card</b> and a back-up on a different network (Visa + Mastercard). Tell your bank you'll be in Japan so they don't freeze it.</li>
+  <li><b>Tap-to-pay is spreading</b> but not universal — never rely on it as your only method.</li>
+  <li><b>Tipping doesn't exist.</b> The price is the price. Don't leave money on the table; it causes confusion.</li>
+</ul>
+<h3>The card that runs your day: IC cards</h3>
+<p>A rechargeable <b>IC card</b> (Suica, PASMO, ICOCA and regional siblings) taps you onto almost every train and bus nationwide, and pays at convenience stores, vending machines, and many shops. You can add a Suica or PASMO to an iPhone's Apple Wallet and top it up with a foreign card — no physical card, no counter. For a months-long stay this is the single most useful thing to set up on day one.</p>
+<div class="warn"><strong>CHECK CURRENT CARD RULES</strong>Availability of physical welcome/tourist IC cards and the mobile-Suica top-up rules change periodically. Check the current situation when you arrive — but the mobile IC card in your phone is the most future-proof choice.</div>
+
+<!-- SECTION 5: HEALTH -->
+<div class="sec page-break"><span class="sec-icon">🩺</span><h2>5 · Health &amp; insurance for a long visit</h2></div>
+<p class="lead">As a short-term visitor you are not in Japan's national health insurance system, so you pay out of pocket — which means travel/medical insurance is not optional for a multi-month stay.</p>
+<ul>
+  <li><b>Get insurance that actually covers a long trip.</b> Standard 2-week travel policies may cap at 30, 60, or 90 days — read the duration limit. Remote-worker / "nomad" insurers and long-stay travel policies are built for exactly this. Compare coverage for hospitalisation, medical evacuation, and (if relevant) any pre-existing conditions.</li>
+  <li><b>Pharmacies (薬局)</b> handle minor ailments well; a pharmacist can recommend over-the-counter remedies. Bring enough of any prescription medication for your whole stay, in its original packaging, with a copy of the prescription — and check in advance that it's legal to bring into Japan (some common medicines are restricted).</li>
+  <li><b>Finding an English-speaking clinic:</b> the Japan National Tourism Organization (JNTO) maintains an online directory of medical institutions that serve visitors in English. Save the link before you travel.</li>
+  <li><b>Emergencies:</b> 119 for ambulance/fire, 110 for police. Ambulances are free to call, but you pay for treatment.</li>
+</ul>
+<div class="cl">
+  <span class="cl-title">A FEW PHRASES WORTH SAVING</span>
+  <ul>
+    <li><span class="phrase-jp">病院はどこですか。</span><span class="phrase-ro">Byōin wa doko desu ka. — Where is the hospital?</span></li>
+    <li><span class="phrase-jp">英語が話せる先生はいますか。</span><span class="phrase-ro">Eigo ga hanaseru sensei wa imasu ka. — Is there an English-speaking doctor?</span></li>
+    <li><span class="phrase-jp">薬がほしいです。</span><span class="phrase-ro">Kusuri ga hoshii desu. — I'd like some medicine.</span></li>
+  </ul>
+</div>
+<p style="font-size:12px;color:var(--muted)">This is general information, not medical advice. Confirm coverage details with your insurer and bring any prescriptions you rely on.</p>
+
+<!-- SECTION 6: GETTING AROUND -->
+<div class="sec page-break"><span class="sec-icon">🚄</span><h2>6 · Getting around for months</h2></div>
+<p class="lead">Over a long stay the maths changes: a base city plus occasional long trips beats a rail pass you bought for a two-week dash.</p>
+<ul>
+  <li><b>Daily life:</b> your IC card (Section 4) covers local trains and buses — just tap.</li>
+  <li><b>The nationwide JR Pass</b> only pays off if you're moving long distances frequently in a short window. For a slow base-and-trips stay, point-to-point tickets or a <b>regional pass</b> (JR East, JR West, Kyushu, etc.) usually cost less. Do the maths for your actual route before buying.</li>
+  <li><b>Long distances on a budget:</b> overnight buses and budget domestic flights (Peach, Jetstar Japan, Skymark) are far cheaper than the bullet train for the same trip if you book ahead.</li>
+  <li><b>Intercity, all in one place:</b> compare trains, buses and ferries across Japan and the rest of Asia in one search.</li>
+</ul>
+<div class="aff"><span class="pr">PR</span> <span class="lbl">Plan the longer trips</span><br>
+  <a href="https://www.awin1.com/cread.php?awinmid=114908&awinaffid=2928013&ued=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fjapan" target="_blank">→ Buses, trains &amp; ferries across Japan (12Go) — compare &amp; book intercity</a><br>
+  <a href="https://www.getyourguide.com/s/?q=japan&partner_id=O3QOXKH" target="_blank">→ Day tours &amp; experiences from your base (GetYourGuide)</a><br>
+  <a href="https://invl.me/clnitig" target="_blank">→ Tickets &amp; experiences (KKday) — theme parks, passes, day trips</a>
+  <small>Affiliate links — booking through them supports this guide at no extra cost to you.</small>
+</div>
+
+<!-- SECTION 7: LIVING LOCAL -->
+<div class="sec page-break"><span class="sec-icon">🍱</span><h2>7 · Living like a temporary local</h2></div>
+<p class="lead">The difference between a long holiday and a long stay is routine. Here's how to build a cheap, comfortable daily life fast.</p>
+<h3>Eat well for less</h3>
+<ul>
+  <li><b>Supermarkets</b> beat restaurants for a long stay, and most discount fresh food (お惣菜, bento) by 20–50% in the last hour before closing — look for the 半額 (half-price) stickers.</li>
+  <li><b>Convenience stores</b> (conbini) are genuinely good and cheap for breakfast, coffee, and a quick meal — and they're everywhere.</li>
+  <li><b>Set lunches (定食 / ランチ)</b> at local restaurants are a fraction of dinner prices for the same kitchen. Eat your big meal at noon.</li>
+  <li>Want to go deeper into the food culture — markets, izakaya etiquette, a cooking class? A guided food experience early in your stay teaches you where the locals actually eat.</li>
+</ul>
+<div class="aff"><span class="pr">PR</span> <span class="lbl">Learn the food scene early</span><br>
+  <a href="https://invl.us/clnithx" target="_blank">→ Food tours &amp; cooking classes (byFood) — find the local spots faster</a>
+  <small>Affiliate link. We only list experiences we'd recommend regardless.</small>
+</div>
+<h3>The rest of daily life</h3>
+<ul>
+  <li><b>Laundry:</b> coin laundries (コインランドリー) are everywhere if your accommodation lacks a machine.</li>
+  <li><b>Gyms &amp; pools:</b> municipal sports centres offer cheap day passes; commercial gyms do monthly plans.</li>
+  <li><b>Libraries &amp; parks</b> are free, quiet, and a lovely part of a slow stay.</li>
+  <li><b>Meet people:</b> language-exchange meetups and hobby circles are the fastest way to make a city feel like home.</li>
+</ul>
+<h3>Keep learning the language</h3>
+<p>A few months in Japan is the best chance you'll ever get to actually use Japanese. Even an hour a week of speaking practice turns "tourist phrases" into real conversations — and locals open up the moment you try.</p>
+<div class="aff"><span class="pr">PR</span> <span class="lbl">Practise while you're here</span><br>
+  <a href="https://www.italki.com/affshare?ref=af32477782" target="_blank">→ Book a 1-on-1 Japanese tutor (italki) — speak from week one</a><br>
+  <a href="https://www.nihongo-hub.com" target="_blank">→ Free daily Japanese quizzes &amp; 47-prefecture guides at NihongoHub</a>
+  <small>The italki link is an affiliate link. NihongoHub is our own free site.</small>
+</div>
+
+<!-- SECTION 8: SAMPLE PLAN + CHECKLIST -->
+<div class="sec page-break"><span class="sec-icon">🗓️</span><h2>8 · A sample three-month stay</h2></div>
+<p class="lead">One realistic shape for a slow, well-priced stay based in Fukuoka. Adapt freely.</p>
+<table>
+  <thead><tr><th>Month</th><th>Base &amp; rhythm</th><th>Trips from base</th></tr></thead>
+  <tbody>
+    <tr><td><b>Month 1</b></td><td>Settle in Fukuoka — monthly mansion, IC card, find your café and supermarket, start a weekly tutor session</td><td>Day trips: Dazaifu, Itoshima coast</td></tr>
+    <tr><td><b>Month 2</b></td><td>Routine humming — work mornings, explore afternoons</td><td>Weekend trips into Kyushu: Nagasaki, Yufuin/Beppu onsen, Kumamoto</td></tr>
+    <tr><td><b>Month 3</b></td><td>Go further while you still can</td><td>A longer loop: Hiroshima → Kyoto → Osaka by rail or flight, then back</td></tr>
+  </tbody>
+</table>
+<div class="cl">
+  <span class="cl-title">BEFORE YOU GO — LONG-STAY CHECKLIST</span>
+  <ul>
+    <li>Confirmed how long you may legally stay (visa-free days or a visa) with an official source</li>
+    <li>Long-stay travel/medical insurance that covers your full duration</li>
+    <li>eSIM installed (or pocket Wi-Fi reserved for pickup)</li>
+    <li>No-foreign-fee card + a back-up on a different network; bank notified of travel dates</li>
+    <li>Monthly accommodation booked for the whole stay (no guarantor / no key money)</li>
+    <li>Mobile IC card (Suica/PASMO) set up, or a plan to get one on arrival</li>
+    <li>Enough of any prescription medication, in original packaging, confirmed legal to bring</li>
+    <li>Offline maps + a translation app downloaded</li>
+    <li>JNTO English-clinic directory and emergency numbers (110 / 119) saved offline</li>
+  </ul>
+</div>
+<div class="cl">
+  <span class="cl-title">LEAVING CLEANLY — END-OF-STAY CHECKLIST</span>
+  <ul>
+    <li>Accommodation check-out date &amp; any cleaning/key-return rules confirmed</li>
+    <li>Pocket Wi-Fi returned (envelope at the airport or post) — late returns get charged</li>
+    <li>IC card balance spent down (or kept — it doesn't expire) </li>
+    <li>Tax-free shopping receipts ready for the airport, if you bought duty-free</li>
+    <li>Cancelled any monthly memberships (gym, coworking)</li>
+  </ul>
+</div>
+
+<div class="disclaimer">
+  <b>Disclaimer.</b> The Japan Long-Stay Playbook is general travel and lifestyle information for short-to-medium visits. It is not legal, immigration, tax, financial, or medical advice, and it deliberately does not cover visa applications or residency procedures. Rules, prices, fares, card availability, and exchange rates change frequently — verify current details with official sources (isa.go.jp, jnto.go.jp, your insurer, your bank, and accommodation operators) before acting. Some links are affiliate links; we may earn a commission at no extra cost to you, and this never changes what we recommend. © 2026 NihongoHub · nihongo-hub.com
+</div>
+
+</body>
+</html>

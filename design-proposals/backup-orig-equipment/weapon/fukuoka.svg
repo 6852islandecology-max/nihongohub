@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Yamakasa Festival Pole</title>
+  
+  <!-- Main pole shaft -->
+  <rect x="28" y="8" width="8" height="40" fill="#8b4513"/>
+  
+  <!-- Pole highlight -->
+  <rect x="30" y="8" width="2" height="40" fill="#d4a574"/>
+  
+  <!-- Top decorative head - fabric-like structure -->
+  <rect x="20" y="4" width="24" height="6" fill="#a056d2"/>
+  <rect x="22" y="6" width="20" height="2" fill="#d946d8"/>
+  
+  <!-- Upper tier of the yamakasa -->
+  <rect x="18" y="10" width="28" height="4" fill="#a056d2"/>
+  <rect x="20" y="10" width="24" height="2" fill="#d946d8"/>
+  
+  <!-- Middle decorative tier -->
+  <rect x="16" y="14" width="32" height="3" fill="#a056d2"/>
+  <rect x="18" y="14" width="28" height="1" fill="#d946d8"/>
+  
+  <!-- Lower decorative section -->
+  <rect x="24" y="17" width="16" height="2" fill="#c084fc"/>
+  
+  <!-- Grip wrap detail - upper -->
+  <rect x="26" y="38" width="12" height="2" fill="#654321"/>
+  
+  <!-- Grip wrap detail - lower -->
+  <rect x="26" y="42" width="12" height="2" fill="#654321"/>
+  
+  <!-- Grip highlight -->
+  <rect x="30" y="38" width="2" height="8" fill="#a0826d"/>
+  
+  <!-- Bottom ferrule -->
+  <rect x="28" y="48" width="8" height="2" fill="#6b3410"/>
+  
+  <!-- Bottom point -->
+  <rect x="30" y="50" width="4" height="2" fill="#3d1f0a"/>
+  
+  <!-- Rarity frame accent borders -->
+  <rect x="18" y="8" width="2" height="6" fill="#a056d2"/>
+  <rect x="44" y="8" width="2" height="6" fill="#a056d2"/>
+</svg>

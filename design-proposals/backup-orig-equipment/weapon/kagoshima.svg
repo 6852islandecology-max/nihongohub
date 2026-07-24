@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Sakurajima Volcanic Spear</title>
+  <g id="spear">
+    <!-- Spear tip - volcanic rock (dark red/orange) -->
+    <rect x="28" y="4" width="8" height="4" fill="#8B3A1F"/>
+    <rect x="24" y="8" width="4" height="4" fill="#A0522D"/>
+    <rect x="28" y="8" width="8" height="4" fill="#8B3A1F"/>
+    <rect x="36" y="8" width="4" height="4" fill="#A0522D"/>
+    <rect x="26" y="12" width="4" height="4" fill="#A0522D"/>
+    <rect x="30" y="12" width="4" height="4" fill="#8B3A1F"/>
+    <rect x="34" y="12" width="4" height="4" fill="#A0522D"/>
+    <rect x="28" y="16" width="8" height="4" fill="#8B3A1F"/>
+    
+    <!-- Spear shaft - dark wood -->
+    <rect x="30" y="20" width="4" height="12" fill="#3D2817"/>
+    <rect x="29" y="20" width="1" height="12" fill="#2C1F11"/>
+    <rect x="35" y="20" width="1" height="12" fill="#2C1F11"/>
+    
+    <!-- Mid-section transition -->
+    <rect x="28" y="32" width="8" height="2" fill="#5D4037"/>
+    
+    <!-- Grip section - leather brown -->
+    <rect x="29" y="34" width="6" height="4" fill="#6D4C41"/>
+    <rect x="29" y="38" width="6" height="4" fill="#5D4037"/>
+    <rect x="29" y="42" width="6" height="4" fill="#6D4C41"/>
+    
+    <!-- Grip texture accent -->
+    <rect x="29" y="46" width="6" height="2" fill="#4D3C31"/>
+    
+    <!-- Butt spike - volcanic -->
+    <rect x="30" y="48" width="4" height="2" fill="#8B3A1F"/>
+    <rect x="31" y="50" width="2" height="2" fill="#A0522D"/>
+    
+    <!-- Epic rarity frame/border accent -->
+    <rect x="24" y="6" width="1" height="12" fill="#a056d2"/>
+    <rect x="39" y="6" width="1" height="12" fill="#a056d2"/>
+    <rect x="27" y="4" width="10" height="1" fill="#a056d2"/>
+    <rect x="27" y="19" width="10" height="1" fill="#a056d2"/>
+    
+    <!-- Volcanic glow accent lines -->
+    <rect x="32" y="10" width="2" height="6" fill="#FF6B35"/>
+  </g>
+</svg>

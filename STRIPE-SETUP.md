@@ -61,14 +61,36 @@ https://vercel.com/dashboard → nihongohub プロジェクト → **Settings** 
 
 ---
 
+## STEP 4.5 — Customer Portal を有効化（解約に必須）
+
+Stripe Dashboard → **Settings** → **Billing** → **Customer portal** → **Activate**
+- 「Cancel subscriptions」「Update payment methods」を許可に設定。
+- これを有効化しないと `api/stripe-portal.js`（アカウントの「Manage / cancel subscription」）が
+  `billingPortal.sessions.create` でエラーになり、特商法「いつでも解約」の導線が動かない。
+
+---
+
 ## STEP 5 — 再デプロイ
 
 Vercel Dashboard → nihongohub → **Deployments** → 最新のデプロイ → **...** → **Redeploy**
 
-または:
+または作業ディレクトリ（`.secretary/projects/nihongohub`）から:
 ```
-git commit --allow-empty -m "trigger redeploy for stripe env" && git push
+npx vercel --prod
 ```
+（注意: 本プロジェクトは `git push` での再デプロイは使わない＝アフィリ配線が本番より遅れた
+git 状態に巻き戻るため。デプロイは常に作業ディレクトリからの `npx vercel --prod`。）
+
+> 訂正（2026-07-24 追記）: 上の記述は 2026-07-22 に撤回された。現行方式は git commit → push。
+> `npx vercel --prod` によるローカル作業ディレクトリからの直接デプロイは禁止。
+>
+> 理由: 直接デプロイした内容は git に入らないため、その後 push 型の自動デプロイが走るたびに
+> 上書きされて消えていた。2026-07-22 に、本番の index.html や共通ナビからリンクされているのに
+> リンク先が 404（kana.html / exam-prep.html）という壊れリンクが多数見つかり、原因がこれと判明した。
+> 英語原文が未コミットで翻訳版だけコミット済みのため hreflang が 404 を指す、という整合崩れも 11 記事で発生していた。
+>
+> 上の「git 状態に巻き戻る」という懸念自体は正しい。ただし正しい対処は直接デプロイではなく、
+> デプロイ前に対象ファイルを確実に commit することだった。
 
 ---
 

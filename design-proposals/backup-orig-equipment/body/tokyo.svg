@@ -1,0 +1,35 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Asakusa Hanten Coat</title>
+<g id="coat">
+<!-- Left sleeve -->
+<rect x="4" y="12" width="8" height="20" fill="#2a2a2a"/>
+<rect x="4" y="12" width="8" height="2" fill="#4d8fbf"/>
+<!-- Right sleeve -->
+<rect x="52" y="12" width="8" height="20" fill="#2a2a2a"/>
+<rect x="52" y="12" width="8" height="2" fill="#4d8fbf"/>
+<!-- Main body -->
+<rect x="12" y="8" width="40" height="28" fill="#1a1a1a"/>
+<!-- Chest accent band -->
+<rect x="12" y="8" width="40" height="3" fill="#4d8fbf"/>
+<!-- Left chest panel -->
+<rect x="12" y="11" width="19" height="20" fill="#2a2a2a"/>
+<!-- Right chest panel -->
+<rect x="33" y="11" width="19" height="20" fill="#2a2a2a"/>
+<!-- Center front closure -->
+<rect x="30" y="11" width="4" height="20" fill="#4d8fbf"/>
+<!-- Left pattern stripe 1 -->
+<rect x="14" y="15" width="1" height="12" fill="#d4af37"/>
+<!-- Left pattern stripe 2 -->
+<rect x="18" y="15" width="1" height="12" fill="#d4af37"/>
+<!-- Right pattern stripe 1 -->
+<rect x="46" y="15" width="1" height="12" fill="#d4af37"/>
+<!-- Right pattern stripe 2 -->
+<rect x="50" y="15" width="1" height="12" fill="#d4af37"/>
+<!-- Bottom hem -->
+<rect x="12" y="28" width="40" height="2" fill="#4d8fbf"/>
+<!-- Left collar -->
+<rect x="12" y="8" width="8" height="4" fill="#4d8fbf"/>
+<!-- Right collar -->
+<rect x="44" y="8" width="8" height="4" fill="#4d8fbf"/>
+</g>
+</svg>

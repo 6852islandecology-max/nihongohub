@@ -1,56 +1,61 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Yokohama Sailor Coat</title>
-  
-  <!-- Frame border -->
-  <g id="frame">
-    <rect x="0" y="0" width="64" height="64" fill="none" stroke="#9b9285" stroke-width="2"/>
-  </g>
-  
-  <!-- Sailor coat body -->
-  <g id="coat">
-    <!-- Main coat body - navy blue -->
-    <rect x="12" y="12" width="40" height="32" fill="#1a3a5c"/>
-    
-    <!-- Left shoulder -->
-    <rect x="8" y="12" width="8" height="8" fill="#1a3a5c"/>
-    
-    <!-- Right shoulder -->
-    <rect x="48" y="12" width="8" height="8" fill="#1a3a5c"/>
-    
-    <!-- Sailor collar - white -->
-    <rect x="20" y="8" width="24" height="8" fill="#ffffff"/>
-    <rect x="22" y="12" width="20" height="4" fill="#ffffff"/>
-    
-    <!-- Collar stripes - navy trim -->
-    <rect x="20" y="8" width="24" height="2" fill="#1a3a5c"/>
-    <rect x="20" y="14" width="24" height="1" fill="#1a3a5c"/>
-    
-    <!-- Center button line -->
-    <rect x="30" y="20" width="4" height="16" fill="#d4af37"/>
-    
-    <!-- Buttons -->
-    <rect x="30" y="20" width="4" height="4" fill="#c4912f"/>
-    <rect x="30" y="28" width="4" height="4" fill="#c4912f"/>
-    
-    <!-- Left side seam -->
-    <rect x="18" y="16" width="2" height="20" fill="#0f2340"/>
-    
-    <!-- Right side seam -->
-    <rect x="44" y="16" width="2" height="20" fill="#0f2340"/>
-    
-    <!-- Shoulder boards - red accent -->
-    <rect x="12" y="10" width="4" height="6" fill="#c41e3a"/>
-    <rect x="48" y="10" width="4" height="6" fill="#c41e3a"/>
-    
-    <!-- Coat hem -->
-    <rect x="12" y="40" width="40" height="4" fill="#0f2340"/>
-    
-    <!-- Sleeve cuffs left -->
-    <rect x="8" y="36" width="8" height="6" fill="#1a3a5c"/>
-    <rect x="8" y="40" width="8" height="2" fill="#ffffff"/>
-    
-    <!-- Sleeve cuffs right -->
-    <rect x="48" y="36" width="8" height="6" fill="#1a3a5c"/>
-    <rect x="48" y="40" width="8" height="2" fill="#ffffff"/>
-  </g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Yokohama Sailor Coat (common)</title>
+<rect x="8" y="8" width="48" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="4" height="4" fill="#4a6fa5"/>
+<rect x="16" y="12" width="28" height="4" fill="#f5f0e8"/>
+<rect x="44" y="12" width="4" height="4" fill="#4a6fa5"/>
+<rect x="48" y="12" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="16" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="4" height="4" fill="#6b9fd4"/>
+<rect x="16" y="16" width="32" height="4" fill="#f5f0e8"/>
+<rect x="48" y="16" width="4" height="4" fill="#6b9fd4"/>
+<rect x="52" y="16" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2e4f7a"/>
+<rect x="12" y="20" width="4" height="4" fill="#6b9fd4"/>
+<rect x="16" y="20" width="32" height="4" fill="#f5f0e8"/>
+<rect x="48" y="20" width="4" height="4" fill="#6b9fd4"/>
+<rect x="52" y="20" width="4" height="4" fill="#2e4f7a"/>
+<rect x="56" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#2e4f7a"/>
+<rect x="12" y="24" width="40" height="4" fill="#f5f0e8"/>
+<rect x="52" y="24" width="4" height="4" fill="#2e4f7a"/>
+<rect x="56" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2e4f7a"/>
+<rect x="16" y="28" width="32" height="4" fill="#f5f0e8"/>
+<rect x="48" y="28" width="4" height="4" fill="#2e4f7a"/>
+<rect x="52" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2e4f7a"/>
+<rect x="16" y="32" width="4" height="4" fill="#f5f0e8"/>
+<rect x="20" y="32" width="12" height="4" fill="#8b2020"/>
+<rect x="32" y="32" width="16" height="4" fill="#f5f0e8"/>
+<rect x="48" y="32" width="4" height="4" fill="#2e4f7a"/>
+<rect x="52" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="4" height="4" fill="#2e4f7a"/>
+<rect x="16" y="36" width="8" height="4" fill="#f5f0e8"/>
+<rect x="24" y="36" width="4" height="4" fill="#8b2020"/>
+<rect x="28" y="36" width="16" height="4" fill="#f5f0e8"/>
+<rect x="44" y="36" width="4" height="4" fill="#2e4f7a"/>
+<rect x="48" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="4" height="4" fill="#2e4f7a"/>
+<rect x="20" y="40" width="24" height="4" fill="#f5f0e8"/>
+<rect x="44" y="40" width="4" height="4" fill="#2e4f7a"/>
+<rect x="48" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="8" height="4" fill="#2e4f7a"/>
+<rect x="24" y="44" width="16" height="4" fill="#f5f0e8"/>
+<rect x="40" y="44" width="4" height="4" fill="#2e4f7a"/>
+<rect x="44" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="48" width="8" height="4" fill="#2e4f7a"/>
+<rect x="28" y="48" width="8" height="4" fill="#f5f0e8"/>
+<rect x="36" y="48" width="4" height="4" fill="#2e4f7a"/>
+<rect x="40" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="52" width="28" height="4" fill="#2a1a0c"/>
 </svg>

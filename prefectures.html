@@ -87,6 +87,7 @@ body.nh-vip #invite-btn::after{content:"✓ GOLD";font-family:var(--pixel);font-
   display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap;
 }
 .hud-logo{font-family:var(--dot);font-size:21px;color:var(--white);letter-spacing:1px;text-decoration:none}
+.hud .navlinks{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .hud-logo span{color:var(--red)}
 .hud-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .hud-counter{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:.5px;line-height:1.6}
@@ -107,6 +108,16 @@ body.nh-vip #invite-btn::after{content:"✓ GOLD";font-family:var(--pixel);font-
 /* ── LAYOUT ── */
 .explore{max-width:1240px;margin:0 auto;padding:10px 28px 80px;
   display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:start}
+/* left column = map + Traveler's Quest stacked underneath (fills the old blank) */
+.explore-left{min-width:0;display:flex;flex-direction:column}
+/* In this stacked column the map must NOT use the old sticky offset: sticky falls back to
+   relative here, so top:88px would shove the map ~88px down and misalign it with the panel
+   (it looked like the map "overlapped" the nav). Pin it to the top of the column instead. */
+.explore-left > .map-card{position:static;top:auto}
+/* higher specificity than the base .quest{margin:0 auto 64px} so the top gap actually
+   applies — otherwise the map card's drop shadow overlaps the quest below it */
+.explore-left .quest-left{max-width:none;margin:24px 0 0}
+.quest-left .quest-grid{grid-template-columns:1fr;gap:14px}
 
 /* ── MAP WINDOW ── */
 .map-card{position:sticky;top:88px;padding:16px}
@@ -128,12 +139,34 @@ body.nh-vip #invite-btn::after{content:"✓ GOLD";font-family:var(--pixel);font-
 @keyframes glow{0%,100%{filter:saturate(1)}50%{filter:saturate(1.35) brightness(1.08)}}
 @media(prefers-reduced-motion:reduce){#japan-map .prefecture.has-content{animation:none}}
 
+/* ── MAP ZOOM (pinch / drag / buttons) ── */
+.map-frame{position:relative}
+#japan-map{touch-action:pan-y}
+#japan-map.zoomed{cursor:grab}
+#japan-map.zoomed:active{cursor:grabbing}
+.map-zoom{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:6px;z-index:6}
+.map-zoom button{width:42px;height:42px;font-family:var(--pixel);font-size:13px;background:var(--white);color:var(--ink);border:2px solid var(--ink);border-radius:6px;cursor:pointer;box-shadow:2px 2px 0 rgba(0,0,0,.25);line-height:1;padding:0}
+.map-zoom button:active{transform:translate(1px,1px);box-shadow:none}
+.map-hint{display:none;font-family:var(--dot);font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
+
+/* ── REGION LIST (mobile fallback under the map) ── */
+.region-list{display:none;padding:14px 14px 16px;margin-top:18px}
+.rl-head{font-family:var(--pixel);font-size:10px;letter-spacing:1px;color:var(--ink);margin-bottom:10px}
+.rl-region{border:2px solid var(--soft);border-radius:8px;background:var(--white);margin-bottom:8px;overflow:hidden}
+.rl-region summary{display:flex;align-items:center;gap:9px;list-style:none;cursor:pointer;padding:13px;font-family:var(--pixel);font-size:9px;letter-spacing:.6px;color:var(--ink)}
+.rl-region summary::-webkit-details-marker{display:none}
+.rl-region summary .rl-n{margin-left:auto;color:var(--muted);font-family:var(--dot);font-size:13px}
+.rl-chips{display:flex;flex-wrap:wrap;gap:8px;padding:2px 12px 13px}
+.rl-chip{font-family:var(--dot);font-size:15px;padding:9px 14px;min-height:44px;background:#fff;border:2px solid var(--soft);border-radius:22px;cursor:pointer;color:var(--ink)}
+.rl-chip.rl-locked{opacity:.45}
+.rl-chip:active{border-color:var(--gold-d)}
+
 /* ── LEGEND ── */
 .legend{margin-top:14px;border-top:3px double var(--soft);padding-top:12px}
 .legend-state{display:flex;gap:18px;margin-bottom:10px;font-family:var(--dot);font-size:14px;color:var(--ink)}
 .lg{display:inline-flex;align-items:center;gap:7px}
 .lg-swatch{width:14px;height:14px;border:2px solid var(--ink);background:var(--gold);display:inline-block}
-.lg-swatch.locked{opacity:.38;background:var(--muted)}
+.lg-swatch.locked{opacity:.38;background:var(--muted);padding:0}/* .locked (panel) would otherwise inflate this 14px swatch */
 .legend-row{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-family:var(--dot);font-size:13px;color:var(--muted)}
 .lg-chip{width:12px;height:12px;display:inline-block;border:1px solid rgba(0,0,0,.25)}
 
@@ -275,6 +308,19 @@ footer a{color:var(--gold);text-decoration:none}
   .map-card{position:static}
   .panel,.panel-empty{min-height:auto}
   .hud{padding:10px 14px}
+  /* phone: show the tap-friendly region list + pinch hint, bump text legibility */
+  .region-list{display:block}
+  .map-hint{display:block}
+  .intro{padding:34px 18px 14px}
+  .intro p{font-size:17px}
+  .pref-kanji{font-size:34px}
+  .pref-blurb{font-size:16px}
+}
+@media(max-width:560px){
+  /* phone: chrome.css keeps .hud-right on one non-wrapping, horizontally-scrollable row.
+     Hide the verbose AREAS-UNLOCKED text label (icon + number stay) so all three counters
+     — including the new 🎁 gear counter — fit on screen without scrolling the strip. */
+  .hud-counter .hud-lbl{display:none}
 }
 .langbar{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;background:rgba(13,10,20,.92);border-bottom:1px solid var(--line,#23375a);padding:6px 10px}
 .langbar button{font-family:var(--dot);font-size:13px;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.6);padding:3px 8px;border-radius:5px}
@@ -290,6 +336,8 @@ footer a{color:var(--gold);text-decoration:none}
 <script src="lib/equipment.js" defer></script>
 <script src="lib/constellation.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
+<!-- Travelpayouts Drive (marker 537499) — auto-monetises Booking.com links on the map cards -->
+<script async src="https://tp-em.com/NTM3NDk5.js?t=537499"></script>
 </head>
 <body data-lang="en">
 
@@ -297,13 +345,16 @@ footer a{color:var(--gold);text-decoration:none}
 <header class="hud">
   <a href="index.html" class="hud-logo">Nihongo<span>Hub</span></a>
   <div class="hud-right">
-    <span class="hud-counter"><span data-i18n="px_unlocked">AREAS UNLOCKED</span> <b id="hud-count">0/47</b></span>
+    <span class="hud-counter">🗾 <span class="hud-lbl" data-i18n="px_unlocked">AREAS UNLOCKED</span> <b id="hud-count">0/47</b></span>
     <span class="hud-counter" title="Prefectures you've conquered (cleared the quiz)">🏅 <b id="conq-count">0/47</b></span>
-    <a href="quiz.html" class="hud-back">⚔ Battle</a>
-    <a href="rpg.html" class="hud-back">⚔ Journey</a>
-    <a href="dashboard.html" class="hud-back">📊 Dashboard</a>
-    <a href="index.html" class="hud-back" data-i18n="px_town">← Town</a>
-    <a href="index.html#practice" class="btn-q" data-i18n="px_free">START FREE</a>
+    <span class="hud-counter" title="JLPT gear collected from quiz battles — 188 pieces to find across all prefectures">🎁 <b id="gear-count">0/188</b></span>
+    <div class="navlinks">
+      <!-- declutter (2026-06-26): site-chrome.js replaces these with the grouped nav at
+           runtime; keep only Battle as a JS-failure fallback so the static header isn't a
+           6-link fork on cold load. Where Next / Journey / Dashboard / Town / Start Free all
+           live in the injected dropdown nav. -->
+      <a href="quiz.html" class="hud-back">⚔ Battle</a>
+    </div>
   </div>
 </header>
 
@@ -313,7 +364,8 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="intro">
   <div class="intro-tag" data-i18n="px_tag">▶ EXPLORE JAPAN</div>
   <h1 data-i18n="px_h1">47 prefectures.<br><em>One quest.</em></h1>
-  <p data-i18n="px_intro">Choose your destination, traveler. Unlock guides, area stats, and quiz battles — one prefecture at a time.</p>
+  <p data-i18n="px_intro">Tap any prefecture to see what makes it special — then clear it by learning the Japanese you'll actually use when you travel, study, or work there.</p>
+  <a href="quiz.html" class="battle-cta" data-i18n="px_cta_gear">⚔ Battle to earn gear →</a>
 </section>
 
 <!-- INVITE WELCOME (shown only when arriving via ?ref=) -->
@@ -321,9 +373,11 @@ footer a{color:var(--gold);text-decoration:none}
 
 <!-- EXPLORE GRID -->
 <section class="explore">
+  <div class="explore-left">
   <!-- MAP -->
   <div class="map-card pxwin">
     <div class="map-title" data-i18n="px_map">🗾 WORLD MAP</div>
+    <div class="map-frame">
     <svg id="japan-map" class="geolonia-svg-map" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
   <title>Japanese Prefectures</title>
   <desc>Created by Geolonia (https://geolonia.com/).</desc>
@@ -546,6 +600,13 @@ footer a{color:var(--gold);text-decoration:none}
     </g>
   </g>
 </svg>
+    <div class="map-zoom">
+      <button id="mz-in" type="button" aria-label="Zoom in">＋</button>
+      <button id="mz-out" type="button" aria-label="Zoom out">－</button>
+      <button id="mz-reset" type="button" aria-label="Reset zoom">⟲</button>
+    </div>
+    </div><!-- /map-frame -->
+    <div class="map-hint" data-i18n="px_pinch">Pinch to zoom · drag to move · or browse the list below</div>
     <div class="legend">
       <div class="legend-state">
         <span class="lg"><span class="lg-swatch"></span> Unlocked</span>
@@ -554,6 +615,46 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="legend-row" id="region-legend"></div>
     </div>
   </div>
+
+    <!-- REGION LIST (mobile) — tap-friendly alternative to the small map -->
+    <div class="region-list pxwin" id="region-list">
+      <div class="rl-head" data-i18n="px_bylist">📜 BROWSE BY REGION</div>
+    </div>
+
+    <!-- TRAVELER'S QUEST — moved under the map to fill the left column's blank space.
+         declutter (2026-06-26): hidden until the visitor clears their first prefecture
+         (nh_titles >= 1). A cold visitor sees only the map + hero CTA; the quest HQ
+         (teleport / titles / invite) unlocks as a post-first-battle reward. renderTitles()
+         toggles display. -->
+    <div class="quest pxwin quest-left" id="quest-block" style="display:none">
+      <div class="quest-head" data-i18n="px_quest">🎮 TRAVELER'S QUEST</div>
+      <div class="quest-grid">
+        <div class="quest-card">
+          <div class="qc-title" data-i18n="px_lula">🎲 LULA · TELEPORT</div>
+          <p data-i18n="px_lula_p">Can't decide where to go? Cast <b>Teleport</b> and let fate pick your next Japanese destination.</p>
+          <button class="qbtn" id="teleport-btn" data-i18n="px_teleport_btn">🎲 CAST TELEPORT</button>
+          <div id="teleport-result"></div>
+        </div>
+        <div class="quest-card">
+          <div class="qc-title"><span data-i18n="px_titles">🏅 MY TITLES (称号)</span> · <span id="title-count">0/47</span></div>
+          <p data-i18n="px_titles_p">Clear a prefecture's quiz battle to claim its <b>title</b> — collect all 47.</p>
+          <div class="title-grid" id="title-grid"></div>
+        </div>
+        <div class="quest-card">
+          <div class="qc-title" data-i18n="px_invite_h">🎁 SHARE YOUR QUEST</div>
+          <p data-i18n="px_invite_p">Share your explorer card and unlock a <b>gold party frame</b> for your map.</p>
+          <button class="qbtn" id="share-journey" data-i18n="px_share_btn">📲 SHARE MY JOURNEY</button>
+          <button class="qbtn" id="invite-btn" data-i18n="px_invite_btn">🎁 SHARE &amp; UNLOCK FRAME</button>
+          <div class="viral-counter" id="viral-counter"></div>
+        </div>
+        <div class="quest-card">
+          <div class="qc-title">🎙 SHADOWING MATCH</div>
+          <p>Find a Japanese YouTuber whose <b>voice and pace</b> fit yours — then shadow them. 5 quick questions.</p>
+          <a class="qbtn" href="shadow-match.html" style="display:inline-block;text-decoration:none">🎙 FIND MY PARTNER →</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- /explore-left -->
 
   <!-- DETAIL PANEL -->
   <aside class="panel" id="panel">
@@ -565,30 +666,30 @@ footer a{color:var(--gold);text-decoration:none}
   </aside>
 </section>
 
-<!-- TRAVELER'S QUEST (gamification) -->
-<section class="quest pxwin">
-  <div class="quest-head" data-i18n="px_quest">🎮 TRAVELER'S QUEST</div>
-  <div class="quest-grid">
-    <div class="quest-card">
-      <div class="qc-title" data-i18n="px_lula">🎲 LULA · TELEPORT</div>
-      <p data-i18n="px_lula_p">Can't decide where to go? Cast <b>Teleport</b> and let fate pick your next Japanese destination.</p>
-      <button class="qbtn" id="teleport-btn" data-i18n="px_teleport_btn">🎲 CAST TELEPORT</button>
-      <div id="teleport-result"></div>
-    </div>
-    <div class="quest-card">
-      <div class="qc-title"><span data-i18n="px_titles">🏅 MY TITLES (称号)</span> · <span id="title-count">0/47</span></div>
-      <p data-i18n="px_titles_p">Been somewhere? Open a prefecture, then <b>share your photo</b> to claim that area's title and grow your collection.</p>
-      <div class="title-grid" id="title-grid"></div>
-    </div>
-    <div class="quest-card">
-      <div class="qc-title" data-i18n="px_invite_h">🎁 SHARE &amp; INVITE</div>
-      <p data-i18n="px_invite_p">Share your explorer card, or invite a friend to unlock a <b>gold party frame</b> — they get the bonus too.</p>
-      <button class="qbtn" id="share-journey" data-i18n="px_share_btn">📲 SHARE MY JOURNEY</button>
-      <button class="qbtn" id="invite-btn" data-i18n="px_invite_btn">🎁 INVITE &amp; UNLOCK</button>
-      <div class="viral-counter" id="viral-counter"></div>
-    </div>
-  </div>
-</section>
+<style>
+.pfx-index{max-width:1100px;margin:34px auto 8px;padding:0 16px}
+.pfx-index>h2{font-family:'Press Start 2P',monospace;font-size:13px;color:var(--gold-d);margin:0 0 6px}
+.pfx-lede{margin:0 0 16px;color:var(--muted);font-size:14px}
+.pfx-reg{margin:0 0 14px}
+.pfx-reg h3{font-size:11px;letter-spacing:.08em;color:var(--muted);margin:0 0 6px;font-weight:600}
+.pfx-links{display:flex;flex-wrap:wrap;gap:6px}
+.pfx-links a{display:inline-flex;align-items:baseline;gap:5px;padding:5px 9px;border:1px solid rgba(122,106,82,.35);border-radius:6px;text-decoration:none;color:var(--ink);font-size:13px;line-height:1.3;background:rgba(239,230,211,.5)}
+.pfx-links a span{font-size:11px;color:var(--muted)}
+.pfx-links a:hover{border-color:var(--gold-d);background:var(--paper)}
+@media(max-width:640px){.pfx-links a{font-size:12px;padding:4px 7px}}
+</style>
+<nav class="pfx-index" aria-label="All 47 prefecture guides">
+  <h2>All 47 prefecture guides</h2>
+  <p class="pfx-lede">Every prefecture has a written guide — tap the map above, or jump straight in.</p>
+    <div class="pfx-reg"><h3>HOKKAIDŌ</h3><div class="pfx-links"><a href="blog/hokkaido.html">北海道 <span>Hokkaido</span></a></div></div>
+    <div class="pfx-reg"><h3>TŌHOKU</h3><div class="pfx-links"><a href="blog/aomori.html">青森 <span>Aomori</span></a><a href="blog/iwate.html">岩手 <span>Iwate</span></a><a href="blog/miyagi.html">宮城 <span>Miyagi</span></a><a href="blog/akita.html">秋田 <span>Akita</span></a><a href="blog/yamagata.html">山形 <span>Yamagata</span></a><a href="blog/fukushima.html">福島 <span>Fukushima</span></a></div></div>
+    <div class="pfx-reg"><h3>KANTŌ</h3><div class="pfx-links"><a href="blog/ibaraki.html">茨城 <span>Ibaraki</span></a><a href="blog/tochigi.html">栃木 <span>Tochigi</span></a><a href="blog/gunma.html">群馬 <span>Gunma</span></a><a href="blog/saitama.html">埼玉 <span>Saitama</span></a><a href="blog/chiba.html">千葉 <span>Chiba</span></a><a href="blog/tokyo.html">東京 <span>Tokyo</span></a><a href="blog/kanagawa.html">神奈川 <span>Kanagawa</span></a></div></div>
+    <div class="pfx-reg"><h3>CHŪBU</h3><div class="pfx-links"><a href="blog/niigata.html">新潟 <span>Niigata</span></a><a href="blog/toyama.html">富山 <span>Toyama</span></a><a href="blog/ishikawa.html">石川 <span>Ishikawa</span></a><a href="blog/fukui.html">福井 <span>Fukui</span></a><a href="blog/yamanashi.html">山梨 <span>Yamanashi</span></a><a href="blog/nagano.html">長野 <span>Nagano</span></a><a href="blog/gifu.html">岐阜 <span>Gifu</span></a><a href="blog/shizuoka.html">静岡 <span>Shizuoka</span></a><a href="blog/aichi.html">愛知 <span>Aichi</span></a></div></div>
+    <div class="pfx-reg"><h3>KANSAI</h3><div class="pfx-links"><a href="blog/mie.html">三重 <span>Mie</span></a><a href="blog/shiga.html">滋賀 <span>Shiga</span></a><a href="blog/kyoto.html">京都 <span>Kyoto</span></a><a href="blog/osaka.html">大阪 <span>Osaka</span></a><a href="blog/hyogo.html">兵庫 <span>Hyogo</span></a><a href="blog/nara.html">奈良 <span>Nara</span></a><a href="blog/wakayama.html">和歌山 <span>Wakayama</span></a></div></div>
+    <div class="pfx-reg"><h3>CHŪGOKU</h3><div class="pfx-links"><a href="blog/tottori.html">鳥取 <span>Tottori</span></a><a href="blog/shimane.html">島根 <span>Shimane</span></a><a href="blog/okayama.html">岡山 <span>Okayama</span></a><a href="blog/hiroshima.html">広島 <span>Hiroshima</span></a><a href="blog/yamaguchi.html">山口 <span>Yamaguchi</span></a></div></div>
+    <div class="pfx-reg"><h3>SHIKOKU</h3><div class="pfx-links"><a href="blog/tokushima.html">徳島 <span>Tokushima</span></a><a href="blog/kagawa.html">香川 <span>Kagawa</span></a><a href="blog/ehime.html">愛媛 <span>Ehime</span></a><a href="blog/kochi.html">高知 <span>Kochi</span></a></div></div>
+    <div class="pfx-reg"><h3>KYŪSHŪ / OKINAWA</h3><div class="pfx-links"><a href="blog/fukuoka.html">福岡 <span>Fukuoka</span></a><a href="blog/saga.html">佐賀 <span>Saga</span></a><a href="blog/nagasaki.html">長崎 <span>Nagasaki</span></a><a href="blog/kumamoto.html">熊本 <span>Kumamoto</span></a><a href="blog/oita.html">大分 <span>Oita</span></a><a href="blog/miyazaki.html">宮崎 <span>Miyazaki</span></a><a href="blog/kagoshima.html">鹿児島 <span>Kagoshima</span></a><a href="blog/okinawa.html">沖縄 <span>Okinawa</span></a></div></div>
+</nav>
 
 <footer>
   <p>© 2026 NihongoHub · <a href="rpg.html">⚔ My Journey</a> · <a href="index.html">Home</a> · <a href="blog/index.html">Prefecture guides</a> · Map data © <a href="https://github.com/geolonia/japanese-prefectures" target="_blank" rel="noopener">Geolonia</a> (MIT)</p>
@@ -792,12 +893,112 @@ function applyFog(){
 }
 applyFog();
 
+/* gear collection counter (filled by quiz battle drops). equipment.js + metadata load
+   deferred, so read the API on DOMContentLoaded when both are guaranteed ready. */
+window.addEventListener("DOMContentLoaded",function(){
+  try{
+    if(window.NH_EQUIPMENT_API && NH_EQUIPMENT_API.progressCounts){
+      const p=NH_EQUIPMENT_API.progressCounts();
+      const g=document.getElementById("gear-count");
+      if(g && p && p.totalPossible) g.textContent=p.obtained+"/"+p.totalPossible;
+    }
+  }catch(e){}
+});
+
 const legend=document.getElementById("region-legend");
 if(legend){Object.keys(REGIONS).forEach(k=>{
   const c=document.createElement("span");c.className="lg";
   c.innerHTML=`<span class="lg-chip" style="background:${regionColor(k)}"></span>${REGIONS[k].label}`;
   legend.appendChild(c);
 });}
+
+/* ── MAP ZOOM & PAN (pinch / drag / buttons) — manipulates the SVG viewBox ── */
+(function(){
+  if(!map)return;
+  const BASE={x:0,y:0,w:1000,h:1000},MIN_W=220;
+  let vb={...BASE},suppress=false;
+  function apply(){
+    vb.w=Math.max(MIN_W,Math.min(BASE.w,vb.w));vb.h=vb.w;
+    vb.x=Math.max(0,Math.min(BASE.w-vb.w,vb.x));
+    vb.y=Math.max(0,Math.min(BASE.h-vb.h,vb.y));
+    map.setAttribute("viewBox",vb.x+" "+vb.y+" "+vb.w+" "+vb.h);
+    const z=vb.w<BASE.w-1;
+    /* zoomed: one finger pans the map; not zoomed: let the page scroll normally */
+    map.style.touchAction=z?"none":"pan-y";
+    map.classList.toggle("zoomed",z);
+  }
+  function zoomAt(f,cx,cy){
+    const r=map.getBoundingClientRect();
+    const px=vb.x+(cx-r.left)/r.width*vb.w,py=vb.y+(cy-r.top)/r.height*vb.h;
+    const w=Math.max(MIN_W,Math.min(BASE.w,vb.w/f)),k=w/vb.w;
+    vb.x=px-(px-vb.x)*k;vb.y=py-(py-vb.y)*k;vb.w=w;
+    apply();
+  }
+  function center(){const r=map.getBoundingClientRect();return[r.left+r.width/2,r.top+r.height/2];}
+  document.getElementById("mz-in")?.addEventListener("click",()=>zoomAt(1.6,...center()));
+  document.getElementById("mz-out")?.addEventListener("click",()=>zoomAt(1/1.6,...center()));
+  document.getElementById("mz-reset")?.addEventListener("click",()=>{vb={...BASE};apply();});
+  map.addEventListener("wheel",e=>{if(!e.ctrlKey)return;e.preventDefault();zoomAt(e.deltaY<0?1.25:.8,e.clientX,e.clientY);},{passive:false});
+
+  const pts=new Map();let pan=null,lastDist=0,moved=0;
+  map.addEventListener("pointerdown",e=>{
+    pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(pts.size===1){pan={x:e.clientX,y:e.clientY,vx:vb.x,vy:vb.y};moved=0;suppress=false;}
+    else if(pts.size===2){const[a,b]=[...pts.values()];lastDist=Math.hypot(a.x-b.x,a.y-b.y);pan=null;}
+  });
+  map.addEventListener("pointermove",e=>{
+    if(!pts.has(e.pointerId))return;
+    pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(pts.size===2&&lastDist){
+      const[a,b]=[...pts.values()];
+      const d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d>0){zoomAt(d/lastDist,(a.x+b.x)/2,(a.y+b.y)/2);lastDist=d;moved=99;}
+    }else if(pts.size===1&&pan&&vb.w<BASE.w-1){
+      const r=map.getBoundingClientRect();
+      const dx=e.clientX-pan.x,dy=e.clientY-pan.y;
+      moved=Math.max(moved,Math.abs(dx),Math.abs(dy));
+      vb.x=pan.vx-dx*vb.w/r.width;vb.y=pan.vy-dy*vb.h/r.height;
+      apply();
+    }
+  });
+  function up(e){
+    pts.delete(e.pointerId);
+    if(pts.size<2)lastDist=0;
+    if(pts.size===0){if(moved>8)suppress=true;pan=null;}
+    else if(pts.size===1){const[p]=[...pts.values()];pan={x:p.x,y:p.y,vx:vb.x,vy:vb.y};}
+  }
+  map.addEventListener("pointerup",up);
+  map.addEventListener("pointercancel",up);
+  map.addEventListener("pointerleave",e=>{if(e.pointerType==="mouse")up(e);});
+  /* a real drag/pinch must not count as a prefecture tap */
+  map.addEventListener("click",e=>{if(suppress){e.stopPropagation();e.preventDefault();suppress=false;}},true);
+})();
+
+/* ── REGION LIST (mobile alternative to the small map) ── */
+(function(){
+  const host=document.getElementById("region-list");
+  if(!host||!prefs.length)return;
+  const byRegion={};
+  prefs.forEach(el=>{const k=regionOf(el);if(k)(byRegion[k]=byRegion[k]||[]).push(el);});
+  Object.keys(REGIONS).forEach(k=>{
+    const els=(byRegion[k]||[]).sort((a,b)=>(+a.getAttribute("data-code"))-(+b.getAttribute("data-code")));
+    if(!els.length)return;
+    const det=document.createElement("details");det.className="rl-region";
+    const sum=document.createElement("summary");
+    sum.innerHTML='<span class="lg-chip" style="background:'+regionColor(k)+'"></span>'+REGIONS[k].label+'<span class="rl-n">'+els.length+'</span>';
+    det.appendChild(sum);
+    const box=document.createElement("div");box.className="rl-chips";
+    els.forEach(el=>{
+      const t=titleParts(el);
+      const b=document.createElement("button");b.type="button";
+      b.className="rl-chip"+(PREF_DATA[el.classList[0]]?"":" rl-locked");
+      b.textContent=t.kanji+" "+t.romaji;
+      b.addEventListener("click",()=>selectPref(el));
+      box.appendChild(b);
+    });
+    det.appendChild(box);host.appendChild(det);
+  });
+})();
 
 function titleParts(el){const t=(el.querySelector("title")?.textContent||"").split("/");return{kanji:(t[0]||"").trim(),romaji:(t[1]||el.classList[0]||"").trim()};}
 
@@ -813,7 +1014,13 @@ function selectPref(el){
   panel.innerHTML=data?renderReady(kanji,romaji,region,data,code,key):renderLocked(kanji,romaji,region);
   // Constellation MVP: record token sightings from the panel + decorate already-lit tokens.
   if(window.NH_CONSTELLATION){ const plain=panel.textContent||''; window.NH_CONSTELLATION.TOKENS.forEach(t=>{ if(plain.includes(t)) window.NH_CONSTELLATION.see(t,'pref'); }); window.NH_CONSTELLATION.decorate(panel); }
-  if(window.innerWidth<=880)panel.scrollIntoView({behavior:"smooth",block:"start"});
+  if(window.innerWidth<=880){
+    // offset by the sticky HUD height (it wraps to 2-3 rows on phones) so the
+    // panel heading isn't hidden behind "AREAS UNLOCKED"
+    const hud=document.querySelector(".hud");
+    const top=panel.getBoundingClientRect().top+window.scrollY-((hud&&hud.offsetHeight)||0)-8;
+    window.scrollTo({top:top,behavior:"smooth"});
+  }
   // Pilot: walk hero sprite to the selected prefecture
   if (PILOT_WALK.has(key)) walkHeroTo(el);
 }
@@ -850,7 +1057,8 @@ function refreshHeroLayers(){
   if (eq.body)   layers.push(`<img src="${A.itemAssetPath('body',   eq.body  )}" alt="" style="z-index:2">`);
   if (eq.head)   layers.push(`<img src="${A.itemAssetPath('head',   eq.head  )}" alt="" style="z-index:3">`);
   if (eq.feet)   layers.push(`<img src="${A.itemAssetPath('feet',   eq.feet  )}" alt="" style="z-index:4">`);
-  if (eq.weapon) layers.push(`<img src="${A.itemAssetPath('weapon', eq.weapon)}" alt="" style="z-index:5">`);
+  // Weapon intentionally NOT drawn on the small map sprite — it overlapped the face.
+  // (The weapon still shows on the rpg.html character / guild card.)
   inner.innerHTML = layers.join('');
 }
 function walkHeroTo(prefEl){
@@ -917,12 +1125,22 @@ function signatureStrip(d,region){
   const[emoji,label]=SIG_DEFS[best],col=regionColor(region);
   return `<div class="sig-strip" style="border-color:${col};box-shadow:inset 5px 0 0 ${col}"><span class="sig-emoji">${emoji}</span><span class="sig-label">${label}</span><span class="sig-score">${best.toUpperCase()} ${bv}/5</span></div>`;
 }
+// Affiliate URL wiring for the map cards (mirrors blog/blog-quiz.js).
+// klook → approved KKday (Involve Asia) landing; GetYourGuide → partner_id;
+// Booking has no tracking ID yet, so it keeps its honest non-affiliate fallback.
+function affUrl(u){
+  if(!u) return u;
+  if(u.indexOf('klook.com')>=0) return 'https://invl.me/clnitig';
+  if(u.indexOf('getyourguide.com')>=0 && u.indexOf('partner_id=')<0)
+    return u + (u.indexOf('?')>=0?'&':'?') + 'partner_id=O3QOXKH&utm_medium=online_publisher';
+  return u;
+}
 function renderReady(kanji,romaji,region,d,code,key){
   const blurbHtml=d.blurb?`<p class="pref-blurb">${d.blurb}</p>`:"";
   const blogHtml=key?`<div class="block"><a class="blog-cta" href="blog/${key}.html"><span class="tl-emoji">📖</span><span><b>Read the full ${romaji} guide</b> — food, sights, seasons &amp; phrases</span><span class="tl-arrow">OPEN →</span></a></div>`:"";
   const travelHtml=(d.travel&&d.travel.length)?`<div class="block"><div class="block-title">📜 WAYPOINTS</div><div class="travel-list">${d.travel.map(t=>`<a class="travel-link" href="${t.url}" target="_blank" rel="noopener"><span class="tl-emoji">${t.emoji}</span><span>${t.title}</span><span class="tl-arrow">GO →</span></a>`).join("")}</div></div>`:"";
   const areasHtml=(d.areas&&d.areas.length)?`<div class="block"><div class="block-title">🗺️ SUB-AREAS</div><div class="area-chips">${d.areas.map((a,i)=>`<button class="area-chip" data-area="${i}">${a.type==="island"?"🏝️":"🏙️"} ${a.romaji}</button>`).join("")}</div><div class="area-detail" id="area-detail"></div><p class="area-note">Cities &amp; islands within ${romaji} — tap a chip for details.</p></div>`:"";
-  const affHtml=(d.affiliates&&d.affiliates.length)?`<div class="block"><div class="block-title">🏨 INNS &amp; TOURS</div><div class="aff-grid">${d.affiliates.map(a=>`<a class="aff-card" href="${a.url}" target="_blank" rel="sponsored noopener"><span class="aff-pr">PR</span><div class="aff-name">${a.name}</div><div class="aff-sub">${a.sub}</div></a>`).join("")}</div><p class="aff-disclose">Some links are affiliate links (PR). We may earn a commission at no extra cost to you.</p></div>`:"";
+  const affHtml=(d.affiliates&&d.affiliates.length)?`<div class="block"><div class="block-title">🏨 INNS &amp; TOURS</div><div class="aff-grid">${d.affiliates.map(a=>`<a class="aff-card" href="${affUrl(a.url)}" target="_blank" rel="sponsored noopener"><span class="aff-pr">PR</span><div class="aff-name">${a.name}</div><div class="aff-sub">${a.sub}</div></a>`).join("")}</div><p class="aff-disclose">Some links are affiliate links (PR). We may earn a commission at no extra cost to you.</p></div>`:"";
   const quizHtml=d.quiz?`<div class="block"><div class="battle" data-answer="${d.quiz.answer}" data-romaji="${romaji}"><div class="battle-tag"><span class="blink">⚔️</span> BATTLE · ${romaji}</div><div class="battle-q">${d.quiz.q}</div><div class="battle-opts">${d.quiz.opts.map((o,i)=>`<button class="battle-opt" data-i="${i}">${o}</button>`).join("")}</div><div class="battle-result"></div><div class="battle-explain">${d.quiz.explain}</div><a class="battle-cta" href="quiz.html">GET A DAILY QUIZ — FREE →</a></div></div>`:`<div class="block" style="text-align:center"><a class="battle-cta" href="quiz.html">GET A FREE DAILY JAPANESE QUIZ →</a></div>`;
   return `
   <div class="card-head"><span class="blink">▶</span> NOW ENTERING</div>
@@ -995,10 +1213,22 @@ panel.addEventListener("click",e=>{
       res.textContent="✨ CRITICAL HIT!  +10 XP";res.className="battle-result win show";
       battle.querySelector(".battle-explain").classList.add("show");
       const rj=battle.dataset.romaji, slug=String(rj||"").toLowerCase();
-      if(slug&&!getTitles().includes(slug)){awardEquipment(rj,'weapon');claimTitle(rj);toast(`🏅 <b>${rj} title earned!</b> Quest cleared.`);}
+      if(slug&&!getTitles().includes(slug)){
+        claimTitle(rj);
+        // Clearing always grants the TITLE. The prefecture's weapon only drops here if it is
+        // common/rare; SR/SSR prefecture gear must come from the rarity-weighted JLPT gacha,
+        // so one correct answer can no longer hand out a legendary weapon.
+        const wmeta=window.NH_EQUIPMENT&&window.NH_EQUIPMENT[slug]&&window.NH_EQUIPMENT[slug].weapon;
+        if(wmeta&&(wmeta.rarity==='common'||wmeta.rarity==='rare')) awardEquipment(rj,'weapon');
+        toast(`🏅 <b>${rj} title earned!</b> Quest cleared.`);
+      }
     }else{
-      opt.classList.add("wrong");opt.disabled=true;
-      res.textContent="💥 MISSED! Pick another — clear it to earn the title.";res.className="battle-result lose show";
+      // One shot per attempt: lock every option (no brute-forcing all 4), reveal the
+      // correct answer + explanation, and let the learner retry by reselecting the pref.
+      battle.querySelectorAll(".battle-opt").forEach((b,i)=>{b.disabled=true;if(i===answer)b.classList.add("correct");});
+      opt.classList.add("wrong");
+      res.textContent="💥 MISSED! Reselect this prefecture to try again.";res.className="battle-result lose show";
+      battle.querySelector(".battle-explain").classList.add("show");
     }
   }
 });
@@ -1054,6 +1284,11 @@ function renderTitles(){
   if(!grid)return;
   const t=getTitles();
   if(cnt)cnt.textContent=`${t.length}/47`;
+  // declutter (2026-06-26): reveal the Traveler's Quest block only after the first clear,
+  // so a cold visitor's initial view is just the map + hero CTA. Runs on load (returning
+  // users with titles see it immediately) and live on claimTitle()→renderTitles().
+  const qb=document.getElementById("quest-block");
+  if(qb)qb.style.display=t.length?"":"none";
   grid.innerHTML=t.length?t.map(x=>`<span class="title-badge">🏅 ${slugRomaji(x)}</span>`).join(""):`<span class="title-empty">No titles yet — your collection starts with your first trip.</span>`;
 }
 function claimTitle(romaji){
@@ -1158,47 +1393,47 @@ document.getElementById("invite-btn")?.addEventListener("click",doInvite);
 (function(){
   const PX = {
     en:{ label:'🇬🇧 English', px_unlocked:'AREAS UNLOCKED', px_town:'← Town', px_free:'START FREE', px_tag:'▶ EXPLORE JAPAN',
-      px_h1:'47 prefectures.<br><em>One quest.</em>', px_intro:'Choose your destination, traveler. Unlock guides, area stats, and quiz battles — one prefecture at a time.',
+      px_h1:'47 prefectures.<br><em>One quest.</em>', px_intro:'Tap a prefecture to discover what makes it special.', px_cta_gear:'⚔ Battle to earn gear →',
       px_map:'🗾 WORLD MAP', px_empty_h:'Choose your destination', px_empty_p:'Tap any glowing prefecture on the map to begin.',
       px_quest:"🎮 TRAVELER'S QUEST", px_lula:'🎲 LULA · TELEPORT', px_lula_p:"Can't decide where to go? Cast <b>Teleport</b> and let fate pick your next Japanese destination.",
-      px_teleport_btn:'🎲 CAST TELEPORT', px_titles:'🏅 MY TITLES (称号)', px_titles_p:"Been somewhere? Open a prefecture, then <b>share your photo</b> to claim that area's title and grow your collection.",
-      px_invite_h:'🎁 SHARE & INVITE', px_invite_p:'Share your explorer card, or invite a friend to unlock a <b>gold party frame</b> — they get the bonus too.',
-      px_share_btn:'📲 SHARE MY JOURNEY', px_invite_btn:'🎁 INVITE & UNLOCK' },
+      px_teleport_btn:'🎲 CAST TELEPORT', px_titles:'🏅 MY TITLES (称号)', px_titles_p:"Clear a prefecture's quiz battle to claim its <b>title</b> — collect all 47.",
+      px_invite_h:'🎁 SHARE YOUR QUEST', px_invite_p:'Share your explorer card and unlock a <b>gold party frame</b> for your map.',
+      px_share_btn:'📲 SHARE MY JOURNEY', px_invite_btn:'🎁 SHARE & UNLOCK FRAME' },
     ja:{ label:'🇯🇵 日本語', px_unlocked:'解放エリア', px_town:'← 拠点へ', px_free:'無料で始める', px_tag:'▶ 日本を探索',
-      px_h1:'47都道府県。<br><em>ひとつの冒険。</em>', px_intro:'目的地を選ぼう、旅人。ガイド・エリア統計・クイズバトルを、ひとつの県ずつ解放していく。',
+      px_h1:'47都道府県。<br><em>ひとつの冒険。</em>', px_intro:'県をタップして、その土地の魅力を見つけよう。', px_cta_gear:'⚔ バトルでギアを集めよう →',
       px_map:'🗾 ワールドマップ', px_empty_h:'目的地を選ぼう', px_empty_p:'地図の光る県をタップして始めよう。',
       px_quest:'🎮 旅人のクエスト', px_lula:'🎲 ルーラ · テレポート', px_lula_p:'行き先に迷ったら？ <b>テレポート</b> を唱えて、次の目的地を運命に決めてもらおう。',
-      px_teleport_btn:'🎲 テレポートを唱える', px_titles:'🏅 称号コレクション', px_titles_p:'行ったことある？ 県を開いて <b>写真をシェア</b> すると、その地の称号を獲得してコレクションが増える。',
-      px_invite_h:'🎁 シェア & 招待', px_invite_p:'探検カードをシェア、または友達を招待して <b>ゴールド枠</b> を解放 — 相手にも特典が。',
-      px_share_btn:'📲 冒険をシェア', px_invite_btn:'🎁 招待して解放' },
+      px_teleport_btn:'🎲 テレポートを唱える', px_titles:'🏅 称号コレクション', px_titles_p:'県のクイズバトルをクリアすると、その地の <b>称号</b> を獲得 — 全47制覇を目指そう。',
+      px_invite_h:'🎁 冒険をシェア', px_invite_p:'探検カードをシェアして、自分の地図に <b>ゴールド枠</b> を解放しよう。',
+      px_share_btn:'📲 冒険をシェア', px_invite_btn:'🎁 シェアして枠を解放' },
     zh:{ label:'🇹🇼 繁體中文', px_unlocked:'已解鎖區域', px_town:'← 回小鎮', px_free:'免費開始', px_tag:'▶ 探索日本',
-      px_h1:'47 個都道府縣。<br><em>一場冒險。</em>', px_intro:'選擇你的目的地，旅人。一次一個縣，解鎖指南、區域數據和測驗對戰。',
+      px_h1:'47 個都道府縣。<br><em>一場冒險。</em>', px_intro:'點選一個縣，發現當地的魅力。', px_cta_gear:'⚔ 對戰收集裝備 →',
       px_map:'🗾 世界地圖', px_empty_h:'選擇你的目的地', px_empty_p:'點擊地圖上發光的縣即可開始。',
       px_quest:'🎮 旅人任務', px_lula:'🎲 露拉 · 傳送', px_lula_p:'不知道去哪？ 施放 <b>傳送</b>，讓命運替你挑下一個日本目的地。',
-      px_teleport_btn:'🎲 施放傳送', px_titles:'🏅 我的稱號 (称号)', px_titles_p:'去過某地？ 打開一個縣，<b>分享你的照片</b> 來獲得該區稱號，擴充你的收藏。',
-      px_invite_h:'🎁 分享 & 邀請', px_invite_p:'分享你的探索卡，或邀請朋友解鎖 <b>金色隊伍邊框</b> — 對方也能拿到獎勵。',
-      px_share_btn:'📲 分享我的旅程', px_invite_btn:'🎁 邀請並解鎖' },
+      px_teleport_btn:'🎲 施放傳送', px_titles:'🏅 我的稱號 (称号)', px_titles_p:'通關該縣的測驗對戰即可獲得當地 <b>稱號</b> — 集齊全 47 個。',
+      px_invite_h:'🎁 分享你的冒險', px_invite_p:'分享你的探索卡，為你的地圖解鎖 <b>金色隊伍邊框</b>。',
+      px_share_btn:'📲 分享我的旅程', px_invite_btn:'🎁 分享並解鎖邊框' },
     es:{ label:'🇪🇸 Español', px_unlocked:'ZONAS DESBLOQUEADAS', px_town:'← Pueblo', px_free:'EMPEZAR GRATIS', px_tag:'▶ EXPLORA JAPÓN',
-      px_h1:'47 prefecturas.<br><em>Una misión.</em>', px_intro:'Elige tu destino, viajero. Desbloquea guías, estadísticas de zona y batallas de quiz — una prefectura a la vez.',
+      px_h1:'47 prefecturas.<br><em>Una misión.</em>', px_intro:'Toca una prefectura y descubre su encanto.', px_cta_gear:'⚔ Combate para ganar equipo →',
       px_map:'🗾 MAPA DEL MUNDO', px_empty_h:'Elige tu destino', px_empty_p:'Toca cualquier prefectura iluminada en el mapa para empezar.',
       px_quest:'🎮 MISIÓN DEL VIAJERO', px_lula:'🎲 LULA · TELETRANSPORTE', px_lula_p:'¿No sabes a dónde ir? Lanza <b>Teletransporte</b> y deja que el destino elija tu próximo lugar.',
-      px_teleport_btn:'🎲 LANZAR TELETRANSPORTE', px_titles:'🏅 MIS TÍTULOS (称号)', px_titles_p:'¿Ya estuviste? Abre una prefectura y <b>comparte tu foto</b> para reclamar su título y ampliar tu colección.',
-      px_invite_h:'🎁 COMPARTE E INVITA', px_invite_p:'Comparte tu tarjeta de explorador o invita a un amigo para desbloquear un <b>marco dorado</b> — él también gana.',
-      px_share_btn:'📲 COMPARTIR MI VIAJE', px_invite_btn:'🎁 INVITAR Y DESBLOQUEAR' },
+      px_teleport_btn:'🎲 LANZAR TELETRANSPORTE', px_titles:'🏅 MIS TÍTULOS (称号)', px_titles_p:'Supera la batalla de quiz de una prefectura para ganar su <b>título</b> — colecciona las 47.',
+      px_invite_h:'🎁 COMPARTE TU AVENTURA', px_invite_p:'Comparte tu tarjeta de explorador y desbloquea un <b>marco dorado</b> para tu mapa.',
+      px_share_btn:'📲 COMPARTIR MI VIAJE', px_invite_btn:'🎁 COMPARTIR Y DESBLOQUEAR' },
     th:{ label:'🇹🇭 ภาษาไทย', px_unlocked:'พื้นที่ที่ปลดล็อก', px_town:'← เมือง', px_free:'เริ่มฟรี', px_tag:'▶ สำรวจญี่ปุ่น',
-      px_h1:'47 จังหวัด<br><em>หนึ่งการผจญภัย</em>', px_intro:'เลือกจุดหมายของคุณ นักเดินทาง ปลดล็อกไกด์ สถิติพื้นที่ และด่านควิซ ทีละจังหวัด',
+      px_h1:'47 จังหวัด<br><em>หนึ่งการผจญภัย</em>', px_intro:'แตะจังหวัดเพื่อค้นพบเสน่ห์ของที่นั่น', px_cta_gear:'⚔ สู้เพื่อรับเกียร์ →',
       px_map:'🗾 แผนที่โลก', px_empty_h:'เลือกจุดหมายของคุณ', px_empty_p:'แตะจังหวัดที่เรืองแสงบนแผนที่เพื่อเริ่ม',
       px_quest:'🎮 เควสต์นักเดินทาง', px_lula:'🎲 ลูลา · เทเลพอร์ต', px_lula_p:'ตัดสินใจไม่ได้ว่าจะไปไหน? ร่าย <b>เทเลพอร์ต</b> แล้วให้โชคชะตาเลือกจุดหมายต่อไป',
-      px_teleport_btn:'🎲 ร่ายเทเลพอร์ต', px_titles:'🏅 ตำแหน่งของฉัน (称号)', px_titles_p:'เคยไปมาแล้ว? เปิดจังหวัดแล้ว <b>แชร์รูปของคุณ</b> เพื่อรับตำแหน่งของพื้นที่นั้นและสะสมเพิ่ม',
-      px_invite_h:'🎁 แชร์ & เชิญ', px_invite_p:'แชร์การ์ดนักสำรวจ หรือเชิญเพื่อนเพื่อปลดล็อก <b>กรอบทอง</b> — เพื่อนก็ได้โบนัสด้วย',
-      px_share_btn:'📲 แชร์การเดินทาง', px_invite_btn:'🎁 เชิญเพื่อปลดล็อก' },
+      px_teleport_btn:'🎲 ร่ายเทเลพอร์ต', px_titles:'🏅 ตำแหน่งของฉัน (称号)', px_titles_p:'ผ่านด่านควิซของจังหวัดเพื่อรับ <b>ฉายา</b> ของพื้นที่นั้น — สะสมให้ครบ 47',
+      px_invite_h:'🎁 แชร์การผจญภัย', px_invite_p:'แชร์การ์ดนักสำรวจของคุณ แล้วปลดล็อก <b>กรอบทอง</b> ให้แผนที่ของคุณ',
+      px_share_btn:'📲 แชร์การเดินทาง', px_invite_btn:'🎁 แชร์เพื่อปลดล็อกกรอบ' },
     id:{ label:'🇮🇩 Indonesia', px_unlocked:'AREA TERBUKA', px_town:'← Kota', px_free:'MULAI GRATIS', px_tag:'▶ JELAJAHI JEPANG',
-      px_h1:'47 prefektur.<br><em>Satu petualangan.</em>', px_intro:'Pilih tujuanmu, pengembara. Buka panduan, statistik area, dan pertempuran kuis — satu prefektur dalam satu waktu.',
+      px_h1:'47 prefektur.<br><em>Satu petualangan.</em>', px_intro:'Ketuk prefektur dan temukan pesonanya.', px_cta_gear:'⚔ Bertarung untuk dapat gear →',
       px_map:'🗾 PETA DUNIA', px_empty_h:'Pilih tujuanmu', px_empty_p:'Ketuk prefektur yang menyala di peta untuk mulai.',
       px_quest:'🎮 PETUALANGAN PENGEMBARA', px_lula:'🎲 LULA · TELEPORT', px_lula_p:'Bingung mau ke mana? Rapal <b>Teleport</b> dan biarkan takdir memilih tujuanmu berikutnya.',
-      px_teleport_btn:'🎲 RAPAL TELEPORT', px_titles:'🏅 GELARKU (称号)', px_titles_p:'Pernah ke sana? Buka prefektur, lalu <b>bagikan fotomu</b> untuk klaim gelar area itu dan tambah koleksimu.',
-      px_invite_h:'🎁 BAGIKAN & UNDANG', px_invite_p:'Bagikan kartu penjelajahmu, atau undang teman untuk membuka <b>bingkai emas</b> — mereka juga dapat bonus.',
-      px_share_btn:'📲 BAGIKAN PERJALANANKU', px_invite_btn:'🎁 UNDANG & BUKA' }
+      px_teleport_btn:'🎲 RAPAL TELEPORT', px_titles:'🏅 GELARKU (称号)', px_titles_p:'Selesaikan kuis-pertempuran prefektur untuk meraih <b>gelar</b>-nya — kumpulkan ke-47.',
+      px_invite_h:'🎁 BAGIKAN PETUALANGANMU', px_invite_p:'Bagikan kartu penjelajahmu dan buka <b>bingkai emas</b> untuk petamu.',
+      px_share_btn:'📲 BAGIKAN PERJALANANKU', px_invite_btn:'🎁 BAGIKAN & BUKA BINGKAI' }
   };
   const LANGS=['en','ja','zh','es','th','id'];
   let L; try{ L=localStorage.getItem('nh_lang'); }catch(e){}

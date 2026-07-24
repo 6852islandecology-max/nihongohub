@@ -65,3 +65,21 @@ footer[data-nh-footer] .nh-foot-tag { font-size: 12px; color: rgba(255, 255, 255
   header.hud .hud-right::-webkit-scrollbar,
   nav:not(.nav) > .nav-links::-webkit-scrollbar { height: 0; width: 0; }
 }
+
+/* …but the rule above is only safe while the menu is CLOSED. When the hamburger
+   opens .navlinks, the nowrap+overflow row shoves the expanded nav off-screen to the
+   right, where it can't be scrolled to (the prefectures "map page" menu bug). While the
+   menu is open, let .hud-right wrap so the nav drops to its own full-width column, and
+   hide the badge counters that would otherwise clutter the open menu. */
+@media (max-width: 680px) {
+  header.hud .hud-right:has(.navlinks.nh-open) {
+    flex-wrap: wrap !important;
+    overflow: visible !important;
+  }
+  header.hud .hud-right:has(.navlinks.nh-open) .navlinks.nh-open {
+    flex: 1 0 100% !important;
+  }
+  header.hud .hud-right:has(.navlinks.nh-open) .hud-counter {
+    display: none !important;
+  }
+}

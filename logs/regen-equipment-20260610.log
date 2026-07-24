@@ -1,0 +1,232 @@
+Regenerating 188 sprites with claude-sonnet-4-6 (concurrency 4)...
+[1/188] OK  body/hokkaido
+[2/188] OK  weapon/hokkaido
+[3/188] OK  weapon/aomori
+[4/188] OK  head/hokkaido (attempt 2)
+[5/188] OK  feet/aomori
+[6/188] OK  weapon/iwate (attempt 2)
+[7/188] OK  feet/hokkaido (attempt 2)
+[8/188] FAIL head/aomori :: 3x: UNKNOWN: unknown error, open 'C:\Users\Yurik\.secretary\projects\nihongohub\assets\equipment\head\aomori.svg'
+[9/188] FAIL body/aomori :: 3x: rows length 15
+[10/188] OK  weapon/miyagi
+[11/188] OK  body/iwate (attempt 2)
+[12/188] OK  feet/iwate (attempt 2)
+[13/188] FAIL head/iwate :: 3x: rows length 15
+[14/188] OK  head/miyagi (attempt 2)
+[15/188] OK  feet/miyagi
+[16/188] OK  weapon/akita (attempt 2)
+[17/188] OK  feet/akita
+[18/188] OK  body/miyagi (attempt 3)
+[19/188] OK  head/akita (attempt 3)
+[20/188] FAIL body/akita :: 3x: rows length 15
+[21/188] OK  head/yamagata
+[22/188] OK  weapon/yamagata (attempt 2)
+[23/188] OK  head/fukushima
+[24/188] OK  weapon/fukushima
+[25/188] OK  feet/yamagata (attempt 2)
+[26/188] FAIL body/yamagata :: 3x: rows length 15
+[27/188] OK  weapon/ibaraki
+[28/188] OK  feet/fukushima (attempt 2)
+[29/188] OK  body/ibaraki
+[30/188] OK  feet/ibaraki
+[31/188] FAIL body/fukushima :: 3x: rows length 14
+[32/188] OK  weapon/tochigi
+[33/188] OK  head/ibaraki (attempt 3)
+[34/188] OK  feet/tochigi
+[35/188] OK  head/tochigi (attempt 3)
+[36/188] FAIL body/tochigi :: 3x: rows length 15
+[37/188] OK  weapon/gunma (attempt 2)
+[38/188] OK  body/gunma
+[39/188] OK  head/gunma (attempt 2)
+[40/188] OK  feet/gunma
+[41/188] OK  weapon/saitama
+[42/188] OK  feet/saitama
+[43/188] OK  head/chiba
+[44/188] OK  weapon/chiba (attempt 2)
+[45/188] FAIL head/saitama :: 3x: rows length 15
+[46/188] OK  body/chiba
+[47/188] FAIL body/saitama :: 3x: rows length 14
+[48/188] OK  weapon/tokyo
+[49/188] OK  feet/tokyo
+[50/188] OK  feet/chiba (attempt 2)
+[51/188] OK  body/tokyo (attempt 2)
+[52/188] OK  weapon/kanagawa
+[53/188] FAIL head/tokyo :: 3x: rows length 15
+[54/188] OK  feet/kanagawa
+[55/188] OK  body/kanagawa
+[56/188] OK  head/kanagawa (attempt 3)
+[57/188] OK  weapon/niigata (attempt 2)
+[58/188] OK  feet/niigata
+[59/188] OK  weapon/toyama
+[60/188] FAIL head/niigata :: 3x: rows length 15
+[61/188] OK  body/niigata (attempt 2)
+[62/188] OK  feet/toyama (attempt 2)
+[63/188] FAIL head/toyama :: 3x: rows length 15
+[64/188] FAIL body/toyama :: 3x: rows length 15
+[65/188] OK  head/ishikawa
+[66/188] OK  body/ishikawa
+[67/188] OK  weapon/ishikawa (attempt 3)
+[68/188] OK  feet/ishikawa
+[69/188] OK  weapon/fukui
+[70/188] OK  weapon/yamanashi
+[71/188] OK  head/fukui (attempt 2)
+[72/188] OK  head/yamanashi
+[73/188] OK  feet/fukui (attempt 2)
+[74/188] OK  body/fukui (attempt 3)
+[75/188] OK  weapon/nagano
+[76/188] OK  feet/yamanashi (attempt 2)
+[77/188] FAIL body/yamanashi :: 3x: rows length 15
+[78/188] OK  weapon/gifu
+[79/188] FAIL head/nagano :: 3x: rows length 12
+[80/188] FAIL body/nagano :: 3x: rows length 10
+[81/188] OK  head/gifu (attempt 2)
+[82/188] OK  feet/nagano (attempt 3)
+[83/188] OK  feet/gifu
+[84/188] OK  head/shizuoka
+[85/188] OK  body/shizuoka
+[86/188] FAIL body/gifu :: 3x: rows length 10
+[87/188] OK  feet/shizuoka
+[88/188] OK  weapon/aichi
+[89/188] OK  weapon/shizuoka (attempt 2)
+[90/188] OK  feet/aichi
+[91/188] OK  head/aichi (attempt 2)
+[92/188] OK  weapon/mie
+[93/188] OK  head/mie
+[94/188] OK  feet/mie
+[95/188] FAIL body/aichi :: 3x: rows length 15
+[96/188] OK  head/shiga
+[97/188] OK  weapon/shiga (attempt 2)
+[98/188] FAIL body/mie :: 3x: rows length 15
+[99/188] OK  weapon/kyoto
+[100/188] OK  feet/shiga (attempt 2)
+[101/188] FAIL body/shiga :: 3x: rows length 13
+[102/188] OK  feet/kyoto
+[103/188] OK  weapon/osaka
+[104/188] OK  head/osaka
+[105/188] FAIL head/kyoto :: 3x: rows length 15
+[106/188] OK  body/kyoto (attempt 3)
+[107/188] OK  body/osaka
+[108/188] OK  weapon/hyogo
+[109/188] OK  head/hyogo (attempt 2)
+[110/188] OK  feet/hyogo
+[111/188] FAIL feet/osaka :: 3x: rows length 9
+[112/188] OK  weapon/nara
+[113/188] FAIL body/hyogo :: 3x: rows length 15
+[114/188] OK  head/nara (attempt 2)
+[115/188] OK  body/nara (attempt 2)
+[116/188] OK  weapon/wakayama
+[117/188] FAIL feet/nara :: 3x: rows length 14
+[118/188] OK  feet/wakayama
+[119/188] OK  body/wakayama (attempt 2)
+[120/188] OK  weapon/tottori
+[121/188] OK  head/wakayama (attempt 3)
+[122/188] OK  weapon/shimane
+[123/188] OK  feet/tottori (attempt 2)
+[124/188] FAIL head/tottori :: 3x: rows length 15
+[125/188] OK  body/tottori (attempt 3)
+[126/188] OK  feet/shimane (attempt 2)
+[127/188] FAIL head/shimane :: 3x: rows length 15
+[128/188] OK  weapon/okayama (attempt 2)
+[129/188] OK  body/shimane (attempt 3)
+[130/188] OK  body/okayama
+[131/188] OK  weapon/hiroshima
+[132/188] OK  head/okayama (attempt 2)
+[133/188] OK  feet/hiroshima (attempt 2)
+[134/188] OK  feet/okayama (attempt 3)
+[135/188] OK  weapon/yamaguchi
+[136/188] OK  head/yamaguchi
+[137/188] FAIL body/hiroshima :: 3x: rows length 15
+[138/188] FAIL head/hiroshima :: 3x: rows length 15
+[139/188] OK  weapon/tokushima
+[140/188] OK  head/tokushima
+[141/188] OK  feet/yamaguchi (attempt 2)
+[142/188] OK  feet/tokushima
+[143/188] OK  weapon/kagawa
+[144/188] OK  body/yamaguchi (attempt 3)
+[145/188] OK  head/kagawa (attempt 2)
+[146/188] OK  body/tokushima (attempt 3)
+[147/188] OK  weapon/ehime
+[148/188] OK  body/kagawa (attempt 3)
+[149/188] OK  feet/kagawa (attempt 3)
+[150/188] OK  body/ehime (attempt 2)
+[151/188] OK  feet/ehime (attempt 2)
+[152/188] OK  head/ehime (attempt 3)
+[153/188] FAIL weapon/kochi :: 3x: rows length 15
+[154/188] OK  weapon/fukuoka
+[155/188] FAIL head/kochi :: 3x: rows length 14
+[156/188] FAIL body/kochi :: 3x: rows length 15
+[157/188] OK  feet/kochi (attempt 3)
+[158/188] OK  feet/fukuoka
+[159/188] OK  weapon/saga
+[160/188] OK  head/saga
+[161/188] FAIL head/fukuoka :: 3x: rows length 15
+[162/188] FAIL body/fukuoka :: 3x: rows length 15
+[163/188] OK  weapon/nagasaki
+[164/188] OK  feet/saga (attempt 2)
+[165/188] FAIL body/saga :: 3x: rows length 4
+[166/188] FAIL head/nagasaki :: 3x: rows length 15
+[167/188] OK  body/nagasaki (attempt 2)
+[168/188] OK  weapon/kumamoto
+[169/188] OK  feet/nagasaki (attempt 3)
+[170/188] OK  head/kumamoto (attempt 3)
+[171/188] FAIL body/kumamoto :: 3x: rows length 15
+[172/188] OK  weapon/oita
+[173/188] OK  feet/kumamoto (attempt 3)
+[174/188] OK  feet/oita
+[175/188] FAIL head/oita :: 3x: rows length 10
+[176/188] FAIL body/oita :: 3x: rows length 15
+[177/188] OK  weapon/miyazaki (attempt 3)
+[178/188] FAIL head/miyazaki :: 3x: rows length 14
+[179/188] OK  feet/miyazaki
+[180/188] OK  body/miyazaki (attempt 2)
+[181/188] OK  feet/kagoshima
+[182/188] OK  body/kagoshima (attempt 2)
+[183/188] OK  weapon/okinawa
+[184/188] OK  head/kagoshima (attempt 3)
+[185/188] FAIL weapon/kagoshima :: 3x: rows length 15
+[186/188] OK  head/okinawa
+[187/188] OK  feet/okinawa
+[188/188] OK  body/okinawa (attempt 2)
+
+DONE: 148/188 ok, 40 failed
+Failures (originals left in place):
+  - head/aomori: 3x: UNKNOWN: unknown error, open 'C:\Users\Yurik\.secretary\projects\nihongohub\assets\equipment\head\aomori.svg'
+  - body/aomori: 3x: rows length 15
+  - head/iwate: 3x: rows length 15
+  - body/akita: 3x: rows length 15
+  - body/yamagata: 3x: rows length 15
+  - body/fukushima: 3x: rows length 14
+  - body/tochigi: 3x: rows length 15
+  - head/saitama: 3x: rows length 15
+  - body/saitama: 3x: rows length 14
+  - head/tokyo: 3x: rows length 15
+  - head/niigata: 3x: rows length 15
+  - head/toyama: 3x: rows length 15
+  - body/toyama: 3x: rows length 15
+  - body/yamanashi: 3x: rows length 15
+  - head/nagano: 3x: rows length 12
+  - body/nagano: 3x: rows length 10
+  - body/gifu: 3x: rows length 10
+  - body/aichi: 3x: rows length 15
+  - body/mie: 3x: rows length 15
+  - body/shiga: 3x: rows length 13
+  - head/kyoto: 3x: rows length 15
+  - feet/osaka: 3x: rows length 9
+  - body/hyogo: 3x: rows length 15
+  - feet/nara: 3x: rows length 14
+  - head/tottori: 3x: rows length 15
+  - head/shimane: 3x: rows length 15
+  - body/hiroshima: 3x: rows length 15
+  - head/hiroshima: 3x: rows length 15
+  - weapon/kochi: 3x: rows length 15
+  - head/kochi: 3x: rows length 14
+  - body/kochi: 3x: rows length 15
+  - head/fukuoka: 3x: rows length 15
+  - body/fukuoka: 3x: rows length 15
+  - body/saga: 3x: rows length 4
+  - head/nagasaki: 3x: rows length 15
+  - body/kumamoto: 3x: rows length 15
+  - head/oita: 3x: rows length 10
+  - body/oita: 3x: rows length 15
+  - head/miyazaki: 3x: rows length 14
+  - weapon/kagoshima: 3x: rows length 15

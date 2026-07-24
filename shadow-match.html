@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.nihongo-hub.com/shadow-match.html">
+<title>Find your shadowing partner — NihongoHub</title>
+<meta name="description" content="A quick quiz that matches you with a Japanese YouTuber to shadow — by voice pitch, speaking speed, topic, and how casual or polite they are. Watch them right here, then start shadowing.">
+<meta property="og:title" content="Find your shadowing partner 🎙">
+<meta property="og:description" content="Match with a Japanese YouTuber whose voice and pace fit yours — then shadow them.">
+<meta property="og:url" content="https://www.nihongo-hub.com/shadow-match.html">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#18120a;--paper:#f4efe5;--red:#bf3325;--gold:#c8911f;--gold-l:#e0a634;--green:#2a7a4b;--soft:#e6ddd0;--muted:#796c5c;--white:#fdfaf3;--hud:#0d0a14;--dot:'DotGothic16',sans-serif}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(224,166,52,.10),transparent 45%),var(--paper);line-height:1.7}
+.hud{position:sticky;top:0;z-index:50;background:var(--hud);border-bottom:3px solid var(--gold-l);display:flex;justify-content:space-between;align-items:center;padding:12px 26px;gap:14px;flex-wrap:wrap}
+.hud a.logo{font-family:var(--dot);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.hud a.logo span{color:var(--red)}
+.hud a.back{font-family:var(--dot);color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+.hud a.back:hover{color:var(--gold-l)}
+.page{max-width:720px;margin:0 auto;padding:36px 22px 72px}
+.tag{font-family:var(--dot);font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:8px}
+h1{font-family:'Shippori Mincho',serif;font-size:clamp(26px,5vw,40px);line-height:1.2;margin-bottom:12px}
+.lead{font-size:16px;color:#3a3125;margin-bottom:18px}
+/* ── stepper (one question at a time, akinator style) ── */
+.progress{display:flex;gap:7px;justify-content:center;margin:6px 0 16px}
+.pdot{width:9px;height:9px;border-radius:50%;background:var(--soft);transition:.2s}
+.pdot.done{background:var(--gold-l)}
+.pdot.current{background:var(--gold);transform:scale(1.35)}
+.step-card{background:var(--white);border:1px solid var(--soft);border-radius:16px;padding:26px 22px;box-shadow:0 10px 30px rgba(24,18,10,.07);text-align:center}
+.step-card.pop{animation:pop .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{0%{opacity:0;transform:translateY(10px) scale(.97)}100%{opacity:1;transform:none}}
+.step-n{font-family:var(--dot);font-size:12px;color:var(--muted);letter-spacing:.5px;margin-bottom:10px}
+.step-q{font-family:'Shippori Mincho',serif;font-size:21px;line-height:1.4;margin-bottom:4px}
+.step-note{font-family:var(--dot);font-size:12px;color:var(--gold);margin-bottom:18px}
+.opts{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:0 auto}
+.opt{font-family:'DM Sans',sans-serif;font-size:16px;cursor:pointer;background:transparent;border:2px solid var(--soft);color:var(--ink);border-radius:11px;padding:14px 16px;transition:.12s;width:100%}
+.opt:hover{border-color:var(--gold);background:rgba(224,166,52,.07)}
+.opt.sel{background:var(--gold-l);border-color:var(--gold-l);color:var(--ink);font-weight:600}
+.step-back{margin-top:16px;background:none;border:none;color:var(--muted);font-size:14px;cursor:pointer}
+.step-back:hover{color:var(--ink)}
+/* ── results ── */
+.results-head{font-family:'Shippori Mincho',serif;font-size:23px;margin:4px 0 2px;text-align:center}
+.results-sub{font-family:var(--dot);font-size:12px;color:var(--muted);text-align:center;margin-bottom:18px}
+.rc{background:var(--white);border:1px solid var(--soft);border-radius:16px;padding:18px 18px 16px;margin:16px 0;box-shadow:0 6px 18px rgba(24,18,10,.05)}
+.rc.top{border-color:var(--gold);box-shadow:0 8px 24px rgba(200,145,31,.14)}
+.rc-rank{font-family:var(--dot);font-size:12px;color:var(--gold);letter-spacing:.6px}
+.rc-name{font-family:'Shippori Mincho',serif;font-size:20px;margin:2px 0 4px}
+.rc-why{font-size:14.5px;color:#3a3125;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{font-family:var(--dot);font-size:11px;letter-spacing:.4px;background:#f3ece0;border:1px solid var(--soft);color:#5a4f3f;border-radius:14px;padding:3px 9px}
+.chip.hit{background:rgba(224,166,52,.18);border-color:var(--gold);color:#6a4f12}
+.embed{position:relative;padding-top:56.25%;margin:4px 0 14px;border-radius:11px;overflow:hidden;background:#000}
+.embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.embed-fallback{display:block;text-align:center;background:#000;color:#fff;text-decoration:none;border-radius:11px;padding:26px 16px;margin:4px 0 14px;font-weight:600}
+.rc-btns{display:flex;flex-wrap:wrap;gap:9px}
+.btn{font-family:'DM Sans',sans-serif;font-weight:600;font-size:14.5px;text-decoration:none;border-radius:9px;padding:12px 18px;display:inline-flex;align-items:center;gap:7px;border:none;cursor:pointer}
+.btn.echo{background:var(--green);color:#fff}
+.btn.share{background:transparent;color:var(--muted);border:2px solid var(--soft)}
+.retake-wrap{text-align:center;margin:26px 0 6px}
+.retake-wrap p{font-size:14px;color:var(--muted);margin-bottom:10px}
+.next-nh{text-align:center;margin:22px 0 4px;padding:20px 18px;background:var(--white);border:1px dashed var(--gold);border-radius:14px}
+.next-nh .nh-line{font-size:15px;color:#3a3125;margin-bottom:12px}
+.btn.nh-cta{background:var(--red);color:#fff;margin:4px}
+.btn.nh-ghost{background:transparent;color:var(--ink);border:2px solid var(--soft);margin:4px}
+.btn.nh-ghost:hover{border-color:var(--gold)}
+.btn.retake{background:var(--red);color:#fff;font-size:16px;padding:14px 26px}
+.note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:18px}
+footer{background:var(--hud);color:rgba(255,255,255,.5);text-align:center;padding:24px;font-family:var(--dot);font-size:13px;margin-top:30px}
+footer a{color:var(--gold-l);text-decoration:none}
+</style>
+<link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="styles/chrome.css">
+<script src="lib/config.js"></script>
+<script src="data/shadow-match.js"></script>
+<script src="lib/i18n-core.js" defer></script>
+<script src="lib/site-chrome.js" defer></script>
+<script src="lib/hamburger.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<header class="hud">
+  <a href="index.html" class="logo">Nihongo<span>Hub</span></a>
+  <div class="navlinks"><a href="prefectures.html" class="back">← Map</a></div>
+</header>
+<div class="langbar" id="langbar"></div>
+
+<main class="page">
+  <p class="tag">🎙 Shadowing Match</p>
+  <h1>Find your shadowing partner.</h1>
+  <p class="lead">Shadowing works best with a voice close to yours, at a speed you can keep up with. Answer a few quick questions and meet a Japanese YouTuber to shadow — watch them right here, then start.</p>
+
+  <div class="progress" id="progress"></div>
+  <div class="step-card" id="step-card"></div>
+
+  <div id="results" hidden></div>
+</main>
+
+<footer>
+  NihongoHub · <a href="prefectures.html">Map</a> · <a href="quiz.html">Quiz</a> · <a href="about.html">About</a>
+  <div style="margin-top:8px;opacity:.7;font-size:11px">Suggestions link to public YouTube channels. We don't host their videos.</div>
+</footer>
+
+<script>
+/* ── Shadowing Match: one-question-at-a-time flow → top-3 matches with embedded video.
+   Pure client-side, no API. Axis weights: voice 3 (mixed=1.5) > speed 2 > topic 1.5
+   > register 1 > standard 0.5. */
+const CH = window.NH_SHADOW_CHANNELS || [];
+const ECHO = 'https://shadowing-app-theta.vercel.app/?source=nihongohub';
+const SPEED_ORDER = { slow:0, medium:1, fast:2 };
+const SPEED_LABEL = { slow:'slow', medium:'normal', fast:'fast' };
+
+const QUESTIONS = [
+  { key:'voice', title:'Which voice is easier for you to copy?', note:'pitch match',
+    opts:[ {l:'Higher / female',v:'F'}, {l:'Lower / male',v:'M'}, {l:'Either is fine',v:'any'} ] },
+  { key:'speed', title:'How fast can you comfortably follow?', note:'your level',
+    opts:[ {l:'🐢 Slow (N5–N4)',v:'slow'}, {l:'🚶 Normal (N3)',v:'medium'}, {l:'🏃 Fast is OK (N2–N1)',v:'fast'} ] },
+  { key:'topic', title:'What do you want to listen to?', note:'motivation',
+    opts:[ {l:'Easy Japanese',v:'easy-japanese'}, {l:'Daily life',v:'daily-life'}, {l:'Travel',v:'travel'}, {l:'Food',v:'food'}, {l:'Culture',v:'culture'}, {l:'News',v:'news'}, {l:'Gaming',v:'gaming'}, {l:'Chatty podcast',v:'podcast'} ] },
+  { key:'register', title:'Which way of talking do you want to pick up?', note:'formality',
+    opts:[ {l:'Casual (タメ口)',v:'casual'}, {l:'Neutral',v:'neutral'}, {l:'Polite (丁寧)',v:'polite'} ] },
+  { key:'standard', title:'Standard Tokyo accent only?', note:'optional',
+    opts:[ {l:'Yes, standard',v:'std'}, {l:'Dialect is fine too',v:'any'} ] }
+];
+
+const answers = {};
+let step = 0;
+const progressEl = document.getElementById('progress');
+const cardEl = document.getElementById('step-card');
+const resultsEl = document.getElementById('results');
+
+function escapeHtml(t){ return String(t).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+function renderProgress(){
+  progressEl.innerHTML = QUESTIONS.map(function(_, i){
+    var cls = i < step ? 'done' : (i === step ? 'current' : '');
+    return '<span class="pdot ' + cls + '"></span>';
+  }).join('');
+}
+
+function renderStep(){
+  if (step >= QUESTIONS.length) { showResults(); return; }
+  progressEl.style.display = '';
+  var q = QUESTIONS[step];
+  cardEl.style.display = '';
+  cardEl.innerHTML =
+    '<div class="step-n">Question ' + (step+1) + ' of ' + QUESTIONS.length + '</div>' +
+    '<div class="step-q">' + q.title + '</div>' +
+    '<div class="step-note">' + q.note + '</div>' +
+    '<div class="opts">' + q.opts.map(function(o){ return '<button class="opt" data-v="' + o.v + '">' + o.l + '</button>'; }).join('') + '</div>' +
+    (step > 0 ? '<button class="step-back">← back</button>' : '');
+  cardEl.classList.remove('pop'); void cardEl.offsetWidth; cardEl.classList.add('pop');
+  cardEl.querySelectorAll('.opt').forEach(function(b){
+    b.addEventListener('click', function(){
+      answers[q.key] = b.dataset.v;
+      cardEl.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
+      b.classList.add('sel');
+      setTimeout(function(){ step++; renderStep(); renderProgress(); }, 260);
+    });
+  });
+  var back = cardEl.querySelector('.step-back');
+  if (back) back.addEventListener('click', function(){ step--; delete answers[QUESTIONS[step].key]; renderStep(); renderProgress(); });
+  renderProgress();
+}
+
+function scoreChannel(ch){
+  var s = 0, hits = [];
+  if (answers.voice !== 'any') {
+    if (ch.voice === 'mixed') { s += 1.5; }
+    else if (answers.voice === ch.voice) { s += 3; hits.push('voice'); }
+  }
+  var d = Math.abs(SPEED_ORDER[answers.speed] - SPEED_ORDER[ch.speed]);
+  if (d === 0) { s += 2; hits.push('speed'); } else if (d === 1) { s += 1; }
+  if (ch.topics.indexOf(answers.topic) !== -1) { s += 1.5; hits.push('topic'); }
+  if (answers.register === ch.register) { s += 1; hits.push('register'); }
+  if (answers.standard === 'std' && ch.standard) { s += 0.5; }
+  return { s: s, hits: hits };
+}
+
+function ytVideoId(ch){
+  if (ch.videoId) return ch.videoId;
+  if (ch.sample) { var m = ch.sample.match(/[?&]v=([\w-]+)/); if (m) return m[1]; }
+  return null;
+}
+function ucChannelId(ch){
+  if (ch.cid && /^UC[\w-]+$/.test(ch.cid)) return ch.cid;
+  var m = (ch.url || '').match(/\/channel\/(UC[\w-]+)/);
+  return m ? m[1] : null;
+}
+function embedBlock(ch){
+  var v = ytVideoId(ch);
+  if (v) return { html: '<div class="embed"><iframe src="https://www.youtube.com/embed/' + v + '" title="' + escapeHtml(ch.name) + '" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>', video: v, kind: 'video' };
+  var uc = ucChannelId(ch);
+  if (uc) return { html: '<div class="embed"><iframe src="https://www.youtube.com/embed/videoseries?list=UU' + uc.slice(2) + '" title="' + escapeHtml(ch.name) + '" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>', video: null, kind: 'channel' };
+  return { html: '<a class="embed-fallback" href="' + escapeHtml(ch.url) + '" target="_blank" rel="noopener">▶ Open ' + escapeHtml(ch.name) + ' on YouTube</a>', video: null, kind: 'link' };
+}
+
+function chipsFor(ch, hits){
+  var voiceTxt = ch.voice === 'mixed' ? 'multi-voice' : (ch.voice === 'F' ? '♀ voice' : '♂ voice');
+  return [
+    '<span class="chip ' + (hits.indexOf('voice')>=0?'hit':'') + '">' + voiceTxt + '</span>',
+    '<span class="chip ' + (hits.indexOf('speed')>=0?'hit':'') + '">' + SPEED_LABEL[ch.speed] + '</span>',
+    '<span class="chip ' + (hits.indexOf('topic')>=0?'hit':'') + '">' + escapeHtml(String(answers.topic).replace('-',' ')) + '</span>',
+    '<span class="chip ' + (hits.indexOf('register')>=0?'hit':'') + '">' + ch.register + '</span>',
+    '<span class="chip">' + ch.level + '</span>'
+  ].join('');
+}
+
+function showResults(){
+  progressEl.style.display = 'none';
+  cardEl.style.display = 'none';
+  var ranked = CH.map(function(ch){ var r = scoreChannel(ch); return { ch: ch, s: r.s, hits: r.hits }; })
+    .filter(function(x){ return x.s > 0; })
+    .sort(function(a,b){ return b.s - a.s; })
+    .slice(0, 3);
+  if (!ranked.length) ranked = CH.slice(0,3).map(function(ch){ return { ch: ch, s: 0, hits: [] }; });
+
+  var html = '<div class="results-head">Your shadowing partners</div>' +
+    '<div class="results-sub">Top 3, ranked by how your voice, pace and topic fit.</div>';
+  ranked.forEach(function(item, i){
+    var ch = item.ch, eb = embedBlock(ch);
+    var echoTarget = eb.video ? ('https://www.youtube.com/watch?v=' + eb.video) : ch.url;
+    var echoUrl = ECHO + '&yt=' + encodeURIComponent(echoTarget);
+    var shadowLabel = eb.kind === 'video' ? '🎙 Shadow with this video' : '🎙 Shadow this creator';
+    html += '<div class="rc' + (i===0?' top':'') + '">' +
+      '<div class="rc-rank">' + (i===0?'★ BEST MATCH':'MATCH #'+(i+1)) + '</div>' +
+      '<div class="rc-name">' + escapeHtml(ch.name) + '</div>' +
+      '<div class="rc-why">' + escapeHtml(ch.why) + '</div>' +
+      '<div class="chips">' + chipsFor(ch, item.hits) + '</div>' +
+      eb.html +
+      '<div class="rc-btns">' +
+        '<a class="btn echo" href="' + echoUrl + '" target="_blank" rel="noopener">' + shadowLabel + '</a>' +
+        '<button class="btn share" data-name="' + escapeHtml(ch.name) + '" data-id="' + ch.id + '">📲 Share</button>' +
+      '</div>' +
+    '</div>';
+  });
+  html += '<div class="retake-wrap"><p>Not your style? Answer again for a different match.</p>' +
+    '<button class="btn retake" id="retake">↻ Answer again</button></div>';
+  html += '<div class="next-nh"><p class="nh-line">Shadowing clicks faster once you know the words — that\'s what NihongoHub is for.</p>' +
+    '<a class="btn nh-cta" href="onboarding.html">⚡ Find your level — free</a>' +
+    '<a class="btn nh-ghost" href="prefectures.html">🗾 Explore the map</a></div>';
+  resultsEl.innerHTML = html;
+  resultsEl.hidden = false;
+
+  document.getElementById('retake').addEventListener('click', retake);
+  resultsEl.querySelectorAll('.btn.share').forEach(function(b){
+    b.addEventListener('click', function(){
+      var txt = 'My Japanese shadowing partner is ' + b.dataset.name + ' 🎙 Watch & find yours on NihongoHub';
+      var url = 'https://www.nihongo-hub.com/shadow-match.html?m=' + encodeURIComponent(b.dataset.id || '');
+      if (navigator.share) { navigator.share({ text: txt, url: url }).catch(function(){}); }
+      else { try { navigator.clipboard.writeText(txt + ' ' + url); b.textContent = '✓ Copied'; } catch(e){ b.textContent = '✓'; } }
+    });
+  });
+  resultsEl.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+function retake(){
+  Object.keys(answers).forEach(function(k){ delete answers[k]; });
+  step = 0;
+  resultsEl.hidden = true;
+  resultsEl.innerHTML = '';
+  renderStep();
+  document.querySelector('.page').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+function startQuiz(){
+  Object.keys(answers).forEach(function(k){ delete answers[k]; });
+  step = 0;
+  resultsEl.hidden = true;
+  resultsEl.innerHTML = '';
+  renderStep();
+  document.querySelector('.page').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// Shared-result landing: ?m=<channelId> shows that match (video embedded on OUR site) so a
+// shared result both shows off the result AND lands the recipient on NihongoHub, then invites
+// them to take the quiz themselves (viral loop, not a leak to YouTube).
+function renderSharedResult(ch){
+  progressEl.style.display = 'none';
+  cardEl.style.display = 'none';
+  var eb = embedBlock(ch);
+  var echoTarget = eb.video ? ('https://www.youtube.com/watch?v=' + eb.video) : ch.url;
+  var echoUrl = ECHO + '&yt=' + encodeURIComponent(echoTarget);
+  var shadowLabel = eb.kind === 'video' ? '🎙 Shadow with this video' : '🎙 Shadow this creator';
+  var voiceTxt = ch.voice === 'mixed' ? 'multi-voice' : (ch.voice === 'F' ? '♀ voice' : '♂ voice');
+  var chips = '<span class="chip">' + voiceTxt + '</span>' +
+    '<span class="chip">' + SPEED_LABEL[ch.speed] + '</span>' +
+    '<span class="chip">' + ch.level + '</span>';
+  resultsEl.innerHTML =
+    '<div class="results-head">A shadowing match from NihongoHub</div>' +
+    '<div class="results-sub">Someone got paired with this Japanese YouTuber to shadow.</div>' +
+    '<div class="rc top">' +
+      '<div class="rc-rank">★ THEIR MATCH</div>' +
+      '<div class="rc-name">' + escapeHtml(ch.name) + '</div>' +
+      '<div class="rc-why">' + escapeHtml(ch.why) + '</div>' +
+      '<div class="chips">' + chips + '</div>' +
+      eb.html +
+      '<div class="rc-btns"><a class="btn echo" href="' + echoUrl + '" target="_blank" rel="noopener">' + shadowLabel + '</a></div>' +
+    '</div>' +
+    '<div class="next-nh"><p class="nh-line">Your turn — match by voice, speed and topic in 5 quick questions.</p>' +
+      '<button class="btn nh-cta" id="start-quiz">🎙 Find my shadowing partner</button></div>';
+  resultsEl.hidden = false;
+  document.getElementById('start-quiz').addEventListener('click', startQuiz);
+}
+
+var _sharedId = new URLSearchParams(location.search).get('m');
+var _sharedCh = _sharedId ? CH.filter(function(c){ return c.id === _sharedId; })[0] : null;
+if (_sharedCh) renderSharedResult(_sharedCh); else renderStep();
+</script>
+</body>
+</html>

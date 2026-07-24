@@ -1,30 +1,89 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-  <title>Arimatsu Shibori Robe</title>
-  <g id="robe">
-    <!-- Outer robe frame in rare blue -->
-    <rect x="12" y="8" width="40" height="48" fill="none" stroke="#4d8fbf" stroke-width="2"/>
-    <!-- Main robe body in indigo base -->
-    <rect x="16" y="12" width="32" height="40" fill="#2c3e50"/>
-    <!-- Left shoulder panel -->
-    <rect x="12" y="12" width="8" height="16" fill="#3d5a80"/>
-    <!-- Right shoulder panel -->
-    <rect x="44" y="12" width="8" height="16" fill="#3d5a80"/>
-    <!-- Shibori tie-dye pattern - center circular motif -->
-    <rect x="24" y="20" width="4" height="4" fill="#d4a574"/>
-    <rect x="20" y="24" width="4" height="4" fill="#d4a574"/>
-    <rect x="28" y="24" width="4" height="4" fill="#d4a574"/>
-    <rect x="24" y="28" width="4" height="4" fill="#d4a574"/>
-    <!-- Left shibori accent pattern -->
-    <rect x="16" y="32" width="4" height="4" fill="#c9956e"/>
-    <rect x="16" y="40" width="4" height="4" fill="#c9956e"/>
-    <!-- Right shibori accent pattern -->
-    <rect x="44" y="32" width="4" height="4" fill="#c9956e"/>
-    <rect x="44" y="40" width="4" height="4" fill="#c9956e"/>
-    <!-- Bottom hem detail in rare blue -->
-    <rect x="16" y="48" width="32" height="4" fill="#4d8fbf"/>
-    <!-- Sleeve cuff left -->
-    <rect x="8" y="24" width="4" height="12" fill="#3d5a80"/>
-    <!-- Sleeve cuff right -->
-    <rect x="52" y="24" width="4" height="12" fill="#3d5a80"/>
-  </g>
+<title>Arimatsu Shibori Robe (rare)</title>
+<rect x="16" y="4" width="32" height="4" fill="#2a1a0c"/>
+<rect x="12" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="8" width="4" height="4" fill="#f0f4f8"/>
+<rect x="20" y="8" width="20" height="4" fill="#c8d4e8"/>
+<rect x="40" y="8" width="4" height="4" fill="#f0f4f8"/>
+<rect x="44" y="8" width="4" height="4" fill="#c8d4e8"/>
+<rect x="48" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="12" width="4" height="4" fill="#f0f4f8"/>
+<rect x="20" y="12" width="8" height="4" fill="#c8d4e8"/>
+<rect x="28" y="12" width="4" height="4" fill="#f0f4f8"/>
+<rect x="32" y="12" width="8" height="4" fill="#c8d4e8"/>
+<rect x="40" y="12" width="4" height="4" fill="#f0f4f8"/>
+<rect x="44" y="12" width="4" height="4" fill="#c8d4e8"/>
+<rect x="48" y="12" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="4" height="4" fill="#6a8aaa"/>
+<rect x="16" y="16" width="4" height="4" fill="#a0b4cc"/>
+<rect x="20" y="16" width="4" height="4" fill="#6a8aaa"/>
+<rect x="24" y="16" width="4" height="4" fill="#a0b4cc"/>
+<rect x="28" y="16" width="4" height="4" fill="#6a8aaa"/>
+<rect x="32" y="16" width="4" height="4" fill="#a0b4cc"/>
+<rect x="36" y="16" width="4" height="4" fill="#6a8aaa"/>
+<rect x="40" y="16" width="4" height="4" fill="#a0b4cc"/>
+<rect x="44" y="16" width="4" height="4" fill="#6a8aaa"/>
+<rect x="48" y="16" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#6a8aaa"/>
+<rect x="16" y="20" width="4" height="4" fill="#a0b4cc"/>
+<rect x="20" y="20" width="4" height="4" fill="#6a8aaa"/>
+<rect x="24" y="20" width="4" height="4" fill="#a0b4cc"/>
+<rect x="28" y="20" width="4" height="4" fill="#6a8aaa"/>
+<rect x="32" y="20" width="4" height="4" fill="#a0b4cc"/>
+<rect x="36" y="20" width="4" height="4" fill="#6a8aaa"/>
+<rect x="40" y="20" width="4" height="4" fill="#a0b4cc"/>
+<rect x="44" y="20" width="4" height="4" fill="#6a8aaa"/>
+<rect x="48" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#6a8aaa"/>
+<rect x="16" y="24" width="4" height="4" fill="#a0b4cc"/>
+<rect x="20" y="24" width="4" height="4" fill="#6a8aaa"/>
+<rect x="24" y="24" width="4" height="4" fill="#a0b4cc"/>
+<rect x="28" y="24" width="4" height="4" fill="#6a8aaa"/>
+<rect x="32" y="24" width="4" height="4" fill="#a0b4cc"/>
+<rect x="36" y="24" width="4" height="4" fill="#6a8aaa"/>
+<rect x="40" y="24" width="4" height="4" fill="#a0b4cc"/>
+<rect x="44" y="24" width="4" height="4" fill="#6a8aaa"/>
+<rect x="48" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#6a8aaa"/>
+<rect x="20" y="28" width="4" height="4" fill="#a0b4cc"/>
+<rect x="24" y="28" width="4" height="4" fill="#6a8aaa"/>
+<rect x="28" y="28" width="4" height="4" fill="#a0b4cc"/>
+<rect x="32" y="28" width="4" height="4" fill="#6a8aaa"/>
+<rect x="36" y="28" width="4" height="4" fill="#a0b4cc"/>
+<rect x="40" y="28" width="4" height="4" fill="#6a8aaa"/>
+<rect x="44" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="4" height="4" fill="#6a8aaa"/>
+<rect x="20" y="32" width="4" height="4" fill="#a0b4cc"/>
+<rect x="24" y="32" width="4" height="4" fill="#6a8aaa"/>
+<rect x="28" y="32" width="4" height="4" fill="#a0b4cc"/>
+<rect x="32" y="32" width="4" height="4" fill="#6a8aaa"/>
+<rect x="36" y="32" width="4" height="4" fill="#a0b4cc"/>
+<rect x="40" y="32" width="4" height="4" fill="#6a8aaa"/>
+<rect x="44" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="4" height="4" fill="#6a8aaa"/>
+<rect x="24" y="36" width="4" height="4" fill="#a0b4cc"/>
+<rect x="28" y="36" width="4" height="4" fill="#6a8aaa"/>
+<rect x="32" y="36" width="4" height="4" fill="#a0b4cc"/>
+<rect x="36" y="36" width="4" height="4" fill="#6a8aaa"/>
+<rect x="40" y="36" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="40" width="4" height="4" fill="#6a8aaa"/>
+<rect x="24" y="40" width="4" height="4" fill="#a0b4cc"/>
+<rect x="28" y="40" width="4" height="4" fill="#d4a844"/>
+<rect x="32" y="40" width="4" height="4" fill="#6a8aaa"/>
+<rect x="36" y="40" width="4" height="4" fill="#a0b4cc"/>
+<rect x="40" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="44" width="4" height="4" fill="#6a8aaa"/>
+<rect x="28" y="44" width="4" height="4" fill="#a0b4cc"/>
+<rect x="32" y="44" width="4" height="4" fill="#6a8aaa"/>
+<rect x="36" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="24" y="48" width="16" height="4" fill="#2a1a0c"/>
 </svg>

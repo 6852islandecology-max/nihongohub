@@ -1,0 +1,33 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Hitsumabushi Chef Geta</title>
+<g id="left-geta">
+<rect x="8" y="40" width="4" height="4" fill="#9b9285"/>
+<rect x="12" y="40" width="4" height="4" fill="#9b9285"/>
+<rect x="16" y="40" width="4" height="4" fill="#9b9285"/>
+<rect x="8" y="44" width="12" height="4" fill="#c9a876"/>
+<rect x="8" y="48" width="12" height="4" fill="#8b7355"/>
+<rect x="12" y="52" width="4" height="4" fill="#5a4a3a"/>
+<rect x="16" y="52" width="4" height="4" fill="#5a4a3a"/>
+<rect x="10" y="36" width="8" height="4" fill="#d4c4a8"/>
+</g>
+<g id="right-geta">
+<rect x="40" y="40" width="4" height="4" fill="#9b9285"/>
+<rect x="44" y="40" width="4" height="4" fill="#9b9285"/>
+<rect x="48" y="40" width="4" height="4" fill="#9b9285"/>
+<rect x="40" y="44" width="12" height="4" fill="#c9a876"/>
+<rect x="40" y="48" width="12" height="4" fill="#8b7355"/>
+<rect x="44" y="52" width="4" height="4" fill="#5a4a3a"/>
+<rect x="48" y="52" width="4" height="4" fill="#5a4a3a"/>
+<rect x="42" y="36" width="8" height="4" fill="#d4c4a8"/>
+</g>
+<g id="straps">
+<rect x="12" y="32" width="4" height="4" fill="#8b7355"/>
+<rect x="14" y="28" width="4" height="4" fill="#9b9285"/>
+<rect x="46" y="32" width="4" height="4" fill="#8b7355"/>
+<rect x="46" y="28" width="4" height="4" fill="#9b9285"/>
+</g>
+<g id="detail-eel-marks">
+<rect x="12" y="46" width="4" height="4" fill="#5a4a3a"/>
+<rect x="44" y="46" width="4" height="4" fill="#5a4a3a"/>
+</g>
+</svg>

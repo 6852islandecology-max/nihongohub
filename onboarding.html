@@ -98,7 +98,8 @@ body{font-family:'DM Sans',sans-serif;color:var(--ink);
   <div class="intro" id="intro">
     <div class="tag" data-i18n="tag">FIND YOUR LEVEL · 5 MIN · NO SIGNUP</div>
     <h1 data-i18n="title">Where do you stand right now?</h1>
-    <p data-i18n="lede">20 quick questions. We'll estimate your current JLPT level and tell you how many weeks until N3-ready at your pace.</p>
+    <p data-i18n="lede">20 quick questions — instant JLPT level and weeks-to-N3 estimate.</p>
+    <p style="margin-top:10px"><a href="kana.html" style="color:var(--gold-d);font-weight:600;text-decoration:none;border-bottom:2px solid currentColor" data-i18n="zero_link">Can't read ひらがな yet? Start from zero →</a></p>
   </div>
 
   <div class="progress" id="progress"></div>
@@ -142,37 +143,43 @@ body{font-family:'DM Sans',sans-serif;color:var(--ink);
 const T = {
   en:{ label:'🇬🇧 English', skip:'Skip → use defaults',
     tag:'FIND YOUR LEVEL · 5 MIN · NO SIGNUP', title:'Where do you stand right now?',
-    lede:"About 20 quick questions. We'll estimate your current JLPT level and tell you how many weeks until N3-ready at your pace.",
+    lede:"20 quick questions — instant JLPT level and weeks-to-N3 estimate.",
+    zero_link:"Can't read ひらがな yet? Start from zero →",
     r_tag:'DIAGNOSTIC COMPLETE', r_lead:'Your level:', r_cta:'⚔️ See your Readiness Dashboard →',
     r_meta:'We saved your scores in your browser. Train daily to see your N3 ETA shrink.', r_share:'📸 Share your result',
     note:'Already know your level? <a href="quiz.html">Skip to free quiz →</a>', r_review_h:'📖 Review your answers' },
   ja:{ label:'🇯🇵 日本語', skip:'スキップ → デフォルトを使う',
     tag:'レベル診断 · 5分 · 登録不要', title:'今の実力はどこ？',
-    lede:'20問の診断であなたの JLPT レベルを推定し、N3 合格までの予想週数を表示します。',
+    lede:'20問で JLPT レベルと N3 までの予想週数がすぐ分かります。',
+    zero_link:'ひらがながまだ読めない？ ゼロから始める →',
     r_tag:'診断完了', r_lead:'あなたのレベル:', r_cta:'⚔️ Readiness ダッシュボードを見る →',
     r_meta:'スコアはブラウザに保存しました。毎日続けて N3 までの予想週数を縮めよう。', r_share:'📸 結果をシェア',
     note:'レベルがすでに分かる？ <a href="quiz.html">無料クイズへ →</a>', r_review_h:'📖 回答を振り返る' },
   zh:{ label:'🇹🇼 繁體中文', skip:'跳過 → 使用預設',
     tag:'測你的等級 · 5分鐘 · 免註冊', title:'你現在的實力在哪？',
-    lede:'20 道題目快速判定你的 JLPT 等級，並告訴你以你的節奏離 N3 合格還有幾週。',
+    lede:'20 題快速判定你的 JLPT 等級與距 N3 合格的週數。',
+    zero_link:'還不會讀ひらがな？從零開始 →',
     r_tag:'診斷完成', r_lead:'你的等級:', r_cta:'⚔️ 查看 Readiness 儀表板 →',
     r_meta:'分數已存在你的瀏覽器中。每天練習，看 N3 預計週數縮短。', r_share:'📸 分享結果',
     note:'已知道你的等級？ <a href="quiz.html">前往免費題目 →</a>', r_review_h:'📖 回顧你的答案' },
   es:{ label:'🇪🇸 Español', skip:'Saltar → usar por defecto',
     tag:'ENCUENTRA TU NIVEL · 5 MIN · SIN REGISTRO', title:'¿Dónde estás ahora mismo?',
-    lede:'20 preguntas rápidas. Estimaremos tu nivel JLPT actual y cuántas semanas faltan para N3 a tu ritmo.',
+    lede:'20 preguntas rápidas: nivel JLPT y semanas hasta N3 al instante.',
+    zero_link:'¿Aún no lees ひらがな? Empieza desde cero →',
     r_tag:'DIAGNÓSTICO COMPLETO', r_lead:'Tu nivel:', r_cta:'⚔️ Ver tu panel de Readiness →',
     r_meta:'Guardamos tus puntuaciones en el navegador. Practica a diario para reducir las semanas hasta N3.', r_share:'📸 Compartir resultado',
     note:'¿Ya conoces tu nivel? <a href="quiz.html">Ir al quiz gratis →</a>', r_review_h:'📖 Revisa tus respuestas' },
   th:{ label:'🇹🇭 ภาษาไทย', skip:'ข้าม → ใช้ค่าเริ่มต้น',
     tag:'ค้นหาระดับของคุณ · 5 นาที · ไม่ต้องสมัคร', title:'ตอนนี้คุณอยู่ระดับไหน?',
-    lede:'20 ข้อสั้นๆ เราจะประเมินระดับ JLPT ปัจจุบันและบอกจำนวนสัปดาห์ที่ต้องใช้จนพร้อมสอบ N3',
+    lede:'20 ข้อสั้นๆ รู้ระดับ JLPT และสัปดาห์ถึง N3 ทันที',
+    zero_link:'ยังอ่านひらがなไม่ได้? เริ่มจากศูนย์ →',
     r_tag:'เสร็จสิ้นการวินิจฉัย', r_lead:'ระดับของคุณ:', r_cta:'⚔️ ดูแดชบอร์ด Readiness →',
     r_meta:'คะแนนถูกบันทึกในเบราว์เซอร์ ฝึกทุกวันเพื่อลดสัปดาห์จนถึง N3', r_share:'📸 แชร์ผลลัพธ์',
     note:'รู้ระดับของคุณแล้ว? <a href="quiz.html">ไปยังควิซฟรี →</a>', r_review_h:'📖 ทบทวนคำตอบของคุณ' },
   id:{ label:'🇮🇩 Indonesia', skip:'Lewati → pakai default',
     tag:'TEMUKAN LEVELMU · 5 MENIT · TANPA DAFTAR', title:'Di mana posisimu sekarang?',
-    lede:'20 soal singkat. Kami akan memperkirakan level JLPT-mu dan berapa minggu lagi sampai siap N3 di ritme-mu.',
+    lede:'20 soal singkat — level JLPT dan estimasi minggu ke N3 langsung.',
+    zero_link:'Belum bisa baca ひらがな? Mulai dari nol →',
     r_tag:'DIAGNOSIS SELESAI', r_lead:'Levelmu:', r_cta:'⚔️ Lihat Dasbor Readiness-mu →',
     r_meta:'Skor disimpan di browsermu. Latih tiap hari untuk memangkas minggu sampai N3.', r_share:'📸 Bagikan hasilmu',
     note:'Sudah tahu levelmu? <a href="quiz.html">Ke kuis gratis →</a>', r_review_h:'📖 Tinjau jawabanmu' }

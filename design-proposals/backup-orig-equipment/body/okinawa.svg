@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Bingata Royal Robe</title>
+  <g id="robe">
+    <!-- Golden frame border -->
+    <rect x="12" y="8" width="40" height="48" fill="none" stroke="#e0a634" stroke-width="2"/>
+    
+    <!-- Main robe body - deep crimson red (bingata color) -->
+    <rect x="16" y="12" width="32" height="40" fill="#8b1538"/>
+    
+    <!-- Left shoulder panel -->
+    <rect x="16" y="12" width="8" height="12" fill="#a01d45"/>
+    
+    <!-- Right shoulder panel -->
+    <rect x="40" y="12" width="8" height="12" fill="#a01d45"/>
+    
+    <!-- Center chest panel -->
+    <rect x="24" y="16" width="16" height="8" fill="#6b0f2e"/>
+    
+    <!-- Left decorative bingata pattern stripes -->
+    <rect x="16" y="24" width="4" height="24" fill="#e0a634"/>
+    <rect x="20" y="28" width="2" height="20" fill="#e0a634"/>
+    
+    <!-- Right decorative bingata pattern stripes -->
+    <rect x="44" y="24" width="4" height="24" fill="#e0a634"/>
+    <rect x="42" y="28" width="2" height="20" fill="#e0a634"/>
+    
+    <!-- Center vertical gold accent -->
+    <rect x="30" y="20" width="4" height="32" fill="#e0a634"/>
+    
+    <!-- Left sleeve opening -->
+    <rect x="12" y="20" width="4" height="16" fill="#6b0f2e"/>
+    
+    <!-- Right sleeve opening -->
+    <rect x="48" y="20" width="4" height="16" fill="#6b0f2e"/>
+    
+    <!-- Bottom hem detail -->
+    <rect x="16" y="48" width="32" height="4" fill="#e0a634"/>
+    
+    <!-- Decorative diamond pattern accent (top center) -->
+    <rect x="28" y="12" width="4" height="4" fill="#e0a634"/>
+    <rect x="32" y="12" width="4" height="4" fill="#e0a634"/>
+  </g>
+</svg>

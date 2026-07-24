@@ -126,6 +126,7 @@ img.pixel-sprite,
 }
 .eq-stats .s-val {
   font-family: 'DotGothic16', sans-serif; font-size: 22px; margin-top: 4px;
+  color: var(--ink, #1a1008); font-weight: 700;
 }
 
 .eq-slots { display: grid; gap: 12px; }
@@ -150,7 +151,9 @@ img.pixel-sprite,
 }
 .equipment-slot .es-info .es-name {
   font-family: 'DotGothic16', sans-serif; font-size: 15px; margin-top: 4px;
+  color: var(--ink, #1a1008);
 }
+.equipment-slot.empty .es-info .es-name { color: var(--muted, #7a6a52); }
 .equipment-slot .es-info .es-desc {
   font-size: 12px; color: var(--muted, #7a6a52); margin-top: 2px;
 }

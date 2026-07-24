@@ -1,0 +1,33 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Kurashiki Canal Geta</title>
+  
+  <!-- Left geta -->
+  <g id="left-geta">
+    <!-- Sole base -->
+    <rect x="4" y="36" width="16" height="12" fill="#8B7355"/>
+    <!-- Wooden platform top -->
+    <rect x="4" y="32" width="16" height="4" fill="#A0826D"/>
+    <!-- White straps -->
+    <rect x="6" y="28" width="4" height="8" fill="#F5F5F0"/>
+    <rect x="14" y="28" width="4" height="8" fill="#F5F5F0"/>
+    <!-- Frame border (rarity color) -->
+    <rect x="2" y="30" width="20" height="18" fill="none" stroke="#9b9285" stroke-width="1"/>
+  </g>
+  
+  <!-- Right geta -->
+  <g id="right-geta">
+    <!-- Sole base -->
+    <rect x="44" y="36" width="16" height="12" fill="#8B7355"/>
+    <!-- Wooden platform top -->
+    <rect x="44" y="32" width="16" height="4" fill="#A0826D"/>
+    <!-- White straps -->
+    <rect x="46" y="28" width="4" height="8" fill="#F5F5F0"/>
+    <rect x="54" y="28" width="4" height="8" fill="#F5F5F0"/>
+    <!-- Frame border (rarity color) -->
+    <rect x="42" y="30" width="20" height="18" fill="none" stroke="#9b9285" stroke-width="1"/>
+  </g>
+  
+  <!-- Highlight on platforms -->
+  <rect x="6" y="32" width="2" height="2" fill="#C9B8A8"/>
+  <rect x="46" y="32" width="2" height="2" fill="#C9B8A8"/>
+</svg>

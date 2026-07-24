@@ -1,0 +1,32 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Straw Cape</title>
+<g id="straw-cape">
+<rect x="12" y="8" width="40" height="4" fill="#9b9285"/>
+<rect x="8" y="12" width="48" height="4" fill="#d4c5a9"/>
+<rect x="8" y="16" width="4" height="4" fill="#9b9285"/>
+<rect x="52" y="16" width="4" height="4" fill="#9b9285"/>
+<rect x="12" y="16" width="40" height="4" fill="#d4c5a9"/>
+<rect x="4" y="20" width="56" height="4" fill="#c9b896"/>
+<rect x="4" y="24" width="4" height="4" fill="#9b9285"/>
+<rect x="56" y="24" width="4" height="4" fill="#9b9285"/>
+<rect x="8" y="24" width="48" height="4" fill="#d4c5a9"/>
+<rect x="0" y="28" width="4" height="4" fill="#8b7d70"/>
+<rect x="60" y="28" width="4" height="4" fill="#8b7d70"/>
+<rect x="4" y="28" width="56" height="4" fill="#c9b896"/>
+<rect x="0" y="32" width="4" height="4" fill="#8b7d70"/>
+<rect x="60" y="32" width="4" height="4" fill="#8b7d70"/>
+<rect x="4" y="32" width="8" height="4" fill="#a68f7f"/>
+<rect x="52" y="32" width="8" height="4" fill="#a68f7f"/>
+<rect x="12" y="32" width="40" height="4" fill="#c9b896"/>
+<rect x="0" y="36" width="4" height="4" fill="#8b7d70"/>
+<rect x="60" y="36" width="4" height="4" fill="#8b7d70"/>
+<rect x="4" y="36" width="8" height="4" fill="#a68f7f"/>
+<rect x="52" y="36" width="8" height="4" fill="#a68f7f"/>
+<rect x="12" y="36" width="40" height="4" fill="#d4c5a9"/>
+<rect x="0" y="40" width="64" height="4" fill="#8b7d70"/>
+<rect x="4" y="44" width="8" height="8" fill="#a68f7f"/>
+<rect x="52" y="44" width="8" height="8" fill="#a68f7f"/>
+<rect x="12" y="44" width="40" height="8" fill="#c9b896"/>
+<rect x="0" y="52" width="64" height="12" fill="#9b9285"/>
+</g>
+</svg>

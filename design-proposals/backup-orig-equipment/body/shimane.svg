@@ -1,0 +1,40 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Adachi Museum Robe</title>
+  <g id="robe">
+    <!-- Frame border -->
+    <rect x="8" y="4" width="48" height="56" fill="none" stroke="#9b9285" stroke-width="2"/>
+    
+    <!-- Robe main body - dark indigo base -->
+    <rect x="12" y="12" width="8" height="20" fill="#3d3d5c"/>
+    <rect x="20" y="8" width="24" height="28" fill="#4a4a6d"/>
+    <rect x="44" y="12" width="8" height="20" fill="#3d3d5c"/>
+    
+    <!-- Left sleeve -->
+    <rect x="8" y="16" width="4" height="16" fill="#5a5a7d"/>
+    
+    <!-- Right sleeve -->
+    <rect x="52" y="16" width="4" height="16" fill="#5a5a7d"/>
+    
+    <!-- Garden pattern - green accent stripes -->
+    <rect x="20" y="12" width="4" height="12" fill="#6b8e4a"/>
+    <rect x="32" y="12" width="4" height="12" fill="#6b8e4a"/>
+    <rect x="40" y="12" width="4" height="12" fill="#6b8e4a"/>
+    
+    <!-- Center decorative panel - cream -->
+    <rect x="28" y="14" width="8" height="14" fill="#d4c5a9"/>
+    
+    <!-- Garden motif circles - representing museum garden -->
+    <rect x="30" y="16" width="4" height="4" fill="#8b9d5d"/>
+    <rect x="30" y="22" width="4" height="4" fill="#8b9d5d"/>
+    
+    <!-- Lower robe extension -->
+    <rect x="16" y="32" width="32" height="20" fill="#4a4a6d"/>
+    
+    <!-- Robe hem detail -->
+    <rect x="14" y="50" width="36" height="4" fill="#9b9285"/>
+    
+    <!-- Side fold details -->
+    <rect x="12" y="28" width="2" height="16" fill="#9b9285"/>
+    <rect x="50" y="28" width="2" height="16" fill="#9b9285"/>
+  </g>
+</svg>

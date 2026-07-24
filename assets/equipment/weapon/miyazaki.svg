@@ -1,38 +1,71 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-  <title>Takachiho Sacred Mirror Bow</title>
-  
-  <!-- Bow string -->
-  <rect x="24" y="8" width="4" height="48" fill="#f5e6d3"/>
-  
-  <!-- Upper limb -->
-  <rect x="20" y="8" width="4" height="8" fill="#8b4513"/>
-  <rect x="16" y="12" width="4" height="4" fill="#a0522d"/>
-  <rect x="20" y="16" width="4" height="4" fill="#8b4513"/>
-  
-  <!-- Upper sacred mirror accent -->
-  <rect x="16" y="8" width="8" height="8" fill="#e0a634"/>
-  <rect x="18" y="10" width="4" height="4" fill="#ffd700"/>
-  
-  <!-- Grip section (center) -->
-  <rect x="20" y="28" width="4" height="8" fill="#654321"/>
-  <rect x="18" y="30" width="8" height="4" fill="#8b7355"/>
-  <rect x="20" y="32" width="4" height="4" fill="#d4a373"/>
-  
-  <!-- Lower limb -->
-  <rect x="20" y="36" width="4" height="4" fill="#8b4513"/>
-  <rect x="16" y="40" width="4" height="4" fill="#a0522d"/>
-  <rect x="20" y="44" width="4" height="8" fill="#8b4513"/>
-  
-  <!-- Lower sacred mirror accent -->
-  <rect x="16" y="48" width="8" height="8" fill="#e0a634"/>
-  <rect x="18" y="50" width="4" height="4" fill="#ffd700"/>
-  
-  <!-- Decorative rings on string -->
-  <rect x="24" y="14" width="4" height="4" fill="#e0a634"/>
-  <rect x="24" y="22" width="4" height="4" fill="#e0a634"/>
-  <rect x="24" y="38" width="4" height="4" fill="#e0a634"/>
-  <rect x="24" y="46" width="4" height="4" fill="#e0a634"/>
-  
-  <!-- Legendary frame border -->
-  <rect x="12" y="4" width="40" height="56" fill="none" stroke="#e0a634" stroke-width="2"/>
+<title>Takachiho Sacred Mirror Bow (legendary)</title>
+<rect x="24" y="4" width="12" height="4" fill="#2a1a0c"/>
+<rect x="20" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="8" width="8" height="4" fill="#c8a84b"/>
+<rect x="32" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="12" width="12" height="4" fill="#c8a84b"/>
+<rect x="32" y="12" width="4" height="4" fill="#f0d980"/>
+<rect x="36" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="16" width="4" height="4" fill="#c8a84b"/>
+<rect x="20" y="16" width="4" height="4" fill="#b06a30"/>
+<rect x="24" y="16" width="8" height="4" fill="#c8a84b"/>
+<rect x="32" y="16" width="4" height="4" fill="#f0d980"/>
+<rect x="36" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#c8a84b"/>
+<rect x="16" y="20" width="12" height="4" fill="#b06a30"/>
+<rect x="28" y="20" width="4" height="4" fill="#c8a84b"/>
+<rect x="32" y="20" width="4" height="4" fill="#f0d980"/>
+<rect x="36" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#c8a84b"/>
+<rect x="12" y="24" width="12" height="4" fill="#b06a30"/>
+<rect x="24" y="24" width="8" height="4" fill="#f0d980"/>
+<rect x="32" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="24" width="4" height="4" fill="#d4f0f8"/>
+<rect x="48" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="0" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="4" height="4" fill="#c8a84b"/>
+<rect x="8" y="28" width="12" height="4" fill="#b06a30"/>
+<rect x="20" y="28" width="8" height="4" fill="#f0d980"/>
+<rect x="28" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="28" width="4" height="4" fill="#d4f0f8"/>
+<rect x="48" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="4" height="4" fill="#c8a84b"/>
+<rect x="12" y="32" width="4" height="4" fill="#b06a30"/>
+<rect x="16" y="32" width="8" height="4" fill="#f0d980"/>
+<rect x="24" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="32" width="4" height="4" fill="#d4f0f8"/>
+<rect x="44" y="32" width="4" height="4" fill="#ffffff"/>
+<rect x="48" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="4" height="4" fill="#b06a30"/>
+<rect x="16" y="36" width="4" height="4" fill="#f0d980"/>
+<rect x="20" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="36" width="4" height="4" fill="#d4f0f8"/>
+<rect x="40" y="36" width="4" height="4" fill="#ffffff"/>
+<rect x="44" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="4" height="4" fill="#f0d980"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="40" width="4" height="4" fill="#d4f0f8"/>
+<rect x="36" y="40" width="4" height="4" fill="#ffffff"/>
+<rect x="40" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="28" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="44" width="4" height="4" fill="#e8c97a"/>
+<rect x="36" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="24" y="52" width="8" height="4" fill="#2a1a0c"/>
 </svg>

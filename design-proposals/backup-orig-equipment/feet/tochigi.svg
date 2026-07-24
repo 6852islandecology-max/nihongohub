@@ -1,0 +1,34 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Kegon Waterfall Greaves</title>
+  
+  <!-- Left Boot -->
+  <g id="left-boot">
+    <!-- Boot sole -->
+    <rect x="4" y="44" width="20" height="4" fill="#3d3d3d"/>
+    <!-- Boot main body -->
+    <rect x="6" y="32" width="16" height="12" fill="#5a4a3a"/>
+    <!-- Boot accent stripe -->
+    <rect x="6" y="36" width="16" height="2" fill="#9b9285"/>
+    <!-- Waterfall detail top -->
+    <rect x="8" y="28" width="4" height="4" fill="#4a7ba7"/>
+    <rect x="12" y="26" width="4" height="4" fill="#5a8fb8"/>
+    <rect x="10" y="24" width="4" height="4" fill="#4a7ba7"/>
+  </g>
+  
+  <!-- Right Boot -->
+  <g id="right-boot">
+    <!-- Boot sole -->
+    <rect x="40" y="44" width="20" height="4" fill="#3d3d3d"/>
+    <!-- Boot main body -->
+    <rect x="42" y="32" width="16" height="12" fill="#5a4a3a"/>
+    <!-- Boot accent stripe -->
+    <rect x="42" y="36" width="16" height="2" fill="#9b9285"/>
+    <!-- Waterfall detail top -->
+    <rect x="48" y="28" width="4" height="4" fill="#4a7ba7"/>
+    <rect x="44" y="26" width="4" height="4" fill="#5a8fb8"/>
+    <rect x="46" y="24" width="4" height="4" fill="#4a7ba7"/>
+  </g>
+  
+  <!-- Frame border -->
+  <rect x="2" y="20" width="60" height="32" fill="none" stroke="#9b9285" stroke-width="2"/>
+</svg>

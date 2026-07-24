@@ -17,14 +17,28 @@
   },
   "about": {
     "@type": "Organization",
+    "@id": "https://www.nihongo-hub.com/#organization",
     "name": "NihongoHub",
     "url": "https://www.nihongo-hub.com",
     "sameAs": [
       "https://www.nihongo-hub.com",
       "https://nihongohub-nu.vercel.app",
-      "https://ikimonohakasefamily.substack.com"
+      "https://ikimonohakasefamily.substack.com",
+      "https://www.youtube.com/@JepangMenarik",
+      "https://www.instagram.com/familyikimono",
+      "https://www.threads.net/@familyikimono",
+      "https://www.pinterest.com/ikimonofamily"
     ],
-    "description": "NihongoHub is an AI-powered platform for learning Japanese and exploring Japan's 47 prefectures. The only official NihongoHub domains are nihongo-hub.com and nihongohub-nu.vercel.app. This site is not affiliated with nihongohub.com, nihongohub.pk, nihongohub.wordpress.com, or nihongohub.xyz."
+    "knowsAbout": ["Japanese language", "JLPT", "JFT-Basic", "living and working in Japan", "traveling Japan's 47 prefectures"],
+    "founder": { "@id": "https://www.nihongo-hub.com/#author" },
+    "description": "NihongoHub helps people with a real, gated relationship to Japan — studying for the JLPT or JFT-Basic, moving to Japan to work or live, or traveling its 47 prefectures — with honest, source-backed guides and practice. Independent and unofficial. The only official NihongoHub domains are nihongo-hub.com and nihongohub-nu.vercel.app. This site is not affiliated with nihongohub.com, nihongohub.pk, nihongohub.wordpress.com, or nihongohub.xyz."
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.nihongo-hub.com/#author",
+    "description": "Native Japanese speaker with a doctorate and university teaching experience; writes and reviews NihongoHub's Japanese-learning material. Independent and unofficial — not a JLPT instructor.",
+    "knowsAbout": ["Japanese language", "JLPT", "JFT-Basic"],
+    "worksFor": { "@id": "https://www.nihongo-hub.com/#organization" }
   }
 }
 </script>
@@ -42,7 +56,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — NihongoHub</title>
-<meta name="description" content="NihongoHub is an AI-powered platform for learning Japanese and exploring Japan — JLPT practice, culture deep dives, and a 47-prefecture travel map, in one place.">
+<meta name="description" content="NihongoHub follows a foreigner's whole relationship with Japan — pass the JLPT/JFT, move to Japan to work or live, and travel its 47 prefectures — with honest, source-backed guides. Independent and unofficial.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DotGothic16&display=swap" rel="stylesheet">
 <style>
@@ -84,19 +98,22 @@ footer a{color:var(--gold-l);text-decoration:none}
 </header>
 <main class="page">
   <p class="tag">About</p>
-  <h1>Learn Japanese. Discover Japan.</h1>
-  <p class="lead">NihongoHub is an AI-powered platform that brings Japanese practice and real Japan together in one place — JLPT-style quizzes, culture deep dives, and a clickable map of all 47 prefectures.</p>
+  <h1>Learn it. Live it. Travel it.</h1>
+  <p class="lead">NihongoHub covers one whole arc: a foreigner's real relationship with Japan. Whether you're here to <b>pass the JLPT or JFT-Basic</b>, <b>move to Japan to work or live</b>, or <b>travel its 47 prefectures</b>, this is the one place that connects all three — with honest, source-backed guides, not casual vocabulary drills.</p>
 
   <h2>Why we built it</h2>
-  <p>Most apps drill vocabulary but leave you guessing about the bigger picture — where you are, what's next, and what Japan is actually like beyond the textbook. We wanted one place that teaches the language and shows the country it belongs to.</p>
+  <p>Most apps teach you to recognise words, then leave you alone at the moment that actually matters — the test you have to pass, the city office you have to visit, the trip you're planning. Free apps and AI tutors already commoditised casual practice. What's missing is one trustworthy place that follows the whole journey and stakes its name on getting the details right.</p>
 
-  <h2>How it works</h2>
+  <h2>The three territories</h2>
   <ul>
-    <li><b>AI practice.</b> Fresh JLPT-style questions (N5–N1) are generated on demand, so you never repeat the same test.</li>
-    <li><b>Explore the 47 prefectures.</b> A clickable map with data-grounded stats, local food and sights, and quiz battles for each prefecture.</li>
-    <li><b>Culture &amp; travel context.</b> Etiquette, seasons, and the Japanese that real situations call for — shrines, izakayas, trains.</li>
+    <li><b>Learn it.</b> Pass the gate — JLPT and JFT-Basic exam prep, by section, with original practice and honest study plans (see <a href="exam-prep.html">Exam prep</a>), plus AI quiz practice (N5–N1).</li>
+    <li><b>Live it.</b> The part textbooks skip — moving to Japan, the specified-skilled-worker path, money transfers, and the first month's paperwork, tied to real prefectures.</li>
+    <li><b>Travel it.</b> A clickable map of all 47 prefectures with local food, sights, and the Japanese that real situations call for.</li>
     <li><b>Five languages.</b> English, 繁體中文, Español, ไทย, and Bahasa Indonesia.</li>
   </ul>
+
+  <h2>Who's behind it</h2>
+  <p>NihongoHub is written and reviewed by a native Japanese speaker with a doctorate and university teaching experience. We're independent and <b>unofficial</b> — not affiliated with the JLPT, JFT, JEES, or the Japan Foundation, and not a JLPT instructor. Where something depends on the official test format, we say so and point you to the official site (jlpt.jp). The credential is there to set a bar for accuracy, not to impress: every factual claim is meant to be checkable.</p>
 
   <h2>Honest by design</h2>
   <p>We don't show fake progress numbers or invented social proof. When another tool or guide is genuinely better for you, we'll point you to it — even when it isn't ours. Some links are affiliate links, always disclosed.</p>
@@ -105,7 +122,8 @@ footer a{color:var(--gold-l);text-decoration:none}
   <p>Your progress lives in your browser. Optional country ranking is anonymous and opt-in: if you turn it on, we store only a coarse country code (from your connection) and a 0–1 readiness score under an anonymous id — never your name, email, or answers. Rankings reset monthly, and you can ignore the feature entirely with no effect on learning.</p>
 
   <div class="cta-row">
-    <a href="quiz.html" class="btn primary">⚔️ Try the JLPT Battle</a>
+    <a href="exam-prep.html" class="btn primary">📝 JLPT/JFT exam prep</a>
+    <a href="quiz.html" class="btn ghost">⚔️ Try the JLPT Battle</a>
     <a href="prefectures.html" class="btn ghost">🗾 Explore the map</a>
   </div>
 </main>

@@ -59,8 +59,35 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 2
 .section-head{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .section-head span{color:var(--soft);font-size:11px;font-family:'DM Sans',sans-serif;font-weight:400;letter-spacing:0}
 .pref-grid{display:flex;flex-wrap:wrap;gap:5px}
-.pref-cell{padding:4px 8px;border-radius:4px;font-size:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);font-family:'Noto Sans JP',sans-serif;transition:background .2s}
+.pref-cell{padding:4px 8px;border-radius:4px;font-size:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);font-family:'Noto Sans JP',sans-serif;transition:background .2s,transform .12s;cursor:pointer}
+.pref-cell:hover{transform:translateY(-1px);border-color:var(--gold)}
 .pref-cell.cleared{background:rgba(63,174,107,.2);border-color:var(--green);color:var(--green)}
+
+/* Prefecture detail modal */
+.pref-modal{position:fixed;inset:0;z-index:220;background:rgba(13,10,20,.72);display:none;align-items:center;justify-content:center;padding:18px}
+.pref-modal.open{display:flex}
+.pm-card{background:var(--hud);border:2px solid var(--gold);border-radius:12px;max-width:440px;width:100%;max-height:86vh;overflow-y:auto;padding:20px}
+.pm-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px}
+.pm-name{font-family:'Noto Sans JP',sans-serif;font-size:22px;font-weight:700;color:var(--white)}
+.pm-romaji{font-size:12px;color:var(--soft);letter-spacing:1px;text-transform:uppercase}
+.pm-close{background:none;border:none;color:var(--soft);font-size:22px;cursor:pointer;line-height:1}
+.pm-status{font-family:var(--pixel);font-size:9px;letter-spacing:1px;padding:5px 10px;border-radius:5px;display:inline-block;margin:6px 0 14px}
+.pm-status.cleared{background:rgba(63,174,107,.2);border:1px solid var(--green);color:var(--green)}
+.pm-status.locked{background:rgba(255,255,255,.05);border:1px solid var(--hud-line);color:var(--soft)}
+.pm-gear{display:grid;gap:10px}
+.pm-item{display:grid;grid-template-columns:48px 1fr auto;gap:11px;align-items:center;background:rgba(255,255,255,.04);border:2px solid var(--hud-line);border-radius:8px;padding:9px 12px}
+.pm-item.owned{border-color:var(--green)}
+.pm-item .pm-ic{width:48px;height:48px;background:rgba(224,166,52,.06);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.pm-item .pm-ic img{width:42px;height:42px}
+.pm-item.locked .pm-ic{opacity:.3}
+.pm-item .pm-slot{font-family:var(--pixel);font-size:8px;color:var(--soft);letter-spacing:1px}
+.pm-item .pm-iname{font-family:'Noto Sans JP',sans-serif;font-size:14px;color:var(--parch);margin-top:3px}
+.pm-item.locked .pm-iname{color:var(--soft)}
+.pm-item .pm-rar{font-family:var(--pixel);font-size:8px;letter-spacing:1px;text-align:right}
+.pm-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.pm-actions a{flex:1;text-align:center;font-family:var(--pixel);font-size:9px;letter-spacing:1px;padding:12px;border-radius:6px;text-decoration:none}
+.pm-explore{background:var(--gold);color:var(--ink);border-bottom:3px solid var(--gold-d)}
+.pm-battle{background:transparent;color:var(--gold);border:2px solid var(--gold)}
 
 /* CTAs */
 .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:28px 20px}
@@ -109,12 +136,12 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 <script src="lib/equipment.js" defer></script>
 <script src="data/titles-metadata.js" defer></script>
 <script src="lib/titles.js" defer></script>
-<script src="lib/sharecard.js" defer></script>
+<script src="lib/sharecard.js?v=20260610b" defer></script>
 <script src="lib/constellation.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-<nav>
+<nav class="nav">
   <span class="nav-brand">⚔️ NIHONGOHUB</span>
   <div class="nav-links">
     <a href="quiz.html">⚔ Battle</a>
@@ -159,9 +186,29 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
   </div>
 </div>
 
+<!-- save-progress nudge: shown to anonymous/guest users (no registered email) only -->
+<div id="save-hint" style="display:none;max-width:1100px;margin:0 auto 18px;background:rgba(224,166,52,.12);border:1px solid rgba(224,166,52,.4);border-radius:8px;padding:11px 14px;align-items:center;gap:10px;font-size:13px;color:var(--soft,#cdbfa6)">
+  <span style="font-size:18px">💾</span>
+  <span style="flex:1">Your collection is saved on this browser. <a href="index.html" style="color:var(--gold,#e0a634);font-weight:600">Create a free account</a> to keep it safe and sync across devices.</span>
+  <button id="save-hint-x" aria-label="Dismiss" style="background:none;border:none;color:var(--soft,#cdbfa6);font-size:18px;cursor:pointer;line-height:1">×</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var box=document.getElementById('save-hint'), x=document.getElementById('save-hint-x');
+  if(!box) return;
+  try{ if(localStorage.getItem('nh_savehint_dismissed')==='1') return; }catch(e){}
+  if(x) x.addEventListener('click', function(){ box.style.display='none'; try{localStorage.setItem('nh_savehint_dismissed','1');}catch(e){} });
+  function show(){ box.style.display='flex'; }
+  if(window.NH_AUTH && window.NH_AUTH.getUser){
+    window.NH_AUTH.getUser().then(function(u){ if(!(u && u.email)) show(); }).catch(show);
+  } else { show(); }
+});
+</script>
+
 <!-- ── Equipment / Inventory section ── -->
 <div class="pref-section" id="equip-section">
   <p class="section-head">⚔️ EQUIPMENT <span id="eq-summary">0 / 188 items</span></p>
+  <p style="margin:-6px 0 14px;font-size:13px;color:rgba(255,255,255,.62);line-height:1.5">Answer quizzes to earn gear — each piece boosts your ATK &amp; DEF. Your equipment grows as you learn.</p>
   <div class="eq-shell">
     <div>
       <div class="avatar-stack" id="avatar-stack" title="Your adventurer">
@@ -193,11 +240,13 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
     <select class="tsel" id="tw2" aria-label="Second word"></select>
     <button class="btn-explore" id="title-equip" style="padding:10px 16px">⚔ EQUIP</button>
   </div>
+  <p class="title-particle-hint" style="font-size:11.5px;color:var(--soft,#9a8f7a);margin:6px 2px 0;line-height:1.5">💡 Particles (は・を・に…) unlock by completing the <a href="onboarding.html" style="color:var(--gold,#e0a634)">level test</a> — each completion unlocks the next one (の→は→を→に→へ→と→より).</p>
   <div class="title-words" id="title-words"></div>
 </div>
 
 <div class="pref-section">
   <p class="section-head">🗾 PREFECTURE CONQUEST <span id="pref-count">0 / 47 cleared</span></p>
+  <p style="margin:-6px 0 14px;font-size:13px;color:rgba(255,255,255,.62);line-height:1.55">Forty-seven real prefectures, from Hokkaidō's snow to Okinawa's reefs. Clear each one by answering its Japanese — the same phrases you'll actually use when you travel, study, or work there. Your journey across Japan <em>is</em> your progress.</p>
   <div class="pref-grid" id="pref-grid"></div>
 </div>
 
@@ -227,6 +276,7 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
   <div class="inv-card">
     <h3 id="inv-title">Choose an item</h3>
     <div id="inv-grid" class="inv-grid"></div>
+    <p class="inv-source-hint" style="font-size:11.5px;color:var(--soft,#9a8f7a);margin:6px 2px 2px;line-height:1.5;text-align:center">How to earn gear: every 3 correct JLPT quiz answers drop a piece · clear a prefecture battle (1 weapon) · share a prefecture (1 accessory).</p>
     <div class="inv-actions">
       <button class="inv-unequip" id="inv-unequip">Unequip</button>
       <button class="inv-close" id="inv-close">Close</button>
@@ -248,6 +298,22 @@ footer{text-align:center;padding:24px;font-size:12px;color:var(--soft);border-to
 </div>
 
 <div class="toast" id="toast"></div>
+
+<!-- Prefecture detail modal (gear earned in that prefecture + deep link to its map page) -->
+<div class="pref-modal" id="pref-modal">
+  <div class="pm-card">
+    <div class="pm-head">
+      <div>
+        <div class="pm-name" id="pm-name">—</div>
+        <div class="pm-romaji" id="pm-romaji"></div>
+      </div>
+      <button class="pm-close" id="pm-close" aria-label="Close">×</button>
+    </div>
+    <span class="pm-status" id="pm-status"></span>
+    <div class="pm-gear" id="pm-gear"></div>
+    <div class="pm-actions" id="pm-actions"></div>
+  </div>
+</div>
 
 <footer>© 2026 NihongoHub · <a href="index.html">Home</a> · <a href="quiz.html">Quiz</a> · <a href="prefectures.html">Explore</a></footer>
 
@@ -312,11 +378,69 @@ function init(){
     const c = document.createElement('div');
     c.className = 'pref-cell' + (titlesLower.includes(slug) ? ' cleared' : '');
     c.textContent = jp;
-    c.title = slug;
+    c.title = jp + ' — tap for details';
+    c.dataset.slug = slug;
+    c.dataset.jp = jp;
+    c.setAttribute('role','button');
+    c.setAttribute('tabindex','0');
     grid.appendChild(c);
   });
   document.getElementById('pref-count').textContent = titles.length + ' / 47 cleared';
 }
+
+/* ── Prefecture detail modal: show gear earned in this prefecture + deep-link to its map page ── */
+const PM_SLOTS = [
+  { slot:'weapon', label:'⚔ WEAPON' }, { slot:'head', label:'🪖 HEAD' },
+  { slot:'body',   label:'🥋 BODY'   }, { slot:'feet', label:'👟 FEET' },
+];
+const PM_RARITY = { common:'#9b9285', rare:'#4d8fbf', epic:'#a056d2', legendary:'#e0a634' };
+function openPrefModal(slug, jp){
+  const A = window.NH_EQUIPMENT_API;
+  const meta = window.NH_EQUIPMENT && window.NH_EQUIPMENT[slug];
+  if(!meta){ location.href = 'prefectures.html?pref=' + slug; return; } // no gear data → just open the map page
+  // Conquest = the prefecture's weapon (称号) is owned.
+  const cleared = A ? A.isOwned('weapon', slug) : false;
+  document.getElementById('pm-name').textContent = jp;
+  document.getElementById('pm-romaji').textContent = slug;
+  const st = document.getElementById('pm-status');
+  st.className = 'pm-status ' + (cleared ? 'cleared' : 'locked');
+  st.textContent = cleared ? '✓ CONQUERED' : '✗ NOT YET CONQUERED';
+  // Gear rows
+  document.getElementById('pm-gear').innerHTML = PM_SLOTS.map(({slot,label})=>{
+    const item = meta[slot]; if(!item) return '';
+    const owned = A ? A.isOwned(slot, slug) : false;
+    const rar = item.rarity || 'common';
+    const icon = owned
+      ? `<img src="${A ? A.itemAssetPath(slot, slug) : ''}" alt="">`
+      : '🔒';
+    const nm = owned ? (item.name.ja || item.name.en) : 'Locked';
+    return `<div class="pm-item ${owned?'owned':'locked'}">
+      <div class="pm-ic">${owned ? icon : `<span style="font-size:20px;opacity:.5">🔒</span>`}</div>
+      <div><div class="pm-slot">${label}</div><div class="pm-iname">${nm}</div></div>
+      <div class="pm-rar" style="color:${PM_RARITY[rar]}">${rar.toUpperCase()}</div>
+    </div>`;
+  }).join('');
+  // Actions
+  document.getElementById('pm-actions').innerHTML =
+    `<a class="pm-explore" href="prefectures.html?pref=${slug}">🗾 EXPLORE ${slug.toUpperCase()}</a>` +
+    (cleared ? '' : `<a class="pm-battle" href="quiz.html">⚔ BATTLE TO CONQUER</a>`);
+  document.getElementById('pref-modal').classList.add('open');
+}
+function closePrefModal(){ document.getElementById('pref-modal').classList.remove('open'); }
+document.getElementById('pref-grid').addEventListener('click', e=>{
+  const cell = e.target.closest('.pref-cell'); if(!cell) return;
+  openPrefModal(cell.dataset.slug, cell.dataset.jp);
+});
+document.getElementById('pref-grid').addEventListener('keydown', e=>{
+  if(e.key!=='Enter' && e.key!==' ') return;
+  const cell = e.target.closest('.pref-cell'); if(!cell) return;
+  e.preventDefault(); openPrefModal(cell.dataset.slug, cell.dataset.jp);
+});
+document.getElementById('pm-close').addEventListener('click', closePrefModal);
+document.getElementById('pref-modal').addEventListener('click', e=>{
+  if(e.target.id === 'pref-modal') closePrefModal();
+});
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePrefModal(); });
 
 // Share
 document.getElementById('share-btn').addEventListener('click',()=>{
@@ -439,7 +563,7 @@ function renderEquipment(){
     const meta = slug && window.NH_EQUIPMENT[slug] && window.NH_EQUIPMENT[slug][slot];
     const lbl = SLOT_LABELS[slot];
     const iconHtml = meta
-      ? `<img src="${A.itemAssetPath(slot, slug)}" alt="">`
+      ? A.plateIcon(slot, slug, { size: 56 })
       : `<span style="font-size:24px;opacity:.4">${lbl.icon}</span>`;
     const name = meta ? meta.name.en : 'Empty';
     const desc = meta ? meta.desc : 'Tap to choose an item';
@@ -476,14 +600,14 @@ function openInventoryModal(slot){
     `Choose your ${SLOT_LABELS[slot].en} (${inv.length} owned)`;
   const grid = document.getElementById('inv-grid');
   if (!inv.length) {
-    grid.innerHTML = `<div class="inv-empty">No items yet. ${slot==='weapon'?'Clear prefecture quizzes':'Share prefecture pages'} to unlock!</div>`;
+    grid.innerHTML = `<div class="inv-empty">No items yet. Answer JLPT quizzes (gear drops every 3 correct), ${slot==='weapon'?'clear a prefecture battle':'or share a prefecture page'} to unlock!</div>`;
   } else {
     grid.innerHTML = inv.map(slug => {
       const meta = window.NH_EQUIPMENT[slug] && window.NH_EQUIPMENT[slug][slot];
       if (!meta) return '';
       const isEq = slug === equipped;
       return `<div class="inv-item rarity-${meta.rarity}${isEq?' equipped':''}" data-slug="${slug}" title="${meta.name.en} — ${meta.desc}">
-        <img src="${A.itemAssetPath(slot, slug)}" alt="">
+        ${A.plateIcon(slot, slug, { size: 64 })}
         <div class="inv-name">${meta.name.en}</div>
       </div>`;
     }).join('');

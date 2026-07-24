@@ -1,0 +1,51 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Tonkotsu Chef Geta</title>
+  
+  <!-- Left sandal -->
+  <g id="left-geta">
+    <!-- Wooden sole -->
+    <rect x="4" y="36" width="20" height="12" fill="#8b6f47"/>
+    <rect x="4" y="36" width="20" height="2" fill="#9b9285"/>
+    
+    <!-- Toe platform -->
+    <rect x="4" y="32" width="20" height="4" fill="#a0845a"/>
+    <rect x="6" y="28" width="16" height="4" fill="#8b6f47"/>
+    
+    <!-- Straps -->
+    <rect x="8" y="32" width="4" height="12" fill="#c9a876"/>
+    <rect x="16" y="32" width="4" height="12" fill="#c9a876"/>
+    
+    <!-- Strap details -->
+    <rect x="8" y="32" width="4" height="2" fill="#6b5a3f"/>
+    <rect x="16" y="32" width="4" height="2" fill="#6b5a3f"/>
+  </g>
+  
+  <!-- Right sandal -->
+  <g id="right-geta">
+    <!-- Wooden sole -->
+    <rect x="40" y="36" width="20" height="12" fill="#8b6f47"/>
+    <rect x="40" y="36" width="20" height="2" fill="#9b9285"/>
+    
+    <!-- Toe platform -->
+    <rect x="40" y="32" width="20" height="4" fill="#a0845a"/>
+    <rect x="42" y="28" width="16" height="4" fill="#8b6f47"/>
+    
+    <!-- Straps -->
+    <rect x="44" y="32" width="4" height="12" fill="#c9a876"/>
+    <rect x="52" y="32" width="4" height="12" fill="#c9a876"/>
+    
+    <!-- Strap details -->
+    <rect x="44" y="32" width="4" height="2" fill="#6b5a3f"/>
+    <rect x="52" y="32" width="4" height="2" fill="#6b5a3f"/>
+  </g>
+  
+  <!-- Wooden pegs/teeth (characteristic geta feature) -->
+  <rect x="10" y="48" width="4" height="4" fill="#6b5a3f"/>
+  <rect x="18" y="48" width="4" height="4" fill="#6b5a3f"/>
+  <rect x="46" y="48" width="4" height="4" fill="#6b5a3f"/>
+  <rect x="54" y="48" width="4" height="4" fill="#6b5a3f"/>
+  
+  <!-- Frame accent (rarity indicator) -->
+  <rect x="2" y="26" width="28" height="28" fill="none" stroke="#9b9285" stroke-width="2"/>
+  <rect x="34" y="26" width="28" height="28" fill="none" stroke="#9b9285" stroke-width="2"/>
+</svg>

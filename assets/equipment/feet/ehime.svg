@@ -1,37 +1,69 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-<title>Shimanami Cycling Shoes</title>
-<g id="shoes">
-<!-- Left shoe base -->
-<rect x="8" y="36" width="16" height="8" fill="#2a2a2a"/>
-<!-- Left shoe sole -->
-<rect x="8" y="44" width="16" height="4" fill="#1a1a1a"/>
-<!-- Left shoe accent stripe (island theme - blue) -->
-<rect x="8" y="38" width="16" height="2" fill="#4d8fbf"/>
-<!-- Left shoe reflector detail -->
-<rect x="12" y="36" width="4" height="2" fill="#87ceeb"/>
-<!-- Right shoe base -->
-<rect x="40" y="36" width="16" height="8" fill="#2a2a2a"/>
-<!-- Right shoe sole -->
-<rect x="40" y="44" width="16" height="4" fill="#1a1a1a"/>
-<!-- Right shoe accent stripe (island theme - blue) -->
-<rect x="40" y="38" width="16" height="2" fill="#4d8fbf"/>
-<!-- Right shoe reflector detail -->
-<rect x="48" y="36" width="4" height="2" fill="#87ceeb"/>
-<!-- Left shoe toe box highlight -->
-<rect x="8" y="40" width="4" height="2" fill="#4a4a4a"/>
-<!-- Right shoe toe box highlight -->
-<rect x="52" y="40" width="4" height="2" fill="#4a4a4a"/>
-<!-- Left cycling pedal contact point -->
-<rect x="20" y="42" width="2" height="2" fill="#ffb700"/>
-<!-- Right cycling pedal contact point -->
-<rect x="42" y="42" width="2" height="2" fill="#ffb700"/>
-<!-- Frame border - Left -->
-<rect x="6" y="34" width="2" height="16" fill="#4d8fbf"/>
-<!-- Frame border - Right -->
-<rect x="56" y="34" width="2" height="16" fill="#4d8fbf"/>
-<!-- Frame border - Top -->
-<rect x="6" y="34" width="52" height="2" fill="#4d8fbf"/>
-<!-- Frame border - Bottom -->
-<rect x="6" y="48" width="52" height="2" fill="#4d8fbf"/>
-</g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Shimanami Cycling Shoes (rare)</title>
+<rect x="8" y="8" width="12" height="4" fill="#2a1a0c"/>
+<rect x="36" y="8" width="12" height="4" fill="#2a1a0c"/>
+<rect x="4" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="8" height="4" fill="#c8a96e"/>
+<rect x="16" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="12" width="8" height="4" fill="#c8a96e"/>
+<rect x="40" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#e8d4a0"/>
+<rect x="12" y="16" width="4" height="4" fill="#c8a96e"/>
+<rect x="16" y="16" width="8" height="4" fill="#2a1a0c"/>
+<rect x="28" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="16" width="4" height="4" fill="#e8d4a0"/>
+<rect x="36" y="16" width="4" height="4" fill="#c8a96e"/>
+<rect x="40" y="16" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="8" height="4" fill="#e8d4a0"/>
+<rect x="16" y="20" width="4" height="4" fill="#c8a96e"/>
+<rect x="20" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="20" width="8" height="4" fill="#e8d4a0"/>
+<rect x="40" y="20" width="4" height="4" fill="#c8a96e"/>
+<rect x="44" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#a07840"/>
+<rect x="12" y="24" width="8" height="4" fill="#c8a96e"/>
+<rect x="20" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="24" width="4" height="4" fill="#a07840"/>
+<rect x="36" y="24" width="8" height="4" fill="#c8a96e"/>
+<rect x="44" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="12" height="4" fill="#2e6ea6"/>
+<rect x="20" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="28" width="12" height="4" fill="#2e6ea6"/>
+<rect x="44" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="4" height="4" fill="#2e6ea6"/>
+<rect x="12" y="32" width="8" height="4" fill="#5aaad4"/>
+<rect x="20" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="32" width="4" height="4" fill="#2e6ea6"/>
+<rect x="36" y="32" width="8" height="4" fill="#5aaad4"/>
+<rect x="44" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="12" height="4" fill="#2e6ea6"/>
+<rect x="20" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="36" width="12" height="4" fill="#2e6ea6"/>
+<rect x="44" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="12" height="4" fill="#a07840"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="40" width="12" height="4" fill="#a07840"/>
+<rect x="44" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#d4a030"/>
+<rect x="16" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="32" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="44" width="4" height="4" fill="#d4a030"/>
+<rect x="40" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="48" width="16" height="4" fill="#2a1a0c"/>
+<rect x="32" y="48" width="16" height="4" fill="#2a1a0c"/>
 </svg>

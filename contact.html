@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <link rel="canonical" href="https://www.nihongo-hub.com/contact.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","name":"Contact NihongoHub","url":"https://www.nihongo-hub.com/contact.html","mainEntity":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/","email":"support@nihongo-hub.com","contactPoint":{"@type":"ContactPoint","email":"support@nihongo-hub.com","contactType":"customer support","availableLanguage":["en","es","id","th","zh","ja"]}}}
+</script>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -37,7 +40,7 @@ p{margin-bottom:14px;color:#3a3125}
 .card h2{font-family:'Shippori Mincho',serif;font-size:19px;margin-bottom:10px}
 .email{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;text-decoration:none;font-weight:600;border-radius:8px;padding:13px 22px;margin-top:6px}
 label{display:block;font-size:13px;color:var(--muted);margin:12px 0 4px}
-input,textarea{width:100%;padding:11px 12px;border:1.5px solid var(--soft);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;background:var(--white)}
+input,textarea{width:100%;padding:11px 12px;border:1.5px solid var(--soft);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;background:var(--white)}/* ≥16px: iOS Safari zooms the page on focus below that */
 textarea{min-height:120px;resize:vertical}
 button.send{margin-top:14px;width:100%;background:var(--ink);color:#fff;border:none;border-radius:8px;padding:13px;font-weight:600;font-size:15px;cursor:pointer}
 button.send:hover{background:#2a2013}
@@ -70,7 +73,7 @@ footer a{color:var(--gold-l);text-decoration:none}
 
   <div class="card">
     <h2>Send a message</h2>
-    <form action="mailto:support@nihongo-hub.com" method="post" enctype="text/plain">
+    <form id="cform">
       <label for="cname">Name</label>
       <input id="cname" name="name" type="text" placeholder="Your name">
       <label for="cemail">Email</label>
@@ -79,9 +82,24 @@ footer a{color:var(--gold-l);text-decoration:none}
       <textarea id="cmsg" name="message" placeholder="How can we help?"></textarea>
       <button class="send" type="submit">Send →</button>
     </form>
-    <p class="note">This form opens your email app addressed to us. Prefer the button above for a direct email.</p>
+    <p class="note">This form opens your email app with your message ready to send. Prefer the button above for a direct email.</p>
   </div>
 </main>
 <footer><p>© 2026 NihongoHub · <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="affiliate.html">Affiliate disclosure</a></p></footer>
+<script>
+  // Build a mailto: link from the fields and open the user's email app.
+  // (A plain mailto+POST <form> silently goes nowhere, so we assemble it in JS.)
+  document.getElementById('cform').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = (document.getElementById('cname').value || '').trim();
+    var email = (document.getElementById('cemail').value || '').trim();
+    var msg = (document.getElementById('cmsg').value || '').trim();
+    var subject = 'NihongoHub inquiry' + (name ? ' from ' + name : '');
+    var body = msg + (email ? '\n\n— ' + name + ' (' + email + ')' : (name ? '\n\n— ' + name : ''));
+    window.location.href = 'mailto:support@nihongo-hub.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+  });
+</script>
 </body>
 </html>

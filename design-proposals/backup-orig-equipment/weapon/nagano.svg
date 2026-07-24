@@ -1,0 +1,40 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Matsumoto Castle Spear</title>
+  
+  <!-- Shaft -->
+  <rect x="28" y="8" width="8" height="40" fill="#8b6f47"/>
+  
+  <!-- Shaft highlight -->
+  <rect x="30" y="8" width="4" height="40" fill="#a0826d"/>
+  
+  <!-- Spear tip - main blade -->
+  <rect x="24" y="4" width="4" height="8" fill="#a056d2"/>
+  <rect x="28" y="4" width="8" height="4" fill="#a056d2"/>
+  <rect x="36" y="4" width="4" height="8" fill="#a056d2"/>
+  
+  <!-- Spear tip - center point -->
+  <rect x="30" y="0" width="4" height="4" fill="#d4a5ff"/>
+  
+  <!-- Left barb -->
+  <rect x="20" y="8" width="4" height="4" fill="#a056d2"/>
+  <rect x="20" y="12" width="4" height="4" fill="#8a3fb8"/>
+  
+  <!-- Right barb -->
+  <rect x="40" y="8" width="4" height="4" fill="#a056d2"/>
+  <rect x="40" y="12" width="4" height="4" fill="#8a3fb8"/>
+  
+  <!-- Blade detail - horizontal cross -->
+  <rect x="26" y="6" width="12" height="2" fill="#d4a5ff" opacity="0.8"/>
+  
+  <!-- Grip wrapping -->
+  <rect x="26" y="44" width="12" height="2" fill="#c4905c"/>
+  <rect x="26" y="48" width="12" height="2" fill="#c4905c"/>
+  
+  <!-- Pommel -->
+  <rect x="28" y="52" width="8" height="6" fill="#8a3fb8"/>
+  <rect x="30" y="54" width="4" height="2" fill="#d4a5ff"/>
+  
+  <!-- Rarity frame accent - corner highlights -->
+  <rect x="24" y="4" width="1" height="1" fill="#d4a5ff"/>
+  <rect x="39" y="4" width="1" height="1" fill="#d4a5ff"/>
+</svg>

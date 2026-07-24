@@ -1,47 +1,59 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-  <title>Ginzan Onsen Slippers</title>
-  
-  <!-- Left slipper base (wood platform) -->
-  <g id="left-slipper">
-    <!-- Sole -->
-    <rect x="4" y="36" width="20" height="8" fill="#8b7355"/>
-    <!-- Sole highlight -->
-    <rect x="4" y="36" width="20" height="4" fill="#a0845f"/>
-    <!-- Straps -->
-    <rect x="8" y="32" width="4" height="8" fill="#9b9285"/>
-    <rect x="16" y="32" width="4" height="8" fill="#9b9285"/>
-    <!-- Silver accent (ginzan theme) -->
-    <rect x="6" y="38" width="16" height="2" fill="#e8e8e8"/>
-    <rect x="8" y="44" width="12" height="2" fill="#d0d0d0"/>
-  </g>
-  
-  <!-- Right slipper base (wood platform) -->
-  <g id="right-slipper">
-    <!-- Sole -->
-    <rect x="40" y="36" width="20" height="8" fill="#8b7355"/>
-    <!-- Sole highlight -->
-    <rect x="40" y="36" width="20" height="4" fill="#a0845f"/>
-    <!-- Straps -->
-    <rect x="44" y="32" width="4" height="8" fill="#9b9285"/>
-    <rect x="52" y="32" width="4" height="8" fill="#9b9285"/>
-    <!-- Silver accent (ginzan theme) -->
-    <rect x="42" y="38" width="16" height="2" fill="#e8e8e8"/>
-    <rect x="44" y="44" width="12" height="2" fill="#d0d0d0"/>
-  </g>
-  
-  <!-- Shared decoration (hot-spring motif) -->
-  <g id="steam-accent">
-    <!-- Steam wisps left -->
-    <rect x="10" y="28" width="4" height="4" fill="#c9c1b5" opacity="0.7"/>
-    <rect x="12" y="24" width="4" height="4" fill="#d9d1c5" opacity="0.6"/>
-    <!-- Steam wisps right -->
-    <rect x="50" y="28" width="4" height="4" fill="#c9c1b5" opacity="0.7"/>
-    <rect x="48" y="24" width="4" height="4" fill="#d9d1c5" opacity="0.6"/>
-  </g>
-  
-  <!-- Frame border (rarity indicator) -->
-  <g id="frame-border" stroke="#9b9285" stroke-width="1" fill="none">
-    <rect x="2" y="20" width="28" height="28"/>
-    <rect x="34" y="20" width="28" height="28"/>
-  </g>
+<title>Ginzan Onsen Slippers (common)</title>
+<rect x="8" y="8" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="8" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="8" height="4" fill="#c8a878"/>
+<rect x="16" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="12" width="8" height="4" fill="#c8a878"/>
+<rect x="44" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="8" height="4" fill="#c8a878"/>
+<rect x="16" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="16" width="8" height="4" fill="#c8a878"/>
+<rect x="44" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="12" height="4" fill="#e8d0a0"/>
+<rect x="20" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="20" width="12" height="4" fill="#e8d0a0"/>
+<rect x="48" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="12" height="4" fill="#a07848"/>
+<rect x="20" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="24" width="12" height="4" fill="#a07848"/>
+<rect x="48" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="4" height="4" fill="#784830"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#784830"/>
+<rect x="20" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="28" width="4" height="4" fill="#784830"/>
+<rect x="40" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="44" y="28" width="4" height="4" fill="#784830"/>
+<rect x="48" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="16" height="4" fill="#2a1a0c"/>
+<rect x="36" y="32" width="16" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#6890a8"/>
+<rect x="16" y="40" width="4" height="4" fill="#b8c8d8"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="40" width="4" height="4" fill="#6890a8"/>
+<rect x="40" y="40" width="4" height="4" fill="#b8c8d8"/>
+<rect x="44" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#6890a8"/>
+<rect x="16" y="44" width="4" height="4" fill="#b8c8d8"/>
+<rect x="20" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="44" width="4" height="4" fill="#6890a8"/>
+<rect x="40" y="44" width="4" height="4" fill="#b8c8d8"/>
+<rect x="44" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="48" width="8" height="4" fill="#2a1a0c"/>
 </svg>

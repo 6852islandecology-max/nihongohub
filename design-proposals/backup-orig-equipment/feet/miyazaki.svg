@@ -1,0 +1,41 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Aoshima Surf Sandals</title>
+  
+  <!-- Left sandal -->
+  <g id="left-sandal">
+    <!-- Sole base -->
+    <rect x="4" y="36" width="20" height="12" fill="#8B7355"/>
+    
+    <!-- Washboard texture ridges -->
+    <rect x="4" y="36" width="20" height="2" fill="#6B5344"/>
+    <rect x="4" y="40" width="20" height="2" fill="#6B5344"/>
+    <rect x="4" y="44" width="20" height="2" fill="#6B5344"/>
+    
+    <!-- Strap base -->
+    <rect x="8" y="32" width="12" height="4" fill="#9b9285"/>
+    
+    <!-- Strap accent -->
+    <rect x="10" y="32" width="8" height="2" fill="#B5ADAA"/>
+  </g>
+  
+  <!-- Right sandal -->
+  <g id="right-sandal">
+    <!-- Sole base -->
+    <rect x="40" y="36" width="20" height="12" fill="#8B7355"/>
+    
+    <!-- Washboard texture ridges -->
+    <rect x="40" y="36" width="20" height="2" fill="#6B5344"/>
+    <rect x="40" y="40" width="20" height="2" fill="#6B5344"/>
+    <rect x="40" y="44" width="20" height="2" fill="#6B5344"/>
+    
+    <!-- Strap base -->
+    <rect x="44" y="32" width="12" height="4" fill="#9b9285"/>
+    
+    <!-- Strap accent -->
+    <rect x="46" y="32" width="8" height="2" fill="#B5ADAA"/>
+  </g>
+  
+  <!-- Decorative wave detail -->
+  <rect x="12" y="28" width="4" height="2" fill="#87CEEB"/>
+  <rect x="48" y="28" width="4" height="2" fill="#87CEEB"/>
+</svg>

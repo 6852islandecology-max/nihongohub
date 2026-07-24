@@ -1,37 +1,78 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-<title>Strawberry Field Cape</title>
-<g id="cape">
-<!-- Cape frame border -->
-<rect x="8" y="8" width="48" height="4" fill="#9b9285"/>
-<rect x="8" y="8" width="4" height="40" fill="#9b9285"/>
-<rect x="52" y="8" width="4" height="40" fill="#9b9285"/>
-<rect x="8" y="44" width="48" height="4" fill="#9b9285"/>
-
-<!-- Main cape body - red/maroon -->
-<rect x="12" y="12" width="40" height="32" fill="#c41e3a"/>
-
-<!-- Strawberry accent pattern - top section -->
-<rect x="16" y="16" width="8" height="8" fill="#d4534f"/>
-<rect x="40" y="16" width="8" height="8" fill="#d4534f"/>
-
-<!-- Seeds on strawberries -->
-<rect x="18" y="18" width="4" height="4" fill="#f4e4c1"/>
-<rect x="42" y="18" width="4" height="4" fill="#f4e4c1"/>
-
-<!-- Green leaf accent - center top -->
-<rect x="28" y="12" width="8" height="4" fill="#2d5016"/>
-
-<!-- Cape drape shading -->
-<rect x="12" y="24" width="4" height="16" fill="#a01729"/>
-<rect x="48" y="24" width="4" height="16" fill="#a01729"/>
-
-<!-- Center detail stripe -->
-<rect x="30" y="20" width="4" height="20" fill="#f4e4c1"/>
-
-<!-- Bottom berry clusters -->
-<rect x="20" y="36" width="4" height="4" fill="#d4534f"/>
-<rect x="40" y="36" width="4" height="4" fill="#d4534f"/>
-<rect x="28" y="36" width="4" height="4" fill="#d4534f"/>
-<rect x="32" y="36" width="4" height="4" fill="#d4534f"/>
-</g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Strawberry Field Cape (common)</title>
+<rect x="8" y="8" width="48" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="12" height="4" fill="#f5c5b8"/>
+<rect x="24" y="12" width="12" height="4" fill="#f5f0e8"/>
+<rect x="36" y="12" width="12" height="4" fill="#f5c5b8"/>
+<rect x="48" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="4" height="4" fill="#e8785a"/>
+<rect x="16" y="16" width="8" height="4" fill="#f5c5b8"/>
+<rect x="24" y="16" width="12" height="4" fill="#f5f0e8"/>
+<rect x="36" y="16" width="8" height="4" fill="#f5c5b8"/>
+<rect x="44" y="16" width="4" height="4" fill="#e8785a"/>
+<rect x="48" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#c0392b"/>
+<rect x="16" y="20" width="8" height="4" fill="#e8785a"/>
+<rect x="24" y="20" width="12" height="4" fill="#f5f0e8"/>
+<rect x="36" y="20" width="8" height="4" fill="#e8785a"/>
+<rect x="44" y="20" width="4" height="4" fill="#c0392b"/>
+<rect x="48" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="8" height="4" fill="#c0392b"/>
+<rect x="16" y="24" width="8" height="4" fill="#e8785a"/>
+<rect x="24" y="24" width="4" height="4" fill="#f5f0e8"/>
+<rect x="28" y="24" width="12" height="4" fill="#e8785a"/>
+<rect x="40" y="24" width="8" height="4" fill="#c0392b"/>
+<rect x="48" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="12" height="4" fill="#c0392b"/>
+<rect x="20" y="28" width="8" height="4" fill="#e8785a"/>
+<rect x="28" y="28" width="4" height="4" fill="#c0392b"/>
+<rect x="32" y="28" width="4" height="4" fill="#e8785a"/>
+<rect x="36" y="28" width="4" height="4" fill="#c0392b"/>
+<rect x="40" y="28" width="4" height="4" fill="#e8785a"/>
+<rect x="44" y="28" width="4" height="4" fill="#c0392b"/>
+<rect x="48" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="12" height="4" fill="#c0392b"/>
+<rect x="20" y="32" width="4" height="4" fill="#e8785a"/>
+<rect x="24" y="32" width="4" height="4" fill="#c0392b"/>
+<rect x="28" y="32" width="4" height="4" fill="#e8785a"/>
+<rect x="32" y="32" width="4" height="4" fill="#c0392b"/>
+<rect x="36" y="32" width="4" height="4" fill="#e8785a"/>
+<rect x="40" y="32" width="8" height="4" fill="#c0392b"/>
+<rect x="48" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="12" height="4" fill="#c0392b"/>
+<rect x="24" y="36" width="4" height="4" fill="#4aaa45"/>
+<rect x="28" y="36" width="4" height="4" fill="#c0392b"/>
+<rect x="32" y="36" width="4" height="4" fill="#4aaa45"/>
+<rect x="36" y="36" width="4" height="4" fill="#c0392b"/>
+<rect x="40" y="36" width="4" height="4" fill="#4aaa45"/>
+<rect x="44" y="36" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="8" height="4" fill="#c0392b"/>
+<rect x="20" y="40" width="4" height="4" fill="#4aaa45"/>
+<rect x="24" y="40" width="4" height="4" fill="#c0392b"/>
+<rect x="28" y="40" width="4" height="4" fill="#4aaa45"/>
+<rect x="32" y="40" width="4" height="4" fill="#c0392b"/>
+<rect x="36" y="40" width="4" height="4" fill="#4aaa45"/>
+<rect x="40" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="8" height="4" fill="#c0392b"/>
+<rect x="24" y="44" width="4" height="4" fill="#4aaa45"/>
+<rect x="28" y="44" width="4" height="4" fill="#c0392b"/>
+<rect x="32" y="44" width="4" height="4" fill="#4aaa45"/>
+<rect x="36" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="24" y="48" width="8" height="4" fill="#c0392b"/>
+<rect x="32" y="48" width="4" height="4" fill="#4aaa45"/>
+<rect x="36" y="48" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="52" width="8" height="4" fill="#c0392b"/>
+<rect x="32" y="52" width="8" height="4" fill="#2a1a0c"/>
+<rect x="24" y="56" width="12" height="4" fill="#2a1a0c"/>
 </svg>

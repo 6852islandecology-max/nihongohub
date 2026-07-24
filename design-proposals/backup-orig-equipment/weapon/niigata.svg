@@ -1,0 +1,18 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Sake Brewery Hammer</title>
+<g id="sake_brewery_hammer">
+<rect x="20" y="8" width="24" height="12" fill="#8B6F47"/>
+<rect x="24" y="4" width="16" height="8" fill="#A0826D"/>
+<rect x="28" y="0" width="8" height="4" fill="#C4A57B"/>
+<rect x="20" y="20" width="4" height="32" fill="#5C4033"/>
+<rect x="24" y="20" width="16" height="4" fill="#6B4423"/>
+<rect x="16" y="24" width="32" height="4" fill="#4d8fbf"/>
+<rect x="12" y="28" width="8" height="12" fill="#6B5B50"/>
+<rect x="44" y="28" width="8" height="12" fill="#6B5B50"/>
+<rect x="20" y="40" width="4" height="16" fill="#3D2817"/>
+<rect x="40" y="40" width="4" height="16" fill="#3D2817"/>
+<rect x="16" y="52" width="32" height="4" fill="#4d8fbf"/>
+<rect x="20" y="56" width="24" height="4" fill="#5C4033"/>
+<rect x="28" y="60" width="8" height="4" fill="#4d8fbf"/>
+</g>
+</svg>

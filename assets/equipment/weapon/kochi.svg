@@ -1,53 +1,55 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Sakamoto Ryoma Revolver</title>
-  
-  <!-- Barrel -->
-  <rect x="24" y="20" width="20" height="4" fill="#2a2a2a"/>
-  <rect x="24" y="20" width="20" height="1" fill="#e0a634"/>
-  
-  <!-- Cylinder -->
-  <rect x="20" y="22" width="8" height="8" fill="#4a4a4a"/>
-  <rect x="20" y="22" width="8" height="1" fill="#e0a634"/>
-  <rect x="20" y="28" width="8" height="1" fill="#e0a634"/>
-  
-  <!-- Cylinder detail (chambers) -->
-  <rect x="21" y="24" width="2" height="2" fill="#1a1a1a"/>
-  <rect x="25" y="24" width="2" height="2" fill="#1a1a1a"/>
-  <rect x="21" y="27" width="2" height="2" fill="#1a1a1a"/>
-  <rect x="25" y="27" width="2" height="2" fill="#1a1a1a"/>
-  
-  <!-- Trigger guard -->
-  <rect x="16" y="26" width="4" height="6" fill="#3a3a3a"/>
-  <rect x="16" y="26" width="4" height="1" fill="#e0a634"/>
-  
-  <!-- Trigger -->
-  <rect x="17" y="29" width="2" height="3" fill="#2a2a2a"/>
-  
-  <!-- Grip (handle) -->
-  <rect x="12" y="30" width="8" height="12" fill="#5c3d2e"/>
-  <rect x="12" y="30" width="8" height="1" fill="#e0a634"/>
-  <rect x="12" y="41" width="8" height="1" fill="#8b6f47"/>
-  
-  <!-- Grip wood grain detail -->
-  <rect x="13" y="33" width="1" height="4" fill="#4a2f24"/>
-  <rect x="16" y="34" width="1" height="5" fill="#4a2f24"/>
-  <rect x="18" y="32" width="1" height="6" fill="#4a2f24"/>
-  
-  <!-- Hammer -->
-  <rect x="18" y="16" width="4" height="6" fill="#3a3a3a"/>
-  <rect x="19" y="14" width="2" height="2" fill="#e0a634"/>
-  
-  <!-- Rear sight -->
-  <rect x="40" y="18" width="2" height="4" fill="#3a3a3a"/>
-  <rect x="40" y="18" width="2" height="1" fill="#e0a634"/>
-  
-  <!-- Front sight -->
-  <rect x="42" y="19" width="2" height="3" fill="#3a3a3a"/>
-  <rect x="42" y="19" width="2" height="1" fill="#e0a634"/>
-  
-  <!-- Muzzle detail -->
-  <rect x="43" y="20" width="1" height="4" fill="#1a1a1a"/>
-  
-  <!-- Legendary frame accent -->
-  <rect x="12" y="30" width="8" height="12" fill="none" stroke="#e0a634" stroke-width="1"/>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Sakamoto Ryoma Revolver (legendary)</title>
+<rect x="28" y="8" width="8" height="4" fill="#2a1a0c"/>
+<rect x="24" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="12" width="8" height="4" fill="#8b6914"/>
+<rect x="36" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="16" width="4" height="4" fill="#8b6914"/>
+<rect x="28" y="16" width="8" height="4" fill="#c49a2a"/>
+<rect x="36" y="16" width="4" height="4" fill="#8b6914"/>
+<rect x="40" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="4" height="4" fill="#8b6914"/>
+<rect x="24" y="20" width="4" height="4" fill="#c49a2a"/>
+<rect x="28" y="20" width="4" height="4" fill="#f0d060"/>
+<rect x="32" y="20" width="4" height="4" fill="#c49a2a"/>
+<rect x="36" y="20" width="4" height="4" fill="#8b6914"/>
+<rect x="40" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="24" width="4" height="4" fill="#8b6914"/>
+<rect x="24" y="24" width="8" height="4" fill="#c49a2a"/>
+<rect x="32" y="24" width="4" height="4" fill="#8b6914"/>
+<rect x="36" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="28" width="4" height="4" fill="#8b6914"/>
+<rect x="24" y="28" width="4" height="4" fill="#c49a2a"/>
+<rect x="28" y="28" width="12" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="32" width="4" height="4" fill="#8b6914"/>
+<rect x="24" y="32" width="4" height="4" fill="#c49a2a"/>
+<rect x="28" y="32" width="4" height="4" fill="#8b6914"/>
+<rect x="32" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="4" height="4" fill="#8b6914"/>
+<rect x="24" y="36" width="4" height="4" fill="#c49a2a"/>
+<rect x="28" y="36" width="4" height="4" fill="#8b6914"/>
+<rect x="32" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#5a3a1a"/>
+<rect x="16" y="40" width="4" height="4" fill="#8b6914"/>
+<rect x="20" y="40" width="4" height="4" fill="#9e7a4a"/>
+<rect x="24" y="40" width="4" height="4" fill="#8b6914"/>
+<rect x="28" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#5a3a1a"/>
+<rect x="16" y="44" width="4" height="4" fill="#d4b896"/>
+<rect x="20" y="44" width="4" height="4" fill="#9e7a4a"/>
+<rect x="24" y="44" width="4" height="4" fill="#8b6914"/>
+<rect x="28" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="48" width="8" height="4" fill="#5a3a1a"/>
+<rect x="20" y="48" width="4" height="4" fill="#9e7a4a"/>
+<rect x="24" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="52" width="12" height="4" fill="#2a1a0c"/>
 </svg>

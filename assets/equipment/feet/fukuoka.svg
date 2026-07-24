@@ -1,51 +1,75 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Tonkotsu Chef Geta</title>
-  
-  <!-- Left sandal -->
-  <g id="left-geta">
-    <!-- Wooden sole -->
-    <rect x="4" y="36" width="20" height="12" fill="#8b6f47"/>
-    <rect x="4" y="36" width="20" height="2" fill="#9b9285"/>
-    
-    <!-- Toe platform -->
-    <rect x="4" y="32" width="20" height="4" fill="#a0845a"/>
-    <rect x="6" y="28" width="16" height="4" fill="#8b6f47"/>
-    
-    <!-- Straps -->
-    <rect x="8" y="32" width="4" height="12" fill="#c9a876"/>
-    <rect x="16" y="32" width="4" height="12" fill="#c9a876"/>
-    
-    <!-- Strap details -->
-    <rect x="8" y="32" width="4" height="2" fill="#6b5a3f"/>
-    <rect x="16" y="32" width="4" height="2" fill="#6b5a3f"/>
-  </g>
-  
-  <!-- Right sandal -->
-  <g id="right-geta">
-    <!-- Wooden sole -->
-    <rect x="40" y="36" width="20" height="12" fill="#8b6f47"/>
-    <rect x="40" y="36" width="20" height="2" fill="#9b9285"/>
-    
-    <!-- Toe platform -->
-    <rect x="40" y="32" width="20" height="4" fill="#a0845a"/>
-    <rect x="42" y="28" width="16" height="4" fill="#8b6f47"/>
-    
-    <!-- Straps -->
-    <rect x="44" y="32" width="4" height="12" fill="#c9a876"/>
-    <rect x="52" y="32" width="4" height="12" fill="#c9a876"/>
-    
-    <!-- Strap details -->
-    <rect x="44" y="32" width="4" height="2" fill="#6b5a3f"/>
-    <rect x="52" y="32" width="4" height="2" fill="#6b5a3f"/>
-  </g>
-  
-  <!-- Wooden pegs/teeth (characteristic geta feature) -->
-  <rect x="10" y="48" width="4" height="4" fill="#6b5a3f"/>
-  <rect x="18" y="48" width="4" height="4" fill="#6b5a3f"/>
-  <rect x="46" y="48" width="4" height="4" fill="#6b5a3f"/>
-  <rect x="54" y="48" width="4" height="4" fill="#6b5a3f"/>
-  
-  <!-- Frame accent (rarity indicator) -->
-  <rect x="2" y="26" width="28" height="28" fill="none" stroke="#9b9285" stroke-width="2"/>
-  <rect x="34" y="26" width="28" height="28" fill="none" stroke="#9b9285" stroke-width="2"/>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Tonkotsu Chef Geta (common)</title>
+<rect x="8" y="8" width="20" height="4" fill="#2a1a0c"/>
+<rect x="36" y="8" width="20" height="4" fill="#2a1a0c"/>
+<rect x="8" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="4" height="4" fill="#c8935a"/>
+<rect x="16" y="12" width="8" height="4" fill="#a06b38"/>
+<rect x="24" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="12" width="4" height="4" fill="#c8935a"/>
+<rect x="44" y="12" width="8" height="4" fill="#a06b38"/>
+<rect x="52" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="8" height="4" fill="#c8935a"/>
+<rect x="20" y="16" width="4" height="4" fill="#a06b38"/>
+<rect x="24" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="16" width="8" height="4" fill="#c8935a"/>
+<rect x="48" y="16" width="4" height="4" fill="#a06b38"/>
+<rect x="52" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="8" height="4" fill="#c8935a"/>
+<rect x="20" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="20" width="8" height="4" fill="#c8935a"/>
+<rect x="48" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="8" height="4" fill="#a06b38"/>
+<rect x="20" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="24" width="8" height="4" fill="#a06b38"/>
+<rect x="48" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="4" height="4" fill="#5a3010"/>
+<rect x="12" y="28" width="4" height="4" fill="#7a4e22"/>
+<rect x="16" y="28" width="4" height="4" fill="#a06b38"/>
+<rect x="20" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="28" width="4" height="4" fill="#5a3010"/>
+<rect x="40" y="28" width="4" height="4" fill="#7a4e22"/>
+<rect x="44" y="28" width="4" height="4" fill="#a06b38"/>
+<rect x="48" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="4" height="4" fill="#5a3010"/>
+<rect x="12" y="32" width="8" height="4" fill="#7a4e22"/>
+<rect x="20" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="32" width="4" height="4" fill="#5a3010"/>
+<rect x="40" y="32" width="8" height="4" fill="#7a4e22"/>
+<rect x="48" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="4" height="4" fill="#e8e0c8"/>
+<rect x="12" y="36" width="12" height="4" fill="#f0c87a"/>
+<rect x="24" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="36" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="36" width="4" height="4" fill="#e8e0c8"/>
+<rect x="44" y="36" width="8" height="4" fill="#f0c87a"/>
+<rect x="52" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="4" height="4" fill="#d4a055"/>
+<rect x="12" y="40" width="4" height="4" fill="#e8e0c8"/>
+<rect x="16" y="40" width="4" height="4" fill="#d4a055"/>
+<rect x="20" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="40" width="4" height="4" fill="#d4a055"/>
+<rect x="44" y="40" width="4" height="4" fill="#e8e0c8"/>
+<rect x="48" y="40" width="4" height="4" fill="#f0c87a"/>
+<rect x="52" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="12" height="4" fill="#7a4e22"/>
+<rect x="20" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="36" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="40" y="44" width="8" height="4" fill="#7a4e22"/>
+<rect x="48" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="48" width="20" height="4" fill="#2a1a0c"/>
+<rect x="36" y="48" width="20" height="4" fill="#2a1a0c"/>
 </svg>

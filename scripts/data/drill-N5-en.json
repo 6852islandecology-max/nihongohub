@@ -1,0 +1,810 @@
+{
+  "level": "N5",
+  "lang": "en",
+  "count": 73,
+  "items": [
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>に行きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がっこ",
+        "がくしゃ",
+        "がくせい"
+      ],
+      "explanation": "がっこう is the standard N5 reading for 学校 (school), the everyday place where students study. がっこ (missing the final う sound) is an incomplete/incorrect reading that does not match the proper two-mora noun form. がくしゃ (scholar) is a different kanji compound using 学 but with a completely different meaning and reading, unrelated to a school building. がくせい (student) uses 学 but is an entirely separate word with a different final kanji (生 instead of 校) and refers to a person, not a place."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "食べ (tabe) is the correct stem form here because 朝食 (breakfast) is food that must be eaten; 食べます means 'eat' and is the natural verb for consuming a meal. 飲み (nomi, 'drink') is wrong because while you can drink beverages, 朝食 (a meal) is not typically drunk—you eat it. 読み (yomi, 'read') is wrong because breakfast is not something you read; this verb applies to books and written material. 聞き (kiki, 'listen/hear') is wrong because breakfast is not something you listen to; this verb applies to sounds and information you hear."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこ",
+        "がくしゃ"
+      ],
+      "explanation": "がっこう is the standard reading of 学校, the compound of 学 (study) and 校 (school building), and is the everyday word for school in N5 Japanese. がくこう uses a non-standard on-reading for 学; while がく exists as a reading, this combination is not how the word is pronounced in modern Japanese. がっこ drops the final う sound and results in an incomplete word—a common mistake learners make when overgeneralizing short vowels. がくしゃ (scholar) is a real but different kanji compound using 学 with 者 (person), not 校, and would mean something entirely different in this sentence."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<u>学校</u>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がっこ",
+        "こうがく",
+        "がくせい"
+      ],
+      "explanation": "がっこう is the standard N5 reading for 学校 (school), a foundational noun in everyday Japanese. がっこ sounds like a partial or childish abbreviation, not the formal reading. こうがく (工学, engineering) is a different kanji compound with a completely different meaning, though it shares the こう sound. がくせい (学生, student) is a real word but uses different kanji (生) and refers to a person, not a place, making it semantically and grammatically wrong in this sentence that requires a destination noun after に."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行く</u>前に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を<ruby>食べ<rt>たべ</rt></ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "いく",
+      "distractors": [
+        "ゆく",
+        "こう",
+        "あく"
+      ],
+      "explanation": "いく (行く) is the standard N5 reading for this everyday verb meaning 'to go'. ゆく is an archaic or literary variant of 行く, not used in modern polite conversation; a learner might confuse it if unfamiliar with stylistic registers. こう (幸う or 仰う) are different kanji with different meanings and are not readings of 行く. あく (開く, meaning 'to open') is a different verb entirely; although it uses the same on'yomi sound, it is a separate kanji and fits no sense here."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "飲みます (のみます, 'to drink') is the correct answer because 牛乳 (milk) is a liquid and must be drunk, not eaten or perceived in other ways. 食べます (たべます, 'to eat') is wrong because milk is a beverage, not solid food—you drink it, you do not eat it. 見ます (みます, 'to look/watch') is incorrect because it means to perceive with the eyes, which makes no sense with drinking milk as a daily action. 聞きます (ききます, 'to listen/hear') is wrong because it means to perceive with the ears, and has no connection to consuming milk."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行</u>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "いき",
+      "distractors": [
+        "ゆき",
+        "こう",
+        "いく"
+      ],
+      "explanation": "The correct answer いき is the stem form of the verb 行く (to go) used before ます in polite present tense. The sentence structure 「へ行きます」(go to) requires the い-column stem いき, which combines with ます to form いきます. The distractor ゆき (yuki, snow) is a homophone but a completely different word—a noun referring to snow, not the verb stem needed here. The distractor こう (kou) is the on-reading of 行 in isolation, but it cannot be used as a verb stem before ます; こうします (do this way) requires a different structure. The distractor いく (iku) is the dictionary form of the verb, but after へ and before ます the stem form いき is required, not the dictionary form."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>友達<rt>ともだち</rt></ruby>ができました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "にいしい"
+      ],
+      "explanation": "あたらしい is the standard い-adjective reading for 新しい, meaning 'new,' and correctly modifies the noun 友達 (friend) in this sentence. しんしい is a plausible-sounding Sino-Japanese reading but is not the actual reading for this kanji compound in adjective form. あらたしい sounds similar to the correct answer but misplaces the pitch and mora, and is not a real word. にいしい is a wrong reading that confuses the kanji 新 with an unrelated pronunciation and does not match any standard Japanese reading."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "見"
+      ],
+      "explanation": "飲み (のみ) is the correct stem form because 牛乳を飲む (to drink milk) is the natural everyday collocation in Japanese; the sentence describes a daily habit of drinking milk. 食べ (たべ) means 'to eat,' which is wrong because you drink milk, not eat it—wrong verb entirely. 読み (よみ) means 'to read,' which makes no sense with 牛乳—you cannot read milk. 見 (み) means 'to see/watch,' also unrelated to milk and an action you perform with your eyes, not your mouth."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>朝食</u>を<ruby>食べ<rt>たべ</rt></ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "朝食 (ちょうしょく) is the standard N5 compound noun meaning \"breakfast,\" combining 朝 (morning) and 食 (meal/food). It is the only natural, dictionary-standard reading for this common everyday word. あさしょく (asa-shoku) is a plausible-sounding combination but is not the actual reading — while 朝 can be read as あさ, the compound 朝食 has the Sino-Japanese reading ちょう, not the native reading. ちょうたべ is wrong because 食 in the noun 朝食 is never read as たべ (that is the verb stem 食べる); the kanji compound uses the Sino-Japanese reading しょく. あさたべ mixes the native reading of 朝 with the verb stem of 食べる, but 朝食 is a noun, not a verb phrase, so this reading is ungrammatical and does not exist."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>朝<rt>あさ</rt></ruby>は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "飲み (のみ) is correct because 牛乳 (milk) is a liquid that is always consumed by drinking, not eating or any other action — this is the standard N5 collocation. 食べ (たべ) means 'eat' and is used for solid food, not drinks, making it wrong here despite being an N5 verb. 見 (み, 'look/watch') is unrelated to consuming liquids and makes no sense in this context. 聞き (きき, 'listen/hear') is also unrelated to food or drink and is grammatically wrong for this situation."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がっこく",
+        "がくしょう",
+        "こうがく"
+      ],
+      "explanation": "がっこう is the standard N5 reading for 学校 (school), combining the common kanji 学 (learning) and 校 (school building). がっこく sounds like a real word but is not a valid reading of 学校—it would mean 'country' (国 uses this sound). がくしょう combines incorrect readings of each kanji (がく is right for 学, but しょう is wrong for 校; the correct on-reading of 校 is こう). こうがく reverses the kanji order mentally and uses an incorrect pairing—こう alone is not the standard reading for 学校 as a compound."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "見ます"
+      ],
+      "explanation": "飲みます (のみます, 'to drink') is correct because 牛乳 (ぎゅうにゅう, 'milk') is a liquid that you drink. 食べます means 'to eat' and is used for solid food, not liquids — milk cannot be eaten. 読みます means 'to read' and applies only to written material like books or newspapers, not beverages. 見ます means 'to watch/see' and is used for visual activities, not consuming liquids."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>食<rt>しょく</rt></ruby>を（　）ます。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "聞き"
+      ],
+      "explanation": "食べ (tabé, 'eat') is correct because 朝食 (morning meal) is food that must be eaten; the polite present form 食べます naturally follows. 飲み (のみ, 'drink') is wrong because while you can drink some breakfast items, 朝食 typically refers to a full meal you eat, not primarily drink. 見 (み, 'look/watch') is semantically unrelated to consuming food. 聞き (きき, 'listen/hear') has no connection to breakfast consumption and produces an unnatural sentence."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>は<u>九時</u>に<ruby>始<rt>はじ</rt></ruby>まります。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "くじ",
+      "distractors": [
+        "きゅうじ",
+        "ここじ",
+        "のじ"
+      ],
+      "explanation": "くじ is the correct reading: 九 (nine) + 時 (o'clock) uses the standard on'yomi 「く」 for 九 in time expressions, making 「くじ」 the natural everyday way to say '9 o'clock' in Japanese. きゅうじ sounds plausible because 九 does have the on'yomi reading 「きゅう」, but that reading is not used in time compounds; instead, 九時 always uses 「く」 in this context. ここじ is wrong because 九 is never read as 「ここ」; this confuses 九 with 八 (which can sound like 「ここ」 in some dialects, but 九 does not). のじ is wrong because 九 has no reading 「の」; this may confuse it with other kanji or be a random distractor that does not match any standard reading."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby> <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "読み"
+      ],
+      "explanation": "飲み (drink) is the correct verb stem here because 牛乳 (milk) is a liquid you drink, not eat, see, or read. 食べ (たべ – to eat) is wrong because milk is drunk, not eaten, even though both are consumption verbs. 見 (み – to see/watch) is wrong because observing milk is not the natural action in this daily routine context. 読み (よみ – to read) is wrong because milk is not a text object and makes no sense with the object particle を."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>友達<rt>ともだち</rt></ruby>に<u>会</u>います。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あいます",
+      "distractors": [
+        "あいた",
+        "かいます",
+        "けんます"
+      ],
+      "explanation": "あいます (present tense of 会う 'to meet') is correct because the sentence uses ます form and the meaning is \"I will meet my friend tomorrow at school.\" あいた (past tense of 会う) is wrong here because the sentence is in present/future, not past. かいます (reading a different kanji 買う 'to buy') is wrong because it changes the meaning entirely and does not fit the context of meeting a friend. けんます is not a real word and sounds like a misreading; no common kanji 会 reads as けん in this context."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "飲み (のみ) is the correct stem form of 飲む, meaning 'to drink', which is the natural and only appropriate action one takes with milk (牛乳). This sentence uses the ます-form pattern 「（　）ます」, so the stem form without conjugation is required. 食べ (たべ) means 'to eat' and although milk can technically be consumed, 飲む is the standard and idiomatic collocation with 牛乳; using 食べ would sound unnatural. 見 (み) means 'to look/watch', which has no semantic link to milk and makes no sense in the context of a daily morning routine with a beverage. 聞き (きき) means 'to listen/hear', which is completely unrelated to milk and does not fit the ます-form construction here since it would require the stem 聞く to become 聞き."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb that fits the context.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "見"
+      ],
+      "explanation": "飲み (のみ) meaning 'drink' is the correct answer because 牛乳 (milk) is a beverage that is consumed by drinking, not eating or any other action. The stem form 飲み combines with ます to create 飲みます (drink habitually/daily). 食べ (たべ, 'eat') is grammatically compatible with the ます form but semantically wrong—milk is drunk, not eaten. 読み (よみ, 'read') refers to reading written text, which makes no sense with milk as the object. 見 (み, 'watch/look') refers to visual observation, also incompatible with consuming a beverage."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>食<rt>しょく</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "食べ (tabе) — 'eat' — is the correct stem form because 朝食 (breakfast) is a solid food that you eat, not drink or listen to. The sentence describes a daily routine: 'Before going to school every day, I eat breakfast.' 飲み (nomu, 'drink') is plausible contextually (you can drink coffee with breakfast), but the direct object 朝食 (breakfast as a meal) collocates with 食べる, not 飲む. 読み (yomu, 'read') has no connection to breakfast and makes nonsensical meaning ('read breakfast'). 聞き (kiku, 'listen') also produces nonsense and is unrelated to food routines."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "飲んで",
+      "distractors": [
+        "食べて",
+        "見て",
+        "聞いて"
+      ],
+      "explanation": "飲んで (のんで, 'drink and/after drinking') is correct because 牛乳 (milk) is a liquid that you drink, and the te-form here shows a sequence of actions—drinking milk before going to school. 食べて (たべて, 'eat and') is wrong because milk is drunk, not eaten, even though 食べる is a common daily action. 見て (みて, 'look and') is wrong because you do not 'look' at milk as a primary action before school; the verb does not fit the typical meaning of 牛乳. 聞いて (きいて, 'listen and') is wrong because you cannot perform this action with milk; it is not a possible collocation with 牛乳."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "読み"
+      ],
+      "explanation": "食べ (tabé) is the correct stem form here because 朝食 (breakfast) is food that you eat, and the particle を marks a direct object of consumption. The sentence structure 「（　）ます」requires the verb stem, so 「食べます」(I eat breakfast) is the natural, everyday phrase. 飲み (のみ, to drink) is the wrong verb for solid food like breakfast—drinks require 飲む, not 食べる. 見 (み, to see/watch) and 読み (よみ, to read) are completely inappropriate here; breakfast is eaten, not watched or read."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>本<rt>ほん</rt></ruby>を<ruby>読み<rt>よみ</rt></ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたらい",
+        "にいしい"
+      ],
+      "explanation": "The correct answer あたらしい is the standard reading of 新しい (new), an い-adjective commonly used to describe objects or things that have recently appeared or been made. The distractor しんしい uses the on-reading 新(しん) but applies an incorrect suffix and is not a real adjective form in Japanese. The distractor あたらい is the kun-reading stem あたら- but omits the い-adjective suffix い, leaving only the root form which cannot stand alone as a predicate in polite speech. The distractor にいしい is a sound-alike that might appeal to learners unfamiliar with the kanji, but にいしい is not a valid Japanese word and has no connection to the meaning of 新しい."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>友達</u>と<ruby>遊<rt>あそ</rt></ruby>びます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ともだち",
+      "distractors": [
+        "ゆうたち",
+        "ともたち",
+        "ゆうだち"
+      ],
+      "explanation": "友達 (ともだち) is the standard N5 word for 'friend' and is read with the on'yomi 友(ゆう) + the kun'yomi 達(たち) to form the compound. ゆうたち is a false reading that misapplies the on'yomi of 友 to an incorrect pairing with 達. ともたち incorrectly substitutes the kun'yomi of 友 (とも) with the kun'yomi of 達 (たち), which is a plausible-sounding mistake but breaks the standard compound reading. ゆうだち (yuudachi, meaning 'sudden summer rainstorm') is a real N3+ word using different kanji (夕立), so it is a tempting sound-alike distractor but is not the correct reading here."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "見"
+      ],
+      "explanation": "飲み (to drink) is correct here because 牛乳 (milk) is a beverage and the natural collocation in Japanese is 牛乳を飲む (drink milk). 食べ (たべ, to eat) is wrong because milk is drunk, not eaten—食べる is used for solid food. 読み (よみ, to read) is wrong because it means to read text or books, which makes no sense with milk. 見 (み, to see/watch) is wrong because it means to look at or watch something, not to consume milk."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>の<u>先生</u>に<ruby>会<rt>あ</rt></ruby>います。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "せんせい",
+      "distractors": [
+        "さきせい",
+        "せんじ",
+        "さんせい"
+      ],
+      "explanation": "The correct reading is せんせい (teacher), a fundamental N5 noun formed by combining 先 (sen, before/ahead) and 生 (sei/shosei, student/life). The word refers to someone who stands ahead of students to guide them. The distractor さきせい (saki-sei) misapplies the reading さき to 先, which is not the standard reading in this compound. The distractor せんじ (sen-ji) uses an incorrect reading じ for 生, which is wrong—生 never reads as じ in basic compounds at this level. The distractor さんせい (san-sei) incorrectly reads 先 as さん, which is not a valid reading for this kanji; さん is a different kanji (三, meaning three) or a suffix for names/titles."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は毎日<u>学校</u>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がっこ",
+        "がくしょう",
+        "がくせい"
+      ],
+      "explanation": "The correct answer is がっこう because 学校 is a common N5 noun meaning 'school' and is always read as a two-morpheme compound: がく + こう. The first distractor がっこ omits the final う sound, which is essential to complete the standard reading of 校 (こう) in this compound. The second distractor がくしょう uses しょう, which is an incorrect reading of 校; while しょう appears in other compounds like 商店, it does not apply here. The third distractor がくせい (student) is a real N5 word but uses a completely different kanji (生) for the final morpheme and refers to a person, not a place, making it semantically wrong in this 'go to school' sentence."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は毎<ruby>日<rt>にち</rt></ruby><u>学校</u>に行きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこ",
+        "こうがく"
+      ],
+      "explanation": "がっこう is the standard reading of 学校 (school), the most common N5 compound referring to an educational institution. がくこう sounds plausible because both kanji have common readings (学=がく, 校=こう), but this is not the correct compound reading. がっこ drops the final う sound, creating an incomplete pronunciation that is not used in modern Japanese. こうがく reverses the kanji order (校学 instead of 学校) and gives a different meaning (engineering or study of structure), so even if the reading were correct, the word would be wrong."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は毎<ruby>日<rt>にち</rt></ruby><u>学校</u>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこ",
+        "がっこり"
+      ],
+      "explanation": "The correct reading is がっこう. This is the standard N5 vocabulary word for 'school,' a fundamental everyday noun that combines 学 (study) + 校 (school building). The word appears in nearly all beginner textbooks and daily conversation. がくこう (distractor 1) uses an incorrect reading of 学; the correct on-reading here is がっ, not がく (which exists in other words like 学問 but not here in this compound). がっこ (distractor 2) is an incomplete reading—it omits the final う sound and does not form a real word; a learner might guess this by mishearing or dropping the final mora. がっこり (distractor 3) is not a real word; it looks like it could be an adverb ending (as in どんより or ぐっすり), but 学校 is a noun, not an adverbial form, and this reading has no meaning."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "飲み (のみ) is the correct stem form because 牛乳 (milk) is a liquid that you drink, and 「飲みます」is the natural collocation for consuming beverages in everyday Japanese. 食べ (たべ) means 'to eat' and is used for solid food, not drinks, making it wrong here despite being a common daily verb. 見 (み) means 'to look/watch' and has no connection to consuming milk. 聞き (きき) means 'to listen/hear' and is completely unrelated to the context of a morning beverage routine."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <ruby>前<rt>まえ</rt></ruby>に、<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the word that best completes the sentence.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "The correct answer 飲み (のみ、to drink) fits because milk (牛乳) is something you drink, not eat, read, or listen to. The verb 飲む is the natural choice for consuming beverages in everyday Japanese. 食べ (たべ、to eat) is wrong because while milk is food, the standard collocation for milk specifically is 飲む, not 食べる. 読み (よみ、to read) makes no sense—milk cannot be read. 聞き (きき、to listen/hear) is also nonsensical in this context—you do not listen to milk. A learner should recognize that only 飲み creates a natural, idiomatic sentence about a morning routine."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> コーヒーを（　）ます。",
+      "reading": "Choose the word that best fits the blank.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "飲み (のみ) is the correct stem form. 'Drink' is the natural action performed with a beverage like coffee every morning; 飲みます is the polite present form. 食べ (たべ) means 'eat,' which is wrong because you drink beverages, not eat them. 見 (み) means 'look/watch,' which makes no sense in the context of a morning beverage routine. 聞き (きき) means 'listen/hear,' which is unrelated to consuming coffee."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ（　）。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "見ます",
+        "飲みます"
+      ],
+      "explanation": "行きます (いきます, 'go') is correct because the sentence describes a daily routine of traveling TO school each morning, and 行く is the standard verb for movement toward a destination marked with へ. 来ます (くる, 'come') refers to movement toward the speaker, not away to school, so it is wrong in this context. 見ます (みる, 'watch/see') is an action verb unrelated to travel and makes no sense for getting to school. 飲みます (のむ, 'drink') is also unrelated to the act of going to school and creates a nonsensical sentence."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ <ruby>電車<rt>でんしゃ</rt></ruby>で（　）。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "乗ります",
+        "降ります"
+      ],
+      "explanation": "行きます (iku—to go) is correct because the sentence describes a daily routine of traveling to school by train, and 行く is the standard verb for going to a destination. 来ます (kuru—to come) is wrong here because it describes movement toward the speaker, not away from home to school. 乗ります (noru—to ride/board) is wrong because it means to get on a vehicle, not to travel to a place; you board a train but go to school. 降ります (oriru—to get off/descend) is wrong because it means to exit a vehicle, the opposite action of what someone does when starting a journey to school."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ <u>行く</u> <ruby>前<rt>まえ</rt></ruby>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ます。",
+      "reading": "Choose the word that fits the blank in this sentence about morning routine.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "聞き"
+      ],
+      "explanation": "食べ (tabé, 'eat') is the correct stem form here because the sentence structure is 「（　）ます」, which requires the verb stem. The action of consuming breakfast logically fits the context of daily routine before school. 飲み (nomí, 'drink') is a verb stem but wrong collocation — breakfast (朝食) is eaten, not drunk as a single action in this context. 見 (mi, 'watch/look') is a verb stem but semantically wrong — you do not watch breakfast; this describes a completely different action unrelated to consuming a meal. 聞き (kikí, 'listen/hear') is a verb stem but also semantically wrong — listening has no connection to eating breakfast, making it implausible in this daily routine sentence."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>朝食</u>を食べます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうくい",
+        "あさたべ"
+      ],
+      "explanation": "朝食 (ちょうしょく) is the standard N5 compound noun meaning \"breakfast\"—朝 (morning) + 食 (food/meal). The word is commonly used in everyday Japanese to refer to the first meal of the day. あさしょく is incorrect because although 朝 can be read as あさ in isolation, the compound 朝食 requires the reading ちょうしょく. ちょうくい is incorrect because 食 does not have a くい reading in this compound; this is a made-up distractor that confuses the second kanji's pronunciation. あさたべ is incorrect because it breaks the compound into a pseudo-phrase (morning + eat) rather than recognizing 朝食 as a single fixed noun with its own reading."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、いつも<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb that fits the context.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "飲みます (nomu/drink) is correct because 牛乳 (milk) is a beverage and the appropriate action is to drink it. This is a standard daily routine where you consume milk before school. 食べます (taberu/eat) is wrong because milk is drunk, not eaten—eat is used for solid foods like bread or fruit. 見ます (miru/see/watch) is incorrect because it means to look at or view something, which does not match the context of consuming milk. 聞きます (kiku/listen/ask) is wrong because it means to listen to or hear something, which has no logical connection to milk in a breakfast routine."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ<u>行く</u>前に<ruby>朝食<rt>ちょうしょく</rt></ruby>を<ruby>食べ<rt>たべ</rt></ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "いく",
+      "distractors": [
+        "ゆく",
+        "おこなう",
+        "たつ"
+      ],
+      "explanation": "いく (to go) is the standard N5 verb meaning \"to proceed to a location.\" The sentence describes a daily routine of eating breakfast before going to school, and いく is the natural, everyday reading for this context. ゆく (an alternative reading of 行く, meaning \"to go\") is technically a valid reading of the same kanji but is archaic or literary; at N5, いく is the only taught reading for this common verb in modern speech. おこなう (to carry out/conduct) is a different verb that uses the same kanji 行 but is wrong here because the sentence requires movement to a place (school), not performing an action. たつ (to stand) is an entirely different verb and kanji reading; it makes no sense in a sentence about going to school."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>電車<rt>でんしゃ</rt></ruby>で（　）。",
+      "reading": "Choose the word that fits the blank.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "乗ります",
+        "歩きます"
+      ],
+      "explanation": "行きます (いきます, 'go') is correct because the sentence describes a daily routine of traveling to school by train; 行く is the natural verb for moving toward a destination (school) from one's starting point. 来ます (くる, 'come') is wrong because it means movement toward the speaker, not toward school. 乗ります (のる, 'ride/board') is wrong because although riding a train is part of the action, the sentence structure with へ (destination particle) requires a verb of movement to that destination, not boarding. 歩きます (あるく, 'walk') is wrong because the sentence explicitly states travel by train (電車で), making 'walk' contradict the mode of transport."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きて、<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence about morning routine.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "読み"
+      ],
+      "explanation": "The correct answer 飲み (nomí, 'to drink') fits because 牛乳を（　）ます means 'drink milk,' and 飲む is the standard verb for consuming beverages. Since the blank precedes ます, it must be the i-form stem (飲み). The distractor 食べ (たべ, 'to eat') is the wrong verb for liquid; milk is drunk, not eaten. 見 (み, 'to see') is unrelated to consuming food or drink. 読み (よみ, 'to read') refers to written material, not beverages. Only 飲み produces a natural, grammatical sentence in this daily-routine context."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>朝<rt>あさ</rt></ruby> <ruby>六時<rt>ろくじ</rt></ruby> に <ruby>起き<rt>おき</rt></ruby>（　）。",
+      "reading": "Choose the correct verb form to complete the sentence.",
+      "correct": "ます",
+      "distractors": [
+        "ました",
+        "ません",
+        "ましょう"
+      ],
+      "explanation": "The correct answer is ます because the sentence describes a habitual action in the present tense ('every morning I wake up at 6 o'clock'). The verb stem 起き (oki) requires the polite present form ます to express a routine that happens regularly. ました (past tense) is wrong because it indicates a completed past action, not a habitual present one. ません (negative) reverses the meaning to 'I do not wake up', which contradicts the sense of the sentence. ましょう (volitional) means 'let's wake up' or 'shall I wake up', which is incorrect for describing an established daily habit."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>に<ruby>行き<rt>いき</rt></ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこお",
+        "がくしょう"
+      ],
+      "explanation": "がっこう is the standard reading of 学校 (school), a fundamental N5 noun. The first kanji 学 (gaku/study) combines with 校 (kou/school building) to form the everyday word for a place where students learn. がくこう applies an alternate on-reading to 学, but is not the correct pairing with 校 in this word. がっこお incorrectly applies an o-sound ending that does not exist in Japanese hiragana for this compound. がくしょう (gakushou) uses a real but unrelated kanji compound meaning study-hall or reading room, and does not fit the everyday meaning of 学校 in this sentence."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます。<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）から<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the verb that fits the context naturally.",
+      "correct": "食べます",
+      "distractors": [
+        "飲みます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "食べます (tabemasu, 'eat') is correct because 朝食 (chōshoku, 'breakfast/morning meal') is food that must be eaten before going to school. The sentence structure 'eat breakfast, then go to school' is a natural daily routine. 飲みます (nomimasu, 'drink') is wrong because although you can drink parts of breakfast, the direct object 朝食 (a complete meal) requires the verb 'eat,' not 'drink.' 読みます (yomimasu, 'read') is wrong because breakfast is not something you read; this verb takes different objects like 本 (book). 聞きます (kikimasu, 'listen/hear') is wrong because breakfast cannot be heard; this verb is used for sounds or information, not meals."
+    },
+    {
+      "question": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>先生<rt>せんせい</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたあしい",
+        "にいしい"
+      ],
+      "explanation": "あたらしい is the correct reading of 新しい. This is the standard い-adjective meaning 'new' or 'fresh,' formed by the kanji 新 (shin, 'new') + い suffix; it describes the teacher in the sentence. しんしい is incorrect because while 新 can be read as 'shin,' い-adjectives never double the final syllable before the い suffix — the reading must be あたらしい (with the vowel sequence あ-た-ら). あたあしい is wrong for the same reason: it adds an extra vowel and breaks the natural phonetic structure of the word. にいしい is wrong because に is not a valid reading of 新 in this context; に appears in other words like 荷 (cargo) but does not apply to the 'new' sense here."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>の<ruby>父<rt>ちち</rt></ruby>は毎日<u>会社</u>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "かいしゃ",
+      "distractors": [
+        "かいしゃく",
+        "あいしゃ",
+        "かいや"
+      ],
+      "explanation": "かいしゃ is the standard N5 reading for 会社 (company/workplace), and it is the natural object of the motion verb 行きます in the context of daily work routine. かいしゃく is a non-existent reading that confuses the on-yomi of 会 (かい) and a non-standard reading of 社. あいしゃ incorrectly applies the reading あい to 会 instead of かい, breaking the standard pairing with 社. かいや is a plausible distractor that substitutes や for しゃ, but it is neither a real word nor a standard reading of the 会社 kanji compound in N5."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><u>学校</u>へ行きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "がっこう",
+      "distractors": [
+        "がくこう",
+        "がっこ",
+        "まなびや"
+      ],
+      "explanation": "がっこう is the correct reading because 学校 is the everyday N5 compound word meaning 'school' — the standard reading taught in basic Japanese. がくこう (wrong pitch/accent and non-standard rendition of the same kanji pair) is a common learner error that swaps the expected on-yomi pattern. がっこ omits the final う, producing an incomplete word that does not exist in standard Japanese. まなびや sounds like a plausible native (kun) reading but is a rare literary or poetic variant; in daily N5 speech, only がっこう is used."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、私は<ruby>毎日<rt>まいにち</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb that fits the context.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "飲み (のみ) fits because 牛乳 (milk) is a beverage and the verb 飲む (to drink) is the standard collocation for consuming liquids; 飲みます is the polite present form. 食べ (たべ, to eat) is wrong because although you can use it with some foods, milk is never eaten—it is drunk. 読み (よみ, to read) makes no sense because you cannot read milk; it is a verb for consuming written text. 聞き (きき, to listen) is wrong because milk is not heard; it is a verb for receiving sounds or information."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "見ます"
+      ],
+      "explanation": "飲みます (のみます, 'drink') is the correct answer because 牛乳 (milk) is a liquid that is consumed by drinking, and this is the natural collocation in everyday Japanese — you drink milk, you do not eat it, read it, or watch it. 食べます (たべます, 'eat') is wrong because milk is a liquid, not solid food that can be eaten. 読みます (よみます, 'read') is wrong because milk is not something you read — this verb applies only to written material. 見ます (みます, 'watch/see') is wrong because milk is not something you watch or look at in the sense of entertainment or inspection."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the word that fits the context.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "飲みます (のみます, 'drink') is correct because 牛乳 (milk) is a beverage and must be drunk, not eaten, read, or heard. The sentence describes a daily morning routine; 毎日朝 (every morning) is a common time frame for describing habitual actions with 飲みます. 食べます (tabemasu, 'eat') is wrong because milk is a liquid and cannot be eaten — 飲む is the standard collocation for beverages. 読みます (yomimasu, 'read') is wrong because 牛乳 is not something one reads; this verb takes books, newspapers, or written materials as objects. 聞きます (kikimasu, 'listen/hear') is wrong because milk is not something one listens to; this verb is used with sounds or information, not foods or drinks."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "見"
+      ],
+      "explanation": "飲み（のみ）is correct because 牛乳（milk）is a beverage and must be drunk, not eaten or observed. The blank requires the i-form stem (飲み) to attach cleanly to ます, producing 飲みます. 食べ（たべ、to eat）is wrong because milk is a drink, not solid food — even though 食べます can mean to consume food or drink in very informal contexts, 飲む is the standard and expected verb for liquids. 読み（よみ、to read）is wrong because milk cannot be read; it refers to consuming text or characters, unrelated to consuming beverages. 見（み、to watch/look）is wrong because it means to view or observe, not to consume or drink; while 見る can attach to ます, it does not match the meaning or collocation required here."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the word that fits the context.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "見ます"
+      ],
+      "explanation": "飲みます (のみます, 'drink') is the correct answer because the object marked with を is 牛乳 (milk), which is a beverage that you consume by drinking, not eating or any other action. The sentence means 'Every morning, I drink milk.' 食べます (たべます, 'eat') is wrong because while both are consumption verbs, 牛乳 is liquid and requires 飲む, not 食べる. 読みます (よみます, 'read') makes no sense with 牛乳; milk cannot be read. 見ます (みます, 'watch/see') also does not collocate with 牛乳; you do not 'see' milk as an action in this context."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>朝<rt>あさ</rt></ruby><ruby>御飯<rt>ごはん</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "食べます",
+      "distractors": [
+        "飲みます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "「朝御飯を食べます」(eat breakfast) is the only natural collocation here — 「食べる」is the standard verb for consuming meals. 「飲みます」(のみます: drinks) is grammatically possible but wrong — breakfast is eaten, not drunk as a whole meal. 「読みます」(reads) makes no sense — you do not read breakfast. 「聞きます」(hears/listens) is equally nonsensical — you do not listen to breakfast. The correct answer uses the expected verb-object pair for meal vocabulary at N5."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>先生</u>に<ruby>会<rt>あ</rt></ruby>います。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "せんせい",
+      "distractors": [
+        "せんしょう",
+        "さきし",
+        "せんきょう"
+      ],
+      "explanation": "The correct answer せんせい is the standard N5 reading for 先生 (teacher). This is one of the most basic occupational nouns in Japanese and appears in everyday school contexts. The distractor せんしょう (senshō) is a false reading—while 先 and 生 are real kanji, this combination does not produce a valid word in this context. The distractor さきし (sakishi) incorrectly reads 先 as さき (front/ahead, usually a suffix) and 生 as し (life in rare readings), creating a non-word; additionally, さき would be okurigana-dependent and never appears in the compound 先生. The distractor せんきょう (senkyō) is a real word meaning \"election,\" but it uses different kanji (選挙) and is unrelated to the meaning of 先生 in this sentence about meeting a teacher."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <ruby>前<rt>まえ</rt></ruby>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "食べ",
+      "distractors": [
+        "飲み",
+        "見",
+        "聞き"
+      ],
+      "explanation": "食べ (tabé) is the correct i-stem form that attaches to ます to mean 'eat breakfast.' The sentence describes a daily routine: 'Every day, before going to school, I eat breakfast.' 飲み (nomí) means 'drink' — while you can drink breakfast beverages, the direct object 朝食 (breakfast) specifically refers to food eaten, not drunk. 見 (mí, 'watch/see') is grammatically possible but semantically wrong — you do not 'see' breakfast in this context. 聞き (kikí, 'listen/hear') is also grammatically possible but completely inappropriate — breakfast is neither heard nor consumed by listening."
+    },
+    {
+      "question": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>天気<rt>てんき</rt></ruby>が<ruby>良<rt>よ</rt></ruby>いので、<u>家族</u>で<ruby>公園<rt>こうえん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "かぞく",
+      "distractors": [
+        "いえぞく",
+        "やぞく",
+        "かてい"
+      ],
+      "explanation": "かぞく is the standard everyday reading for 家族 (family members living together). いえぞく mixes the reading 家 (いえ, house) with a nonexistent compound and would not be used; 家 in compounds like 家族 always reads か, not いえ. やぞく is a plausible sound but not the correct reading of these kanji—it does not match the on'yomi pattern 家族 requires. かてい (meaning household or family as an institution) uses different kanji (家庭) and, while similar in sense, is the wrong word entirely for this sentence about going to the park as a family group."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>　<ruby>朝<rt>あさ</rt></ruby>　<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "The correct answer 飲み (のみ, 'to drink') is the only verb that collocates naturally with 牛乳 (milk) in daily routine contexts; 飲みます means 'I drink milk every morning,' expressing a standard habit. 食べ (たべ, 'to eat') is a valid N5 verb but does not combine with liquids—one drinks milk, not eats it, making this semantically wrong here. 見 (み, 'to see/watch') has no logical connection to milk consumption and violates basic collocation. 聞き (きき, 'to listen/hear') also has no meaningful relationship to milk and is contextually implausible."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<u>朝食</u>を食べます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "ちょうしょく is the correct reading—朝 (morning) + 食 (meal/food) forms the standard N5 compound noun for breakfast. あさしょく uses the reading あさ for 朝, which is incorrect; 朝 at N5 only reads as あした (tomorrow) or ちょう (morning in compounds). ちょうたべ is not a real word; 食べ is the verb stem (to eat), not a noun reading for 食 in compounds. あさたべ similarly tries to force a verb reading into a noun compound and has no currency in standard Japanese."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行く<rt>いく</rt></ruby>とき、<ruby>駅<rt>えき</rt></ruby>で<ruby>友達<rt>ともだち</rt></ruby>に（　）。",
+      "reading": "Choose the word that fits the context.",
+      "correct": "会います",
+      "distractors": [
+        "見ます",
+        "聞きます",
+        "話します"
+      ],
+      "explanation": "会います (au—to meet) is correct because the context describes meeting a friend at the train station every day on the way to school, expressing a habitual encounter with another person. 見ます (miru—to see/look) is wrong because 'see' does not capture the intentional social meeting implied by 'at the station,' and 見ます typically refers to observing or watching something, not greeting a friend. 聞きます (kiku—to listen/ask) is wrong because the sentence describes a daily encounter, not an act of listening or questioning. 話します (hanasu—to speak/talk) is wrong because although talking is something friends do together, the blank here specifically describes the action that happens when meeting at the station—the meeting itself—not the conversation that may follow it."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<u>朝食</u>を<ruby>食<rt>た</rt></ruby>べます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうしゅく",
+        "あさたべ"
+      ],
+      "explanation": "ちょうしょく (morning meal) is the standard N5 reading for 朝食, the compound of 朝 (morning) and 食 (eat/meal). This is everyday vocabulary for breakfast. あさしょく sounds like a plausible alternative by reading 朝 as あさ (morning), but 朝食 as a set compound always uses the on-reading ちょう, not the kun-reading あさ. ちょうしゅく confuses the second kanji: 食 is always しょく (or たべる), never しゅく; this is a non-existent reading. あさたべ attempts to use only kun-readings and add a verb stem, but 朝食 is a noun compound that does not split this way and would not be natural Japanese."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>に行く前に、<u>水</u>を飲みます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "みず",
+      "distractors": [
+        "すい",
+        "みぞ",
+        "みづ"
+      ],
+      "explanation": "The correct answer みず is the everyday N5 reading of 水 when referring to the liquid itself. すい is the Sino-Japanese on'yomi reading used in compounds (水色 mizuiro, 水曜日 suiyoubi) but never stands alone in basic speech; here the sentence directly names the substance being drunk, requiring the native kun'yomi form. みぞ (mizo) is a real but unrelated word meaning 'ditch' or 'groove'—a different kanji reading altogether and semantically nonsensical in this context. みづ is an archaic historical kana spelling for みず, no longer used in modern Japanese and certainly not N5 standard."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<u>前</u>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "まえ",
+      "distractors": [
+        "ぜん",
+        "まい",
+        "ぎ"
+      ],
+      "explanation": "The correct reading is まえ (mae), meaning 'before' in this temporal context. The sentence structure 「～前に」(before doing something) is a basic N5 collocation, and まえ is the standard reading. ぜん (zen) is a real reading of 前 in compounds like 前年 (zenjitsu), but in the 「～前に」pattern with に, only まえ works—ぜん would be unnatural and ungrammatical here. まい (mai) is the reading of 枚 (counter for thin objects), not 前, so it creates a nonsense phrase. ぎ is not a reading of 前 at all and appears to confuse it with unrelated kanji like 義 or 議—it is simply wrong."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>は<ruby>午前<rt>ごぜん</rt></ruby>10<ruby>時<rt>じ</rt></ruby>です。<u>時間</u>に<ruby>来<rt>き</rt></ruby>てください。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "じかん",
+      "distractors": [
+        "とき",
+        "じかい",
+        "じげん"
+      ],
+      "explanation": "The correct answer じかん (time duration/time period) is the standard reading for 時間 in the sense of 'time' — here it means you should arrive by the scheduled time. The distractor とき (while/when) is a common N5 reading of 時, but 時間 as a kanji compound specifically means a span or block of time, not a moment or occasion, so this reading does not apply. The distractor じかい (not a real word; sounds like a plausible on-reading but does not exist for 時間) is a false cognate that learners might confuse with similar-sounding compounds. The distractor じげん (dimension/aspect — a real word, but uses different kanji 次元 and would change the meaning entirely; if forced into 時間 it is structurally wrong) is a trap for those who mishear on-yomi patterns but does not match this compound's actual meaning or reading structure."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<u>朝食</u>を<ruby>食<rt>た</rt></ruby>べます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "朝食 (ちょうしょく) is the standard compound noun meaning \"breakfast,\" formed from 朝 (morning) + 食 (food/meal). The correct reading pairs these kanji with their on-readings to create the everyday term. あさしょく is a plausible-sounding mix but uses the kun-reading あさ (morning) paired with the on-reading しょく—this reading does not exist as a real word in Japanese. ちょうたべ incorrectly substitutes the verb たべ (to eat) for the kanji 食, breaking the noun compound and creating an ungrammatical form. あさたべ similarly misreads 食 as the verb たべ and mixes kun and verb forms, which neither forms a real word nor matches the grammatical role (noun object after を)."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行く</u>日です。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "いく",
+      "distractors": [
+        "ゆく",
+        "おこなう",
+        "あるく"
+      ],
+      "explanation": "The correct answer is いく (iku) — the basic everyday reading of 行く meaning 'to go.' In the sentence 「明日は学校へ行く日です」(Tomorrow is a day to go to school), this is the natural, conversational present-tense form. ゆく (yuku) is an archaic or literary reading of 行く rarely used in modern N5 Japanese, making it incorrect here. おこなう (okonau) is a completely different verb meaning 'to conduct/perform,' spelled with different kanji (行う), not the target word. あるく (aruku) is another verb entirely meaning 'to walk,' which does not fit the sentence meaning."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>友達</u>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>します。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ともだち",
+      "distractors": [
+        "ゆうたち",
+        "ともたち",
+        "ゆうだち"
+      ],
+      "explanation": "友達 (ともだち) is the standard N5 word meaning 'friend,' composed of the characters for 'together' (友) and 'reach/accomplish' (達). The reading ともだち is the only correct pronunciation for this everyday word. The distractor ゆうたち (ゆう-たち) incorrectly reads 友 as ゆう; although 友 *can* be read as ゆう in certain compounds, it does not apply here. The distractor ともたち is a plausible sound-alike that reverses the mora order within the word, but it is not a real reading. The distractor ゆうだち (evening rain) is an entirely different word with a different meaning and shares only the second kanji 達 with the target; confusing it shows failure to recognize the specific compound."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ<u>行きます</u>。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "いきます",
+      "distractors": [
+        "ゆきます",
+        "こきます",
+        "あきます"
+      ],
+      "explanation": "いきます is the correct reading of 行きます, the polite present-tense form of the common verb 行く (to go), which is one of the most basic N5 verbs. ゆきます (yuki-) is a plausible wrong reading that might confuse a learner with on-yomi sound, but 行 does not read ゆき in this context. こきます (koki-) is a completely different verb meaning to row or operate, and is not the reading of 行く at all. あきます (aki-) is the reading of 開く or 飽く (to open or to tire of), unrelated to 行く and wrong in meaning and reading both."
+    },
+    {
+      "question": "<ruby>私<rt>わたし</rt></ruby>は毎日<ruby>学校<rt>がっこう</rt></ruby>へ<u>（　）</u>。",
+      "reading": "Choose the word that best fits the context.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "帰ります",
+        "歩きます"
+      ],
+      "explanation": "行きます (iku/go) is the correct answer because it expresses the daily action of traveling TO school from the speaker's starting point (home). The particle へ marks the destination, and 行く is the standard verb for movement toward a destination. 来ます (kuru/come) is wrong here because it means moving toward the speaker or a reference point, not away from home to school. 帰ります (kaeru/return home) is wrong because it means going home, the opposite direction from school. 歩きます (aruku/walk) is wrong because it describes the manner of movement (on foot), not the direction or destination—while you could walk to school, this verb alone does not indicate where you are going."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>先生<rt>せんせい</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "しんあたらしい"
+      ],
+      "explanation": "「新しい」reads あたらしい (i-adjective meaning 'new'). This is the standard everyday reading for this common N5 kanji in its adjectival form. 「しんしい」is a false reading that mixes the on'yomi 「しん」with a non-existent suffix; 「しん」alone exists but cannot stand as the full reading here. 「あらたしい」swaps the mora order of the correct reading (あたらしい → あらたしい), a common misremembering error for learners. 「しんあたらしい」incorrectly stacks both the on'yomi and kun'yomi together, which does not produce any valid Japanese word or reading."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u>友達に会います。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あらたしい",
+        "にいしい"
+      ],
+      "explanation": "新しい (あたらしい) is the standard N5 reading for the i-adjective meaning \"new.\" It is the only correct pronunciation for this common everyday word. しんしい (sin-shi-i) is a non-existent reading—while 新 can read しん in some compounds like 新年, it never combines with しい in this way. あらたしい (a-ra-ta-shi-i) is a false i-adjective form; the correct kanji-stem reading is あたら, not あらた, and adding しい to it is ungrammatical. にいしい (ni-i-shi-i) wrongly uses に, which does not appear in any reading of 新, and the syllable count is implausible."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb to fit the context.",
+      "correct": "飲みました",
+      "distractors": [
+        "食べました",
+        "見ました",
+        "聞きました"
+      ],
+      "explanation": "飲みました (drank) is the correct answer because 牛乳 (milk) is a liquid that you drink, not eat, watch, or listen to. The past tense ～ました conjugation matches the time marker 朝 (morning) indicating a completed action. 食べました (ate) is wrong because milk is drunk, not eaten—食べる is for solid food. 見ました (watched) is wrong because it requires a visual object (movie, TV, etc.), not a beverage. 聞きました (listened) is wrong because 聞く collocates with sounds or information, not drinks."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>へ行く<u>前</u>に、<ruby>朝食<rt>ちょうしょく</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "まえ",
+      "distractors": [
+        "ぜん",
+        "さき",
+        "むかし"
+      ],
+      "explanation": "The correct answer まえ (mae) means \"before\" in time or space, and fits perfectly in the phrase 「行く前に」(before going). This is the standard N5 reading for 前 when expressing temporal sequence. The distractor ぜん (zen) is an alternative on-reading of 前 used in compounds like 前日 (zenjitsu, the day before), but 「行く前に」 requires the native kun-reading まえ, not the on-reading ぜん. The distractor さき (saki) means \"ahead\" or \"point\" and is the reading of a different character (先); while both 前 and 先 can mean \"before\" in some contexts, さき does not match this kanji. The distractor むかし (mukashi) means \"long ago\" or \"old times\" and is an unrelated meaning; though むかし contains the kanji 昔, it does not apply to 前 here."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、私は<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "見ます",
+        "聞きます"
+      ],
+      "explanation": "飲みます (to drink) is the only verb that correctly pairs with 牛乳 (milk) as its direct object. The sentence describes a morning routine where milk is consumed before going to school. 食べます means 'to eat,' which does not collocate with milk in this way—though milk is drinkable, the natural verb is 飲む. 見ます means 'to watch/see,' which makes no sense with milk as the object. 聞きます means 'to listen/hear,' which is also semantically incompatible with milk."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<u>新しい</u><ruby>先生<rt>せんせい</rt></ruby>に<ruby>会い<rt>あい</rt></ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたらい",
+        "あたあたしい"
+      ],
+      "explanation": "The correct reading あたらしい (atarashii) is the standard i-adjective form of 新しい, meaning \"new.\" It follows the pattern of basic N5 descriptive adjectives like 大きい (ōkii) and 小さい (chiisai). The distractor しんしい (shinshii) uses the on-yomi reading of 新 but is not a real word and does not match the structure of Japanese adjectives. The distractor あたらい (atarai) is a common mispronunciation that drops the small つ sound, altering the correct morphology of the い-adjective. The distractor あたあたしい (ataatashii) repeats the first syllable, which is a typical mistake by learners who confuse the reading with doubled sounds."
+    }
+  ]
+}

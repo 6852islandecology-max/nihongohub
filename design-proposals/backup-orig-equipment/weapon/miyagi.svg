@@ -1,0 +1,41 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Date Masamune Katana</title>
+  
+  <!-- Handle/Tsuka -->
+  <g id="handle">
+    <rect x="20" y="48" width="4" height="12" fill="#3d2817"/>
+    <rect x="24" y="48" width="4" height="12" fill="#5c3d28"/>
+    <rect x="20" y="48" width="8" height="4" fill="#e0a634"/>
+  </g>
+  
+  <!-- Guard/Tsuba -->
+  <g id="guard">
+    <rect x="16" y="44" width="16" height="4" fill="#e0a634"/>
+    <rect x="18" y="44" width="12" height="2" fill="#c4862a"/>
+  </g>
+  
+  <!-- Blade -->
+  <g id="blade">
+    <!-- Main blade body -->
+    <rect x="22" y="8" width="4" height="36" fill="#d3d3d3"/>
+    <rect x="20" y="12" width="2" height="32" fill="#a9a9a9"/>
+    <rect x="26" y="12" width="2" height="32" fill="#a9a9a9"/>
+    
+    <!-- Blade edge highlight -->
+    <rect x="24" y="8" width="2" height="36" fill="#ffffff"/>
+    
+    <!-- Blade tip -->
+    <rect x="22" y="4" width="4" height="4" fill="#d3d3d3"/>
+    <rect x="24" y="2" width="2" height="2" fill="#ffffff"/>
+    
+    <!-- One-eyed dragon motif (eye on blade) -->
+    <rect x="24" y="20" width="2" height="2" fill="#e0a634"/>
+    <rect x="24" y="22" width="2" height="2" fill="#8b0000"/>
+  </g>
+  
+  <!-- Decorative frame border (legendary) -->
+  <g id="frame" opacity="0.8">
+    <rect x="18" y="2" width="2" height="48" fill="#e0a634"/>
+    <rect x="28" y="2" width="2" height="48" fill="#e0a634"/>
+  </g>
+</svg>

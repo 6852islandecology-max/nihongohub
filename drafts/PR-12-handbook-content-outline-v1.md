@@ -68,7 +68,7 @@ Reviewed for compliance with Japan's 行政書士法 (Gyōseishoshi-hō)
 This PDF includes a watermark with the buyer's email and purchase date
 in the footer. Redistribution, resale, or public posting is prohibited.
 
-For institutional licenses (10+ copies), contact licensing@nihongohub.com.
+For institutional licenses (10+ copies), contact support@nihongo-hub.com.
 ```
 
 ---

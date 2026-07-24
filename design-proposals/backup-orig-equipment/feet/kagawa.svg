@@ -1,0 +1,21 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Shodoshima Olive Sandals</title>
+<g id="sandals">
+<rect x="8" y="40" width="20" height="12" fill="#8b7d6b"/>
+<rect x="36" y="40" width="20" height="12" fill="#8b7d6b"/>
+<rect x="8" y="36" width="20" height="4" fill="#a89968"/>
+<rect x="36" y="36" width="20" height="4" fill="#a89968"/>
+<rect x="10" y="38" width="16" height="2" fill="#9b9285"/>
+<rect x="38" y="38" width="16" height="2" fill="#9b9285"/>
+<rect x="12" y="42" width="4" height="8" fill="#6b5f52"/>
+<rect x="20" y="42" width="4" height="8" fill="#6b5f52"/>
+<rect x="40" y="42" width="4" height="8" fill="#6b5f52"/>
+<rect x="48" y="42" width="4" height="8" fill="#6b5f52"/>
+<rect x="14" y="44" width="8" height="2" fill="#7a6d5f"/>
+<rect x="42" y="44" width="8" height="2" fill="#7a6d5f"/>
+<rect x="10" y="32" width="4" height="4" fill="#9b8f7f"/>
+<rect x="12" y="30" width="2" height="2" fill="#a8956d"/>
+<rect x="38" y="32" width="4" height="4" fill="#9b8f7f"/>
+<rect x="44" y="30" width="2" height="2" fill="#a8956d"/>
+</g>
+</svg>

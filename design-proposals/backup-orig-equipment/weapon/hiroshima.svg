@@ -1,0 +1,29 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Itsukushima Naginata</title>
+<g id="naginata">
+<!-- Shaft/Handle - dark wood -->
+<rect x="28" y="32" width="8" height="28" fill="#3d2817"/>
+<!-- Grip wrapping - purple accent -->
+<rect x="28" y="44" width="8" height="4" fill="#a056d2"/>
+<rect x="28" y="52" width="8" height="4" fill="#a056d2"/>
+<!-- Blade - curved naginata -->
+<rect x="24" y="16" width="4" height="4" fill="#e8d4f0"/>
+<rect x="20" y="20" width="4" height="4" fill="#e8d4f0"/>
+<rect x="20" y="24" width="12" height="4" fill="#c9a0d8"/>
+<rect x="18" y="28" width="16" height="4" fill="#a056d2"/>
+<rect x="20" y="32" width="12" height="4" fill="#a056d2"/>
+<!-- Blade edge highlight -->
+<rect x="24" y="16" width="4" height="2" fill="#f5e6ff"/>
+<rect x="20" y="20" width="4" height="2" fill="#f5e6ff"/>
+<!-- Torii gate crossbar - top -->
+<rect x="16" y="12" width="20" height="3" fill="#d4a574"/>
+<rect x="18" y="10" width="16" height="2" fill="#e8c9a0"/>
+<!-- Torii gate vertical supports -->
+<rect x="20" y="14" width="3" height="6" fill="#d4a574"/>
+<rect x="41" y="14" width="3" height="6" fill="#d4a574"/>
+<!-- Torii gate top rail -->
+<rect x="16" y="10" width="20" height="2" fill="#a056d2"/>
+<!-- Metal ferrule at blade junction -->
+<rect x="24" y="30" width="4" height="2" fill="#7a6b8f"/>
+</g>
+</svg>

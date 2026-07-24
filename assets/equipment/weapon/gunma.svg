@@ -1,40 +1,63 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Daruma Iron Fan</title>
-  
-  <!-- Handle/Grip -->
-  <g id="handle">
-    <rect x="28" y="44" width="8" height="16" fill="#8B4513"/>
-    <rect x="28" y="44" width="8" height="2" fill="#654321"/>
-  </g>
-  
-  <!-- Fan Blade Base -->
-  <g id="fan-blade">
-    <!-- Main semicircular fan shape -->
-    <rect x="20" y="20" width="4" height="8" fill="#4d8fbf"/>
-    <rect x="24" y="16" width="4" height="12" fill="#4d8fbf"/>
-    <rect x="28" y="12" width="8" height="16" fill="#4d8fbf"/>
-    <rect x="36" y="16" width="4" height="12" fill="#4d8fbf"/>
-    <rect x="40" y="20" width="4" height="8" fill="#4d8fbf"/>
-    
-    <!-- Iron reinforcement bands -->
-    <rect x="20" y="22" width="24" height="2" fill="#2C3E50"/>
-    <rect x="20" y="28" width="24" height="2" fill="#2C3E50"/>
-    
-    <!-- Daruma face elements on fan -->
-    <rect x="26" y="18" width="2" height="2" fill="#FFFFFF"/>
-    <rect x="36" y="18" width="2" height="2" fill="#FFFFFF"/>
-    <rect x="30" y="26" width="4" height="2" fill="#FF6B6B"/>
-  </g>
-  
-  <!-- Decorative rim/border -->
-  <g id="rim">
-    <rect x="19" y="19" width="26" height="2" fill="#FFD700"/>
-    <rect x="19" y="31" width="26" height="2" fill="#FFD700"/>
-  </g>
-  
-  <!-- Center connection (where fan meets handle) -->
-  <g id="center">
-    <rect x="28" y="32" width="8" height="4" fill="#654321"/>
-    <rect x="28" y="36" width="8" height="8" fill="#8B4513"/>
-  </g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Daruma Iron Fan (rare)</title>
+<rect x="28" y="8" width="8" height="4" fill="#2a1a0c"/>
+<rect x="24" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="12" width="8" height="4" fill="#c49a2a"/>
+<rect x="36" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="16" width="4" height="4" fill="#e8d070"/>
+<rect x="28" y="16" width="4" height="4" fill="#c49a2a"/>
+<rect x="32" y="16" width="4" height="4" fill="#e8d070"/>
+<rect x="36" y="16" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="4" height="4" fill="#e8d070"/>
+<rect x="24" y="20" width="4" height="4" fill="#c49a2a"/>
+<rect x="28" y="20" width="4" height="4" fill="#e8d070"/>
+<rect x="32" y="20" width="4" height="4" fill="#c49a2a"/>
+<rect x="36" y="20" width="4" height="4" fill="#e8d070"/>
+<rect x="40" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="24" width="4" height="4" fill="#e8d070"/>
+<rect x="20" y="24" width="4" height="4" fill="#c49a2a"/>
+<rect x="24" y="24" width="4" height="4" fill="#e8d070"/>
+<rect x="28" y="24" width="4" height="4" fill="#c49a2a"/>
+<rect x="32" y="24" width="4" height="4" fill="#e8d070"/>
+<rect x="36" y="24" width="4" height="4" fill="#c49a2a"/>
+<rect x="40" y="24" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#c49a2a"/>
+<rect x="20" y="28" width="4" height="4" fill="#e8d070"/>
+<rect x="24" y="28" width="4" height="4" fill="#c49a2a"/>
+<rect x="28" y="28" width="4" height="4" fill="#e8d070"/>
+<rect x="32" y="28" width="4" height="4" fill="#c49a2a"/>
+<rect x="36" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#8b6914"/>
+<rect x="16" y="32" width="8" height="4" fill="#5a3a0a"/>
+<rect x="24" y="32" width="4" height="4" fill="#c49a2a"/>
+<rect x="28" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="8" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="8" height="4" fill="#8b6914"/>
+<rect x="20" y="36" width="4" height="4" fill="#5a3a0a"/>
+<rect x="24" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#8b6914"/>
+<rect x="16" y="40" width="4" height="4" fill="#5a3a0a"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#8b6914"/>
+<rect x="16" y="44" width="4" height="4" fill="#5a3a0a"/>
+<rect x="20" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="44" width="4" height="4" fill="#d4401a"/>
+<rect x="28" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="48" width="4" height="4" fill="#8b6914"/>
+<rect x="16" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="48" width="4" height="4" fill="#d4401a"/>
+<rect x="24" y="48" width="4" height="4" fill="#f87840"/>
+<rect x="28" y="48" width="4" height="4" fill="#d4401a"/>
+<rect x="8" y="52" width="12" height="4" fill="#2a1a0c"/>
+<rect x="20" y="52" width="4" height="4" fill="#f87840"/>
+<rect x="24" y="52" width="4" height="4" fill="#d4401a"/>
+<rect x="16" y="56" width="12" height="4" fill="#2a1a0c"/>
 </svg>

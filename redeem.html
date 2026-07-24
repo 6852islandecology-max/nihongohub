@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.nihongo-hub.com/redeem.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:url" content="https://www.nihongo-hub.com/redeem.html">
+<meta property="og:image" content="https://www.nihongo-hub.com/og-default.png">
+<meta property="og:title" content="Redeem your NihongoHub gift code">
+<meta property="og:description" content="Someone gifted you a month of NihongoHub Pro. Enter your code to unlock it.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Redeem your gift — NihongoHub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#0d0a14;color:#fdf6e3;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:rgba(255,215,0,.04);border:2px solid #FFD700;border-radius:0;padding:36px 28px;max-width:480px;width:100%;text-align:center}
+.tag{font-family:'Press Start 2P',monospace;font-size:11px;color:#FFD700;letter-spacing:1.5px;margin-bottom:16px}
+h1{font-family:'DotGothic16',sans-serif;font-size:30px;line-height:1.35;margin-bottom:8px}
+p.lede{color:rgba(253,246,227,.75);font-size:15px;line-height:1.6;margin-bottom:24px}
+input.code{font-family:'Press Start 2P',monospace;font-size:18px;background:#000;border:2px solid rgba(255,215,0,.4);color:#FFD700;padding:16px;width:100%;text-align:center;letter-spacing:2px;border-radius:0;outline:none}
+input.code:focus{border-color:#FFD700}
+button.go{font-family:'DotGothic16',sans-serif;font-weight:700;font-size:17px;background:#FFD700;color:#0d0a14;border:none;padding:14px 26px;border-radius:10px;cursor:pointer;margin-top:14px;letter-spacing:.5px;width:100%}
+button.go:disabled{opacity:.6;cursor:default}
+.msg{margin-top:18px;font-size:14px;line-height:1.6;min-height:1.4em}
+.msg.ok{color:#7fdca0}
+.msg.err{color:#f0a48c}
+.foot{margin-top:20px;font-size:13px;color:rgba(253,246,227,.45)}
+.foot a{color:#FFD700}
+.signin-note{margin-top:14px;font-size:13px;color:rgba(253,246,227,.55);line-height:1.5}
+.signin-note a{color:#FFD700}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="tag">⛩  GIFT REDEMPTION</div>
+  <h1>Someone sponsored you.</h1>
+  <p class="lede">A donor anywhere in the world bought 10 Pro codes for $5 — and you got one of them. Enter it below to unlock 1 month of NihongoHub Pro.</p>
+  <input class="code" id="code-input" placeholder="GIFT-XXXXXXXX" maxlength="13" autocomplete="off" autocapitalize="characters" spellcheck="false">
+  <button class="go" id="redeem-btn">🎁 Redeem code</button>
+  <p class="msg" id="msg"></p>
+  <p class="signin-note" id="signin-note" style="display:none">You need to <a href="onboarding.html">create a free account</a> (or sign in) first — your Pro access attaches to that account.</p>
+  <p class="foot">After redeeming: <a href="quiz.html">go to your battles ⚔️</a> · <a href="dashboard.html">see your dashboard</a></p>
+</main>
+
+<!-- Reuse the existing auth client so we know who's redeeming. -->
+<script src="lib/site-chrome.js" defer></script>
+<script>
+(function(){
+  var input = document.getElementById('code-input');
+  var btn   = document.getElementById('redeem-btn');
+  var msg   = document.getElementById('msg');
+  var signinNote = document.getElementById('signin-note');
+
+  // pre-fill from ?code= or hash
+  var pre = (new URLSearchParams(location.search)).get('code') || (location.hash || '').replace('#','');
+  if(pre) input.value = pre.trim().toUpperCase();
+
+  input.addEventListener('input', function(){ input.value = input.value.toUpperCase(); });
+
+  btn.addEventListener('click', async function(){
+    msg.textContent = ''; msg.className = 'msg';
+    signinNote.style.display = 'none';
+    var code = (input.value || '').trim().toUpperCase();
+    if(!code){ msg.textContent = 'Enter the code from your gift email.'; msg.className = 'msg err'; return; }
+    btn.disabled = true; btn.textContent = '…';
+    try {
+      // Wait for the shared auth client (site-chrome.js boots it).
+      var sb = null;
+      for (var i = 0; i < 30; i++) {
+        if (window.__NH_AUTH_CLIENT) { sb = window.__NH_AUTH_CLIENT; break; }
+        await new Promise(function(r){ setTimeout(r, 100); });
+      }
+      if(!sb){ throw new Error('auth_unavailable'); }
+      var sess = await sb.auth.getSession();
+      if(!sess || !sess.data || !sess.data.session){
+        signinNote.style.display = '';
+        throw new Error('not_signed_in');
+      }
+      var resp = await sb.rpc('redeem_promo_code', { p_code: code });
+      if(resp.error){ throw new Error(resp.error.message || 'rpc_failed'); }
+      var r = resp.data || {};
+      if(r.ok){
+        msg.textContent = '🎉 Unlocked! Your account is now Pro for the next month. Head to ⚔️ /quiz.html.';
+        msg.className = 'msg ok';
+        btn.textContent = '✓ Redeemed';
+      } else {
+        var t = { unknown_code: "Code not found. Double-check the spelling — codes look like GIFT-AB12CD34.",
+                  already_redeemed: "This code was already redeemed. (Maybe a friend got there first?)",
+                  expired: "This code has expired. Codes are valid 1 year from purchase.",
+                  not_signed_in: "Please sign in or create a free account first." }[r.error] || ('Could not redeem: ' + r.error);
+        msg.textContent = t; msg.className = 'msg err';
+        btn.disabled = false; btn.textContent = '🎁 Redeem code';
+      }
+    } catch(e) {
+      if(e && e.message === 'not_signed_in'){
+        msg.textContent = 'Sign in first, then come back.';
+      } else {
+        msg.textContent = 'Network hiccup — try again in a moment.';
+      }
+      msg.className = 'msg err';
+      btn.disabled = false; btn.textContent = '🎁 Redeem code';
+    }
+  });
+})();
+</script>
+</body>
+</html>

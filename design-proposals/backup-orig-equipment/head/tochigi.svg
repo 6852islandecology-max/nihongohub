@@ -1,0 +1,41 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<title>Three Monkeys Hood</title>
+<g id="hood">
+<rect x="12" y="8" width="40" height="4" fill="#4d8fbf"/>
+<rect x="8" y="12" width="48" height="28" fill="#8b6f47"/>
+<rect x="8" y="12" width="48" height="4" fill="#4d8fbf"/>
+<rect x="8" y="36" width="48" height="4" fill="#4d8fbf"/>
+<rect x="8" y="12" width="4" height="24" fill="#4d8fbf"/>
+<rect x="52" y="12" width="4" height="24" fill="#4d8fbf"/>
+<rect x="12" y="40" width="40" height="4" fill="#6b5436"/>
+<rect x="16" y="44" width="32" height="4" fill="#8b6f47"/>
+<rect x="18" y="48" width="28" height="4" fill="#5d4730"/>
+</g>
+<g id="left-monkey">
+<rect x="14" y="16" width="8" height="8" fill="#d4a574"/>
+<rect x="14" y="16" width="8" height="4" fill="#c99460"/>
+<rect x="16" y="20" width="4" height="4" fill="#2d2416"/>
+</g>
+<g id="center-monkey">
+<rect x="28" y="16" width="8" height="8" fill="#d4a574"/>
+<rect x="28" y="16" width="8" height="4" fill="#c99460"/>
+<rect x="30" y="20" width="4" height="4" fill="#2d2416"/>
+</g>
+<g id="right-monkey">
+<rect x="42" y="16" width="8" height="8" fill="#d4a574"/>
+<rect x="42" y="16" width="8" height="4" fill="#c99460"/>
+<rect x="44" y="20" width="4" height="4" fill="#2d2416"/>
+</g>
+<g id="left-hands">
+<rect x="12" y="24" width="4" height="4" fill="#d4a574"/>
+<rect x="12" y="28" width="4" height="4" fill="#d4a574"/>
+</g>
+<g id="center-hands">
+<rect x="28" y="24" width="4" height="4" fill="#d4a574"/>
+<rect x="28" y="28" width="4" height="4" fill="#d4a574"/>
+</g>
+<g id="right-hands">
+<rect x="48" y="24" width="4" height="4" fill="#d4a574"/>
+<rect x="48" y="28" width="4" height="4" fill="#d4a574"/>
+</g>
+</svg>

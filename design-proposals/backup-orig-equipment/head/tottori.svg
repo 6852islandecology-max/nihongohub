@@ -1,0 +1,45 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Detective Conan Cap</title>
+  
+  <!-- Brim shadow -->
+  <rect x="8" y="16" width="48" height="4" fill="#6b5f52"/>
+  
+  <!-- Main brim -->
+  <rect x="6" y="20" width="52" height="4" fill="#9b9285"/>
+  
+  <!-- Brim highlight -->
+  <rect x="8" y="24" width="48" height="2" fill="#b8ac9f"/>
+  
+  <!-- Crown left side -->
+  <rect x="12" y="24" width="8" height="12" fill="#8b3a3a"/>
+  
+  <!-- Crown center -->
+  <rect x="20" y="20" width="24" height="16" fill="#a94545"/>
+  
+  <!-- Crown right side -->
+  <rect x="44" y="24" width="8" height="12" fill="#8b3a3a"/>
+  
+  <!-- Crown top center -->
+  <rect x="24" y="16" width="16" height="4" fill="#c95555"/>
+  
+  <!-- Crown highlight -->
+  <rect x="22" y="24" width="20" height="2" fill="#d97070"/>
+  
+  <!-- Left band detail -->
+  <rect x="14" y="32" width="6" height="2" fill="#6b5f52"/>
+  
+  <!-- Center band detail -->
+  <rect x="22" y="32" width="20" height="2" fill="#6b5f52"/>
+  
+  <!-- Right band detail -->
+  <rect x="44" y="32" width="6" height="2" fill="#6b5f52"/>
+  
+  <!-- Visor inner shade -->
+  <rect x="10" y="26" width="44" height="2" fill="#7a6e61"/>
+  
+  <!-- Brim edge left -->
+  <rect x="6" y="20" width="2" height="8" fill="#7a6e61"/>
+  
+  <!-- Brim edge right -->
+  <rect x="56" y="20" width="2" height="8" fill="#7a6e61"/>
+</svg>

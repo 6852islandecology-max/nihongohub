@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NihongoHub ドット絵 改善案 2026-06-10</title>
+<style>
+  body{background:#241808;color:#f4ead2;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;margin:0;padding:28px;line-height:1.7}
+  h1{font-size:1.3em;color:#e0a634;border-bottom:2px solid #e0a634;padding-bottom:6px}
+  h2{font-size:1.05em;color:#e0a634;margin-top:40px}
+  .row{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;margin:16px 0}
+  .cell{background:#2e2012;border:1px solid #4a3520;border-radius:10px;padding:14px 18px;text-align:center}
+  .cell .label{font-size:.8em;color:#caa86a;margin-top:8px}
+  .cell .tag{display:inline-block;font-size:.7em;background:#4a3520;border-radius:4px;padding:1px 8px;margin-top:4px;color:#f4ead2}
+  svg{display:block;margin:0 auto}
+  .small-test{display:flex;gap:14px;align-items:center;background:#1c1206;border-radius:8px;padding:10px 14px;margin-top:10px}
+  .small-test span{font-size:.7em;color:#9a7d4e}
+  .note{font-size:.85em;color:#d8c39a;background:#2e2012;border-left:4px solid #e0a634;padding:10px 14px;border-radius:0 8px 8px 0;max-width:880px}
+  .pros{font-size:.8em;text-align:left;max-width:230px;color:#d8c39a;margin:8px auto 0}
+  .pros b{color:#f4ead2}
+  .err{color:#ff6b5b;font-weight:bold}
+  .cardmock{background:#fffdf8;border-radius:12px;padding:10px 16px;display:flex;align-items:center;gap:14px;width:280px;border:2px solid #e0a634}
+  .cardmock .t{text-align:left;color:#3a2a14;font-size:.85em;line-height:1.35}
+  .cardmock .t b{display:block;font-size:1.05em}
+  .cardmock .t small{color:#a07830}
+</style>
+</head>
+<body>
+<h1>🎮 NihongoHub RPG ドット絵 改善提案（2026-06-10）</h1>
+<p class="note">現行スプライトの課題 = <b>輪郭線なし・陰影1色・顔情報が薄い</b>ため、ダーク背景上でのっぺり溶けて見える。以下、共通改善 4 点を適用した実物サンプルです（すべて本番と同じ SVG ピクセル方式・コードはこのページ内蔵）。<br>
+① ダーク輪郭線（純黒でなく暖色の焦げ茶 → 背景から浮く）　② 3 階調シェーディング（基本色/影/ハイライト + 左上光源固定）　③ 顔の可読性（眉 + 瞳キャッチライト + 頬の血色）　④ アイテムはレアリティプレートに載せて「何がドロップしたか」を一目化</p>
+
+<h2>1. ヒーローキャラ（STAGE 2「旅の修行者」を 3 スタイルで再描画）</h2>
+<div class="row">
+  <div class="cell">
+    <img src="../rpg-n4.svg" width="144" height="192" alt="current">
+    <div class="label">現行（参考）</div>
+    <div class="tag">フラット・輪郭なし</div>
+  </div>
+  <div class="cell">
+    <div id="heroA"></div>
+    <div class="label">案 A: 16-bit クラシック</div>
+    <div class="tag">本線候補</div>
+    <div class="pros"><b>◎</b> 現行と同じ等身 → 5 段階の「成長」演出を維持しやすい<br><b>◎</b> 装備（武器を手に持つ等）の反映拡張がしやすい<br><b>△</b> かわいさは B に劣る</div>
+  </div>
+  <div class="cell">
+    <div id="heroB"></div>
+    <div class="label">案 B: ちび 2 頭身（鉢巻き）</div>
+    <div class="tag">かわいさ最大</div>
+    <div class="pros"><b>◎</b> 小さく表示しても顔が読める（ギルドカード/シェア画像向き）<br><b>◎</b> Akari/Yukika マスコットと世界観が揃う<br><b>△</b> 等身固定のため段階成長の見た目差が付けにくい</div>
+  </div>
+  <div class="cell">
+    <div id="heroC"></div>
+    <div class="label">案 C: 旅人（緑装束+赤マフラー）</div>
+    <div class="tag">テーマ性</div>
+    <div class="pros"><b>◎</b> 「旅の修行者」の名前と見た目が一致（マフラー/鞄）<br><b>◎</b> 段階ごとに装束色+小物を変える進化が作りやすい<br><b>△</b> 5 段階分の小物デザインが必要</div>
+  </div>
+</div>
+
+<h2>2. 装備アイテム（信長の軍配で 3 案）</h2>
+<div class="row">
+  <div class="cell">
+    <img src="../assets/equipment/weapon/aichi.svg" width="112" height="112" alt="current item">
+    <div class="label">現行（参考）</div>
+    <div class="tag">形が読みにくい</div>
+  </div>
+  <div class="cell">
+    <div id="itemA"></div>
+    <div class="label">案 A: クリーン再描画</div>
+    <div class="pros"><b>◎</b> 軍配の輪郭+紅白の縁+家紋風の丸で「うちわ状の采配」と分かる<br><b>◎</b> 既存と同じ 64×64 で差し替えだけ</div>
+  </div>
+  <div class="cell">
+    <div id="itemB"></div>
+    <div class="label">案 B: A + レアリティプレート</div>
+    <div class="tag">分かりやすさ最大</div>
+    <div class="pros"><b>◎</b> SSR=金/SR=紫/R=青/N=灰 の枠+地紋で<b>レア度が一目</b><br><b>◎</b> ドロップ演出・インベントリの見栄えが揃う</div>
+  </div>
+  <div class="cell">
+    <div id="itemC"></div>
+    <div class="label">案 C: A + 光彩+スパークル</div>
+    <div class="pros"><b>◎</b> ドロップ toast 等「ご褒美の瞬間」用に派手<br><b>△</b> 一覧で並ぶとうるさい → 演出時のみ推奨</div>
+  </div>
+</div>
+
+<h2>3. 小サイズ可読性テスト（実 UI の 48px 相当）</h2>
+<div class="small-test">
+  <span>現行</span><img src="../assets/equipment/weapon/aichi.svg" width="48" height="48">
+  <span>案A</span><div id="itemA48"></div>
+  <span>案B</span><div id="itemB48"></div>
+  <span>案C</span><div id="itemC48"></div>
+  <span>｜ ヒーロー縮小:</span>
+  <div id="heroA64"></div><div id="heroB64"></div><div id="heroC64"></div>
+</div>
+
+<h2>4. 装備カード上での見え方（案 B を実カード風に）</h2>
+<div class="row">
+  <div class="cardmock"><div id="itemBcard"></div>
+    <div class="t"><b>Nobunaga War Fan</b><small>Oda warlord command fan ・ <span style="color:#c9a227;font-weight:bold">SSR</span></small></div>
+  </div>
+</div>
+
+<h2>5. 推奨と実装コスト</h2>
+<p class="note">
+<b>推奨: ヒーロー=案 A を本線</b>（5 段階の成長表現と装備反映拡張を優先。案 B はギルドカード/シェア画像/称号バッジ用に併用、案 C の「テーマ小物」は A に取り込む = STAGE2 にマフラー等）。<br>
+<b>アイテム=案 A の描画基準 + 案 B のプレートを標準採用</b>（一覧・ドロップともレア度が一目。案 C の光彩はドロップ演出時のみ）。<br><br>
+実装コスト目安: ヒーロー 5 体の手描き再制作 ≒ 1 体 1-2h（本ページの描画ルールを流用）。装備 188 個は手描き不可なので、<code>scripts/generate-sprites-v2.mjs</code> に本ページの共通規則（焦げ茶輪郭/3 階調/左上光源/中心モチーフ 1 個）をプロンプト化して Sonnet で再生成 → プレートは <code>lib/equipment.js</code> 側で SVG ラップすれば<b>再生成なしでも今日から適用可能</b>（レア度色は既存 rarityColor を流用）。
+</p>
+<div id="diag" class="err"></div>
+
+<script>
+// ---- pixel-map renderer: each char = 1 cell, rect run-merged per row ----
+function render(id, rows, pal, cell, scale){
+  var w = rows[0].length, h = rows.length, errs = [];
+  rows.forEach(function(r,i){ if(r.length!==w) errs.push(id+' row '+i+' len '+r.length+' != '+w); });
+  var s = '<svg width="'+(w*cell*scale)+'" height="'+(h*cell*scale)+'" viewBox="0 0 '+(w*cell)+' '+(h*cell)+'" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">';
+  for(var y=0;y<h;y++){
+    var x=0;
+    while(x<w){
+      var c=rows[y][x];
+      if(c==='.'){x++;continue;}
+      var x2=x; while(x2+1<w && rows[y][x2+1]===c) x2++;
+      var col=pal[c];
+      if(col) s+='<rect x="'+(x*cell)+'" y="'+(y*cell)+'" width="'+((x2-x+1)*cell)+'" height="'+cell+'" fill="'+col+'"/>';
+      else errs.push(id+': unknown char "'+c+'" row '+y);
+      x=x2+1;
+    }
+  }
+  s+='</svg>';
+  document.getElementById(id).innerHTML=s;
+  if(errs.length) document.getElementById('diag').textContent += errs.join(' / ')+' ';
+  return s;
+}
+
+// ---- shared palettes ----
+var P_BASE = {
+  O:'#2a1a0c',                       // warm dark outline
+  S:'#f2c892', s:'#d9a268',          // skin / shadow
+  W:'#ffffff', P:'#1a1208', B:'#5b7fe0', C:'#e8987a', m:'#8e5a3a',
+  H:'#4a2e14', h:'#6f4a1e',          // hair / highlight
+  G:'#e0a634', g:'#b8842a',          // gold / shadow
+  N:'#3f4a6b', n:'#333d59',          // pants
+  K:'#6a4525', k:'#4a2f18',          // boots & wood
+  R:'#c0392b', r:'#8e2a20'           // red
+};
+var P_BLUE  = Object.assign({}, P_BASE, {T:'#5a6a80', t:'#46525f', U:'#74889f'});
+var P_GREEN = Object.assign({}, P_BASE, {T:'#4f7a4a', t:'#3c5f3a', U:'#6b9a62'});
+
+// ---- HERO A: refined 16-bit classic (24x32 grid, 4px cells) ----
+var HERO_A = [
+"......OOOOOOOOOOOO......",
+".....OHHHHHHHHHHHHO.....",
+".....OHhhHHHHHHhhHO.....",
+".....OHhHHHHHHHHhHO.....",
+".....OHSSSSSSSSSSHO.....",
+".....OSHHSSSSHHSSSO.....",
+".....OSWPSSSSWPSSSO.....",
+".....OSPPSSSSPPSSSO.....",
+".....OSCSSSsSSSCSSO.....",
+".....OSSSSSmmSSSSSO.....",
+".....OSSSssssssSSSO.....",
+"......OOOsSSSSsOOO......",
+"....OOTUUUUUUUUUUTOO....",
+"...OTTTUUUUUUUUUUTTTO...",
+"...OTTTTTTTTTTTTTTtTO...",
+"...OTTTTTTTTTTTTTTtTO...",
+"...OTTTTTTTTTTTTTTtTO...",
+"...OSSGGGGGggGGGGGSSO...",
+"....OONNNNNNNNNNNNOO....",
+"....OONNNNNNNNNNNNOO....",
+".....ONNNNNOONNNNNO.....",
+".....ONNNnNOONNNnNO.....",
+".....ONNNnNOONNNnNO.....",
+".....OKKKKKOOKKKKKO.....",
+".....OKKKKKOOKKKKKO.....",
+"....OKKKKKKOOKKKKKKO....",
+"....OOOOOOO..OOOOOOO....",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................"
+];
+
+// ---- HERO B: chibi w/ red headband (24x32 grid) ----
+var HERO_B = [
+"....OOOOOOOOOOOOOOOO....",
+"...OHHHHHHHHHHHHHHHHO...",
+"...OHhhHHHHHHHHHHHhHO...",
+"...OHhHHHHHHHHHHHHhHO...",
+"...ORRRRRRRRRRRRRRRRO...",
+"...ORrRRRRRRRRRRRRrRO...",
+"...OHSSSSSSSSSSSSSSHO...",
+"...OSSHHHSSSSSSHHHSSO...",
+"...OSSWPPSSSSSSWPPSSO...",
+"...OSSPPPSSSSSSPPPSSO...",
+"...OSSBBPSSSSSSBBPSSO...",
+"...OCCSSSSSmmSSSSSCCO...",
+"...OSSSssssssssssSSSO...",
+"....OOOOOsSSSSsOOOOO....",
+"......OTTUUUUUUTTO......",
+"....OSOTTUUUUUUTTOSO....",
+"....OSOTTUUUUUUTTOSO....",
+"......OGGGGggGGGGO......",
+"......ONNNNOONNNNO......",
+"......OKKKKOOKKKKO......",
+"......OOOOO..OOOOO......",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................"
+];
+
+// ---- HERO C: green traveler + red scarf + satchel (24x32) ----
+var HERO_C = [
+"......OOOOOOOOOOOO......",
+".....OHHHHHHHHHHHHO.....",
+".....OHhhHHHHHHhhHO.....",
+".....OHhHHHHHHHHhHO.....",
+".....OHSSSSSSSSSSHO.....",
+".....OSHHSSSSHHSSSO.....",
+".....OSWPSSSSWPSSSO.....",
+".....OSPPSSSSPPSSSO.....",
+".....OSCSSSsSSSCSSO.....",
+".....OSSSSSmmSSSSSO.....",
+".....OSSSssssssSSSO.....",
+".....ORRRRRRRRRRRRO.....",
+"....ORrRRRRRRRRRRrRO....",
+"...OTTRRUUUUUUUUUTTTO...",
+"...OTTTRrTTTTTTTTTtTO...",
+"...OTTTrTTTTTTTTTTtTO...",
+"...OTTTTTTTTTTTTTTtTO...",
+"...OSSGGGGGggGGGGGSSO...",
+"....OONNNNNNNNNKkNOO....",
+"....OONNNNNNNNNNNNOO....",
+".....ONNNNNOONNNNNO.....",
+".....ONNNnNOONNNnNO.....",
+".....ONNNnNOONNNnNO.....",
+".....OKKKKKOOKKKKKO.....",
+".....OKKKKKOOKKKKKO.....",
+"....OKKKKKKOOKKKKKKO....",
+"....OOOOOOO..OOOOOOO....",
+"........................",
+"........................",
+"........................",
+"........................",
+"........................"
+];
+
+// ---- ITEM A: gunbai war fan redraw (16x16 grid) ----
+var ITEM_A = [
+".....OOOOOO.....",
+"....ORRRRRRO....",
+"...ORGGGGGGRO...",
+"..ORGGGGGGGGRO..",
+"..ORGGGRRGGgRO..",
+"..ORGGRRRRGgRO..",
+"..ORGGRrrRGgRO..",
+"..ORGGGrrGGgRO..",
+"..ORGGGGGGGgRO..",
+"...ORGGGGGGRO...",
+"....ORRRRRRO....",
+".....OOKKOO.....",
+"......OKkO......",
+"......OKkO......",
+".....ORKkRO.....",
+".....OrOOrO....."
+];
+
+render('heroA', HERO_A, P_BLUE, 4, 2);
+render('heroB', HERO_B, P_BLUE, 4, 2);
+render('heroC', HERO_C, P_GREEN, 4, 2);
+render('heroA64', HERO_A, P_BLUE, 4, 0.6);
+render('heroB64', HERO_B, P_BLUE, 4, 0.6);
+render('heroC64', HERO_C, P_GREEN, 4, 0.6);
+render('itemA', ITEM_A, P_BASE, 4, 1.75);
+render('itemA48', ITEM_A, P_BASE, 4, 0.75);
+
+// ---- ITEM B: plate wrapper (rarity SSR gold) — wraps the SAME pixel art ----
+function plateWrap(rows, pal, cell, scale, rarity, withGlow, withSpark){
+  var colors = {SSR:'#c9a227', SR:'#8e6bd6', R:'#5b7fe0', N:'#8a8a8a'};
+  var rc = colors[rarity]||colors.N;
+  var size = rows[0].length*cell; // 64
+  var inner=''; // reuse renderer logic inline
+  for(var y=0;y<rows.length;y++){
+    var x=0;
+    while(x<rows[y].length){
+      var c=rows[y][x]; if(c==='.'){x++;continue;}
+      var x2=x; while(x2+1<rows[y].length && rows[y][x2+1]===c) x2++;
+      inner+='<rect x="'+(x*cell)+'" y="'+(y*cell)+'" width="'+((x2-x+1)*cell)+'" height="'+cell+'" fill="'+pal[c]+'"/>';
+      x=x2+1;
+    }
+  }
+  var s='<svg width="'+(size*scale)+'" height="'+(size*scale)+'" viewBox="0 0 '+size+' '+size+'" xmlns="http://www.w3.org/2000/svg">';
+  s+='<defs><radialGradient id="bg'+rarity+(withGlow?1:0)+'" cx="50%" cy="38%"><stop offset="0%" stop-color="#4a3318"/><stop offset="100%" stop-color="#241608"/></radialGradient>';
+  if(withGlow) s+='<radialGradient id="glow"><stop offset="0%" stop-color="#ffd966" stop-opacity="0.55"/><stop offset="100%" stop-color="#ffd966" stop-opacity="0"/></radialGradient>';
+  s+='</defs>';
+  s+='<rect x="1" y="1" width="'+(size-2)+'" height="'+(size-2)+'" rx="9" fill="url(#bg'+rarity+(withGlow?1:0)+')" stroke="'+rc+'" stroke-width="2.5"/>';
+  if(withGlow) s+='<circle cx="32" cy="26" r="24" fill="url(#glow)"/>';
+  s+='<g transform="translate(8,6) scale(0.78)" shape-rendering="crispEdges">'+inner+'</g>';
+  // corner ticks
+  s+='<path d="M6 12 L6 6 L12 6" stroke="'+rc+'" stroke-width="2" fill="none"/><path d="M52 6 L58 6 L58 12" stroke="'+rc+'" stroke-width="2" fill="none"/>';
+  if(withSpark){
+    [[50,12],[12,44],[46,50]].forEach(function(p){
+      s+='<g fill="#fff"><rect x="'+(p[0]-1)+'" y="'+(p[1]-4)+'" width="2" height="8"/><rect x="'+(p[0]-4)+'" y="'+(p[1]-1)+'" width="8" height="2"/></g>';
+    });
+  }
+  // rarity chip
+  s+='<rect x="40" y="52" width="20" height="10" rx="3" fill="'+rc+'"/><text x="50" y="60" font-family="monospace" font-size="7.5" font-weight="bold" text-anchor="middle" fill="#241608">'+rarity+'</text>';
+  s+='</svg>';
+  return s;
+}
+document.getElementById('itemB').innerHTML  = plateWrap(ITEM_A, P_BASE, 4, 1.75, 'SSR', false, false);
+document.getElementById('itemC').innerHTML  = plateWrap(ITEM_A, P_BASE, 4, 1.75, 'SSR', true,  true);
+document.getElementById('itemB48').innerHTML= plateWrap(ITEM_A, P_BASE, 4, 0.75, 'SSR', false, false);
+document.getElementById('itemC48').innerHTML= plateWrap(ITEM_A, P_BASE, 4, 0.75, 'SSR', true,  true);
+document.getElementById('itemBcard').innerHTML = plateWrap(ITEM_A, P_BASE, 4, 0.9, 'SSR', false, false);
+</script>
+</body>
+</html>

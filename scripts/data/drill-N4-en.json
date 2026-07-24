@@ -1,0 +1,1239 @@
+{
+  "level": "N4",
+  "lang": "en",
+  "count": 112,
+  "items": [
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>を出る前に、<ruby>電気<rt>でんき</rt></ruby>を（　）ことを忘れないでください。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "消す",
+      "distractors": [
+        "付ける",
+        "直す",
+        "借りる"
+      ],
+      "explanation": "「消す」(to turn off) is the correct answer because the context describes a safety action before leaving home in the morning — turning off electrical appliances is a natural, everyday precaution. 「付ける」(to turn on / to attach) is incorrect because turning lights or appliances on when leaving would be wasteful and illogical. 「直す」(to fix / repair) does not fit here because there is no mention of something being broken. 「借りる」(to borrow) is completely unrelated to managing household electricity before departure."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はし</rt></ruby>る（　）、<ruby>体<rt>からだ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くなりました。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことで",
+      "distractors": [
+        "ことに",
+        "ことが",
+        "ことを"
+      ],
+      "explanation": "「ことで」(こと＋で) expresses 'by doing / as a result of doing' — it shows that the daily running is the means or reason the body became strong. This is the correct causal/resultative pattern in N4. 「ことに」(こと＋に) means 'to one's surprise / it so happened that' — it introduces an unexpected discovery, not a deliberate result, so it is wrong here. 「ことが」(こと＋が) is the subject marker — it would create 'the fact that running exists,' which breaks the cause-and-effect logic of the sentence. 「ことを」(こと＋を) is the object marker — it would mean 'doing daily running as a target,' which does not express the causal link between the action and the outcome."
+    },
+    {
+      "question": "田中さんは毎日<ruby>朝<rt>あさ</rt></ruby>6時に<ruby>起<rt>お</rt></ruby>きる（　）、<ruby>会社<rt>かいしゃ</rt></ruby>に行く前に<ruby>朝食<rt>ちょうしょく</rt></ruby>を食べます。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "と",
+      "distractors": [
+        "ので",
+        "から",
+        "まで"
+      ],
+      "explanation": "The pattern 〜と、〜 (when ... then ...) indicates a natural sequence of habitual or routine actions: 'Every day Tanaka wakes up at 6 a.m., and then eats breakfast before going to the office.' The と here marks the completion of the first action before the second naturally follows. ので (because; since) would imply causation, making the sentence mean 'because he wakes up at 6, he eats breakfast,' which distorts the routine sequence. から (from; since) also expresses cause-and-effect rather than temporal sequence, and is too marked for this everyday routine context. まで (until) indicates a duration endpoint, not an action sequence, and would produce unnatural meaning like 'he eats breakfast until he wakes up at 6,' which is backwards and illogical."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>に<ruby>行く</ruby><ruby>前</ruby>に、<ruby>朝食</ruby>を<ruby>食べ</ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しごと",
+      "distractors": [
+        "しごく",
+        "じぎょう",
+        "しぎょう"
+      ],
+      "explanation": "仕事 (しごと) means \"work\" or \"job\" and is the standard N4 kanji compound for occupation or daily labor; here it follows に (destination marker) to show going \"to work.\" しごく (wrong reading: while しごく is a real verb meaning \"to strain/squeeze,\" it is not a noun and does not fit the に particle pattern for \"to [place].\" じぎょう is a real N4 word meaning \"business/enterprise,\" but it refers to an organization or venture, not the act of working; the context \"going to work\" calls for the general noun しごと. しぎょう does not exist as a standard reading of 仕事 and is a false distractor based on sound similarity."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>の<ruby>支度<rt>したく</rt></ruby>をする<ruby>時間<rt>じかん</rt></ruby>がないので、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）ことにしました。",
+      "reading": "Choose the verb that fits the context naturally.",
+      "correct": "抜かす",
+      "distractors": [
+        "忘れる",
+        "落とす",
+        "失う"
+      ],
+      "explanation": "抜かす (ぬかす) means 'to skip' or 'to omit', and is the natural collocation with 朝食 (breakfast) when someone decides to skip it due to lack of time. 忘れる (わすれる, 'to forget') implies accidental oversight, not a deliberate decision, so the phrase 「忘れることにしました」 (decided to forget) sounds unnatural and contradictory—one does not decide to forget. 落とす (おとす, 'to drop' or 'to miss') refers to physical dropping or accidentally missing something, not intentionally omitting a meal. 失う (うしなう, 'to lose') is abstract and grammatically wrong here; you do not 'lose' breakfast in this context, and this word is not used for skipping meals."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きる（　）、<ruby>健康<rt>けんこう</rt></ruby>になることができます。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことで",
+      "distractors": [
+        "ことが",
+        "ので",
+        "から"
+      ],
+      "explanation": "ことで expresses the means or method by which something is achieved; waking up early every morning is the METHOD that enables good health. ことが (which/that) is a relative clause marker and does not express causation or means, making it semantically wrong here. ので (because/since) indicates a reason or cause, not a method or means. から (from/since) also expresses reason or starting point, not the instrumental means by which health is achieved."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>した結果、<ruby>試験<rt>しけん</rt></ruby>に（　）ことができた。",
+      "reading": "Choose the correct verb form to complete the sentence.",
+      "correct": "合格する",
+      "distractors": [
+        "合格した",
+        "合格できる",
+        "合格される"
+      ],
+      "explanation": "The correct answer 合格する (goukaku suru) is the plain present form needed after ～することができた. This pattern expresses 'was able to do X' (past ability), where the verb must be in its plain form (辞書形/dictionary form) before ことができた. The distractor 合格した (goukaku shita) is past tense, which cannot precede ことができた—this would create an unnatural double-past structure. The distractor 合格できる (goukaku dekiru) is potential form, but using it here makes the sentence redundant ('could pass-can' is awkward and unnecessary since ～ことができた already expresses ability). The distractor 合格される (goukaku sareru) is passive voice, which changes the meaning to 'was passed upon' and is neither natural nor appropriate in this context where the subject actively achieved the goal."
+    },
+    {
+      "question": "<ruby>来週</ruby>の<ruby>月曜日</ruby>に<u>重要</u>な<ruby>会議</ruby>があります。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "ちょうよう",
+        "じゅうい",
+        "おもようう"
+      ],
+      "explanation": "じゅうよう (important, significant) is the standard reading of 重要 and fits naturally in this business context: a meeting described as じゅうよう な is one of great importance. ちょうよう is not a real reading of 重要; it confuses the first kanji with a different compound. じゅうい (重意) sounds similar in structure but is incorrect here—重要 is the correct kanji pair for \"important,\" not 重意. おもようう is a plausible-sounding distractor that attempts to blend the おも reading (heavy, difficult) with a made-up ending, but 重要 always reads じゅうよう as a compound; おも alone never carries the meaning of importance in formal contexts."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>家<rt>いえ</rt></ruby>を（　）して<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct verb to fit the context.",
+      "correct": "出ます",
+      "distractors": [
+        "入ります",
+        "帰ります",
+        "閉じます"
+      ],
+      "explanation": "出ます (to leave/depart) is the correct answer because the context describes leaving home in the morning to go to work—a natural daily routine. 入ります (to enter) is wrong because you would enter a building or place, not leave your home to go to work. 帰ります (to return home) is opposite in meaning and describes coming back, not leaving in the morning. 閉じます (to close) is wrong because it refers to closing an object or door, not the action of departing from a location."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそ</rt></ruby>しくて、<ruby>家族<rt>かぞく</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>夕食<rt>ゆうしょく</rt></ruby>を（　）<ruby>時間<rt>じかん</rt></ruby>がない。",
+      "reading": "Choose the word that fits the context about daily routine.",
+      "correct": "食べる",
+      "distractors": [
+        "作る",
+        "準備する",
+        "持つ"
+      ],
+      "explanation": "食べる (to eat) fits perfectly here because the sentence structure 「～を…時間がない」means 'have no time to do ~,' and 食べる is the natural verb for what one does with a meal (夕食). 作る (tsukuru, to make/cook) is plausible on the surface but creates a contradiction: the speaker is already working, so the sentence is about eating the meal together, not preparing it. 準備する (junbi-suru, to prepare) has the same issue—it refers to preparation rather than consumption. 持つ (motsu, to hold/carry) makes no sense in the context of a family meal."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>しているので、<ruby>日本語<rt>にほんご</rt></ruby>が上手に<u>なれた</u>（　）。",
+      "reading": "Choose the grammar form that completes the sentence naturally.",
+      "correct": "と思う",
+      "distractors": [
+        "と言う",
+        "と考える",
+        "と聞く"
+      ],
+      "explanation": "The correct answer 'と思う' (I think) is the natural way to express the speaker's personal inference or belief about the result of daily study. The sentence means 'Because I study every day, I think I became good at Japanese'—this is a common N4 collocation for stating one's own conclusion. 'と言う' (to say) is wrong because it reports what someone else says, not the speaker's own thought. 'と考える' (to think/consider) is a near-synonym but is less natural here; 'なれた' already contains the past achievement, so we need a lighter verb like 'think' rather than the heavier 'consider'. 'と聞く' (to hear) is wrong because it refers to learning information from others, not to forming one's own opinion about a result."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていたので、<ruby>家<rt>いえ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<u>読む</u>（　）にしました。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことに",
+      "distractors": [
+        "ままに",
+        "ところに",
+        "のに"
+      ],
+      "explanation": "The correct answer is ことに (koto ni), which expresses 'decided to do' or 'made a choice to do.' The sentence means 'Because it was raining yesterday, I decided to read a book inside the house.' The pattern ～ことにする indicates making a deliberate choice or decision. ままに (mama ni, 'as is / in the state of') is a grammar form that means allowing something to continue unchanged, not making a deliberate choice, so it does not fit here. ところに (tokoro ni, 'at the moment of / just as') refers to a point in time when something happens, not a decision, making it incompatible with this context. のに (no ni, 'despite / in spite of') expresses contrast or reason for an unexpected result, but here we need a decision-making form, not a contrast."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はし</rt></ruby>る（　）、<ruby>足<rt>あし</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くなった。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことで",
+      "distractors": [
+        "ことに",
+        "ことが",
+        "ことを"
+      ],
+      "explanation": "ことで (koto de) expresses the means or reason by which a result is achieved—here, running every morning is the direct cause of the legs becoming strong. The sentence uses the plain present form 走る + ことで to show 'by doing (running), the result occurred.' ことに (koto ni) means 'to one's surprise' and expresses unexpected realization, not causality, making it semantically wrong here. ことが (koto ga) marks a clause as the subject or object but does not express the cause-and-effect relationship needed; it would only identify that running is a fact, not explain why legs became strong. ことを (koto wo) similarly marks the object of a verb but cannot show causal connection; it would mean 'doing the act of running' as a direct object, losing the meaning of 'as a result of running.'"
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>ごはんを食べてから、<ruby>学校<rt>がっこう</rt></ruby>へ（　）ました。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "行き",
+      "distractors": [
+        "来き",
+        "帰り",
+        "走り"
+      ],
+      "explanation": "行き (いき) is the correct te-form stem here because 「行きました」 means \"went,\" which naturally follows eating breakfast and describes movement toward school. 来き (きき) is not a valid conjugation—the correct stem of 来る is \"来\" and its past form is 「来ました」, not \"来きました\"; additionally, \"came\" (toward the speaker) is semantically wrong in this context. 帰り (かえり) means \"returned home,\" which contradicts the stated destination \"school.\" 走り (はしり) means \"ran,\" which describes manner of movement, not the main action of going to school—the sentence structure requires the primary verb of motion."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>朝</ruby>、<ruby>私</ruby>は<u>駅</u>の<ruby>近く</ruby>で<ruby>友達</ruby>に<ruby>会</ruby>います。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "えき",
+      "distractors": [
+        "せき",
+        "かき",
+        "えん"
+      ],
+      "explanation": "えき (station) is the standard N4 reading for 駅 and is the most common public transportation word taught at this level. The sentence uses the everyday context of meeting a friend near a station, making this the natural and correct reading. せき is a different kanji (席, meaning seat/place) and does not fit the kanji shown here. かき is a homophone for 柿 (persimmon) or a form of 書く (write), neither of which matches the kanji 駅. えん is the reading for 円 (yen, currency) or other unrelated kanji, and is incorrect in this sentence about a transportation landmark."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>仕事</ruby>から<ruby>帰宅</ruby>した後、私は<u>家族</u>と<ruby>夕食</ruby>を<ruby>食べ</ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "かぞく",
+      "distractors": [
+        "いえぞく",
+        "かていぞく",
+        "けんぞく"
+      ],
+      "explanation": "かぞく is the standard N4 reading for 家族 (family), used in everyday contexts to refer to one's relatives living together. いえぞく (ie + zoku) is not a real word — 家 alone means 'house' but adding ぞく (族) this way does not form a natural compound in modern Japanese. かていぞく sounds plausible but 家庭族 is not a word; 家庭 means 'household/home life' and would not take this reading pattern. けんぞく is the reading for 県族, which is not a real word either and does not fit the meaning of family in this sentence."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きるのは、<ruby>健康<rt>けんこう</rt></ruby>に<u>（　）</u>からです。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "いい",
+      "distractors": [
+        "よい",
+        "よく",
+        "いく"
+      ],
+      "explanation": "The correct answer is いい (good/beneficial), which is the い-adjective form that modifies the noun 健康 (health) to mean 'is good for health.' The phrase 健康にいい means 'good for your health,' a common N4 collocation. よい is an alternate classical form of いい, but in modern colloquial N4 Japanese, いい is the standard form used in this fixed phrase. よく (yoku, well/often, the adverb form) is the wrong part of speech—it would require a verb like します after it, not the explanatory から. いく (iku, to go) is an unrelated verb that makes no grammatical or semantic sense in this position."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>朝</u><ruby>早</ruby>く<ruby>起</ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あさ",
+      "distractors": [
+        "あした",
+        "あさって",
+        "よあけ"
+      ],
+      "explanation": "The correct answer あさ (morning) matches the context perfectly: combined with 毎日 (every day) and 早く (early), the sentence means 'I wake up early every morning.' The word 朝 specifically refers to the time period in the early part of the day, not a single future date. あした (tomorrow, also written 明日) is a related time word but refers to the next day, not the daily morning hours, making it semantically wrong here. あさって (the day after tomorrow) also refers to a future date rather than a daily time of day, creating the same category mismatch. よあけ (dawn/daybreak) is a real N4 word referring to the very early pre-sunrise period, but in this sentence with 早く起きます (wake up early), the speaker is not specifying the astronomical moment of dawn—they mean the morning hours in general, so よあけ is too specific and poetic for this everyday routine."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>する（　）、<ruby>健康<rt>けんこう</rt></ruby>になることができます。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことで",
+      "distractors": [
+        "ことが",
+        "ために",
+        "ながら"
+      ],
+      "explanation": "The correct answer ことで (koto de) expresses the means or method by which a result is achieved—'by doing X, Y happens.' Here, 'by exercising every day, one can become healthy' fits this causal-means pattern perfectly. The distractor ことが (koto ga) marks the subject or object of a sentence, not a causal relationship, so it would make the sentence grammatically incomplete or nonsensical. ために (tame ni) expresses purpose ('in order to') rather than the natural result of an action, so it would suggest exercising is done 'for the sake of' health rather than showing that exercise leads to health. ながら (nagara) means 'while' and describes simultaneous actions, not causality, so it would incorrectly suggest exercising and becoming healthy happen at the same time rather than one causing the other."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>7<ruby>時<rt>じ</rt></ruby>に<ruby>家<rt>いえ</rt></ruby>を出た<u>（　）</u>、<ruby>駅<rt>えき</rt></ruby>に着いた。",
+      "reading": "Choose the correct grammar form to fill the blank.",
+      "correct": "ところ",
+      "distractors": [
+        "ため",
+        "とき",
+        "ながら"
+      ],
+      "explanation": "ところ (just as, at the moment) correctly expresses that arriving at the station happened right after leaving home—the immediate sequence of two actions. ため (because, in order to) indicates reason or purpose, not temporal immediacy, so \"left home in order to arrive\" is illogical here. とき (when) marks a point in time but does not convey the immediate, consecutive nature of the two events—it would mean \"when I left home, I arrived,\" which is awkward and ambiguous. ながら (while doing) suggests two simultaneous actions, not sequential ones, so \"while leaving home and arriving\" contradicts the natural order of events."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>が<ruby>忙</ruby>しいです。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しごと",
+      "distractors": [
+        "しごう",
+        "しぎょう",
+        "しぎと"
+      ],
+      "explanation": "しごと is the standard N4 reading for 仕事 (work/job), a core vocabulary word used in everyday contexts. しごう is a non-existent reading and shares no plausible association with the kanji. しぎょう sounds like 事業 (business/enterprise), a related but different word with a different kanji pairing, making it an attractive wrong choice for learners confusing similar concepts. しぎと is a made-up reading that might tempt someone unfamiliar with the correct on-yomi/kun-yomi distinction, but it has no validity in Japanese."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>朝食</u>を<ruby>食</ruby>べてから<ruby>学校</ruby>へ<ruby>行</ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "ちょうしょく is the correct reading of 朝食 (breakfast), a standard compound noun formed from 朝 (morning, ちょう) + 食 (meal/food, しょく). This word is used in everyday speech and writing to refer to the meal eaten in the morning. あさしょく uses the on-yomi reading of 朝 (あさ is kun-yomi, ちょう is on-yomi), which is incorrect for this compound; while 朝 can be read as あさ, it must be read as ちょう in the compound 朝食. ちょうたべ confuses 食 with the verb 食べる (to eat, たべ), but 食 in the noun 朝食 is read しょく (a food/meal reading), not たべ; also, ちょうたべ is not a real word. あさたべ similarly mixes the kun-yomi 朝 reading (あさ) with a verb stem, creating a non-standard form that does not exist in Japanese."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>は<ruby>重要</ruby>だから、<u>欠席</u>してはいけません。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "けっせき",
+      "distractors": [
+        "かつせき",
+        "けっしゃ",
+        "かいせき"
+      ],
+      "explanation": "欠席 (けっせき) means 'absence' and is the standard N4 vocabulary for not attending an event. It combines 欠 (lack/missing) + 席 (seat/place), reading as けっせき with a geminate consonant. かつせき is a mispronunciation of the first kanji (欠 does not read かつ in this context—かつ means 'win' and belongs to a different kanji). けっしゃ mistakenly applies しゃ as a reading for 席, when 席 in compounds like 欠席 always reads せき; moreover けっしゃ is not a real word. かいせき treats 欠 as かい (incorrect—会 reads かい, not 欠) and席 as せき; this creates a false word unrelated to absence."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>で、<u>新しい</u>プロジェクトについて<ruby>説明</ruby>がありました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "あたしい",
+        "しんしい",
+        "あたりしい"
+      ],
+      "explanation": "「新しい」(あたらしい) is the standard N4 adjective meaning 'new' and fits naturally in the context of describing a new project at work. 「あたしい」 is not a real Japanese word and confuses the pronunciation. 「しんしい」 (しん＝new, しい＝not a standard reading of 新) is a plausible-sounding but incorrect reading—しん alone means new but cannot stand as an i-adjective on its own without the ～しい suffix in standard Japanese, and even then is not the natural reading here. 「あたりしい」 adds an extra mora (り) that does not belong in the kanji 新 and is phonetically wrong."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>早起き</u>して<ruby>仕事</ruby>に<ruby>行</ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "はやおき",
+      "distractors": [
+        "そうおき",
+        "はやねる",
+        "あさおき"
+      ],
+      "explanation": "The correct answer はやおき (early rising) is the standard N4 compound noun meaning to wake up early in the morning, which fits naturally after the time particle は and before the て-form verb して. The distractor そうおき (sou-oki) is not a real Japanese word — it mixes a non-existent kanji reading with the noun おき. The distractor はやねる (fast sleeping / going to bed early) is a real verb form but refers to going to bed early, not waking up early, and does not fit the grammatical structure here (ねる is a verb that cannot directly take して without becoming ねて). The distractor あさおき (morning-rising) sounds plausible but あさ (morning, the time of day) is not the correct modifier for this compound; はや (early) is the proper adjective root that forms the idiom はやおき."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>友達<rt>ともだち</rt></ruby>に<ruby>借<rt>か</rt></ruby>りた<ruby>本<rt>ほん</rt></ruby>を<u>返す（　）</u>、<ruby>忘<rt>わす</rt></ruby>れてしまいました。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことを",
+      "distractors": [
+        "ことが",
+        "ために",
+        "のに"
+      ],
+      "explanation": "The correct answer is ことを because the sentence expresses an intended action that was not completed: 'I forgot to return the book I borrowed yesterday.' The pattern ～ことを + verb of forgetting/failure uses the を particle to mark the intended action as a direct object of 忘れる. ことが (koto ga) changes the meaning to 'the fact that I returned' and would require a different grammatical structure for this context. ために (tame ni) means 'in order to' or 'for the sake of,' which would suggest the returning was the purpose, but here the forgetting is what happened—wrong causal relationship. のに (no ni) expresses 'despite' or 'even though,' which would contradict the sentence's meaning of failure to complete the action."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>家<rt>いえ</rt></ruby>を（　）して<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the verb that fits the context naturally.",
+      "correct": "出ます",
+      "distractors": [
+        "帰ります",
+        "来ます",
+        "入ります"
+      ],
+      "explanation": "'出ます' (でます, to leave/go out) is correct here because the sentence describes the routine action of leaving one's house in the morning to go to the station — a natural sequence of movement from inside to outside the home. '帰ります' (かえります, to return home) is wrong because it means coming back, the opposite direction of the intended action in this morning routine. '来ます' (きます, to come/arrive) is wrong because it indicates movement toward a place, not away from the speaker's house in the direction of the station. '入ります' (はいります, to enter) is wrong because it describes going into a place, the reverse of the intended 'leaving the house' meaning."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "読み",
+        "聞き"
+      ],
+      "explanation": "飲み (drink) is correct because 牛乳を飲む (to drink milk) is the standard collocation—milk is a liquid consumed by drinking, not eating or other actions. 食べ (eat, from 食べる) is wrong because milk is drunk, not eaten, despite being a consumable; 食べます would be unnatural here. 読み (read, from 読む) is completely wrong because milk cannot be read—this is a basic semantic mismatch. 聞き (listen/hear, from 聞く) is wrong because milk is not something one listens to; this too is a clear semantic error."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>図書館</ruby>で<u>勉強</u>しました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "べんきょう",
+      "distractors": [
+        "べんこう",
+        "べんがく",
+        "べんくぎょう"
+      ],
+      "explanation": "べんきょう is the standard N4 reading for 勉強 (study), a common verb-noun used with する to form 「勉強する」 (to study). べんこう (wrong pronunciation of 便行 or misread stroke count) is not a real word for this kanji. べんがく (sounds like 便学, a non-existent compound) confuses the reading and adds an incorrect mora. べんくぎょう is an overextended, unnatural reading that breaks the standard two-mora structure of 勉強."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>雨</ruby>が<ruby>降</ruby>っていたので、<u>運動</u><ruby>会</ruby>が<ruby>延期</ruby>になりました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "うんどうかい",
+      "distractors": [
+        "うんどうえ",
+        "はどうかい",
+        "うんとうかい"
+      ],
+      "explanation": "The correct answer うんどうかい is the standard reading of 運動会, a compound meaning 'athletic meet/sports day'—a common N4 vocabulary word and school event. うんどうえ (wrong first character reading + え instead of かい) misreads 会 as え, which is incorrect in this context; 会 reads かい when it means 'meeting/gathering' in 運動会. はどうかい incorrectly reads 運 as は instead of うん, changing the meaning entirely and creating a non-existent word. うんとうかい swaps the second syllable to とう instead of どう, which would be a non-standard reading of 運動 and sounds awkward—the correct reading is どう, not とう."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>早起き</u>して<ruby>学校</ruby>に<ruby>行</ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "はやおき",
+      "distractors": [
+        "そうおき",
+        "はやめ",
+        "あさおき"
+      ],
+      "explanation": "The correct reading はやおき (早起き = waking up early) is a common N4 compound noun meaning 'early rising/waking up early.' It appears naturally in this sentence describing a morning routine. The distractor そうおき is not a real word in standard Japanese — it is a plausible but invented reading of the kanji. The distractor はやめ is a real word (early stop/quitting early), but it uses different kanji (早め) and does not fit the meaning 'waking up' here; it means to end or quit something early, not to rise from bed. The distractor あさおき looks similar to the correct answer because it shares the kanji 起き (to wake/get up), but あさおき (morning rising) is not the standard reading for this compound — 朝起き would use 朝 explicitly if that were the target."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそ</rt></ruby>しかったので、<ruby>友達<rt>ともだち</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>を（　）ことができませんでした。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "かけ",
+      "distractors": [
+        "かけた",
+        "かけさせ",
+        "かけられ"
+      ],
+      "explanation": "The correct answer かけ (stem form of かける) fits because it is required between a verb stem and ことができます to express 'was able to do / could do'. The pattern is verb-stem + ことができる, so かけることができませんでした means 'could not make a phone call'. The distractor かけた (past tense) is wrong because it produces かけたことができませんでした, which changes the meaning to 'the completed action of calling' rather than the ability to call, and breaks the ことができる construction. The distractor かけさせ (causative stem) is wrong because it introduces an unwanted causative meaning ('cause someone to call') that does not fit the intended sentence. The distractor かけられ (passive stem) is wrong because it adds passive voice ('be called'), which contradicts the meaning of the speaker calling the friend, and does not form a natural phrase with ことができます in this context."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>朝</ruby>、<ruby>駅</ruby>で<u>友達</u>に<ruby>会</ruby>う<ruby>約束</ruby>をしました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ともだち",
+      "distractors": [
+        "ゆうたち",
+        "とうだち",
+        "ゆうだち"
+      ],
+      "explanation": "ともだち is the standard N4 reading for 友達, meaning 'friend,' and fits naturally in this everyday context about meeting someone at a station. ゆうたち (incorrect reading; 'ゆう' does not match 友) is a plausible but wrong sound-alike that confuses the first character. とうだち (incorrect; 友 has no 'とう' reading in common vocabulary) is another near-miss that mixes an uncommon or non-existent reading with the correct second half. ゆうだち (incorrect; this is actually the reading of 夕立, 'sudden evening shower,' a different word entirely) is a dangerous distractor because it sounds similar and is a real N4 vocabulary word, but it does not match the kanji 友達."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the correct verb to complete the sentence.",
+      "correct": "飲んで",
+      "distractors": [
+        "食べて",
+        "聞いて",
+        "見て"
+      ],
+      "explanation": "飲んで (のんで) is correct here because it means 'drink,' and the sentence describes a habitual morning action: the speaker drinks milk and then goes to school. The て-form connects two sequential actions naturally. 食べて (たべて, 'eat') is grammatically possible but semantically wrong—牛乳 (milk) is drunk, not eaten. 聞いて (きいて, 'listen/hear') has the wrong meaning entirely; one does not 'listen to milk.' 見て (みて, 'look/watch') is also semantically incorrect; the sentence is not about observing milk but consuming it."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は<ruby>疲<rt>つか</rt></ruby>れるので、<ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>体<rt>からだ</rt></ruby>を（　）ことが<ruby>大切<rt>たいせつ</rt></ruby>です。",
+      "reading": "Choose the verb that completes the sentence naturally.",
+      "correct": "休める",
+      "distractors": [
+        "忘れる",
+        "直す",
+        "返す"
+      ],
+      "explanation": "The correct answer 休める (to rest) fits naturally in this context: 'Because daily work is tiring, it is important to rest your body on weekends.' The verb collocates perfectly with 体を (object of rest) and the て-form grammar pattern ～ことが大切. 忘れる (wasureru: to forget) is incompatible here — you cannot meaningfully 'forget your body' in this context. 直す (naosu: to fix/repair) has the wrong meaning; while it can take a body part as object, the sentence would become 'fix your body,' which is not the intended meaning about resting. 返す (kaesu: to return) is also semantically wrong and unnatural in this wellness context — the sentence would illogically mean 'return your body on weekends.'"
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>は<ruby>時間<rt>じかん</rt></ruby>がないので、<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）で<ruby>出<rt>で</rt></ruby>かけました。",
+      "reading": "Choose the word that fits the context about eating breakfast quickly.",
+      "correct": "急いで",
+      "distractors": [
+        "走って",
+        "歩いて",
+        "飛んで"
+      ],
+      "explanation": "急いで (hurriedly) is the correct adverb here because the context states there was no time in the morning, so the action of eating breakfast was done quickly/hurriedly to leave on time. This uses the て-form of the verb 急ぐ to express manner of action. 走って (ran) is a て-form adverb but describes the manner of physical movement, not how breakfast was eaten—eating breakfast by running makes no sense. 歩いて (walked) similarly describes physical movement and is incompatible with eating; it answers 'how did you go out?' not 'how did you eat?'. 飛んで (flew) is also a movement verb in て-form and is physically implausible in this everyday context—it does not fit the meaning of eating breakfast quickly due to lack of time."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>6<ruby>時<rt>じ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きる（　）、<ruby>仕事<rt>しごと</rt></ruby>に<ruby>行<rt>い</rt></ruby>っています。",
+      "reading": "Choose the grammar form that fits the blank.",
+      "correct": "ことにしている",
+      "distractors": [
+        "ようにしている",
+        "たびに",
+        "ほうが"
+      ],
+      "explanation": "The correct answer ことにしている (koto ni shite iru) expresses a habit or resolved routine — the speaker has decided to and continues to wake up at 6 a.m. every day. ようにしている (yō ni shite iru) means 'trying/endeavoring to do,' which emphasizes effort rather than an established routine; it does not fit the sense of an automatic daily habit. たびに means 'every time/whenever' and requires a noun phrase before it (e.g., 毎日朝6時に起きるたびに), not a bare clause. ほうが means 'it is better to' and expresses preference or advice, which contradicts the statement of an existing routine."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に合わせるために、<ruby>今夜<rt>こんや</rt></ruby><u>報告書</u>を（　）必要があります。",
+      "reading": "Choose the verb that fits the context naturally.",
+      "correct": "書く",
+      "distractors": [
+        "読む",
+        "聞く",
+        "送る"
+      ],
+      "explanation": "書く (かく, to write) is correct because the sentence describes preparing a report in time for tomorrow's meeting — you must write/complete the report by tonight. 読む (よむ, to read) is wrong because you cannot 'read a report' in order to prepare it for a meeting; reading is receiving information, not producing a deliverable. 聞く (きく, to listen/ask) does not fit because you cannot 'listen to' or 'ask' a report into existence — the context requires creating the document. 送る (おくる, to send) is wrong because although reports are sometimes sent, the urgency marker「間に合わせるために」(in order to make it in time) points to the act of completion/writing, not delivery — if sending were intended, the sentence would more naturally say「送る必要があります」without the time-pressure framing."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>仕事</ruby>の<ruby>後</ruby>で、<ruby>駅</ruby>の<ruby>近く</ruby>にある<u>喫茶店</u>でコーヒーを飲みます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "きっさてん",
+      "distractors": [
+        "こうひいてん",
+        "きつさてん",
+        "けっさてん"
+      ],
+      "explanation": "きっさてん (喫茶店 = coffee shop) is the standard N4 reading for a casual café where people drink coffee and tea. It uses the on-readings きつ (喫) and さ (茶) plus てん (店). こうひいてん is incorrect because こうひい is not a kanji reading—it mixes English 'coffee' with Japanese, and is not a real compound. きつさてん incorrectly uses きつ (the pure on-reading without the geminate double-consonant mark, which would fail to produce the proper pronunciation); the correct reading requires きっ with the small tsu to indicate the consonant doubling. けっさてん wrongly reads 喫 as けつ, which is not a valid reading of that character in this context and would produce an incorrect, non-word form."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>は<ruby>大切</ruby>なので、<u>欠席</u>しないでください。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "けっせき",
+      "distractors": [
+        "かっせき",
+        "けつせき",
+        "かくせき"
+      ],
+      "explanation": "けっせき (absence from a meeting or event) is the standard reading of 欠席. The kanji 欠 means \"lacking/absent\" and 席 means \"seat/attendance\"; together they mean being absent from one's assigned place. かっせき uses an incorrect on'yomi reading of 欠 (かつ instead of けつ) — while かつ is a valid reading in other compounds like 欠ける (かける), it does not apply here. けつせき reverses the pitch accent pattern but uses the correct individual readings; however, the natural and only correct pronunciation is けっせき with the geminate consonant (っ). かくせき is a common error mixing 欠 (けつ) with a misreading of 席 as かく, which is not a standard reading of that kanji in this context."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>借<rt>か</rt></ruby>りた<ruby>本<rt>ほん</rt></ruby>を<u>（　）</u>ました。",
+      "reading": "Choose the verb that fits the blank.",
+      "correct": "返",
+      "distractors": [
+        "送",
+        "直",
+        "読"
+      ],
+      "explanation": "返す (kaえす) means 'to return,' and here the sentence describes a natural sequence: borrowing a book from a library yesterday, then returning it today. This is the correct collocation with 'borrowed books.' 送 (おくる: to send/dispatch) would imply mailing or forwarding the book elsewhere, which is wrong context. 直す (なおす: to fix/repair) means to mend or correct something broken or wrong, which makes no sense for a book being brought back to a library. 読む (よむ: to read) is semantically unrelated; you may read a borrowed book, but the blank requires an action related to what you do *after* borrowing."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>まで<ruby>走<rt>はし</rt></ruby>る（　）<ruby>健康<rt>けんこう</rt></ruby>になりました。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ようになって",
+      "distractors": [
+        "ことがあって",
+        "ままで",
+        "おかげで"
+      ],
+      "explanation": "The correct answer ようになって (came to; came to be) expresses a change in state or condition that results from a repeated action over time. Here, running to the station every morning has caused the speaker to become healthy—a gradual transformation. ことがあって (has had the experience of; there have been times when) is a grammar form used to talk about past experiences, not the result of a continuous habit becoming normal. ままで (in the state of; while remaining) describes maintaining an unchanged condition, not a change, so it contradicts the meaning that health was newly gained. おかげで (thanks to; because of) does express a cause-and-result relationship, but it is used for a single, completed cause leading to a result, not for the repeated habit becoming a settled new condition, which ようになって specifically captures."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会議</ruby>は<ruby>朝</ruby>の9<ruby>時</ruby>に<u>始</u>まりました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "はじ",
+      "distractors": [
+        "し",
+        "じ",
+        "かか"
+      ],
+      "explanation": "始まる (はじまる) means 'to begin/start' and is a standard N4 verb. The underlined kanji 始 reads はじ in this context as the stem of はじまる. し is a common reading of 始 but used in different words like 始める (しはじめる), which has a different structure and meaning. じ is an incorrect reading that does not correspond to this kanji's standard readings. かか is the reading of 掛かる (かかる, 'to take [time]'), a different verb entirely, making it inappropriate in this sentence about a meeting starting."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>勉強</u>することが<ruby>大切</ruby>です。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "べんきょう",
+      "distractors": [
+        "べんこう",
+        "べんがく",
+        "べんぎょう"
+      ],
+      "explanation": "べんきょう is the standard N4 reading for the kanji compound 勉強 (effort + study), meaning 'to study' or 'studying as an activity.' This is the only correct reading taught at the N4 level. べんこう (wrong syllable in first kanji; this reading does not exist for 勉) is a plausible but non-existent distractor that might tempt learners unfamiliar with the compound. べんがく sounds similar but changes the final kanji reading to がく, which would give a different (and incorrect) compound meaning. べんぎょう replaces the standard きょう sound with ぎょう, creating a false reading that does not correspond to any standard Japanese word."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）のが<ruby>習慣<rt>しゅうかん</rt></ruby>です。",
+      "reading": "Choose the verb that fits the context about a daily habit.",
+      "correct": "飲む",
+      "distractors": [
+        "食べる",
+        "作る",
+        "買う"
+      ],
+      "explanation": "飲む (のむ, to drink) is the correct answer because 牛乳 (milk) is a beverage and the natural collocation in Japanese is 牛乳を飲む. The sentence describes a daily habit, and drinking milk each morning is a logical, common habit. 食べる (たべる, to eat) is wrong because although you can eat some dairy products, milk is specifically drunk, not eaten in standard usage. 作る (つくる, to make) is wrong because the sentence indicates a habit of consuming milk, not preparing it; the focus is on the action the speaker performs daily as a routine. 買う (かう, to buy) is wrong because while one must buy milk to drink it, the sentence describes what the speaker does every morning with milk, and buying happens less frequently than the daily drinking habit described."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>会社<rt>かいしゃ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、毎日<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）ます。",
+      "reading": "Choose the verb that fits the context naturally.",
+      "correct": "飲み",
+      "distractors": [
+        "食べ",
+        "見",
+        "聞き"
+      ],
+      "explanation": "飲み (のみ) is the correct stem form because 牛乳を飲む (to drink milk) is the standard collocation for consuming beverages in Japanese. The blank follows the pattern （　）ます, which requires the verb stem before ます. 食べ (たべ、to eat) is wrong because while you can eat food, 牛乳を食べる is unnatural—milk is drunk, not eaten. 見 (み、to see/watch) has no logical connection to the context; looking at milk does not fit the morning routine described. 聞き (きき、to listen/hear) is completely irrelevant—the sentence describes a daily action with milk, not an auditory activity."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>仕事</ruby>から<ruby>帰</ruby>ってから、<u>夕食</u>を<ruby>作</ruby>ります。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ゆうしょく",
+      "distractors": [
+        "ゆうたべ",
+        "せきしょく",
+        "ばんしょく"
+      ],
+      "explanation": "ゆうしょく (evening meal) is the standard N4 reading for 夕食. The kanji 夕 (evening) + 食 (meal) naturally compounds to mean dinner or supper, the meal eaten after returning from work. ゆうたべ is an invented non-word; 夕 means \"evening\" but 食 is never read as べ in this context. せきしょく (using the on-reading of 夕) is a non-standard reading; while せき exists as an archaic sound, it is not the modern N4 reading taught. ばんしょく (using 晩 instead of 夕, both meaning \"evening\") is a real word meaning dinner, but the question specifically shows the kanji 夕食, not 晩食, so this reading is wrong for this kanji compound."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>忙しい</u>ので、<ruby>朝食</ruby>を<ruby>食べ</ruby>る<ruby>時間</ruby>がありません。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "いそがしい",
+      "distractors": [
+        "もうしい",
+        "おおしい",
+        "ほうしい"
+      ],
+      "explanation": "いそがしい is the standard N4 reading of 忙しい, meaning \"busy\" or \"hectic.\" The sentence uses this adjective in the plain form to describe why the speaker has no time for breakfast. もうしい is a non-existent reading that might tempt learners confusing it with 申す (もうす, to say); it does not apply to this kanji. おおしい resembles 大 (おお, big), but 忙 does not contain that kanji and this reading is not real. ほうしい sounds like 欲しい (ほしい, to want), which is a different adjective entirely and does not match the kanji 忙."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>で（　）ます。",
+      "reading": "Choose the verb that correctly completes the sentence.",
+      "correct": "行き",
+      "distractors": [
+        "来い",
+        "走り",
+        "歩き"
+      ],
+      "explanation": "行き (いき — 'go') is the correct -i stem form that combines with ます to mean 'I go to the station by bicycle every morning,' matching the natural pattern of commuting. 来い (きい — the plain imperative of 来る) is grammatically wrong here; it would produce an unnatural command form 'come!ます,' which is ungrammatical. 走り (はしり — 'run') is a real verb stem but semantically incorrect; 'running to the station' contradicts the natural use of a bicycle as transport. 歩き (あるき — 'walk') is also a real verb stem but equally mismatched; one would use a bicycle, not walk, to the station, so this distractor is semantically implausible in context."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>朝</ruby>、<ruby>私</ruby>は<u>駅</u>の<ruby>近</ruby>くで<ruby>友達</ruby>に<ruby>会</ruby>います。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "えき",
+      "distractors": [
+        "せき",
+        "えいき",
+        "あき"
+      ],
+      "explanation": "駅 (えき) is the standard N4 word for 'train station,' a common everyday place. せき is not a reading of this kanji; it means 'seat' (席) when read differently. えいき is a non-existent reading mixture and has no standard meaning. あき means 'autumn' (秋) and is a different kanji altogether, even though it shares similar stroke patterns to an untrained eye; this is a common look-alike confusion."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>会社</ruby>で<u>重要</u>な<ruby>会議</ruby>がありました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "じゅうぎ",
+        "おもよう",
+        "かさねよう"
+      ],
+      "explanation": "じゅうよう (important, critical) is the standard N4 reading of 重要, a common adjective meaning \"important\" or \"necessary.\" The sentence naturally describes a significant meeting at work using this everyday business vocabulary. じゅうぎ sounds similar but is not a real word—it confuses the sound of 重 with 銀 (gin, silver) and is a plausible distractor only by sound. おもよう (omo-yō) is a false reading mixing おも (heavy, from 重い) with an incorrect suffix; while おも is a real reading of 重, it does not attach to 要 in this way. かさねよう (kasa-ne-yō) is a non-existent reading that wrongly applies 重ねる (重, to stack/layer) as a verb stem; this word does not exist and would confuse a different kanji compound altogether."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>会議</ruby>で<u>提案</u>を<ruby>説明</ruby>するので、<ruby>資料</ruby>を<ruby>用意</ruby>しておきます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ていあん",
+      "distractors": [
+        "ていぎ",
+        "だいあん",
+        "ていさん"
+      ],
+      "explanation": "ていあん (proposal) is the standard N4 reading for 提案, meaning a suggestion or plan presented in a formal setting like a meeting. ていぎ (definition) is the reading of a different kanji compound (定義) — while both use 提 in some contexts, 定義 is definitionally incorrect here and would make the sentence nonsensical. だいあん (substitute proposal) uses an alternative reading of 提 (だい) that is valid in isolation but not standard for this specific 提案 compound and would be considered a reading error at N4. ていさん (presentation) looks similar in structure and meaning but is not the correct reading of 提案 — it conflates 提案 with 提示 (ていじ) and uses an incorrect okurigana pattern for this kanji combination."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>に<ruby>行</ruby>く<ruby>前</ruby>に、<ruby>朝食</ruby>を<ruby>食</ruby>べます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しごと",
+      "distractors": [
+        "しごく",
+        "じぎょう",
+        "しぎょう"
+      ],
+      "explanation": "しごと (work/job) is the standard N4 reading of 仕事. It refers to regular employment or tasks one does for a living, and is the natural collocation in this sentence describing a daily routine before going to work. しごく (wrong reading: means 'to do thoroughly/intensely' and is a verb, not a noun) does not fit the particle に or the context of going to a place. じぎょう (wrong reading of 事業, a different kanji compound meaning 'business/enterprise') does not match the target kanji 仕事; it would require different characters. しぎょう (a confused or non-existent reading combining the on-yomi shi- with an incorrect yomi -gyō) is not a real reading of this compound."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>家<rt>いえ</rt></ruby>を（　）<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the word that fits the context about leaving home for the station.",
+      "correct": "出ます",
+      "distractors": [
+        "入ります",
+        "帰ります",
+        "立ちます"
+      ],
+      "explanation": "出ます (でます, to leave/exit) is correct because the sentence describes leaving one's home to go to the station—a natural daily routine. The context requires a verb meaning 'to depart from' or 'to exit' a location. 入ります (いります, to enter) is wrong—it means the opposite action (going into a place), which contradicts moving away from home toward the station. 帰ります (かえります, to return home) is wrong because it means returning to one's home, not leaving it; the sentence clearly states the destination is the station, not the home. 立ちます (たちます, to stand up) is wrong—it describes a physical posture change, not movement away from a location; it cannot pair with the destination marker へ in this way."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>へ<ruby>急<rt>いそ</rt></ruby>ぐとき、<ruby>友<rt>とも</rt></ruby>だちに<u>会った</u>（　）、<ruby>一<rt>いっ</rt></ruby>しょに<ruby>学校<rt>がっこう</rt></ruby>へ行った。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ので",
+      "distractors": [
+        "ために",
+        "ところに",
+        "ばかりに"
+      ],
+      "explanation": "The correct answer 「ので」(because; so) expresses a reason or cause for the following action. The speaker met a friend while hurrying to the station in the morning, and *because/so* they went to school together—showing a natural cause-and-effect relationship between the two events. 「ために」(in order to; for the purpose of) indicates a purpose or goal, not a reason for something that already happened—「会ったために」would awkwardly mean 'for the sake of meeting' rather than 'because I met'. 「ところに」(at the moment when; just as) marks a simultaneous or sudden occurrence, not a causal link—it would mean 'just as I was hurrying' with no clear connection to why they went together. 「ばかりに」(only because; precisely because) carries a tone of blame or regret, implying an unwanted consequence—here it would sound like the meeting caused an unfortunate result, which contradicts the neutral narrative tone."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きるのは<ruby>難<rt>むずか</rt></ruby>しいですが、<ruby>健康<rt>けんこう</rt></ruby>のために（　）ようにしています。",
+      "reading": "Choose the word that fits the context about maintaining a healthy habit.",
+      "correct": "頑張ります",
+      "distractors": [
+        "忘れます",
+        "逃げます",
+        "休みます"
+      ],
+      "explanation": "頑張ります (ganbarimas' — 'to do one's best/to persevere') fits because the sentence describes a difficult daily action (waking up early) that the speaker is making a conscious effort to continue for health reasons; 「〜ようにしている」 expresses an intentional habit or effort to maintain, and 頑張る matches this meaning of sustained effort. 忘れます (wasuremas' — 'to forget') is grammatically possible but semantically wrong: forgetting early morning wake-ups contradicts the speaker's stated purpose of maintaining health. 逃げます (nigemath' — 'to run away/escape') could attach to the form but is nonsensical here—the speaker is not escaping from or avoiding the habit, but building it intentionally. 休みます (yasumimas' — 'to rest/take time off') is also plausible in form but contradicts the goal; stopping or resting from the habit defeats the point of 「健康のために」 (for the sake of health)."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>きながら、<ruby>音楽<rt>おんがく</rt></ruby>を（　）。",
+      "reading": "Choose the word that fits the blank.",
+      "correct": "聞いています",
+      "distractors": [
+        "聞きました",
+        "聞いていた",
+        "聞きます"
+      ],
+      "explanation": "聞いています (listening) is correct because the sentence describes a repeated daily habit using ～ながら (while doing) + present progressive form. The ～ています form shows an ongoing action that happens habitually every morning. 聞きました (listened / past tense) is wrong because the context is about a present daily habit, not a completed past action. 聞いていた (was listening / past progressive) is wrong because it describes an ongoing state in the past, not a current recurring habit. 聞きます (will listen / simple future) is wrong because it doesn't match the ～ながら construction, which requires a progressive or habitual present form to show simultaneity with walking."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>で（　）。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "歩きます",
+        "乗ります"
+      ],
+      "explanation": "行きます (いきます, 'go') is correct because the speaker travels FROM home TO the station every morning by bicycle — the direction is away from the starting point, so 'go' is the natural choice. 来ます (くる, 'come') describes movement toward the speaker or a reference point, not away to a destination. 歩きます (あるく, 'walk') contradicts the stated means of transport (自転車で); even though one can walk to a station, the sentence specifies bicycle travel. 乗ります (のる, 'ride/board') names the action of getting ON the bicycle, not the action of traveling to the station — the preposition で already marks bicycle as the means, so the main verb must be the motion verb 'go.'"
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に <ruby>着<rt>つ</rt></ruby>く <ruby>前<rt>まえ</rt></ruby>に、<ruby>駅<rt>えき</rt></ruby>の <ruby>近<rt>ちか</rt></ruby>くの <ruby>店<rt>みせ</rt></ruby>で <ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）。",
+      "reading": "Choose the correct verb to complete the sentence naturally.",
+      "correct": "食べました",
+      "distractors": [
+        "飲みました",
+        "買いました",
+        "作りました"
+      ],
+      "explanation": "The correct answer 食べました (ate) fits because 朝食 (breakfast) is a noun referring to a meal that is eaten, making 食べました the natural verb for consuming food. 飲みました (drank) is incorrect because while beverages can be drunk, 朝食 specifically refers to a complete breakfast meal rather than just a drink. 買いました (bought) is wrong here because although you could buy food at a shop, the context clearly indicates the action of consuming the meal (the sentence structure with 「で」marking the location action) rather than purchasing it. 作りました (made) is incorrect because the sentence describes eating at a shop near the station, not preparing food at home."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>きながら<u>コーヒー</u>を（　）。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "飲みます (のみます) is correct because コーヒー (coffee) is a beverage that must be drunk, and the sentence structure 「～ながら + verb」(while doing X, do Y) requires a verb compatible with both walking and the action. 食べます (たべます, to eat) is wrong because coffee is a liquid and cannot be eaten—eating is for solid food. 読みます (よみます, to read) is wrong because it takes a direct object like 本 (book) or 新聞 (newspaper), not a beverage. 聞きます (ききます, to listen/hear) is wrong because it takes an object like 音楽 (music) or ニュース (news), not a drink."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>で、<u>重要</u>な<ruby>話題</ruby>が<ruby>出</ruby>ました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "じゅうぎょう",
+        "おもよう",
+        "じゅうぎゃく"
+      ],
+      "explanation": "じゅうよう (important/significant) is the correct reading of 重要. The kanji 重 reads じゅう in this compound noun, and 要 reads よう, meaning the whole word describes something essential or critical—which fits naturally in a business meeting context where an important topic is being discussed. じゅうぎょう (a homophonic misreading pairing 重 with 業, meaning occupation/business) is a real word but not the correct reading of the target kanji 重要. おもよう (from おもい/heavy + よう, a non-standard invented reading) does not exist in standard Japanese; while おもい is a real reading of 重, it does not combine with よう in this way. じゅうぎゃく (a distractor combining the correct じゅう reading of 重 with ぎゃく, meaning opposite/reverse—a real but unrelated word) is incorrect because 要 never reads ぎゃく and the meaning (opposite) contradicts the sentence context."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はし</rt></ruby>る（　）、<ruby>体<rt>からだ</rt></ruby>が<ruby>元気<rt>げんき</rt></ruby>になった。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことで",
+      "distractors": [
+        "ことに",
+        "ことが",
+        "ことを"
+      ],
+      "explanation": "The correct answer 「ことで」 expresses the reason or cause—literally 'by the fact/act of doing something.' Running every morning 'by doing' this regularly caused the body to become healthy. 「ことに」 (きっかけに or ことに) means 'being surprised by' or marks unexpected discovery, which does not fit a causal relationship about habit. 「ことが」 would require a different sentence structure (e.g., 「走ることが好きです」 'likes running'); here it breaks the causal meaning. 「ことを」 marks a direct object, not a reason, and would produce awkward grammar in this context (「走ることを、体が元気になった」 is unnatural)."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>で、<ruby>新</ruby>しい<u>仕事</u>の<ruby>説明</ruby>を<ruby>受</ruby>けました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しごと",
+      "distractors": [
+        "しぎょう",
+        "しぎわ",
+        "しあく"
+      ],
+      "explanation": "しごと is the standard N4 reading of 仕事, meaning 'work' or 'job,' and fits naturally in the context of receiving an explanation about a new job at the company. しぎょう sounds like a plausible kanji reading but is not a real word (the kanji 仕業 shigyo means 'deed' or 'crime,' a different word entirely). しぎわ is not a recognized reading of these kanji and does not correspond to any common Japanese word. しあく is a made-up reading that does not match either 仕 or 業 in any standard dictionary form."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>学校</ruby>へ<ruby>行く</ruby><ruby>前</ruby>に、<u>朝食</u>を<ruby>食べ</ruby>ます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちょうしょく",
+      "distractors": [
+        "あさしょく",
+        "ちょうたべ",
+        "あさたべ"
+      ],
+      "explanation": "ちょうしょく (morning meal) is the standard N4 compound reading for 朝食. The kanji 朝 reads as ちょう in time-of-day compounds (朝日・朝刊), and 食 reads as しょく in formal food compounds; together they form the common word for breakfast. あさしょく mixes the native reading あさ (ordinary word for 'morning') with the Sino-Japanese reading しょく, a combination that does not exist as a real word in standard Japanese. ちょうたべ incorrectly pairs ちょう with たべ (the stem of 食べる), conflating the formal Sino-Japanese noun 食 with the verb; this produces neither a real word nor a natural reading. あさたべ similarly attempts to mix native Japanese with a verb stem, yielding no legitimate compound."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はし</rt></ruby>ることで、<ruby>体<rt>からだ</rt></ruby>が<u>（　）</u>なった。",
+      "reading": "Choose the correct conjugation form to complete the sentence.",
+      "correct": "強く",
+      "distractors": [
+        "強い",
+        "強かった",
+        "強ける"
+      ],
+      "explanation": "The correct answer 強く fits because the sentence uses the pattern 「体が＿なった」(the body became _), which requires an i-adjective in its adverbial form (i-kei + く) to modify the change verb なった. The adverbial form 強く (strongly) correctly describes how the body changed. The distractor 強い is the dictionary form of the i-adjective, which cannot directly precede なった without the く form — 「体が強いなった」 is ungrammatical. The distractor 強かった is the past tense form; it cannot be used here because the sentence already has なった to mark the change, and 「体が強かったなった」 is doubly conjugated and wrong. The distractor 強ける is not a real word or conjugation; there is no verb form 「強ける」 in Japanese."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>風邪<rt>かぜ</rt></ruby>で<ruby>寝込<rt>ねこ</rt></ruby>んでいたため、<ruby>友達<rt>ともだち</rt></ruby>に（　）もらいました。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "手伝ってもらう",
+      "distractors": [
+        "手伝うもらう",
+        "手伝われる",
+        "手伝ってくれる"
+      ],
+      "explanation": "The correct answer 手伝ってもらう uses the て-form of 手伝う followed by もらう, expressing that someone did the favor of helping because the speaker was in a dependent situation (sick in bed). The pattern 〜てもらう means 'to receive the favor of someone doing ~', and it is the natural choice here. 手伝うもらう (wrong conjugation: base form + もらう) is ungrammatical because もらう requires a preceding て-form, not the dictionary form. 手伝われる (passive form: 'to be helped') changes the meaning and is not idiomatic with 'receiving' a favor in this context; it suggests an unwanted action done to the speaker. 手伝ってくれる (te-form + くれる: 'someone kindly helps') would be grammatically acceptable but is semantically less precise here because the sentence explicitly states the speaker was dependent (寝込んでいた), making もらう (receiving help out of necessity) more appropriate than くれる (a voluntary kind act)."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>朝</ruby>、私は<ruby>駅</ruby>の<ruby>近</ruby>くにある<u>喫茶店</u>でコーヒーを飲みます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "きっさてん",
+      "distractors": [
+        "こうひーてん",
+        "きっちゃてん",
+        "せんようてん"
+      ],
+      "explanation": "喫茶店 is a common N4 compound meaning a traditional coffee shop or café. The reading きっさてん is the standard, everyday term. こうひーてん (kōhī-ten, 'coffee shop' with katakana kōhī) is not a standard Japanese compound—while コーヒー is the word for coffee, 喫茶店 does not use this pronunciation. きっちゃてん is a distractor that sounds similar to the correct reading but replaces さ with ちゃ, which is a common listening confusion but wrong here. せんようてん (sennyō-ten, 'specialty shop') uses entirely different kanji and has a different meaning, making it clearly wrong even if someone misread the target characters."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>朝</ruby>、<ruby>駅</ruby>の<ruby>近</ruby>くで<u>新聞</u>を<ruby>売</ruby>っている<ruby>店</ruby>があります。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しんぶん",
+      "distractors": [
+        "あたらしいかみ",
+        "しんがみ",
+        "あたしんぶん"
+      ],
+      "explanation": "しんぶん (newspaper) is the standard N4 compound reading for 新聞. This is an everyday object sold at street kiosks and fits naturally in the context of a shop near a train station. あたらしいかみ is wrong because it treats 新 and 聞 as separate words (「新しい紙」= new paper), which is unnatural and splits the compound kanji. しんがみ is a real but archaic/rare reading for 新聞 (shin-gami, an old term), not the modern standard reading taught at N4. あたしんぶん mixes the i-adjective reading あたらしい with the compound, producing an awkward non-word that doesn't follow Japanese morphology."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>早起き</u>をして、<ruby>駅</ruby>へ<ruby>向</ruby>かいます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "はやおき",
+      "distractors": [
+        "そうおき",
+        "はやめ",
+        "ちゅうおき"
+      ],
+      "explanation": "早起き (はやおき) is the standard N4 compound noun meaning 'waking up early' or 'early rising.' It uses the i-adjective 早い (はやい, early) in its conjunctive form 早 + the noun 起き (おき, act of waking). This is a fixed, daily-life vocabulary word. そうおき is a non-existent reading; 早 does not have a /sou/ reading in modern Japanese. はやめ (hayame) exists as 早め meaning 'rather early' or 'earlier than usual,' but it is an adjectival noun suffix, not the compound 早起き, and would not fit the context of a habitual action 'をして' (do the action of). ちゅうおき is invented and not a real Japanese word or reading."
+    },
+    {
+      "question": "<ruby>毎日</ruby><ruby>朝</ruby>、<u>新聞</u>を<ruby>読</ruby>んでから<ruby>仕事</ruby>に<ruby>行</ruby>きます。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しんぶん",
+      "distractors": [
+        "あたらしぶん",
+        "しんかみ",
+        "あたらし"
+      ],
+      "explanation": "しんぶん is the standard N4 reading of 新聞 (newspaper), a compound noun that refers to a printed daily publication. あたらしぶん treats 新 as its common adjective reading 'atarashii' (new) but incorrectly applies it to 聞, which does not have this reading in this context—the compound reading must be learned as a set. しんかみ uses the correct reading of the first kanji but misidentifies 聞 as かみ (paper), which is kami alone and not part of standard kanji readings for 聞. あたらし is only the dictionary-form adjective reading of 新 by itself and ignores 聞 entirely, leaving the word incomplete."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>試験<rt>しけん</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>する（　）、毎日<ruby>勉強<rt>べんきょう</rt></ruby>しています。",
+      "reading": "Choose the correct grammar form to fill the blank.",
+      "correct": "ために",
+      "distractors": [
+        "ように",
+        "ばかりに",
+        "ところに"
+      ],
+      "explanation": "The sentence expresses purpose or goal: 'In order to pass tomorrow's exam, I study every day.' The pattern 「～ために、～」(in order to / for the purpose of) correctly links a desired outcome with the action taken to achieve it. 「ように」(so that / in the manner of) is used for hopes or expectations about results, but here we need the direct purposive sense of action → goal, not a hoped-for result. 「ばかりに」(precisely because / just because) indicates an undesirable consequence or ironic result, which contradicts the motivated study described. 「ところに」(at the moment when / just as) marks a specific point in time or coincidental moment, unrelated to purpose."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>友達</ruby>と<ruby>映画館</ruby>へ<u>出かけ</u>ました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "でかけ",
+      "distractors": [
+        "いでかけ",
+        "ださけ",
+        "でがけ"
+      ],
+      "explanation": "出かける (でかける) is the common N4 verb meaning \"to go out / to leave home,\" and 出かけました is the past tense. The te-form base 出かけ attaches naturally to ました to form the simple past. 出かけ is the only reading that produces a standard, frequently used verb phrase. いでかけ is a nonstandard reading that would not appear in normal Japanese. ださけ applies a wrong reading to the kanji and produces no meaningful word. でがけ misreads the second character (け instead of け) and does not correspond to any standard verb, making it a common mishearing confusion for learners unfamiliar with the actual kanji compound."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>30<ruby>分<rt>ぷん</rt></ruby><ruby>走る<rt>はしる</rt></ruby>（　）、<ruby>健康<rt>けんこう</rt></ruby>になることができます。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことで",
+      "distractors": [
+        "ことが",
+        "ことに",
+        "ことを"
+      ],
+      "explanation": "The pattern 「～ことで」expresses a means or result — 'by doing X, Y happens.' Here, 'by running 30 minutes daily, you can become healthy' fits naturally. 「ことが」introduces a noun clause subject or object (e.g. 「走ることが好きです」= 'running is something I like'), which does not work with 「～ができます」in this causal sense. 「ことに」means 'upon/when doing' (surprise or discovery context: 「到着することに気づきました」), wrong nuance here. 「ことを」(object marker for nominalized verb) requires a transitive verb before it (e.g. 「走ることを始めた」= 'started the act of running'), but 「できます」does not take を; this produces ungrammatical output."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>まで<u>（　）</u>。",
+      "reading": "Choose the verb that best fits the context.",
+      "correct": "歩きます",
+      "distractors": [
+        "走ります",
+        "運びます",
+        "登ります"
+      ],
+      "explanation": "歩きます (aruki-masu, 'to walk') is the natural everyday verb for traveling on foot to the station each morning. 走ります (hashiri-masu, 'to run') is grammatically possible but semantically wrong—people do not run to the station every morning as a routine; running suggests urgency or exercise, not a daily commute. 運びます (hakobi-masu, 'to carry/transport') is wrong because it means to convey or move objects, not to travel oneself. 登ります (nobori-masu, 'to climb/go up') is incorrect because it implies ascending a slope or mountain; while you can climb stairs at a station, it is not the verb used for the basic action of traveling to a station."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>遅刻<rt>ちこく</rt></ruby>したので、<ruby>上司<rt>じょうし</rt></ruby>に<u>謝らなければならない</u>（　）。",
+      "reading": "Choose the correct grammatical form to complete the sentence.",
+      "correct": "と思う",
+      "distractors": [
+        "と考える",
+        "ので",
+        "ような"
+      ],
+      "explanation": "The correct answer is 「と思う」because the sentence structure requires a phrase that expresses the speaker's judgment or belief about what is necessary. The pattern 「～なければならない」(must do) is completed by 「と思う」(I think that...), which naturally combines the obligation with the speaker's personal assessment. The distractor 「と考える」(to consider/think) is a similar-sounding phrase but does not fit N4 patterns and sounds unnatural in this context—while 「考える」exists, 「と考える」with this meaning is too formal and creates an awkward nuance. The distractor 「ので」(because) is a real conjunction but cannot follow 「ならない」; it would create a grammatical error (「ならないので」 would need different punctuation and structure). The distractor 「ような」(like/such as) is a real auxiliary adjective but changes the meaning entirely to something vague like 'it seems I must apologize,' losing the speaker's clear commitment to the action."
+    },
+    {
+      "question": "このプロジェクトを<u>成功させる</u>（　）、毎日<ruby>頑張<rt>がんば</rt></ruby>らなければならない。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ために",
+      "distractors": [
+        "ように",
+        "ので",
+        "ばかりか"
+      ],
+      "explanation": "ために (in order to) is correct here because the sentence expresses the purpose or goal of the effort: \"In order to make this project succeed, we must work hard every day.\" The structure 〜ために is the standard N4 pattern for stating a purpose followed by the action taken to achieve it. ように (so that / in such a way that) is tempting because it also expresses purpose, but it is used after adjectives or to describe a manner or desired outcome rather than a deliberate action's goal—this would sound unnatural here. ので (because / so) expresses a reason or cause, not purpose; it would mean \"because we will succeed\" rather than \"in order to succeed,\" which reverses the logical relationship. ばかりか (not only... but also) is a conjunction used to add emphasis or additional information to a list, and has no place in this purpose-statement context."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はし</rt></ruby>ることで、<ruby>体<rt>からだ</rt></ruby>が（　）なりました。",
+      "reading": "Choose the word that fits the blank in this sentence about daily exercise.",
+      "correct": "強くなりました",
+      "distractors": [
+        "速くなりました",
+        "広くなりました",
+        "高くなりました"
+      ],
+      "explanation": "強くなる (to become strong) is the correct answer because running daily makes the body become physically strong and healthy — the natural result of regular exercise. 速くなりました (to become fast) refers to speed or quickness of movement, not the physical condition of the body itself, making it semantically wrong here. 広くなりました (to become wide) describes spatial expansion, not bodily fitness, and sounds unnatural in this health context. 高くなりました (to become tall/high) refers to height or elevation, not strength, and is wrong collocatively with 体."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会議</ruby>で<ruby>新</ruby>しい<u>計画</u>が<ruby>決</ruby>まりました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "けいかく",
+      "distractors": [
+        "きけい",
+        "けいわく",
+        "けいほう"
+      ],
+      "explanation": "けいかく (計画) means 'plan' or 'project' and is the standard N4 reading for this common business/school vocabulary. The reading combines け (from 計, meaning 'calculate/plan') and かく (from 画, meaning 'draw/plan'). きけい (機械) is a real word meaning 'machine,' but it uses different kanji and is irrelevant in this context about a meeting decision. けいわく (警戒) means 'vigilance/alertness' and uses entirely different kanji; it does not fit the meaning of the sentence. けいほう (警報) means 'alarm/warning signal' and also uses different kanji; it would be nonsensical in a sentence about a decision being made at a meeting."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby>、私は<ruby>朝<rt>あさ</rt></ruby>6<ruby>時<rt>じ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きて、<ruby>顔<rt>かお</rt></ruby>を（　）。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "洗います",
+      "distractors": [
+        "磨きます",
+        "拭きます",
+        "乾かします"
+      ],
+      "explanation": "洗います (wash) is the natural and most common verb for cleaning one's face with water in daily routine contexts; the sentence describes a simple morning habit, and face-washing is a fundamental action that fits perfectly. 磨きます (migaku, polish/brush) refers specifically to polishing or brushing (like teeth or shoes), not washing the entire face, making it wrong here. 拭きます (wipe/dry with a cloth) means to wipe dry or clean a surface with cloth, but the sentence context of morning grooming points to washing with water, not just wiping. 乾かします (dry) means to dry something, which is a step that might come after washing, but it is not the primary action being described in this simple morning routine sentence."
+    },
+    {
+      "question": "<ruby>毎日</ruby>の<u>仕事</u>は<ruby>大変</ruby>ですが、<ruby>頑張</ruby>っています。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しごと",
+      "distractors": [
+        "しぎょう",
+        "じぎょう",
+        "しぎょく"
+      ],
+      "explanation": "しごと is the standard N4 reading for 仕事, meaning 'work' or 'job,' and fits naturally in this everyday sentence about daily work being difficult. しぎょう (incorrect On-reading; while 仕 can read し and 業 can read ぎょう in some contexts, this combination is not a standard compound word in N4 vocabulary) is a plausible sound-alike but does not form a real or common word. じぎょう (jigyo, 'business/enterprise') is a real word but requires the reading じ for 仕, which is not standard in N4 and would change the meaning inappropriately here. しぎょく (an invented reading; く is not a standard reading for 業 in N4 context) is a distractor that sounds similar to しごと but has no legitimate kanji correspondence."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>病院</ruby>で<u>待</u>つ<ruby>時間</ruby>が<ruby>長</ruby>かった。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "まつ",
+      "distractors": [
+        "たつ",
+        "もつ",
+        "かつ"
+      ],
+      "explanation": "まつ (to wait) is the standard reading used in the phrase 待つ時間 (time spent waiting). It forms a natural expression describing how long one had to wait at the hospital. たつ (to stand) is a different kanji (立つ) and would create an unrelated meaning about standing, not waiting. もつ (to hold/have) is also a separate verb and does not fit the context of passing time in a hospital. かつ (to win) is yet another distinct verb that makes no sense in this sentence about a medical visit."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>病気</ruby>で<ruby>学校</ruby>を<ruby>休</ruby>みましたが、今日は<u>元気</u>になりました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "げんき",
+      "distractors": [
+        "もとき",
+        "がんき",
+        "げんいき"
+      ],
+      "explanation": "元気（げんき）is the standard N4 reading for 'health, energy, vigor.' It is a common adjective/noun used to ask how someone is feeling or to describe physical wellness. もとき is not a real word formation in Japanese. がんき（雑気 or similar) is not the correct reading for this kanji compound and does not mean health. げんいきis a distractor that adds an extra い-sound that does not belong—the correct compound is two syllables (げん・き), not three."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は <ruby>駅<rt>えき</rt></ruby>まで <u>歩いて</u>（　）。",
+      "reading": "Choose the verb that correctly completes the sentence.",
+      "correct": "行きます",
+      "distractors": [
+        "来ます",
+        "帰ります",
+        "入ります"
+      ],
+      "explanation": "行きます (iku/いく — to go) is the correct answer because the sentence describes a daily action of walking to the station, indicating movement away from the speaker's starting point toward a destination. The pattern 〜て＋移動動詞 (go/come/return) is standard for describing how one travels. 来ます (kuru/きます — to come) implies movement toward the speaker or a reference point, which contradicts the direction of going to the station from home. 帰ります (kaeru/かえります — to return) means to go back home, which is the opposite of the intended meaning here. 入ります (hairu/いります — to enter) means to go inside a building or space, which does not fit the context of traveling to the station."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>家<rt>いえ</rt></ruby>を（　）して<ruby>駅<rt>えき</rt></ruby>に行きます。",
+      "reading": "Choose the verb that fits the blank in this daily routine sentence.",
+      "correct": "出ます",
+      "distractors": [
+        "帰ります",
+        "開けます",
+        "直します"
+      ],
+      "explanation": "「出ます」(でます, to leave/exit) is the correct answer because the sentence describes the speaker's morning routine: leaving the house and going to the station. This is a natural collocation in Japanese — 「家を出る」 is the standard way to say 'leave one's house.' 「帰ります」 (かえります, to return/go home) is wrong because it means the opposite direction — you don't 'return home' before going to the station in the morning. 「開けます」 (ひらけます, to open) is wrong because it describes opening a door or window, not leaving a location; context requires an action of departure, not opening. 「直します」 (なおします, to fix/repair) is wrong because it means to mend or correct something, which has no sense in the context of what you do to your house before going to work."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>友達</ruby>と<ruby>公園</ruby>で<u>運動</u>しました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "うんどう",
+      "distractors": [
+        "うんどく",
+        "こううんどう",
+        "うんどい"
+      ],
+      "explanation": "運動 (うんどう) means 'exercise' or 'physical activity' and is the standard N4 kanji compound for this concept. It pairs naturally with the verb する to mean 'to exercise/do physical activity.' The distractor うんどく is a non-word that mixes unrelated syllables. こううんどう (こう＋うんどう) would add an extra morpheme and produce an unnatural form not found in Japanese. うんどい is a false reading that invents a non-existent い-ending for this noun; 運動 is a noun that does not conjugate this way."
+    },
+    {
+      "question": "<ruby>明日</ruby>の<ruby>朝</ruby>、<ruby>駅</ruby>の<u>近</u>くで<ruby>友達</ruby>と<ruby>会</ruby>う<ruby>予定</ruby>です。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "ちかく",
+      "distractors": [
+        "きんく",
+        "こんく",
+        "じかく"
+      ],
+      "explanation": "ちかく is the correct reading of 近く (kinaku in kanji compounds becomes ちかく in this context). The word means 'near/close to' and is a common N4 noun used with the particle で to indicate location. きんく is a plausible misreading that confuses the on-yomi きん with the actual reading; while 近 can be read as きん in some compounds like 近い (ちかい), in the noun form 近く the reading is ちかく, not きん+く. こんく is simply a non-existent reading and represents a sound confusion—こん does not correspond to 近 in standard Japanese. じかく is also incorrect; じか is not a standard reading of 近, and this distractor may trap learners who confuse it with other similarly-shaped kanji or who are unfamiliar with the precise on-yomi inventory."
+    },
+    {
+      "question": "<ruby>毎日</ruby><u>仕事</u>が<ruby>忙</ruby>しいので、<ruby>家族</ruby>と<ruby>一緒</ruby>に<ruby>過</ruby>ごす<ruby>時間</ruby>が<ruby>少</ruby>ないです。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "しごと",
+      "distractors": [
+        "しごう",
+        "じぎょう",
+        "しぎょう"
+      ],
+      "explanation": "しごと (work/job) is the standard N4 noun for paid labor or assigned tasks. The sentence describes daily busyness at work, making it a natural collocation. しごう (ceremony or formula—a different kanji reading) refers to formal rituals and does not fit the context of being busy. じぎょう (business/enterprise) is a real word but refers to a company or commercial operation as a whole, not the daily work activity itself; it would be out of register here. しぎょう is not a real Japanese word and reflects a common mispronunciation of 仕事."
+    },
+    {
+      "question": "<ruby>今年</ruby>の<ruby>春</ruby>は<u>暖かい</u><ruby>日</ruby>が<ruby>多</ruby>いです。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたたかい",
+      "distractors": [
+        "あたあたかい",
+        "あたたしい",
+        "あたたけい"
+      ],
+      "explanation": "The correct reading あたたかい is the standard i-adjective meaning \"warm (temperature),\" formed from the kanji 暖 (warm) plus the common suffix 〜かい. This is the natural way to describe pleasant spring weather in Japanese. The distractor あたあたかい repeats the first two syllables, making it phonetically impossible and not a real word. The distractor あたたしい (with -しい) looks like it could be an i-adjective, but 暖しい is not a real reading—the correct form uses -かい, not -しい, and confusing similar adjective endings is a common trap at this level. The distractor あたたけい appears to confuse the kanji reading with a different suffix pattern; while -けい exists in other contexts (like 性格けい, appearance-type), it does not attach to 暖 and sounds awkwardly formal."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "飲んで",
+      "distractors": [
+        "食べて",
+        "持って",
+        "買って"
+      ],
+      "explanation": "飲んで (のんで, 'drinking' in te-form) is correct because 牛乳 (milk) is a beverage that one drinks before going to school; this shows a sequence of actions. 食べて (たべて, 'eating') is wrong—milk is not eaten, it is drunk. 持って (もって, 'carrying/taking') is incorrect because the sentence describes a daily routine action, not bringing milk somewhere; the particle を with 牛乳 indicates the object of consumption, not possession. 買って (かって, 'buying') is plausible at first glance since it uses te-form, but contextually it does not fit: buying milk every morning before school is illogical; the sentence describes drinking it as a daily habit."
+    },
+    {
+      "question": "<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、<ruby>必<rt>かなら</rt></ruby>ず<ruby>朝食<rt>ちょうしょく</rt></ruby>を（　）。",
+      "reading": "Choose the word that fits the blank in this sentence about morning routine.",
+      "correct": "食べます",
+      "distractors": [
+        "作ります",
+        "用意します",
+        "飲みます"
+      ],
+      "explanation": "食べます (eat) is the correct answer because the sentence describes a daily routine of eating breakfast before going to the station. The context 朝食を (breakfast + object marker) requires a verb meaning 'to consume/eat,' and 食べます is the standard collocation for eating a meal. 作ります (make) would be grammatically possible but wrong in context—the sentence describes the action of consuming breakfast, not preparing it. 用意します (prepare) has the same problem: it refers to the preparation phase, not the eating itself, which contradicts the natural sequence (eat, then go to the station). 飲みます (drink) is an action verb but is incompatible with 朝食 (breakfast/meal), which is eaten, not drunk—a native speaker would never say 朝食を飲む."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>駅<rt>えき</rt></ruby>で<u>新聞</u>を（　）。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "買います",
+      "distractors": [
+        "読みます",
+        "送ります",
+        "作ります"
+      ],
+      "explanation": "買います (to buy) is correct because the context describes a daily routine at a train station, where buying a newspaper is a natural, common action. 読みます (to read) means the action of reading, but does not indicate obtaining the newspaper at the station—it describes what one does with it after purchase, not the transaction itself. 送ります (to send) is used for delivering or mailing something to someone, which does not fit the context of acquiring a newspaper for oneself. 作ります (to make/create) refers to manufacturing or producing something, which is inappropriate for obtaining a finished newspaper."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>する（　）、<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>になった。",
+      "reading": "Choose the grammar form that completes the sentence naturally.",
+      "correct": "ことで",
+      "distractors": [
+        "ことに",
+        "ばかりで",
+        "ために"
+      ],
+      "explanation": "「毎日勉強することで、日本語が上手になった」uses the ～ことで pattern, which expresses 'by means of / as a result of doing X, Y happened.' This grammar naturally links an action/process (studying daily) to its natural consequence (Japanese improved). 「ことに」(ことに) means 'to one's surprise/regret' and introduces emotional reaction, not causation—it does not fit the logical cause-and-effect here. 「ばかりで」(ばかりで) means 'only by/merely with' and implies insufficient means; it would contradict the positive result of improvement. 「ために」(ために) means 'for the purpose of / in order to' and marks intention, not the actual process that led to success—it shifts the meaning to 'studied daily *in order to* improve' rather than 'improved *by* studying daily.'"
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>を出る<ruby>前<rt>まえ</rt></ruby>に、<ruby>母<rt>はは</rt></ruby>が<ruby>弁当<rt>べんとう</rt></ruby>を作ってくれた。<ruby>私<rt>わたし</rt></ruby>は<ruby>感謝<rt>かんしゃ</rt></ruby>しながら、それを<u>受け取（　）</u>。",
+      "reading": "Choose the correct te-form verb to complete the sentence.",
+      "correct": "た",
+      "distractors": [
+        "ます",
+        "ている",
+        "よう"
+      ],
+      "explanation": "The correct answer is た because the sentence requires the past-tense ta-form to complete the narrative sequence: the mother made the bento, and then the speaker received it and left. The blank must attach to 受け取 (to receive) to form a finished past action in the chronological chain. ます (polite present/future marker) is wrong because it would create 受け取ます, which is ungrammatical—ます must attach to a stem, not to a completed form, and would lose the past sense required here. ている (ongoing/habitual state marker) is wrong because the act of receiving is a single, completed event, not a state or habitual action in progress. よう (tentative form, meaning 'seem to' or 'about to') is wrong because it expresses uncertainty or approximation, not a definite past action; 受け取ようmeans 'was about to receive,' which contradicts the clear past-tense narrative flow."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）<ruby>習慣<rt>しゅうかん</rt></ruby>があります。",
+      "reading": "Choose the verb that fits the context naturally.",
+      "correct": "飲む",
+      "distractors": [
+        "食べる",
+        "作る",
+        "選ぶ"
+      ],
+      "explanation": "飲む (nomu, to drink) is the correct collocation with 牛乳 (milk). Milk is a liquid that must be drunk, not eaten or chosen. 食べる (taberu, to eat) is used for solid foods and cannot be paired with liquids in standard Japanese. 作る (tsukuru, to make) is the wrong action—the sentence requires an action of consuming milk, not producing it. 選ぶ (erabu, to choose/select) is incompatible with the meaning of the sentence, which describes a daily consumption habit, not a selection habit."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会社</ruby>の<ruby>会議</ruby>で、<u>新しい</u><ruby>企画</ruby>について<ruby>説明</ruby>しました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたりしい",
+        "あたらい"
+      ],
+      "explanation": "あたらしい is the correct reading of 新しい, a common N4 adjective meaning 'new'. The い-adjective form is standard here: 新しい企画 (a new project). しんしい (shin-shi-i) is incorrect — 新 can read しん, but the adjective form of this kanji is あたらしい, not しんしい (which is not a real word). あたりしい (atari-shi-i) is a false reading created by confusing 新 with the phonetically similar 当たり (atari, 'hit/approximately'), but the correct reading of 新しい does not contain あたり. あたらい (atara-i) mimics the correct reading but drops the final し, creating a non-existent form; the full adjective stem requires the し sound to be present."
+    },
+    {
+      "question": "<ruby>毎日</ruby>、<ruby>朝</ruby>は<u>早起き</u>して<ruby>勉強</ruby>しています。",
+      "reading": "Choose the correct reading of the underlined kanji compound.",
+      "correct": "はやおき",
+      "distractors": [
+        "そうおき",
+        "はやぎ",
+        "さきおき"
+      ],
+      "explanation": "はやおき (early rising) is the standard N4 compound reading for 早起き, combining the common adjective 早い (hayai, early) with the noun 起き (oki, rising/waking). That's the correct answer. そうおき is a plausible-sounding mispronunciation of 早 (it mimics the on-reading 早 as そう, but that reading never pairs with 起き in this context—the correct pairing requires the kun-reading はや). はやぎ incorrectly applies ぎ instead of き as the okurigana; while ぎ exists in some verbs (e.g., 起きる is sometimes read as おぎる in very old texts), 早起き has no such variant and はやぎ is not a real word. さきおき confuses the kanji 早 with 先 (saki, before/ahead), a look-alike that does appear in compounds like 先立つ, but 先起き is neither a natural nor a correct reading of 早起き and would change the meaning entirely."
+    },
+    {
+      "question": "<ruby>昨日</ruby>は<ruby>駅</ruby>の<ruby>近く</ruby>の<u>薬局</u>で<ruby>薬</ruby>を<ruby>買</ruby>いました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "やっきょく",
+      "distractors": [
+        "くすりきょく",
+        "やくきょく",
+        "くすりぐみ"
+      ],
+      "explanation": "やっきょく is the standard N4 reading for 薬局 (pharmacy/drugstore), combining the common kanji 薬 (やく, medicine) with 局 (きょく, place/shop). くすりきょく (くすり is hiragana for 'medicine', not a kanji reading here) mixes hiragana with the second kanji and is not how this compound is read. やくきょく uses the wrong reading of 薬—the on'yomi is やく, not やつ or やっ in isolation, and moreover 薬局 contracts to やっきょく through a common phonetic rule, not やくきょく. くすりぐみ applies the wrong kanji altogether; 組 (ぐみ, group) does not appear in 薬局, and this word does not exist in the context of a pharmacy."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>家<rt>いえ</rt></ruby>を（　）<ruby>駅<rt>えき</rt></ruby>に<ruby>向<rt>む</rt></ruby>かいます。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "出ます",
+      "distractors": [
+        "入ります",
+        "閉じます",
+        "立ちます"
+      ],
+      "explanation": "出ます (deru/leave) is correct because the sentence describes a daily morning routine: the speaker leaves home and heads toward the station. This is the natural collocation for departing a place. 入ります (ireru/enter) is wrong because it means to go into a place, the opposite direction of the context—you do not enter a house to go to the station. 閉じます (tojiru/close) is wrong because it means to shut something (a door, window, or book), not to depart; the sentence requires a movement verb, not an action on an object. 立ちます (tatsu/stand up) is wrong because it describes standing or getting up from a sitting position, not leaving a location; although it can appear in morning routines, it does not fit the grammatical structure 「家を～駅に向かう」 (leaving home toward the station)."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby>、私は<ruby>公園<rt>こうえん</rt></ruby>で<ruby>運動<rt>うんどう</rt></ruby>を（　）<ruby>習慣<rt>しゅうかん</rt></ruby>があります。",
+      "reading": "Choose the verb that fits the context naturally.",
+      "correct": "する",
+      "distractors": [
+        "やる",
+        "行う",
+        "練習する"
+      ],
+      "explanation": "「する」is the correct answer because it pairs idiomatically with「運動をする」(do/perform exercise), a standard N4 collocation. The blank requires a bare verb stem to complete 「〜する習慣がある」(have a habit of doing). 「やる」(yaru, to do) is also a common verb, but while 「運動をやる」exists colloquially, it is less formal and natural in the set phrase「習慣がある」context; moreover, as a distractor it tests whether learners confuse similar 'do' verbs. 「行う」(okonau, to conduct/perform) is too formal and literary for everyday speech about exercise habits—it usually modifies abstract nouns like 「会議を行う」(conduct a meeting), not basic activities like exercise. 「練習する」(renshuu suru, to practice/train) is a complete verb phrase on its own and cannot fill the blank without creating redundancy (「運動を練習する習慣」is unnatural); the sentence already specifies the activity as 「運動」, so adding another action verb phrase breaks the structure."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>を出る（　）、<ruby>鍵<rt>かぎ</rt></ruby>をかけることを忘れてはいけません。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "前に",
+      "distractors": [
+        "後で",
+        "時に",
+        "間に"
+      ],
+      "explanation": "前に (mae ni, 'before') correctly expresses the temporal sequence of two actions: you must lock the door before leaving the house. The blank requires a time-relationship phrase connecting 「出る」(leave) to 「かけることを忘れてはいけません」(must not forget to lock), and 前に marks the action that comes first. 後で (ato de, 'after') reverses the logical order—it would mean locking after leaving, which is too late. 時に (toki ni, 'when/at the time of') describes simultaneity or a moment, but does not establish the prerequisite relationship that 前に conveys. 間に (aida ni, 'during/between') refers to a duration or gap between two points, not the logical prerequisite condition this sentence requires."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を（　）。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "飲みます",
+      "distractors": [
+        "食べます",
+        "読みます",
+        "聞きます"
+      ],
+      "explanation": "飲みます (to drink) is correct because 牛乳 (milk) is a beverage that must be consumed by drinking, and the sentence describes a daily morning habit, making the present habitual form grammatically and semantically natural. 食べます (to eat) is wrong because milk is a liquid and requires 飲む rather than 食べる, which is used for solid foods. 読みます (to read) is incorrect—milk cannot be read; this verb pairs with books, articles, or documents, not beverages. 聞きます (to listen) does not fit because it requires an auditory object like music or sounds, not a physical substance like milk."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>友達<rt>ともだち</rt></ruby>が<ruby>遊<rt>あそ</rt></ruby>びに来たので、一緒に<ruby>映画<rt>えいが</rt></ruby>を見（　）<ruby>買<rt>か</rt></ruby>い物をしました。",
+      "reading": "Choose the correct grammar form to fill the blank.",
+      "correct": "たり",
+      "distractors": [
+        "たら",
+        "ながら",
+        "ば"
+      ],
+      "explanation": "The correct answer たり uses the ta-form of 見（みた）plus り to express two or more actions performed alternately or in sequence: \"watched a movie and then went shopping.\" This pattern (verb-た＋り...verb-た＋り) is used when listing multiple actions that make up a single experience, which fits the natural flow of spending time with a friend. たら (if; conditional form) would require 見たら買い物をした, implying \"if we watched, then we shopped\" — a causal/conditional relationship rather than a sequence of activities. ながら (while; simultaneous actions) means the two actions happen at the same time (watching and shopping simultaneously), which is unnatural here. ば (if; conditional i-form) similarly creates a conditional rather than sequential meaning, not the intended sense of listing connected actions within one outing."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きる（　）、<ruby>一日<rt>いちにち</rt></ruby>を<ruby>元気<rt>げんき</rt></ruby>に<ruby>過<rt>す</rt></ruby>ごすことができます。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことで",
+      "distractors": [
+        "ことが",
+        "ことに",
+        "ことを"
+      ],
+      "explanation": "「朝早く起きる（ことで）、一日を元気に過ごすことができます」uses the pattern 「V-dictionary form + ことで」to express 'by doing X' or 'through the action of X,' showing a cause-and-result or means-and-outcome relationship. The sentence means 'By waking up early, [you] can spend the day energetically.'—ことで is the correct form here because it marks the means or condition leading to the result. The distractor 「ことが」(koto ga) marks the subject of a clause, but does not express cause or means, so it produces an ungrammatical or nonsensical sentence here. The distractor 「ことに」(koto ni) indicates a target or point of realization ('to the point that' or 'upon'), but does not fit the cause-and-result intent. The distractor 「ことを」(koto wo) marks a direct object, changing the meaning to 'do the action of waking up early as an object,' which does not make sense in context and lacks the causal link needed."
+    },
+    {
+      "question": "<ruby>朝<rt>あさ</rt></ruby>、<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に、いつも<ruby>新聞<rt>しんぶん</rt></ruby>を（　）。",
+      "reading": "Choose the verb that fits the context.",
+      "correct": "読みます",
+      "distractors": [
+        "聞きます",
+        "書きます",
+        "借ります"
+      ],
+      "explanation": "読みます (yomimasu, to read) is correct because newspapers are typically read before going to work — a natural daily habit. 聞きます (kikimasu, to listen/ask) is a real verb but newspapers are not listened to; they are read. 書きます (kakimasu, to write) is grammatically sound but makes no sense — you do not write a newspaper before going to work. 借ります (karimasu, to borrow) means to borrow, but the sentence describes a regular habit of reading your own newspaper, not borrowing one each morning."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きるのは<ruby>大変<rt>たいへん</rt></ruby>ですが、<ruby>健康<rt>けんこう</rt></ruby>のために（　）ようにしています。",
+      "reading": "Choose the correct verb form to complete the sentence.",
+      "correct": "頑張ろう",
+      "distractors": [
+        "頑張った",
+        "頑張る",
+        "頑張って"
+      ],
+      "explanation": "「頑張ろう」(ganbarō) is the volitional form expressing a conscious intention or determination — 'I try to do my best' — which fits perfectly with the speaker's statement about making an effort for health. The sentence structure 「（頑張ろう）ようにしています」(trying to do my best) requires the volitional form in this position. 「頑張った」(past tense: 'did my best') is wrong here because the blank needs a non-past form to attach properly to 「ようにしています」(an ongoing habit/resolution). 「頑張る」(dictionary form) is wrong because it fails to express the sense of volition/intention needed in this context — it would sound more like stating a bare fact rather than a personal resolution. 「頑brevて」(te-form: 'doing my best and...') is wrong because the te-form cannot attach to 「ようにしています」and creates an ungrammatical sentence."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会議</ruby>で、<ruby>部長</ruby>は<u>重要</u>な<ruby>案件</ruby>について<ruby>説明</ruby>しました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "じゅうよう",
+      "distractors": [
+        "おもよう",
+        "ちょうよう",
+        "じゅうぎ"
+      ],
+      "explanation": "じゅうよう (重要) means \"important\" or \"critical,\" and is a common N4 abstract adjective used to describe significance. It fits naturally in the context \"explained about an important matter.\" The distractor おもよう is not a real reading; おも- relates to 重い (heavy/serious), but this particular combination does not exist as a standard word. ちょうよう (長要) is a real but different kanji compound meaning \"outline\" or \"summary,\" and would change the meaning entirely—the sentence would not fit the context of \"explaining.\" じゅうぎ (重議) is not a standard word and confuses the second kanji; even if it were a word, it would not match the target 要 character."
+    },
+    {
+      "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>友達<rt>ともだち</rt></ruby>が<ruby>遊<rt>あそ</rt></ruby>びに<ruby>来<rt>き</rt></ruby>たので、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を（　）<ruby>帰<rt>かえ</rt></ruby>った。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "見てから",
+      "distractors": [
+        "見た後で",
+        "見ながら",
+        "見てしまう"
+      ],
+      "explanation": "見てから (mite kara) correctly expresses the sequence of events: 'After watching the movie, we went home.' This pattern uses the te-form + kara to show that one action is completed before the next action begins—the natural way to describe a time sequence in past events. 見た後で (mi-ta ato de, 'after having watched') sounds formal/stiff for casual conversation and uses a heavier noun structure inappropriate here; it also requires the ta-form rather than te-form. 見ながら (mi-nagara, 'while watching') indicates simultaneous actions, not sequential ones—we wouldn't have watched and returned home at the same time. 見てしまう (mi-te shimau, 'ended up watching / watched completely') adds a sense of completion or regret, not sequencing, and doesn't fit the straightforward narrative flow of this sentence."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>走<rt>はしり</rt></ruby>ながら、<ruby>音楽<rt>おんがく</rt></ruby>を<u>（　）</u>いる。",
+      "reading": "Choose the correct verb form to complete the sentence.",
+      "correct": "聞い",
+      "distractors": [
+        "聞く",
+        "聞いた",
+        "聞こう"
+      ],
+      "explanation": "The blank requires the i-form (連用形) of 聞く to attach to ～ている (present progressive/continuous state). The correct form is 聞いている, meaning \"is listening to music.\" The sentence describes an action happening at the same time as running: 「～ながら」requires both verbs in their stem/i-form (run-while-listen), and the second verb must then take ～ている to express the ongoing action. 聞く (dictionary form) cannot attach directly to ～ている and would produce ungrammatical 「聞くいる」. 聞いた (past ta-form) is the wrong conjugation here; it would mean \"listened\" (completed action), not the continuous state being expressed. 聞こう (volitional form) means \"let me listen\" or \"I will listen,\" which contradicts the simultaneous action pattern and is the wrong conjugation for ～ている attachment."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きる<u>ことができて</u>、<ruby>健康<rt>けんこう</rt></ruby>です。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "ことができるので",
+      "distractors": [
+        "ことができたので",
+        "ことができながら",
+        "ことができれば"
+      ],
+      "explanation": "The correct answer is 「ことができるので」because the sentence describes a present habitual ability (「毎日朝早く起きる」— waking up early every day) as the reason (ので) for the result 「健康です」(being healthy). The ので construction requires the preceding clause to be in plain present form when expressing a causal relationship with a present-state conclusion. 「ことができたので」(ことができた — could do in past) is wrong because it describes a single past event, not the ongoing daily habit. 「ことができながら」(ながら — meaning \"while doing\" or \"even though\") changes the meaning to \"while being able to wake up early, I am healthy,\" which is awkward and unnatural here. 「ことができれば」(conditional form, meaning \"if able to\") shifts the meaning to \"if I could wake up early, I would be healthy,\" which contradicts the assertion that I do wake up early daily."
+    },
+    {
+      "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に合わせるために、<ruby>今夜<rt>こんや</rt></ruby>は<ruby>資料<rt>しりょう</rt></ruby>を<u>（　）</u>ければならない。",
+      "reading": "Choose the correct verb conjugation to fit the pattern.",
+      "correct": "準備し",
+      "distractors": [
+        "準備する",
+        "準備した",
+        "準備できる"
+      ],
+      "explanation": "The blank requires the i-form (連用形) stem because it is followed by 「ければならない」(must do / have to do). The i-form stem 「準備し」directly attaches to 「ければならない」 to mean 'must prepare the materials.' — The distractor 「準備する」 is the dictionary form (plain present); it cannot attach to 「ければならない」 and would produce the ungrammatical 「準備するければならない」. — The distractor 「準備した」 is the past tense (ta-form); although it is a real conjugation, it does not attach to 「ければならない」 (which requires the i-form stem only) and changes the meaning illogically. — The distractor 「準備できる」 is the potential form; it means 'can prepare' rather than 'must prepare,' and it cannot be inserted into the 「ければならない」 pattern in this position."
+    },
+    {
+      "question": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>すること（　）、<ruby>健康<rt>けんこう</rt></ruby>を<ruby>保<rt>たも</rt></ruby>つことができます。",
+      "reading": "Choose the correct grammar form to complete the sentence.",
+      "correct": "で",
+      "distractors": [
+        "に",
+        "を",
+        "から"
+      ],
+      "explanation": "The correct answer で marks the means or method by which a goal is achieved. 「毎日運動すること＋で＋健康を保つ」means \"by doing exercise every day, one can maintain health\"—で indicates the instrumental means. に (に) means \"to/at\" and expresses destination or target, not the method used to achieve a result, so it cannot follow 「毎日運動すること」 in this context. を (を) is the direct object particle and cannot mark the instrumental means of an action. から (から) means \"from\" and marks a source or starting point, not the method or instrument by which something is accomplished."
+    },
+    {
+      "question": "<ruby>昨日</ruby>の<ruby>会議</ruby>で、<ruby>部長</ruby>が<u>新しい</u><ruby>企画</ruby>について<ruby>説明</ruby>しました。",
+      "reading": "Choose the correct reading of the underlined kanji.",
+      "correct": "あたらしい",
+      "distractors": [
+        "しんしい",
+        "あたらしき",
+        "にいしい"
+      ],
+      "explanation": "The correct reading あたらしい is the standard i-adjective form of the kanji 新しい, meaning 'new'. This is the only natural way to describe something as 'new' in everyday Japanese and fits perfectly in this context describing a fresh project proposal. The distractor しんしい (shin-shii) uses the on'yomi reading しん but applies it to an adjective where it does not exist—新しい only uses the on'yomi reading しん as part of the prefix 新 in compounds like 新年 (しんねん), never as the adjective reading itself. The distractor あたらしき (atarashiki) is the classical or archaic kei-form of the adjective, which would never appear in modern business conversation; it would sound stiff and unnatural. The distractor にいしい (nii-shii) attempts to use an alternate or non-standard reading that does not correspond to any recognized reading of 新しい in modern Japanese."
+    }
+  ]
+}

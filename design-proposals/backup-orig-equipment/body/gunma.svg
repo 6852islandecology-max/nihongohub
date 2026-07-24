@@ -1,0 +1,32 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Konjac Apron</title>
+  
+  <!-- Apron body - beige/tan base -->
+  <rect x="12" y="12" width="40" height="40" fill="#d4c4a8"/>
+  
+  <!-- Apron border - rarity frame color -->
+  <rect x="12" y="12" width="40" height="4" fill="#9b9285"/>
+  <rect x="12" y="12" width="4" height="40" fill="#9b9285"/>
+  <rect x="48" y="12" width="4" height="40" fill="#9b9285"/>
+  <rect x="12" y="48" width="40" height="4" fill="#9b9285"/>
+  
+  <!-- Shoulder straps -->
+  <rect x="14" y="8" width="6" height="4" fill="#9b9285"/>
+  <rect x="44" y="8" width="6" height="4" fill="#9b9285"/>
+  
+  <!-- Waist belt -->
+  <rect x="12" y="24" width="40" height="4" fill="#9b9285"/>
+  
+  <!-- Left pocket -->
+  <rect x="18" y="30" width="8" height="10" fill="#c4b498"/>
+  <rect x="18" y="30" width="8" height="2" fill="#8b7b6f"/>
+  
+  <!-- Right pocket -->
+  <rect x="38" y="30" width="8" height="10" fill="#c4b498"/>
+  <rect x="38" y="30" width="8" height="2" fill="#8b7b6f"/>
+  
+  <!-- Center decorative element (konnyaku texture) -->
+  <rect x="28" y="35" width="8" height="4" fill="#a89878"/>
+  <rect x="28" y="40" width="8" height="4" fill="#a89878"/>
+  
+</svg>

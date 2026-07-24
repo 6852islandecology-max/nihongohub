@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Kenroku-en Garden Geta</title>
+  
+  <!-- Left geta -->
+  <g id="left-geta">
+    <!-- Base platform -->
+    <rect x="4" y="28" width="20" height="12" fill="#8B7355"/>
+    <!-- Top surface wood grain -->
+    <rect x="4" y="28" width="20" height="3" fill="#A0826D"/>
+    <!-- Frame border -->
+    <rect x="4" y="28" width="20" height="12" fill="none" stroke="#9b9285" stroke-width="1"/>
+    <!-- Left wooden block (lower support) -->
+    <rect x="6" y="40" width="4" height="6" fill="#6B5344"/>
+    <!-- Right wooden block (lower support) -->
+    <rect x="18" y="40" width="4" height="6" fill="#6B5344"/>
+    <!-- Fabric strap top-left -->
+    <rect x="6" y="24" width="4" height="4" fill="#D4A574"/>
+    <!-- Fabric strap top-right -->
+    <rect x="14" y="24" width="4" height="4" fill="#D4A574"/>
+  </g>
+  
+  <!-- Right geta -->
+  <g id="right-geta">
+    <!-- Base platform -->
+    <rect x="40" y="28" width="20" height="12" fill="#8B7355"/>
+    <!-- Top surface wood grain -->
+    <rect x="40" y="28" width="20" height="3" fill="#A0826D"/>
+    <!-- Frame border -->
+    <rect x="40" y="28" width="20" height="12" fill="none" stroke="#9b9285" stroke-width="1"/>
+    <!-- Left wooden block (lower support) -->
+    <rect x="42" y="40" width="4" height="6" fill="#6B5344"/>
+    <!-- Right wooden block (lower support) -->
+    <rect x="54" y="40" width="4" height="6" fill="#6B5344"/>
+    <!-- Fabric strap top-left -->
+    <rect x="42" y="24" width="4" height="4" fill="#D4A574"/>
+    <!-- Fabric strap top-right -->
+    <rect x="50" y="24" width="4" height="4" fill="#D4A574"/>
+  </g>
+  
+  <!-- Decorative accent (garden motif) -->
+  <rect x="30" y="32" width="4" height="4" fill="#9b9285"/>
+  <rect x="30" y="36" width="4" height="4" fill="#9b9285"/>
+</svg>

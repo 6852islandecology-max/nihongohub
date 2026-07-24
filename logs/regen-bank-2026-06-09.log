@@ -1,0 +1,115 @@
+REGEN START 2026-06-09T01:47:44.578Z · 40/combo · 5×5 combos (levels=N1,N2,N3,N4,N5 langs=en,zh,es,th,id) · validate=true
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: 劣悪 is the correct form; 悪劣 is not standard Japanese), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options A and B both grammatically correct and natural; not unique), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: 歴然としている already in sentence; 明白である and 顕著である both natural), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C, D) are all grammatically and semantically acceptable), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Option B (要求される) is more natural and grammatical than A), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Option B (ばかりか) also makes a grammatical, natural sentence), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A 'をしてして' contains repetition and is ungrammatical), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatically fit; B, C, D also natural), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both A and C make grammatical, natural sentences. Not unique.), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (B, C, D) are grammatically natural and acceptable), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A and B) are both natural and acceptable), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) are all natural and acceptable), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C) all fit naturally; answer is not unique.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both A and B are grammatically natural and acceptable here.), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Both A (のみならず) and B (ばかりでなく) are grammatically correct and natural), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatically fit; semantic uniqueness unclear), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A creates unnatural construction; なくして doesn't fit べき appropriately), retrying in 500ms
+  N1/en: generated 38, inserted 38  [running total inserted 38, failed 2]
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically acceptable and natural in this context.), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both 想う and 思う are grammatical and natural here), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C) create grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option C (拭い難く) is more natural and appropriate than marked answer A), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Option A is ungrammatical; B and C both work naturally), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C, D) are all grammatical and natural here), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options A and B both make natural, grammatical sentences), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, C) are all natural and grammatically acceptable), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Sentence structure is ungrammatical; 'てはばかる' is malformed), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both fit grammatically; meaning differs but both natural), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A uses noun form; others use verb passive. Forms unmixable.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A does not fit the blank position grammatically), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (齟齬/矛盾/欠陥) are all natural and acceptable here), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Multiple options (ゆえに, ために) produce grammatical, natural sentences), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: 崇尚する already present; verb redundancy makes all options awkward), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (伝える, 述べる, 告げる) all fit naturally in this context), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options A and B both produce natural, grammatical sentences), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C) are grammatical and natural; answer not unique.), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B both make natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B and D also produce grammatical, natural sentences), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options A, C, D all make grammatical and natural sentences), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options fit naturally; answer not uniquely correct), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and C both grammatically correct and natural; not unique), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B and C are equally natural and grammatical; answer is not unique), retrying in 1000ms
+  N1/zh: generated 37, inserted 37  [running total inserted 75, failed 5]
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options are grammatically natural and acceptable), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options B, C, D also fit grammatically and naturally), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (維持する, 保つ, 守る) are all grammatically natural and acceptable), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C) are both natural and grammatical fits), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) all make grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Sentence is ungrammatical; 'ことなく' usage is incorrect here), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and D produce natural, grammatical sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A creates ungrammatical sentence; B is correct answer), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Both 対応 and 調整 are natural and grammatically correct), retrying in 2000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A (ものの) and B (ながらも) are natural and grammatically correct.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options (A, B, D) produce natural, grammatical sentences), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Option A (ぬくもりがない) is semantically incoherent in context), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Marked answer 危ぶむ doesn't fit grammar; 脅かす is correct), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: CORRECT answer 'ことさら' does not fit grammatically or semantically in this context), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options (A, C) create grammatical, natural sentences), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Sentence is ungrammatical; 'ないことなく' creates nonsensical negation.), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B and A are both natural and grammatically correct), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Both A and C are grammatically correct and natural; answer is not unique), retrying in 500ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Options A and B are both grammatical and natural; answer not unique), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Options B and C both fit naturally; answer is not unique), retrying in 1000ms
+generateQuiz attempt 1/4 failed (AMBIGUOUS_ITEM: Multiple options grammatically fit; not uniquely correct), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (MALFORMED_RESPONSE), retrying in 1000ms
+generateQuiz attempt 3/4 failed (MALFORMED_RESPONSE), retrying in 2000ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 1/4 failed (MALFORMED_RESPONSE), retrying in 500ms
+generateQuiz attempt 2/4 failed (AMBIGUOUS_ITEM: Multiple options fit naturally; B and C also work well), retrying in 1000ms
+generateQuiz attempt 3/4 failed (AMBIGUOUS_ITEM: Options A and B both make natural, grammatical sentences.), retrying in 2000ms

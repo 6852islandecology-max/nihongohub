@@ -136,7 +136,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="intro">
     <div class="tag" data-i18n="tag">YOUR READINESS · UPDATED LIVE</div>
     <h1><span data-i18n="hi">Hi there —</span> <em id="rank-line">N4 Apprentice</em></h1>
-    <p data-i18n="lede">Your JLPT readiness score updates after every quiz. Train daily, watch the bars climb, and the weeks-to-pass shrink.</p>
+    <p data-i18n="lede">Your JLPT readiness updates after every quiz.</p>
   </div>
 
   <div class="mission" id="mission-card">
@@ -180,7 +180,6 @@ footer a{color:var(--gold);text-decoration:none}
       <div><div style="font-family:var(--pixel);font-size:9px;color:var(--muted);letter-spacing:.5px" data-i18n="month_streak">Longest streak</div><div style="font-family:var(--dot);font-size:24px;color:var(--red)" id="m-streak">0</div></div>
       <div><div style="font-family:var(--pixel);font-size:9px;color:var(--muted);letter-spacing:.5px" data-i18n="month_acc">Accuracy</div><div style="font-family:var(--dot);font-size:24px;color:var(--green)" id="m-acc">0%</div></div>
     </div>
-    <p style="font-family:var(--dot);font-size:12px;color:var(--muted);margin:0" data-i18n="streak_def">"Streak" counts consecutive days with at least 1 question answered.</p>
   </div>
 
   <div class="card" id="weak-card" style="display:none">
@@ -197,7 +196,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="card" id="rank-card" style="display:none">
     <h2><span data-i18n="rank_h">My Ranking</span> <small id="rank-country" style="font-family:var(--pixel);font-size:9px;color:var(--muted)"></small></h2>
     <div id="rank-optin">
-      <p style="font-size:14px;color:var(--muted);line-height:1.55;margin-bottom:10px" data-i18n="rank_optin_p">See how you compare — anonymously — with other learners in your country. We store only your country and a 0–1 score, never personal data.</p>
+      <p style="font-size:14px;color:var(--muted);line-height:1.55;margin-bottom:10px" data-i18n="rank_optin_p">Anonymous — we store only your country and a 0–1 score.</p>
       <button class="aciton-btn action-train" id="rank-enable" style="display:inline-flex" data-i18n="rank_enable">📊 Compare with my country</button>
     </div>
     <div id="rank-body" style="display:none">
@@ -259,13 +258,13 @@ footer a{color:var(--gold);text-decoration:none}
 const T = {
   en:{label:'🇬🇧 English', nav_quiz:'⚔️ Quiz', nav_map:'🗾 Explore', nav_blog:'📖 Blog', nav_pricing:'💴 Pricing',
     tag:'YOUR READINESS · UPDATED LIVE', hi:'Hi there —',
-    lede:'Your JLPT readiness score updates after every quiz. Train daily, watch the bars climb, and the weeks-to-pass shrink.',
+    lede:'Your JLPT readiness updates after every quiz.',
     eta_label:'N3 ETA', btn_train:'⚔️ Train now', btn_review:'📚 Review mistakes',
     bars_h:'Readiness by level', threshold:'PASS · 75%', spark_h:'Last 7 days',
     spark_total:'<b id="weekly-total">0</b> questions this week',
     next_h:'What to do next', ax_train:'⚔️ Train 20 questions today', ax_review:'📚 Review', ax_pdf:'📄 Study sheet · Pro',
     weak_h:'Weak words — Top 10', weak_sub:'{n} tracked', weak_review:'📚 Drill these →', cal_h:'Study calendar', cal_sub:'{d} active days · {n} questions (9 wks)',
-    rank_h:'My Ranking', rank_optin_p:'See how you compare — anonymously — with other learners in your country. We store only your country and a 0–1 score, never personal data.', rank_enable:'📊 Compare with my country', rank_note:'Anonymous · resets monthly · country from your connection.', rank_line:'Top {pct}% of {n} learners in {c}', rank_none:'Not enough data in your country yet — check back soon.',
+    rank_h:'My Ranking', rank_optin_p:'Anonymous — we store only your country and a 0–1 score.', rank_enable:'📊 Compare with my country', rank_note:'Anonymous · resets monthly · country from your connection.', rank_line:'Top {pct}% of {n} learners in {c}', rank_none:'Not enough data in your country yet — check back soon.',
     how_h:'How your score is calculated',
     how_1:'<b>Diagnostic (40%)</b> — your initial 20-question test result.',
     how_2:'<b>Recent accuracy (40%)</b> — your last 50 answers at each level.',
@@ -292,13 +291,13 @@ const T = {
     sync_h:'📲 Sync to another device', sync_p:'No account needed. Scan the QR code with your phone, or copy the link.', sync_copy:'Copy link'},
   ja:{label:'🇯🇵 日本語', nav_quiz:'⚔️ クイズ', nav_map:'🗾 探索', nav_blog:'📖 ブログ', nav_pricing:'💴 価格',
     tag:'あなたの Readiness · ライブ更新', hi:'こんにちは —',
-    lede:'JLPT Readiness スコアはクイズごとに更新されます。毎日続けて、バーが伸び、予想週数が縮むのを見届けよう。',
+    lede:'JLPT Readiness はクイズごとに更新されます。',
     eta_label:'N3 までの予想', btn_train:'⚔️ 今すぐ訓練', btn_review:'📚 復習する',
     bars_h:'レベル別 Readiness', threshold:'合格 · 75%', spark_h:'直近 7 日',
     spark_total:'<b id="weekly-total">0</b> 問 (今週)',
     next_h:'次にすること', ax_train:'⚔️ 今日 20 問やる', ax_review:'📚 復習', ax_pdf:'📄 学習シート · Pro',
     weak_h:'苦手な単語 — TOP10', weak_sub:'{n} 件', weak_review:'📚 まとめて復習 →', cal_h:'学習カレンダー', cal_sub:'{d} 日学習 · {n} 問（9週間）',
-    rank_h:'マイランキング', rank_optin_p:'同じ国の学習者と匿名で比較できます。保存するのは国コードと0〜1のスコアのみで、個人情報は一切保存しません。', rank_enable:'📊 同じ国で比較する', rank_note:'匿名 · 毎月リセット · 国は接続元から判定', rank_line:'{c} の学習者 {n} 人中 上位 {pct}%', rank_none:'あなたの国のデータがまだ不足しています。',
+    rank_h:'マイランキング', rank_optin_p:'匿名で比較。保存するのは国と 0〜1 のスコアだけ。', rank_enable:'📊 同じ国で比較する', rank_note:'匿名 · 毎月リセット · 国は接続元から判定', rank_line:'{c} の学習者 {n} 人中 上位 {pct}%', rank_none:'あなたの国のデータがまだ不足しています。',
     how_h:'スコアの計算方法',
     how_1:'<b>診断 (40%)</b> — 最初の 20 問の結果。',
     how_2:'<b>直近の正答率 (40%)</b> — 各レベル直近 50 問。',
@@ -325,7 +324,7 @@ const T = {
     sync_h:'📲 別の端末に同期', sync_p:'登録不要。QR コードをスマホで読み取るか、リンクをコピーして開いてください。', sync_copy:'リンクをコピー'},
   zh:{label:'🇹🇼 繁體中文', nav_quiz:'⚔️ 題目', nav_map:'🗾 探索', nav_blog:'📖 部落格', nav_pricing:'💴 價格',
     tag:'你的 Readiness · 即時更新', hi:'你好 —',
-    lede:'你的 JLPT Readiness 分數會在每次練習後更新。每日訓練，看著進度條成長、預估週數縮短。',
+    lede:'你的 JLPT Readiness 分數每次練習後更新。',
     eta_label:'N3 預估', btn_train:'⚔️ 立即訓練', btn_review:'📚 複習錯題',
     bars_h:'各等級 Readiness', threshold:'合格 · 75%', spark_h:'最近 7 天',
     spark_total:'本週共 <b id="weekly-total">0</b> 題',
@@ -347,7 +346,7 @@ const T = {
     sync_h:'📲 同步到其他裝置', sync_p:'不需要帳號。用手機掃 QR 碼，或複製連結。', sync_copy:'複製連結'},
   es:{label:'🇪🇸 Español', nav_quiz:'⚔️ Quiz', nav_map:'🗾 Explora', nav_blog:'📖 Blog', nav_pricing:'💴 Precios',
     tag:'TU READINESS · ACTUALIZADO', hi:'Hola —',
-    lede:'Tu puntuación JLPT Readiness se actualiza tras cada quiz. Entrena a diario y verás las barras subir y las semanas reducirse.',
+    lede:'Tu puntuación JLPT Readiness se actualiza tras cada quiz.',
     eta_label:'ETA a N3', btn_train:'⚔️ Entrenar', btn_review:'📚 Repasar errores',
     bars_h:'Readiness por nivel', threshold:'APROBADO · 75%', spark_h:'Últimos 7 días',
     spark_total:'<b id="weekly-total">0</b> preguntas esta semana',
@@ -369,7 +368,7 @@ const T = {
     sync_h:'📲 Sincronizar con otro dispositivo', sync_p:'Sin cuenta. Escanea el código QR con tu móvil o copia el enlace.', sync_copy:'Copiar enlace'},
   th:{label:'🇹🇭 ภาษาไทย', nav_quiz:'⚔️ ควิซ', nav_map:'🗾 สำรวจ', nav_blog:'📖 บล็อก', nav_pricing:'💴 ราคา',
     tag:'READINESS ของคุณ · อัปเดตสด', hi:'สวัสดี —',
-    lede:'คะแนน JLPT Readiness อัปเดตทุกครั้งหลังทำควิซ ฝึกทุกวันแล้วบาร์จะขึ้น สัปดาห์ที่เหลือจะลดลง',
+    lede:'คะแนน JLPT Readiness อัปเดตทุกครั้งหลังทำควิซ',
     eta_label:'ETA สู่ N3', btn_train:'⚔️ ฝึกเลย', btn_review:'📚 ทบทวนข้อผิด',
     bars_h:'Readiness ตามระดับ', threshold:'ผ่าน · 75%', spark_h:'7 วันล่าสุด',
     spark_total:'สัปดาห์นี้ <b id="weekly-total">0</b> ข้อ',
@@ -391,7 +390,7 @@ const T = {
     sync_h:'📲 ซิงค์กับอุปกรณ์อื่น', sync_p:'ไม่ต้องลงทะเบียน สแกน QR ด้วยมือถือ หรือคัดลอกลิงก์', sync_copy:'คัดลอกลิงก์'},
   id:{label:'🇮🇩 Indonesia', nav_quiz:'⚔️ Kuis', nav_map:'🗾 Jelajah', nav_blog:'📖 Blog', nav_pricing:'💴 Harga',
     tag:'READINESS-MU · DIPERBARUI LIVE', hi:'Halo —',
-    lede:'Skor JLPT Readiness diperbarui setiap selesai kuis. Latihan tiap hari, lihat bar naik dan estimasi minggu turun.',
+    lede:'Skor JLPT Readiness diperbarui setiap selesai kuis.',
     eta_label:'ETA ke N3', btn_train:'⚔️ Latih sekarang', btn_review:'📚 Tinjau kesalahan',
     bars_h:'Readiness per level', threshold:'LULUS · 75%', spark_h:'7 hari terakhir',
     spark_total:'<b id="weekly-total">0</b> soal minggu ini',

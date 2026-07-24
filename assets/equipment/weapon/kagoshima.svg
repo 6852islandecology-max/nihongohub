@@ -1,43 +1,52 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Sakurajima Volcanic Spear</title>
-  <g id="spear">
-    <!-- Spear tip - volcanic rock (dark red/orange) -->
-    <rect x="28" y="4" width="8" height="4" fill="#8B3A1F"/>
-    <rect x="24" y="8" width="4" height="4" fill="#A0522D"/>
-    <rect x="28" y="8" width="8" height="4" fill="#8B3A1F"/>
-    <rect x="36" y="8" width="4" height="4" fill="#A0522D"/>
-    <rect x="26" y="12" width="4" height="4" fill="#A0522D"/>
-    <rect x="30" y="12" width="4" height="4" fill="#8B3A1F"/>
-    <rect x="34" y="12" width="4" height="4" fill="#A0522D"/>
-    <rect x="28" y="16" width="8" height="4" fill="#8B3A1F"/>
-    
-    <!-- Spear shaft - dark wood -->
-    <rect x="30" y="20" width="4" height="12" fill="#3D2817"/>
-    <rect x="29" y="20" width="1" height="12" fill="#2C1F11"/>
-    <rect x="35" y="20" width="1" height="12" fill="#2C1F11"/>
-    
-    <!-- Mid-section transition -->
-    <rect x="28" y="32" width="8" height="2" fill="#5D4037"/>
-    
-    <!-- Grip section - leather brown -->
-    <rect x="29" y="34" width="6" height="4" fill="#6D4C41"/>
-    <rect x="29" y="38" width="6" height="4" fill="#5D4037"/>
-    <rect x="29" y="42" width="6" height="4" fill="#6D4C41"/>
-    
-    <!-- Grip texture accent -->
-    <rect x="29" y="46" width="6" height="2" fill="#4D3C31"/>
-    
-    <!-- Butt spike - volcanic -->
-    <rect x="30" y="48" width="4" height="2" fill="#8B3A1F"/>
-    <rect x="31" y="50" width="2" height="2" fill="#A0522D"/>
-    
-    <!-- Epic rarity frame/border accent -->
-    <rect x="24" y="6" width="1" height="12" fill="#a056d2"/>
-    <rect x="39" y="6" width="1" height="12" fill="#a056d2"/>
-    <rect x="27" y="4" width="10" height="1" fill="#a056d2"/>
-    <rect x="27" y="19" width="10" height="1" fill="#a056d2"/>
-    
-    <!-- Volcanic glow accent lines -->
-    <rect x="32" y="10" width="2" height="6" fill="#FF6B35"/>
-  </g>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Sakurajima Volcanic Spear (epic)</title>
+<rect x="24" y="8" width="12" height="4" fill="#2a1a0c"/>
+<rect x="20" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="12" width="8" height="4" fill="#8b4513"/>
+<rect x="32" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="16" width="4" height="4" fill="#8b4513"/>
+<rect x="24" y="16" width="4" height="4" fill="#c0622a"/>
+<rect x="28" y="16" width="4" height="4" fill="#8b4513"/>
+<rect x="32" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="20" width="4" height="4" fill="#e8874a"/>
+<rect x="24" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="20" width="4" height="4" fill="#8b4513"/>
+<rect x="32" y="20" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="24" width="4" height="4" fill="#c0622a"/>
+<rect x="20" y="24" width="4" height="4" fill="#8b4513"/>
+<rect x="24" y="24" width="4" height="4" fill="#e8874a"/>
+<rect x="28" y="24" width="4" height="4" fill="#c0622a"/>
+<rect x="32" y="24" width="4" height="4" fill="#8b4513"/>
+<rect x="36" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="4" height="4" fill="#c0622a"/>
+<rect x="20" y="28" width="4" height="4" fill="#e8874a"/>
+<rect x="24" y="28" width="4" height="4" fill="#f5c87a"/>
+<rect x="28" y="28" width="4" height="4" fill="#c0622a"/>
+<rect x="32" y="28" width="4" height="4" fill="#8b4513"/>
+<rect x="36" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="24" y="32" width="4" height="4" fill="#ffe8a0"/>
+<rect x="28" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="16" height="4" fill="#2a1a0c"/>
+<rect x="20" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="40" width="4" height="4" fill="#5c2e0a"/>
+<rect x="28" y="40" width="4" height="4" fill="#8b4513"/>
+<rect x="32" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="44" width="4" height="4" fill="#d4af37"/>
+<rect x="28" y="44" width="4" height="4" fill="#5c2e0a"/>
+<rect x="32" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="48" width="4" height="4" fill="#5c2e0a"/>
+<rect x="32" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="52" width="4" height="4" fill="#8b4513"/>
+<rect x="32" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="56" width="4" height="4" fill="#2a1a0c"/>
+<rect x="28" y="56" width="4" height="4" fill="#2e1a0a"/>
+<rect x="32" y="56" width="4" height="4" fill="#2a1a0c"/>
 </svg>

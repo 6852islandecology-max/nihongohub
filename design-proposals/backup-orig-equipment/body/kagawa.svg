@@ -1,0 +1,57 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Naoshima Art Cape</title>
+  
+  <!-- Cape body - main shape -->
+  <g>
+    <!-- Left shoulder -->
+    <rect x="12" y="12" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="8" y="16" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="8" y="20" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="4" y="24" width="4" height="4" fill="#2d5a7f"/>
+    <rect x="4" y="28" width="4" height="4" fill="#2d5a7f"/>
+    <rect x="4" y="32" width="4" height="4" fill="#4d8fbf"/>
+    
+    <!-- Right shoulder -->
+    <rect x="48" y="12" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="52" y="16" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="52" y="20" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="56" y="24" width="4" height="4" fill="#2d5a7f"/>
+    <rect x="56" y="28" width="4" height="4" fill="#2d5a7f"/>
+    <rect x="56" y="32" width="4" height="4" fill="#4d8fbf"/>
+    
+    <!-- Center cape flow -->
+    <rect x="24" y="16" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="28" y="16" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="20" y="20" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="24" y="20" width="4" height="4" fill="#6ba3d4"/>
+    <rect x="28" y="20" width="4" height="4" fill="#6ba3d4"/>
+    <rect x="32" y="20" width="4" height="4" fill="#4d8fbf"/>
+    
+    <!-- Cape sweep left -->
+    <rect x="12" y="24" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="16" y="28" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="12" y="28" width="4" height="4" fill="#2d5a7f"/>
+    
+    <!-- Cape sweep right -->
+    <rect x="48" y="24" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="44" y="28" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="52" y="28" width="4" height="4" fill="#2d5a7f"/>
+    
+    <!-- Center accent - art pattern -->
+    <rect x="28" y="24" width="4" height="4" fill="#f5d547"/>
+    <rect x="24" y="28" width="4" height="4" fill="#f5d547"/>
+    <rect x="32" y="28" width="4" height="4" fill="#f5d547"/>
+    
+    <!-- Bottom sweep -->
+    <rect x="20" y="32" width="4" height="4" fill="#2d5a7f"/>
+    <rect x="28" y="32" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="32" y="32" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="40" y="32" width="4" height="4" fill="#2d5a7f"/>
+    
+    <!-- Lower flow -->
+    <rect x="16" y="36" width="4" height="4" fill="#2d5a7f"/>
+    <rect x="24" y="36" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="32" y="36" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="44" y="36" width="4" height="4" fill="#2d5a7f"/>
+  </g>
+</svg>

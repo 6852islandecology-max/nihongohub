@@ -1,0 +1,64 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <title>Sand Dune Scimitar</title>
+  <g id="scimitar">
+    <!-- Blade curve - sand color -->
+    <rect x="28" y="8" width="4" height="4" fill="#d4a574"/>
+    <rect x="32" y="8" width="4" height="4" fill="#d4a574"/>
+    <rect x="36" y="8" width="4" height="4" fill="#c9945f"/>
+    <rect x="24" y="12" width="4" height="4" fill="#d4a574"/>
+    <rect x="28" y="12" width="4" height="4" fill="#d4a574"/>
+    <rect x="32" y="12" width="4" height="4" fill="#c9945f"/>
+    <rect x="36" y="12" width="4" height="4" fill="#c9945f"/>
+    <rect x="40" y="12" width="4" height="4" fill="#b8824a"/>
+    
+    <!-- Blade edge highlight -->
+    <rect x="20" y="16" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="24" y="16" width="4" height="4" fill="#d4a574"/>
+    <rect x="28" y="16" width="4" height="4" fill="#c9945f"/>
+    <rect x="32" y="16" width="4" height="4" fill="#b8824a"/>
+    <rect x="36" y="16" width="4" height="4" fill="#a67035"/>
+    <rect x="40" y="16" width="4" height="4" fill="#8b5a2b"/>
+    
+    <!-- Blade curve continues -->
+    <rect x="16" y="20" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="20" y="20" width="4" height="4" fill="#d4a574"/>
+    <rect x="24" y="20" width="4" height="4" fill="#c9945f"/>
+    <rect x="28" y="20" width="4" height="4" fill="#b8824a"/>
+    <rect x="32" y="20" width="4" height="4" fill="#a67035"/>
+    <rect x="36" y="20" width="4" height="4" fill="#8b5a2b"/>
+    
+    <!-- Blade widens -->
+    <rect x="12" y="24" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="16" y="24" width="4" height="4" fill="#d4a574"/>
+    <rect x="20" y="24" width="4" height="4" fill="#c9945f"/>
+    <rect x="24" y="24" width="4" height="4" fill="#b8824a"/>
+    <rect x="28" y="24" width="4" height="4" fill="#a67035"/>
+    <rect x="32" y="24" width="4" height="4" fill="#8b5a2b"/>
+    
+    <!-- Mid blade -->
+    <rect x="12" y="28" width="4" height="4" fill="#4d8fbf"/>
+    <rect x="16" y="28" width="4" height="4" fill="#d4a574"/>
+    <rect x="20" y="28" width="4" height="4" fill="#c9945f"/>
+    <rect x="24" y="28" width="4" height="4" fill="#b8824a"/>
+    <rect x="28" y="28" width="4" height="4" fill="#a67035"/>
+    
+    <!-- Blade tapers toward handle -->
+    <rect x="16" y="32" width="4" height="4" fill="#d4a574"/>
+    <rect x="20" y="32" width="4" height="4" fill="#c9945f"/>
+    <rect x="24" y="32" width="4" height="4" fill="#b8824a"/>
+    
+    <!-- Guard - gold accent -->
+    <rect x="20" y="36" width="4" height="4" fill="#c9a456"/>
+    <rect x="24" y="36" width="4" height="4" fill="#c9a456"/>
+    
+    <!-- Handle - dark brown -->
+    <rect x="22" y="40" width="4" height="4" fill="#5c4033"/>
+    <rect x="22" y="44" width="4" height="4" fill="#3e2723"/>
+    <rect x="22" y="48" width="4" height="4" fill="#5c4033"/>
+    
+    <!-- Pommel - brass -->
+    <rect x="20" y="52" width="4" height="4" fill="#c9a456"/>
+    <rect x="24" y="52" width="4" height="4" fill="#c9a456"/>
+    <rect x="22" y="56" width="4" height="4" fill="#b89968"/>
+  </g>
+</svg>

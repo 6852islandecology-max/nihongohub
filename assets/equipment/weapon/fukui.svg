@@ -1,41 +1,55 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-  <title>Echizen Forged Blade</title>
-  
-  <!-- Epic frame border -->
-  <g id="frame">
-    <rect x="4" y="4" width="56" height="56" fill="none" stroke="#a056d2" stroke-width="2"/>
-    <rect x="6" y="6" width="52" height="52" fill="none" stroke="#a056d2" stroke-width="1" opacity="0.5"/>
-  </g>
-  
-  <!-- Blade (dark steel) -->
-  <g id="blade">
-    <!-- Main blade edge -->
-    <rect x="36" y="12" width="4" height="40" fill="#2c2c2c"/>
-    <!-- Blade highlight (lighter edge) -->
-    <rect x="36" y="12" width="2" height="40" fill="#5a5a5a"/>
-    <!-- Blade gradient effect -->
-    <rect x="38" y="14" width="2" height="36" fill="#4a4a4a"/>
-  </g>
-  
-  <!-- Tsuba (hand guard) -->
-  <g id="tsuba">
-    <rect x="28" y="32" width="20" height="4" fill="#a056d2"/>
-    <rect x="30" y="31" width="16" height="2" fill="#c77ee8"/>
-    <rect x="30" y="34" width="16" height="2" fill="#7a3b9d"/>
-  </g>
-  
-  <!-- Handle/Grip -->
-  <g id="handle">
-    <rect x="32" y="36" width="8" height="16" fill="#5c3d4d"/>
-    <rect x="32" y="36" width="4" height="16" fill="#3d2535"/>
-    <!-- Grip wrap details -->
-    <rect x="32" y="40" width="8" height="2" fill="#7a5a6b"/>
-    <rect x="32" y="46" width="8" height="2" fill="#7a5a6b"/>
-  </g>
-  
-  <!-- Pommel -->
-  <g id="pommel">
-    <rect x="34" y="50" width="4" height="4" fill="#a056d2"/>
-    <rect x="36" y="52" width="2" height="2" fill="#c77ee8"/>
-  </g>
+<title>Echizen Forged Blade (epic)</title>
+<rect x="20" y="4" width="12" height="4" fill="#2a1a0c"/>
+<rect x="16" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="8" width="8" height="4" fill="#c8a84b"/>
+<rect x="28" y="8" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="12" width="12" height="4" fill="#c8a84b"/>
+<rect x="28" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="12" height="4" fill="#c8a84b"/>
+<rect x="24" y="16" width="4" height="4" fill="#e8d080"/>
+<rect x="28" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#c8a84b"/>
+<rect x="16" y="20" width="4" height="4" fill="#e8d080"/>
+<rect x="20" y="20" width="4" height="4" fill="#f5f0c0"/>
+<rect x="24" y="20" width="4" height="4" fill="#e8d080"/>
+<rect x="28" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#c8a84b"/>
+<rect x="16" y="24" width="4" height="4" fill="#8b6914"/>
+<rect x="20" y="24" width="4" height="4" fill="#e8d080"/>
+<rect x="24" y="24" width="4" height="4" fill="#f5f0c0"/>
+<rect x="28" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="28" width="8" height="4" fill="#8b6914"/>
+<rect x="24" y="28" width="4" height="4" fill="#e8d080"/>
+<rect x="28" y="28" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="32" width="8" height="4" fill="#8b6914"/>
+<rect x="28" y="32" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="20" y="36" width="8" height="4" fill="#4a7a9b"/>
+<rect x="28" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="4" height="4" fill="#4a7a9b"/>
+<rect x="20" y="40" width="4" height="4" fill="#b8d4e8"/>
+<rect x="24" y="40" width="4" height="4" fill="#7ab8d4"/>
+<rect x="28" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="44" width="4" height="4" fill="#4a7a9b"/>
+<rect x="16" y="44" width="8" height="4" fill="#b8d4e8"/>
+<rect x="24" y="44" width="4" height="4" fill="#7ab8d4"/>
+<rect x="28" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="48" width="4" height="4" fill="#4a7a9b"/>
+<rect x="16" y="48" width="4" height="4" fill="#b8d4e8"/>
+<rect x="20" y="48" width="4" height="4" fill="#7ab8d4"/>
+<rect x="24" y="48" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="52" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="52" width="4" height="4" fill="#4a7a9b"/>
+<rect x="20" y="52" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="56" width="8" height="4" fill="#2a1a0c"/>
 </svg>

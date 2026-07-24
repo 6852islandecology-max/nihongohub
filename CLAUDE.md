@@ -9,6 +9,43 @@ priority_rank: 4  # 年度優先度（論文>授業>科研費>アプリ）
 
 # NihongoHub 部署: 海外向け日本語学習 SaaS
 
+---
+
+## 現況（2026-07-24 実測。以下の本文より優先する）
+
+本ファイルの本文は 2026-04-30 で更新が止まっており、実態と大きく食い違う。
+本文は当時の意思決定の記録として残すが、現在地は次のとおり。
+
+稼働状況
+- ステータスは `planning` でも `phase-b-pre-complete` でもない。本番稼働中で、運用約 15 ヶ月。
+  本番 URL は `https://www.nihongo-hub.com`（正規ホストは www 付き）。Stripe は live。
+- 実績（2026-07-18 計測）: 60 日で LP 298 → trial 1 → checkout 0 → 課金 0。
+  外部有料顧客ゼロ、MRR ゼロ。登録 56 人。成立決済はオーナーのテスト 1 件のみ。
+
+規模（本文の「フォルダ構成（v2.0）」は api 3 本 / lib 3 本と書いているが実際は違う）
+- `api/` 13 ファイル。うち `generate-batch.js` は `.vercelignore` で除外され、デプロイされる関数は 12。
+  Vercel Hobby の関数上限がちょうど 12 なので空き枠ゼロ。`api/*.js` を 1 本足すとデプロイ全体が凍結する。
+  共通化コードは `lib/` に置くこと（`lib/` は関数としてカウントされない）。
+- `lib/` 23 ファイル。サーバ用 ESM 9 本とブラウザ用 IIFE 14 本が同一階層に混在する。内訳は `lib/README.md`。
+- HTML 345 本（ルート 25 + blog 320）。SVG 420 本。
+
+本文の記述で現在は誤りのもの
+- 「vercel.json ← 最小化（generate-batch の maxDuration のみ）」→ 現在の `vercel.json` は
+  セキュリティヘッダと CSP のみで、functions 設定も maxDuration も無い。
+- 「Phase B: デプロイ実行（本番日予約待ち）」→ 実行済み。
+- デプロイ方式 → 2026-07-22 以降は git commit → push。`vercel --prod` の直接デプロイは禁止。
+
+検証コマンド
+- `npm test`（`scripts/test-srs.mjs` + `scripts/test-api-endpoints.mjs`）
+- ローカル実機は `node dev-server.mjs`（port 3031）。本番はクロスオリジンで操作できない。
+- 詳細は `docs/verification.md`。
+
+DB スキーマ
+- `supabase/schema.sql` は 2 テーブルのみの古いスナップショット。再現には migrations 6 本の適用が要る。
+  適用順とその他の注意は `supabase/README.md`。
+
+---
+
 ## プロジェクト概要
 - **目標**: 海外（英・繁中・西・タイ・インドネシア）日本語学習者向けの、LP + AI 問題生成 SaaS
 - **収益目標**: 月 100 万円 / 2026-10-22（開始 2026-04-22 から 6 ヶ月）

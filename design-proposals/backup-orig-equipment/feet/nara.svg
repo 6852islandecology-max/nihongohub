@@ -1,0 +1,33 @@
+<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+  <title>Kasugayama Pilgrim Sandals</title>
+  
+  <!-- Left sandal -->
+  <g id="left-sandal">
+    <!-- Sole -->
+    <rect x="4" y="36" width="16" height="8" fill="#8b7355"/>
+    <!-- Straps -->
+    <rect x="8" y="32" width="4" height="4" fill="#9b9285"/>
+    <rect x="12" y="32" width="4" height="4" fill="#9b9285"/>
+    <!-- Toe post -->
+    <rect x="10" y="36" width="4" height="4" fill="#6b5a47"/>
+  </g>
+  
+  <!-- Right sandal -->
+  <g id="right-sandal">
+    <!-- Sole -->
+    <rect x="44" y="36" width="16" height="8" fill="#8b7355"/>
+    <!-- Straps -->
+    <rect x="48" y="32" width="4" height="4" fill="#9b9285"/>
+    <rect x="52" y="32" width="4" height="4" fill="#9b9285"/>
+    <!-- Toe post -->
+    <rect x="50" y="36" width="4" height="4" fill="#6b5a47"/>
+  </g>
+  
+  <!-- Decorative rope/cord accent -->
+  <rect x="12" y="28" width="4" height="4" fill="#c9b89a"/>
+  <rect x="48" y="28" width="4" height="4" fill="#c9b89a"/>
+  
+  <!-- Frame/border accent -->
+  <rect x="2" y="30" width="20" height="16" fill="none" stroke="#9b9285" stroke-width="1"/>
+  <rect x="42" y="30" width="20" height="16" fill="none" stroke="#9b9285" stroke-width="1"/>
+</svg>

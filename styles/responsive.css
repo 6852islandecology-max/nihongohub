@@ -117,9 +117,29 @@ html[lang="th"] body, html[lang="th"] body * {
   article.wrap { max-width: 800px; }
 }
 
-/* ── 6. Touch-target accessibility ── */
+/* ── 6. Touch-target accessibility (44px = Apple HIG / WCAG 2.5.8 minimum) ── */
 @media (hover: none) and (pointer: coarse) {
-  button, .btn, .b-opt, .qopt, .mbtn, .tpill, .lvpill, .map-btn, .phrase-btn {
-    min-height: 36px;
+  button, .btn, .b-opt, .qopt, .mbtn, .tpill, .lvpill, .map-btn, .phrase-btn,
+  .quiz-opt, .battle-opt, .area-chip, .lang-btn, .rl-chip, .qbtn, .claim-btn {
+    min-height: 44px;
   }
+  .nav-links a, .navlinks a, .travel-link, .feed-item { min-height: 44px; }
+  /* affiliate / CTA links inside articles — easier tap = better conversion */
+  .aff a, .ktable .kcta a, .cta-box a { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* ── 7. Phone legibility: lift base text sizes that read too small on ~390px ── */
+@media (max-width: 480px) {
+  /* LP (index.html) hero */
+  .hero-title { font-size: clamp(34px, 9.6vw, 44px) !important; }
+  .hero-sub { font-size: 16.5px !important; max-width: none !important; }
+  .section-sub { font-size: 16px !important; }
+  .stat-num { font-size: 24px !important; }
+  .stat-label { font-size: 12px !important; }
+  .quiz-q { font-size: 22px !important; }
+  .quiz-opt { padding: 12px 13px !important; font-size: 15px !important; }
+  .gc-desc, .feature-desc { font-size: 14.5px !important; }
+  /* full-width primary CTAs are easier to hit one-handed */
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn-primary, .hero-ctas .btn-outline { text-align: center; }
 }

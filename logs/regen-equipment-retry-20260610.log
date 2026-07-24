@@ -1,0 +1,43 @@
+Regenerating 40 sprites with claude-sonnet-4-6 (concurrency 4)...
+[1/40] OK  head/iwate
+[2/40] OK  body/aomori
+[3/40] OK  head/aomori
+[4/40] OK  body/akita
+[5/40] OK  body/fukushima
+[6/40] OK  body/tochigi
+[7/40] OK  head/saitama
+[8/40] OK  head/tokyo
+[9/40] OK  body/saitama
+[10/40] OK  head/niigata
+[11/40] OK  body/yamagata (attempt 2)
+[12/40] OK  head/toyama
+[13/40] OK  head/nagano
+[14/40] OK  body/nagano
+[15/40] OK  body/gifu
+[16/40] OK  body/toyama
+[17/40] OK  body/aichi
+[18/40] OK  body/yamanashi (attempt 2)
+[19/40] OK  body/mie
+[20/40] OK  body/shiga
+[21/40] OK  feet/osaka
+[22/40] OK  head/kyoto
+[23/40] OK  body/hyogo
+[24/40] OK  head/tottori
+[25/40] OK  head/shimane
+[26/40] OK  head/hiroshima
+[27/40] OK  body/hiroshima
+[28/40] OK  feet/nara (attempt 2)
+[29/40] OK  head/kochi
+[30/40] OK  body/kochi
+[31/40] OK  weapon/kochi (attempt 2)
+[32/40] OK  body/fukuoka
+[33/40] OK  head/fukuoka
+[34/40] OK  body/saga
+[35/40] OK  head/nagasaki
+[36/40] OK  body/kumamoto
+[37/40] OK  head/oita
+[38/40] OK  body/oita
+[39/40] OK  head/miyazaki
+[40/40] OK  weapon/kagoshima
+
+DONE: 40/40 ok, 0 failed

@@ -1,42 +1,58 @@
-<svg viewBox="0 0 64 64" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-  <title>Edo Fireman Helm</title>
-  
-  <!-- Crest (ornamental top) -->
-  <rect x="24" y="4" width="16" height="4" fill="#a056d2"/>
-  <rect x="20" y="8" width="4" height="4" fill="#a056d2"/>
-  <rect x="40" y="8" width="4" height="4" fill="#a056d2"/>
-  
-  <!-- Main helmet bowl -->
-  <rect x="16" y="12" width="32" height="4" fill="#2c1810"/>
-  <rect x="12" y="16" width="40" height="4" fill="#2c1810"/>
-  <rect x="12" y="20" width="40" height="4" fill="#3d2817"/>
-  
-  <!-- Decorative band -->
-  <rect x="12" y="24" width="40" height="4" fill="#a056d2"/>
-  
-  <!-- Face area / front plate -->
-  <rect x="16" y="28" width="32" height="4" fill="#1a0f0a"/>
-  <rect x="16" y="32" width="32" height="8" fill="#1a0f0a"/>
-  
-  <!-- Eye openings (metal grille) -->
-  <rect x="20" y="32" width="4" height="4" fill="#5a4a3a"/>
-  <rect x="40" y="32" width="4" height="4" fill="#5a4a3a"/>
-  <rect x="20" y="36" width="4" height="4" fill="#5a4a3a"/>
-  <rect x="40" y="36" width="4" height="4" fill="#5a4a3a"/>
-  
-  <!-- Center crest accent -->
-  <rect x="28" y="28" width="8" height="4" fill="#a056d2"/>
-  
-  <!-- Chin guard -->
-  <rect x="14" y="40" width="36" height="4" fill="#2c1810"/>
-  <rect x="16" y="44" width="32" height="4" fill="#3d2817"/>
-  
-  <!-- Side lappets (fukikaeshi style) -->
-  <rect x="8" y="32" width="4" height="12" fill="#2c1810"/>
-  <rect x="52" y="32" width="4" height="12" fill="#2c1810"/>
-  
-  <!-- Gold/metallic accent lines -->
-  <rect x="24" y="24" width="4" height="4" fill="#d4a574"/>
-  <rect x="36" y="24" width="4" height="4" fill="#d4a574"/>
-  
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<title>Edo Fireman Helm (epic)</title>
+<rect x="16" y="8" width="32" height="4" fill="#2a1a0c"/>
+<rect x="12" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="16" y="12" width="32" height="4" fill="#c1692a"/>
+<rect x="48" y="12" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="16" width="4" height="4" fill="#e8943a"/>
+<rect x="16" y="16" width="32" height="4" fill="#c1692a"/>
+<rect x="48" y="16" width="4" height="4" fill="#e8943a"/>
+<rect x="52" y="16" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="20" width="4" height="4" fill="#e8943a"/>
+<rect x="16" y="20" width="4" height="4" fill="#2d5fa8"/>
+<rect x="20" y="20" width="20" height="4" fill="#c1692a"/>
+<rect x="40" y="20" width="4" height="4" fill="#2d5fa8"/>
+<rect x="44" y="20" width="4" height="4" fill="#e8943a"/>
+<rect x="48" y="20" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="12" y="24" width="4" height="4" fill="#e8943a"/>
+<rect x="16" y="24" width="8" height="4" fill="#2d5fa8"/>
+<rect x="24" y="24" width="12" height="4" fill="#c1692a"/>
+<rect x="36" y="24" width="8" height="4" fill="#2d5fa8"/>
+<rect x="44" y="24" width="4" height="4" fill="#e8943a"/>
+<rect x="48" y="24" width="4" height="4" fill="#2a1a0c"/>
+<rect x="4" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="28" width="4" height="4" fill="#e8943a"/>
+<rect x="16" y="28" width="12" height="4" fill="#2d5fa8"/>
+<rect x="28" y="28" width="4" height="4" fill="#e8943a"/>
+<rect x="32" y="28" width="12" height="4" fill="#2d5fa8"/>
+<rect x="44" y="28" width="4" height="4" fill="#e8943a"/>
+<rect x="48" y="28" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="32" width="4" height="4" fill="#1a3a6b"/>
+<rect x="16" y="32" width="24" height="4" fill="#2d5fa8"/>
+<rect x="40" y="32" width="4" height="4" fill="#1a3a6b"/>
+<rect x="44" y="32" width="8" height="4" fill="#2a1a0c"/>
+<rect x="4" y="36" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="36" width="4" height="4" fill="#1a3a6b"/>
+<rect x="16" y="36" width="20" height="4" fill="#2d5fa8"/>
+<rect x="36" y="36" width="4" height="4" fill="#1a3a6b"/>
+<rect x="40" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="48" y="36" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="40" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="40" width="4" height="4" fill="#1a3a6b"/>
+<rect x="20" y="40" width="12" height="4" fill="#2d5fa8"/>
+<rect x="32" y="40" width="4" height="4" fill="#1a3a6b"/>
+<rect x="36" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="48" y="40" width="4" height="4" fill="#2a1a0c"/>
+<rect x="8" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="16" y="44" width="4" height="4" fill="#d4a017"/>
+<rect x="20" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="24" y="44" width="4" height="4" fill="#d4a017"/>
+<rect x="28" y="44" width="4" height="4" fill="#2a1a0c"/>
+<rect x="32" y="44" width="4" height="4" fill="#d4a017"/>
+<rect x="36" y="44" width="8" height="4" fill="#2a1a0c"/>
+<rect x="12" y="48" width="32" height="4" fill="#2a1a0c"/>
 </svg>

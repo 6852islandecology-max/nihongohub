@@ -1,0 +1,218 @@
+{
+  "scope": "all",
+  "langs": [
+    "id",
+    "es",
+    "th",
+    "zh"
+  ],
+  "chunk": 16,
+  "results": {
+    "id": {
+      "model": "openai/gpt-oss-120b:free",
+      "issues": {
+        "yamagata": {
+          "lede": {
+            "severity": "high",
+            "issue": "「cherries」を「bunga sakura（桜）」と誤訳している"
+          },
+          "eat": {
+            "severity": "high",
+            "issue": "「cherry capital」を「ibu kota bunga sakura」と誤訳している"
+          },
+          "when": {
+            "severity": "high",
+            "issue": "「cherries」の時期を「bunga sakura（桜）」と誤訳している"
+          },
+          "word_meaning": {
+            "severity": "high",
+            "issue": "「cherries」を「bunga sakura（桜）」と誤訳している"
+          }
+        },
+        "fukushima": {
+          "tip": {
+            "severity": "high",
+            "issue": "「whole leek」を「batang bawang putih（にんにく）」と誤訳している"
+          }
+        },
+        "yamaguchi": {
+          "lede": {
+            "severity": "low",
+            "issue": "「melengkung」(curved) が英語に無い付加情報"
+          },
+          "when": {
+            "severity": "low",
+            "issue": "「bunga sakura」(cherry blossoms) が英語の「blossoms」より具体的すぎる"
+          }
+        }
+      }
+    },
+    "es": {
+      "model": "openai/gpt-oss-120b:free",
+      "issues": {
+        "ishikawa": {
+          "word_meaning": {
+            "severity": "high",
+            "issue": "情報が抜けている（「Japan's」の後の語句が欠落）"
+          }
+        },
+        "tokushima": {
+          "tip": {
+            "severity": "low",
+            "issue": "余計な情報として「死潮」(dead tides) が追加されている"
+          }
+        },
+        "ehime": {
+          "eat": {
+            "severity": "high",
+            "issue": "「taimeshi」の魚種が誤って「pez espada」(swordfish) と訳されている"
+          }
+        }
+      }
+    },
+    "th": {
+      "model": "openai/gpt-oss-120b:free",
+      "issues": {
+        "miyagi": {
+          "eat": {
+            "severity": "high",
+            "issue": "「zunda」を「น้ำเต่าหวาน」と誤訳している"
+          }
+        },
+        "akita": {
+          "intro": {
+            "severity": "low",
+            "issue": "「Kantō」祭りに「Nebuta Matsuri」を余計に付加している"
+          }
+        },
+        "fukushima": {
+          "tip": {
+            "severity": "high",
+            "issue": "「leek」を「หอมใหญ่（onion）」と誤訳している"
+          }
+        },
+        "yamagata": {
+          "eat": {
+            "severity": "high",
+            "issue": "「imoni」を「หม้อไฟหญ้าศรัทธา」と誤訳している"
+          }
+        },
+        "ishikawa": {
+          "intro": {
+            "severity": "high",
+            "issue": "「สามสวนแนวนอนที่ยิ่งใหญ่」เป็นการแปลผิดความหมายของ \"three great landscape gardens\""
+          }
+        },
+        "fukui": {
+          "when": {
+            "severity": "low",
+            "issue": "ระบุเดือนพฤษภาคมแทนการกล่าวถึง \"spring\" ทำให้ข้อมูลเพิ่มขึ้นและไม่ตรงกับต้นฉบับ"
+          }
+        },
+        "gifu": {
+          "eat": {
+            "severity": "high",
+            "issue": "แปลว่า \"เนื้อ Hida เป็นสัตว์\" แทนจะหมายถึง \"Hida beef\""
+          }
+        },
+        "shizuoka": {
+          "eat": {
+            "severity": "high",
+            "issue": "แปล \"Fuji-noodles\" เป็น \"หนูดเดิล Fuji\" ซึ่งไม่ตรงกับอาหารจริง"
+          }
+        },
+        "nagano": {
+          "intro": {
+            "severity": "low",
+            "issue": "เพิ่มคำว่า \"สวนสัตว์\" ที่ไม่มีในต้นฉบับ"
+          }
+        },
+        "hyogo": {
+          "intro": {
+            "severity": "high",
+            "issue": "แปล \"Inland Sea\" เป็น \"ทะเลสาบภายใน\" ซึ่งผิดพลาด"
+          }
+        },
+        "hiroshima": {
+          "lede": {
+            "severity": "low",
+            "issue": "「สัญญา」(promise) が英語に無く、追加情報となっている"
+          },
+          "word_meaning": {
+            "severity": "low",
+            "issue": "「สัญญา」(promise) が英語に無く、追加情報となっている"
+          }
+        },
+        "yamaguchi": {
+          "intro": {
+            "severity": "high",
+            "issue": "「จิ้งจก」(lizard) と訳しており、英語の「fox」と意味が異なる"
+          }
+        },
+        "kagawa": {
+          "lede": {
+            "severity": "high",
+            "issue": "「น้ำแกงうどん」は誤訳で、英語の「udon noodles」と意味が違う"
+          }
+        },
+        "ehime": {
+          "eat": {
+            "severity": "high",
+            "issue": "「ส้มโอ」はポメロで、英語の「mikan」（みかん）と異なる"
+          }
+        },
+        "nagasaki": {
+          "word_meaning": {
+            "severity": "high",
+            "issue": "訳文が意味不明で、英語の「hearty mixed noodle dish」と全く異なる"
+          }
+        }
+      }
+    },
+    "zh": {
+      "model": "openai/gpt-oss-120b:free",
+      "issues": {
+        "aomori": {
+          "lede": {
+            "severity": "high",
+            "issue": "將 Nebuta 祭典錯譯為「睡魔祭」"
+          },
+          "when": {
+            "severity": "high",
+            "issue": "將 Nebuta Matsuri 錯譯為「睡魔祭」"
+          }
+        },
+        "fukushima": {
+          "eat": {
+            "severity": "high",
+            "issue": "Kitakata 拉麵被譯為「北方拉麵」，名稱錯誤"
+          }
+        },
+        "yamagata": {
+          "word_meaning": {
+            "severity": "low",
+            "issue": "遺漏了「of Japan's」的所有格說明"
+          }
+        },
+        "yamanashi": {
+          "getting": {
+            "severity": "high",
+            "issue": "將「搭乘巴士或火車」誤寫為「車程」"
+          }
+        },
+        "shizuoka": {
+          "getting": {
+            "severity": "high",
+            "issue": "將「搭乘新幹線」誤寫為「車程」"
+          }
+        },
+        "shiga": {
+          "getting": {
+            "severity": "high",
+            "issue": "將「搭乘列車」誤寫為「車程」"
+          }
+        }
+      }
+    }
+  }
+}

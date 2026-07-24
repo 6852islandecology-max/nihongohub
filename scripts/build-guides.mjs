@@ -50,6 +50,22 @@ function kanjiHero(g) {
 }
 const BY_SLUG = Object.fromEntries(GUIDES.map((g) => [g.slug, g]));
 
+// Tōkaidō–Sanyō Shinkansen golden route — adjacent major stops per prefecture (real line connections).
+const SHINKANSEN_NEXT = {
+  tokyo:     ["kanagawa", "shizuoka", "kyoto"],
+  kanagawa:  ["tokyo", "shizuoka"],
+  shizuoka:  ["kanagawa", "aichi"],
+  aichi:     ["shizuoka", "gifu", "kyoto"],
+  gifu:      ["aichi", "shiga"],
+  kyoto:     ["aichi", "osaka", "hyogo"],
+  osaka:     ["kyoto", "hyogo", "okayama"],
+  hyogo:     ["osaka", "okayama"],
+  okayama:   ["hyogo", "hiroshima"],
+  hiroshima: ["okayama", "yamaguchi"],
+  yamaguchi: ["hiroshima", "fukuoka"],
+  fukuoka:   ["yamaguchi", "hiroshima"],
+};
+
 // Optional enrichment (English only)
 let ENRICHED = {};
 try { ENRICHED = JSON.parse(readFileSync(new URL("../blog/guides-enriched.json", import.meta.url), "utf8")); } catch(e){}
@@ -82,7 +98,10 @@ const UI = {
         disclose:"Some links above are affiliate links. We may earn a commission at no extra cost to you. We only list services we'd use ourselves.",
         openMap:(n)=>`⚔️ Open ${n} on the Explore map →`,
         h1Tail:"Travel Guide for Japanese Learners",
-        hiddenGems:"Hidden gems", culture:"Local culture", etiquette:"Local etiquette", season_tip:"Seasonal tip" },
+        hiddenGems:"Hidden gems", culture:"Local culture", etiquette:"Local etiquette", season_tip:"Seasonal tip",
+        indexTag:"▶ PREFECTURE GUIDES", indexH1:"Japan, one prefecture at a time",
+        indexLede:"Free, honest travel guides for Japanese learners — all 47 prefectures.",
+        seeAll:"⚔️ See them on the Explore map →" },
   zh: { allGuides:"← 所有縣份指南", freeQuiz:"免費測驗", exploreMap:"🗾 探索地圖",
         whatToSee:"必看景點", whatToEat:"必吃美食", history:"歷史與背景",
         gettingWhen:"如何前往與最佳季節", gettingThere:"如何前往", bestTime:"最佳季節",
@@ -91,7 +110,10 @@ const UI = {
         planStay:"規劃住宿", findStay:"在日本尋找住宿 →", tours:"預訂行程與門票 →",
         source:"資料來源", sourceTail:"事實依官方旅遊資訊查核，觀點為我們所有。",
         disclose:"上方部分連結為聯盟行銷連結，我們可能因此獲得報酬，您不會額外付費。我們只推薦自己也會使用的服務。",
-        openMap:(n)=>`⚔️ 在探索地圖開啟${n} →`, h1Tail:"旅遊指南（為日語學習者撰寫）" },
+        openMap:(n)=>`⚔️ 在探索地圖開啟${n} →`, h1Tail:"旅遊指南（為日語學習者撰寫）",
+        indexTag:"▶ 縣份指南", indexH1:"日本，一次認識一個縣",
+        indexLede:"為日語學習者撰寫的免費誠實旅遊指南——全 47 縣。",
+        seeAll:"⚔️ 在探索地圖上看看 →" },
   es: { allGuides:"← Todas las guías", freeQuiz:"CUESTIONARIO GRATIS", exploreMap:"🗾 Mapa Explorar",
         whatToSee:"Qué ver", whatToEat:"Qué comer", history:"Historia y contexto",
         gettingWhen:"Cómo llegar y cuándo ir", gettingThere:"Cómo llegar", bestTime:"Mejor época",
@@ -100,7 +122,10 @@ const UI = {
         planStay:"Planifica tu estancia", findStay:"Encuentra alojamiento en Japón →", tours:"Reserva tours y entradas →",
         source:"Fuente", sourceTail:"Datos contrastados con información turística oficial; opiniones nuestras.",
         disclose:"Algunos enlaces son de afiliados. Podemos recibir una comisión sin coste adicional para ti. Solo listamos servicios que usaríamos.",
-        openMap:(n)=>`⚔️ Abrir ${n} en el Mapa Explorar →`, h1Tail:"Guía de viaje para estudiantes de japonés" },
+        openMap:(n)=>`⚔️ Abrir ${n} en el Mapa Explorar →`, h1Tail:"Guía de viaje para estudiantes de japonés",
+        indexTag:"▶ GUÍAS DE PREFECTURAS", indexH1:"Japón, una prefectura a la vez",
+        indexLede:"Guías de viaje gratuitas y honestas para estudiantes de japonés — las 47 prefecturas.",
+        seeAll:"⚔️ Verlas en el Mapa Explorar →" },
   th: { allGuides:"← คู่มือทุกจังหวัด", freeQuiz:"ควิซฟรี", exploreMap:"🗾 แผนที่สำรวจ",
         whatToSee:"ต้องไปดู", whatToEat:"ต้องกิน", history:"ประวัติและที่มา",
         gettingWhen:"การเดินทางและช่วงเวลาที่ดีที่สุด", gettingThere:"การเดินทาง", bestTime:"ช่วงเวลาที่ดีที่สุด",
@@ -109,7 +134,10 @@ const UI = {
         planStay:"วางแผนที่พัก", findStay:"ค้นหาที่พักในญี่ปุ่น →", tours:"จองทัวร์และตั๋ว →",
         source:"แหล่งที่มา", sourceTail:"ข้อมูลตรวจสอบกับสำนักงานท่องเที่ยวอย่างเป็นทางการ ความคิดเห็นเป็นของเรา",
         disclose:"ลิงก์บางตัวเป็นลิงก์พันธมิตร เราอาจได้รับค่าตอบแทนโดยคุณไม่เสียค่าใช้จ่ายเพิ่ม เราแนะนำเฉพาะบริการที่เราใช้เอง",
-        openMap:(n)=>`⚔️ เปิด ${n} บนแผนที่สำรวจ →`, h1Tail:"คู่มือท่องเที่ยวสำหรับผู้เรียนภาษาญี่ปุ่น" },
+        openMap:(n)=>`⚔️ เปิด ${n} บนแผนที่สำรวจ →`, h1Tail:"คู่มือท่องเที่ยวสำหรับผู้เรียนภาษาญี่ปุ่น",
+        indexTag:"▶ คู่มือรายจังหวัด", indexH1:"ญี่ปุ่น ทีละจังหวัด",
+        indexLede:"คู่มือท่องเที่ยวฟรีและจริงใจสำหรับผู้เรียนภาษาญี่ปุ่น — ครบทั้ง 47 จังหวัด",
+        seeAll:"⚔️ ดูบนแผนที่สำรวจ →" },
   id: { allGuides:"← Semua panduan prefektur", freeQuiz:"KUIS GRATIS", exploreMap:"🗾 Peta Jelajah",
         whatToSee:"Yang wajib dilihat", whatToEat:"Yang wajib dicoba", history:"Sejarah & latar",
         gettingWhen:"Cara ke sana & waktu terbaik", gettingThere:"Cara ke sana", bestTime:"Waktu terbaik",
@@ -118,7 +146,10 @@ const UI = {
         planStay:"Rencanakan menginap", findStay:"Cari tempat menginap di Jepang →", tours:"Pesan tur & tiket →",
         source:"Sumber", sourceTail:"Fakta diperiksa terhadap informasi pariwisata resmi; opini adalah milik kami.",
         disclose:"Beberapa tautan di atas adalah tautan afiliasi. Kami mungkin mendapat komisi tanpa biaya tambahan bagi Anda. Kami hanya mencantumkan layanan yang kami pakai sendiri.",
-        openMap:(n)=>`⚔️ Buka ${n} di Peta Jelajah →`, h1Tail:"Panduan Wisata untuk Pelajar Bahasa Jepang" }
+        openMap:(n)=>`⚔️ Buka ${n} di Peta Jelajah →`, h1Tail:"Panduan Wisata untuk Pelajar Bahasa Jepang",
+        indexTag:"▶ PANDUAN PREFEKTUR", indexH1:"Jepang, satu prefektur setiap kali",
+        indexLede:"Panduan wisata gratis dan jujur untuk pelajar bahasa Jepang — seluruh 47 prefektur.",
+        seeAll:"⚔️ Lihat di Peta Jelajah →" }
 };
 
 function hreflangBlock(slug, currentLang){
@@ -227,6 +258,20 @@ function articleEN(g) {
   <h2>${ui.related}</h2>
   <div class="cards">${rel.map(r => `<a class="bcard" href="${r.slug}.html"><span class="bk">${esc(r.kanji)}</span><div class="br">${esc(r.romaji.toUpperCase())}</div></a>`).join("")}</div>` : "";
 
+  // Shinkansen golden-route internal links (English only) — route-based回遊 beyond same-region.
+  const sn = (SHINKANSEN_NEXT[g.slug] || []).map(s => BY_SLUG[s]).filter(Boolean);
+  const shinkansenBlock = sn.length ? `
+  <h2>Next stops on the Shinkansen 🚅</h2>
+  <div class="cards">${sn.map(r => `<a class="bcard" href="${r.slug}.html"><span class="bk">${esc(r.kanji)}</span><div class="br">${esc(r.romaji.toUpperCase())}</div></a>`).join("")}</div>` : "";
+
+  // GEO FAQ (English only) — from guides-enriched.json enr.faq; emits visible Q&A + FAQPage JSON-LD.
+  const faqBlock = (enr && Array.isArray(enr.faq) && enr.faq.length) ? `
+  <section class="faq" aria-label="Frequently asked questions" style="margin:24px 0">
+    <h2>Common questions</h2>
+    ${enr.faq.map(f => `<p><b>Q. ${esc(f.q)}</b><br>A. ${esc(f.a)}</p>`).join("\n    ")}
+  </section>
+  <script type="application/ld+json">${JSON.stringify({ "@context":"https://schema.org", "@type":"FAQPage", mainEntity: enr.faq.map(f => ({ "@type":"Question", name: f.q, acceptedAnswer: { "@type":"Answer", text: f.a } })) })}</script>` : "";
+
   return `${HEAD(title, desc, "en", hreflangBlock(g.slug, "en"), "")}
 <body>
 ${navFor(g.slug, "en", ui, false)}
@@ -267,7 +312,9 @@ ${tipBlock}
   <div class="cta-box">
     <a href="../prefectures.html?pref=${g.slug}">${ui.openMap(esc(g.romaji))}</a>
   </div>
+${faqBlock}
 ${relatedBlock}
+${shinkansenBlock}
 
   <div class="sources">
     ${ui.source}: <a href="https://www.japan.travel/en/destinations/" target="_blank" rel="noopener">Japan National Tourism Organization (JNTO)</a>.
@@ -371,6 +418,7 @@ function indexHTML() {
 <nav class="bnav">
   <a class="logo" href="../index.html">Nihongo<span>Hub</span></a>
   <a href="../prefectures.html">${ui.exploreMap}</a>
+  ${indexSwitcher("en")}
   <a class="cta" href="../index.html#practice">${ui.freeQuiz}</a>
 </nav>
 <div class="wrap">
@@ -381,6 +429,64 @@ function indexHTML() {
   <div class="cta-box"><a href="../prefectures.html">⚔️ See them on the Explore map →</a></div>
 </div>
 <footer>© 2026 NihongoHub · <a href="../index.html">Home</a> · <a href="../prefectures.html">Explore</a></footer>
+</body>
+</html>
+`;
+}
+
+// Language switcher for index pages (EN + every locale that has a localized index).
+// All four locales get an index below, so the switcher is fully bidirectional.
+function indexSwitcher(currentLang) {
+  const parts = [];
+  parts.push(currentLang === "en" ? `<a aria-current="page">EN</a>` : `<a href="../index.html">EN</a>`);
+  for (const li of LANGS_INFO) {
+    if (li.code === currentLang) parts.push(`<a aria-current="page">${li.label}</a>`);
+    else parts.push(`<a href="${currentLang === "en" ? li.code + "/" : "../" + li.code + "/"}index.html">${li.label}</a>`);
+  }
+  return `<span class="langsw">${parts.join(" · ")}</span>`;
+}
+
+// Localized blog index: lists every translated (non-full) prefecture for that language,
+// grouped by region, with a full language switcher + hreflang alternates.
+function langIndexHTML(lang) {
+  const ui = UI[lang];
+  const li = LANGS_INFO.find(l => l.code === lang);
+  const order = ["hokkaido","tohoku","kanto","chubu","kansai","chugoku","shikoku","kyushu-okinawa"];
+  const byRegion = {};
+  for (const g of GUIDES) {
+    if (g.full) continue;                              // full prefectures are EN-only
+    if (!(TRANSLATIONS[lang] || {})[g.slug]) continue; // only what this language actually has
+    (byRegion[g.region] ||= []).push(g);
+  }
+  const sections = order.filter(r => byRegion[r]).map(r => {
+    const cards = byRegion[r].map(g => {
+      const tr = TRANSLATIONS[lang][g.slug] || {};
+      const tag = esc((tr.lede && String(tr.lede).trim()) || g.lede || "");
+      return `<a class="bcard" href="${g.slug}.html"><span class="bk">${esc(g.kanji)}</span><div class="br">${esc(g.romaji.toUpperCase())}</div><p>${tag}</p></a>`;
+    }).join("");
+    return `<h2>${REGION_LABELS[r]}</h2><div class="cards">${cards}</div>`;
+  }).join("\n");
+  // hreflang: EN index + every locale index (all locales have one)
+  const alt = [`<link rel="alternate" hreflang="en" href="../index.html">`]
+    .concat(LANGS_INFO.map(l => `<link rel="alternate" hreflang="${l.htmlLang}" href="${l.code === lang ? "index.html" : "../" + l.code + "/index.html"}">`))
+    .join("\n");
+  const title = `${ui.indexH1} — NihongoHub`;
+  return `${HEAD(title, ui.indexLede, li.htmlLang, "\n" + alt, "../")}
+<body>
+<nav class="bnav">
+  <a class="logo" href="../../index.html">Nihongo<span>Hub</span></a>
+  <a href="../../prefectures.html">${ui.exploreMap}</a>
+  ${indexSwitcher(lang)}
+  <a class="cta" href="../../index.html#practice">${ui.freeQuiz}</a>
+</nav>
+<div class="wrap">
+  <div class="tag">${ui.indexTag}</div>
+  <h1>${esc(ui.indexH1)}</h1>
+  <p class="lede">${esc(ui.indexLede)}</p>
+  ${sections}
+  <div class="cta-box"><a href="../../prefectures.html">${ui.seeAll}</a></div>
+</div>
+<footer>© 2026 NihongoHub · <a href="../../index.html">Home</a> · <a href="../../prefectures.html">Explore</a></footer>
 </body>
 </html>
 `;
@@ -408,6 +514,7 @@ for (const li of LANGS_INFO) {
     writeFileSync(new URL(`${g.slug}.html`, dir), html);
     n++;
   }
+  writeFileSync(new URL("index.html", dir), langIndexHTML(li.code));
   langCounts[li.code] = n;
 }
 
