@@ -14,9 +14,11 @@
  * Ported from skill-tree-resume/api/count.js (2026-06-02, MK viral横展開).
  */
 import { trackFunnel, FUNNEL_SOURCES } from "../lib/funnel-server.js";
+import { redisUrl, redisToken } from "../lib/env.js";
+import { methodGuard } from "../lib/http.js";
 
-const URL = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL || "";
-const TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN || "";
+const URL = redisUrl();
+const TOKEN = redisToken();
 const KEY = "nh_explore_count";
 
 // Client-beacon events. Server-only events (trial_start, checkout_*, paid_*, churn_*)
@@ -41,6 +43,8 @@ async function redis(path) {
 }
 
 export default async function handler(req, res) {
+  // 呼び出し側は prefectures.html:1360 と lib/site-chrome.js:425、blog/blog-quiz.js:606。すべて GET。
+  if (methodGuard(req, res, "GET")) return;
   res.setHeader("Cache-Control", "no-store");
   const ev = req.query && req.query.ev;
   if (ev) {

@@ -6,24 +6,27 @@ import { fetchCachedQuiz, getSupabase, isSupabaseConfigured } from "../lib/supab
 import { checkGuestDailyLimit, extractIp, FREE_LEVELS } from "../lib/ratelimit.js";
 import { applyCors } from "../lib/cors.js";
 import { initSentry, captureApiError } from "../lib/sentry.js";
-import { getAuthedUser, isAuthConfigured } from "../lib/auth.js";
+import { getAuthedUser } from "../lib/auth.js";
+import { isAuthConfigured } from "../lib/env.js";
+import { entitlementFromProfile } from "../lib/billing-rules.js";
 
-// Server-side trial verification: ignores client-supplied flags, checks Supabase users table.
-async function isUserTrialActive(req) {
-  if (!isAuthConfigured() || !isSupabaseConfigured()) return false;
+// Server-side entitlement: ignores client-supplied flags, checks the Supabase users table.
+// Returns { paid, trialActive }. paid (pro/lifetime) means truly unlimited (no daily cap);
+// trialActive raises the guest cap to the trial cap (50/day) but is NOT unlimited.
+async function getEntitlement(req) {
+  const none = { paid: false, trialActive: false };
+  if (!isAuthConfigured() || !isSupabaseConfigured()) return none;
   try {
     const user = await getAuthedUser(req);
-    if (!user) return false;
+    if (!user) return none;
     const db = getSupabase();
     const { data: p } = await db.from("users")
       .select("trial_status, trial_end_date, plan").eq("id", user.id).single();
-    if (!p) return false;
-    if (p.plan === "pro" || p.plan === "lifetime") return true; // paid plans always unlimited
-    if (p.trial_status !== "active" || !p.trial_end_date) return false;
-    return new Date(p.trial_end_date).getTime() > Date.now();
+    // 判定は lib/billing-rules.js に移した（外部サービス無しでテストするため）。挙動は同じ。
+    return entitlementFromProfile(p);
   } catch (e) {
-    console.error("trial verification failed, defaulting to false:", e.message);
-    return false;
+    console.error("entitlement check failed, defaulting to none:", e.message);
+    return none;
   }
 }
 
@@ -37,19 +40,23 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Invalid level, lang, or topic parameter" });
   }
 
-  // 1. ゲスト日次リミット（Upstash 未設定時は fail-open で通す）
-  // Trial キャップ 50/日: クライアント提示フラグは無視、サーバ側 (Supabase users.trial_status) で検証
+  // 1. 日次リミット（Upstash 未設定時は fail-open で通す）。判定はサーバ側 (Supabase) のみ。
+  //    paid (pro/lifetime) = 真の無制限なのでリミッタを完全にバイパス。
+  //    trial = ゲスト30/日 → 50/日に緩和。未ログイン/Free = ゲスト30/日。
   const ip = extractIp(req);
-  const isTrialActive = await isUserTrialActive(req);
-  const rl = await checkGuestDailyLimit(ip, level, { isTrialActive });
-  if (!rl.success) {
-    return res.status(429).json({
-      error: "Daily limit reached",
-      limit: rl.limit,
-      remaining: rl.remaining,
-      reset: rl.reset,
-      trial: rl.trial,
-    });
+  const { paid, trialActive } = await getEntitlement(req);
+  let rl = { success: true, remaining: null };
+  if (!paid) {
+    rl = await checkGuestDailyLimit(ip, level, { isTrialActive: trialActive });
+    if (!rl.success) {
+      return res.status(429).json({
+        error: "Daily limit reached",
+        limit: rl.limit,
+        remaining: rl.remaining,
+        reset: rl.reset,
+        trial: rl.trial,
+      });
+    }
   }
 
   // 2. キャッシュ優先。キャッシュ表は topic 列を持たないため、capped レベル (N3/N2/N1) で

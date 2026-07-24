@@ -1,19 +1,23 @@
 // api/trial-start.js — PR-15 Free Trial (opt-in, no credit card).
 // Starts a 7-day trial for the authenticated user. Stripe customer is created
 // only if Stripe is configured (so trial works even before Stripe go-live).
-import { getSupabase, isSupabaseConfigured } from "../lib/supabase.js";
-import { getAuthedUser, isAuthConfigured } from "../lib/auth.js";
+import { getSupabase } from "../lib/supabase.js";
+import { isAuthConfigured, isSupabaseConfigured, isStripeConfigured } from "../lib/env.js";
+import { methodGuard, requireAuth, getStripe } from "../lib/http.js";
+import { trackFunnel } from "../lib/funnel-server.js";
+import { initSentry, captureApiError } from "../lib/sentry.js";
 
 const TRIAL_DAYS = 7;
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  initSentry();
+  if (methodGuard(req, res, "POST")) return;
   if (!isAuthConfigured() || !isSupabaseConfigured()) {
     return res.status(503).json({ error: "Auth/DB not configured yet" });
   }
 
-  const user = await getAuthedUser(req);
-  if (!user) return res.status(401).json({ error: "Unauthorized" });
+  const user = await requireAuth(req, res);
+  if (!user) return;
 
   const db = getSupabase(); // service-role client
   const { data: profile } = await db
@@ -25,17 +29,18 @@ export default async function handler(req, res) {
 
   // Optional: create a Stripe customer now so later Upgrade is one step.
   let stripeCustomerId = profile?.stripe_customer_id || null;
-  if (!stripeCustomerId && process.env.STRIPE_SECRET_KEY) {
+  if (!stripeCustomerId && isStripeConfigured()) {
     try {
-      const Stripe = (await import("stripe")).default;
-      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { httpClient: Stripe.createFetchHttpClient(), timeout: 20000 });
+      const stripe = await getStripe();
       const customer = await stripe.customers.create({
         email: user.email,
         metadata: { user_id: user.id, trial_started_at: new Date().toISOString() },
       });
       stripeCustomerId = customer.id;
     } catch (e) {
-      // non-fatal: trial can start without a Stripe customer
+      // non-fatal: trial can start without a Stripe customer.
+      // 握り潰すのは意図的だが、無言だと「なぜ後で Upgrade が 2 手になるのか」が追えないので通知だけ出す。
+      captureApiError(e, { api: "trial-start", step: "stripe-customer-create", userId: user.id });
       stripeCustomerId = null;
     }
   }
@@ -57,6 +62,7 @@ export default async function handler(req, res) {
     event_type: "trial_started",
     metadata: { stripe_customer_id: stripeCustomerId },
   });
+  await trackFunnel("trial_start", user.id);
 
   return res.status(200).json({
     trial_status: "active",

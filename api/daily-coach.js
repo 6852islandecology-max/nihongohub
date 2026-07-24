@@ -9,16 +9,18 @@ import { Redis } from "@upstash/redis";
 import { applyCors } from "../lib/cors.js";
 import { extractIp } from "../lib/ratelimit.js";
 import { initSentry, captureApiError } from "../lib/sentry.js";
+import { redisUrl, redisToken } from "../lib/env.js";
+import { methodGuard } from "../lib/http.js";
 
-const LANG_NAMES = { en: "English", zh: "Traditional Chinese", es: "Spanish", th: "Thai", id: "Indonesian" };
-const VALID_LANGS = Object.keys(LANG_NAMES);
+// 2026-07-24: ここに独自の LANG_NAMES の写しがあったが、lib/quiz-constants.js に一本化した。
+import { LANG_NAMES, VALID_LANGS } from "../lib/quiz-constants.js";
 
 // Coarse per-IP daily cap so a misbehaving client can't run up cost. Fail-open if Upstash absent.
 let coachLimiter = null;
 function getCoachLimiter() {
   if (coachLimiter !== null) return coachLimiter;
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  const url = redisUrl();
+  const token = redisToken();
   if (!url || !token) { coachLimiter = false; return null; }
   coachLimiter = new Ratelimit({
     redis: new Redis({ url, token }),
@@ -58,7 +60,8 @@ function buildPrompt(sig, langName) {
 export default async function handler(req, res) {
   initSentry();
   if (applyCors(req, res)) return;
-  if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" });
+  // 405 の body だけ他と形が違う（{ok:false, error}）。クライアントが ok を見て分岐するので温存する。
+  if (methodGuard(req, res, "POST", { ok: false, error: "Method not allowed" })) return;
 
   const body = req.body || {};
   const lang = VALID_LANGS.includes(body.lang) ? body.lang : "en";
