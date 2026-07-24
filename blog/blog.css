@@ -6,10 +6,13 @@
   --muted:#7a6a52;--soft:#ddcfb6;--green:#3fae6b;
   --pixel:'Press Start 2P',monospace;--dot:'DotGothic16',sans-serif;
 }
-body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.7;
-  background:var(--paper);}
+body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.75;
+  font-size:17px;background:var(--paper);}
 .bnav{position:sticky;top:0;z-index:10;background:#0d0a14;border-bottom:3px solid var(--gold);
   display:flex;justify-content:space-between;align-items:center;padding:11px 20px;gap:12px;flex-wrap:wrap}
+/* sticky .bnav must not cover TOC anchor targets (#getting-around etc.); it wraps to ~96px on phones */
+html{scroll-padding-top:70px}
+@media(max-width:768px){html{scroll-padding-top:110px}}
 .bnav a{color:#fdfaf3;text-decoration:none;font-family:var(--dot);font-size:15px}
 .bnav .logo span{color:var(--red)}
 .bnav .cta{font-family:var(--pixel);font-size:9px;background:var(--red);color:#fff;padding:9px 13px;border-radius:3px}
@@ -23,9 +26,9 @@ body{font-family:'DM Sans',-apple-system,system-ui,sans-serif;color:var(--ink);l
 .langsw{font-family:var(--dot);font-size:13px}.langsw a{color:#fff;text-decoration:none;opacity:.8;cursor:pointer}.langsw a[aria-current]{color:var(--gold);opacity:1;font-weight:700}
 .tag{font-family:var(--pixel);font-size:10px;color:var(--gold);letter-spacing:1px}
 h1{font-family:var(--dot);font-size:clamp(28px,5vw,42px);line-height:1.15;margin:12px 0 8px}
-h2{font-family:var(--dot);font-size:22px;margin:30px 0 10px;border-bottom:2px solid var(--soft);padding-bottom:5px}
-.lede{font-size:18px;color:var(--muted);margin:8px 0 18px}
-p{margin:12px 0}
+h2{font-family:var(--dot);font-size:23px;margin:38px 0 12px;border-bottom:2px solid var(--soft);padding-bottom:5px}
+.lede{font-size:18.5px;color:var(--muted);margin:8px 0 18px}
+p{margin:14px 0}
 ul{margin:10px 0 10px 22px}li{margin:5px 0}
 a{color:var(--red)}
 .jpbox{background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:14px 16px;margin:18px 0}
@@ -36,6 +39,14 @@ a{color:var(--red)}
 .aff .pr{font-family:var(--pixel);font-size:8px;background:var(--gold);color:#fff;padding:2px 6px;border-radius:3px}
 .aff a{display:inline-block;margin:6px 12px 0 0;font-weight:600}
 .disclose{font-size:12.5px;color:var(--muted);margin-top:8px}
+.leadmag{background:#eef7ef;border:2px solid var(--green);border-radius:8px;padding:16px 18px 18px;margin:30px 0}
+.leadmag .lm-tag{font-family:var(--pixel);font-size:8px;background:var(--green);color:#fff;padding:3px 7px;border-radius:3px;letter-spacing:.5px}
+.leadmag h3{font-family:var(--dot);font-size:19px;margin:10px 0 4px}
+.leadmag p{margin:6px 0 12px;font-size:15px}
+.leadmag .lm-btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.leadmag a.lm-get{display:inline-block;font-family:var(--pixel);font-size:10px;background:var(--green);color:#fff;
+  text-decoration:none;padding:12px 16px;border-radius:4px;border-bottom:3px solid #2a7a4b}
+.leadmag a.lm-full{font-weight:600;font-size:14.5px;color:var(--red);text-decoration:none;border-bottom:1px solid var(--soft);padding-bottom:1px}
 .cta-box{text-align:center;margin:34px 0 10px}
 .cta-box a{display:inline-block;font-family:var(--pixel);font-size:11px;background:var(--red);color:#fff;
   text-decoration:none;padding:14px 20px;border-radius:4px;border-bottom:3px solid #7e1c12}
@@ -80,3 +91,21 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:24px}
 .pxrel-row a:hover{border-color:var(--gold)}
 .pxrel-row .rk{font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700}
 .pxrel-row .re{font-family:var(--pixel);font-size:8px;color:var(--muted)}
+
+/* ── phone overflow fix ──
+   The "sights / food" gem pills ship with an inline `white-space:nowrap`. Long entries
+   (e.g. "💎 Tokoname Pottery Footpath / Dokan-zaka (常滑やきもの散歩道)") then exceed a
+   ~375px viewport, forcing horizontal page overflow that visually skews the phrase boxes
+   (.jpbox) and the map CTA. On phones, let the pills wrap. The stylesheet !important is
+   required to beat the inline style; we still keep them on one line on wider screens. */
+@media(max-width:600px){
+  span[style*="border-radius:999px"][style*="nowrap"]{ white-space:normal !important; }
+}
+
+
+/* lead photo (CC, for image-search SEO) */
+.lead-photo{margin:16px 0 18px;border-radius:12px;overflow:hidden;border:2px solid #e6ddd0;background:#fbf6ec}
+.lead-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.lead-photo figcaption{font-size:11.5px;color:#7a6e5c;padding:6px 12px;line-height:1.5}
+.lead-photo figcaption a{color:#9c6b1f;text-decoration:none}
+.lead-photo figcaption a:hover{text-decoration:underline}

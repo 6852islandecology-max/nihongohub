@@ -15,7 +15,21 @@
       "jp": "どこから来ましたか。",
       "ro": "doko kara kimashita ka.",
       "en": "Where are you from? (a natural conversation opener locals use with travelers)"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Aomori from Tokyo, and how long does it take?",
+        "a": "The Tōhoku Shinkansen reaches Shin-Aomori in about 3 hours. Book seats in advance during August (Nebuta season) or late April–May (cherry blossom season), when trains fill quickly."
+      },
+      {
+        "q": "When is the best time to visit Aomori?",
+        "a": "Early August for Nebuta Matsuri's giant illuminated floats, or late April–May for Hirosaki Castle's cherry blossoms. Winter brings some of Japan's deepest snow—stunning but challenging for travel."
+      },
+      {
+        "q": "What should I definitely eat in Aomori?",
+        "a": "Ōma bluefin tuna, fresh scallops, and Aomori's famous crisp apples are must-tries. Local seafood restaurants near the harbor offer the freshest catch at reasonable prices."
+      }
+    ]
   },
   "iwate": {
     "hidden_gems": [
@@ -33,7 +47,21 @@
       "jp": "岩手の風景は本当に素晴らしいですね。",
       "ro": "Iwate no fūkei wa hontōni subarashii desu ne.",
       "en": "The scenery of Iwate is truly wonderful, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Iwate from Tokyo?",
+        "a": "The Tōhoku Shinkansen reaches Morioka in 2 hours 10 minutes. Book early for better fares, and consider a JR Pass if visiting multiple Tōhoku prefectures."
+      },
+      {
+        "q": "What's the best time to visit Iwate?",
+        "a": "Spring to autumn suits hiking and coastal sightseeing. Summer specifically offers the wanko-soba challenge in Morioka—a competitive eating tradition worth experiencing firsthand."
+      },
+      {
+        "q": "Is Hiraizumi worth a day trip from Morioka?",
+        "a": "Absolutely. Chūson-ji and Mōtsū-ji are UNESCO-listed Pure Land temples with gardens worth 3–4 hours. Combine with Morioka's three signature noodle dishes for a complete visit."
+      }
+    ]
   },
   "miyagi": {
     "hidden_gems": [
@@ -51,7 +79,21 @@
       "jp": "素晴らしい景色ですね",
       "ro": "subarashii keshiki desu ne",
       "en": "What a wonderful view, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Miyagi from Tokyo?",
+        "a": "The Tōhoku Shinkansen reaches Sendai in about 1 hour 30 minutes—the fastest way to Tōhoku. Book seats in advance during peak travel seasons like Tanabata festival in August."
+      },
+      {
+        "q": "What's the best time to visit Matsushima Bay?",
+        "a": "Autumn transforms the pine-covered islets beautifully, but Matsushima is stunning year-round. Visit on a clear day to fully appreciate the bay's classic scenic views."
+      },
+      {
+        "q": "What should I eat in Sendai?",
+        "a": "Try gyūtan (grilled beef tongue) and zunda (sweet edamame paste)—both are Sendai specialties. Many restaurants near Sendai Station offer these dishes at reasonable prices."
+      }
+    ]
   },
   "akita": {
     "hidden_gems": [
@@ -69,7 +111,21 @@
       "jp": "ここの雪はすごいですね。",
       "ro": "Koko no yuki wa sugoi desu ne.",
       "en": "The snow here is incredible, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Akita from Tokyo, and how long does it take?",
+        "a": "The Akita Shinkansen takes about 3 hours 40 minutes from Tokyo. Book tickets in advance during winter—snow conditions can affect scheduling, so arrive early."
+      },
+      {
+        "q": "What's the best time to visit Akita?",
+        "a": "Spring brings weeping cherries to Kakunodate; winter offers deep snow and onsen at Nyūtō. Winter visits require warm gear but reward you with fewer crowds and authentic snow-country atmosphere."
+      },
+      {
+        "q": "What should I eat in Akita, and what makes it special?",
+        "a": "Kiritanpo hot pot—mashed rice on skewers—is the signature dish. Pair it with local sake, which Akita produces from its celebrated rice. Eat at traditional inns for the full experience."
+      }
+    ]
   },
   "yamagata": {
     "hidden_gems": [
@@ -85,9 +141,23 @@
     "etiquette": "At Yamadera temple, wear slip-on shoes for the steep 1,000+ stone steps; many visitors remove footwear partway up, so socks without holes show respect.",
     "deeper_phrase": {
       "jp": "季節の風情を感じる",
-      "ro": "kisetsu no fū情 wo kanjiru",
+      "ro": "kisetsu no fuzei wo kanjiru",
       "en": "to appreciate the seasonal atmosphere or charm"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Yamagata from Tokyo?",
+        "a": "The Yamagata Shinkansen takes about 2 hours 30 minutes from Tokyo. Book seats in advance during peak seasons (cherry season June–July, snow monster season February) as trains fill quickly."
+      },
+      {
+        "q": "When is the best time to visit Yamagata?",
+        "a": "February offers Zaō's illuminated 'snow monsters'—frost-covered trees lit at night. June–July brings cherry blossoms, though Yamagata's peak season is shorter than other regions, so book early."
+      },
+      {
+        "q": "What is imoni and where should I try it?",
+        "a": "Imoni is a taro hot pot—Yamagata's signature comfort dish. Try it at local restaurants near Yamadera or Ginzan Onsen to pair it with the region's mountain atmosphere and fresh ingredients."
+      }
+    ]
   },
   "fukushima": {
     "hidden_gems": [
@@ -105,7 +175,21 @@
       "jp": "ここの水はおいしいですね。",
       "ro": "Koko no mizu wa oishii desu ne.",
       "en": "The water here is delicious, isn't it? (polite observation about local spring water or sake quality)"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to reach Fukushima from Tokyo?",
+        "a": "The Tōhoku Shinkansen takes about 1 hour 20 minutes to Kōriyama or 1 hour 40 minutes to Fukushima station. Arriving early gives you time to explore both samurai history and hot springs in one day."
+      },
+      {
+        "q": "What's the best time to visit Fukushima?",
+        "a": "Summer for peaches, autumn for foliage around Aizu lakes. Visit in autumn if you want to photograph both colorful trees and historical sites like Tsuruga Castle together without summer crowds."
+      },
+      {
+        "q": "What should I eat in Fukushima?",
+        "a": "Kitakata ramen and local sake are regional specialties. Pair them at dinner—the sake's acidity cuts the rich broth perfectly, a pairing locals have perfected for generations."
+      }
+    ]
   },
   "ibaraki": {
     "hidden_gems": [
@@ -121,9 +205,23 @@
     "etiquette": "At Ushiku Daibutsu, remove your shoes before entering the statue's interior chamber where visitors walk through the base; socks are acceptable but going barefoot shows respect.",
     "deeper_phrase": {
       "jp": "地元の味を堪能する",
-      "ro": "jìmoto no aji wo tannou suru",
+      "ro": "jimoto no aji wo tannou suru",
       "en": "to savor local flavors / to truly enjoy regional cuisine"
-    }
+    },
+    "faq": [
+      {
+        "q": "What's the best time to visit Hitachi Seaside Park?",
+        "a": "Late April–May for brilliant blue nemophila flowers, or October for crimson kochia hills. Book accommodation early; these peak seasons fill up quickly since the park is only 1h15m from Tokyo."
+      },
+      {
+        "q": "How do I get to Hitachi Seaside Park from Tokyo?",
+        "a": "Take the limited express train to Katsuta (~1h15m from Tokyo), then catch a bus to the park. The park itself is massive, so wear comfortable shoes and plan several hours."
+      },
+      {
+        "q": "Is natto really a must-try food in Ibaraki?",
+        "a": "Mito is natto's birthplace, so yes—try it fresh there to understand why locals love fermented soybeans. Pair it with fresh anglerfish (ankō) for an authentic Ibaraki meal."
+      }
+    ]
   },
   "tochigi": {
     "hidden_gems": [
@@ -141,7 +239,21 @@
       "jp": "気をつけてください",
       "ro": "ki wo tsukete kudasai",
       "en": "Please be careful / Take care"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to get to Nikkō from Tokyo?",
+        "a": "About 2 hours via the Tōbu line from Asakusa, or shinkansen with a transfer. Book early morning trains to maximize daylight at the shrines and waterfalls."
+      },
+      {
+        "q": "When is the best time to visit Tochigi?",
+        "a": "October–November for Nikkō's foliage or late April–May for wisteria at Ashikaga Flower Park. These seasons are busier, so arrive early to avoid crowds at UNESCO-listed Nikkō Tōshō-gū."
+      },
+      {
+        "q": "What should I eat in Tochigi?",
+        "a": "Utsunomiya is Japan's gyōza capital—try local dumpling shops for lunch. Pair them with a visit to Kegon Falls or Lake Chūzenji for a well-rounded day trip."
+      }
+    ]
   },
   "gunma": {
     "hidden_gems": [
@@ -157,9 +269,23 @@
     "etiquette": "When entering an onsen bathhouse, always rinse your entire body thoroughly at the low shower stalls before entering the communal bath — locals notice and appreciate this courtesy, especially in smaller traditional facilities where water quality is carefully maintained.",
     "deeper_phrase": {
       "jp": "温泉で疲れを取る",
-      "ro": "onsen de tsukarei wo toru",
+      "ro": "onsen de tsukare wo toru",
       "en": "to rest and recover one's fatigue in a hot spring"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get from Tokyo to Gunma's hot springs?",
+        "a": "Takasaki is 50 minutes from Tokyo by shinkansen; from there, local buses and trains reach Kusatsu and Ikaho onsen towns. Book accommodation ahead — onsen hotels often arrange shuttle pickups."
+      },
+      {
+        "q": "Is Gunma worth visiting if I only have one day?",
+        "a": "Yes. Visit Takasaki, then either Kusatsu Onsen's yubatake field or the UNESCO Tomioka Silk Mill. Choose one to avoid rushing; both reward slower exploration and a proper soak."
+      },
+      {
+        "q": "What's the best time to visit Gunma's onsen?",
+        "a": "Any season works, but winter months maximize the onsen experience—soaking in hot water while surrounded by snow is quintessentially Japanese. Spring and autumn offer hiking around Mount Haruna."
+      }
+    ]
   },
   "saitama": {
     "hidden_gems": [
@@ -177,7 +303,21 @@
       "jp": "ここは昔のままですね。",
       "ro": "Koko wa mukashi no mama desu ne.",
       "en": "This place is just like the old days, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to visit Kawagoe from Tokyo?",
+        "a": "30–45 minutes by train (Tōbu, Seibu, or JR lines). Plan a half-day trip to explore the clay-walled Kurazukuri streets and Bell Tower without rushing."
+      },
+      {
+        "q": "When is the best time to see Saitama's famous flowers?",
+        "a": "April is peak season for Hitsujiyama Park's shibazakura (pink moss phlox). However, Kawagoe's historic streets are equally charming year-round, so don't skip it if you visit outside spring."
+      },
+      {
+        "q": "What should I eat in Saitama?",
+        "a": "Kawagoe is famous for sweet-potato treats—try them at local shops along the old merchant streets. They're perfect souvenirs and reflect the region's traditional food culture."
+      }
+    ]
   },
   "chiba": {
     "hidden_gems": [
@@ -195,7 +335,21 @@
       "jp": "地元の海の幸をいただきます。",
       "ro": "Jimoto no umi no sachi wo itadakimasu.",
       "en": "I gratefully receive the local bounty of the sea (said before eating fresh seafood)."
-    }
+    },
+    "faq": [
+      {
+        "q": "I'm flying into Narita Airport. How quickly can I reach central Tokyo?",
+        "a": "About 40 minutes by train from Narita to central Tokyo. Since you're already in Chiba, consider visiting Narita-san temple before heading into the city—it's closer than doubling back later."
+      },
+      {
+        "q": "What's the best time to visit Chiba if I want to do both temples and beaches?",
+        "a": "Spring suits temple visits like Narita-san Shinshō-ji; summer is ideal for Kujūkuri beaches and surfing. Plan separate trips, or visit the temple in early summer before beach season peaks."
+      },
+      {
+        "q": "Are there any local foods I should try in Chiba?",
+        "a": "Fresh seafood and peanuts are Chiba specialties. Seek out local catch at coastal restaurants rather than chain stores—the Bōsō Peninsula delivers quality you won't find inland."
+      }
+    ]
   },
   "kanagawa": {
     "hidden_gems": [
@@ -213,7 +367,21 @@
       "jp": "いい眺めですね。",
       "ro": "ii nagame desu ne.",
       "en": "What a nice view, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "What's the best time to visit Hakone to see Mount Fuji?",
+        "a": "Winter offers the clearest skies for Mount Fuji views from Hakone. Visit on bright, dry days after cold fronts pass through; morning light is sharpest before haze builds."
+      },
+      {
+        "q": "Can I visit Kamakura and Yokohama in one day from Tokyo?",
+        "a": "Yes—Kamakura is ~1 hour from Tokyo, Yokohama ~30 minutes. Visit Kamakura's Great Buddha first, then head to Yokohama's Minato Mirai and Chinatown to maximize daylight."
+      },
+      {
+        "q": "What local food should I try in Kanagawa?",
+        "a": "Shirasu (tiny whitebait) is a regional specialty near Enoshima, often served fresh over rice. Yokohama's Chinatown also offers authentic ramen and dumplings worth seeking out."
+      }
+    ]
   },
   "niigata": {
     "hidden_gems": [
@@ -231,7 +399,21 @@
       "jp": "お米がおいしいですね。",
       "ro": "Okome ga oishii desu ne.",
       "en": "The rice here is really delicious, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to reach Niigata from Tokyo?",
+        "a": "The Jōetsu Shinkansen takes about 2 hours to Niigata Station. Book a reserved seat in advance during winter ski season, as trains fill quickly with resort-bound travelers."
+      },
+      {
+        "q": "When is the best time to visit Niigata?",
+        "a": "Winter offers world-class skiing around Yuzawa; summer is ideal during Echigo-Tsumari art triennale years. Outside these windows, spring and autumn are quieter but still rewarding for sake brewery visits and Sado Island exploration."
+      },
+      {
+        "q": "What makes Niigata sake special compared to other regions?",
+        "a": "Niigata produces some of Japan's best sake using local Koshihikari rice and pristine snowmelt water from the mountains. Brewery tours reveal how the region's cold climate creates uniquely clean, refined flavors."
+      }
+    ]
   },
   "toyama": {
     "hidden_gems": [
@@ -249,7 +431,21 @@
       "jp": "雪の壁は本当に素晴らしいですね。",
       "ro": "Yuki no kabe wa hontōni subarashii desu ne.",
       "en": "The snow walls are truly wonderful, aren't they?"
-    }
+    },
+    "faq": [
+      {
+        "q": "When is the best time to visit Toyama?",
+        "a": "Mid-April to June offers two experiences: 20 m snow walls on the Tateyama Kurobe Alpine Route and firefly squid season. Spring is ideal, but book accommodations early as crowds peak during snow wall season."
+      },
+      {
+        "q": "How do I get to Toyama from Tokyo?",
+        "a": "The Hokuriku Shinkansen takes about 2 hours 10 minutes from Tokyo. It's the fastest option and connects directly to Toyama Station, making onward travel to alpine routes straightforward."
+      },
+      {
+        "q": "What makes Toyama's food special?",
+        "a": "Firefly squid (hotaru-ika) and white shrimp are local specialties found in spring. These delicacies showcase Toyama's rich bay, and trying them fresh at local restaurants is far superior to packaged souvenirs."
+      }
+    ]
   },
   "ishikawa": {
     "hidden_gems": [
@@ -267,7 +463,21 @@
       "jp": "ここの景色は本当に素晴らしいですね。",
       "ro": "Koko no keshiki wa hontou ni subarashii desu ne.",
       "en": "The scenery here is truly wonderful, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Kanazawa from Tokyo?",
+        "a": "The Hokuriku Shinkansen takes about 2 hours 30 minutes from Tokyo. Book tickets in advance during peak seasons, as this route fills up quickly with garden and geisha district visitors."
+      },
+      {
+        "q": "What's the best time to visit Ishikawa?",
+        "a": "Any season works, but winter transforms Kenroku-en with yukitsuri—traditional rope supports on trees that create a stunning snowy aesthetic. Book accommodations early if visiting December through February."
+      },
+      {
+        "q": "Is there more to see beyond Kanazawa?",
+        "a": "Yes—the Noto Peninsula offers rugged, dramatic coastline that contrasts beautifully with Kanazawa's refined gardens and geisha districts. Plan a day trip to experience Ishikawa's varied landscapes."
+      }
+    ]
   },
   "fukui": {
     "hidden_gems": [
@@ -285,7 +495,21 @@
       "jp": "ここの景色は本当に素晴らしいですね。",
       "ro": "Koko no keshiki wa hontōni subarashii desu ne.",
       "en": "The scenery here is truly wonderful, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "What's the best time to visit Fukui if I want to see everything?",
+        "a": "November–March for Echizen crab, but spring and autumn offer the best temple and cliff scenery. Consider visiting twice or choosing November–early December to catch both seasonal highlights."
+      },
+      {
+        "q": "How do I get to Fukui from Tokyo?",
+        "a": "The Hokuriku Shinkansen reaches Tsuruga (extended in 2024), then regional trains to Fukui city. This is faster than driving and avoids mountain road fatigue before exploring Tōjinbō cliffs."
+      },
+      {
+        "q": "Is Fukui worth visiting if I'm not interested in dinosaurs?",
+        "a": "Yes. Eihei-ji temple and Tōjinbō's dramatic wave-cut cliffs are world-class, plus Echizen crab and sauce-katsudon are culinary destinations. Dinosaurs are one highlight, not the only one."
+      }
+    ]
   },
   "yamanashi": {
     "hidden_gems": [
@@ -303,7 +527,21 @@
       "jp": "景色がいいですね。",
       "ro": "Keshiki ga ii desu ne.",
       "en": "The scenery is beautiful, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to reach Lake Kawaguchi from Tokyo?",
+        "a": "About 2 hours by bus or train via Ōtsuki. Travel in early morning to secure the clearest Mount Fuji views before clouds roll in during midday."
+      },
+      {
+        "q": "When is the best time to visit Yamanashi?",
+        "a": "Autumn and winter mornings offer the sharpest Fuji visibility. Visit autumn specifically for fresh grapes and the harvest season at Kōfu Basin wineries."
+      },
+      {
+        "q": "What is hōtō, and why should I try it?",
+        "a": "Hōtō is Yamanashi's signature flat-noodle miso hot pot—hearty, warming, and traditionally made with local vegetables. It's the region's comfort food and pairs perfectly with local wine."
+      }
+    ]
   },
   "nagano": {
     "hidden_gems": [
@@ -321,7 +559,21 @@
       "jp": "山がきれいですね。",
       "ro": "Yama ga kirei desu ne.",
       "en": "The mountains are beautiful, aren't they? (polite observation to share with locals)"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Nagano from Tokyo?",
+        "a": "The Hokuriku Shinkansen takes about 1 hour 30 minutes from Tokyo. Book your ticket in advance during winter peak season when snow monkey visitors surge."
+      },
+      {
+        "q": "When is the best time to visit Nagano?",
+        "a": "Winter lets you see snow monkeys bathing in Jigokudani's hot springs; summer offers cool alpine hiking around the peaks. Each season has distinct appeal."
+      },
+      {
+        "q": "What should I eat in Nagano?",
+        "a": "Try Shinshu soba and oyaki dumplings—local specialties. Oyaki are baked, not fried, making them lighter than you might expect despite their hearty fillings."
+      }
+    ]
   },
   "gifu": {
     "hidden_gems": [
@@ -339,7 +591,21 @@
       "jp": "山の天気は変わりやすいです。",
       "ro": "Yama no tenki wa kawari yasui desu.",
       "en": "Mountain weather changes easily / is unpredictable."
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Shirakawa-gō from Takayama?",
+        "a": "Take a bus from Takayama—it's the main access route. Book ahead in peak season; buses fill quickly, especially during winter's famous light-up nights when the thatched roofs glow."
+      },
+      {
+        "q": "When is the best time to visit Gifu?",
+        "a": "Winter transforms Shirakawa-gō's gasshō-zukuri farmhouses under snow, with evening illuminations. Spring and autumn suit Takayama's merchant district and its festivals—fewer crowds than peak winter."
+      },
+      {
+        "q": "What should I eat in Gifu?",
+        "a": "Hida beef is the prized local specialty—seek it grilled or in hot pot. Pair it with Takayama's sake; the old town has excellent breweries worth exploring for tastings."
+      }
+    ]
   },
   "shizuoka": {
     "hidden_gems": [
@@ -357,7 +623,21 @@
       "jp": "いただきます",
       "ro": "itadakimasu",
       "en": "expression of gratitude before eating (literally: 'I humbly receive')"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Shizuoka from Tokyo?",
+        "a": "The Tōkaidō Shinkansen reaches Shizuoka City in about 1 hour from Tokyo. Book a reserved seat in advance during peak seasons (spring and winter) to guarantee a window seat for Mount Fuji views."
+      },
+      {
+        "q": "What's the best time to visit Shizuoka?",
+        "a": "Spring through early summer showcases the brilliant green tea fields in full growth. However, winter offers the clearest Mount Fuji views on crisp, cloudless days—ideal for photography at the 5th Station."
+      },
+      {
+        "q": "Why is green tea so important here?",
+        "a": "Shizuoka grows most of Japan's green tea. Beyond drinking it, try green tea noodles, ice cream, and tempura—the leaf's umami elevates everyday dishes throughout the region's restaurants."
+      }
+    ]
   },
   "aichi": {
     "hidden_gems": [
@@ -375,7 +655,21 @@
       "jp": "ここの味は格別ですね。",
       "ro": "Koko no aji wa kakubetsu desu ne.",
       "en": "The flavor here is really exceptional, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Aichi from Tokyo or Kyoto?",
+        "a": "The Tōkaidō Shinkansen reaches Nagoya in 1 hour 40 minutes from Tokyo or 50 minutes from Kyoto, making it an ideal stopover between the two cities rather than a final destination."
+      },
+      {
+        "q": "What is the best time to visit Aichi?",
+        "a": "Aichi is worth visiting year-round, but its position as a hub halfway between Tokyo and Kyoto means you can slot it into longer itineraries without needing dedicated trip planning."
+      },
+      {
+        "q": "What food should I definitely try in Nagoya?",
+        "a": "Nagoya 'meshi' includes miso-katsu, hitsumabushi eel, and tebasaki wings—the local miso is distinctly darker and richer than other regional varieties, giving the cuisine a bold signature flavor."
+      }
+    ]
   },
   "mie": {
     "hidden_gems": [
@@ -393,7 +687,21 @@
       "jp": "お参りする",
       "ro": "omairi suru",
       "en": "to pay respects at a shrine (the proper verb for visiting Ise Jingū)"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Ise Jingū from Nagoya?",
+        "a": "A limited express train takes 1 hour 20 minutes from Nagoya to Ise. Book early in the day to avoid crowds and experience the ancient forest shrine at its most atmospheric in early morning."
+      },
+      {
+        "q": "What makes Mie's food special?",
+        "a": "Ise-Shima seafood and Matsusaka beef are local treasures. The region's coastal Ama pearl-diving tradition means ultra-fresh seafood; visit local markets to experience it directly rather than restaurants alone."
+      },
+      {
+        "q": "Is there a best time to visit Mie?",
+        "a": "Any season works, but early morning visits to Ise Jingū offer unbeatable atmosphere and fewer visitors. The sacred shrine's forest setting is most serene before typical tourist hours begin."
+      }
+    ]
   },
   "shiga": {
     "hidden_gems": [
@@ -411,7 +719,21 @@
       "jp": "これは地元の味ですね。",
       "ro": "Kore wa jimoto no aji desu ne.",
       "en": "This is a local flavor, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How easy is it to visit Shiga from Kyoto?",
+        "a": "Ōtsu and Hikone are just 10–50 minutes from Kyoto by train, making Shiga an effortless day trip or add-on. Go early to beat crowds at Hikone Castle's original keep."
+      },
+      {
+        "q": "What makes Hikone Castle special compared to other castles in Japan?",
+        "a": "Hikone Castle is one of only a handful of original castles still standing in Japan, preserving its authentic 17th-century keep. Its lakeside setting on Lake Biwa offers rare castle-and-water views."
+      },
+      {
+        "q": "What's funazushi and is it worth trying?",
+        "a": "Funazushi is Shiga's ancient fermented sushi—intensely pungent and acquired-taste. It's a genuine local specialty; try a small portion first to appreciate its umami depth."
+      }
+    ]
   },
   "hyogo": {
     "hidden_gems": [
@@ -429,7 +751,21 @@
       "jp": "いただきます",
       "ro": "itadakimasu",
       "en": "I humbly receive (said before eating—especially meaningful when tasting Akashi octopus or Kobe beef, acknowledging gratitude to the sea and farmers)"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to visit Himeji Castle from Osaka?",
+        "a": "About 40 minutes by train. Arrive early to beat crowds, and consider visiting in early April when cherry blossoms frame Japan's finest castle beautifully."
+      },
+      {
+        "q": "Is Kobe beef worth trying, and where should I eat it?",
+        "a": "Absolutely—Kobe is famous worldwide for it. Book restaurants in advance; the city's cosmopolitan dining scene extends beyond beef to local Akashi octopus specialties too."
+      },
+      {
+        "q": "What's the best way to experience Kobe's natural attractions?",
+        "a": "Take the cable car up Mount Rokkō for harbor views, then relax in nearby Arima Onsen, one of Japan's oldest hot springs. Both are easily accessible from the port city center."
+      }
+    ]
   },
   "nara": {
     "hidden_gems": [
@@ -447,7 +783,21 @@
       "jp": "鹿にせんべいをあげてもいいですか。",
       "ro": "Shika ni senbei wo agete mo ii desu ka.",
       "en": "Is it okay to give crackers to the deer?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to get to Nara from Kyoto or Osaka?",
+        "a": "About 45 minutes by train from either city. Nara works perfectly as a day trip, so you needn't stay overnight—just pack comfortable shoes for temple-hopping and deer encounters."
+      },
+      {
+        "q": "Are the deer in Nara Park safe to approach and feed?",
+        "a": "Yes, they're accustomed to visitors and will bow for deer crackers sold nearby. Stay alert: they may nip if overly eager, and never feed them human snacks—stick to official crackers only."
+      },
+      {
+        "q": "What's the best time of year to visit Nara?",
+        "a": "Any season works well. Nara's temples and Nara Park remain stunning year-round. If crowds concern you, visit on a weekday rather than weekends—seasonality matters less than timing."
+      }
+    ]
   },
   "wakayama": {
     "hidden_gems": [
@@ -465,7 +815,21 @@
       "jp": "お参りします",
       "ro": "o-mairi shimasu",
       "en": "I'm going to pay respects at a shrine or temple (polite phrase pilgrims use)"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to reach Kōyasan from Osaka?",
+        "a": "About 2 hours by train and cablecar from Osaka. Book accommodation in the temple town itself to experience the monks' pre-dawn chanting and calm mountain atmosphere year-round."
+      },
+      {
+        "q": "What's the best time to hike the Kumano Kodō pilgrimage trails?",
+        "a": "Spring through autumn offers ideal hiking conditions on these UNESCO routes. The trails are steep and remote, so sturdy footwear and early morning starts avoid crowds and afternoon rain."
+      },
+      {
+        "q": "What should I eat in Wakayama?",
+        "a": "Try Wakayama ramen and umeboshi (pickled plums), local specialties. Umeboshi aids digestion during long hikes—many pilgrims carry them on the Kumano Kodō for this reason."
+      }
+    ]
   },
   "tottori": {
     "hidden_gems": [
@@ -483,7 +847,21 @@
       "jp": "砂が熱いです。",
       "ro": "suna ga atsui desu.",
       "en": "The sand is hot."
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Tottori from major cities?",
+        "a": "Limited express trains run from Okayama and Osaka directly to Tottori. The journey takes several hours, so consider arriving early to maximize time exploring the Sand Dunes and other attractions."
+      },
+      {
+        "q": "When is the best time to visit Tottori?",
+        "a": "Spring through autumn suits the Sand Dunes—summer sand becomes uncomfortably hot. Winter is ideal for snow crab season, though fewer tourists visit then, meaning shorter queues at The Sand Museum."
+      },
+      {
+        "q": "What makes Tottori's sand dunes special compared to other beaches?",
+        "a": "The Tottori Sand Dunes are vast and dramatic, unlike typical Japanese beaches. They're one of Japan's few true desert-like landscapes on the Sea of Japan coast, offering a genuinely unique natural experience."
+      }
+    ]
   },
   "shimane": {
     "hidden_gems": [
@@ -501,7 +879,21 @@
       "jp": "ここは静かでいいですね。",
       "ro": "Koko wa shizuka de ii desu ne.",
       "en": "This place is peaceful and nice, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "What's the best time to visit Shimane?",
+        "a": "October is peak season—it's the mythical 'month of the gods' when Izumo Taisha hosts important Shinto ceremonies. Book accommodation early, as crowds and prices spike significantly that month."
+      },
+      {
+        "q": "How do I get to Shimane from Tokyo?",
+        "a": "Fly directly to Izumo or Matsue from Tokyo, or take the limited express train from Okayama. Flying is faster (3 hours), but the train is cheaper and gives scenic views of the Chugoku region."
+      },
+      {
+        "q": "What should I eat in Shimane?",
+        "a": "Try Izumo soba—thicker and darker than standard varieties—and shijimi-clam miso soup. Shijimi clams are harvested locally from brackish lakes and have a distinctive umami depth."
+      }
+    ]
   },
   "okayama": {
     "hidden_gems": [
@@ -519,7 +911,21 @@
       "jp": "ここは本当に静かですね。",
       "ro": "Koko wa hontōni shizuka desu ne.",
       "en": "It's really peaceful here, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Okayama from major cities?",
+        "a": "Okayama is 3 hours 15 minutes from Tokyo and 45 minutes from Osaka by shinkansen. The shinkansen station connects directly to local trains, making onward travel to Kurashiki very convenient."
+      },
+      {
+        "q": "What's the best time to visit Okayama?",
+        "a": "Summer is ideal for sampling local peaches and muscat grapes at their peak. However, Kōraku-en garden is stunning year-round, so any season works if you're primarily interested in sightseeing."
+      },
+      {
+        "q": "Is Okayama Castle really called the 'crow castle'?",
+        "a": "Yes—Okayama Castle's distinctive black exterior earned it the nickname 'crow castle.' It stands near Kōraku-en, so you can easily visit both in one day without doubling back."
+      }
+    ]
   },
   "hiroshima": {
     "hidden_gems": [
@@ -537,7 +943,21 @@
       "jp": "平和を祈る",
       "ro": "heiwa wo inoru",
       "en": "to pray for peace"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to reach Hiroshima from major cities?",
+        "a": "About 4 hours from Tokyo or 1 hour 25 minutes from Osaka by shinkansen. Book your ticket in advance during peak seasons to secure a seat."
+      },
+      {
+        "q": "When is the best time to visit Miyajima's famous floating torii?",
+        "a": "Any season works, but check the tide table before visiting Itsukushima Shrine—the torii appears to float only at high tide, creating that iconic Instagram moment."
+      },
+      {
+        "q": "What should I eat in Hiroshima?",
+        "a": "Try Hiroshima-style okonomiyaki, which layers ingredients differently than Osaka's version, and fresh oysters. Both reflect local culinary pride and are worth seeking out in dedicated restaurants."
+      }
+    ]
   },
   "yamaguchi": {
     "hidden_gems": [
@@ -555,7 +975,21 @@
       "jp": "景色が素晴らしいですね。",
       "ro": "Keshiki ga subarashii desu ne.",
       "en": "The scenery is wonderful, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Yamaguchi from Tokyo?",
+        "a": "Take the Sanyō Shinkansen to Shin-Yamaguchi station (about 4 hours). From there, local trains reach major sites like Kintai-kyō bridge and Iwakuni. Book shinkansen tickets in advance for better prices."
+      },
+      {
+        "q": "What's the best time to visit Kintai-kyō bridge?",
+        "a": "Spring and autumn offer peak beauty with cherry blossoms and foliage framing the five arches. Book accommodation early—these seasons fill quickly, especially weekends near Honshu's western tip."
+      },
+      {
+        "q": "Is fugu safe to eat in Shimonoseki?",
+        "a": "Yes—Shimonoseki's fugu chefs are licensed and highly trained; it's Yamaguchi's signature delicacy. Eating at reputable restaurants guarantees proper preparation. Budget ¥3,000–5,000 per meal for quality."
+      }
+    ]
   },
   "tokushima": {
     "hidden_gems": [
@@ -571,9 +1005,23 @@
     "etiquette": "When watching Awa Odori performances or parades, do not block dancers' paths or photograph performers without permission—the dance is an active, flowing tradition and spectators are expected to stay along designated sidelines.",
     "deeper_phrase": {
       "jp": "川の音が聞こえます。",
-      "ro": "Kawa no oto ga kikoemasusu.",
+      "ro": "Kawa no oto ga kikoemasu.",
       "en": "You can hear the sound of the river."
-    }
+    },
+    "faq": [
+      {
+        "q": "When is the best time to visit Tokushima?",
+        "a": "August 12–15 for Awa Odori festival. If you prefer whirlpools, visit during spring tides when the Naruto Strait's roaring waters are most dramatic—check lunar calendars ahead."
+      },
+      {
+        "q": "How do I get to Tokushima from Osaka?",
+        "a": "Take a bus from Osaka or Kobe; the journey takes about 2 hours 30 minutes crossing the Akashi-Kaikyō bridge. Book ahead during August festival season, as services fill quickly."
+      },
+      {
+        "q": "What should I eat in Tokushima?",
+        "a": "Try Tokushima ramen and dishes featuring sudachi, a local citrus unique to the region. Sudachi's distinctive aroma and tartness appear in everything from noodles to cocktails."
+      }
+    ]
   },
   "kagawa": {
     "hidden_gems": [
@@ -589,9 +1037,23 @@
     "etiquette": "At smaller udon shops without ordering systems, observe which counter seat other customers use, nod to the chef when entering, and eat quickly — you're in a working person's space, not a leisurely café.",
     "deeper_phrase": {
       "jp": "地元の味",
-      "ro": "jikomotsu no aji",
+      "ro": "jimoto no aji",
       "en": "local/hometown flavor; authentic regional taste"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Kagawa from the main island of Honshu?",
+        "a": "Takamatsu, the capital, is about 50 minutes from Okayama by train across the Seto-Ōhashi bridge. You can also fly directly into Takamatsu airport if coming from Tokyo or Osaka."
+      },
+      {
+        "q": "Is Kagawa worth visiting if I'm not into contemporary art?",
+        "a": "Absolutely. Beyond Naoshima and Teshima, visit Ritsurin Garden and Kotohira-gū shrine. But honestly, cheap, chewy sanuki udon noodles are everywhere—eating your way through Takamatsu alone justifies the trip."
+      },
+      {
+        "q": "When should I visit the art islands?",
+        "a": "Spring, summer, or autumn in Setouchi Triennale years (every three years) offer the best experience with curated exhibitions. Off-years are quieter but still feature permanent art installations and museums like Naoshima's."
+      }
+    ]
   },
   "ehime": {
     "hidden_gems": [
@@ -609,7 +1071,21 @@
       "jp": "ここはいいところですね",
       "ro": "Koko wa ii tokoro desu ne",
       "en": "This is a nice place, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Ehime from Tokyo?",
+        "a": "Matsuyama has direct flights from Tokyo and Osaka, or take trains/buses across Shikoku. Flying saves time if you're short on days, but the scenic train route through Shikoku is memorable."
+      },
+      {
+        "q": "What's the best time to visit Ehime?",
+        "a": "Spring through autumn is ideal for cycling the Shimanami Kaidō; Dōgo Onsen is equally rewarding year-round. Autumn offers cooler cycling weather and fewer crowds than peak summer."
+      },
+      {
+        "q": "What should I eat in Ehime?",
+        "a": "Try taimeshi—sea-bream rice—and local citrus (mikan). Taimeshi pairs wonderfully with Dōgo Onsen's hot spring experience, making it an authentic regional dish, not just a tourist novelty."
+      }
+    ]
   },
   "kochi": {
     "hidden_gems": [
@@ -627,7 +1103,21 @@
       "jp": "ここの人情は本当ですね。",
       "ro": "Koko no ninjō wa hontō desu ne.",
       "en": "The warmth and sincerity of people here is genuine, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "What's the best time to visit Kōchi?",
+        "a": "Spring through autumn offers the clearest views of the Shimanto River. If you want festivals, visit in August for Yosakoi—book accommodation early, as it draws large crowds."
+      },
+      {
+        "q": "How do I get to Kōchi from Tokyo?",
+        "a": "Fly from Tokyo or Osaka, or take a limited express train across Shikoku. The train journey takes longer but lets you see the island's landscape before arriving."
+      },
+      {
+        "q": "Is Kōchi Castle worth visiting?",
+        "a": "Absolutely. Kōchi Castle is one of Japan's few original keeps, not a modern reconstruction. Its authentic architecture and hilltop location over the city make it exceptional."
+      }
+    ]
   },
   "fukuoka": {
     "hidden_gems": [
@@ -645,7 +1135,21 @@
       "jp": "ちょっと寄ってみます",
       "ro": "chotto yotte mimasu",
       "en": "I'll stop by for a bit / I'll pop in briefly"
-    }
+    },
+    "faq": [
+      {
+        "q": "What's the best time to visit Fukuoka's famous yatai food stalls?",
+        "a": "Year-round, but warm evenings bring the liveliest crowds. Go after 6 p.m. when locals gather—stalls get rowdier and more social as night falls, making the riverside atmosphere unforgettable."
+      },
+      {
+        "q": "How do I get to Fukuoka from Tokyo?",
+        "a": "Shinkansen takes ~5 hours or fly in ~2 hours. Flying saves time but costs more; shinkansen is cheaper and lets you relax. Hakata Station connects easily to the city center."
+      },
+      {
+        "q": "Is Hakata tonkotsu ramen worth trying, and where should I eat it?",
+        "a": "Absolutely—it's Fukuoka's signature dish. Yatai stalls along the river serve authentic bowls in intimate, standing-room settings. Try mentaiko (spicy cod roe) as a side to match local tastes."
+      }
+    ]
   },
   "saga": {
     "hidden_gems": [
@@ -663,7 +1167,21 @@
       "jp": "この陶器は職人の手で作られています。",
       "ro": "Kono togei wa shokunin no te de tsukurareteimasu.",
       "en": "This pottery is made by the craftsman's hands."
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Saga from Fukuoka?",
+        "a": "A limited express train takes about 40 minutes from Hakata Station. It's affordable and direct, so no rental car needed unless you plan visiting multiple porcelain towns like Arita and Imari."
+      },
+      {
+        "q": "When should I visit Saga?",
+        "a": "Late October through early November is ideal for the Saga International Balloon Fiesta. Book accommodation early—this festival draws crowds, and hotels fill quickly during peak balloon season."
+      },
+      {
+        "q": "What should I eat in Saga?",
+        "a": "Try Saga beef and fresh squid in Yobuko. Local squid is especially prized here, often prepared sashimi-style, and reflects Saga's coastal character alongside its porcelain fame."
+      }
+    ]
   },
   "nagasaki": {
     "hidden_gems": [
@@ -679,9 +1197,23 @@
     "etiquette": "At the Peace Park and Museum, maintain quiet reverence and avoid casual photography in memorial halls; this is a space of remembrance where respectful behavior is especially important to local visitors and survivors' families.",
     "deeper_phrase": {
       "jp": "異文化が混ざっている",
-      "ro": "ibunka ga majatte iru",
+      "ro": "ibunka ga mazatte iru",
       "en": "different cultures are blended together"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Nagasaki from Fukuoka?",
+        "a": "Take the Nishi-Kyūshū Shinkansen from Fukuoka (~1 hour 30 minutes total with a transfer). Book your shinkansen ticket in advance during peak seasons to avoid sold-out departures."
+      },
+      {
+        "q": "What's the best time to visit Nagasaki?",
+        "a": "Any season works, but Mount Inasa's night view is stunning year-round—visit after sunset for minimal crowds and the clearest city lights reflection on the harbor."
+      },
+      {
+        "q": "What should I eat in Nagasaki?",
+        "a": "Try champon and sara-udon noodles, local specialties that blend Chinese and Japanese flavors. Pair with castella sponge cake, a Portuguese-influenced dessert with deep local roots."
+      }
+    ]
   },
   "kumamoto": {
     "hidden_gems": [
@@ -699,7 +1231,21 @@
       "jp": "火山灰に気をつけてください。",
       "ro": "kazan-bai ni ki wo tsukete kudasai.",
       "en": "Please be careful of volcanic ash."
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Kumamoto from Fukuoka?",
+        "a": "The Kyūshū Shinkansen takes about 40 minutes from Hakata Station. Book tickets in advance during peak seasons (spring–autumn) to secure preferred times."
+      },
+      {
+        "q": "Is it safe to visit Mount Aso right now?",
+        "a": "Mount Aso's caldera is among the world's largest active volcanic basins. Always check volcanic activity advisories before visiting, especially during spring–autumn when conditions are most favorable for travel."
+      },
+      {
+        "q": "What's a must-try local dish in Kumamoto?",
+        "a": "Kumamoto ramen is iconic here. If adventurous, try basashi—thinly sliced raw horse meat. Both reflect the region's distinctive culinary tradition and are available throughout the prefecture."
+      }
+    ]
   },
   "oita": {
     "hidden_gems": [
@@ -715,9 +1261,23 @@
     "etiquette": "In public onsen and ryokan baths, never enter the communal water with soap on your body—always rinse thoroughly at your wash station first, as the pool is shared and kept clean for everyone.",
     "deeper_phrase": {
       "jp": "温泉に浸かる",
-      "ro": "onsen ni hitakaru",
+      "ro": "onsen ni tsukaru",
       "en": "to soak in a hot spring"
-    }
+    },
+    "faq": [
+      {
+        "q": "How long does it take to reach Oita from Fukuoka?",
+        "a": "About 2 hours by limited express train from Hakata Station. Book seats in advance during peak seasons, as Beppu and Yufuin attract visitors year-round."
+      },
+      {
+        "q": "What's the difference between Beppu and Yufuin?",
+        "a": "Beppu features the famous coloured 'Hells' (jigoku)—vivid geological hot springs. Yufuin is a quieter, upscale onsen town beneath Mount Yufu's twin peaks, better for relaxation."
+      },
+      {
+        "q": "Is there a best time to visit Oita's hot springs?",
+        "a": "Any season works, but cooler months—autumn and winter—make onsen most enjoyable. Spring offers fewer crowds if you visit outside Golden Week holidays."
+      }
+    ]
   },
   "miyazaki": {
     "hidden_gems": [
@@ -735,7 +1295,21 @@
       "jp": "ここの景色は本当に美しいですね。",
       "ro": "koko no keshiki wa hontōni utsukushii desu ne.",
       "en": "The scenery here is truly beautiful, isn't it?"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Miyazaki from Tokyo?",
+        "a": "Fly directly to Miyazaki Airport from major cities, or take a limited express train within Kyūshū. Flying is faster, but trains let you explore other Kyūshū stops en route."
+      },
+      {
+        "q": "What's the best time to visit Miyazaki?",
+        "a": "Summer peaks for surfing and fresh Miyazaki mango season, but the mild Pacific coast stays pleasant year-round. Visit outside summer to avoid crowds at Takachiho Gorge."
+      },
+      {
+        "q": "Is Udo Shrine difficult to reach?",
+        "a": "Udo Shrine sits in a seaside cave and requires stairs down the cliff, but the mild coastal climate makes the walk manageable most of the year. Wear sturdy shoes."
+      }
+    ]
   },
   "kagoshima": {
     "hidden_gems": [
@@ -753,6 +1327,20 @@
       "jp": "火山灰が降っています",
       "ro": "kazan-bai ga futte imasu",
       "en": "Volcanic ash is falling"
-    }
+    },
+    "faq": [
+      {
+        "q": "How do I get to Yakushima from Kagoshima city?",
+        "a": "Ferries depart from Kagoshima port to Yakushima in about 50 minutes. Book ahead in summer, as the UNESCO cedar-forest island draws crowds during peak hiking season (spring–autumn)."
+      },
+      {
+        "q": "Is it safe to visit with Sakurajima volcano so active?",
+        "a": "Sakurajima erupts frequently but poses minimal risk to visitors in Kagoshima city across the bay. The volcano's dramatic views and ash are part of its 'Naples of the East' appeal; check local advisories before visiting."
+      },
+      {
+        "q": "What's the best regional dish to try in Kagoshima?",
+        "a": "Kurobuta (black pork) is the signature meat. Pair it with satsuma-age, local fish cakes. Both reflect Kagoshima's coastal and agricultural heritage and appear on most restaurant menus."
+      }
+    ]
   }
 }

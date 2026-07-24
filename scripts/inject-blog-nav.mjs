@@ -52,7 +52,8 @@ for (const p of seq) {
 
   let toc = '';
   if (headings.length >= 2) {
-    toc = `<nav class="toc" aria-label="On this page"><!--blognav-->\n  <span class="toc-h">On this page</span>\n  <ul>${headings.map(h => `<li><a href="#${h.id}">${h.text}</a></li>`).join('')}</ul>\n</nav>\n`;
+    // マーカーは tail 側に移したのでここには置かない（2026-07-24）
+    toc = `<nav class="toc" aria-label="On this page">\n  <span class="toc-h">On this page</span>\n  <ul>${headings.map(h => `<li><a href="#${h.id}">${h.text}</a></li>`).join('')}</ul>\n</nav>\n`;
   }
 
   // --- 2) prev/next along national sequence ---
@@ -74,17 +75,31 @@ for (const p of seq) {
   <div class="pxrel-row">${related.map(r => `<a href="${r.slug}.html"><span class="rk">${r.kanji}</span><span class="re">${r.en}</span></a>`).join('')}</div>
 </section>` : '';
 
-  const tail = `\n${prevNext}\n${relatedBlock}\n`;
+  // 2026-07-24: マーカーを tail 側に移した。
+  // 以前は <p class="lede"> が無いページでマーカーが 1 つも入らず（TOC 経路も fallback 経路も
+  // その正規表現に依存していた）、42 行目の skip 判定が永久に効かないまま、
+  // 88 行目の prev/next だけが再実行のたびに積み重なっていた。
+  // マーカーを必ず書き込む場所（<footer> の直前）へ移すことで、再実行が安全に skip される。
+  const tail = `\n<!--blognav-->\n${prevNext}\n${relatedBlock}\n`;
+
+  // 既に積み重なっているブロックがあれば掃除してから入れ直す（過去の重複を修復する）。
+  html = html
+    .replace(/\n?<nav class="toc"[\s\S]*?<\/nav>\n?/g, '')
+    .replace(/\n?<nav class="pxnav"[\s\S]*?<\/nav>/g, '')
+    .replace(/\n?<section class="pxrel"[\s\S]*?<\/section>/g, '')
+    .replace(/\n?<!--blognav-->/g, '');
 
   // --- inject TOC right after the .lede paragraph ---
   if (toc) {
     html = html.replace(/(<p class="lede">[\s\S]*?<\/p>)/, `$1\n${toc}`);
-  } else {
-    // ensure the marker exists even when no TOC, so re-runs are skipped
-    html = html.replace(/(<p class="lede">[\s\S]*?<\/p>)/, `$1\n<!--blognav-->`);
   }
 
   // --- inject prev/next + related right before <footer> ---
+  if (!/<footer>/.test(html)) {
+    console.warn(`  skip (no <footer>): ${p.slug}.html`);
+    skipped++;
+    continue;
+  }
   html = html.replace(/<footer>/, `${tail}<footer>`);
 
   fs.writeFileSync(file, html);

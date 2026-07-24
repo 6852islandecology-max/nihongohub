@@ -1,0 +1,22 @@
+{
+  "covered": [
+    {
+      "date": "2026-06-14",
+      "slug": "science-firefly-bioluminescence-japan",
+      "topic": "Japanese firefly bioluminescence (ホタルの発光)",
+      "species": ["Luciola cruciata (ゲンジボタル)", "Luciola lateralis (ヘイケボタル)"]
+    },
+    {
+      "date": "2026-07-05",
+      "slug": "science-ptarmigan-seasonal-molting-japan",
+      "topic": "Seasonal moulting / photoperiod-driven plumage change in Japan's rock ptarmigan (雷鳥の換羽)",
+      "species": ["Lagopus muta japonica (ニホンライチョウ)"]
+    },
+    {
+      "date": "2026-07-12",
+      "slug": "science-eyespots-deimatic-display-japan",
+      "topic": "Eyespots and deimatic (startle) display vs aposematism (眼状紋・威嚇ディスプレイ)",
+      "species": ["Saturnia japonica (クスサン)", "Junonia orithya (アオタテハモドキ)", "Papilio spp. (アゲハ属)"]
+    }
+  ]
+}

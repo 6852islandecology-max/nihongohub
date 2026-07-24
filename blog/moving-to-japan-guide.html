@@ -25,8 +25,13 @@
 <link rel="stylesheet" href="blog.css">
 <style>
 .phase-badge{display:inline-block;font-family:var(--pixel);font-size:9px;background:var(--ink);color:var(--gold);padding:5px 10px;border-radius:3px;margin-bottom:8px}
-.warn-box{background:#fff7e6;border:2px solid #e09000;border-radius:6px;padding:14px 16px;margin:18px 0}
-.warn-box strong{font-family:var(--pixel);font-size:9px;color:#b06800;display:block;margin-bottom:6px}
+.warn-box{background:#fff7e6;border:2px solid #e09000;border-radius:6px;padding:0;margin:18px 0}
+.warn-box>summary{font-family:var(--pixel);font-size:9px;color:#b06800;list-style:none;cursor:pointer;padding:12px 16px;display:flex;align-items:center;gap:8px}
+.warn-box>summary::-webkit-details-marker{display:none}
+.warn-box>summary::before{content:"\26A0";font-size:13px;line-height:1}
+.warn-box>summary::after{content:"\25B8";margin-left:auto;font-size:11px;transition:transform .15s}
+.warn-box[open]>summary::after{transform:rotate(90deg)}
+.warn-box>p{margin:0;padding:0 16px 14px;font-size:14.5px;line-height:1.6}
 .checklist{background:var(--white);border:2px solid var(--soft);border-radius:6px;padding:16px 20px;margin:18px 0}
 .checklist h3{font-family:var(--pixel);font-size:9px;color:var(--green);margin-bottom:10px}
 .checklist ul{margin-left:0;list-style:none;padding:0}
@@ -77,9 +82,9 @@
   border-left:3px solid var(--gold);
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Moving to Japan: The Practical Timeline Nobody Tells You About (2026)","description":"The honest step-by-step guide to relocating to Japan, from visa and COE to resident tax and pension. Every claim sourced from official Japanese government sites.","image":"https://www.nihongo-hub.com/og-default.png","url":"https://www.nihongo-hub.com/blog/moving-to-japan-guide.html","mainEntityOfPage":"https://www.nihongo-hub.com/blog/moving-to-japan-guide.html","inLanguage":"en","author":{"@type":"Organization","name":"NihongoHub"},"publisher":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/","logo":{"@type":"ImageObject","url":"https://www.nihongo-hub.com/apple-touch-icon.png"}},"datePublished":"2026-06-04","dateModified":"2026-06-04"}</script>
 <script src="../lib/config.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
+<!--evidence-ld--><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Moving to Japan: The Practical Timeline Nobody Tells You About (2026)","description":"The honest step-by-step timeline for moving to Japan — visa and COE, the 'chicken and egg' first two weeks, garbage rules, resident tax shock, and pension. Every claim sourced from official Japanese government sites.","url":"https://www.nihongo-hub.com/blog/moving-to-japan-guide.html","mainEntityOfPage":"https://www.nihongo-hub.com/blog/moving-to-japan-guide.html","inLanguage":"en","image":"https://www.nihongo-hub.com/og-default.png","isPartOf":{"@type":"WebSite","name":"NihongoHub","url":"https://www.nihongo-hub.com/"},"author":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/","sameAs":["https://www.nihongo-hub.com","https://nihongohub-nu.vercel.app","https://ikimonohakasefamily.substack.com","https://www.youtube.com/@JepangMenarik","https://www.tiktok.com/@ikimonofamilyhakase","https://www.instagram.com/familyikimono","https://www.threads.net/@familyikimono","https://www.pinterest.com/ikimonofamily"]},"publisher":{"@type":"Organization","name":"NihongoHub","url":"https://www.nihongo-hub.com/","logo":{"@type":"ImageObject","url":"https://www.nihongo-hub.com/apple-touch-icon.png"}}}</script><!--/evidence-ld-->
 </head>
 <body>
 <nav class="bnav">
@@ -119,6 +124,16 @@
 
 <p>This guide walks through that puzzle in the order you actually face it — not alphabetically, but chronologically. Every factual claim links to an official Japanese government source. If a number or rule can change (tax rates, pension contributions), we say so and send you to the authoritative site rather than guess.</p>
 
+<section class="faq" aria-label="Frequently asked questions" style="margin:22px 0">
+  <h2>Quick answers</h2>
+  <p><b>Q. How long does a Certificate of Eligibility (COE) take?</b><br>A. COE processing typically takes 1 to 3 months, and you should not book one-way flights or sign a lease until it is in hand. It is issued by Japan Immigration Services Agency, usually via your employer, school, or an immigration lawyer.</p>
+  <p><b>Q. How soon must I register at city hall after moving?</b><br>A. By law you must file your move-in registration (tennyu-todoke) at your local city hall within 14 days, bringing your Residence Card, passport, and lease. You are also enrolled in My Number, Japan 12-digit national ID.</p>
+  <p><b>Q. How much does health care cost with National Health Insurance?</b><br>A. You pay 30% of standard medical costs out of pocket and the insurance covers 70%. A basic clinic visit runs about 1,000 to 3,000 yen, plus 200 to 700 yen for prescriptions.</p>
+  <p><b>Q. Why do expats get a surprise tax bill after leaving Japan?</b><br>A. Resident tax, about 10% of the previous year income, is billed from June of the following year. A full 2025 salary can trigger a bill that arrives in 2026 even after you leave, so appoint a tax representative before departure.</p>
+  <p><b>Q. Can I get my pension money back when I leave Japan?</b><br>A. Yes. A Lump-Sum Withdrawal lets you reclaim part of your contributions if you paid for at least 6 months and apply within 2 years of leaving. A 20.42% withholding tax applies, partly recoverable via tax treaties.</p>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does a Certificate of Eligibility (COE) take?","acceptedAnswer":{"@type":"Answer","text":"COE processing typically takes 1 to 3 months, and you should not book one-way flights or sign a lease until it is in hand. It is issued by Japan Immigration Services Agency, usually via your employer, school, or an immigration lawyer."}},{"@type":"Question","name":"How soon must I register at city hall after moving?","acceptedAnswer":{"@type":"Answer","text":"By law you must file your move-in registration (tennyu-todoke) at your local city hall within 14 days, bringing your Residence Card, passport, and lease. You are also enrolled in My Number, Japan 12-digit national ID."}},{"@type":"Question","name":"How much does health care cost with National Health Insurance?","acceptedAnswer":{"@type":"Answer","text":"You pay 30% of standard medical costs out of pocket and the insurance covers 70%. A basic clinic visit runs about 1,000 to 3,000 yen, plus 200 to 700 yen for prescriptions."}},{"@type":"Question","name":"Why do expats get a surprise tax bill after leaving Japan?","acceptedAnswer":{"@type":"Answer","text":"Resident tax, about 10% of the previous year income, is billed from June of the following year. A full 2025 salary can trigger a bill that arrives in 2026 even after you leave, so appoint a tax representative before departure."}},{"@type":"Question","name":"Can I get my pension money back when I leave Japan?","acceptedAnswer":{"@type":"Answer","text":"Yes. A Lump-Sum Withdrawal lets you reclaim part of your contributions if you paid for at least 6 months and apply within 2 years of leaving. A 20.42% withholding tax applies, partly recoverable via tax treaties."}}]}</script>
+
 <hr style="border:none;border-top:2px dashed var(--soft);margin:28px 0">
 
 <div class="phase-banner p1">
@@ -127,6 +142,9 @@
 </div>
 <h2 id="before-arrival">Phase 1 — Before You Arrive: Visa, COE, and Your Starting Budget</h2>
 <div class="phase-badge">MONTHS BEFORE ARRIVAL</div>
+<!--tool-link-->
+<p style="background:#fdfaf3;border:2px solid #e6ddd0;border-radius:10px;padding:10px 14px;font-size:14px">🗓️ Want this phase as dates? Enter your COE application date in our free <a href="/relocation-timeline.html">Relocation Timeline Planner</a> — sourced processing ranges, no signup. For moving money across borders, see the <a href="/transfer-cost.html">Transfer Cost Estimator</a>.</p>
+<!--/tool-link-->
 
 <h3>Understanding your visa category</h3>
 <p>Japan has over 27 status-of-residence categories. For most people moving long-term, the common ones are:</p>
@@ -142,10 +160,10 @@
 <h3>The Certificate of Eligibility (COE): your real first step</h3>
 <p>For most long-stay visas, you need a Certificate of Eligibility (在留資格認定証明書 / Zairyū Shikaku Nintei Shōmeisho) before applying at a Japanese embassy. The COE is issued by the ISA in Japan — typically by your employer, school, or a registered immigration lawyer on your behalf.</p>
 
-<div class="warn-box">
-  <strong>TIMING ALERT</strong>
-  COE processing typically takes 1–3 months. Do not book one-way flights or sign a lease until the COE is in hand. Processing times vary by category and can increase during busy periods. Check current processing estimates at <a href="https://www.isa.go.jp/en/applications/procedures/status.html" target="_blank" rel="noopener">isa.go.jp</a>.
-</div>
+<details class="warn-box">
+  <summary>TIMING ALERT</summary>
+  <p>COE processing typically takes 1–3 months. Do not book one-way flights or sign a lease until the COE is in hand. Processing times vary by category and can increase during busy periods. Check current processing estimates at <a href="https://www.isa.go.jp/en/applications/procedures/status.html" target="_blank" rel="noopener">isa.go.jp</a>.</p>
+</details>
 
 <div class="kback" style="background:#eef7ef;border:2px solid #2a7a4b;border-radius:6px;padding:12px 16px;margin:18px 0">
   <b>🎓 Coming in on a student visa?</b>
@@ -196,6 +214,16 @@
 <p>If you arrive at a major international airport (Narita, Haneda, Kansai, Chubu, New Chitose, Hiroshima, or Fukuoka), your Residence Card (在留カード / Zairyū Kādo) is issued at the airport immigration counter. It lists your status of residence, period of stay, and your address field (blank until you register).</p>
 <p>This card is your primary ID in Japan. Keep it on you at all times — police have the right to ask to see it. Source: <a href="https://www.isa.go.jp/en/applications/procedures/zairyu_card.html" target="_blank" rel="noopener">ISA — Residence Card</a></p>
 
+<div class="aff">
+  <span class="pr">PR</span> <b style="font-family:inherit">Arriving with luggage? Pre-book an airport transfer</b>
+  <div>
+    <a data-aff="getyourguide" href="https://www.getyourguide.com/tokyo-l193/haneda-airport-hnd-private-transfer-tofrom-tokyo-region-t550711/?partner_id=O3QOXKH&utm_medium=online_publisher" target="_blank" rel="sponsored noopener">Haneda → Tokyo private transfer →</a>
+    <a data-aff="getyourguide" href="https://www.getyourguide.com/narita-l153599/narita-airport-nrt-private-one-way-transfer-tofrom-tokyo-t626550/?partner_id=O3QOXKH&utm_medium=online_publisher" target="_blank" rel="sponsored noopener">Narita → Tokyo private transfer →</a>
+    <a data-aff="getyourguide" href="https://www.getyourguide.com/osaka-l1204/kansai-intl-airport-kix-private-transfer-tofrom-osaka-t851108/?partner_id=O3QOXKH&utm_medium=online_publisher" target="_blank" rel="sponsored noopener">Kansai (KIX) → Osaka private transfer →</a>
+  </div>
+  <p class="disclose">Some links above are affiliate links. We may earn a commission at no extra cost to you. We only list services we'd use ourselves.</p>
+</div>
+
 <h3>Step 2: City Hall registration within 14 days</h3>
 <p>By law, you must register your address at your local city, ward, or town hall (市区町村役場) within 14 days of moving in. This is called 転入届 (tenyūtodoke). Bring:</p>
 <ul>
@@ -205,14 +233,22 @@
 </ul>
 <p>Once registered, city hall will update the address field on your Residence Card. You'll also be enrolled in My Number (マイナンバー) — Japan's 12-digit national identification number. Your My Number notification card arrives by post to your registered address within a few weeks. Source: <a href="https://www.soumu.go.jp/main_sosiki/jichi_gyousei/daityo/zairyu.html" target="_blank" rel="noopener">Ministry of Internal Affairs</a> · <a href="https://www.kojinbango-card.go.jp/en/" target="_blank" rel="noopener">My Number Card Portal</a></p>
 
-<div class="warn-box">
-  <strong>THE ADDRESS CHICKEN-AND-EGG</strong>
-  Many landlords want to see a residence card before signing the lease. But you can only get the address on your residence card after registering at city hall, which requires an address. The solution: most landlords accept a signed lease agreement as proof of address for the initial city hall registration. Confirm this with your agent or landlord before arrival.
-</div>
+<details class="warn-box">
+  <summary>THE ADDRESS CHICKEN-AND-EGG</summary>
+  <p>Many landlords want to see a residence card before signing the lease. But you can only get the address on your residence card after registering at city hall, which requires an address. The solution: most landlords accept a signed lease agreement as proof of address for the initial city hall registration. Confirm this with your agent or landlord before arrival.</p>
+</details>
 
 <h3>Step 3: National Health Insurance enrollment</h3>
 <p>If your employer covers you through corporate insurance (社会保険 / shakai hoken), this is handled automatically. If you are self-employed, freelancing, a student, or between jobs, you must enroll in National Health Insurance (国民健康保険 / Kokumin Kenkō Hoken) at city hall.</p>
 <p>With National Health Insurance, you pay 30% of standard medical costs out-of-pocket; the insurance covers the remaining 70%. Premiums vary by income and municipality. Source: <a href="https://www.mhlw.go.jp/english/policy/health-medical/health-insurance/index.html" target="_blank" rel="noopener">Ministry of Health, Labour and Welfare</a></p>
+<p>One gap to plan for: there is often a window between your arrival and the day your National Health Insurance or corporate coverage actually starts. Working-holiday makers, digital nomads, and students on short stays may not qualify for NHI at all. For that gap, a flexible travel-medical policy you can start and stop monthly is the usual stopgap.</p>
+<div class="aff">
+  <span class="pr">PR</span> <b style="font-family:inherit">Cover the gap before your Japanese insurance kicks in</b>
+  <div>
+    <a data-aff="safetywing" data-aff-fallback="https://safetywing.com/nomad-insurance/" href="https://safetywing.com/nomad-insurance/" target="_blank" rel="sponsored noopener">SafetyWing Nomad Insurance (monthly, start/stop anytime) →</a>
+  </div>
+  <p class="disclose">Affiliate link — we may earn a commission at no extra cost to you. Travel medical insurance is a stopgap, not a replacement for National Health Insurance once you're eligible.</p>
+</div>
 
 <h3>Step 4: National Pension enrollment</h3>
 <p>Almost everyone residing in Japan between ages 20–59 is required to enroll in the National Pension (国民年金 / Kokumin Nenkin). Employer-covered employees are enrolled in the Employees' Pension Insurance (厚生年金 / Kōsei Nenkin) automatically. Independent residents must enroll at city hall.</p>
@@ -281,10 +317,10 @@
 </ul>
 <p>Your city hall provides a free sorting calendar (ごみ収集カレンダー) showing which type goes out on which day. Many municipalities also have English-language guides; Tokyo's 23 wards maintain translated versions. Look for your city or ward's official website.</p>
 
-<div class="warn-box">
-  <strong>GARBAGE BAG ETIQUETTE</strong>
-  In most neighborhoods, garbage goes out to a designated collection point (ごみ置き場) — often a net-covered area shared by nearby residents. Put bags out the morning of collection day, not the night before (crows). Arriving neighbors will notice noncompliance; it is the fastest way to create friction with your community.
-</div>
+<details class="warn-box">
+  <summary>GARBAGE BAG ETIQUETTE</summary>
+  <p>In most neighborhoods, garbage goes out to a designated collection point (ごみ置き場) — often a net-covered area shared by nearby residents. Put bags out the morning of collection day, not the night before (crows). Arriving neighbors will notice noncompliance; it is the fastest way to create friction with your community.</p>
+</details>
 
 <h3>Healthcare: what your card covers</h3>
 <p>Japan's healthcare system is accessible and affordable by international standards once you understand it. At any clinic or hospital, present your health insurance card (保険証 / hokenshō) at reception. Your co-pay is 30% of the standard fee for adults; the insurance covers the other 70%.</p>
@@ -337,10 +373,10 @@
 </ul>
 <p>The rate varies by municipality but is typically around 10% of the previous year's taxable income (combination of prefectural and municipal portions). Source: <a href="https://www.nta.go.jp/english/" target="_blank" rel="noopener">National Tax Agency Japan</a> · Your municipal office's tax division</p>
 
-<div class="warn-box">
-  <strong>LEAVING JAPAN? DO THIS FIRST</strong>
-  If you're leaving Japan before your resident tax is fully paid, you must appoint a tax representative (納税管理人 / nōzei kanrinin) — typically a trusted friend or colleague still in Japan — before departure. They receive and pay the bills on your behalf. Your employer's HR or a Japanese accountant can guide you.
-</div>
+<details class="warn-box">
+  <summary>LEAVING JAPAN? DO THIS FIRST</summary>
+  <p>If you're leaving Japan before your resident tax is fully paid, you must appoint a tax representative (納税管理人 / nōzei kanrinin) — typically a trusted friend or colleague still in Japan — before departure. They receive and pay the bills on your behalf. Your employer's HR or a Japanese accountant can guide you.</p>
+</details>
 
 <h3>Pension: the lump-sum withdrawal you might be leaving on the table</h3>
 <p>If you are a non-Japanese citizen who paid into Japan's pension system and are leaving the country permanently (or for over 2 years), you can claim a Lump-Sum Withdrawal Payment (脱退一時金 / dattai ichiji-kin). Key rules:</p>

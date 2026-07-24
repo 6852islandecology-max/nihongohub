@@ -121,30 +121,38 @@
     booking_aid:      '', // Booking.com Partner ID        → ?aid=XXX on booking.com links
     klook_aid:        '', // (unused: Involve Asia gives a redirect link, not an aid → see klook_url)
     agoda_cid:        '', // Agoda CID                     → ?cid=XXX on agoda.com links
-    getyourguide_pid: '', // GetYourGuide partner_id       → ?partner_id=XXX on getyourguide.com links
+    getyourguide_pid: 'O3QOXKH', // GetYourGuide partner_id (approved 2026-06-08) → ?partner_id=XXX on getyourguide.com links
     viator_pid:       '', // Viator pid (Travelpayouts)    → ?pid=XXX on viator.com links
+    amazon_tag:       'nihongohub-20', // Amazon Associates tracking tag → ?tag=XXX on amazon.com links (JLPT textbooks / whetstones / goshuincho pages). Approved 2026-07-22.
     // (B) Single-landing partners — set ONE full tracking URL; any link with the matching
     //     data-aff key is redirected to it (use for programs without deep-link params).
     gogonihon_url:    '', // Go! Go! Nihon (study-abroad lead) full affiliate URL
-    italki_url:       '', // italki full affiliate URL
+    italki_url:       'https://www.italki.com/affshare?ref=af32477782', // italki — approved 2026-06-08
     preply_url:       '', // Preply (Involve Asia) — 申請中/pending, no link yet
     klook_url:        '', // Klook (Involve Asia) — 申請中/pending; KKday below fills the slot until approved
     kkday_url:        'https://invl.me/clnitig', // KKday (Involve Asia) — Japan tours & tickets; substitutes in data-aff="klook" slots
     // (C) Legacy link-box injection on prefecture articles (adds a labelled link to .aff > div)
     jrpass_url:       '', // Full JR Pass affiliate URL
-    airalo_url:       '', // Full Airalo eSIM affiliate URL
+    airalo_url:       '', // Full Airalo eSIM affiliate URL (deprecated in favour of Yesim)
+    yesim_url:        'https://yesim.tpx.lu/nIn4jqFi', // Yesim eSIM (Travelpayouts, 18% / 90-day) — approved 2026-06-08
     viator_url:       '', // Full Viator affiliate URL (generic "book experiences" link)
     ninjawifi_url:    'https://invl.app/clnitht', // NINJA WiFi (Involve Asia) — pocket WiFi rental
     byfood_url:       'https://invl.us/clnithx', // byFood (Involve Asia) — Japan food tours & experiences
+    twelvego_url:     'https://www.awin1.com/cread.php?awinmid=114908&awinaffid=2928013&ued=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fjapan', // 12Go Asia (Awin, advertiser 114908) — buses/trains/ferries across Asia, approved 2026-06-10
+    buyee_url:        '', // Buyee (Japan proxy buying) full tracking URL — set after approval; honest fallback = buyee.jp
+    zenmarket_url:    '', // ZenMarket (Japan proxy buying) full tracking URL — set after approval; honest fallback = zenmarket.jp/en
+    wise_url:         '', // Wise (remittance, Partnerize) full tracking URL — set after approval; lifetime cookie
+    safetywing_url:   'https://safetywing.com/?referenceID=26544346&utm_source=26544346&utm_medium=Ambassador', // SafetyWing Ambassador (referenceID 26544346) — approved 2026-06-12, 364-day cookie
   };
 
   function addParam(url, key, val) {
     return url + (url.indexOf('?') >= 0 ? '&' : '?') + key + '=' + encodeURIComponent(val);
   }
-  function injectLink(container, href, label) {
+  function injectLink(container, href, label, key) {
     if (!container || container.querySelector('[href="' + href + '"]')) return;
     var a = document.createElement('a');
     a.href = href; a.target = '_blank'; a.rel = 'sponsored noopener'; a.textContent = label;
+    if (key) a.setAttribute('data-aff', key);
     container.appendChild(a);
   }
 
@@ -154,8 +162,9 @@
     ['agoda.com',        'cid',        AFF.agoda_cid],
     ['getyourguide.com', 'partner_id', AFF.getyourguide_pid],
     ['viator.com',       'pid',        AFF.viator_pid],
+    ['amazon.com',       'tag',        AFF.amazon_tag],
   ];
-  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url, byfood: AFF.byfood_url };
+  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url, byfood: AFF.byfood_url, buyee: AFF.buyee_url, zenmarket: AFF.zenmarket_url, twelvego: AFF.twelvego_url, wise: AFF.wise_url, safetywing: AFF.safetywing_url };
 
   function wireAffs() {
     // Rewrite every affiliate anchor on the page — including ones outside .aff boxes,
@@ -179,10 +188,12 @@
       // This keeps them out of tutoring boxes AND the relocation guide's apartment box.
       var isTravelBox = !!div.querySelector('a[data-aff="klook"]');
       if (linkBox && isTravelBox) {
-        if (AFF.jrpass_url) injectLink(linkBox, AFF.jrpass_url, 'JR Pass (save on rail travel) →');
-        if (AFF.airalo_url) injectLink(linkBox, AFF.airalo_url, 'Japan eSIM (Airalo) →');
-        if (AFF.viator_url) injectLink(linkBox, AFF.viator_url, 'Book experiences (Viator) →');
-        if (AFF.ninjawifi_url) injectLink(linkBox, AFF.ninjawifi_url, 'Pocket WiFi rental (NINJA WiFi) →');
+        if (AFF.jrpass_url) injectLink(linkBox, AFF.jrpass_url, 'JR Pass (save on rail travel) →', 'jrpass');
+        if (AFF.yesim_url) injectLink(linkBox, AFF.yesim_url, 'Japan eSIM (Yesim) →', 'yesim');
+        else if (AFF.airalo_url) injectLink(linkBox, AFF.airalo_url, 'Japan eSIM (Airalo) →', 'airalo');
+        if (AFF.viator_url) injectLink(linkBox, AFF.viator_url, 'Book experiences (Viator) →', 'viator');
+        if (AFF.ninjawifi_url) injectLink(linkBox, AFF.ninjawifi_url, 'Pocket WiFi rental (NINJA WiFi) →', 'ninjawifi');
+        if (AFF.twelvego_url) injectLink(linkBox, AFF.twelvego_url, 'Buses, trains & ferries across Asia (12Go) →', 'twelvego');
       }
     });
   }
@@ -213,9 +224,48 @@
     anchor.insertAdjacentElement('afterend', box);
   }
 
+  // First-party affiliate-click beacon: attribute every affiliate click to its traffic
+  // source (funnel A bottom KPI). Fires before navigation via window.NH_FUNNEL (defined
+  // by the blog beacon below); links open in a new tab so the beacon always completes.
+  // This also captures the not-yet-approved Go!Go!Nihon bridge (data-aff="gogonihon"
+  // anchors fire aff_gogonihon even while the URL is still the honest fallback).
+  // The ASP-side SubID layer (param name differs per network: aff_sub / clickref /
+  // marker) is a separate, per-network-verified follow-up.
+  if (!window.__NH_AFFCLICK__) {
+    window.__NH_AFFCLICK__ = true;
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('a[data-aff],a[rel~="sponsored"]');
+      if (!a) return;
+      var key = a.getAttribute('data-aff') || 'link';
+      try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('aff_' + key); } catch (e2) {}
+    }, true);
+  }
+
   function run() { wireAffs(); injectFoodAff(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
   else run();
+})();
+
+// GetYourGuide partner analytics — attributes GYG bookings to partner O3QOXKH.
+// Injected once on every blog/killer page (this script is shared site-wide).
+(function(){
+  if (document.querySelector('script[data-gyg-partner-id]')) return;
+  var s = document.createElement('script');
+  s.async = true; s.defer = true;
+  s.src = 'https://widget.getyourguide.com/dist/pa.umd.production.min.js';
+  s.setAttribute('data-gyg-partner-id', 'O3QOXKH');
+  document.head.appendChild(s);
+})();
+
+// Travelpayouts Drive (marker 537499) — auto-monetises Booking.com (and other
+// Travelpayouts-program) links on the page + click analytics. Injected once.
+(function(){
+  if (window.__nhTpLoaded || document.querySelector('script[src*="tp-em.com"]')) return;
+  window.__nhTpLoaded = true;
+  var s = document.createElement('script');
+  s.async = 1;
+  s.src = 'https://tp-em.com/NTM3NDk5.js?t=537499';
+  document.head.appendChild(s);
 })();
 
 // Killer-page cross-links ("cushion pages") — append a planning block to each of the 47
@@ -223,10 +273,15 @@
 (function(){
   var EXCLUDE = {
     'index':1, 'japan-premium-experiences':1, 'luxury-ryokan-guide':1,
-    'study-japanese-in-japan':1, 'moving-to-japan-guide':1,
+    'study-japanese-in-japan':1, 'moving-to-japan-guide':1, 'wildlife-watching-japan':1,
+    'animal-colors-japan-science':1,
+    'pokefuta-pokemon-manholes-japan':1, 'jlpt-textbooks-best-books':1,
+    'buy-from-japan-proxy-services':1,
   };
   var m = (window.location.pathname.match(/\/([^\/]+)\.html/) || [])[1];
-  if (!m || EXCLUDE[m]) return;
+  // science explainer articles (slug contains "science") are not travel-planning pages,
+  // so they skip the "plan your trip" cushion links automatically — no per-article edit needed.
+  if (!m || EXCLUDE[m] || m.indexOf('science') >= 0) return;
   function run() {
     var article = document.querySelector('article.wrap') || document.querySelector('article');
     if (!article || document.getElementById('nh-killer-links')) return;
@@ -240,8 +295,61 @@
       '<a href="japan-premium-experiences.html" style="color:#fdf6e3">✨ Premium tours &amp; experiences →</a>' +
       '<a href="luxury-ryokan-guide.html" style="color:#fdf6e3">🏯 Luxury ryokan &amp; onsen stays →</a>' +
       '<a href="study-japanese-in-japan.html" style="color:#fdf6e3">🎓 Study Japanese in Japan →</a>' +
+      '<a href="wildlife-watching-japan.html" style="color:#fdf6e3">🦉 Wildlife &amp; birding by region →</a>' +
+      '<a href="pokefuta-pokemon-manholes-japan.html" style="color:#fdf6e3">🗾 Pokéfuta: Pokémon manhole hunt →</a>' +
       '</div>';
     article.appendChild(box);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+
+// Pokéfuta block — on each of the 47 prefecture articles, add a small "Pokémon
+// manhole hunt" discovery block. For prefectures with an official Pokémon Local
+// Acts ambassador (data/pokefuta.js, verified), name it; otherwise point to the
+// official map. Prefecture pages only — detected by their Explore-map link. This
+// feeds the Pokéfuta hub (which monetises via travel + proxy-shopping affiliates).
+(function(){
+  var m = (window.location.pathname.match(/\/([^\/]+)\.html/) || [])[1];
+  if (!m) return;
+  // Prefecture articles carry an Explore-map link (?pref=slug); killer/hub pages don't.
+  var exploreLink = document.querySelector('a[href*="prefectures.html?pref="]');
+  if (!exploreLink) return;
+  function build(data){
+    if (!data || document.getElementById('nh-pokefuta')) return;
+    var anchor = document.querySelector('.cta-box') ||
+                 document.querySelector('article.wrap') || document.querySelector('article');
+    if (!anchor) return;
+    var amb = data.ambassadors[m];
+    var box = document.createElement('div');
+    box.id = 'nh-pokefuta';
+    box.className = 'aff';
+    box.style.cssText = 'background:#fef6ff;border-color:#d36ea8';
+    var lead;
+    if (amb) {
+      lead = 'This prefecture’s official Pokémon Local Acts ambassador is <b>' + amb.pkmn +
+             '</b> (' + amb.jp + ') — ' + amb.reason +
+             '. Look for its one-of-a-kind Pokéfuta manhole art around town.';
+    } else {
+      lead = 'Many towns across Japan have one-of-a-kind <b>Pokéfuta</b> — official Pokémon manhole-cover art. Check the official map to see what’s installed here.';
+    }
+    box.innerHTML =
+      '<span class="pr" style="background:#d36ea8">POKÉFUTA</span> ' +
+      '<b style="font-family:inherit;color:#b3437f">Pokémon manhole hunt</b>' +
+      '<p style="margin:6px 0 0">' + lead + '</p>' +
+      '<div style="margin-top:6px">' +
+      '<a href="pokefuta-pokemon-manholes-japan.html">🗾 The 47-prefecture Pokéfuta guide →</a> ' +
+      '<a href="' + data.officialUrl + '" target="_blank" rel="noopener">📍 Official Pokéfuta map →</a>' +
+      '</div>';
+    anchor.insertAdjacentElement('afterend', box);
+  }
+  function run(){
+    if (window.NH_POKEFUTA) { build(window.NH_POKEFUTA); return; }
+    var s = document.createElement('script');
+    s.src = '../data/pokefuta.js';
+    s.onload = function(){ build(window.NH_POKEFUTA); };
+    s.onerror = function(){};
+    document.head.appendChild(s);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
   else run();
@@ -253,6 +361,7 @@
 // affiliates. Posts to the existing Substack so there's no new backend.
 (function(){
   var SUBSTACK = 'https://ikimonohakasefamily.substack.com/subscribe';
+  var CHECKLIST = '/sources/japan-starter-7-days.html';
   function run(){
     var article = document.querySelector('article, main, .wrap') || document.body;
     if (!article || document.getElementById('nh-leadmagnet')) return;
@@ -263,21 +372,22 @@
       '#nh-leadmagnet h3{font-family:"DotGothic16",sans-serif;font-size:19px;margin:8px 0 4px;color:#16100a}' +
       '#nh-leadmagnet p{font-size:14px;color:#7a6a52;margin:0 0 12px;line-height:1.55}' +
       '#nh-leadmagnet form{display:flex;gap:8px;flex-wrap:wrap}' +
-      '#nh-leadmagnet input{flex:1;min-width:180px;padding:11px 13px;border:2px solid #ddcfb6;border-radius:7px;font:15px "DM Sans",sans-serif;background:#fff}' +
+      '#nh-leadmagnet input{flex:1;min-width:180px;padding:11px 13px;border:2px solid #ddcfb6;border-radius:7px;font:16px "DM Sans",sans-serif;background:#fff}' + // ≥16px: iOS zooms on focus below that
       '#nh-leadmagnet button{font-family:"DotGothic16",sans-serif;font-size:15px;background:#bf3325;color:#fff;border:none;border-radius:7px;padding:11px 18px;cursor:pointer;white-space:nowrap}' +
       '#nh-leadmagnet small{display:block;color:#7a6a52;font-size:12px;margin-top:8px}';
     document.head.appendChild(st);
     var box = document.createElement('div');
     box.id = 'nh-leadmagnet';
     box.innerHTML =
-      '<div class="lm-k">FREE DOWNLOAD</div>' +
-      '<h3>Living &amp; studying in Japan — the 1-page checklist</h3>' +
-      '<p>Visas, schools, housing, bank, SIM and the first-week to-dos, on one page. Join the weekly note from a family walking all 47 prefectures and we\'ll send it.</p>' +
+      '<div class="lm-k">FREE · 7-DAY STARTER</div>' +
+      '<h3>Your free 7-day Japan starter</h3>' +
+      '<p>One small step a day — your first Japanese, plus the move or the job. No sign-up needed to read it.</p>' +
+      '<p style="margin:0 0 12px"><a href="' + CHECKLIST + '" target="_blank" rel="noopener" style="display:inline-block;font-family:\'DotGothic16\',sans-serif;font-size:15px;background:#bf3325;color:#fff;text-decoration:none;border-radius:7px;padding:11px 18px">Open the 7-day starter →</a></p>' +
       '<form action="' + SUBSTACK + '" method="get" target="_blank" rel="noopener">' +
       '<input type="email" name="email" required placeholder="your@email.com" aria-label="Email address">' +
-      '<button type="submit">Send me the checklist →</button>' +
+      '<button type="submit">Get the weekly note too →</button>' +
       '</form>' +
-      '<small>Free. One short email a week. Unsubscribe anytime.</small>';
+      '<small>Optional. One short email a week. Unsubscribe anytime.</small>';
     article.appendChild(box);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
@@ -485,20 +595,6 @@
   else loadLib();
 })();
 
-
-// First-party affiliate-click beacon: attribute affiliate/sponsored clicks to
-// their traffic source via window.NH_FUNNEL (defined by the blog beacon below).
-// Guarded so a page never double-counts if another copy of this hook loads.
-(function () {
-  if (window.__NH_AFFCLICK__) return;
-  window.__NH_AFFCLICK__ = true;
-  document.addEventListener('click', function (e) {
-    var a = e.target && e.target.closest && e.target.closest('a[data-aff],a[rel~="sponsored"]');
-    if (!a) return;
-    var key = a.getAttribute('data-aff') || 'link';
-    try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('aff_' + key); } catch (e2) {}
-  }, true);
-})();
 
 // --- NihongoHub funnel beacon (counters only, no PII) ---
 // Compact copy of lib/site-chrome.js section (E): blog pages don't load site-chrome.
