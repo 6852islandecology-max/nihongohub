@@ -17,6 +17,12 @@
       "slug": "science-eyespots-deimatic-display-japan",
       "topic": "Eyespots and deimatic (startle) display vs aposematism (眼状紋・威嚇ディスプレイ)",
       "species": ["Saturnia japonica (クスサン)", "Junonia orithya (アオタテハモドキ)", "Papilio spp. (アゲハ属)"]
+    },
+    {
+      "date": "2026-07-26",
+      "slug": "science-countershading-japan",
+      "topic": "Countershading and self-shadow concealment (陰影を打ち消す体色パターン)",
+      "species": ["Scomber japonicus (マサバ)", "Sardinops melanostictus (マイワシ)", "Capricornis crispus (ニホンカモシカ)", "Smerinthus planus (ウチスズメ)"]
     }
   ]
 }
