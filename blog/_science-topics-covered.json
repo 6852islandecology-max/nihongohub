@@ -23,6 +23,12 @@
       "slug": "science-countershading-japan",
       "topic": "Countershading and self-shadow concealment (陰影を打ち消す体色パターン)",
       "species": ["Scomber japonicus (マサバ)", "Sardinops melanostictus (マイワシ)", "Capricornis crispus (ニホンカモシカ)", "Smerinthus planus (ウチスズメ)"]
+    },
+    {
+      "date": "2026-08-02",
+      "slug": "science-ladybird-thermal-melanism-japan",
+      "topic": "Thermal melanism vs Gloger's rule in ladybird colour polymorphism (寒暖と体色・熱メラニズム対グロージャー則)",
+      "species": ["Harmonia axyridis (ナミテントウ)"]
     }
   ]
 }
