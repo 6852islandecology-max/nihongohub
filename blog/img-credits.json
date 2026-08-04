@@ -958,5 +958,41 @@
     "width": 1600,
     "height": 941,
     "fetched_from": "wikimedia"
+  },
+  "kirie-goshuin-japan": {
+    "query": "Ninnaji five-storied pagoda Kyoto",
+    "title": "File:Ninnaji Kyoto12s3s4350.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/kirie-goshuin-japan.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ninnaji_Kyoto12s3s4350.jpg",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "autumn-goshuin-momiji-japan": {
+    "query": "Tofukuji autumn leaves Kyoto",
+    "title": "File:Tofukuji Kyoto01bs3200.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/autumn-goshuin-momiji-japan.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tofukuji_Kyoto01bs3200.jpg",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "nagoya-aichi-collectibles": {
+    "query": "Inuyama Castle keep",
+    "title": "File:Inuyama Castle Keep Tower and Sakura.JPG",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/nagoya-aichi-collectibles.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Inuyama_Castle_Keep_Tower_and_Sakura.JPG",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Alpsdake\" title=\"User:Alpsdake\">Alpsdake</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
   }
 }

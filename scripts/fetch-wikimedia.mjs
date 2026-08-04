@@ -83,6 +83,10 @@ const TOPIC = {
   'goshuin-temple-shrine-stamps-b':'Kiyomizu-dera temple Kyoto',
   'japan-100-castles-goshuin-b':'Himeji Castle keep',
   'gundam-manholes-japan-b':'manhole cover Tokyo', // IP-safe: generic decorative manhole, not Gundam
+  // collectible cluster wave 3 (2026-08): seasonal + event-timed spokes
+  'kirie-goshuin-japan':'Ninnaji five-storied pagoda Kyoto',
+  'autumn-goshuin-momiji-japan':'Tofukuji autumn leaves Kyoto',
+  'nagoya-aichi-collectibles':'Inuyama Castle keep',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 
