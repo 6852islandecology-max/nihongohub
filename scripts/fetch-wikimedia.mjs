@@ -87,6 +87,10 @@ const TOPIC = {
   'kirie-goshuin-japan':'Ninnaji five-storied pagoda Kyoto',
   'autumn-goshuin-momiji-japan':'Tofukuji autumn leaves Kyoto',
   'nagoya-aichi-collectibles':'Inuyama Castle keep',
+  // collectible cluster wave 4 (2026-08): winter/New Year luck-object markets
+  'tori-no-ichi-kumade-japan':'Otori Shrine Asakusa Tokyo',
+  'shichifukujin-meguri-japan':'Bentendo Shinobazu Pond Ueno',
+  'daruma-markets-japan':'Shorinzan Darumaji Takasaki',
   // Amazon buying guides (2026-08-06): public-landmark leads (statue/castle, precedent = gundam-manholes)
   'gunpla-starter-kits-guide':'Life-Sized Unicorn Gundam Statue',
   'japanese-castle-model-kits-guide':'Himeji Castle cherry blossoms',
