@@ -242,7 +242,10 @@ function articleEN(g) {
 
   // Enrichment blocks (English only)
   const formatBold = (s) => esc(s).replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
-  const hiddenBlock = enr && enr.hidden_gems ? `\n  <h2>Hidden gems</h2>\n  <ul>${enr.hidden_gems.map(h => `<li>${formatBold(h)}</li>`).join("")}</ul>` : "";
+  // spot-list / data-area opt blog-quiz.js into adding its 📍 Map + 💬 Phrases buttons.
+  // Only lists that actually name places carry it — see scripts/mark-spot-lists-2026-08-06.mjs.
+  const spotUl = `<ul class="spot-list" data-area="${esc(g.romaji)}">`;
+  const hiddenBlock = enr && enr.hidden_gems ? `\n  <h2>Hidden gems</h2>\n  ${spotUl}${enr.hidden_gems.map(h => `<li>${formatBold(h)}</li>`).join("")}</ul>` : "";
   const cultureBlock = enr && enr.culture_extras ? `\n  <h2>Local culture</h2>\n  ${enr.culture_extras.map(c => `<p>${esc(c)}</p>`).join("\n  ")}` : "";
   const seasonalTipBlock = enr && enr.seasonal_tip ? `<p><b>Seasonal tip:</b> ${esc(enr.seasonal_tip)}</p>` : "";
   const etiquetteBlock = enr && enr.etiquette ? `<p><b>Local etiquette:</b> ${esc(enr.etiquette)}</p>` : "";
@@ -283,7 +286,7 @@ ${kanjiHero(g)}
 ${historyBlock}
 
   <h2>${ui.whatToSee}</h2>
-  <ul>${see}</ul>
+  ${spotUl}${see}</ul>
 ${hiddenBlock}
 
   ${affiliateBlock(ui, g.slug, g.romaji)}
@@ -364,7 +367,7 @@ ${kanjiHero(g)}
   <p>${esc(fb("intro"))}</p>
 
   <h2>${ui.whatToSee}</h2>
-  <ul>${see}</ul>
+  <ul class="spot-list" data-area="${esc(g.romaji)}">${see}</ul>
 
   ${affiliateBlock(ui, g.slug, g.romaji)}
 

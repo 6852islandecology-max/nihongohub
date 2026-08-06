@@ -74,7 +74,7 @@ ${hreflang(slug)}
   <p>${esc(t.history)}</p>
 
   <h2>${u.whatToSee}</h2>
-  <ul>${see}</ul>
+  <ul class="spot-list" data-area="${esc(g.romaji)}">${see}</ul>
 
   <h2>${u.whatToEat}</h2>
   <p>${esc(t.eat)}</p>

@@ -394,11 +394,14 @@
   else run();
 })();
 
-// Google Maps pin + Phrases buttons for spot list items
+// Google Maps pin + Phrases buttons for spot list items.
+// Opt-in only: a list gets buttons when its <ul> carries class="spot-list", and the
+// locality appended to the map query comes from that <ul>'s data-area. Buying guides
+// and tips lists use <b> lead-ins too, so anything less than an explicit opt-in turns
+// editorial bullets ("Never built anything before:") into nonsense map searches.
 (function(){
-  var m = window.location.pathname.match(/\/([^\/]+)\.html/);
-  if(!m) return;
-  var city = m[1].charAt(0).toUpperCase() + m[1].slice(1);
+  var spotLists = document.querySelectorAll('article ul.spot-list');
+  if(!spotLists.length) return;
 
   var S = document.createElement('style');
   S.textContent =
@@ -527,47 +530,56 @@
     speakJa(decodeURIComponent(b.dataset.jp || ''), b);
   });
 
-  document.querySelectorAll('article ul li').forEach(function(li){
-    var b = li.querySelector('b');
-    if(!b) return;
-    var name = b.textContent.trim();
-    var q = encodeURIComponent(name + ' ' + city + ' Japan');
+  spotLists.forEach(function(ul){
+    // Locality appended to the map query, e.g. data-area="Aichi" -> "Nagoya Castle Aichi Japan".
+    // Omitted when absent, so a list of nationally known spots still searches cleanly.
+    var area = (ul.getAttribute('data-area') || '').trim();
 
-    // Map button
-    var a = document.createElement('a');
-    a.href = 'https://maps.google.com/?q=' + q;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.className = 'map-btn';
-    a.textContent = '📍 Map';
-    a.title = 'Open in Google Maps';
-    b.insertAdjacentElement('afterend', a);
+    ul.querySelectorAll(':scope > li').forEach(function(li){
+      var b = li.querySelector('b');
+      if(!b) return;
+      var name = b.textContent.trim();
+      // Skip the area when the spot name already carries it, so a "Kamakura" item on a
+      // data-area="Kamakura" list doesn't search for "Kamakura Kamakura Japan".
+      var needsArea = area && name.toLowerCase().indexOf(area.toLowerCase()) < 0;
+      var q = encodeURIComponent(name + (needsArea ? ' ' + area : '') + ' Japan');
 
-    // Phrases button
-    var pBtn = document.createElement('button');
-    pBtn.className = 'phrase-btn';
-    pBtn.type = 'button';
-    pBtn.textContent = '💬 Phrases';
-    pBtn.title = 'Show useful Japanese phrases here';
-    a.insertAdjacentElement('afterend', pBtn);
+      // Map button
+      var a = document.createElement('a');
+      a.href = 'https://maps.google.com/?q=' + q;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.className = 'map-btn';
+      a.textContent = '📍 Map';
+      a.title = 'Open in Google Maps';
+      b.insertAdjacentElement('afterend', a);
 
-    var panel = null;
-    pBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      if(panel && panel.classList.contains('show')){
-        panel.classList.remove('show');
-        return;
-      }
-      loadPhrasesData(function(data){
-        if(!data){ return; }
-        if(!panel){
-          panel = document.createElement('div');
-          panel.className = 'phrase-panel';
-          li.appendChild(panel);
+      // Phrases button
+      var pBtn = document.createElement('button');
+      pBtn.className = 'phrase-btn';
+      pBtn.type = 'button';
+      pBtn.textContent = '💬 Phrases';
+      pBtn.title = 'Show useful Japanese phrases here';
+      a.insertAdjacentElement('afterend', pBtn);
+
+      var panel = null;
+      pBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        if(panel && panel.classList.contains('show')){
+          panel.classList.remove('show');
+          return;
         }
-        var cat = findCategory(name, data);
-        panel.innerHTML = buildPanel(cat, data);
-        panel.classList.add('show');
+        loadPhrasesData(function(data){
+          if(!data){ return; }
+          if(!panel){
+            panel = document.createElement('div');
+            panel.className = 'phrase-panel';
+            li.appendChild(panel);
+          }
+          var cat = findCategory(name, data);
+          panel.innerHTML = buildPanel(cat, data);
+          panel.classList.add('show');
+        });
       });
     });
   });
