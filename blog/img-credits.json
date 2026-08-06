@@ -1054,5 +1054,17 @@
     "width": 1600,
     "height": 1071,
     "fetched_from": "wikimedia"
+  },
+  "japan-only-anime-merch-guide": {
+    "query": "Laika ac Gashapon Machines",
+    "title": "File:Laika ac Gashapon Machines (7532237784).jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-only-anime-merch-guide.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Laika_ac_Gashapon_Machines_(7532237784).jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/68240136@N02\">Laika ac</a> from USA",
+    "width": 1600,
+    "height": 900,
+    "fetched_from": "wikimedia"
   }
 }

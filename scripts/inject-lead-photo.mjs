@@ -56,6 +56,7 @@ const SUBJECT_OVERRIDE = {
   'slam-dunk-kamakura-crossing': 'Kamakurakōkōmae Station, Enoden line',
   'gunpla-starter-kits-guide': 'Life-size Unicorn Gundam statue, Odaiba',
   'japanese-castle-model-kits-guide': 'Himeji Castle with cherry blossoms',
+  'japan-only-anime-merch-guide': 'Gashapon capsule-toy machines',
   'tori-no-ichi-kumade-japan': 'Kumade stalls at tori-no-ichi, Asakusa',
   'shichifukujin-meguri-japan': 'Bentendō on Shinobazu Pond, Ueno',
   'daruma-markets-japan': 'Daruma dolls at Daruma-ji, Takasaki',

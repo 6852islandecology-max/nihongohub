@@ -94,6 +94,8 @@ const TOPIC = {
   // Amazon buying guides (2026-08-06): public-landmark leads (statue/castle, precedent = gundam-manholes)
   'gunpla-starter-kits-guide':'Life-Sized Unicorn Gundam Statue',
   'japanese-castle-model-kits-guide':'Himeji Castle cherry blossoms',
+  // Japan-only merch hub (2026-08-06): IP-safe street subject (machines, no single character IP)
+  'japan-only-anime-merch-guide':'Laika ac Gashapon Machines',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 
