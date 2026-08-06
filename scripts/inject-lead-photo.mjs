@@ -54,6 +54,8 @@ const SUBJECT_OVERRIDE = {
   'evangelion-hakone-guide': 'Hakone Shrine torii on Lake Ashi, with Mt. Fuji',
   'one-piece-kumamoto-statues': 'Mount Aso crater, Kumamoto',
   'slam-dunk-kamakura-crossing': 'Kamakurakōkōmae Station, Enoden line',
+  'gunpla-starter-kits-guide': 'Life-size Unicorn Gundam statue, Odaiba',
+  'japanese-castle-model-kits-guide': 'Himeji Castle with cherry blossoms',
 };
 
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
