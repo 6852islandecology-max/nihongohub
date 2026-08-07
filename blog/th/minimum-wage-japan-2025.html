@@ -30,6 +30,12 @@
 .mw-tldr b{font-family:var(--pixel);font-size:9px;color:var(--green);display:block;margin-bottom:6px;letter-spacing:1px}
 .mw-tldr p{margin:0;font-size:15.5px}
 .mw-src{font-size:12.5px;color:var(--muted);margin:6px 0 18px;border-left:3px solid var(--gold);padding:6px 12px;background:var(--white)}
+.mw-next{background:#fff8e8;border:2px solid var(--gold);border-radius:8px;padding:15px 18px;margin:18px 0}
+.mw-next-h{font-family:var(--pixel);font-size:9px;color:#8a5c00;letter-spacing:.6px;margin-bottom:10px;line-height:1.7}
+.mw-next p{margin:0 0 9px}
+.mw-next ul{margin:0 0 9px;padding-left:20px}
+.mw-next li{margin-bottom:5px}
+.mw-next-src{font-size:12.5px;color:var(--muted);margin:11px 0 0;padding-top:9px;border-top:1px solid #e8d9b4}
 .mw-glance{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 8px}
 .mw-card{background:var(--white);border:2px solid var(--soft);border-radius:8px;padding:12px;text-align:center}
 .mw-card.hl{border-color:var(--green)}
@@ -71,6 +77,20 @@
 
   <div class="mw-tldr"><b>คำตอบสั้น ๆ</b><p>ค่าจ้างขั้นต่ำของญี่ปุ่นกำหนดแยกตามจังหวัด หลังการปรับปีงบประมาณ 2025 Tokyo สูงสุดที่ ¥1,226/ชั่วโมง ส่วน Kochi, Miyazaki, Okinawa ต่ำสุดที่ ¥1,023 ค่าเฉลี่ยถ่วงน้ำหนักทั่วประเทศอยู่ที่ ¥1,121 และเป็นครั้งแรกที่ทั้ง 47 จังหวัดเกิน ¥1,000/ชั่วโมง ตัวเลขทั้งหมดเป็นต่อชั่วโมง ก่อนหักภาษี</p></div>
   <div class="mw-src">แหล่งข้อมูล: กระทรวงสาธารณสุข แรงงานและสวัสดิการ (MHLW), <em>ค่าจ้างขั้นต่ำระดับภูมิภาคปีงบประมาณ 2025 — รายการทั่วประเทศ</em> ตัวเลขคือค่าจ้างขั้นต่ำต่อชั่วโมงของแต่ละจังหวัด (地域別最低賃金) ก่อนหักภาษีและประกันสังคม</div>
+
+  <div class="mw-next">
+    <div class="mw-next-h">⚠ จะมีการขึ้นค่าแรง — แต่ยังไม่มีผลบังคับใช้</div>
+    <p><b>ตัวเลขในตารางด้านล่างคือตัวเลขที่มีผลบังคับใช้ตามกฎหมายในขณะนี้</b> เมื่อ <b>28 กรกฎาคม 2026</b> คณะกรรมการค่าจ้างขั้นต่ำกลางของ MHLW ได้ออก<em>แนวทาง</em> (目安) สำหรับปีงบประมาณ 2026 คือขึ้นค่าเฉลี่ยถ่วงน้ำหนักทั่วประเทศ <b>55 เยน (+4.9%) จาก 1,121 เยน เป็น 1,176 เยน</b> นี่เป็นข้อเสนอแนะต่อจังหวัด ไม่ใช่อัตราที่ใครจะได้รับได้แล้ว</p>
+    <p>ขั้นตอนต่อไป คณะกรรมการของแต่ละจังหวัดจะพิจารณาตลอดเดือนสิงหาคม ผู้อำนวยการสำนักงานแรงงานจังหวัดเป็นผู้กำหนดตัวเลขสุดท้าย และอัตราใหม่จะมีผล <b>ราววันที่ 1 ตุลาคม 2026</b> โดยวันที่แน่นอนต่างกันไปในแต่ละจังหวัด จังหวัดสามารถกำหนดสูงกว่าแนวทางได้ และในปีงบประมาณ 2025 มีหลายจังหวัดที่ทำเช่นนั้น</p>
+    <p><b>วิธีคำนวณอัตราขั้นต่ำของคุณเองตั้งแต่เดือนตุลาคม</b> ให้นำอัตราปัจจุบันของจังหวัดคุณในตารางมาบวกเพิ่ม:</p>
+    <ul>
+      <li><b>+54 เยน</b> — หากคุณอยู่ในหนึ่งในหกจังหวัดกลุ่ม A ได้แก่ ไซตามะ ชิบะ โตเกียว คานางาวะ ไอจิ โอซากา</li>
+      <li><b>+56 เยน</b> — จังหวัดอื่นทั้งหมด (กลุ่ม B และ C รวม 41 จังหวัด ปีนี้ทั้งสองกลุ่มได้ตัวเลขเท่ากัน)</li>
+    </ul>
+    <p>หากทุกจังหวัดทำตามแนวทางนี้พอดี โตเกียวจะเป็น 1,280 เยน และสามจังหวัดต่ำสุด คือ โคจิ มิยาซากิ โอกินาวา จะเป็น 1,079 เยน ให้ถือเป็นขั้นต่ำสำหรับวางแผน ไม่ใช่อัตราที่ประกาศแล้ว เราจะปรับตารางเมื่อตัวเลขรายจังหวัดได้รับการยืนยัน</p>
+    <p class="mw-next-src">แนวทาง: คณะกรรมการค่าจ้างขั้นต่ำกลาง MHLW, 28 กรกฎาคม 2026 — กลุ่ม A 54 เยน (6 จังหวัด), กลุ่ม B 56 เยน (28), กลุ่ม C 56 เยน (13). <a href="https://www.mhlw.go.jp/stf/newpage_74920.html" target="_blank" rel="noopener">MHLW</a> · <a href="https://www.mhlw.go.jp/stf/shingi/shingi-tingin_127939.html" target="_blank" rel="noopener">Chuo Saitei Chingin Shingikai</a></p>
+  </div>
+
 
   <h2>ภาพรวม</h2>
   
