@@ -103,6 +103,18 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:24px}
 }
 
 
+/* "Read next" — hand-mapped follow-on articles for pages that used to dead-end.
+   Stacked rather than in a card grid: on a phone this is the last thing before
+   the sources note, and a single tall column keeps each title readable and each
+   tap target full-width. */
+.readnext{margin:30px 0 8px;border-top:2px solid var(--soft);padding-top:18px}
+.readnext-h{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;margin-bottom:12px}
+.readnext a{display:block;text-decoration:none;color:var(--ink);background:var(--white);
+  border:2px solid var(--soft);border-radius:10px;padding:12px 15px;margin-bottom:9px}
+.readnext a:hover,.readnext a:focus-visible{border-color:var(--gold)}
+.readnext .rn-t{display:block;font-weight:700;font-size:16px;line-height:1.4}
+.readnext .rn-d{display:block;font-size:14px;color:var(--muted);line-height:1.55;margin-top:3px}
+
 /* lead photo (CC, for image-search SEO) */
 .lead-photo{margin:16px 0 18px;border-radius:12px;overflow:hidden;border:2px solid #e6ddd0;background:#fbf6ec}
 .lead-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}

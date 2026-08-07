@@ -74,7 +74,7 @@
       hr.className = 'jpb-divider';
       var more = document.createElement('a');
       more.className = 'jpb-more';
-      more.href = '../quiz.html?topic=' + topic;
+      more.href = '/quiz.html?topic=' + topic;
       more.textContent = '⚔️ Practice more Japanese →';
       box.appendChild(hr);
       box.appendChild(more);
@@ -346,7 +346,7 @@
   function run(){
     if (window.NH_POKEFUTA) { build(window.NH_POKEFUTA); return; }
     var s = document.createElement('script');
-    s.src = '../data/pokefuta.js';
+    s.src = '/data/pokefuta.js';
     s.onload = function(){ build(window.NH_POKEFUTA); };
     s.onerror = function(){};
     document.head.appendChild(s);
@@ -398,7 +398,32 @@
 (function(){
   var m = window.location.pathname.match(/\/([^\/]+)\.html/);
   if(!m) return;
-  var city = m[1].charAt(0).toUpperCase() + m[1].slice(1);
+  var slug = m[1].toLowerCase();
+
+  // A map pin is only honest on a page that is actually about one place. The 47
+  // prefecture guides are; a topical article is only if it declares itself with
+  // <meta name="nh-place" content="Minato, Tokyo">. Anywhere else the old code
+  // sent readers to Maps searching "Read kana. Jlpt-n5-study-roadmap Japan".
+  var PREFECTURES = {};
+  ('Hokkaido Aomori Iwate Miyagi Akita Yamagata Fukushima Ibaraki Tochigi Gunma Saitama ' +
+   'Chiba Tokyo Kanagawa Niigata Toyama Ishikawa Fukui Yamanashi Nagano Gifu Shizuoka ' +
+   'Aichi Mie Shiga Kyoto Osaka Hyogo Nara Wakayama Tottori Shimane Okayama Hiroshima ' +
+   'Yamaguchi Tokushima Kagawa Ehime Kochi Fukuoka Saga Nagasaki Kumamoto Oita Miyazaki ' +
+   'Kagoshima Okinawa').split(' ').forEach(function(name){
+     PREFECTURES[name.toLowerCase()] = name;
+   });
+  var metaPlace = document.querySelector('meta[name="nh-place"]');
+  var city = PREFECTURES[slug] || (metaPlace && metaPlace.content.trim()) || '';
+  if(!city) return;
+
+  // Bold list leads do two different jobs across the site: on place pages they
+  // name a spot ("Hikone Castle"), elsewhere they open an instruction ("Read
+  // kana."). Only a name should get a pin or a phrase panel.
+  function looksLikeSpot(s){
+    if(s.length < 2 || s.length > 60) return false;
+    if(/[.!?。！？]$/.test(s)) return false;
+    return !/^(read|build|learn|train|use|review|check|confirm|keep|start|plan|bring|avoid|book|take|don't|do not|remember|note|be |get |go |ask |pay )/i.test(s);
+  }
 
   var S = document.createElement('style');
   S.textContent =
@@ -427,16 +452,22 @@
   document.head.appendChild(S);
 
   // detect blog UI language (en/zh/es/th/id/ja)
+  var SUPPORTED = ['en','ja','zh','es','th','id'];
   var LANG = 'en';
   try {
     var stored = localStorage.getItem('nh_lang');
-    if(['en','ja','zh','es','th','id'].indexOf(stored) >= 0) LANG = stored;
+    if(SUPPORTED.indexOf(stored) >= 0) LANG = stored;
   } catch(e){}
+  // A reader who arrived on /blog/es/… from search has no stored preference, and
+  // used to be served English phrases on a Spanish page. The page's own language
+  // is the stronger signal, so it wins wherever it is not the default.
+  var pageLang = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
+  if(pageLang && pageLang !== 'en' && SUPPORTED.indexOf(pageLang) >= 0) LANG = pageLang;
 
   function loadPhrasesData(cb){
     if(window.NH_SPOT_PHRASES){ cb(window.NH_SPOT_PHRASES); return; }
     var s = document.createElement('script');
-    s.src = '../data/spot-phrases.js';
+    s.src = '/data/spot-phrases.js';
     s.onload = function(){ cb(window.NH_SPOT_PHRASES); };
     s.onerror = function(){ cb(null); };
     document.head.appendChild(s);
@@ -456,8 +487,9 @@
 
   function buildPanel(cat, data){
     if(!cat){
-      // fallback: show restaurant phrases (most generally useful)
-      cat = data.categories.find(function(c){ return c.key==='restaurant'; }) || data.categories[0];
+      // Fallback must work standing in front of a lake or a museum, so it is the
+      // keyword-free 'sightseeing' pack — restaurant phrases used to show here.
+      cat = data.categories.find(function(c){ return c.key==='sightseeing'; }) || data.categories[0];
     }
     var labelText = (cat.label && (cat.label[LANG] || cat.label.en)) || data.default_label[LANG] || data.default_label.en;
     var html = '<h4>' + (cat.icon || '💬') + ' ' + labelText + '</h4><ul>';
@@ -531,6 +563,7 @@
     var b = li.querySelector('b');
     if(!b) return;
     var name = b.textContent.trim();
+    if(!looksLikeSpot(name)) return;
     var q = encodeURIComponent(name + ' ' + city + ' Japan');
 
     // Map button
@@ -587,7 +620,7 @@
   function loadLib(){
     if (window.NH_CONSTELLATION) { fire(); return; }
     var s = document.createElement('script');
-    s.src = '../lib/constellation.js';
+    s.src = '/lib/constellation.js';
     s.onload = fire;
     document.head.appendChild(s);
   }

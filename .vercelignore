@@ -12,7 +12,10 @@
 
 # ── ローカル専用ツール ──────────────────────────────────
 dev-server.mjs
-scripts/regen-bank.mjs
+# 2026-08-07: scripts/ 全体が本番 200 だった（build-guides.mjs / funnel-report.mjs 等）。
+# 秘密情報は含まれていなかったが、ビルド用ツールと Redis キー設計が読める状態。
+# サイト内からの参照はゼロ、api/ と lib/ からの import もゼロを確認のうえ全体を除外。
+scripts/
 _qa/
 _commitmsg.txt
 _original_handoff.zip

@@ -130,6 +130,22 @@ window.NH_SPOT_PHRASES = {
       ]
     },
     {
+      key:'sightseeing',
+      icon:'🧭',
+      label:{en:'Anywhere you stop', ja:'どこでも使える', zh:'到處都能用', es:'En cualquier parada', th:'ใช้ได้ทุกที่', id:'Di mana saja'},
+      // Deliberately keyword-free: this is the fallback when nothing else matches,
+      // so it must be useful standing in front of a lake, a museum or a viewpoint.
+      match:[],
+      phrases:[
+        {jp:'ここはどこですか？', ro:'Koko wa doko desu ka?', trans:{en:'Where am I / what is this place?', ja:'Where am I / what is this place?', zh:'這裡是哪裡？', es:'¿Dónde estoy / qué lugar es este?', th:'ที่นี่ที่ไหน?', id:'Ini tempat apa?'}},
+        {jp:'〜へはどう行きますか？', ro:'~ e wa dō ikimasu ka?', trans:{en:'How do I get to ~?', ja:'How do I get to ~? (name the place first)', zh:'去〜怎麼走？', es:'¿Cómo llego a ~?', th:'ไป〜ยังไง?', id:'Bagaimana cara ke ~?'}},
+        {jp:'何時まで開いていますか？', ro:'Nan-ji made aite imasu ka?', trans:{en:'How late are you open?', ja:'How late are you open?', zh:'開到幾點？', es:'¿Hasta qué hora abren?', th:'เปิดถึงกี่โมง?', id:'Buka sampai jam berapa?'}},
+        {jp:'写真を撮ってもいいですか？', ro:'Shashin o totte mo ii desu ka?', trans:{en:'May I take a photo?', ja:'May I take a photo?', zh:'我可以拍照嗎？', es:'¿Puedo hacer una foto?', th:'ขอถ่ายรูปได้ไหม?', id:'Boleh saya memotret?'}},
+        {jp:'トイレはどこですか？', ro:'Toire wa doko desu ka?', trans:{en:'Where is the toilet?', ja:'Where is the toilet?', zh:'洗手間在哪裡？', es:'¿Dónde está el baño?', th:'ห้องน้ำอยู่ไหน?', id:'Di mana toiletnya?'}},
+        {jp:'すみません、日本語が少しだけ話せます。', ro:'Sumimasen, nihongo ga sukoshi dake hanasemasu.', trans:{en:"Sorry — I only speak a little Japanese.", ja:"Sorry — I only speak a little Japanese.", zh:'不好意思，我只會一點日語。', es:'Perdón, solo hablo un poco de japonés.', th:'ขอโทษค่ะ/ครับ พูดญี่ปุ่นได้นิดหน่อย', id:'Maaf, saya hanya bisa sedikit bahasa Jepang.'}}
+      ]
+    },
+    {
       key:'school',
       icon:'🎓',
       label:{en:'At school / for study', ja:'学校・進学で', zh:'學校/升學', es:'En la escuela / estudios', th:'ที่โรงเรียน/เรียนต่อ', id:'Di sekolah / studi'},
