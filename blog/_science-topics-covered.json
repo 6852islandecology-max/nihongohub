@@ -29,6 +29,12 @@
       "slug": "science-ladybird-thermal-melanism-japan",
       "topic": "Thermal melanism vs Gloger's rule in ladybird colour polymorphism (寒暖と体色・熱メラニズム対グロージャー則)",
       "species": ["Harmonia axyridis (ナミテントウ)"]
+    },
+    {
+      "date": "2026-08-09",
+      "slug": "science-skink-blue-tail-autotomy-japan",
+      "topic": "Decoy coloration and tail autotomy/regeneration, plus breeding nuptial colour, in Japanese skinks (自切・青い尾のデコイ色・婚姻色)",
+      "species": ["Plestiodon japonicus (ニホントカゲ)", "Plestiodon latiscutatus (オカダトカゲ)", "Plestiodon elegans (close relative, Senkaku Islands)"]
     }
   ]
 }
