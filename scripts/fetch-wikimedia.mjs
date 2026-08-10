@@ -63,6 +63,8 @@ const TOPIC = {
   'evangelion-hakone-guide':'Lake Ashi Hakone torii Mount Fuji',
   'one-piece-kumamoto-statues':'Mount Aso crater volcano',
   'slam-dunk-kamakura-crossing':'Kamakurakokomae Station Enoden',
+  // Izu Islands anime cluster (2026-08): island landscapes only, no character IP
+  'tokyo-izu-islands-anime':'Izu Oshima island',
   'michi-no-eki-stamp-rally-japan':'michi-no-eki roadside station',
   // 2026 travel & culture guides (photogenic only; abstract topics omitted)
   'japan-cash-or-card-2026':'Japanese yen coins',

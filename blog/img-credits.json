@@ -1066,5 +1066,17 @@
     "width": 1600,
     "height": 900,
     "fetched_from": "wikimedia"
+  },
+  "tokyo-izu-islands-anime": {
+    "query": "Izu Oshima island",
+    "title": "File:The Izu oshima island 伊豆大島 (4519528082).jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/tokyo-izu-islands-anime.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:The_Izu_oshima_island_%E4%BC%8A%E8%B1%86%E5%A4%A7%E5%B3%B6_(4519528082).jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/37807125@N00\">Yamaguchi Yoshiaki</a> from Japan",
+    "width": 1600,
+    "height": 1066,
+    "fetched_from": "wikimedia"
   }
 }
