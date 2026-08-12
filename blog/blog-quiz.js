@@ -122,7 +122,7 @@
     klook_aid:        '', // (unused: Involve Asia gives a redirect link, not an aid → see klook_url)
     agoda_cid:        '', // Agoda CID                     → ?cid=XXX on agoda.com links
     getyourguide_pid: 'O3QOXKH', // GetYourGuide partner_id (approved 2026-06-08) → ?partner_id=XXX on getyourguide.com links
-    viator_pid:       '', // Viator pid (Travelpayouts)    → ?pid=XXX on viator.com links
+    viator_pid:       'P00304316', // Viator pid (selector.viator.com, 2026-08-12) → ?pid=XXX (+mcid/medium rows below) on viator.com links
     amazon_tag:       'nihongohub-20', // Amazon Associates tracking tag → ?tag=XXX on amazon.com links (JLPT textbooks / whetstones / goshuincho pages). Approved 2026-07-22.
     // (B) Single-landing partners — set ONE full tracking URL; any link with the matching
     //     data-aff key is redirected to it (use for programs without deep-link params).
@@ -135,11 +135,11 @@
     jrpass_url:       '', // Full JR Pass affiliate URL
     airalo_url:       '', // Full Airalo eSIM affiliate URL (deprecated in favour of Yesim)
     yesim_url:        'https://yesim.tpx.lu/nIn4jqFi', // Yesim eSIM (Travelpayouts, 18% / 90-day) — approved 2026-06-08
-    viator_url:       '', // Full Viator affiliate URL (generic "book experiences" link)
+    viator_url:       'https://www.viator.com/Japan/d16-ttd?pid=P00304316&mcid=42383&medium=link&campaign=nihongohub-blog', // Viator Japan top (generic "book experiences" link, 2026-08-12)
     ninjawifi_url:    'https://invl.app/clnitht', // NINJA WiFi (Involve Asia) — pocket WiFi rental
     byfood_url:       'https://invl.us/clnithx', // byFood (Involve Asia) — Japan food tours & experiences
     twelvego_url:     'https://www.awin1.com/cread.php?awinmid=114908&awinaffid=2928013&ued=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fjapan', // 12Go Asia (Awin, advertiser 114908) — buses/trains/ferries across Asia, approved 2026-06-10
-    buyee_url:        '', // Buyee (Japan proxy buying) full tracking URL — set after approval; honest fallback = buyee.jp
+    buyee_url:        'https://buyee.jp/?fc=6a7c72e051a83', // Buyee friend-referral URL (2026-08-12) — reward = ¥1,000-off intl-shipping coupon per first order; reader gets signup coupon. Cash-affiliate channel (Indoleads?) unverified; swap in if approved.
     zenmarket_url:    '', // ZenMarket (Japan proxy buying) full tracking URL — set after approval; honest fallback = zenmarket.jp/en
     wise_url:         '', // Wise (remittance, Partnerize) full tracking URL — set after approval; lifetime cookie
     safetywing_url:   'https://safetywing.com/?referenceID=26544346&utm_source=26544346&utm_medium=Ambassador', // SafetyWing Ambassador (referenceID 26544346) — approved 2026-06-12, 364-day cookie
@@ -162,6 +162,8 @@
     ['agoda.com',        'cid',        AFF.agoda_cid],
     ['getyourguide.com', 'partner_id', AFF.getyourguide_pid],
     ['viator.com',       'pid',        AFF.viator_pid],
+    ['viator.com',       'mcid',       AFF.viator_pid ? '42383' : ''], // Viator channel constant for text links
+    ['viator.com',       'medium',     AFF.viator_pid ? 'link' : ''],
     ['amazon.com',       'tag',        AFF.amazon_tag],
   ];
   var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url, byfood: AFF.byfood_url, buyee: AFF.buyee_url, zenmarket: AFF.zenmarket_url, twelvego: AFF.twelvego_url, wise: AFF.wise_url, safetywing: AFF.safetywing_url };
@@ -177,7 +179,8 @@
       for (var i = 0; i < DOMAIN_PARAM.length; i++) {
         var dom = DOMAIN_PARAM[i][0], param = DOMAIN_PARAM[i][1], val = DOMAIN_PARAM[i][2];
         if (val && h.indexOf(dom) >= 0 && h.indexOf(param + '=') < 0) {
-          a.setAttribute('href', addParam(h, param, val)); break;
+          h = addParam(h, param, val); // no break: a domain may take several params (viator pid+mcid+medium)
+          a.setAttribute('href', h);
         }
       }
     });
