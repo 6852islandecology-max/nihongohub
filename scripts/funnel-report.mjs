@@ -143,10 +143,29 @@ if (navs.length) {
   if (pv > 0) console.log(`transition rate: ${trans} transitions / ${pv} page views = ${((100 * trans) / pv).toFixed(1)}% of views came from another page on the site`);
 }
 
-// affiliate clicks (aff_* events this window)
+// affiliate clicks (aff_* events this window). Fields are aff_<network> (legacy)
+// or aff_<network>__<page-slug> (per-page since 2026-08-12); the first "__" splits
+// network from page. Show network totals plus a per-page breakdown per network.
 const affTot = {};
-for (const r of rows) for (const [k, v] of Object.entries(r.counts)) if (k.startsWith("aff_")) affTot[k.slice(4)] = (affTot[k.slice(4)] || 0) + v;
+const affByPage = {};
+for (const r of rows) {
+  for (const [k, v] of Object.entries(r.counts)) {
+    if (!k.startsWith("aff_")) continue;
+    const rest = k.slice(4);
+    const cut = rest.indexOf("__");
+    const net = cut >= 0 ? rest.slice(0, cut) : rest;
+    affTot[net] = (affTot[net] || 0) + v;
+    if (cut >= 0) {
+      const page = rest.slice(cut + 2);
+      (affByPage[net] = affByPage[net] || {})[page] = (affByPage[net][page] || 0) + v;
+    }
+  }
+}
 const affs = Object.entries(affTot).sort((a, b) => b[1] - a[1]);
 console.log("affiliate clicks: " + (affs.length ? affs.map(([s, v]) => `${s}=${v}`).join("  ") : "0"));
+for (const [net] of affs) {
+  const pages = Object.entries(affByPage[net] || {}).sort((a, b) => b[1] - a[1]);
+  if (pages.length) console.log(`  ${net} by page: ` + pages.map(([s, v]) => `${s}=${v}`).join("  "));
+}
 
 console.log("");

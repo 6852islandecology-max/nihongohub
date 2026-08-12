@@ -48,10 +48,12 @@ export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   const ev = req.query && req.query.ev;
   if (ev) {
-    // Affiliate-click beacons (aff_<partner>) are accepted alongside the pageview
-    // whitelist, so funnel A (travel → affiliate) becomes measurable. ev is
-    // regex-bounded before it is ever used as a Redis hash field.
-    const isAff = /^aff_[a-z0-9_]{1,24}$/.test(ev);
+    // Affiliate-click beacons (aff_<partner> legacy, or aff_<partner>__<page-slug>
+    // since 2026-08-12: partner ≤24 chars + "__" + slug ≤48 chars) are accepted
+    // alongside the pageview whitelist, so funnel A (travel → affiliate) becomes
+    // measurable per page. ev is regex-bounded before it is ever used as a Redis
+    // hash field.
+    const isAff = /^aff_[a-z0-9_]{1,76}$/.test(ev);
     if (!URL || !TOKEN || (!FUNNEL_EVENTS.has(ev) && !isAff)) {
       res.status(200).json({ ok: false });
       return;

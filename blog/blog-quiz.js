@@ -236,8 +236,13 @@
     document.addEventListener('click', function (e) {
       var a = e.target && e.target.closest && e.target.closest('a[data-aff],a[rel~="sponsored"]');
       if (!a) return;
-      var key = a.getAttribute('data-aff') || 'link';
-      try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('aff_' + key); } catch (e2) {}
+      // Same field shape as lib/site-chrome.js: aff_<partner>__<page-slug>, both parts
+      // [a-z0-9_] with "_" runs collapsed so the first "__" is the delimiter.
+      var key = (a.getAttribute('data-aff') || 'link').toLowerCase()
+        .replace(/[^a-z0-9_]/g, '').replace(/__+/g, '_').slice(0, 24) || 'link';
+      var page = (location.pathname.toLowerCase().split('/').pop() || 'index').replace(/\.html?$/, '')
+        .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'index';
+      try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('aff_' + key + '__' + page); } catch (e2) {}
     }, true);
   }
 
