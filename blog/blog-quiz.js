@@ -141,7 +141,7 @@
     twelvego_url:     'https://www.awin1.com/cread.php?awinmid=114908&awinaffid=2928013&ued=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fjapan', // 12Go Asia (Awin, advertiser 114908) — buses/trains/ferries across Asia, approved 2026-06-10
     buyee_url:        'https://buyee.jp/?fc=6a7c72e051a83', // Buyee friend-referral URL (2026-08-12) — reward = ¥1,000-off intl-shipping coupon per first order; reader gets signup coupon. Cash-affiliate channel (Indoleads?) unverified; swap in if approved.
     zenmarket_url:    '', // ZenMarket — application dead (no reply 30+ days, closed 2026-08-12); honest fallback = zenmarket.jp/en
-    remambo_url:      '', // Remambo referral (remambo.jp/referral, up to 40% of service fee) — set after owner registers; honest fallback = remambo.jp
+    remambo_url:      'https://www.remambo.jp/?auc1269078', // Remambo affiliate (2026-08-13, office/partner) — up to 40% of service fee; referred user gets ¥1,000 off first intl parcel
     neokyo_url:       '', // Neokyo — no affiliate program found (2026-08-12); honest fallback = neokyo.com/en. Key exists so clicks are beacon-counted.
     whiterabbit_url:  '', // White Rabbit (Refersion, 8-20%) — set after owner registers; honest fallback = whiterabbitexpress.com
     wise_url:         '', // Wise (remittance, Partnerize) full tracking URL — set after approval; lifetime cookie
