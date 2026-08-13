@@ -33,6 +33,8 @@ const A = {
   "tori-no-ichi-kumade-japan": ["Tori-no-ichi rake markets", "Rooster-day markets, open midnight to midnight."],
   "daruma-markets-japan": ["Daruma markets", "Which eye you paint first, and why the doll goes back to be burned."],
   "nagoya-aichi-collectibles": ["Nagoya & Aichi collectible hunting", "Castle stamps, free manhole cards and pottery towns in one trip."],
+  "japan-100-castles-goshuin": ["Japan's 100 Famous Castles", "The free stamp-rally book, the paid gojoin seals, and both official lists."],
+  "anime-pilgrimage-japan": ["Anime pilgrimage, prefecture by prefecture", "Seichi junrei spots you can stand in, and the etiquette that keeps fans welcome."],
 
   // ── buying Japan-only things from overseas ────────────────────────────────
   "buy-from-japan-proxy-services": ["Buyee vs ZenMarket", "How proxy buying actually works, and which fits your order."],
@@ -100,6 +102,19 @@ const NEXT = {
   "shichifukujin-meguri-japan": ["daruma-markets-japan", "goshuin-temple-shrine-stamps", "tori-no-ichi-kumade-japan"],
   "tori-no-ichi-kumade-japan": ["daruma-markets-japan", "shichifukujin-meguri-japan", "goshuin-temple-shrine-stamps"],
   "nagoya-aichi-collectibles": ["michi-no-eki-stamp-rally-japan", "manhole-cards-japan", "japanese-castle-model-kits-guide"],
+  // Added 2026-08-13: these nine carry real impressions but dead-ended, so the
+  // cluster's authority never flowed anywhere. Only the goshuin hub can honestly
+  // point at tori-no-ichi (both are things you receive at a shrine on a set date);
+  // the stamp and manhole pages are left alone rather than link-stuffed.
+  "goshuin-temple-shrine-stamps": ["goshuincho-guide-japan", "shichifukujin-meguri-japan", "tori-no-ichi-kumade-japan"],
+  "kirie-goshuin-japan": ["goshuin-temple-shrine-stamps", "autumn-goshuin-momiji-japan", "goshuincho-guide-japan"],
+  "japan-100-castles-goshuin": ["goshuin-temple-shrine-stamps", "nagoya-aichi-collectibles", "michi-no-eki-stamp-rally-japan"],
+  "eki-stamps-japan": ["michi-no-eki-stamp-rally-japan", "manhole-cards-japan", "japan-public-collectible-cards"],
+  "manhole-cards-japan": ["japan-public-collectible-cards", "pokefuta-pokemon-manholes-japan", "character-manholes-japan"],
+  "michi-no-eki-stamp-rally-japan": ["eki-stamps-japan", "japan-public-collectible-cards", "nagoya-aichi-collectibles"],
+  "character-manholes-japan": ["pokefuta-pokemon-manholes-japan", "gundam-manholes-japan", "anime-pilgrimage-japan"],
+  "gundam-manholes-japan": ["character-manholes-japan", "gunpla-starter-kits-guide", "manhole-cards-japan"],
+  "anime-pilgrimage-japan": ["character-manholes-japan", "japan-only-anime-merch-guide", "sukagawa-ultraman-town-japan"],
 
   "buy-from-japan-proxy-services": ["japan-only-anime-merch-guide", "gunpla-starter-kits-guide", "matcha-tea-ceremony-sets-guide"],
   "japan-only-anime-merch-guide": ["buy-from-japan-proxy-services", "gunpla-starter-kits-guide", "character-manholes-japan"],
