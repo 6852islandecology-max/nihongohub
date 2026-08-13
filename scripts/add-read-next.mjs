@@ -7,12 +7,41 @@
 //
 // Links are hand-mapped, not keyword-guessed: a wrong "related" link costs more
 // trust than an absent one. Run with --check to diff without writing.
-import { readFileSync, writeFileSync } from "node:fs";
+//
+// 2026-08-13: extended to blog/<lang>/. A translated page links only to pages
+// that exist in its own language directory — sending a Spanish reader to an
+// English page is worse than one fewer link — and the link copy is translated
+// too. Because most of the NEXT map has no translation, each entry carries more
+// candidates than it needs and every page takes the first three that resolve;
+// English is unaffected because its first three always resolve.
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const BLOG = resolve(dirname(fileURLToPath(import.meta.url)), "..", "blog");
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const BLOG = resolve(ROOT, "blog");
+const I18N_FILE = resolve(ROOT, "scripts", "data", "read-next-i18n.json");
 const CHECK = process.argv.includes("--check");
+const TRANSLATE = process.argv.includes("--translate");
+const LANGS = ["es", "th", "id", "zh"];
+const LANG_NAMES = { es: "Spanish", th: "Thai", id: "Indonesian", zh: "Traditional Chinese as written in Taiwan" };
+// The first pass came back in Japanese for zh — the source is dense with
+// Japanese terms and the model followed "keep Japanese words" past the point of
+// translating anything. Checked per language, because a wrong-script block is
+// worse than no block.
+const KANA = /[぀-ヿ]/g;
+const HAN = /[一-鿿]/;
+const THAI = /[฀-๿]/;
+// A handful of kana is fine in Chinese copy — 酉の市 and 道の駅 are how those
+// places are written. A run of them means the whole line came back in Japanese.
+const KANA_OK_IN_ZH = 4;
+const SCRIPT_OK = {
+  zh: (t) => HAN.test(t) && (t.match(KANA) || []).length <= KANA_OK_IN_ZH,
+  th: (t) => THAI.test(t),
+  es: (t) => !KANA.test(t) && !HAN.test(t) && !THAI.test(t),
+  id: (t) => !KANA.test(t) && !HAN.test(t) && !THAI.test(t),
+};
+const MAX_LINKS = 3;
 
 // slug → [short link title, one-line hook]. The hook answers "why would I click
 // this next?", so it is written from the reader's position, not the article's.
@@ -35,6 +64,10 @@ const A = {
   "nagoya-aichi-collectibles": ["Nagoya & Aichi collectible hunting", "Castle stamps, free manhole cards and pottery towns in one trip."],
   "japan-100-castles-goshuin": ["Japan's 100 Famous Castles", "The free stamp-rally book, the paid gojoin seals, and both official lists."],
   "anime-pilgrimage-japan": ["Anime pilgrimage, prefecture by prefecture", "Seichi junrei spots you can stand in, and the etiquette that keeps fans welcome."],
+  // Copy only — these two are link targets, never keys, so English output is unchanged.
+  // They exist in all four translated directories, which is why they earn a place here.
+  "evangelion-hakone-guide": ["Evangelion's Hakone", "The real Tokyo-3: the town the series was drawn from, stop by stop."],
+  "one-piece-kumamoto-statues": ["The One Piece statues of Kumamoto", "Ten bronze Straw Hats, placed as earthquake recovery landmarks."],
 
   // ── buying Japan-only things from overseas ────────────────────────────────
   "buy-from-japan-proxy-services": ["Buyee vs ZenMarket", "How proxy buying actually works, and which fits your order."],
@@ -96,7 +129,7 @@ const NEXT = {
   "pokefuta-pokemon-manholes-japan": ["character-manholes-japan", "manhole-cards-japan", "gundam-manholes-japan"],
   "japan-public-collectible-cards": ["manhole-cards-japan", "eki-stamps-japan", "michi-no-eki-stamp-rally-japan"],
   "autumn-goshuin-momiji-japan": ["goshuin-temple-shrine-stamps", "goshuincho-guide-japan", "kirie-goshuin-japan"],
-  "goshuincho-guide-japan": ["goshuin-temple-shrine-stamps", "autumn-goshuin-momiji-japan", "goshuincho-stamp-notebooks-guide"],
+  "goshuincho-guide-japan": ["goshuin-temple-shrine-stamps", "autumn-goshuin-momiji-japan", "goshuincho-stamp-notebooks-guide", "japan-100-castles-goshuin", "eki-stamps-japan"],
   "goshuincho-stamp-notebooks-guide": ["goshuincho-guide-japan", "goshuin-temple-shrine-stamps", "eki-stamps-japan"],
   "daruma-markets-japan": ["shichifukujin-meguri-japan", "tori-no-ichi-kumade-japan", "goshuin-temple-shrine-stamps"],
   "shichifukujin-meguri-japan": ["daruma-markets-japan", "goshuin-temple-shrine-stamps", "tori-no-ichi-kumade-japan"],
@@ -106,15 +139,18 @@ const NEXT = {
   // cluster's authority never flowed anywhere. Only the goshuin hub can honestly
   // point at tori-no-ichi (both are things you receive at a shrine on a set date);
   // the stamp and manhole pages are left alone rather than link-stuffed.
-  "goshuin-temple-shrine-stamps": ["goshuincho-guide-japan", "shichifukujin-meguri-japan", "tori-no-ichi-kumade-japan"],
+  // The trailing entries on these nine are the translation tail: they only ever
+  // surface in blog/<lang>/, where the earlier picks have no local version. On
+  // English every list still stops after the first three.
+  "goshuin-temple-shrine-stamps": ["goshuincho-guide-japan", "shichifukujin-meguri-japan", "tori-no-ichi-kumade-japan", "japan-100-castles-goshuin", "eki-stamps-japan"],
   "kirie-goshuin-japan": ["goshuin-temple-shrine-stamps", "autumn-goshuin-momiji-japan", "goshuincho-guide-japan"],
-  "japan-100-castles-goshuin": ["goshuin-temple-shrine-stamps", "nagoya-aichi-collectibles", "michi-no-eki-stamp-rally-japan"],
-  "eki-stamps-japan": ["michi-no-eki-stamp-rally-japan", "manhole-cards-japan", "japan-public-collectible-cards"],
-  "manhole-cards-japan": ["japan-public-collectible-cards", "pokefuta-pokemon-manholes-japan", "character-manholes-japan"],
-  "michi-no-eki-stamp-rally-japan": ["eki-stamps-japan", "japan-public-collectible-cards", "nagoya-aichi-collectibles"],
-  "character-manholes-japan": ["pokefuta-pokemon-manholes-japan", "gundam-manholes-japan", "anime-pilgrimage-japan"],
-  "gundam-manholes-japan": ["character-manholes-japan", "gunpla-starter-kits-guide", "manhole-cards-japan"],
-  "anime-pilgrimage-japan": ["character-manholes-japan", "japan-only-anime-merch-guide", "sukagawa-ultraman-town-japan"],
+  "japan-100-castles-goshuin": ["goshuin-temple-shrine-stamps", "nagoya-aichi-collectibles", "michi-no-eki-stamp-rally-japan", "goshuincho-guide-japan"],
+  "eki-stamps-japan": ["michi-no-eki-stamp-rally-japan", "manhole-cards-japan", "japan-public-collectible-cards", "japan-100-castles-goshuin"],
+  "manhole-cards-japan": ["japan-public-collectible-cards", "pokefuta-pokemon-manholes-japan", "character-manholes-japan", "eki-stamps-japan", "michi-no-eki-stamp-rally-japan"],
+  "michi-no-eki-stamp-rally-japan": ["eki-stamps-japan", "japan-public-collectible-cards", "nagoya-aichi-collectibles", "manhole-cards-japan", "japan-100-castles-goshuin"],
+  "character-manholes-japan": ["pokefuta-pokemon-manholes-japan", "gundam-manholes-japan", "anime-pilgrimage-japan", "manhole-cards-japan"],
+  "gundam-manholes-japan": ["character-manholes-japan", "gunpla-starter-kits-guide", "manhole-cards-japan", "anime-pilgrimage-japan"],
+  "anime-pilgrimage-japan": ["character-manholes-japan", "japan-only-anime-merch-guide", "sukagawa-ultraman-town-japan", "evangelion-hakone-guide", "one-piece-kumamoto-statues"],
 
   "buy-from-japan-proxy-services": ["japan-only-anime-merch-guide", "gunpla-starter-kits-guide", "matcha-tea-ceremony-sets-guide"],
   "japan-only-anime-merch-guide": ["buy-from-japan-proxy-services", "gunpla-starter-kits-guide", "character-manholes-japan"],
@@ -170,11 +206,30 @@ function esc(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function block(slugs) {
+// Translated copy, produced by --translate and committed. Keeping it on disk
+// means a normal run never touches the network, so --check and the real run
+// always agree.
+const I18N = existsSync(I18N_FILE) ? JSON.parse(readFileSync(I18N_FILE, "utf8")) : {};
+
+// English lives in blog/, every other language one level down. Links inside a
+// block are always same-directory, so the href is the bare slug either way.
+const pageFor = (lang, slug) =>
+  lang === "en" ? resolve(BLOG, `${slug}.html`) : resolve(BLOG, lang, `${slug}.html`);
+const existsIn = (lang, slug) => existsSync(pageFor(lang, slug));
+const headingFor = (lang) => (lang === "en" ? "READ NEXT" : I18N[lang]?.heading);
+const copyFor = (lang, slug) =>
+  lang === "en" ? A[slug] : I18N[lang]?.slugs?.[slug];
+
+// A link survives only if the page exists in this language AND its copy is
+// translated. No English fallback: a mixed-language block is the thing this
+// change exists to remove.
+const resolveLinks = (lang, slugs) =>
+  slugs.filter((s) => existsIn(lang, s) && copyFor(lang, s)).slice(0, MAX_LINKS);
+
+function block(lang, slugs) {
   const items = slugs
-    .filter((s) => A[s])
     .map((s) => {
-      const [title, hook] = A[s];
+      const [title, hook] = copyFor(lang, s);
       return (
         `\n    <a href="${s}.html"><span class="rn-t">${esc(title)}</span>` +
         `<span class="rn-d">${esc(hook)}</span></a>`
@@ -182,56 +237,164 @@ function block(slugs) {
     })
     .join("");
   return `  <nav class="readnext" aria-label="Read next">\n` +
-    `    <div class="readnext-h">READ NEXT</div>${items}\n  </nav>\n`;
+    `    <div class="readnext-h">${esc(headingFor(lang))}</div>${items}\n  </nav>\n`;
+}
+
+// Every (lang, slug) pair that could be linked from a page in that language —
+// i.e. what --translate has to cover.
+function copyNeededFor(lang) {
+  const need = new Set();
+  for (const [slug, nexts] of Object.entries(NEXT)) {
+    if (!existsIn(lang, slug)) continue;
+    for (const s of nexts) if (existsIn(lang, s)) need.add(s);
+  }
+  return [...need];
+}
+
+async function translateAll() {
+  const key = readFileSync(resolve(ROOT, ".env"), "utf8")
+    .split(/\r?\n/)
+    .map((l) => l.match(/^ANTHROPIC_API_KEY=(.+)$/))
+    .find(Boolean)?.[1]
+    .trim()
+    .replace(/^["']|["']$/g, "");
+  if (!key) throw new Error("ANTHROPIC_API_KEY not found in .env");
+
+  const HEADING_KEY = "__heading";
+  const out = { ...I18N };
+  for (const lang of LANGS) {
+    const slugs = copyNeededFor(lang);
+    const payload = Object.fromEntries(slugs.map((s) => [s, A[s]]));
+    payload[HEADING_KEY] = ["READ NEXT", "Heading above a block of links to further articles."];
+    // Same model and temperature as scripts/translate-articles.mjs, so this copy
+    // reads in the same voice as the article bodies it sits under.
+    const body = {
+      model: "claude-sonnet-4-6",
+      max_tokens: 4000,
+      temperature: 0,
+      system:
+        `Translate this JSON from English into ${LANG_NAMES[lang]}. Each key is an article slug; each value is [link title, one-line hook]. The "${HEADING_KEY}" entry is a section heading — translate its first element; the second is only context for you.\n` +
+        `Output the SAME JSON structure only — same keys, same two-element arrays, no commentary, no code fences.\n` +
+        `Write EVERY translated word in the script of ${LANG_NAMES[lang]}. Do not answer in Japanese, and do not leave a value in English.\n` +
+        `Keep unchanged only: romaji terms already written in Latin letters (goshuin, kumade, Pokéfuta), place names, proper nouns, brand and character names, numbers and prices.\n` +
+        `A Shinto shrine and a Buddhist temple are different places — never translate both with the same word.\n` +
+        `These are link labels in a navigation block: keep them as short as the English, and keep the hook to one line.`,
+      messages: [{ role: "user", content: JSON.stringify(payload, null, 1) }],
+    };
+    let parsed = null;
+    for (let attempt = 1; attempt <= 2 && !parsed; attempt++) {
+      const r = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!r.ok) throw new Error(`Anthropic ${r.status}: ${(await r.text()).slice(0, 300)}`);
+      const j = await r.json();
+      const text = (j.content || []).map((c) => c.text || "").join("").trim()
+        .replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/, "").trim();
+      const candidate = JSON.parse(text);
+      const keys = [...slugs, HEADING_KEY];
+      const bad = keys.filter((s) => !Array.isArray(candidate[s]) || candidate[s].length !== 2);
+      if (bad.length) throw new Error(`${lang}: malformed entries for ${bad.join(", ")}`);
+      const wrongScript = keys.filter((s) => !SCRIPT_OK[lang](candidate[s].join(" ")));
+      if (wrongScript.length) {
+        console.error(`${lang}: wrong script on attempt ${attempt}:`);
+        for (const s of wrongScript.slice(0, 3)) console.error(`    ${s}: ${candidate[s].join(" / ")}`);
+        if (attempt === 2) throw new Error(`${lang}: wrong script after 2 attempts`);
+        continue;
+      }
+      parsed = candidate;
+    }
+    out[lang] = {
+      // zh is pinned: the one hand-made block already live on the site uses it.
+      heading: lang === "zh" ? "延伸閱讀" : parsed[HEADING_KEY][0],
+      slugs: Object.fromEntries(slugs.map((s) => [s, parsed[s]])),
+    };
+    console.log(`translated ${lang}: ${slugs.length} entries, heading "${out[lang].heading}"`);
+  }
+  writeFileSync(I18N_FILE, JSON.stringify(out, null, 2) + "\n");
+  console.log(`wrote ${I18N_FILE}`);
+}
+
+if (TRANSLATE) {
+  await translateAll();
+  process.exit(0);
 }
 
 let written = 0;
 const problems = [];
-for (const [slug, nexts] of Object.entries(NEXT)) {
-  const file = resolve(BLOG, `${slug}.html`);
-  let html;
-  try {
-    html = readFileSync(file, "utf8");
-  } catch {
-    problems.push(`missing file: ${slug}.html`);
-    continue;
-  }
-  if (html.includes('class="readnext"')) continue; // idempotent
-  const missing = nexts.filter((s) => !A[s]);
-  if (missing.length) problems.push(`${slug}: no copy for ${missing.join(", ")}`);
+// Worth printing, not worth failing on: a thin block is still better than a
+// dead end, and the translated set is small enough that some pages only have
+// one honest neighbour.
+const notes = [];
+const perLang = {};
+for (const lang of ["en", ...LANGS]) {
+  let count = 0;
+  for (const [slug, nexts] of Object.entries(NEXT)) {
+    const file = pageFor(lang, slug);
+    if (!existsSync(file)) {
+      // Only English is expected to have every page; a missing translation is
+      // simply a page that was never translated, not a fault.
+      if (lang === "en") problems.push(`missing file: ${slug}.html`);
+      continue;
+    }
+    const html = readFileSync(file, "utf8");
+    if (html.includes('class="readnext"')) continue; // idempotent
 
-  const md = block(nexts);
-  // Sit above the sources note when there is one, otherwise close out the article.
-  let out;
-  if (html.includes('<div class="sources">')) {
-    out = html.replace('<div class="sources">', `${md}  <div class="sources">`);
-  } else if (html.includes("</article>")) {
-    out = html.replace("</article>", `${md}</article>`);
-  } else {
-    problems.push(`${slug}: no insertion point`);
-    continue;
+    const links = resolveLinks(lang, nexts);
+    if (!links.length) {
+      problems.push(`${lang}/${slug}: no link resolves in this language`);
+      continue;
+    }
+    if (links.length < MAX_LINKS) {
+      notes.push(`${lang}/${slug}: only ${links.length} link(s) available`);
+    }
+
+    const md = block(lang, links);
+    // Sit above the sources note when there is one, otherwise close out the article.
+    let out;
+    if (html.includes('<div class="sources">')) {
+      out = html.replace('<div class="sources">', `${md}  <div class="sources">`);
+    } else if (html.includes("</article>")) {
+      out = html.replace("</article>", `${md}</article>`);
+    } else {
+      problems.push(`${lang}/${slug}: no insertion point`);
+      continue;
+    }
+    if (!CHECK) writeFileSync(file, out);
+    count++;
+    written++;
   }
-  if (!CHECK) writeFileSync(file, out);
-  written++;
+  perLang[lang] = count;
 }
 
-// Every link must resolve to a file that exists.
+// Every English link must resolve to a file that exists; translations are
+// filtered by existence already, but missing copy is worth naming.
 const broken = new Set();
 for (const nexts of Object.values(NEXT)) {
   for (const s of nexts) {
-    try {
-      readFileSync(resolve(BLOG, `${s}.html`));
-    } catch {
-      broken.add(s);
-    }
+    if (!existsIn("en", s)) broken.add(s);
+    if (!A[s]) problems.push(`no English copy for ${s}`);
   }
 }
 if (broken.size) problems.push(`broken targets: ${[...broken].join(", ")}`);
+for (const lang of LANGS) {
+  const missing = copyNeededFor(lang).filter((s) => !copyFor(lang, s));
+  if (missing.length) problems.push(`${lang}: no translated copy for ${missing.join(", ")} (run --translate)`);
+  if (!headingFor(lang)) problems.push(`${lang}: no translated heading (run --translate)`);
+}
 
-console.log(`${CHECK ? "would update" : "updated"}: ${written} articles`);
+console.log(
+  `${CHECK ? "would update" : "updated"}: ${written} articles ` +
+    `(${Object.entries(perLang).map(([l, n]) => `${l}=${n}`).join(" ")})`,
+);
+if (notes.length) {
+  console.log("notes:");
+  for (const n of [...new Set(notes)]) console.log("  - " + n);
+}
 if (problems.length) {
   console.log("problems:");
-  for (const p of problems) console.log("  - " + p);
+  for (const p of [...new Set(problems)]) console.log("  - " + p);
   process.exit(1);
 }
 console.log("all link targets exist, all have copy.");
