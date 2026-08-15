@@ -7,9 +7,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
+import { pathToFileURL } from 'node:url';
 
 const BLOG = path.join(os.homedir(), '.secretary/projects/nihongohub/blog');
-const { GUIDES, REGION_LABELS } = await import(path.join(BLOG, 'guides-data.js').replace(/\\/g, '/'));
+const { GUIDES, REGION_LABELS } = await import(pathToFileURL(path.join(BLOG, 'guides-data.js')).href);
 const FULL = ['tokyo', 'kyoto', 'osaka', 'hokkaido', 'okinawa'];
 const CODES = ['es', 'id', 'th', 'zh'];
 const LANG_NAME = { es: 'Spanish', id: 'Indonesian', th: 'Thai', zh: 'Traditional Chinese' };
