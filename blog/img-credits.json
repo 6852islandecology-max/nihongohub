@@ -1078,5 +1078,29 @@
     "width": 1600,
     "height": 1066,
     "fetched_from": "wikimedia"
+  },
+  "yamanote-line-departure-melodies": {
+    "query": "E235 series Yamanote Line train platform",
+    "title": "File:Yamanoteline-E235-testrun-nishinipporistation-sept1-2015.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/yamanote-line-departure-melodies.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yamanoteline-E235-testrun-nishinipporistation-sept1-2015.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Nesnad\" title=\"User:Nesnad\">Nesnad</a>",
+    "width": 1600,
+    "height": 1379,
+    "fetched_from": "wikimedia"
+  },
+  "japan-station-melodies-by-region": {
+    "query": "Osaka Loop Line 323 series train",
+    "title": "File:JRW 323 set LS03 Osaka Loop Line local at Momodani Station 2017-02-22.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-station-melodies-by-region.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:JRW_323_set_LS03_Osaka_Loop_Line_local_at_Momodani_Station_2017-02-22.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/114464742@N02\">松原 誠</a> (Makoto Matsubara)",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
   }
 }

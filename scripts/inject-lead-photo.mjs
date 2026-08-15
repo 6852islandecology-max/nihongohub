@@ -60,6 +60,8 @@ const SUBJECT_OVERRIDE = {
   'tori-no-ichi-kumade-japan': 'Kumade stalls at tori-no-ichi, Asakusa',
   'shichifukujin-meguri-japan': 'Bentendō on Shinobazu Pond, Ueno',
   'daruma-markets-japan': 'Daruma dolls at Daruma-ji, Takasaki',
+  'yamanote-line-departure-melodies': 'E235 series train on the Yamanote Line, Tokyo',
+  'japan-station-melodies-by-region': '323 series train on the Osaka Loop Line',
 };
 
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));

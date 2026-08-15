@@ -65,6 +65,9 @@ const TOPIC = {
   'slam-dunk-kamakura-crossing':'Kamakurakokomae Station Enoden',
   // Izu Islands anime cluster (2026-08): island landscapes only, no character IP
   'tokyo-izu-islands-anime':'Izu Oshima island',
+  // station melodies (2026-08-15): trains/platforms only, no people
+  'yamanote-line-departure-melodies':'E235 series Yamanote Line train platform',
+  'japan-station-melodies-by-region':'Osaka Loop Line 323 series train',
   'michi-no-eki-stamp-rally-japan':'michi-no-eki roadside station',
   // 2026 travel & culture guides (photogenic only; abstract topics omitted)
   'japan-cash-or-card-2026':'Japanese yen coins',

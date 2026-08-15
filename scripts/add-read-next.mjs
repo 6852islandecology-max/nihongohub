@@ -122,6 +122,10 @@ const A = {
   "kissaten-showa-retro-japan": ["Kissaten", "Inside Japan's Showa-era cafés, and why Gen Z rediscovered them."],
   "tokyo-sousuiko-museum": ["Tokyo's museum of fire-hose inlets", "A museum for a thing you have walked past a thousand times."],
   "sukagawa-ultraman-town-japan": ["The town where Ultraman plays on the loudspeakers", "Sukagawa, Fukushima, and its 5pm chime."],
+  "tokyo-izu-islands-anime": ["Tokyo's anime islands", "Five Izu islands, five anime — and the language only spoken on one of them."],
+  // station melodies (2026-08-15)
+  "yamanote-line-departure-melodies": ["Yamanote Line departure melodies", "The six Tokyo stations with their own tune, and a one-hour loop to hear them."],
+  "japan-station-melodies-by-region": ["Japan's regional station melodies", "Osaka's 19-song loop, Keikyu's 23 stations, Shinkansen chimes — north to south."],
 };
 
 // Hand-picked next reads. Order matters: first is the strongest follow-on.
@@ -197,6 +201,9 @@ const NEXT = {
   "kissaten-showa-retro-japan": ["japan-inuki-bukken-shop-ghosts", "matcha-tea-ceremony-sets-guide", "japan-sukashi-block-walls"],
   "tokyo-sousuiko-museum": ["japan-sukashi-block-walls", "japan-shitsugaiki-air-conditioner-units", "manhole-cards-japan"],
   "sukagawa-ultraman-town-japan": ["character-manholes-japan", "japan-inuki-bukken-shop-ghosts", "kissaten-showa-retro-japan"],
+  // station melodies (2026-08-15): both pages ship with a hand-written block; entries here keep the map complete.
+  "yamanote-line-departure-melodies": ["japan-station-melodies-by-region", "eki-stamps-japan", "tokyo-izu-islands-anime"],
+  "japan-station-melodies-by-region": ["yamanote-line-departure-melodies", "eki-stamps-japan", "japan-2026-travel-changes"],
 
   // A bespoke prefecture page; the generated ones already carry "Related guides".
   hokkaido: ["wildlife-watching-japan", "science-ptarmigan-seasonal-molting-japan", "michi-no-eki-stamp-rally-japan"],
