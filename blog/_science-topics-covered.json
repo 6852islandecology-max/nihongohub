@@ -35,6 +35,12 @@
       "slug": "science-skink-blue-tail-autotomy-japan",
       "topic": "Decoy coloration and tail autotomy/regeneration, plus breeding nuptial colour, in Japanese skinks (自切・青い尾のデコイ色・婚姻色)",
       "species": ["Plestiodon japonicus (ニホントカゲ)", "Plestiodon latiscutatus (オカダトカゲ)", "Plestiodon elegans (close relative, Senkaku Islands)"]
+    },
+    {
+      "date": "2026-08-16",
+      "slug": "science-swallowtail-mimicry-supergene-japan",
+      "topic": "Female-limited Batesian mimicry and its dsx-based supergene switch, plus frequency-dependent maintenance of the polymorphism (メス限定ベイツ型擬態と超遺伝子スイッチ・頻度依存選択)",
+      "species": ["Papilio polytes (シロオビアゲハ)", "Papilio memnon (ナガサキアゲハ)", "Pachliopta aristolochiae (ベニモンアゲハ)", "Atrophaneura alcinous (ジャコウアゲハ)"]
     }
   ]
 }
