@@ -1,6 +1,21 @@
 {
   "_doc": "Which v2 pages are indexable. Builders emit <meta name=robots noindex> for anything not listed. Edit, rebuild (build-guide-v2 / build-spots-v2 / build-hub-v2 / build-sitemap), commit, push.",
   "hub": true,
-  "prefectures": ["tokushima"],
-  "spots": ["naruto-whirlpools", "awa-odori-kaikan", "iya-kazurabashi", "oboke-gorge", "ryozenji-temple", "ishima-island", "takegashima-island", "shimadajima-island"]
+  "prefectures": [
+    "tokushima",
+    "chiba",
+    "gunma",
+    "yamanashi",
+    "tochigi"
+  ],
+  "spots": [
+    "naruto-whirlpools",
+    "awa-odori-kaikan",
+    "iya-kazurabashi",
+    "oboke-gorge",
+    "ryozenji-temple",
+    "ishima-island",
+    "takegashima-island",
+    "shimadajima-island"
+  ]
 }

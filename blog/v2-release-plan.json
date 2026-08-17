@@ -1,0 +1,108 @@
+[
+ {
+  "date": "2026-08-17",
+  "prefectures": [
+   "chiba",
+   "gunma",
+   "yamanashi",
+   "tochigi"
+  ]
+ },
+ {
+  "date": "2026-08-18",
+  "prefectures": [
+   "kagawa",
+   "shiga",
+   "yamaguchi",
+   "ehime"
+  ]
+ },
+ {
+  "date": "2026-08-19",
+  "prefectures": [
+   "kochi",
+   "oita",
+   "toyama",
+   "kumamoto"
+  ]
+ },
+ {
+  "date": "2026-08-20",
+  "prefectures": [
+   "ishikawa",
+   "nagasaki",
+   "saga",
+   "miyazaki"
+  ]
+ },
+ {
+  "date": "2026-08-21",
+  "prefectures": [
+   "kagoshima",
+   "fukuoka",
+   "okinawa",
+   "kyoto"
+  ]
+ },
+ {
+  "date": "2026-08-22",
+  "prefectures": [
+   "osaka",
+   "tokyo",
+   "nara",
+   "wakayama"
+  ]
+ },
+ {
+  "date": "2026-08-23",
+  "prefectures": [
+   "mie",
+   "nagano",
+   "gifu",
+   "shizuoka"
+  ]
+ },
+ {
+  "date": "2026-08-24",
+  "prefectures": [
+   "aichi",
+   "niigata",
+   "fukui",
+   "akita"
+  ]
+ },
+ {
+  "date": "2026-08-25",
+  "prefectures": [
+   "iwate",
+   "miyagi",
+   "yamagata",
+   "fukushima"
+  ]
+ },
+ {
+  "date": "2026-08-26",
+  "prefectures": [
+   "ibaraki",
+   "saitama",
+   "shimane"
+  ]
+ },
+ {
+  "date": "2026-08-27",
+  "prefectures": [
+   "okayama",
+   "tottori",
+   "hiroshima"
+  ]
+ },
+ {
+  "date": "2026-08-28",
+  "prefectures": [
+   "hyogo",
+   "kanagawa",
+   "aomori",
+   "hokkaido"
+  ]
+ }
+]

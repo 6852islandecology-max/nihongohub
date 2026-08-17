@@ -808,6 +808,86 @@
       "artist": "Dick Thomas Johnson",
       "artist_html": "",
       "fetched_from": "flickr/openverse"
+    },
+    "tile2": {
+      "key": "tile2",
+      "label": "Sapporo Clock Tower",
+      "query": [
+        "Sapporo Clock Tower",
+        "Sapporo Tokeidai",
+        "Former Hokkaido Government Office red brick"
+      ],
+      "file": "img/hokkaido-tile2-sapporo-clock-tower.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "f47:pzea4",
+      "title": "The Red Brick Building...",
+      "source_page": "https://search.find47.jp/en/i/pzea4",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist": "Charlie_or_Y-N",
+      "artist_html": "",
+      "fetched_from": "find47"
+    },
+    "tile3": {
+      "key": "tile3",
+      "label": "Sapporo Snow Festival",
+      "query": [
+        "Sapporo Snow Festival snow sculpture",
+        "Yuki Matsuri Odori Park",
+        "Sapporo Snow Festival"
+      ],
+      "file": "img/hokkaido-tile3-sapporo-snow-festival.webp",
+      "width": 960,
+      "height": 638,
+      "source_id": "ov:a6a69a6e-9afa-4401-b9f3-1c6c8438d0d5",
+      "title": "Misawa Sailors to Create Snow Sculpture in Northern Japan [Image 5 of 6]",
+      "source_page": "https://www.flickr.com/photos/28650594@N03/5407875520",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "DVIDSHUB",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "tile5": {
+      "key": "tile5",
+      "label": "Lake Akan",
+      "query": [
+        "Lake Akan",
+        "Akanko Ainu Kotan",
+        "Lake Akan Hokkaido"
+      ],
+      "file": "img/hokkaido-tile5-lake-akan.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "f47:dE4F9",
+      "title": "Onneto & mt.meakan",
+      "source_page": "https://search.find47.jp/en/i/dE4F9",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist": "kkawamura",
+      "artist_html": "",
+      "fetched_from": "find47"
+    },
+    "see3": {
+      "key": "see3",
+      "label": "Sapporo Snow Festival",
+      "query": [
+        "Sapporo Snow Festival",
+        "Yuki Matsuri Sapporo",
+        "snow sculpture Sapporo"
+      ],
+      "file": "img/hokkaido-see3-sapporo-snow-festival.webp",
+      "width": 960,
+      "height": 638,
+      "source_id": "ov:9418d9dd-3882-406b-9c71-6c8e7df8e5e3",
+      "title": "Snow Festival of Sapporo",
+      "source_page": "https://www.flickr.com/photos/49296659@N00/15631915",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "artist": "CharlesLam",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
     }
   },
   "aomori": {
@@ -886,6 +966,106 @@
       "artist": "mko294",
       "artist_html": "",
       "fetched_from": "find47"
+    },
+    "tile3": {
+      "key": "tile3",
+      "label": "Oirase Gorge",
+      "query": [
+        "Oirase Gorge",
+        "Oirase stream",
+        "Oirase Keiryu"
+      ],
+      "file": "img/aomori-tile3-oirase-gorge.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "f47:MDH7T",
+      "title": "Oirase Stream",
+      "source_page": "https://search.find47.jp/en/i/MDH7T",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist": "ShozzaTrip",
+      "artist_html": "",
+      "fetched_from": "find47"
+    },
+    "tile4": {
+      "key": "tile4",
+      "label": "Hirosaki Castle in cherry-blossom season",
+      "query": [
+        "Hirosaki Castle cherry blossoms",
+        "Hirosaki Park sakura",
+        "Hirosaki Castle"
+      ],
+      "file": "img/aomori-tile4-hirosaki-castle-in-cherry-blossom-season.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "f47:uyi2p",
+      "title": "Hirosaki cherry blossoms",
+      "source_page": "https://search.find47.jp/en/i/uyi2p",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist": "Taku",
+      "artist_html": "",
+      "fetched_from": "find47"
+    },
+    "see3": {
+      "key": "see3",
+      "label": "Lake Towada",
+      "query": [
+        "Lake Towada",
+        "Towada-ko",
+        "Towada lake"
+      ],
+      "file": "img/aomori-see3-lake-towada.webp",
+      "width": 960,
+      "height": 540,
+      "source_id": "f47:W0rrh",
+      "title": "Choshi waterfall",
+      "source_page": "https://search.find47.jp/en/i/W0rrh",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist": "TAKAO_Tsushima",
+      "artist_html": "",
+      "fetched_from": "find47"
+    },
+    "food1": {
+      "key": "food1",
+      "label": "Aomori apples",
+      "query": [
+        "Aomori apple orchard",
+        "Fuji apples Aomori",
+        "apple orchard Hirosaki"
+      ],
+      "file": "img/aomori-food1-aomori-apples.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "ov:dafa3193-8b86-4c13-beef-01e3b3c05ca6",
+      "title": "Apple from Aomori Japan",
+      "source_page": "https://www.flickr.com/photos/99247795@N00/4377409857",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "artist": "Richard Masoner / Cyclelicious",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "food3": {
+      "key": "food3",
+      "label": "Nokke-don at Aomori Gyosai Center",
+      "query": [
+        "Aomori Nokke-don",
+        "nokkedon Aomori",
+        "Aomori Gyosai Center"
+      ],
+      "file": "img/aomori-food3-nokke-don-at-aomori-gyosai-center.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "ov:cc1c93fd-3189-4595-9794-d9066efbfad3",
+      "title": "古川市場, 青森, 東北, 日本, Aomori Nokkedon, Aomori, Tohoku, Japan, Nippon, Nihon, 青森魚菜センター, あおもりけん, とうほく, にっぽん, にほん",
+      "source_page": "https://www.flickr.com/photos/91049143@N00/41720442864",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "artist": "bryan...",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
     }
   },
   "iwate": {
@@ -2959,6 +3139,126 @@
       "artist": "Ken_Lee",
       "artist_html": "",
       "fetched_from": "find47"
+    },
+    "tile1": {
+      "key": "tile1",
+      "label": "The Great Buddha of Kamakura",
+      "query": [
+        "Great Buddha Kamakura",
+        "Kamakura Daibutsu",
+        "Kotoku-in Great Buddha"
+      ],
+      "file": "img/kanagawa-tile1-the-great-buddha-of-kamakura.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "ov:de9c03c8-cad4-49cb-a426-1801647f9a60",
+      "title": "'Daibutsu' (Great Buddha) - Kamakura, Japan",
+      "source_page": "https://www.flickr.com/photos/96552722@N00/13499541",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "artist": "gregor_y",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "see1": {
+      "key": "see1",
+      "label": "The Great Buddha, Kōtoku-in",
+      "query": [
+        "Kamakura Daibutsu",
+        "Great Buddha Kamakura",
+        "Kotokuin"
+      ],
+      "file": "img/kanagawa-see1-the-great-buddha-k-toku-in.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "ov:1b95fcaf-1cf1-4303-858f-93f0227703c3",
+      "title": "The Great Buddha at Kamakura.",
+      "source_page": "https://www.flickr.com/photos/40422902@N00/4710737",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "skyseeker",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "see2": {
+      "key": "see2",
+      "label": "Hakone Shrine torii on Lake Ashi",
+      "query": [
+        "Hakone Shrine torii Lake Ashi",
+        "Hakone Jinja torii",
+        "Hakone Shrine"
+      ],
+      "file": "img/kanagawa-see2-hakone-shrine-torii-on-lake-ashi.webp",
+      "width": 960,
+      "height": 824,
+      "source_id": "ov:0633c016-95d2-49bf-92af-1dfcc6526e44",
+      "title": "Red Torii",
+      "source_page": "https://www.flickr.com/photos/45581782@N00/60869960",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "psd",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "food1": {
+      "key": "food1",
+      "label": "Yokohama Chinatown",
+      "query": [
+        "Yokohama Chinatown gate",
+        "Yokohama Chukagai",
+        "Yokohama Chinatown"
+      ],
+      "file": "img/kanagawa-food1-yokohama-chinatown.webp",
+      "width": 960,
+      "height": 676,
+      "source_id": "ov:b1acb056-201b-444a-ba57-a3c435f40694",
+      "title": "Chinatown Gate Yokohama",
+      "source_page": "https://www.flickr.com/photos/30780900@N02/4016081049",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "artist": "Focx Photography",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "food2": {
+      "key": "food2",
+      "label": "Shirasu-don",
+      "query": [
+        "shirasu don",
+        "shirasu-don Enoshima",
+        "whitebait bowl"
+      ],
+      "file": "img/kanagawa-food2-shirasu-don.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "ov:8316a083-cf92-48ad-91ff-643b6dbcf5a3",
+      "title": "Black Rice KAMAMESHI with Whitebait (Matsudo, Chiba, Japan)",
+      "source_page": "https://www.flickr.com/photos/47626742@N07/6340256871",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "t-mizo",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "food3": {
+      "key": "food3",
+      "label": "Yokosuka Navy Curry",
+      "query": [
+        "Yokosuka navy curry",
+        "kaigun curry Yokosuka",
+        "Japanese navy curry"
+      ],
+      "file": "img/kanagawa-food3-yokosuka-navy-curry.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "ov:c01ec1e0-ab4e-4781-9a5a-2b1e7f8ced9f",
+      "title": "Imperial Navy curry and rice",
+      "source_page": "https://www.flickr.com/photos/48693262@N02/4468357856",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "_Yuki_K_",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
     }
   },
   "niigata": {
@@ -5346,6 +5646,45 @@
       "artist": "TAKAYOSHI_ENDOU",
       "artist_html": "",
       "fetched_from": "find47"
+    },
+    "see2": {
+      "key": "see2",
+      "label": "Kitano Ijinkan-gai",
+      "query": [
+        "Kitano Ijinkan",
+        "Kobe Kitano"
+      ],
+      "file": "img/hyogo-see2-kitano-ijinkan-gai.webp",
+      "width": 960,
+      "height": 787,
+      "source_id": "ov:43c2660e-4853-4a09-bd0e-ea8edf5e3ef5",
+      "title": "Kitano Herb Garden Kobe",
+      "source_page": "https://www.flickr.com/photos/53903864@N00/8227121820",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "Manish Prabhune",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "food1": {
+      "key": "food1",
+      "label": "Kobe beef",
+      "query": [
+        "Kobe beef steak",
+        "Kobe beef",
+        "wagyu steak Kobe"
+      ],
+      "file": "img/hyogo-food1-kobe-beef.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "ov:58d09761-878f-41da-abff-1ae2a1a4c54b",
+      "title": "A5 Kobe Beef",
+      "source_page": "https://www.flickr.com/photos/77375487@N00/16784953030",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "allanroy",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
     }
   },
   "nara": {
@@ -5815,6 +6154,125 @@
       "artist": "nishimuraya.kinosakionsen",
       "artist_html": "",
       "fetched_from": "flickr/openverse"
+    },
+    "tile2": {
+      "key": "tile2",
+      "label": "The Sand Museum",
+      "query": [
+        "Sand Museum Tottori",
+        "Tottori Sand Museum sand sculpture",
+        "sand sculpture Tottori"
+      ],
+      "file": "img/tottori-tile2-the-sand-museum.webp",
+      "width": 960,
+      "height": 540,
+      "source_id": "wm:File:Tottori Sand Museum.jpg",
+      "title": "Tottori Sand Museum.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tottori_Sand_Museum.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Drivephotographer",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Drivephotographer&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Drivephotographer (page does not exist)\">Drivephotographer</a>",
+      "fetched_from": "wikimedia"
+    },
+    "tile3": {
+      "key": "tile3",
+      "label": "Nageiredō Hall, Mt. Mitoku",
+      "query": [
+        "Nageiredo",
+        "Sanbutsuji Nageire-do",
+        "Mitoku-san Nageiredo"
+      ],
+      "file": "img/tottori-tile3-nageired-hall-mt-mitoku.webp",
+      "width": 960,
+      "height": 638,
+      "source_id": "wm:File:Mitokusan Nageiredo 02.JPG",
+      "title": "Mitokusan Nageiredo 02.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Mitokusan_Nageiredo_02.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Reggaeman",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Reggaeman\" title=\"User:Reggaeman\">Reggaeman</a>",
+      "fetched_from": "wikimedia"
+    },
+    "see1": {
+      "key": "see1",
+      "label": "Tottori Sand Dunes",
+      "query": [
+        "Tottori Sand Dunes",
+        "Tottori sakyu",
+        "Tottori dunes camel"
+      ],
+      "file": "img/tottori-see1-tottori-sand-dunes.webp",
+      "width": 960,
+      "height": 1437,
+      "source_id": "f47:wcBUi",
+      "title": "Climbing the Dune",
+      "source_page": "https://search.find47.jp/en/i/wcBUi",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist": "Shunsuke2233",
+      "artist_html": "",
+      "fetched_from": "find47"
+    },
+    "see2": {
+      "key": "see2",
+      "label": "The Sand Museum",
+      "query": [
+        "Sand Museum Tottori",
+        "sand sculpture Tottori"
+      ],
+      "file": "img/tottori-see2-the-sand-museum.webp",
+      "width": 960,
+      "height": 540,
+      "source_id": "wm:File:Tottori Sand Museum-2.jpg",
+      "title": "Tottori Sand Museum-2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tottori_Sand_Museum-2.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Drivephotographer",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Drivephotographer&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Drivephotographer (page does not exist)\">Drivephotographer</a>",
+      "fetched_from": "wikimedia"
+    },
+    "see3": {
+      "key": "see3",
+      "label": "Mizuki Shigeru Road, Sakaiminato",
+      "query": [
+        "Mizuki Shigeru Road",
+        "Sakaiminato yokai bronze statue",
+        "Mizuki Shigeru Road Sakaiminato"
+      ],
+      "file": "img/tottori-see3-mizuki-shigeru-road-sakaiminato.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "ov:52360ed9-1f07-43f6-94b0-ee770ad105dc",
+      "title": "水木しげるロード mizuki-shigeru road サラリーマン山田 salaryman yamada",
+      "source_page": "https://www.flickr.com/photos/30191079@N06/3375406337",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "puffyjet",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "food2": {
+      "key": "food2",
+      "label": "Tottori gyukotsu ramen",
+      "query": [
+        "gyukotsu ramen",
+        "Tottori gyukotsu ramen",
+        "beef bone ramen Tottori"
+      ],
+      "file": "img/tottori-food2-tottori-gyukotsu-ramen.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Gyukotsu miso ramen 03.jpg",
+      "title": "Gyukotsu miso ramen 03.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Gyukotsu_miso_ramen_03.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "ノボホショコロトソ",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%83%8E%E3%83%9C%E3%83%9B%E3%82%B7%E3%83%A7%E3%82%B3%E3%83%AD%E3%83%88%E3%82%BD&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ノボホショコロトソ (page does not exist)\">ノボホショコロトソ</a>",
+      "fetched_from": "wikimedia"
     }
   },
   "shimane": {
@@ -5972,6 +6430,26 @@
       "artist": "City Foodsters",
       "artist_html": "",
       "fetched_from": "flickr/openverse"
+    },
+    "see2": {
+      "key": "see2",
+      "label": "Matsue Castle keep",
+      "query": [
+        "Matsue Castle keep",
+        "Matsue Castle",
+        "Matsue castle moat"
+      ],
+      "file": "img/shimane-see2-matsue-castle-keep.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "ov:3f748f3b-3cb8-4aad-b8d8-c58140a327cb",
+      "title": "Matsue Castle",
+      "source_page": "https://www.flickr.com/photos/26781577@N07/15119129136",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "artist": "Clay Gilliland",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
     }
   },
   "okayama": {
@@ -6068,6 +6546,46 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "artist": "RG in TLV",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "see2": {
+      "key": "see2",
+      "label": "Okayama Castle",
+      "query": [
+        "Okayama Castle",
+        "Okayama-jo crow castle",
+        "Ujo Okayama"
+      ],
+      "file": "img/okayama-see2-okayama-castle.webp",
+      "width": 960,
+      "height": 480,
+      "source_id": "ov:6bafdc81-8fb7-4c98-947f-e2bdd0f4d95e",
+      "title": "On the roof of the Okayama Castle",
+      "source_page": "https://www.flickr.com/photos/77581941@N00/7156619179",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "vitroid",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "food2": {
+      "key": "food2",
+      "label": "Demi-katsudon",
+      "query": [
+        "demi katsudon Okayama",
+        "demikatsu-don",
+        "katsudon"
+      ],
+      "file": "img/okayama-food2-demi-katsudon.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "ov:c5fd4851-97ab-41e6-a212-15a3bf01b8a0",
+      "title": "katsudon カツ丼",
+      "source_page": "https://www.flickr.com/photos/36093266@N06/6349353427",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "Ari Helminen",
       "artist_html": "",
       "fetched_from": "flickr/openverse"
     }
@@ -6206,6 +6724,46 @@
       "license": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "artist": "GinkgoTelegraph",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "see2": {
+      "key": "see2",
+      "label": "Itsukushima Shrine, Miyajima",
+      "query": [
+        "Itsukushima Shrine torii",
+        "Miyajima floating torii",
+        "Itsukushima"
+      ],
+      "file": "img/hiroshima-see2-itsukushima-shrine-miyajima.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "f47:2SSZV",
+      "title": "Floating vermilion Torii at Miyajima",
+      "source_page": "https://search.find47.jp/en/i/2SSZV",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "artist": "daisymind",
+      "artist_html": "",
+      "fetched_from": "find47"
+    },
+    "see3": {
+      "key": "see3",
+      "label": "Hiroshima Castle",
+      "query": [
+        "Hiroshima Castle",
+        "Hiroshima-jo",
+        "Shukkeien garden"
+      ],
+      "file": "img/hiroshima-see3-hiroshima-castle.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "ov:39b4c677-8dc2-4ed5-8fec-30b52fb7d2fa",
+      "title": "Hiroshima Castle, Japan",
+      "source_page": "https://www.flickr.com/photos/42477684@N08/48937902821",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "artist": "dconvertini",
       "artist_html": "",
       "fetched_from": "flickr/openverse"
     }

@@ -89,6 +89,77 @@ const PHOTOS = {
     { key: 'p1', q: ['Uchinoumi Naruto', 'Naruto Uchinoumi park', 'Horikoshi Bridge Naruto'], must: /uchinoumi|内ノ海|horikoshi|堀越/i, label: 'Naruto’s inland sea' },
   ],
 };
+// (pass-2 specs are merged into PHOTOS below)
+Object.assign(PHOTOS, {
+  // ---- pass 2 (2026-08-17): hand-written specs for the prefectures where auto specs mis-fetched. Only missing keys are fetched.
+  shimane: [
+    { key: 'hero',  q: ['Izumo Taisha', 'Izumo Grand Shrine', 'Izumo-taisha shimenawa'], must: /izumo|出雲/i, label: 'Izumo Taisha grand shrine' },
+    { key: 'tile1', q: ['Matsue Castle', 'Matsue-jo'], must: /matsue|松江/i, label: 'Matsue Castle' },
+    { key: 'see1',  q: ['Izumo Taisha shimenawa', 'Izumo Taisha haiden', 'Izumo Taisha'], must: /izumo|出雲/i, label: 'Izumo Taisha' },
+    { key: 'see2',  q: ['Matsue Castle keep', 'Matsue Castle', 'Matsue castle moat'], must: /matsue|松江/i, label: 'Matsue Castle keep' },
+  ],
+  okayama: [
+    { key: 'tile4', q: ['Kibitsu Shrine', 'Kibitsu-jinja corridor', 'Kibitsu Jinja Okayama'], must: /kibitsu|吉備津/i, label: 'Kibitsu Shrine' },
+    { key: 'tile5', q: ['Bizen ware', 'Bizen-yaki pottery', 'Bizen pottery Imbe'], must: /bizen|備前/i, label: 'Bizen ware pottery' },
+    { key: 'see2',  q: ['Okayama Castle', 'Okayama-jo crow castle', 'Ujo Okayama'], must: /okayama.?castle|okayama-jo|ujo|岡山城/i, label: 'Okayama Castle' },
+    { key: 'see3',  q: ['Kurashiki Bikan', 'Kurashiki canal', 'Kurashiki'], must: /kurashiki|倉敷/i, label: 'Kurashiki Bikan Historical Quarter' },
+    { key: 'food1', q: ['Okayama white peach', 'momo peach Okayama', 'Muscat of Alexandria grapes Okayama'], must: /peach|momo|muscat|grape|桃|ぶどう/i, label: 'Okayama peaches and Muscat grapes' },
+    { key: 'food2', q: ['demi katsudon Okayama', 'demikatsu-don', 'katsudon'], must: /katsu|カツ/i, label: 'Demi-katsudon' },
+  ],
+  tottori: [
+    { key: 'tile2', q: ['Sand Museum Tottori', 'Tottori Sand Museum sand sculpture', 'sand sculpture Tottori'], must: /sand museum|sand sculpture|砂の美術館|砂像/i, label: 'The Sand Museum' },
+    { key: 'tile3', q: ['Nageiredo', 'Sanbutsuji Nageire-do', 'Mitoku-san Nageiredo'], must: /nageire|投入堂|sanbutsu|三徳/i, label: 'Nageiredō Hall, Mt. Mitoku' },
+    { key: 'tile4', q: ['Mount Daisen', 'Daisen Tottori', 'Daisen mountain'], must: /daisen|大山/i, label: 'Mount Daisen' },
+    { key: 'see1',  q: ['Tottori Sand Dunes', 'Tottori sakyu', 'Tottori dunes camel'], must: /dune|sakyu|砂丘/i, label: 'Tottori Sand Dunes' },
+    { key: 'see2',  q: ['Sand Museum Tottori', 'sand sculpture Tottori'], must: /sand museum|sand sculpture|砂の美術館|砂像/i, label: 'The Sand Museum' },
+    { key: 'see3',  q: ['Mizuki Shigeru Road', 'Sakaiminato yokai bronze statue', 'Mizuki Shigeru Road Sakaiminato'], must: /mizuki|sakaiminato|水木|境港/i, label: 'Mizuki Shigeru Road, Sakaiminato' },
+    { key: 'food2', q: ['gyukotsu ramen', 'Tottori gyukotsu ramen', 'beef bone ramen Tottori'], must: /ramen|ラーメン/i, label: 'Tottori gyukotsu ramen' },
+    { key: 'food3', q: ['Nijisseiki pear', 'twentieth century pear fruit', 'nashi pear Tottori'], must: /pear|nashi|梨/i, label: 'Twentieth Century pear' },
+  ],
+  hiroshima: [
+    { key: 'hero',  q: ['Atomic Bomb Dome', 'Genbaku Dome Hiroshima', 'Hiroshima Peace Memorial'], must: /dome|genbaku|原爆|peace memorial/i, label: 'Atomic Bomb Dome, Peace Memorial Park' },
+    { key: 'tile5', q: ['Onomichi', 'Onomichi temple walk', 'Onomichi hillside'], must: /onomichi|尾道/i, label: 'Onomichi hillside alleys' },
+    { key: 'see1',  q: ['Atomic Bomb Dome', 'Genbaku Dome', 'Peace Memorial Park Hiroshima'], must: /dome|genbaku|原爆|peace memorial/i, label: 'Atomic Bomb Dome' },
+    { key: 'see2',  q: ['Itsukushima Shrine torii', 'Miyajima floating torii', 'Itsukushima'], must: /itsukushima|miyajima|厳島|宮島/i, label: 'Itsukushima Shrine, Miyajima' },
+    { key: 'see3',  q: ['Hiroshima Castle', 'Hiroshima-jo', 'Shukkeien garden'], must: /hiroshima castle|hiroshima-jo|shukkei|広島城|縮景園/i, label: 'Hiroshima Castle' },
+  ],
+  hyogo: [
+    { key: 'tile2', q: ['Kitano Ijinkan', 'Kobe Kitano ijinkan-gai', 'Weathercock House Kobe'], must: /kitano|ijinkan|weathercock|異人館|北野/i, label: 'Kitano Ijinkan, Kobe' },
+    { key: 'tile3', q: ['Arima Onsen', 'Arima Onsen town', 'Arima hot spring'], must: /arima|有馬/i, label: 'Arima Onsen' },
+    { key: 'tile4', q: ['Kinosaki Onsen', 'Kinosaki Onsen canal', 'Kinosaki'], must: /kinosaki|城崎/i, label: 'Kinosaki Onsen' },
+    { key: 'tile5', q: ['Kobe harbor night', 'Kobe Port Tower', 'Kobe Meriken Park'], must: /kobe|神戸|meriken|port tower/i, label: 'Kobe harbour' },
+    { key: 'see2',  q: ['Kitano Ijinkan', 'Kobe Kitano'], must: /kitano|ijinkan|異人館|北野/i, label: 'Kitano Ijinkan-gai' },
+    { key: 'food1', q: ['Kobe beef steak', 'Kobe beef', 'wagyu steak Kobe'], must: /kobe beef|kobe-beef|wagyu|神戸牛|steak/i, label: 'Kobe beef' },
+    { key: 'food2', q: ['akashiyaki', 'Akashi-yaki tamagoyaki', 'akashiyaki Akashi'], must: /akashi|明石/i, label: 'Akashiyaki' },
+    { key: 'food3', q: ['Himeji oden', 'oden Japan', 'oden pot'], must: /oden|おでん/i, label: 'Himeji oden' },
+  ],
+  kanagawa: [
+    { key: 'tile1', q: ['Great Buddha Kamakura', 'Kamakura Daibutsu', 'Kotoku-in Great Buddha'], must: /daibutsu|great buddha|kotoku|大仏|高徳院/i, label: 'The Great Buddha of Kamakura' },
+    { key: 'tile2', q: ['Tsurugaoka Hachimangu', 'Tsurugaoka Hachiman-gu Kamakura', 'Hachimangu Kamakura'], must: /tsurugaoka|hachiman|鶴岡/i, label: 'Tsurugaoka Hachimangū' },
+    { key: 'see1',  q: ['Kamakura Daibutsu', 'Great Buddha Kamakura', 'Kotokuin'], must: /daibutsu|great buddha|kotoku|大仏|高徳院/i, label: 'The Great Buddha, Kōtoku-in' },
+    { key: 'see2',  q: ['Hakone Shrine torii Lake Ashi', 'Hakone Jinja torii', 'Hakone Shrine'], must: /hakone|箱根/i, label: 'Hakone Shrine torii on Lake Ashi' },
+    { key: 'food1', q: ['Yokohama Chinatown gate', 'Yokohama Chukagai', 'Yokohama Chinatown'], must: /chinatown|chukagai|中華街/i, label: 'Yokohama Chinatown' },
+    { key: 'food2', q: ['shirasu don', 'shirasu-don Enoshima', 'whitebait bowl'], must: /shirasu|whitebait|しらす/i, label: 'Shirasu-don' },
+    { key: 'food3', q: ['Yokosuka navy curry', 'kaigun curry Yokosuka', 'Japanese navy curry'], must: /curry|カレー/i, label: 'Yokosuka Navy Curry' },
+  ],
+  aomori: [
+    { key: 'hero',  q: ['Nebuta Matsuri float', 'Aomori Nebuta', 'Nebuta festival'], must: /nebuta|ねぶた/i, label: 'Nebuta Matsuri float' },
+    { key: 'tile1', q: ['Sannai-Maruyama site pit dwelling', 'Sannai Maruyama', 'Sannai-Maruyama'], must: /sannai|maruyama|三内/i, label: 'Sannai-Maruyama site' },
+    { key: 'tile3', q: ['Oirase Gorge', 'Oirase stream', 'Oirase Keiryu'], must: /oirase|奥入瀬/i, label: 'Oirase Gorge' },
+    { key: 'tile4', q: ['Hirosaki Castle cherry blossoms', 'Hirosaki Park sakura', 'Hirosaki Castle'], must: /hirosaki|弘前/i, label: 'Hirosaki Castle in cherry-blossom season' },
+    { key: 'see3',  q: ['Lake Towada', 'Towada-ko', 'Towada lake'], must: /towada|十和田/i, label: 'Lake Towada' },
+    { key: 'food1', q: ['Aomori apple orchard', 'Fuji apples Aomori', 'apple orchard Hirosaki'], must: /apple|ringo|りんご|林檎/i, label: 'Aomori apples' },
+    { key: 'food2', q: ['ichigoni', 'ichigo-ni sea urchin soup', 'uni abalone soup Hachinohe'], must: /ichigo|いちご煮|uni|abalone/i, label: 'Ichigo-ni' },
+    { key: 'food3', q: ['Aomori Nokke-don', 'nokkedon Aomori', 'Aomori Gyosai Center'], must: /nokke|のっけ|gyosai|魚菜/i, label: 'Nokke-don at Aomori Gyosai Center' },
+  ],
+  hokkaido: [
+    { key: 'tile2', q: ['Sapporo Clock Tower', 'Sapporo Tokeidai', 'Former Hokkaido Government Office red brick'], must: /clock tower|tokeidai|red brick|akarenga|時計台|赤れんが/i, label: 'Sapporo Clock Tower' },
+    { key: 'tile3', q: ['Sapporo Snow Festival snow sculpture', 'Yuki Matsuri Odori Park', 'Sapporo Snow Festival'], must: /snow festival|yuki matsuri|雪まつり|snow sculpture/i, label: 'Sapporo Snow Festival' },
+    { key: 'tile4', q: ['Upopoy', 'Upopoy National Ainu Museum', 'Poroto Kotan Shiraoi'], must: /upopoy|poroto|shiraoi|白老|ウポポイ/i, label: 'Upopoy National Ainu Museum and Park' },
+    { key: 'tile5', q: ['Lake Akan', 'Akanko Ainu Kotan', 'Lake Akan Hokkaido'], must: /akan|阿寒/i, label: 'Lake Akan' },
+    { key: 'see3',  q: ['Sapporo Snow Festival', 'Yuki Matsuri Sapporo', 'snow sculpture Sapporo'], must: /snow festival|yuki matsuri|雪まつり|snow sculpture/i, label: 'Sapporo Snow Festival' },
+  ],
+});
 const PREF_OF = { tokushima: 'tokushima', 'naruto-whirlpools': 'tokushima', 'awa-odori-kaikan': 'tokushima', 'iya-kazurabashi': 'tokushima', 'ryozenji-temple': 'tokushima', 'oboke-gorge': 'tokushima', 'ishima-island': 'tokushima', 'takegashima-island': 'tokushima', 'shimadajima-island': 'tokushima' }; // slug -> FIND/47 prefecture slug (spot slugs map to their prefecture)
 
 // FIND/47 static archive: /en/images%253Farea=<area>%26prefectures=<pref>[%26page=N].html

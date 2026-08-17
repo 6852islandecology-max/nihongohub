@@ -871,6 +871,174 @@
    "file": "img/okinawa-see3-sefa-utaki.webp",
    "title": "Oriental migratory locust",
    "source": "flickr/openverse"
+  },
+  {
+   "slug": "shimane",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/shimane-hero-izumo-taisha-grand-shrine.webp",
+   "title": "Inasa Beach.",
+   "source": "find47"
+  },
+  {
+   "slug": "shimane",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/shimane-tile1-matsue-castle.webp",
+   "title": "Evening scene at the shores of Shinji Lake",
+   "source": "find47"
+  },
+  {
+   "slug": "shimane",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/shimane-see1-izumo-taisha.webp",
+   "title": "Izumohinomisaki Lighthouse",
+   "source": "find47"
+  },
+  {
+   "slug": "okayama",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/okayama-tile4-kibitsu-shrine.webp",
+   "title": "New year decoration",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "okayama",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/okayama-tile5-bizen-ware-pottery.webp",
+   "title": "Sake Vessel with a Design of a Chinese Confucian Scholar (Tokkuri) LACMA M.2002.8.2.2",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "okayama",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/okayama-see3-kurashiki-bikan-historical-quarter.webp",
+   "title": "美観, 倉敷美観地区, くらしきびかんちく, Kurashiki Bikan Historical Quarter, 倉敷, Kurashiki, 岡山, Okayama",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "tottori",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/tottori-tile4-mount-daisen.webp",
+   "title": "Ayugaeri waterfall in Noigura.",
+   "source": "find47"
+  },
+  {
+   "slug": "tottori",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/tottori-food3-twentieth-century-pear.webp",
+   "title": "Tottori Nijisseiki Pear Museum01n4592.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "hiroshima",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/hiroshima-hero-atomic-bomb-dome-peace-memorial-park.webp",
+   "title": "HIROSHIMA STREETCARS AT STOP M10 ATOMIC BOMB DOME JAPAN JUNE 2012",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hiroshima",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/hiroshima-see1-atomic-bomb-dome.webp",
+   "title": "HIROSHIMA STREET CAR STOP M10 ATOMIC BOMB DOME JAPAN JUNE 2012",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hyogo",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/hyogo-tile2-kitano-ijinkan-kobe.webp",
+   "title": "Mailman, bring me no more blues",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hyogo",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/hyogo-tile3-arima-onsen.webp",
+   "title": "HOTSPRING, ARIMA ONSEN",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/hyogo-tile4-kinosaki-onsen.webp",
+   "title": "kinosaki  marine-palace(Spewing sea of clouds)",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/hyogo-tile5-kobe-harbour.webp",
+   "title": "Dance in autumn",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/hyogo-food2-akashiyaki.webp",
+   "title": "Akashi-Kaikyo Bridge...",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/hyogo-food3-himeji-oden.webp",
+   "title": "Oden Vs Kakigori",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "kanagawa",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/kanagawa-tile2-tsurugaoka-hachimang.webp",
+   "title": "Bride in Shinto Wedding, Kamakura, Japan",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "aomori",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/aomori-hero-nebuta-matsuri-float.webp",
+   "title": "Wa Rasse Nebuta House",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "aomori",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/aomori-tile1-sannai-maruyama-site.webp",
+   "title": "Children's burial area Sannai-Maruyama Archaeological site Aomori Japan",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "aomori",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/aomori-food2-ichigo-ni.webp",
+   "title": "shirakami",
+   "source": "find47"
+  },
+  {
+   "slug": "hokkaido",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/hokkaido-tile4-upopoy-national-ainu-museum-and-park.webp",
+   "title": "Shiraoi-upopoy 01.jpg",
+   "source": "wikimedia"
   }
  ],
  "unsure": [
@@ -994,6 +1162,20 @@
    "reason": "lily flower close-up for Sengan-en (my own note)",
    "file": "img/kagoshima-tile1-sengan-en-garden.webp",
    "title": "美麗百合(鹿子百合) Lilium speciosum [日本鹿兒島仙巖園 Kagoshima Sengan-en Garden, Japan]"
+  },
+  {
+   "slug": "okayama",
+   "key": "see2",
+   "verdict": "UNSURE",
+   "file": "img/okayama-see2-okayama-castle.webp",
+   "title": "On the roof of the Okayama Castle"
+  },
+  {
+   "slug": "aomori",
+   "key": "see3",
+   "verdict": "UNSURE",
+   "file": "img/aomori-see3-lake-towada.webp",
+   "title": "Choshi waterfall"
   }
  ]
 }
