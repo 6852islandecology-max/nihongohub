@@ -13,6 +13,8 @@ const file = args.find(a => a.endsWith('.html'));
 const arg = (k) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : null; };
 const subject = arg('--subject'), test = arg('--test');
 if (!file || !subject) { console.error('usage: send-issue.mjs <file.html> --subject "…" [--test you@example.com]'); process.exit(1); }
+await main();
+async function main() {
 const html = readFileSync(file, 'utf8');
 const txt = existsSync(file.replace(/\.html$/, '.txt')) ? readFileSync(file.replace(/\.html$/, '.txt'), 'utf8') : undefined;
 
@@ -24,7 +26,7 @@ if (test) {
     text: txt && txt.replace(/\{\{\{RESEND_UNSUBSCRIBE_URL\}\}\}/g, '(rendered in broadcast)'),
   } });
   console.log('test sent:', r.id, '→', test);
-  process.exit(0);
+  return;
 }
 
 // real send
@@ -42,3 +44,4 @@ st.lastSent = { broadcastId: b.id, subject, date: today(), file }; saveState(st)
 mkdirSync(OUT_DIR, { recursive: true });
 appendFileSync(OUT_DIR + 'log.md', `- ${today()} broadcast ${b.id} — ${subject} — ${file}\n`);
 console.log('broadcast sent:', b.id);
+}
