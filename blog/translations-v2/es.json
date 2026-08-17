@@ -1,0 +1,1141 @@
+{
+ "ui": {
+  "all47": "Los 47 prefecturas",
+  "playmap": "Juega con el mapa",
+  "learn": "Aprende japonés",
+  "freequiz": "Quiz gratuito",
+  "guide": "guía de la prefectura",
+  "whereitis": "Dónde está",
+  "getting": "Cómo llegar",
+  "bookbus": "Reserva autobuses y trenes",
+  "esim": "Obtén un eSIM de Japón antes de viajar",
+  "see": "Qué ver",
+  "alltours": "Todos los tours",
+  "map": "Mapa",
+  "official": "Oficial",
+  "tickets": "Entradas",
+  "toppick": "Nuestra recomendación",
+  "hidden": "Joya escondida",
+  "eat": "Qué comer",
+  "foodtours": "Tours gastronómicos y clases de cocina",
+  "musteat": "No te lo pierdas",
+  "localsecret": "Secreto local",
+  "numbers": "en números",
+  "glance": "de un vistazo",
+  "sources": "Fuentes",
+  "howrank": "cómo clasificamos los 47 →",
+  "speak": "Cómo se dice en",
+  "practise": "Practica con un tutor",
+  "asklocal": "Pregunta a un local",
+  "localword": "Palabra local",
+  "onemore": "Una más",
+  "testyourself": "Ponte a prueba",
+  "practisemore": "Practica más japonés →",
+  "rightnow": "ahora mismo",
+  "sleepin": "Duerme en",
+  "compare": "Compara ryokan, hoteles de negocios y posadas locales.",
+  "findstay": "Encuentra lugares para hospedarte",
+  "faq": "Preguntas frecuentes",
+  "nextdoor": "Puerta al lado",
+  "playmapcard": "Juega con el mapa de los 47 prefecturas",
+  "unlock": "Desbloquea {name} en el explorador estilo RPG.",
+  "spotguides": "Guías de lugares",
+  "plan": "Planifica la visita",
+  "tourstickets": "Tours y entradas",
+  "book": "Reserva",
+  "ferries": "Ferries, autobuses y trenes",
+  "staynear": "Hospédate cerca",
+  "nature": "Naturaleza alrededor",
+  "seeranking": "Ve la clasificación de los 47 prefecturas",
+  "species": "especies registradas",
+  "threatened": "especies en peligro",
+  "sightings": "avistamientos registrados",
+  "of47": "de 47 prefecturas",
+  "godeeper": "Profundiza",
+  "sleepnear": "Duerme cerca",
+  "compareinns": "Compara posadas y hoteles en",
+  "prefguide": "Fotos, acceso, gastronomía, precios y frases de toda la prefectura.",
+  "disclosure": "Los enlaces marcados como PR son enlaces de afiliados: si reservas a través de ellos, podemos ganar una comisión sin costo adicional para ti.",
+  "photos": "Fotos",
+  "classic": "Versión clásica de esta guía",
+  "allguides": "Todas las guías",
+  "home": "Inicio",
+  "source": "Fuente",
+  "alsoin": "También en"
+ },
+ "pages": {
+  "tokushima": {
+   "tagline": "Remolinos, un baile de 400 años y un valle que el camino olvidó.",
+   "blurb": "Tokushima, en el lado oriental de Shikoku, es famosa por el festival de danza de verano Awa Odori de 400 años y los poderosos remolinos de Naruto en el estrecho frente a la isla de Awaji. Su interior montañoso esconde el remoto valle de Iya y sus emocionantes puentes colgantes de enredaderas.",
+   "history": "Tokushima es la cuna del Awa Odori, un festival de danza de 400 años, y de los remolinos de Naruto, entre los remolinos de marea más grandes del mundo.",
+   "getting": "Se llega a Tokushima en autobús desde Osaka/Kobe cruzando el puente Akashi-Kaikyō (~2h30m).",
+   "see": [
+    "El festival de danza Bon más famoso de Japón con 400 años de historia, que atrae a más de un millón de espectadores cada agosto; las presentaciones pueden verse todo el año en el",
+    "Entre los remolinos de marea más rápidos del mundo en el estrecho de Naruto; mejor en barco de avistamiento o a través del pasillo con piso de vidrio Uzu-no-Michi bajo el puente Onaruto",
+    "Garganta montañosa remota con el puente colgante de enredaderas Iya Kazurabashi de ~45m, uno de los tres raros puentes de enredaderas de Japón."
+   ],
+   "eat": [
+    "Caldo rico de hueso de cerdo y soja cubierto con barriga de cerdo guisada dulce y salada, frecuentemente con un huevo crudo; viene en estilos de caldo blanco/marrón/amarillo ligados a diferentes áreas de",
+    "Pequeño cítrico aromático verde; aproximadamente el 98% del sudachi de Japón se cultiva en Tokushima, utilizado como un acento fragante similar al limón en platos y bebidas.",
+    "Las batatas Naruto Kintoki son apreciadas por su dulzura natural; la dorada Naruto-dai crece con textura firme en las corrientes rápidas del estrecho."
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "El enorme festival de danza de mediados de agosto de Tokushima",
+   "deeper_en": "Puedes escuchar el sonido del río.",
+   "access": [
+    {
+     "from": "Tokio (Haneda)",
+     "to": "Aeropuerto Tokushima Awaodori",
+     "time": "1 h 10 min",
+     "note": "JAL / ANA, ~10 vuelos al día"
+    },
+    {
+     "from": "Osaka / Kobe (Sannomiya)",
+     "to": "Estación Tokushima",
+     "time": "~2 h 30 min",
+     "note": "autobús de carretera sobre el puente Akashi-Kaikyō"
+    }
+   ],
+   "numbers": [
+    {
+     "label": "Alquiler, apartamento pequeño",
+     "sub": "por mes, ≤29 m², ciudad de Tokushima"
+    },
+    {
+     "label": "Tazón de ramen",
+     "sub": "comiendo fuera, ciudad de Tokushima"
+    },
+    {
+     "label": "Temperatura promedio",
+     "sub": "media anual, 2023"
+    },
+    {
+     "label": "Multitud Awa Odori",
+     "sub": "espectadores cada agosto"
+    },
+    {
+     "label": "Sudachi cultivado aquí",
+     "sub": "de la cosecha de Japón"
+    }
+   ],
+   "faq": [
+    {
+     "q": "¿Vale la pena visitar Tokushima?",
+     "a": "Sí si prefieres naturaleza y festivales más que compras. Los remolinos de Naruto, los puentes colgantes de enredaderas del valle de Iya y Awa Odori son cosas que no puedes ver en ningún otro lugar de Japón."
+    },
+    {
+     "q": "¿Cuántos días necesito?",
+     "a": "Dos días cubren Naruto y la ciudad; agrega uno o dos más para el valle de Iya y la garganta de Oboke, que están a 1,5–2 horas de conducción tierra adentro."
+    },
+    {
+     "q": "¿Cuándo son más grandes los remolinos?",
+     "a": "Alrededor de las mareas vivas de primavera y otoño, aproximadamente una hora a cada lado del horario de pico publicado. Consulta la tabla de mareas antes de comprar un boleto de barco."
+    }
+   ],
+   "lede": "Remolinos rugientes y el eléctrico baile Awa Odori."
+  },
+  "naruto-whirlpools": {
+   "name": "Naruto Whirlpools",
+   "badge": "Maravilla natural",
+   "tagline": "Remolinos de marea que puedes ver desde arriba — o en los que puedes navegar.",
+   "summary": "Dos veces al día, la marea obliga al agua del Mar Interior de Seto a pasar por el Naruto Strait de 1.3 km, y el agua gira formando remolinos entre los más grandes del mundo. Puedes observarlos desde un bote, o desde el piso de vidrio de la pasarela Uzu-no-Michi que cuelga bajo el Ōnaruto Bridge.",
+   "facts": [
+    "Los remolinos alcanzan aproximadamente 20 m de ancho en las mareas vivas más fuertes",
+    "Pasarela Uzu-no-Michi: 450 m de largo dentro de la viga del puente, piso de vidrio a aproximadamente 45 m sobre el agua",
+    "Mejor alrededor de las mareas vivas de primavera y otoño, dentro de aproximadamente una hora del pico publicado; verifica la tabla de mareas antes de comprar entradas"
+   ],
+   "access": "Autobús local desde JR Naruto Station hasta Naruto Kōen (aproximadamente 20 min); el puente y Uzu-no-Michi están a corta distancia a pie del parque.",
+   "guides": [
+    "Melodías de estaciones por región — el sonido de llegar a Shikoku"
+   ]
+  },
+  "awa-odori-kaikan": {
+   "name": "Awa Odori Kaikan",
+   "badge": "Tradición viva",
+   "tagline": "El baile de 400 años que puedes ver todos los días, no solo en agosto.",
+   "summary": "Awa Odori es el festival de danza Bon más grande de Japón: cuatro noches en agosto cuando grupos de bailarines llenan las calles de Tokushima. Si te pierdes las fechas, aún puedes verlo — el Kaikan presenta funciones durante todo el año, y el teleférico Bizan sale desde su piso superior para disfrutar de la vista sobre la ciudad.",
+   "facts": [
+    "Fechas del festival: 12–15 de agosto cada año, en la ciudad de Tokushima",
+    "Más de un millón de espectadores cada agosto",
+    "Funciones de teatro diarias en el Kaikan; el teleférico Bizan Ropeway sale del piso 5"
+   ],
+   "access": "Aproximadamente 10 minutos a pie desde la Estación JR Tokushima, al pie del Monte Bizan.",
+   "guides": [
+    "Sellos de estación — colecciona el sello de la estación antes de dejar Tokushima"
+   ]
+  },
+  "iya-kazurabashi": {
+   "name": "Iya Kazurabashi",
+   "badge": "Valle oculto",
+   "tagline": "Un puente tejido con enredaderas de montaña, en lo profundo de un valle que el camino olvidó.",
+   "summary": "El Valle Iya es uno de los cañones más remotos de Japón, y su puente colgante de enredaderas es la razón por la que la mayoría de las personas hacen el viaje. El puente se balancea; los tablones tienen espacios; el río está muy lejos abajo. Se teje de nuevo con enredaderas frescas cada pocos años para que permanezca exactamente así de alarmante.",
+   "facts": [
+    "Longitud aproximada de 45 m, ancho de 2 m, aproximadamente 14 m sobre el Río Iya; uno de los tres puentes de enredadera sobrevivientes de Japón",
+    "Tejido de nuevo cada tres años con enredadera de kiwi resistente (shirakuchikazura)",
+    "Cerca: Biwa Falls (a pocos minutos a pie) y Oboke Gorge aguas abajo"
+   ],
+   "access": "Autobús desde la Estación JR Oboke (Línea Dosan) aproximadamente 25 min hasta Kazurabashi; un automóvil hace que el valle más amplio sea mucho más fácil.",
+   "guides": [
+    "Rally de sellos Michi-no-eki — Michi-no-Eki Oboke está en el camino"
+   ]
+  },
+  "oboke-gorge": {
+   "name": "Oboke Gorge",
+   "badge": "Cañón fluvial",
+   "tagline": "Acantilados de mármol, agua de jade y un bote que te lleva a ambos.",
+   "summary": "El río Yoshino ha tallado los cañones de Oboke y Koboke a través de esquisto cristalino duro, dejando paredes de roca pálida sobre agua verde. Un corto bote de avistamiento turístico sale desde la orilla del río; las empresas de rafting utilizan el mismo tramo. A principios de mayo, cientos de cometas con forma de carpa koinobori cuelgan a través del cañón.",
+   "facts": [
+    "Bote de avistamiento turístico: aproximadamente 30 minutos de viaje redondo desde la orilla del río de Oboke",
+    "La estación JR Oboke en la línea Dosan es la puerta de entrada tanto al cañón como al valle de Iya",
+    "Michi-no-Eki Oboke (Lapis Oboke) junto al cañón alberga un museo de yōkai y un museo de piedras"
+   ],
+   "access": "Estación JR Oboke (aproximadamente 1 h 15 min desde Tokushima en tren rápido limitado vía Awa-Ikeda; aproximadamente 1 h desde Kōchi). El muelle del bote y michi-no-eki están a una corta caminata o una parada de autobús de distancia.",
+   "guides": [
+    "Guía de rally de sellos de michi-no-eki",
+    "Sellos de estación — Estaciones JR Shikoku"
+   ]
+  },
+  "ryozenji-temple": {
+   "name": "Ryōzen-ji",
+   "badge": "Peregrinación n.° 1",
+   "tagline": "Donde comienza la peregrinación de 88 templos de Shikoku.",
+   "summary": "Ryōzen-ji es el templo número uno del Shikoku Henro, la peregrinación de 88 templos que rodea la isla. Los peregrinos compran aquí su chaleco blanco, sombrero de junco, bastón y libro de sellos antes de partir; la tienda y el flujo de ohenro dan al pequeño templo una atmósfera desproporcionada a su tamaño.",
+   "facts": [
+    "Templo n.° 1 del circuito de 88 templos de Shikoku; el circuito completo tiene aproximadamente 1.200 km",
+    "Los artículos para peregrinos (chaleco hakui, bastón kongōzue, libro de sellos nōkyōchō) se venden en el sitio",
+    "Los templos 1 a 10 se encuentran muy cerca uno del otro a lo largo del río Yoshino, por lo que es posible caminar un primer día"
+   ],
+   "access": "A unos 10 minutos a pie de la estación JR Bandō (Línea Kōtoku), 25 minutos en tren desde Tokushima.",
+   "guides": [
+    "Goshuin — cómo funcionan los sellos de templos (el nōkyō de peregrinación funciona con la misma idea)",
+    "Cómo elegir un libro de sellos goshuinchō"
+   ]
+  },
+  "ishima-island": {
+   "name": "Ishima",
+   "badge": "Isla habitada",
+   "tagline": "Una isla pesquera en el canal de Kii sin automóviles y 165 habitantes.",
+   "summary": "Ishima se ubica frente a la costa de Anan en la desembocadura del canal de Kii. El pueblo está concentrado en una franja de tierra plana tan estrecha que la única forma de circular es a pie. La langosta espinosa es la captura local; un sendero de cresta con 33 Budas de piedra atraviesa la isla, y el faro en el lado lejano fue el primero completamente automatizado de Japón.",
+   "facts": [
+    "Área 1,44 km²; población 165",
+    "Aproximadamente 3.900 visitantes al año (FY2016)",
+    "Ferry desde el puerto de Tōshima (Anan) aproximadamente 30 min, 3 salidas al día; sin automóviles en la isla",
+    "Ise-ebi (langosta espinosa) es la especialidad"
+   ],
+   "access": "Estación JR Anan → autobús/taxi al puerto de Tōshima → ferry 30 min. Es posible una excursión de un día según el horario de 3 salidas; verifica la hora de regreso antes de abordar.",
+   "guides": [
+    "Más islas pequeñas: la guía de las islas Izu"
+   ]
+  },
+  "takegashima-island": {
+   "name": "Takegashima",
+   "badge": "Isla habitada",
+   "tagline": "Una isla de pesca de atún a la que puedes llegar en auto, con peces payaso bajo el muelle.",
+   "summary": "Takegashima se extiende desde la punta sur de Tokushima, conectada al continente por un puente. La pesca es la razón principal del lugar, pero los visitantes vienen por el agua: un museo marino, un bote con fondo de vidrio, kayaks de mar y buceo con esnórquel sobre coral donde viven peces payaso en el límite norte de su distribución.",
+   "facts": [
+    "Área 1.30 km²; población 214",
+    "Marine Jam (museo marino de Kaiyō Town) con un bote de fondo de vidrio y un pequeño acuario; cerrado los martes",
+    "Comida local: mariscos secos, langosta espinosa, abulón"
+   ],
+   "access": "Autobús desde la Estación JR Mugi aproximadamente 40 min, o desde la Estación Shishikui (Ferrocarril Asa Coast) aproximadamente 9 min, hacia Takegashima.",
+   "guides": [
+    "Observación de vida silvestre en Japón — dónde ver qué"
+   ]
+  },
+  "shimadajima-island": {
+   "name": "Shimadajima",
+   "badge": "Isla habitada",
+   "tagline": "La tranquila isla de agricultura y pesca junto a los remolinos.",
+   "summary": "Shimadajima se encuentra en el mar interior de Naruto a pocos minutos del puente Ōnaruto, pero es otro mundo: campos de loto, un antiguo festival de santuario donde el altar portátil se lleva al mar, y casi sin visitantes. La autopista lo cruza, así que puedes llegar en auto, o tomar el transbordador de 4 minutos desde Dōnoura.",
+   "facts": [
+    "Área 5,72 km²; población 430",
+    "Transbordador desde Dōnoura aproximadamente 4 min, 10 salidas diarias; también accesible por carretera vía Naruto-kita IC",
+    "Especialidades: raíz de loto y arroz de variedades antiguas; festival de otoño del santuario Awai el 16 de octubre"
+   ],
+   "access": "Desde Naruto: en auto vía Naruto-kita IC, o autobús/taxi a Dōnoura y el transbordador de 4 minutos.",
+   "guides": [
+    "Goshuin en santuarios pequeños — cómo pedir"
+   ]
+  },
+  "hokkaido": {
+   "see": [
+    "Una icónica vía fluvial de 1.140 m bordeada de almacenes de piedra preservados de la era del comercio marítimo de Hokkaido; al atardecer, 63 lámparas de gas se iluminan y se reflejan en el agua. A s",
+    "La Torre del Reloj (construida en 1878) es la torre de reloj más antigua aún en funcionamiento de Japón y un Bien Cultural Importante Nacional; el cercano edificio de Neo-Barroco Americano de la era Meiji R",
+    "El evento invernal más grande de Sapporo, que atrae a más de 2 millones de visitantes anualmente en los sitios Odori, Susukino y Tsudome. La edición 2026 se realiza del 4 al 11 de febrero de 2026"
+   ],
+   "eat": [
+    "Las aguas frías de Hokkaido producen cangrejos preciados, uni (erizo de mar), ikura (huevas de salmón), vieiras y calamares. Una forma clásica de probarlos es un cuenco de arroz fresco con mariscos en m",
+    "Un curry de caldo picante cargado de verduras y carne sobre arroz. Originario de Sapporo en los años 70 y se convirtió en un éxito nacional en los años 2000; hay o",
+    "Cordero u oveja y verduras asadas en la mesa en una sartén de metal abombada y sumergidas en salsa. Se considera el 'alimento del alma' comunal de Hokkaido."
+   ]
+  },
+  "aomori": {
+   "tagline": "El país de las manzanas de Japón en la punta norte de Honshu, famoso por el explosivo festival de verano Nebuta.",
+   "blurb": "La prefectura más septentrional de Honshu, Aomori es el reino de la manzana de Japón (aproximadamente el 60% de la producción nacional) y hogar del estruendoso Festival Nebuta, con el Castillo Hirosaki clasificado entre los mejores lugares de flores de cerezo del país.",
+   "history": "Aomori enfrenta el Estrecho Tsugaru en la punta norte de Honshu. El sitio Sannai-Maruyama muestra un gran asentamiento Jōmon de hace más de 5,000 años, e Hirosaki creció como ciudad castillo del clan Tsugaru.",
+   "getting": "Aproximadamente 3 horas desde Tokio en el Tōhoku Shinkansen hasta Shin-Aomori.",
+   "see": [
+    "Una de las ruinas de asentamientos Jomon más grandes de Japón (aproximadamente 5,900-4,200 años atrás), parte de los 'Sitios Prehistóricos Jomon' Patrimonio de la UNESCO inscritos en 2",
+    "Castillo histórico con una torre de defensa de pie, famoso como uno de los principales lugares de visualización de flores de cerezo de Japón.",
+    "Hogar de la escultura gigante 'Aomori-ken' (Perro de Aomori) de Yoshitomo Nara, un ícono de foto distintivo; ubicado junto a las ruinas Sannai-Maruyama."
+   ],
+   "eat": [
+    "Aomori es la prefectura productora de manzanas más importante de Japón; Hirosaki es famosa por su ruta de tartas de manzana con aproximadamente 50 variedades de tiendas locales indexadas en una guía dedicada.",
+    "Una sopa del área Hachinohe de erizo de mar (uni) y abulón (awabi); el caldo lechoso hace que el uni parezca fresas silvestres, de ahí el nombre.",
+    "Una tortita de pastel de pescado frito casero de Hirosaki hecha de retazos de calamar finamente picado y verduras; un bocadillo local económico que raramente se encuentra fuera de la región Tsugaru."
+   ],
+   "phrase_en": "¡Está delicioso!",
+   "word_en": "los enormes flotadores de festival iluminados",
+   "deeper_en": "¿De dónde eres? (un abridor de conversación natural que usan los lugareños con viajeros)",
+   "lede": "El país de las manzanas de Japón en la punta norte de Honshu, famoso por el explosivo festival de verano Nebuta."
+  },
+  "iwate": {
+   "tagline": "Una prefectura vasta y accidentada de templos, costas y tradiciones de soba fría.",
+   "blurb": "Iwate es la segunda prefectura más grande de Japón, en el norte de Tohoku, combinando los templos Patrimonio de la Humanidad de la UNESCO y los jardines de Tierra Pura de Hiraizumi con la costa Sanriku accidentada e indentada, y sus aguas ricas en mariscos. Su capital, la ciudad castillo de Morioka, fue nombrada una de las \"52 Lugares para Ir en 2023\" del New York Times.",
+   "history": "Iwate (岩手) fue la sede de los Fujiwara del Norte, quienes construyeron los templos dorados de Hiraizumi (平泉) en el siglo XII como un paraíso de Tierra Pura en la tierra — ahora un Sitio Patrimonio de la Humanidad de la UNESCO.",
+   "getting": "Morioka está a aproximadamente 2h10m de Tokio por el Tōhoku Shinkansen.",
+   "see": [
+    "La pieza central del sitio Patrimonio de la Humanidad de la UNESCO de Hiraizumi: una sala del siglo XII completamente cubierta de pan de oro con incrustaciones de nácar, símbolo del Oshu Fu.",
+    "Parte del mismo listado de la UNESCO; su jardín Jodo (Tierra Pura) de la era Heian centrado en un gran estanque que sobrevive en su forma casi original del siglo XII.",
+    "Una garganta de 2 km a lo largo del río Satetsu con acantilados de más de 100 m, recorrida por botes de fondo plano impulsados por un barquero que canta la canción folclórica local Geibi."
+   ],
+   "eat": [
+    "La experiencia de soba característica de Iwate: pequeñas porciones de un solo bocado de fideos de trigo sarraceno servidos continuamente en tu tazón en un desafío de todo lo que puedas comer, un Morioka.",
+    "Fideos fríos masticables y elásticos hechos de harina de trigo y almidón de papa en un caldo de res claro con kimchi, pepino, huevo y una rodaja de fruta; un Mor inspirado en la cocina coreana.",
+    "Fideos planos estilo udon cubiertos con salsa de carne-miso sabrosa, pepino y cebolletas, mezclados bien antes de comer; traído de Manchuria en 1945 y ahora o."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "all-you-can-eat bite-size soba",
+   "deeper_en": "The scenery of Iwate is truly wonderful, isn't it?",
+   "lede": "Una prefectura vasta y accidentada de templos, costas y tradiciones de soba fría."
+  },
+  "miyagi": {
+   "tagline": "Hogar del vibrante Sendai y una de las 'tres grandes vistas' de Japón en la Bahía de Matsushima.",
+   "blurb": "Miyagi, en la región Tohoku de Japón, es famosa por la Bahía de Matsushima —uno de los \"Tres Lugares Más Hermosos de Japón\", con alrededor de 260 islotes cubiertos de pinos— y por su capital vibrante Sendai, la \"Ciudad de los Árboles\" conocida por la lengua de res a la parrilla (gyutan) y el gigantesco festival de cintas de papel Tanabata cada agosto.",
+   "history": "Miyagi (宮城) es el dominio de Date Masamune (伊達政宗), el señor de la guerra tuerto que fundó Sendai (仙台) en 1600 y moldeó su cultura, desde la cocina hasta el festival Tanabata.",
+   "getting": "Sendai está a ~1h30m de Tokio en el Tōhoku Shinkansen — la ciudad de Tōhoku más fácil de alcanzar.",
+   "see": [
+    "Una de las 'Tres Vistas de Japón', con alrededor de 260 islas cubiertas de pinos; ~1 hora desde Sendai, accesible en crucero turístico.",
+    "Templo Zen Tesoro Nacional reconstruido por el señor Date Masamune en 1609 como el templo de la familia Date, cerca de Matsushima; famoso por sus puertas corredizas recubiertas de pan de oro y el Peacoc",
+    "Sitio en la cima de una colina del castillo de Date Masamune con la icónica estatua ecuestre de Masamune y vistas panorámicas sobre Sendai; solo permanecen muros de piedra y una torreta."
+   ],
+   "eat": [
+    "El plato más icónico de Sendai, se dice que se originó en los años 40. Asado a la parrilla de carbón, servido con arroz de cebada, caldo de rabo de buey y encurtidos; también como gyutan don, katsu a",
+    "Mochi cubierto con una pasta dulce de color verde brillante hecha de edamame joven majado; un dulce típico de Sendai que también se encuentra como batidos de zunda, daifuku y manju.",
+    "Ostras abundantes de la Bahía de Matsushima, un manjar invernal celebrado en el Festival de Ostras de febrero y comidas a la parrilla, fritas (kaki fry) o crudas."
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "lengua de res a la parrilla, una especialidad de Sendai",
+   "deeper_en": "Qué vista tan maravillosa, ¿verdad?",
+   "lede": "Hogar del vibrante Sendai y una de las 'tres grandes vistas' de Japón en la Bahía de Matsushima."
+  },
+  "akita": {
+   "tagline": "Tierra de nieve profunda, arroz y sake, y la feroz tradición folclórica Namahage.",
+   "blurb": "Akita es una prefectura nevada del norte de Tohoku famosa por su Kanto Festival con enormes postes de bambú cargados de faroles equilibrados en los cuerpos de los artistas, sake y arroz de primera calidad, y el Lago Tazawa, el lago más profundo de Japón. También es hogar de la tradición Namahage de visitantes demoníacos y hermosos paisajes de pueblos de samuráis del período Edo perfectamente preservados.",
+   "history": "Akita (秋田) es tierra antigua de arroz y sake. Kakunodate (角館) preserva residencias de samuráis del período Edo, y la península Oga (男鹿) mantiene viva la tradición ritual Namahage (なまはげ) de Año Nuevo.",
+   "getting": "Akita está a ~3h40m de Tokio en el Akita Shinkansen.",
+   "see": [
+    "Hogar del ritual Namahage de Año Nuevo, Patrimonio Cultural Inmaterial de la UNESCO. Museos disponibles todo el año permiten a los visitantes ver máscaras y demostraciones vivas de Namahage.",
+    "La 'Pequeña Kioto de Tohoku': residencias de samuráis del período Edo preservadas con muros de madera negra, famosas por sus cerezos llorones en primavera; seis mansiones están abiertas al público.",
+    "El lago más profundo de Japón (423,4 m) con agua azul cobalto, la dorada estatua Tatsuko, y el torii bermellón a la orilla del lago del Santuario Gozanoishi."
+   ],
+   "eat": [
+    "Arroz local machacado presionado en brochetas de cedro, tostado, luego hervido en una olla caliente de pollo Hinai-jidori. Un plato de invierno icónico de Akita que se origina en Odate/norte.",
+    "Contado entre los tres grandes udon de Japón. Fideos de trigo finos, planos y estirados a mano con una textura suave y firme, elaborados durante más de 300 años en Inaniwa, Ciudad de Yuzawa.",
+    "Encurtido de rábano ahumado único de Akita, donde el rábano se seca al humo sobre un hogar (en lugar de secarse al sol) debido al clima nevado; apreciado por su sabor ahumado y sabroso."
+   ],
+   "phrase_en": "Es hermoso, ¿verdad?",
+   "word_en": "los visitantes ogro de Año Nuevo de la Península Oga",
+   "deeper_en": "La nieve aquí es increíble, ¿verdad?",
+   "lede": "Tierra de nieve profunda, arroz y sake, y la feroz tradición folclórica Namahage."
+  },
+  "yamagata": {
+   "tagline": "Templos de montaña, cerezos y monstruos de nieve en el Monte Zaō.",
+   "blurb": "Yamagata, en la región de Tohoku frente al Mar de Japón, cultiva aproximadamente el 70% de los cerezos de Japón y alberga el templo de montaña en acantilado Yamadera (Risshakuji). En invierno, los árboles de abeto del Monte Zao se congelan formando famosos \"monstruos de nieve\" (juhyo) sobre sus pistas de esquí con onsen.",
+   "history": "Yamagata (山形) es una tierra de montañas sagradas. El poeta Bashō escaló el acantilado de Yamadera (山寺) en 1689, y los Dewa Sanzan (出羽三山) han atraído a ascetas de montaña yamabushi durante más de mil años.",
+   "getting": "Yamagata está a aproximadamente 2h30m de Tokio en el Yamagata Shinkansen.",
+   "see": [
+    "Templo en la ladera fundado hace más de 1.000 años, al que se accede por un camino de piedra con 1.015 escalones; famosamente visitado por el poeta de haiku Matsuo Basho, con vistas panorámicas del valle",
+    "Pueblo de aguas termales de la era Taisho apartado de todo, con ryokan de madera alineados a lo largo de un río, iluminados por lámparas de gas por la noche. Construido alrededor de una antigua mina de plata y frecuente doble de",
+    "Cordillera volcánica activa que se extiende entre Yamagata y Miyagi, con el lago del cráter Okama de verano y los monstruos de nieve \"juhyo\" de invierno (árboles cubiertos de escarcha) en la estación de esquí"
+   ],
+   "eat": [
+    "Una de las tres principales marcas de wagyu de Japón junto con Kobe y Matsusaka, apreciada por su fino veteado; típicamente disfrutada como sukiyaki o yakiniku. El ganado se alimenta",
+    "Un sustancioso hotpot de otoño de raíz de taro, carne de res y verduras en caldo a base de soya o miso. Los lugareños se reúnen para fiestas de \"imoni-kai\" a orillas del río, y la ciudad de Yamagata celebra una",
+    "Fideos de trigo sarraceno más gruesos y masticables que la norma nacional, servidos a lo largo de las \"carreteras de soba\" de la prefectura; los platos de fideos fríos o helados son un alimento básico regional."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "cherries — Yamagata grows most of Japan's",
+   "deeper_en": "to appreciate the seasonal atmosphere or charm",
+   "lede": "Templos de montaña, cerezos y monstruos de nieve en el Monte Zaō."
+  },
+  "fukushima": {
+   "tagline": "Historia de samuráis, aguas termales y huertos de frutas en una prefectura grande y pintoresca.",
+   "blurb": "La prefectura más grande del Tohoku por área, Fukushima combina la historia samurái y lacas de las tierras altas de Aizu con la costa del Pacífico, y se divide en tres regiones distintas: la montañosa Aizu, la central Nakadori y la costera Hamadori. Es conocida por castillos en colinas, resorts de aguas termales y espectaculares viajes en ferrocarril como la Tadami Line.",
+   "history": "La región Aizu de Fukushima fue un bastión samurái leal; los jóvenes guerreros Byakkotai y el Tsuruga Castle son centrales en su historia de la Guerra Boshin de 1868.",
+   "getting": "Kōriyama/Fukushima están a aproximadamente 1h20m–1h40m de Tokio en el Tōhoku Shinkansen.",
+   "see": [
+    "El símbolo del clan samurái de Aizu, famoso por resistir un asedio de un mes durante la Guerra Boshin de 1868. Tiene el único keep de castillo con tejas rojas de Japón; rodeado por",
+    "Pueblo de postas del período Edo bellamente preservado con casas de techo de paja en las montañas suroeste; un Distrito de Preservación Importante designado a nivel nacional. Una vez",
+    "Un conjunto de lagos volcánicos cerca del Mt. Bandai (formado en la erupción de 1888) que brillan en tonos cambiantes de esmeralda, cobalto y turquesa por el contenido mineral. Un"
+   ],
+   "eat": [
+    "Uno de los 'Tres Grandes Ramen' de Japón junto con Sapporo y Hakata. De la Ciudad de Kitakata en la región de Aizu: fideos planos gruesos, rizados y con alto contenido de agua envejecidos en un",
+    "Sopa celebratoria tradicional de Aizu hecha con caldo de vieira seca e ingredientes como hongos oreja de madera y shiitake, konjac, taro y helecho de aguafrío, sazonada con",
+    "Plato distintivo de Ouchi-juku: soba de alforfón comida usando un único cebollín largo (negi) en lugar de palillos, que funciona también como condimento. Una costumbre local lúdica"
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "the historic samurai region of western Fukushima",
+   "deeper_en": "The water here is delicious, isn't it? (polite observation about local spring water or sake quality)",
+   "lede": "Historia de samuráis, aguas termales y huertos de frutas en una prefectura grande y pintoresca."
+  },
+  "ibaraki": {
+   "tagline": "Parques de flores de temporada, un Buda gigante, y natto justo al norte de Tokio.",
+   "blurb": "Ibaraki, en la costa del Pacífico al noreste de Tokio, es famosa por el Hitachi Seaside Park con sus colinas de nemophila azul en primavera y kochia roja en otoño, y por Kairakuen en Mito, uno de los \"Tres Grandes Jardines\" de Japón con alrededor de 3.000 árboles de ciruela. También es hogar de Tsukuba Science City, un centro de instituciones nacionales de investigación.",
+   "history": "Ibaraki (茨城) fue el dominio Mito (水戸) de una rama senior de los Tokugawa; los eruditos señores de Mito crearon Kairaku-en (偕楽園), uno de los tres grandes jardines de Japón, como un espacio para compartir con el público.",
+   "getting": "Mito está a ~1h15m de Tokio en tren de velocidad limitada; Hitachi Seaside Park se accede en autobús desde Katsuta.",
+   "see": [
+    "Uno de los tres grandes jardines de Japón, construido por el señor feudal Tokugawa Nariaki como un parque abierto a los ciudadanos ordinarios. Famoso por ~3.000 árboles de ciruela (ume) que florecen en febrero.",
+    "Con 120m de altura, una de las estatuas de Buda de bronce más altas del mundo. Un elevador sube hasta una plataforma de observación a la altura del pecho; rodeada de jardines, árboles de cerezo y un loto.",
+    "Amplio parque costero en Hitachinaka famoso por sus campos de flores de temporada, una noria y juegos mecánicos; la colina de nemophila de primavera es su principal atracción."
+   ],
+   "eat": [
+    "El alimento más icónico de Ibaraki: pequeños granos de soja fermentados de Mito, valorados por su pegajosidad fuerte, aroma rico y umami. Se consume sobre arroz, en tostadas o en pasta.",
+    "Ibaraki produce más del 90% del hoshi-imo de Japón (Hitachinaka, Tokai, Naka). Naturalmente dulce, masticable, sin azúcar añadido; el revestimiento blanco de la superficie es glucosa cristalizada.",
+    "Especialidad invernal de la costa (Mito/Oarai). Pez sapo cocido a fuego lento en un caldo rico; casi todas las partes son comestibles y el hígado rico en colágeno es apreciado como una delicia."
+   ],
+   "phrase_en": "Es hermoso, ¿verdad?",
+   "word_en": "granos de soja fermentados pegajosos — Mito es famosa por ellos",
+   "deeper_en": "saborear los sabores locales / disfrutar verdaderamente de la gastronomía regional",
+   "lede": "Parques de flores de temporada, un Buda gigante, y natto justo al norte de Tokio."
+  },
+  "tochigi": {
+   "tagline": "Hogar de los santuarios ornamentados y cascadas de Nikkō.",
+   "blurb": "Tochigi, aproximadamente 100 km al norte de Tokio, alberga los santuarios y templos Patrimonio de la Humanidad de Nikko con pan de oro y el parque nacional circundante de cascadas, lagos y follaje otoñal. La capital Utsunomiya es reconocida en todo Japón como la ciudad de los gyoza (dumplings).",
+   "history": "Tochigi (栃木) alberga Nikkō (日光), donde Tokugawa Ieyasu fue enshrined en 1617 en el lujosamente tallado Tōshō-gū (東照宮), convirtiéndolo en uno de los complejos de santuarios más importantes de Japón.",
+   "getting": "Nikkō está a ~2h de Tokio (línea Tōbu desde Asakusa, o shinkansen + transbordo).",
+   "see": [
+    "Mausoleo lujosamente tallado del shogun Tokugawa Ieyasu y parte del Patrimonio de la Humanidad 'Santuarios y Templos de Nikko'. Famoso por los Tres Monos Sabios y ",
+    "Más allá de Toshogu, el sitio Patrimonio de la Humanidad abarca 103 estructuras incluyendo el Templo Rinnoji del siglo VIII, el Santuario Futarasan dedicado a las montañas sagradas de Nikko, y la ",
+    "Una cascada de 97 metros cerca del Lago Chuzenji al pie del Mt. Nantai, una de las cascadas más famosas de Japón; un emparejamiento clásico de segundo día con los santuarios de Nikko, espectacular"
+   ],
+   "eat": [
+    "Utsunomiya es la autoproclamada capital de gyoza de Japón con más de 300 tiendas especializadas; el estilo local es ligero e impulsado por verduras, servido a la sartén (yaki), frito profundamente (",
+    "Un ramen regional de la ciudad de Sano con un caldo ligero a base de soya y fideos hechos a mano elásticos y esponjosos tradicionalmente amasados con una varita de bambú verde (aodake). Alrededor ",
+    "Tochigi es la prefectura productora de fresas número uno de Japón; la variedad dulce y jugosa Tochiotome es un emblema. Granjas de fresas de recolección propia (por ejemplo, alrededor de Mashiko/N"
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "dumplings a la sartén — la especialidad de Utsunomiya",
+   "deeper_en": "Por favor ten cuidado / Ten cuidado",
+   "lede": "Hogar de los santuarios ornamentados y cascadas de Nikkō."
+  },
+  "gunma": {
+   "tagline": "Famosos complejos termales y patrimonio de molinos de seda de la UNESCO.",
+   "blurb": "Una prefectura sin litoral y montañosa en el norte de Kanto famosa por sus aguas termales, incluyendo Kusatsu Onsen, que cuenta con el mayor flujo natural de agua caliente de Japón. También es el hogar del Molino de Seda Tomioka, Patrimonio de la Humanidad de la UNESCO, y la cuna de la muñeca daruma.",
+   "history": "Gunma (群馬) impulsó la era moderna de Japón: el Molino de Seda Tomioka (富岡製糸場), abierto en 1872, mecanizó la producción de seda y ahora es un sitio de la UNESCO. Sus montañas esconden aguas termales centenarias.",
+   "getting": "Takasaki está a ~50 min de Tokio en shinkansen; los pueblos termales se alcanzan en autobús o tren local.",
+   "see": [
+    "Sitio Patrimonio de la Humanidad de la UNESCO (2014), la primera fábrica moderna de hilado de seda de Japón (est. 1872) que combina arquitectura occidental y japonesa; demostraciones y seda viva",
+    "Uno de los tres principales complejos termales de Japón con el mayor flujo natural de manantiales del país; la humeante fuente Yubatake y la canción y danza tradicionales yumomi",
+    "Una escalinata histórica de piedra de más de 300 m (365 escalones) bordeada de tiendas de artesanía y posadas, famosa por su encanto retro y aguas termales de color marrón dorado ricas en hierro."
+   ],
+   "eat": [
+    "Gunma es una región importante de trigo; Mizusawa udon (considerados entre los fideos de mejor calidad de Japón, suave con una mordida firme) y el ultraancho himokawa udon son emblemáticos",
+    "Bollos al vapor ensartados, a la parrilla y cubiertos con un glaseado de miso dulce. Un querido bocadillo callejero de la era Edo originario de Maebashi, con un festival en Isesaki.",
+    "Gunma cultiva más del 90% de la taro konjac de Japón, haciendo que este alimento gelatinoso bajo en calorías y apto para veganos sea un producto local definitorio."
+   ],
+   "phrase_en": "¿Dónde está la estación?",
+   "word_en": "agua termal — Gunma tiene las más famosas de Japón",
+   "deeper_en": "descansar y recuperarse del cansancio en un agua termal",
+   "lede": "Famosos complejos termales y patrimonio de molinos de seda de la UNESCO."
+  },
+  "saitama": {
+   "tagline": "Un pequeño Edo en Kawagoe, más bonsái y suburbios bulliciosos.",
+   "blurb": "Una prefectura sin salida al mar justo al norte de Tokio, Saitama es conocida principalmente por el paisaje urbano de almacenes «Pequeño Edo» de Kawagoe y la región montañosa de Chichibu con sus gargantas, santuarios y aguas termales. Omiya, su centro urbano, alberga el Museo Ferroviario y un histórico pueblo de bonsái.",
+   "history": "El Kawagoe de Saitama (埼玉) prosperó como pueblo comercial que abastecía a Edo; sus almacenes de arcilla kurazukuri supervivientes y la Torre de Campana de madera (時の鐘) le han valido el apodo de «Pequeño Edo» (小江戸).",
+   "getting": "Kawagoe está a ~30–45 min del centro de Tokio en tren (Tōbu/Seibu/JR).",
+   "see": [
+    "Calles históricas bordeadas de almacenes preservadas del período Edo, con la icónica torre de campanas Toki no Kane que aún toca cuatro veces al día.",
+    "Santuario de ~1.500 años de antigüedad famoso como «lugar de poder» para encuentros amorosos; su festival estival «Enmusubi Furin» exhibe alrededor de 2.100 campanas de viento al estilo Edo en toda la zona.",
+    "Santuario de montaña a ~1.100 m de altitud que consagra lobos como mensajeros divinos; considerado uno de los principales lugares de poder espiritual de la región de Kanto."
+   ],
+   "eat": [
+    "Galletas de arroz horneadas con dureza de Soka, que datan del período Edo cuando Soka era un pueblo postal en la carretera Nikko Kaido; prensadas con un prensa oshigawara para obtener una textura crujiente característica.",
+    "Anguila dividida, deshuesada, ensartada y a la parrilla en una marinada de salsa de soja dulce; una tradición de ~200 años que sigue viva en torno a Urawa, donde ha sido durante mucho tiempo una especialidad muy valorada.",
+    "Saitama es el segundo productor de udon más grande de Japón (después de Kagawa) gracias a su producción de trigo, con muchas variaciones locales servidas en toda la prefectura."
+   ],
+   "phrase_en": "Voy a pedir esto, por favor.",
+   "word_en": "«Pequeño Edo» — apodo de Kawagoe",
+   "deeper_en": "Este lugar es justo como en los viejos tiempos, ¿verdad?",
+   "lede": "Un pequeño Edo en Kawagoe, más bonsái y suburbios bulliciosos."
+  },
+  "chiba": {
+   "tagline": "Vecino costero de Tokio — la puerta de entrada del aeropuerto, playas y un templo famoso.",
+   "blurb": "Chiba es la puerta oriental de Japón, hogar del Aeropuerto Internacional Narita y, en Urayasu, del Tokyo Disney Resort, mientras que su Península de Boso ofrece vistas al océano, playas para surfear y el mirador acantilado \"Jigoku Nozoki\" del Monte Nokogiri.",
+   "history": "Chiba (千葉) ha sido durante mucho tiempo la despensa costera y puerta de entrada de Edo/Tokio; Narita-san Shinshō-ji (成田山新勝寺), fundado en 940, atrae a millones de fieles en Año Nuevo cada año.",
+   "getting": "El Aeropuerto Narita se encuentra en Chiba; el centro de Chiba está a ~40 min de Tokio en tren.",
+   "see": [
+    "Templo de más de 1,000 años de antigüedad cerca del Aeropuerto Narita que atrae a más de 10 millones de visitantes al año; rituales de fuego goma, una pagoda de Propiedad Cultural Importante, y un animado Omote.",
+    "Monte Nokogiri de 329m, la 'Montaña Serrada', con uno de los mayores Budas de piedra de Japón, más de 1,500 estatuas de arhat, y el mirador de acantilado 'Jigoku Nozoki' (Vista del Infierno).",
+    "Un faro de ladrillo diseñado por británicos en 1874 en el cabo más oriental de la región de Kanto, una Propiedad Cultural Tangible Registrada y listado entre los principales faros de Japón."
+   ],
+   "eat": [
+    "Chiba produce la gran mayoría de los cacahuetes de Japón; consumidos hervidos, tostados, azucarados o en miso. Un recuerdo regional emblemático.",
+    "Un plato de pescador de la Península de Boso hecho de caballa o jurel picado o molido condimentado con jengibre y miso.",
+    "Choshi ha sido el puerto pesquero más importante de Japón por volumen durante años gracias a las corrientes cálidas y frías convergentes; los cuencos de sashimi fresco y la captura de temporada son una atracción."
+   ],
+   "phrase_en": "¿Dónde está la estación?",
+   "word_en": "el templo mayor cerca del Aeropuerto Narita",
+   "deeper_en": "Recibo con gratitud la abundancia local del mar (dicho antes de comer mariscos frescos).",
+   "lede": "Vecino costero de Tokio — la puerta de entrada del aeropuerto, playas y un templo famoso."
+  },
+  "tokyo": {
+   "see": [
+    "El templo más antiguo de Tokio (fundado en el siglo VII), se ingresa a través de la puerta Kaminarimon Thunder Gate y la concurrida calle comercial Nakamise; el templo más visitado de la ciudad",
+    "Santuario dedicado al emperador Meiji y la emperatriz Shoken, ubicado en un bosque artificial de más de 700,000 metros cuadrados; recibe alrededor de 3 millones de visitantes durante Año Nuevo",
+    "Zona shitamachi sobreviviente con la calle comercial Yanaka Ginza, el histórico Cementerio Yanaka y el Santuario Nezu, uno de los santuarios más antiguos de Tokio famoso por su primavera"
+   ],
+   "eat": [
+    "Plato shitamachi (centro antiguo) emblemático de Tokio: una masa de harina líquida con repollo y ingredientes cocinados por los comensales en una parrilla de mesa. Calle Tsukishima Monja",
+    "Tokio (antiguo Edo) es el lugar de nacimiento del sushi nigiri 'Edomae' que utiliza mariscos de la Bahía de Tokio; la guía oficial de Tokio lo incluye entre los alimentos locales que definen a la ciudad",
+    "El ramen estilo 'Tokio' a base de soja es un elemento básico de la ciudad; Tokyo Ramen Street junto a la Estación Tokio reúne ocho tiendas aclamadas, cada una con su propia variación"
+   ]
+  },
+  "kanagawa": {
+   "tagline": "El Gran Buda de Kamakura, la ciudad portuaria de Yokohama y las aguas termales de Hakone.",
+   "blurb": "Al sur de Tokio, Kanagawa combina la ciudad portuaria internacional de Yokohama con la antigua capital llena de templos de Kamakura y los balnearios de aguas termales volcánicas de Hakone. Es una prefectura perfecta para excursiones de un día que une horizontes portuarios, el Gran Buda al aire libre y vistas de islas costeras.",
+   "history": "Kanagawa (神奈川) fue la capital medieval de Japón: Kamakura (鎌倉) funcionó como sede del shogunato desde 1185, y su Gran Buda de bronce (大仏) ha permanecido al aire libre desde el siglo XIII. Yokohama (横浜) se abrió al mundo en 1859.",
+   "getting": "Yokohama ~30 min, Kamakura ~1h, Hakone ~1h25m desde Tokio en tren.",
+   "see": [
+    "Daibutsu de bronce del siglo XIII, una de las más grandes de Japón; los visitantes pueden entrar dentro de la estatua hueca.",
+    "El santuario sintoísta más importante de Kamakura, fundado en 1063, dedicado a Hachiman y central en la historia samurái de la ciudad.",
+    "Santuario a orillas del lago al pie del Monte Hakone, famoso por su puerta torii roja que se alza en el Lago Ashinoko."
+   ],
+   "eat": [
+    "El barrio chino más grande de Japón; famoso por sus bollos de cerdo (nikuman) y dumplings al vapor shumai, además de un ramen de influencia china local llamado sanma-men.",
+    "Una firma de Kamakura/Shonan: pequeños peces blancos suaves y ligeramente salados servidos sobre arroz. Los nama-shirasu crudos solo están disponibles el día en que se capturan.",
+    "Curry abundante basado en una receta adoptada por la antigua Armada Imperial Japonesa de la sopa de carne de res británica; un plato característico de la ciudad portuaria Yokosuka."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "Great Buddha — Kamakura's iconic bronze statue",
+   "deeper_en": "What a nice view, isn't it?",
+   "lede": "El Gran Buda de Kamakura, la ciudad portuaria de Yokohama y las aguas termales de Hakone."
+  },
+  "niigata": {
+   "tagline": "Arroz, sake y nieve en la costa del Mar de Japón.",
+   "blurb": "Frente al Mar de Japón, Niigata es el corazón arrocero y de sake de Japón, reconocida por su arroz Koshihikari de primera calidad, decenas de destilerías de sake y abundantes mariscos. En invierno, sus montañas reciben algunas de las nevadas más abundantes y polvorosas del país, atrayendo a esquiadores y visitantes de onsen a la legendaria \"País de la Nieve\".",
+   "history": "Niigata (新潟) se enriqueció con el arroz y como puerto en el Mar de Japón; la Isla de Sado (佐渡島) fue alguna vez una mina de oro y lugar de exilio para la nobleza, dejando una cultura insular distintiva.",
+   "getting": "Niigata está a ~2h, Echigo-Yuzawa a ~1h15m desde Tokio en Jōetsu Shinkansen.",
+   "see": [
+    "Icónico puente de arco de piedra sobre el río Shinano, el río más largo de Japón, designado Propiedad Cultural Importante y símbolo del centro de la ciudad de Niigata.",
+    "Mansión preservada y jardines de la adinerada familia terrateniente Ito de Echigo, con arte y arquitectura que muestran las tradiciones rurales de Niigata; famoso por su belleza.",
+    "Antiguo y reverenciado santuario Shinto al pie del Mt. Yahiko, popular por su significado espiritual combinado con paisajes naturales y follaje estacional."
+   ],
+   "eat": [
+    "Niigata es la principal región arrocera de Japón (el apreciado Koshihikari) y tiene el mayor número de destilerías de sake del país; el arroz y el sake son su combinación característica.",
+    "Arroz Niigata premium al vapor en una caja de cedro cilíndrica 'wappa', coronado con ingredientes estacionales de montaña y mar como salmón, ostras o pollo.",
+    "Un plato casero de vegetales guisados (konjac, zanahoria, raíz de loto, shiitake, a veces hueva de salmón) que los locales comen en festivales y Año Nuevo; poco conocido fuera de la región."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "sake — Niigata is one of Japan's top regions for it",
+   "deeper_en": "The rice here is really delicious, isn't it?",
+   "lede": "Arroz, sake y nieve en la costa del Mar de Japón."
+  },
+  "toyama": {
+   "tagline": "Muros de nieve imponentes en los Alpes y bahías cristalinas de calamares lucciérnaga.",
+   "blurb": "Toyama se sitúa entre los picos que se elevan a 3.000 metros de los Alpes del norte de Japón y las aguas profundas y ricas en mariscos de la bahía de Toyama, y es conocida principalmente por la Ruta Alpina Tateyama Kurobe, donde los muros de nieve primaveral se elevan aproximadamente 20 metros. También ofrece pueblos gassho-zukuri Patrimonio de la Humanidad de la UNESCO en Gokayama y reconocidos balnearios costeros con vistas a las montañas de Tateyama.",
+   "history": "Toyama (富山) prosperó gracias a vendedores de medicina y transporte marítimo; en las montañas, los pueblos de Gokayama (五箇山) conservaron sus casas gassho-zukuri con techos empinados de paja durante siglos, ahora declaradas Patrimonio de la Humanidad.",
+   "getting": "Toyama está aproximadamente a 2h10m de Tokio por el Shinkansen Hokuriku.",
+   "see": [
+    "La presa de arco más alta de Japón (186m), completada en 1963. La descarga de agua ensordecedora (finales de junio a mediados de octubre), aproximadamente 10 toneladas/segundo, es el espectáculo distintivo visto desde",
+    "Patrimonio de la Humanidad de la UNESCO (1995) pueblos gassho-zukuri con techos de paja en la ciudad de Nanto; puedes alojarte de noche en una casa tradicional de granja administrada por familias y cenar alrededor del",
+    "Ruta de cruce de montañas a través de los Alpes del norte de Japón, famosa por muros de nieve de aproximadamente 14-18m en Murodo (2.450m); la Caminata del Muro de Nieve corre aproximadamente desde mediados de abril hasta finales de junio cada"
+   ],
+   "eat": [
+    "Llamado la 'Joya de la bahía de Toyama'; la bahía de Toyama es esencialmente el único lugar donde se captura comercialmente. Servido como sashimi, sushi o tempura kakiage, apreciado por su",
+    "El 'Misterio de la bahía de Toyama' - diminutos calamares que brillan en azul blancuzco, capturados principalmente frente a Namerikawa en primavera. La preparación local clásica es con miso vinagrado (sumiso)",
+    "Especialidad local del período Edo: filete de trucha en salazón prensado sobre arroz y envuelto en hoja de bambú en una caja redonda. Un famoso bento de la estación de Toyama / recuerdo."
+   ],
+   "phrase_en": "Es hermoso, ¿verdad?",
+   "word_en": "el corredor de muros de nieve imponentes en la Ruta Alpina",
+   "deeper_en": "Los muros de nieve son verdaderamente maravillosos, ¿no es así?",
+   "lede": "Muros de nieve imponentes en los Alpes y bahías cristalinas de calamares lucciérnaga."
+  },
+  "ishikawa": {
+   "tagline": "Los jardines de Kanazawa y la hoja de oro, más la accidentada Península de Noto.",
+   "blurb": "Ishikawa se extiende a lo largo del Mar de Japón, anclada por la ciudad castillo de Kanazawa con su celebrado Kenrokuen, uno de los tres grandes jardines de Japón, y sus conservados distritos de geishas y samuráis. Al norte de la ciudad, la accidentada Península de Noto ofrece dramáticos paisajes costeros, artesanías de laca centenarias y mercados de mariscos.",
+   "history": "Kanazawa en Ishikawa fue la sede del adinerado clan Maeda, segundo solo después del Tokugawa. Libre del bombardeo durante la guerra, conservó sus distritos de samuráis y geishas y el celebrado jardín Kenrokuen.",
+   "getting": "Kanazawa está a ~2h30m de Tokio en el Hokuriku Shinkansen.",
+   "see": [
+    "Uno de los Tres Grandes Jardines de Japón, junto al Castillo de Kanazawa. Su nombre significa 'jardín de seis atributos' (amplitud, aislamiento, artificio, antigüedad, agua, y",
+    "El distrito de casas de té (chaya) preservado más grande de Kanazawa, con casas de geishas de celosía de madera, tiendas de hoja de oro y cafés tradicionales en callejones estrechos.",
+    "Antiguo barrio residencial de samuráis preservado con muros de tierra y callejones; algunas residencias antiguas están abiertas a visitantes, otras ahora albergan cafés y tiendas de artesanía."
+   ],
+   "eat": [
+    "Ishikawa se encuentra donde se encuentran las corrientes cálidas y frías del Mar de Japón, dando mariscos excepcionales; el Mercado Omicho es la 'Cocina de Kanazawa' con más de 180 tiendas. Briba invernal",
+    "Una firma de Kanazawa: pato (a veces otras aves de corral) cubierto de harina y cocido a fuego lento con vegetales de temporada en dashi, dando un caldo característicamente espeso y brillante",
+    "Wagyu de ganado negro criado en la Península de Noto; la producción es tan pequeña que raramente se envía fuera de Ishikawa, lo que la convierte en una verdadera delicia solo local comparada"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "gold leaf — Kanazawa makes most of Japan's",
+   "deeper_en": "The scenery here is truly wonderful, isn't it?",
+   "lede": "Los jardines de Kanazawa y la hoja de oro, más la accidentada Península de Noto."
+  },
+  "fukui": {
+   "tagline": "Dinosaurios, acantilados dramáticos y un gran templo Zen.",
+   "blurb": "Fukui es el \"Reino de los Dinosaurios\" de Japón, hogar del Museo de Dinosaurios de la Prefectura de Fukui y aproximadamente el 80% de los hallazgos de fósiles de dinosaurios del país. También atrae a visitantes con los espectaculares pilares de roca del Mar de Japón en Tojinbo y el sereno templo de entrenamiento Soto Zen Eiheiji.",
+   "history": "Fukui (福井) es hogar de Eihei-ji (永平寺), fundado en 1244 como templo principal del Zen Sōtō, y tiene tantos fósiles de dinosaurios que alberga el museo de dinosaurios más importante de Japón.",
+   "getting": "Fukui es accesible a través del Hokuriku Shinkansen (extendido a Tsuruga en 2024).",
+   "see": [
+    "Uno de los dos templos principales del budismo Soto Zen; un complejo de montaña con 70 edificios y más de 200 monjes y monjas residentes, el sitio de entrenamiento Zen más grande de Japón.",
+    "Más de un kilómetro de espectaculares acantilados de basalto columnar a lo largo del Mar de Japón; un lugar entre los '100 mejores atardeceres de Japón', mejor visto en un tour en bote al atardecer.",
+    "Uno de los mejores museos de dinosaurios del mundo y el más grande de Japón, con 50 esqueletos incluyendo Fukuiraptor y Fukuisaurus locales además de dinosaurios animatrónicos."
+   ],
+   "eat": [
+    "Cangrejo de nieve macho premium desembarcado en la costa de Echizen, etiquetado con una marca de puerto amarilla para autenticidad. La temporada abre el 6 de noviembre; un manjar invernal característico en restaurantes locales.",
+    "Plato clásico del norte de Fukui: fideos de trigo sarraceno fríos cubiertos con daikon rallado, copos de bonito y cebolleta. Ganó fama después de que el Emperador Showa lo elogiara en 1947.",
+    "Comida del alma de Fukui con más de 100 años de historia: sutil filete de cerdo sumergido en una salsa agridulce a base de salsa Worcestershire, servido sobre arroz (sin huevo, a diferencia del katsudon estándar)."
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "dinosaurio — Fukui es la capital de dinosaurios de Japón",
+   "deeper_en": "El paisaje aquí es realmente maravilloso, ¿verdad?",
+   "lede": "Dinosaurios, acantilados dramáticos y un gran templo Zen."
+  },
+  "yamanashi": {
+   "tagline": "Los lagos del Monte Fuji, viñedos y la región vinícola de Japón.",
+   "blurb": "Yamanashi, sin salida al mar, se encuentra a la sombra del Monte Fuji, compartiendo el pico más alto e icónico de Japón con la prefectura vecina de Shizuoka y abrazando los pintorescos Cinco Lagos de Fuji. También es la principal región vinícola de Japón, con más de 80 bodegas centradas en la uva nativa Koshu, además de huertos famosos por sus duraznos y uvas.",
+   "history": "Yamanashi (山梨) fue el reino del señor de la guerra Takeda Shingen (武田信玄). Su cuenca de Kōfu (甲府), rodeada de montañas, se convirtió en la principal región vinícola de Japón gracias a las uvas koshu nativas.",
+   "getting": "El Lago Kawaguchi está a ~2h de Tokio en autobús o tren (vía Ōtsuki).",
+   "see": [
+    "Pagoda de cinco pisos sobre Fujiyoshida a la que se accede por ~400 escalones, ofreciendo la vista enmarcada icónica del Monte Fuji; espectacular con flores de cerezo a mediados de abril y otoño.",
+    "Templo principal de la secta Nichiren del budismo; los visitantes suben 287 empinados escalones de piedra (u optan por el teleférico) pasando puertas, pagodas y una sala de tesoros en una montaña sagrada.",
+    "Capital histórica vinícola de Japón con más de 90 bodegas abiertas para degustaciones entre viñedos, una excursión de un día fácil desde Tokio y el corazón cultural de la vinicultura japonesa."
+   ],
+   "eat": [
+    "El plato de confort emblemático de Yamanashi: fideos de trigo planos y anchos cocidos a fuego lento en un caldo miso rico con calabaza kabocha y verduras de temporada, servidos en una olla de hierro.",
+    "Elaborado con la uva indígena Koshu; Yamanashi tiene más de 90 bodegas que producen aproximadamente el 30% del vino de Japón, siendo el Valle Koshu alrededor de Katsunuma/Koshu City un destino popular.",
+    "Kikyo Shingen Mochi es un mochi suave espolvoread con kinako y bañado con sirope kuromitsu, un famoso recuerdo nacido en 1968. Yamanashi también es el principal productor de melocotones de Japón."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "Mount Fuji — best viewed from Yamanashi's lakes",
+   "deeper_en": "The scenery is beautiful, isn't it?",
+   "lede": "Los lagos del Monte Fuji, viñedos y la región vinícola de Japón."
+  },
+  "nagano": {
+   "tagline": "Picos alpinos, el gran templo Zenkō-ji y monos de nieve en aguas termales.",
+   "blurb": "Una prefectura sin salida al mar y montañosa en el centro de Japón rodeada por los imponentes picos de los Alpes Japoneses, Nagano fue sede de los Juegos Olímpicos de Invierno de 1998 y atrae a visitantes con estaciones de esquí, templos históricos y los salvajes monos de nieve que se bañan en aguas termales humeantes en Jigokudani.",
+   "history": "Nagano (長野) creció alrededor del antiguo templo de Zenkō-ji (善光寺) y las ciudades de postas del camino Nakasendō (中山道). Fue sede de los Juegos Olímpicos de Invierno de 1998, consolidando su posición como el corazón alpino de Japón.",
+   "getting": "La ciudad de Nagano está a ~1h30m de Tokio en el Hokuriku Shinkansen.",
+   "see": [
+    "Tesoro Nacional y uno de los castillos de madera más antiguos y sobrevivientes de Japón, famoso por su exterior blanco y negro del 'Crow Castle' ubicado contra los Alpes del Norte de Japón.",
+    "Templo budista histórico del siglo VII en la ciudad de Nagano, hogar de la estatua de Amida Nyorai más antigua de Japón. Lo destacado es el pasaje subterráneo completamente oscuro donde los visitantes pueden caminar.",
+    "El único lugar en el mundo donde los macacos japoneses salvajes se bañan en aguas termales naturales, ubicado en un valle humeante a ~850m de elevación cubierto de nieve gran parte del año."
+   ],
+   "eat": [
+    "Tallarines de trigo sarraceno distintivos de Nagano; el terreno montañoso árido favoreció el trigo sarraceno sobre el arroz. Togakushi en el norte es una de las regiones de soba más celebradas de Japón.",
+    "Dumplings tradicionales de Nagano: masa de trigo sarraceno fermentado envuelta alrededor de rellenos como verduras de montaña sansai, nozawana, berenjena con miso o frijoles rojos dulces.",
+    "Arroz molido moldeado en un palillo plano, cubierto con una salsa de miso dulce y salada de nuez/sésamo y asado a la parrilla; una comida callejera hearty de las montañas centrales de Nagano."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "buckwheat noodles — Shinshu (Nagano) is famous for them",
+   "deeper_en": "The mountains are beautiful, aren't they? (polite observation to share with locals)",
+   "lede": "Picos alpinos, el gran templo Zenkō-ji y monos de nieve en aguas termales."
+  },
+  "gifu": {
+   "tagline": "Pueblos de montaña con techos de paja y el antiguo pueblo ribereño de Takayama.",
+   "blurb": "Una prefectura sin salida al mar y montañosa en el centro de Japón, famosa por las casas de granja gassho-zukuri con techo de paja reconocidas como Patrimonio de la Humanidad por la UNESCO en Shirakawa-go y las calles bien conservadas de la era Edo de Takayama en los Alpes Japoneses. También cuenta con Gero, considerado uno de los tres grandes balnearios de aguas termales de Japón.",
+   "history": "Gifu (岐阜) se encuentra en antiguas rutas comerciales y de batalla — Sekigahara (関ヶ原), la batalla decisiva de 1600, se libró aquí. El aislamiento montañoso preservó las casas de granja con techo de paja de Shirakawa-gō (白川郷) y el pueblo de comerciantes de Takayama (高山).",
+   "getting": "Takayama está a ~2h20m de Nagoya en tren expreso limitado; Shirakawa-go en autobús.",
+   "see": [
+    "Pueblo Patrimonio de la Humanidad de la UNESCO con casas de granja gassho-zukuri con techo de paja (algunas de más de 250 años), especialmente famoso por sus escenas de nieve invernal y las luces de enero a febrero",
+    "Calles de comerciantes del período Edo preservadas con casas tradicionales adornadas con noren y destilerías de sake; hogar del Festival Takayama, uno de los tres festivales más hermosos de Japón",
+    "La 'Ciudad del Agua' cerca del río Nagara, con casas estilo samurái Yanagimachi, callejones de artesanos y canales claros que pasan junto a casas antiguas."
+   ],
+   "eat": [
+    "Wagyu de grado A5 premium de ganado Angus Negro criado en Gifu durante 14+ meses; servido como filete, sushi, pinchos y sobre cuencos de arroz alrededor de Takayama, valorado por su sabor",
+    "Miso estilo Hida con verduras (y a menudo carne Hida) a la parrilla sobre una hoja de magnolia seca en una placa caliente, dando un aroma terroso; una especialidad clásica de Takayama.",
+    "El ramen del alma de Takayama: fideos finos y rizados en un caldo simple a base de salsa de soja, distinto de los estilos más ricos en otros lugares."
+   ],
+   "phrase_en": "¡Está delicioso!",
+   "word_en": "el característico estilo de casa de granja con techo de paja de Shirakawa-go",
+   "deeper_en": "El clima de montaña cambia fácilmente / es impredecible.",
+   "lede": "Pueblos de montaña con techos de paja y el antiguo pueblo ribereño de Takayama."
+  },
+  "shizuoka": {
+   "tagline": "Monte Fuji, campos de té verde y la Península de Izu en la costa.",
+   "blurb": "Shizuoka es famosa por sus vistas panorámicas del Monte Fuji y produce una gran parte del té verde de Japón, mientras que su Península de Izu atrae a visitantes con aguas termales costeras y mariscos frescos.",
+   "history": "Shizuoka (静岡) fue donde Tokugawa Ieyasu pasó sus últimos años en Sunpu Castle (駿府城). Con clima templado y soleado, sus laderas se convirtieron en la región productora de té verde de Japón.",
+   "getting": "La ciudad de Shizuoka está a aproximadamente 1h de Tokio en el Tōkaidō Shinkansen.",
+   "see": [
+    "El primer santuario Toshogu, dedicado a Tokugawa Ieyasu; la sala principal de 400 años fue designada Tesoro Nacional en 2010, accesible por teleférico desde Niho",
+    "El icónico pico sagrado de Japón; en 2025 Shizuoka introdujo reglas vinculantes con una tarifa de 4.000 yenes y registro previo obligatorio/prueba de seguridad en línea a través del canal oficial",
+    "Orilla arbolada de pinos famosa por sus vistas del Monte Fuji (parte del sitio Patrimonio Mundial Fujisan) más la meseta Nihondaira que domina la Bahía de Suruga, campos de té y Shimiz"
+   ],
+   "eat": [
+    "Shizuoka produce aproximadamente el 40% de todo el té verde japonés, la mayor producción de cualquier prefectura; las laderas vírgenes y el agua crean hojas de alta calidad.",
+    "Shizuoka es la cuna del wasabi cultivado (Utogi); su método tradicional de cultivo en agua tatamiishi es una Importancia Agrícola Global reconocida por la ONU",
+    "Capturado en solo dos puertos en la Tierra, ambos en Shizuoka (Yui y Oigawa), y solo en estaciones limitadas; servido crudo sobre arroz, como tempura kakiage, o en el local 'oki"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "green tea — Shizuoka is Japan's biggest producer",
+   "deeper_en": "expression of gratitude before eating (literally: 'I humbly receive')",
+   "lede": "Monte Fuji, campos de té verde y la Península de Izu en la costa."
+  },
+  "aichi": {
+   "tagline": "El castillo de Nagoya, la industria y la historia de la era samurái.",
+   "blurb": "Aichi, centrada en Nagoya, la cuarta ciudad más grande de Japón, es el corazón de la industria automotriz (hogar de Toyota) y alberga monumentos feudales como el Castillo Nagoya y el antiguo Santuario Atsuta. Su costa de Mikawa Bay ofrece pequeñas islas y el torreón de madera original del Castillo Inuyama, uno de los castillos más antiguos de Japón.",
+   "history": "Aichi (愛知) produjo tres de los grandes unificadores de Japón: Oda Nobunaga, Toyotomi Hideyoshi y Tokugawa Ieyasu. Nagoya (名古屋) luego se convirtió en un gigante industrial y cuna de Toyota.",
+   "getting": "Nagoya está a aproximadamente 1h40m de Tokio y aproximadamente 50 minutos de Kioto por el Tōkaidō Shinkansen.",
+   "see": [
+    "Antigua sede del Tokugawa de Owari, famosa por sus dorados shachihoko (ornamentos de pez-tigre) y el lujosamente restaurado Palacio Honmaru con pintura de biombos con pan de oro.",
+    "Uno de los santuarios sintoístas más venerados de Japón (con más de 1.900 años de antigüedad), que alberga la sagrada espada Kusanagi-no-Tsurugi; su Sala del Tesoro contiene una gran colección rotativa.",
+    "El torreón de castillo de madera existente más antiguo de Japón, designado Tesoro Nacional, encaramado sobre el Río Kiso, con un histórico pueblo castillo abajo."
+   ],
+   "eat": [
+    "Filete de cerdo empanizado y frito profundamente cubierto con una rica salsa aka-miso roja hecha del envejecido sello de soja Hatcho de Aichi. Un clásico definitivo de Nagoya.",
+    "Angila de agua dulce a la parrilla de carbón sobre arroz, que se dice se originó en Nagoya. Se come en tres estilos: simple, con condimentos (nori, wasabi, cebolla verde) y como.",
+    "Tallarín udon grueso y firme cocido en un caldo rojo-miso sustancioso con pollo, tofu y verduras, servido hirviendo en una olla de barro. Un clásico reconfortante de Aichi."
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "filete de cerdo con salsa roja-miso rica, un clásico de Nagoya",
+   "deeper_en": "El sabor aquí es realmente excepcional, ¿verdad?",
+   "lede": "El castillo de Nagoya, la industria y la historia de la era samurái."
+  },
+  "mie": {
+   "tagline": "El santuario más sagrado de Japón en Ise y la tradición de las buceadoras de perlas Ama.",
+   "blurb": "Mie alberga Ise Jingu, el complejo de santuarios sintoístas más sagrado de Japón con 125 santuarios, y la costa de Ise-Shima donde Mikimoto produjo la primera perla cultivada del mundo en 1893. Sus bahías del Pacífico con forma de dentado están salpicadas de islas y trabajadas por ama, las mujeres buceadoras tradicionales que cosechan abulón y mariscos.",
+   "history": "Mie (三重) alberga Ise Jingū (伊勢神宮), el santuario más sagrado del Shintō, reconstruido cada 20 años durante más de 1.300 años. La costa de Shima (志摩) es la cuna de las perlas cultivadas y de las buceadoras libres Ama (海女).",
+   "getting": "Ise está a aproximadamente 1h20m de Nagoya en tren expreso limitado; aproximadamente 2h de Osaka.",
+   "see": [
+    "El complejo de santuarios sintoístas más sagrado de Japón con 125 santuarios, centrado en los santuarios Naiku (Interior) y Geku (Exterior) dedicados a la diosa del sol Amaterasu.",
+    "Dos rocas del mar unidas por una gruesa cuerda sagrada shimenawa frente al Santuario Futami Okitama; símbolo de armonía matrimonial, con la salida del sol enmarcada entre ellas de mayo a julio.",
+    "Calle de mercado estilo Edo cerca de Naiku de Ise Jingu que recrea la época dorada de la cultura de peregrinación, repleta de puestos de comida y tiendas (hogar del mochi Akafuku)."
+   ],
+   "eat": [
+    "Una de las tres mejores marcas de wagyu de Japón, criada en la región de Matsusaka; apreciada por su intenso marmoleado y textura que se derrite en la boca, frecuentemente servida como sukiyaki o st",
+    "Fideos distintivamente gruesos y suaves servidos con solo una pequeña cantidad de tare oscuro y dulce a base de salsa de soja; históricamente una comida fácil de digerir para los peregrinos del Santuario Ise.",
+    "Platillo de pescador de Ise-Shima: atún o bonito marinado en salsa de soja mezclado a mano sobre arroz encurtido. Reconocido como una 'Comida de 100 Años' (cocina local que data de"
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "El santuario sintoísta más sagrado de Japón",
+   "deeper_en": "rendir respeto en un santuario (el verbo apropiado para visitar Ise Jingū)",
+   "lede": "El santuario más sagrado de Japón en Ise y la tradición de las buceadoras de perlas Ama."
+  },
+  "shiga": {
+   "tagline": "Envuelto alrededor del lago más grande de Japón, con un castillo impresionante.",
+   "blurb": "Shiga envuelve el Lago Biwa, el lago de agua dulce más grande de Japón y uno de los más antiguos del mundo, rodeado por una ruta de ciclismo de aproximadamente 200 km. La prefectura combina los santuarios en islas del lago y los cruceros en bote con pueblos castillo de la era Edo y canales comerciales a solo un corto viaje en tren desde Kyoto.",
+   "history": "Shiga rodea el Lago Biwa, un corazón estratégico del antiguo Japón. Hikone Castle, completado en 1622, es uno de solo doce torres originales que aún se mantienen en pie.",
+   "getting": "Ōtsu/Hikone están a ~10–50 min de Kyoto en tren.",
+   "see": [
+    "Un Tesoro Nacional completado en 1622 que domina el Lago Biwa, uno de los pocos torres castillo originales que sobreviven; combínalo con el adyacente jardín japonés Genkyuen",
+    "Templo principal de la secta budista Tendai, un complejo boscoso de más de 100 edificios en la cima del Mt. Hiei; registrado como Patrimonio de la Humanidad por la UNESCO en 1994.",
+    "El lago de agua dulce más grande de Japón y el corazón de Shiga, rodeado de santuarios, castillos y miradores escénicos; el famoso circuito de ciclismo Biwaichi rodea sus orillas."
+   ],
+   "eat": [
+    "Una de las formas más antiguas de sushi de Japón, originaria de Shiga hecha con carpas crucian Nigorobuna capturadas en el Lago Biwa, saladas y fermentadas con arroz; pungente, de sabor adquirido",
+    "Una de las marcas de wagyu premium más antiguas de Japón, criada en Shiga durante más de 400 años; apreciada por su fino jaspeado y servida como filete, sukiyaki o shabu-shabu.",
+    "El plato local de fideos B-grade de confort de Hikone: un caldo al estilo japonés dorado (huesos de pollo y pescado seco) cargado de repollo, brotes de soja, hongos y cerdo"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "Lake Biwa, Japan's largest lake",
+   "deeper_en": "This is a local flavor, isn't it?",
+   "lede": "Envuelto alrededor del lago más grande de Japón, con un castillo impresionante."
+  },
+  "kyoto": {
+   "see": [
+    "Fundado en 711; famoso por miles de puertas torii bermellón que serpentean por el sagrado Monte Inari (233m). Abierto 24h, entrada gratuita, 5 min en JR desde la Estación de Kyoto hasta Inari Station.",
+    "Un pabellón Zen cubierto con pan de oro reflejado en su estanque espejo; uno de los sitios más fotografiados de Kyoto. Abierto 9am-5pm, entrada ~500 yen.",
+    "El sendero de bambú de ~400m corre entre la puerta norte de Tenryu-ji y Okochi-Sanso; gratuito y abierto 24h. Tenryu-ji (fundado 1339) es el principal templo Zen de Kyoto y Patrimonio de la UNESCO."
+   ],
+   "eat": [
+    "La alta cocina de múltiples platos de Kyoto que surgió de la ceremonia del té; considerada la cumbre de la gastronomía fina japonesa, enfatizando la estacionalidad, presentación y sabor.",
+    "Arenque seco agridulce guisado sobre soba tibia; se dice que fue creado en 1882 en Matsuba cerca del Teatro Minamiza, y ha sido un básico de Kyoto desde entonces.",
+    "Un clásico de Kyoto sin litoral nacido de la 'Saba Kaido' (Ruta de la Caballa): caballa curada con sal y vinagre presionada sobre arroz y envuelta en kombu. Se encuentra en establecimientos tradicionales de larga trayectoria."
+   ]
+  },
+  "osaka": {
+   "see": [
+    "El símbolo de Osaka, construido originalmente por Toyotomi Hideyoshi y central en la unificación del Japón del siglo XVI. El donjon actual (reconstruido en 1931) alberga una historia",
+    "A menudo considerado el templo budista administrado oficialmente más antiguo de Japón, fundado en 593 por el Príncipe Shotoku. Su pagoda de cinco pisos de ~37m y el tranquilo Gokuraku-jodo",
+    "Distrito de entretenimiento del canal iluminado de neón de Osaka, hogar del letrero del hombre corriendo de Glico y una densa hilera de puestos de comida callejera y restaurantes - el más fotografiado"
+   ],
+   "eat": [
+    "Comida callejera característica de Osaka: bolitas de masa con sabor a dashi rellenas de pulpo picado, crujientes por fuera y blandas por dentro, cubiertas con salsa, mayonesa, aonori y bonito seco. Bor",
+    "Panque salado a base de repollo con carne o mariscos cocinados en una plancha teppan, a menudo en tu propia mesa. La forma moderna está fuertemente asociada con Osaka y es una",
+    "Carne y verduras ensartadas, rebozadas, empanizadas y fritas profundamente, famosamente vinculadas al distrito de Shinsekai y su estricta regla de no 'doble inmersión' en la salsa comunal."
+   ]
+  },
+  "hyogo": {
+   "tagline": "El castillo más hermoso de Japón en Himeji y la ciudad portuaria de Kobe.",
+   "blurb": "Hyogo se extiende desde la cosmopolita ciudad portuaria de Kobe (hogar de la carne de res Kobe de fama mundial) hasta el Castillo Himeji, Tesoro Nacional y primer Patrimonio de la Humanidad de la UNESCO en Japón. La prefectura llega al Mar Interior de Seto a través de la isla Awaji, conectada al continente por el Puente Akashi Kaikyo.",
+   "history": "Hyōgo (兵庫) se extiende de costa a costa. El Castillo Himeji (姫路城), la 'Garza Blanca', sobrevivió intacto a guerras y terremotos y se convirtió en el primer Patrimonio de la Humanidad de la UNESCO de Japón en 1993. Kobe (神戸) se abrió como puerto de tratado en 1868.",
+   "getting": "Kobe está a ~30 minutos y Himeji a ~40 minutos de Osaka en tren.",
+   "see": [
+    "El primer Patrimonio de la Humanidad de la UNESCO de Japón, un inmaculado castillo feudal blanco apodado 'Castillo de la Garza Blanca'; especialmente pintoresco durante la temporada de flores de cerezo.",
+    "Distrito histórico de Kobe con residencias de comerciantes de estilo occidental (ijinkan) construidas después de que el puerto se abriera a finales de 1800; muchas ahora son museos, cafés y tiendas.",
+    "Uno de los pueblos termales más antiguos de Japón, mencionado en el Nihon Shoki del siglo VIII, al pie del Monte Rokko cerca de Kobe; conocido por sus aguas termales de 'oro' (hierro) y 'plata' ("
+   ],
+   "eat": [
+    "Wagyu de renombre mundial del ganado Tajima criado en Hyogo, valorado por su marmoleado intenso y textura que se derrite en la boca; generalmente ligeramente sazonado y a la parrilla (tepp",
+    "Bolas de pulpo suave y ricas en huevo de la ciudad de Akashi, sumergidas en un caldo dashi ligero en lugar de salsa; el predecesor del takoyaki de Osaka.",
+    "La versión de Himeji del hotpot invernal, comido de manera distintiva con un aderezo de salsa de jengibre y soja sobre rábano, papa, konjac y tofu."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "Himeji Castle, the 'White Heron' castle",
+   "deeper_en": "I humbly receive (said before eating—especially meaningful when tasting Akashi octopus or Kobe beef, acknowledging gratitude to the sea and farmers)",
+   "lede": "El castillo más hermoso de Japón en Himeji y la ciudad portuaria de Kobe."
+  },
+  "nara": {
+   "tagline": "Primera capital de Japón — un Buda gigante y ciervos en libertad.",
+   "blurb": "Nara fue la primera capital permanente de Japón (710-784) y alberga más sitios Patrimonio de la Humanidad que cualquier otra prefectura, donde templos antiguos, ciervos sagrados en libertad y laderas cubiertas de flores de cerezo conviven. Esta prefectura de Kansai, sin salida al mar, es un museo viviente de la cultura cortesana más antigua del país.",
+   "history": "Nara (奈良) fue la primera capital permanente de Japón (710–784). El Gran Buda de Tōdai-ji (東大寺) fue fundido en 752, y Hōryū-ji (法隆寺) contiene algunos de los edificios de madera más antiguos que sobreviven en el mundo.",
+   "getting": "Nara está a ~45 min de Kyoto y Osaka en tren.",
+   "see": [
+    "Construido en 752 como sede de todos los templos provinciales de Japón; su Gran Salón del Buda alberga un Buda de bronce de aproximadamente 15 m y es el monumento Patrimonio de la Humanidad más emblemático de Nara.",
+    "Santuario rojo bermellón y blanco famoso por miles de faroles de bronce y piedra, encendidos ceremonialmente dos veces al año; se accede a través de un camino arbolado que atraviesa Nara Park.",
+    "Un parque de 660 hectáreas donde casi 1.200 ciervos en libertad (considerados mensajeros divinos) conviven con los templos Patrimonio de la Humanidad; galletas para ciervos se venden en todo el parque."
+   ],
+   "eat": [
+    "Arroz vinagrado en bocados cubierto con caballa salada, salmón o dorada, envuelto en una hoja de caqui antibacteriana — un método de conservación de más de 200 años nacido en Nara.",
+    "Las fideos de trigo estirados a mano más antiguos de Japón, con más de 1.200 años de historia en el distrito Miwa de Sakurai City; apreciados por su textura masticable pero suave.",
+    "Una especialidad de Nara desde la era de la capital Heijo-kyo en el siglo VIII, elaborada marinando repetidamente calabaza, pepino, jengibre y otras verduras en sedimento de sake."
+   ],
+   "phrase_en": "Es hermoso, ¿verdad?",
+   "word_en": "ciervos — los residentes en libertad de Nara Park.",
+   "deeper_en": "¿Está bien darles galletas a los ciervos?",
+   "lede": "Primera capital de Japón — un Buda gigante y ciervos en libertad."
+  },
+  "wakayama": {
+   "tagline": "Montañas de peregrinaje sagrado y termas costeras dramáticas.",
+   "blurb": "Wakayama, en la Península de Kii al sur de Osaka, es el corazón espiritual de Japón: alberga la ciudad monástica budista de Koyasan y los antiguos senderos de peregrinaje Kumano Kodo, ambos parte de la lista de Patrimonio de la UNESCO \"Sitios Sagrados y Rutas de Peregrinaje en la Cordillera de Montañas de Kii\". Su costa accidentada suma resorts termales, playas de arena blanca y las Cataratas Nachi, la cascada más alta de Japón con 133 metros.",
+   "history": "Wakayama (和歌山) es tierra sagrada: Kōbō Daishi fundó el monasterio Kōyasan (高野山) en el 816, y los santuarios Kumano (熊野) anclan rutas de peregrinaje caminadas durante más de un milenio — ambos en la lista de la UNESCO.",
+   "getting": "Kōyasan está ~2h desde Osaka en tren y teleférico.",
+   "see": [
+    "Complejo monástico Patrimonio de la UNESCO fundado por Kobo Daishi en el 816, con más de 100 edificios, el cementerio Okunoin y el Danjo Garan. Parte de los Sitios Sagrados de",
+    "Antiguos senderos de peregrinaje listados por la UNESCO que vinculan los tres grandes santuarios Kumano (Hongu Taisha, Hayatama Taisha, Nachi Taisha) a través de las montañas de Kii.",
+    "La cascada de caída única más alta de Japón (133 m) enmarcada por la pagoda de tres pisos de color bermellón de Seiganto-ji; una de las vistas espirituales más icónicas de Japón y uno de los principales"
+   ],
+   "eat": [
+    "El ramen distintivo de la ciudad de Wakayama con un caldo rico de huesos de cerdo y salsa de soja (tonkotsu-shoyu) y fideos finos de color blanco apagado; los locales lo llaman chuka soba. A menudo comido",
+    "Wakayama produce aproximadamente el 60% de las ume de Japón; la variedad Nanko apreciada elabora las umeboshi y el vino de ciruela umeshu más conocidos del país. Un souvenir local central e ingrediente",
+    "Cocina vegetariana de templo sin carne, pescado, cebolla ni ajo, servida en los alojamientos de templos del Monte Koya; usa goma-dofu (tofu de sésamo) y vegetales de montaña de temporada"
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "Monte Kōya, una ciudad monástica budista sagrada",
+   "deeper_en": "Voy a rendir respetos en un santuario o templo (frase educada que usan los peregrinos)",
+   "lede": "Montañas de peregrinaje sagrado y termas costeras dramáticas."
+  },
+  "tottori": {
+   "tagline": "Las famosas dunas de arena de Japón en el Mar de Japón.",
+   "blurb": "Tottori es la prefectura menos poblada de Japón, ubicada en la costa del Mar de Japón en la región de Chugoku y famosa sobre todo por las Dunas de Arena de Tottori, una franja de 16 km de dunas costeras doradas donde puedes montar camellos o practicar sandboard. Más allá de la arena, ofrece un pico volcánico escarpado (Monte Daisen), folclore de yokai y tranquilos pueblos costeros.",
+   "history": "Tottori (鳥取) es la prefectura menos poblada de Japón. Sus grandes dunas costeras (砂丘) se han formado durante más de 100,000 años a partir de la arena transportada por el Río Sendai y el Mar de Japón.",
+   "getting": "Se llega a Tottori en tren de velocidad limitada desde Okayama u Osaka.",
+   "see": [
+    "El campo de dunas costeras más conocido de Japón, ~16 km de este a oeste y 2.4 km de norte a sur, formado durante ~100,000 años. Un Monumento Natural designado; los aspectos destacados incluyen",
+    "Justo al este de las dunas, el único museo del mundo dedicado a la escultura de arena, con tema 'viajando por el mundo con arena'. Artistas internacionales crean obras grandes e intrincadas",
+    "Un salón Shugendo Tesoro Nacional encajado en una cavidad en acantilado a ~500 m en el Monte Mitoku, que data del siglo 11-12 y fue construido sin clavos. Alcanzarlo requiere"
+   ],
+   "eat": [
+    "La delicadeza invernal característica de Tottori — cangrejo de nieve macho desembarcado en el Mar de Japón, apreciado por su carne firme y dulce. La temporada va de principios de noviembre a 20 de marzo; la categoría superior",
+    "Un ramen raro de caldo de hueso de res local de Tottori, popular desde los años 1940-50 cuando la región criaba ganado. Aroma dulce y rico (más similar a roast beef/sukiyaki que al funk",
+    "Tottori es famosa por frutas de alta calidad en sus llanuras fértiles — peras Nijisseiki (Twentieth Century) crujientes, sandías y caquis. La región también es"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "sand dunes — Tottori's signature landscape",
+   "deeper_en": "The sand is hot.",
+   "lede": "Las famosas dunas de arena de Japón en el Mar de Japón."
+  },
+  "shimane": {
+   "tagline": "Hogar de Izumo Taisha, uno de los santuarios más antiguos y majestuosos de Japón.",
+   "blurb": "Shimane, en la costa San'in de Japón frente al Mar de Japón, es la mítica \"Tierra de los Dioses\", hogar de Izumo Taisha, uno de los santuarios sintoístas más antiguos y venerados del país. También alberga el Castillo Matsue, Tesoro Nacional, la Mina de Plata Iwami Ginzan, Patrimonio de la Humanidad de la UNESCO, y las volcánicas Islas Oki.",
+   "history": "Shimane (島根) es la tierra de la mitología: Izumo Taisha (出雲大社) es uno de los santuarios más antiguos de Japón, dedicado a la deidad del matrimonio y las buenas relaciones. Iwami Ginzan (石見銀山) una vez suministró un tercio de la plata mundial.",
+   "getting": "Izumo y Matsue se alcanzan en avión desde Tokio o en tren expreso limitado desde Okayama.",
+   "see": [
+    "Uno de los santuarios sintoístas más antiguos y venerados de Japón, dedicado a Okuninushi, deidad de en (vínculos/emparejamientos). En el décimo mes lunar los dioses de Japón son",
+    "Construido en 1611, uno de los pocos castillos de madera originales que subsisten y un Tesoro Nacional; su piso superior ofrece una vista de 360 grados sobre Matsue y el Lago Sh",
+    "Una antigua mina de plata de clase mundial registrada en 2007 como Patrimonio de la Humanidad de la UNESCO (primer patrimonio industrial en Asia); los visitantes pueden recorrer el túnel Ryugenji-mabu"
+   ],
+   "eat": [
+    "Una de las tres grandes tradiciones de soba de Japón; el alforfón se muele con la cáscara, dando fideos oscuros, aromáticos y firmes. A menudo se sirve al estilo warigo en bols redondos apilados",
+    "Almejas de agua dulce cosechadas del Lago Shinji (Shinjiko); Shimane lidera Japón en producción de shijimi. Típicamente consumidas como sopa de miso shijimi, apreciadas por su apoyo al hígado",
+    "Pez blanco de lujo capturado en la costa del Mar de Japón alrededor de Matsue e Izumo; servido a la parrilla, como sashimi, o sobre arroz como almuerzo local de primera categoría."
+   ],
+   "phrase_en": "Es hermoso, ¿verdad?",
+   "word_en": "emparejamiento / forjar vínculos — la especialidad de Izumo Taisha",
+   "deeper_en": "Este lugar es tranquilo y agradable, ¿verdad?",
+   "lede": "Hogar de Izumo Taisha, uno de los santuarios más antiguos y majestuosos de Japón."
+  },
+  "okayama": {
+   "tagline": "Un gran jardín, un 'castillo de cuervo' y la ciudad de canales de Kurashiki.",
+   "blurb": "Okayama, una de las prefecturas más soleadas de Japón, alberga Korakuen, uno de los tres grandes jardines del país, ubicado junto al Okayama Castle de muros negros. También es famosa por la tradición milenaria de la cerámica Bizen sin esmalte.",
+   "history": "Okayama (岡山) vinculó su identidad a la leyenda del Momotarō (桃太郎), el niño melocotón. Kōraku-en (後楽園), diseñado en 1700, se cuenta entre los tres grandes jardines de Japón, junto al 'Castillo de Cuervo' de muros negros.",
+   "getting": "Okayama está a ~3h15m de Tokyo y ~45 min de Osaka en shinkansen.",
+   "see": [
+    "Uno de los Tres Grandes Jardines de Japón, construido 1687-1700 por el señor Ikeda Tsunamasa; céspedes, estanques, campos de té y arroz con flores de estación e iluminación nocturna.",
+    "Castillo de mampostería lacada en negro construido por primera vez en 1597 en estilo Azuchi-Momoyama, reconstruido en 1966; se complementa con Korakuen adyacente mediante un boleto combinado.",
+    "Distrito de canales de la era Edo con almacenes de muros blancos, museos y cafés; los paseos en bote por los canales son una experiencia icónica."
+   ],
+   "eat": [
+    "Okayama es conocida como el 'Reino de la Fruta' de Japón, por sus preciados melocotones Momotaro blancos y uvas Muscat of Alexandria sin semillas; se consumen frescas o en parfaits de café.",
+    "Una especialidad de clase B de la ciudad de Okayama: filete de cerdo empanizado sobre arroz cubierto con salsa demi-glace en lugar del huevo tradicional.",
+    "Okonomiyaki salado repleto de ostras recién cosechadas de la ciudad pesquera de Hinase en Bizen City; originario de los años 60 usando ostras de excedente."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "the Peach Boy folktale tied to Okayama",
+   "deeper_en": "It's really peaceful here, isn't it?",
+   "lede": "Un gran jardín, un 'castillo de cuervo' y la ciudad de canales de Kurashiki."
+  },
+  "hiroshima": {
+   "tagline": "Un conmovedor monumento a la paz y el torii flotante de Miyajima.",
+   "blurb": "Hiroshima alberga dos Sitios del Patrimonio Mundial de la UNESCO: el Domo de la Bomba Atómica y el Parque Conmemorativo de la Paz, que cuentan la historia de agosto de 1945 y el llamado global por la paz, y la puerta torii \"flotante\" de color bermellón del Santuario Itsukushima en la isla de Miyajima. La prefectura también ofrece vistas del Mar Interior de Seto, ostras frescas y la ruta de ciclismo de salto entre islas Shimanami Kaido.",
+   "history": "Hiroshima se convirtió en un símbolo global de paz después del bombardeo atómico del 6 de agosto de 1945. El cercano Santuario Itsukushima en Miyajima ha permanecido desde el siglo XII, su torii elevándose desde el mar.",
+   "getting": "Hiroshima está a ~4h de Tokio y ~1h25m de Osaka en shinkansen.",
+   "see": [
+    "Sitio del Patrimonio Mundial de la UNESCO a 160 m del hipocentro; el domo esquelético y el adyacente Museo Conmemorativo de la Paz transmiten la historia del bombardeo de 1945 y el mensaje",
+    "Santuario del Patrimonio Mundial de la UNESCO construido sobre la línea de marea, con su icónica puerta torii flotante de color bermellón que cambia de apariencia con las mareas; uno de los Tres",
+    "Castillo reconstruido fundado en 1589 por Mori Terumoto, emparejado con el cercano jardín de paseo Shukkeien del período Edo que miniaturiza paisajes escénicos."
+   ],
+   "eat": [
+    "Panqueque salado en capas con base de crepa fina, un montón de repollo y fideos yakisoba cocinados a la plancha juntos; el plato distintivo de la ciudad, que se encuentra en Okonomimura y en",
+    "Hiroshima es el principal productor de ostras de Japón, famoso por las ostras carnosas y cremosas de las aguas de Miyajima; se comen crudo, a la parrilla, frito o sobre arroz, con la temporada máxima aproximadamente en",
+    "Anguila congrio al vapor o a la parrilla sobre arroz, un clásico del área de Miyajima; una tienda especializada de Aki-Miyajima que data de 1902 (Ueno) hizo el plato icónico."
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "paz — el mensaje del monumento conmemorativo de Hiroshima",
+   "deeper_en": "rezar por la paz",
+   "lede": "Un conmovedor monumento a la paz y el torii flotante de Miyajima."
+  },
+  "yamaguchi": {
+   "tagline": "Un espectacular puente de cinco arcos y un santuario de un rojo bermellón vivido.",
+   "blurb": "Yamaguchi, en la punta occidental de Honshu, es famoso como la \"capital del fugu (pez globo) de Japón\" a través del puerto de Shimonoseki y por sus paisajes perfectos como las aguas azules alrededor de Tsunoshima y los 123 torii de color bermellón del Santuario Motonosumi Inari. También alberga los elegantes arcos de madera del Puente Kintaikyo en Iwakuni y la ciudad castillo de la era Edo de Hagi.",
+   "history": "Yamaguchi (山口) moldeó el Japón moderno: los samuráis del dominio Chōshū (長州) de aquí lideraron la Restauración Meiji de 1868. El puente Kintai-kyō (錦帯橋), construido por primera vez en 1673, es una maravilla de ingeniería con cinco arcos de madera.",
+   "getting": "Shin-Yamaguchi está en la línea Sanyō Shinkansen; Iwakuni cerca de Hiroshima.",
+   "see": [
+    "Puente de madera con cinco arcos construido por primera vez en 1673 sobre el Río Nishiki; icónico en las temporadas de flores de cerezo y follaje otoñal.",
+    "La cueva de piedra caliza más grande de Japón (~9-11 km en total, ~1 km de recorrido público a pie) bajo el Parque Nacional Akiyoshidai; famosa formación en terrazas de 'Cien Platos'.",
+    "Una de las ciudades castillo samurái mejor conservadas de Japón y hogar de la cerámica Hagi-yaki; nombrada destino de viaje del New York Times para 2024."
+   ],
+   "eat": [
+    "Shimonoseki maneja el mayor volumen de pez globo en Japón y es conocida como la 'Capital del Pez Globo'; pronunciado localmente 'fuku' que significa felicidad. Mejor de noviembre a febrero.",
+    "Fideos cha-soba de té verde asados en una teja caliente hasta quedar crujientes, cubiertos con carne en rodajas, nori, huevo y momiji-oroshi. Originarios de 1962 alrededor de Shimonoseki/Kaw.",
+    "Sushi prensado y en capas con coberturas coloridas (huevo, sakura denbu, shiitake, raíz de renkon local); se dice que data de hace más de 300 años como provisiones para batallas de samuráis."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "pufferfish — Shimonoseki's famous (and licensed) delicacy",
+   "deeper_en": "The scenery is wonderful, isn't it?",
+   "lede": "Un espectacular puente de cinco arcos y un santuario de un rojo bermellón vivido."
+  },
+  "kagawa": {
+   "tagline": "La prefectura más pequeña de Japón — fideos udon y islas de arte.",
+   "blurb": "La prefectura más pequeña de Japón tiene un impacto desproporcionado: recibe el apodo de \"Prefectura de Udon\" por su masticable Sanuki udon servido en cientos de establecimientos, y su capital se abre al mar interior de Seto salpicado de islas, puerta de entrada a las islas de arte contemporáneo de renombre mundial.",
+   "history": "Kagawa (香川) es la prefectura más pequeña de Japón, históricamente famosa por su Sanuki udon (讃岐うどん). Desde 2010, la Trienal de Setouchi ha convertido sus islas del Mar Interior, lideradas por Naoshima (直島), en un destino de arte global.",
+   "getting": "Takamatsu está a ~50 min de Okayama en tren cruzando el puente Seto-Ōhashi.",
+   "see": [
+    "Un jardín de paseo del clan Matsudaira de aproximadamente 300 años de antigüedad y unos 75 hectáreas, el Lugar de Belleza Escénica Especial más grande de Japón, galardonado con 3 estrellas por la Guía Michelin.",
+    "Isla de arte contemporáneo de clase mundial dirigida por Benesse Art Site Naoshima — sede del Museo de Arte Chichu, Museo Benesse House, Museo Lee Ufan y la Galería de Arte Honmura.",
+    "Santuario principal de más de 600 santuarios Konpira, dedicado a una deidad del mar y los viajes seguros. Famoso por sus 785 escalones de piedra hacia el santuario principal (1.368 hacia el santuario interior)."
+   ],
+   "eat": [
+    "El plato característico de Kagawa y la razón por la que se llama a sí misma 'Prefectura de Udon' — fideos de trigo gruesos, cuadrados y masticables servidos en cientos de establecimientos locales, frecuentemente con iriko (anchoas secas).",
+    "Una pierna de pollo asado completa sazonada simplemente con sal, pimienta y ajo, servida en el hueso. Creada en Marugame en 1952; se sirve como tierno 'wakadori' (pollo joven) o como opción premium.",
+    "Wagyu Black Premium japonés y caballa cultivada en la Isla Shodoshima alimentada con pienso a base de aceitunas y hojas, una especialidad de Setouchi apreciada por su sabor rico pero refrescante."
+   ],
+   "phrase_en": "¡Está delicioso!",
+   "word_en": "fideos de trigo gruesos — Kagawa es el reino del udon",
+   "deeper_en": "sabor local y auténtico; gusto regional genuino",
+   "lede": "La prefectura más pequeña de Japón — fideos udon y islas de arte."
+  },
+  "ehime": {
+   "tagline": "Una de las aguas termales más antiguas de Japón y un castillo en la cima de una colina en Matsuyama.",
+   "blurb": "Ehime, en la costa noroeste de Shikoku frente al Mar Interior de Seto, es famosa por Dogo Onsen, una de las aguas termales más antiguas de Japón con más de 1.000 años de historia registrada, y por las islas productoras de cítricos conectadas por la ruta ciclística Shimanami Kaido. Su clima templado, el Matsuyama Castle de la era feudal y los huertos de mikan (mandarinas) la convierten en una puerta de entrada relajada para saltar entre islas.",
+   "history": "Dōgo Onsen de Ehime (愛媛) aparece en los textos más antiguos de Japón como un lugar de baño legendario, y su balneario de madera de 1894 ayudó a inspirar el balneario en 'El viaje de Chihiro'. Matsuyama (松山) conserva un hermoso castillo original.",
+   "getting": "Se llega a Matsuyama en avión desde Tokio u Osaka, o en tren o autobús a través de Shikoku.",
+   "see": [
+    "Una de las aguas termales más antiguas de Japón (la leyenda dice 3.000 años). El emblemático balneario de madera fue el primer balneario público designado como Bien Cultural",
+    "Uno de solo doce torreones de castillo originales supervivientes construidos antes del final del período Edo, ubicado en una cima con acceso por teleférico o ascensor y 21 Bienes Culturales",
+    "Una ruta escénica de más de 60 km de autopista y puentes a través de las islas del Mar Interior de Seto, mundialmente famosa como recorrido ciclístico que vincula Ehime con Hiroshima con vistas al mar que se extienden"
+   ],
+   "eat": [
+    "El plato característico de Ehime. Dos estilos regionales: estilo Matsuyama con dorada entera a la parrilla cocinada con arroz, y estilo Uwajima con sashimi de dorada cruda sobre arroz caliente con",
+    "Un pastel crujiente frito profundamente hecho de peces pequeños enteros molidos, una delicia de Uwajima de siglos de antigüedad comida tal como está. La tradición la remonta a artesanos de pasteles de pescado traídos desde Sendai",
+    "Ehime es el principal productor de cítricos de Japón (mikan, iyokan, dekopon). Se venden en innumerables formas desde frutas frescas hasta cerveza con sabor a naranja, helado y jugo."
+   ],
+   "phrase_en": "Es hermoso, ¿verdad?",
+   "word_en": "uno de los balnearios de aguas termales más antiguos de Japón",
+   "deeper_en": "Es un lugar agradable, ¿verdad?",
+   "lede": "Una de las aguas termales más antiguas de Japón y un castillo en la cima de una colina en Matsuyama."
+  },
+  "kochi": {
+   "tagline": "Un río cristalino, un castillo famoso y el espíritu del reformador Sakamoto Ryōma.",
+   "blurb": "Kōchi se extiende por el salvaje sur de Shikoku que enfrenta el Océano Pacífico, famoso por el río Shimanto sin represas (el \"último río cristalino\" de Japón), bonito chamuscado (katsuo no tataki) y sus vínculos con el samurái reformador Sakamoto Ryōma. Los cabos escarpados y las aguas cristalinas recompensan a los viajeros que se aventuran fuera de las rutas convencionales.",
+   "history": "Kōchi (高知) fue cuna del reformador Sakamoto Ryōma (坂本龍馬), figura clave en la Restauración Meiji. Su cristalino río Shimanto (四万十川) es conocido como el 'último río cristalino' de Japón.",
+   "getting": "Se accede a Kōchi en avión desde Tokio u Osaka o en tren limitado express a través de Shikoku.",
+   "see": [
+    "Uno de solo 12 castillos japoneses que conserva su torre original del período Edo, y el único que mantiene tanto la torre original como el Palacio Honmaru; vistas de 360 grados sobre",
+    "Playa escénica emblemática con una estatua famosa y museo conmemorativo del héroe local Sakamoto Ryōma, además del Acuario Katsurahama en el parque circundante.",
+    "Festival de verano distintivo de la ciudad de Kōchi: ~190 equipos y ~18.000 bailarines fusionan la danza tradicional Yosakoi con castañuelas naruko con música moderna por toda la ciudad; 202"
+   ],
+   "eat": [
+    "La comida del alma distintiva de Kōchi: bonito con piel chamuscado a fuego sobre paja de arroz ardiente (warayaki), cortado en rodajas gruesas y comido con sal o ponzu más ajo, jengibre y cebolla",
+    "Un estilo festivo de servir sashimi, sushi, pescado a la parrilla y manjares de temporada dispuestos juntos en una gran bandeja de ~36-39cm, tradicionalmente para bodas",
+    "Animada galería de comida cubierta en la ciudad de Kōchi con ~60 puestos y asientos comunales donde probar katsuo no tataki y platos locales entre la famosa bebida 'okyaku' de Kōchi"
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "bonito chamuscado, el plato distintivo de Kōchi",
+   "deeper_en": "La calidez y sinceridad de la gente de aquí es genuina, ¿verdad?",
+   "lede": "Un río cristalino, un castillo famoso y el espíritu del reformador Sakamoto Ryōma."
+  },
+  "fukuoka": {
+   "tagline": "La ciudad puerta de Kyūshū, famosa por su ramen tonkotsu y puestos callejeros de comida.",
+   "blurb": "Fukuoka es la prefectura más grande y vibrante de Kyushu, famosa por el ramen Hakata, los animados yatai (puestos de comida al aire libre) a lo largo de la bahía de Hakata, y por ser puerta de entrada a Asia a solo un corto viaje en ferry desde Corea del Sur. Combina una ciudad moderna bulliciosa con pueblos de castillo e islas para excursiones de un día.",
+   "history": "Fukuoka (福岡) ha sido la puerta de Japón al continente asiático durante siglos; los comerciantes de Hakata (博多) construyeron su riqueza comercial, y su cultura de puestos callejeros yatai (屋台) es incomparable en Japón.",
+   "getting": "Fukuoka (Hakata) está a ~5h de Tokio en shinkansen, o ~2h en avión.",
+   "see": [
+    "Santuario principal de aproximadamente 12.000 templos Tenjin dedicado a Sugawara no Michizane, deidad del aprendizaje; famoso por miles de árboles de ciruelo que florecen en febrero y un ícono",
+    "Fundado en 757 AD en el centro de Hakata; el hogar espiritual del festival de julio Hakata Gion Yamakasa con sus enormes carrozas flotantes de carreras.",
+    "Templo en la montaña a ~21 min en JR desde Hakata, hogar del Buda reclinado de bronce más grande del mundo (41 m de largo, 300 toneladas); parte de la peregrinación de 88 templos de Sasaguri."
+   ],
+   "eat": [
+    "El ramen característico de Fukuoka: caldo de hueso de cerdo (tonkotsu) ultra rico y lechoso cocido a fuego lento durante horas con fideos delgados y rectos; nacido en el distrito de Hakata y servido",
+    "Un hot pot local de tripa de res o cerdo con repollo, cebolletas chinas y chile en un caldo a base de salsa de soja o miso, cocinado en la mesa; un favorito invernal de Fukuoka.",
+    "Menos conocido por extranjeros pero se dice que tiene orígenes en Hakata: fideos suaves y elásticos en un caldo claro de niboshi-katsuobushi-kombu, a menudo cubiertos con tempura de bardana"
+   ],
+   "phrase_en": "¡Está delicioso!",
+   "word_en": "puestos de comida al aire libre — una institución de Fukuoka",
+   "deeper_en": "Me pasaré un momento / Entraré brevemente",
+   "lede": "La ciudad puerta de Kyūshū, famosa por su ramen tonkotsu y puestos callejeros de comida."
+  },
+  "saga": {
+   "tagline": "El corazón de la porcelana de Japón y un festival de globos aerostáticos vívido en otoño.",
+   "blurb": "La Prefectura de Saga es la cuna de la porcelana japonesa, hogar de las famosas ciudades de cerámica Arita, Imari y Karatsu cuyos productos azul y blanco fueron exportados a Europa durante más de 400 años. También alberga las ruinas Yayoi de Yoshinogari, vasta extensión, y el animado mercado matutino de calamares de Yobuko.",
+   "history": "Saga (佐賀) es la cuna de la porcelana japonesa: a principios del siglo XVII, alfareros cerca de Arita (有田) encontraron arcilla de caolín y comenzaron a producir los productos exportados al mundo como 'Imari' (伊万里).",
+   "getting": "Saga se encuentra a ~40 min de Fukuoka (Hakata) en tren limitado expreso.",
+   "see": [
+    "Uno de los tres grandes santuarios Inari de Japón; salones bermellón construidos sobre pilotes altos en una ladera (apodado el Nikko del Oeste), que atrae ~3 millones de visitantes al año.",
+    "Reconstrucción de 73.7 hectáreas de uno de los asentamientos del período Yayoi más grandes de Japón, con torres de vigilancia, viviendas y reliquias excavadas.",
+    "Cuna de la porcelana japonesa (producción desde 1616); una calle principal bordeada de galerías y hornos activos donde puedes ver a los artesanos y comprar directamente."
+   ],
+   "eat": [
+    "Wagyu premium criado exclusivamente en Saga, apreciado por su fino veteado y textura que se deshace en la boca; servido como bistec, sukiyaki o shabu-shabu.",
+    "Distintivo té verde de hojas rizadas cultivado en la cuenca de Ureshino durante ~500 años, con aroma rico y perfil agridulce.",
+    "Plato yoshoku peculiar de la ciudad de Saga creado alrededor de 1977: arroz cubierto con carne salteada, ensalada fresca y mayonesa. Comida reconfortante local raramente encontrada en otro lugar."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "Arita porcelain — among Japan's most famous ceramics",
+   "deeper_en": "This pottery is made by the craftsman's hands.",
+   "lede": "El corazón de la porcelana de Japón y un festival de globos aerostáticos vívido en otoño."
+  },
+  "nagasaki": {
+   "tagline": "Una ciudad portuaria de historia multicultural, vistas de laderas y un parque de la paz.",
+   "blurb": "Nagasaki fue la principal ventana de Japón hacia el mundo exterior durante el aislamiento de la era Edo, y su ciudad portuaria en las laderas mezcla la herencia holandesa, china y cristiana con memoriales sobrios de la bomba atómica. La prefectura también abarca 594 islas, la mayoría de cualquier prefectura en Japón, dispersas con iglesias cristianas ocultas y playas poco concurridas.",
+   "history": "Nagasaki (長崎) fue la única ventana de Japón hacia Occidente durante su aislamiento, comerciando a través de la isla artificial Dejima (出島). Carga la herencia holandesa, china y cristiana —y la memoria del 9 de agosto de 1945.",
+   "getting": "Nagasaki está a ~1h30m de Fukuoka a través del Nishi-Kyūshū Shinkansen + transbordo.",
+   "see": [
+    "Museo al aire libre en las laderas con nueve residencias de estilo occidental (1860-1910) sobre el puerto de Nagasaki, centrado en la antigua Glover Residence de 1863 (la residencia occidental más antigua que se conserva en Japón)",
+    "Construida en 1865, la iglesia cristiana más antigua existente de Japón y Tesoro Nacional, dedicada a los 26 Mártires de Nagasaki; componente del sitio Patrimonio de la Humanidad de las 'Iglesias Cristianas Ocultas'",
+    "Antigua isla de minería de carbón abandonada ~20 km del puerto de Nagasaki, una vez entre los lugares más densamente poblados del mundo; visitada solo a través de tours en barco autorizados. Sitio Patrimonio de la Humanidad de la UNESCO"
+   ],
+   "eat": [
+    "Sopa de fideos sustanciosa en un caldo cremoso de cerdo/pollo cargado de mariscos, cerdo y verduras, creada en el restaurante chino Shikairou a finales de la era Meiji. Especialidad de Nagasaki.",
+    "Un pariente de 'plato de fideos' del Champon: fideos finos crujientes fritos (o fideos gruesos blandos) cubiertos con salsa espesa de mariscos y verduras. Un plato popular de Nagasaki desde la década de 1950.",
+    "Bizcocho de miel húmedo traído por comerciantes portugueses en el siglo XVI y adaptado en Nagasaki; el fabricante de larga tradición Fukusaya data de 1624."
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "El plato de fideos mixtos sustancioso de Nagasaki",
+   "deeper_en": "diferentes culturas se mezclan juntas",
+   "lede": "Una ciudad portuaria de historia multicultural, vistas de laderas y un parque de la paz."
+  },
+  "kumamoto": {
+   "tagline": "Un imponente castillo y una de las calderas volcánicas más grandes del mundo en Aso.",
+   "blurb": "Kumamoto es una prefectura de Kyushu definida por su naturaleza dramática e historia: el imponente Kumamoto Castle reconstruido, uno de los tres grandes castillos de Japón, y el Monte Aso, que alberga una de las calderas volcánicas activas más grandes del mundo. Su costa se extiende hacia las islas Amakusa, hogar de sitios cristianos ocultos reconocidos por la UNESCO y mariscos frescos.",
+   "history": "Kumamoto (熊本) se define por su poderoso castillo, construido por Katō Kiyomasa alrededor de 1607, y por el Monte Aso (阿蘇), cuya enorme caldera ha moldeado la vida en Kyūshū central durante milenios.",
+   "getting": "Kumamoto está a ~40 min de Fukuoka (Hakata) por el Kyūshū Shinkansen.",
+   "see": [
+    "Uno de los tres castillos más destacados de Japón, completado en 1607 por Kato Kiyomasa; famoso por sus muros de piedra curvados 'musha-gaeshi'. Ahora reabierto al público después de 2016",
+    "Un jardín de paseo circular del período Edo construido por los señores Hosokawa, con un estanque alimentado por manantial y un Monte Fuji en miniatura; una casa de té ofrece matcha con vistas al jardín",
+    "Una de las calderas volcánicas más grandes del mundo; un teleférico y miradores permiten a los visitantes acercarse al cráter activo Nakadake en medio de enormes praderas."
+   ],
+   "eat": [
+    "La delicadeza característica de Kumamoto; carne de caballo cruda finamente rebanada servida con ajo rallado/jengibre y salsa de soja. La prefectura tiene la producción más alta de Japón",
+    "Raíz de loto rellena de pasta de mostaza-miso picante, rebozada y frita profundamente. Originada en la era Edo bajo el clan Hosokawa como alimento nutritivo.",
+    "Wagyu de cabello rojo criado en las praderas volcánicas alrededor del Monte Aso; magra pero rica en umami, a menudo servida como un tazón de carne de res. Un producto con indicación geográfica registrada"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "volcano — Mount Aso is the region's giant",
+   "deeper_en": "Please be careful of volcanic ash.",
+   "lede": "Un imponente castillo y una de las calderas volcánicas más grandes del mundo en Aso."
+  },
+  "oita": {
+   "tagline": "La capital de aguas termales de Japón — el humeante Beppu y el elegante Yufuin.",
+   "blurb": "Oita es ampliamente conocida como la capital de onsen (aguas termales) de Japón, produciendo más agua de manantial termal que cualquier otra prefectura, con los humeantes \"infiernos\" (jigoku) de Beppu y su volcánica Península Kunisaki en el Mar Interior de Seto.",
+   "history": "Ōita (大分) produce más agua de aguas termales que cualquier prefectura en Japón. Beppu (別府) se convirtió en un gran balneario de onsen, mientras que los Budas de piedra de Usuki (臼杵) fueron tallados en acantilados alrededor del siglo XII.",
+   "getting": "Beppu/Ōita están ~2h de Fukuoka (Hakata) en tren limitado rápido.",
+   "see": [
+    "Un recorrido por vividos manantiales termales demasiado calientes para bañarse, incluyendo el azul cobalto Umi Jigoku y el rojo sangre Chinoike Jigoku; Beppu tiene la mayor producción de aguas termales",
+    "Un grupo de Budas de piedra tallados en acantilados rocosos hace más de 1.000 años; 61 estatuas están designadas como Tesoros Nacionales, ubicadas en un parque famoso por su loto estacional.",
+    "Un refinado pueblo de aguas termales accesible a pie ubicado bajo el Mt. Yufu, conocido por cafés de artesanía y el paisaje brumoso al amanecer del Lago Kinrinko."
+   ],
+   "eat": [
+    "Comida casera de Oita que se dice se originó en Beppu a principios de los años 1920: pollo sazonado con jengibre y ajo en un ligero rebozado tipo tempura, servido con ponzu, mostaza y",
+    "Sustancial sopa de granja de Oita con dumplings de harina de trigo estirados a mano cocidos a fuego lento con verduras y miso; un alimento básico rural comido como una comida reconfortante y nutritiva.",
+    "Caballa y jurel premium criados en las fieras mareas del Canal Bungo; de carne firme y muy cotizados, frecuentemente comidos como sashimi."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "the 'hells' — Beppu's vividly coloured hot springs (for viewing)",
+   "deeper_en": "to soak in a hot spring",
+   "lede": "La capital de aguas termales de Japón — el humeante Beppu y el elegante Yufuin."
+  },
+  "miyazaki": {
+   "tagline": "Costa del Pacífico soleada, olas para surfear, y santuarios envueltos en mito.",
+   "blurb": "Miyazaki, en la costa sureste soleada de Kyushu, es conocida por su litoral subtropical del Pacífico, playas para surfear y paseos bordeados de palmeras, y por la Garganta Takachiho, una grieta volcánica llena de niebla vinculada a los mitos de creación de Japón.",
+   "history": "Miyazaki (宮崎) está impregnada de los mitos de creación de Japón; se dice que Takachiho (高千穂) es donde descendió a la tierra el nieto de la diosa del sol. Su costa soleada la convirtió en un lugar popular para lunas de miel durante la era Shōwa.",
+   "getting": "Se llega a Miyazaki por avión desde las principales ciudades, o en tren expreso limitado dentro de Kyūshū.",
+   "see": [
+    "Garganta volcánica en forma de V tallada por el río Gokase, con la cascada Manai de 17 m. Lugar de Belleza Escénica Nacional y Monumento Natural; los visitantes reman en botes debajo",
+    "Santuario bermellón ubicado dentro de una cueva junto al mar en un acantilado sobre el Pacífico, dedicado a Ugayafukiaezu-no-Mikoto, padre del primer emperador de Japón. Los visitantes lanzan 'un",
+    "Santuario en una pequeña isla subtropical boscosa rodeada por las plataformas de roca erosionadas por olas 'Oni no Sentakuita', un Monumento Natural Nacional caminable durante la marea baja."
+   ],
+   "eat": [
+    "Plato emblemático de Miyazaki: pollo rebozado frito sumergido en vinagre dulce y cubierto con salsa tártara. Originario de la ciudad de Nobeoka en los años 50; la salsa tártara",
+    "Pollo de corral local a la parrilla de carbón cortado en trozos pequeños, sazonado con sal y pimienta, y chamuscado a fuego alto de carbón para un tostado ahumado.",
+    "Rollo de sushi local poco conocido con lechuga, camarón y mayonesa casera sobre arroz para sushi en alga marina. Inventado en 1966 en Ippei Sushi en la ciudad de Miyazaki y considerado"
+   ],
+   "phrase_en": "Es hermoso, ¿verdad?",
+   "word_en": "una garganta y sitio mítico en las leyendas de creación de Japón",
+   "deeper_en": "El paisaje aquí es verdaderamente hermoso, ¿no?",
+   "lede": "Costa del Pacífico soleada, olas para surfear, y santuarios envueltos en mito."
+  },
+  "kagoshima": {
+   "tagline": "Un volcán activo al otro lado de la bahía y puerta de entrada a islas de bosques antiguos.",
+   "blurb": "Kagoshima se sitúa en la punta sur de Kyūshū bajo Sakurajima, uno de los volcanes más activos de Japón, que hace erupción cientos de veces al año frente a la ciudad. Más allá de su historia de samuráis y aguas termales, la prefectura se extiende hacia islas remotas como Yakushima, inscrita en la UNESCO, famosa por sus bosques de cedros antiguos.",
+   "history": "Kagoshima fue el dominio Satsuma que ayudó a derrocar el shogunato; el jardín de la villa del señor, Sengan-en, enmarca el humeante volcán Sakurajima al otro lado de la bahía.",
+   "getting": "Kagoshima está aproximadamente 1h40m desde Fukuoka por el Kyūshū Shinkansen, o por avión.",
+   "see": [
+    "Villa y jardín del clan Shimadzu de 1658 que utiliza el volcán activo Sakurajima y la bahía Kinko como paisaje prestado; parte de un sitio Patrimonio de la Humanidad UNESCO de la revolución industrial.",
+    "Volcán activo icónico que enfrenta a Kagoshima City, accesible por un corto viaje en ferry; senderos de lava, aguas termales y un centro de visitantes explican sus erupciones frecuentes.",
+    "Calle empedrada bordeada de residencias de samuráis de 250 años y jardines paisajísticos; frecuentemente combinado con el cercano Museo de la Paz Chiran sobre la historia de la Segunda Guerra Mundial."
+   ],
+   "eat": [
+    "La icónica carne de cerdo Berkshire de Kagoshima, apreciada por su grasa ligera y dulce; disfrutada como shabu-shabu en cazuela caliente o como tonkatsu, milanesas.",
+    "Espíritu transparente de aproximadamente 25% destilado de papas dulces locales; Kagoshima tiene más de 100 destilerías que producen miles de variedades.",
+    "Pastel frito de pasta de pescado molido, una especialidad de Kagoshima comida como bocadillo o acompañamiento."
+   ],
+   "phrase_en": "¿Qué me recomiendas?",
+   "word_en": "el volcán activo que se cierne sobre la bahía de Kagoshima",
+   "deeper_en": "Está cayendo ceniza volcánica",
+   "lede": "Un volcán activo al otro lado de la bahía y puerta de entrada a islas de bosques antiguos."
+  },
+  "okinawa": {
+   "see": [
+    "Sitio Patrimonio de la UNESCO de la capital del Reino Ryukyu en Naha. El salón principal (Seiden) se incendió en 2019; la reconstrucción está en curso con finalización prevista para otoño de 2024.",
+    "Uno de los acuarios más grandes del mundo, anclado por el gigantesco tanque Kuroshio Sea donde nadan tiburones ballena y rayas manta. Un atractivo insignia de la Península Motobu.",
+    "El utaki (lugar de oración) más sagrado del Reino Ryukyu, considerado su lugar de origen; parte de la designación UNESCO Gusuku Sites."
+   ],
+   "eat": [
+    "El sofrito característico de Okinawa hecho con melón amargo, tofu, huevo y cerdo. 'Champuru' significa 'algo mezclado' en el dialecto de Okinawa; destacado por JNTO como un imprescindible local.",
+    "A pesar del nombre, hecho de trigo (no trigo sarraceno) así que más cercano a udon; servido en un caldo savory de cerdo y bonito. La versión 'soki' se cubre con cerdo braseado tierno.",
+    "Vientre de cerdo braseado cocido a fuego lento en salsa de soya, azúcar morena y awamori (espíritu de arroz local) hasta quedar tierno al punto de deshacerse. Un clásico de la cocina de la corte Ryukyu."
+   ]
+  }
+ }
+}

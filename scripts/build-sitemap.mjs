@@ -7,7 +7,8 @@
  *
  * BASE: swap to https://nihongo-hub.com once DNS points at Vercel (currently 403).
  */
-import { writeFileSync, existsSync, readdirSync } from "node:fs";
+import { writeFileSync, existsSync, readdirSync, readFileSync } from "node:fs";
+const isNoindex = (rel) => { try { return /name="robots" content="noindex"/.test(readFileSync(new URL(rel, ROOT), "utf8")); } catch { return true; } };
 import { GUIDES } from "../blog/guides-data.js";
 
 const BASE = "https://www.nihongo-hub.com"; // primary domain (apex 308→www). Was nihongohub-nu.vercel.app.
@@ -39,12 +40,18 @@ const standaloneBlog = readdirSync(new URL("blog/", ROOT))
   .filter((slug) => !prefectureSlugs.has(slug))
   .sort();
 standaloneBlog.forEach((slug) => {
+  if (isNoindex(`blog/${slug}.html`)) return; // v2 pages not yet released, demos
   add(`blog/${slug}.html`, "0.8");
   // localized variants of a standalone page, when they exist (e.g., the SSW-facing wage page)
   for (const lang of ["id", "es", "th", "zh"]) {
-    if (existsSync(new URL(`blog/${lang}/${slug}.html`, ROOT))) add(`blog/${lang}/${slug}.html`, "0.7");
+    if (existsSync(new URL(`blog/${lang}/${slug}.html`, ROOT)) && !isNoindex(`blog/${lang}/${slug}.html`)) add(`blog/${lang}/${slug}.html`, "0.7");
   }
 });
+// spot pages (v2), English + language dirs, released ones only
+for (const dir of ["blog/spots", ...["zh", "id", "th", "es"].map((l) => `blog/${l}/spots`)]) {
+  if (!existsSync(new URL(dir + "/", ROOT))) continue;
+  readdirSync(new URL(dir + "/", ROOT)).filter((f) => f.endsWith(".html")).sort().forEach((f) => { if (!isNoindex(`${dir}/${f}`)) add(`${dir}/${f}`, dir === "blog/spots" ? "0.7" : "0.6"); });
+}
 // English prefecture guides
 GUIDES.forEach((g) => add(`blog/${g.slug}.html`, "0.7"));
 // language variants (only if generated)

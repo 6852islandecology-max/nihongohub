@@ -1,0 +1,1141 @@
+{
+ "ui": {
+  "all47": "Semua 47 prefektur",
+  "playmap": "Mainkan peta",
+  "learn": "Belajar bahasa Jepang",
+  "freequiz": "Kuis gratis",
+  "guide": "panduan prefektur",
+  "whereitis": "Lokasinya",
+  "getting": "Cara sampai",
+  "bookbus": "Pesan bus & kereta",
+  "esim": "Dapatkan eSIM Jepang sebelum terbang",
+  "see": "Apa yang dilihat",
+  "alltours": "Semua tur",
+  "map": "Peta",
+  "official": "Resmi",
+  "tickets": "Tiket",
+  "toppick": "Pilihan terbaik",
+  "hidden": "Permata tersembunyi",
+  "eat": "Apa yang dimakan",
+  "foodtours": "Tur kuliner & kelas memasak",
+  "musteat": "Wajib dicoba",
+  "localsecret": "Rahasia lokal",
+  "numbers": "dalam angka",
+  "glance": "sekilas",
+  "sources": "Sumber",
+  "howrank": "cara kami menilai semua 47 →",
+  "speak": "Ucapkan dalam",
+  "practise": "Berlatih dengan tutor",
+  "asklocal": "Tanya penduduk lokal",
+  "localword": "Kata lokal",
+  "onemore": "Satu lagi",
+  "testyourself": "Uji diri Anda",
+  "practisemore": "Berlatih lebih banyak bahasa Jepang →",
+  "rightnow": "sekarang juga",
+  "sleepin": "Menginap di",
+  "compare": "Bandingkan ryokan, hotel bisnis dan penginapan lokal.",
+  "findstay": "Temukan tempat menginap",
+  "faq": "Pertanyaan umum",
+  "nextdoor": "Sebelah",
+  "playmapcard": "Mainkan peta 47 prefektur",
+  "unlock": "Buka {name} di penjelajah gaya RPG.",
+  "spotguides": "Panduan spot",
+  "plan": "Rencanakan kunjungan",
+  "tourstickets": "Tur & tiket",
+  "book": "Pesan",
+  "ferries": "Feri, bus & kereta",
+  "staynear": "Menginap di dekatnya",
+  "nature": "Alam di sekitar",
+  "seeranking": "Lihat peringkat 47 prefektur",
+  "species": "spesies tercatat",
+  "threatened": "spesies terancam",
+  "sightings": "penglihatan tercatat",
+  "of47": "dari 47 prefektur",
+  "godeeper": "Pelajari lebih dalam",
+  "sleepnear": "Menginap dekat",
+  "compareinns": "Bandingkan penginapan dan hotel untuk",
+  "prefguide": "Foto, akses, makanan, harga dan frasa untuk seluruh prefektur.",
+  "disclosure": "Tautan bertanda PR adalah tautan afiliasi: jika Anda memesan melalui tautan tersebut kami mungkin mendapatkan komisi tanpa biaya tambahan untuk Anda.",
+  "photos": "Foto",
+  "classic": "Versi klasik panduan ini",
+  "allguides": "Semua panduan",
+  "home": "Beranda",
+  "source": "Sumber",
+  "alsoin": "Juga di"
+ },
+ "pages": {
+  "tokushima": {
+   "tagline": "Pusaran air, tarian berusia 400 tahun, dan lembah yang terlupakan jalan.",
+   "blurb": "Tokushima, di sisi timur Shikoku, terkenal dengan festival tari musim panas Awa Odori berusia 400 tahun dan pusaran air Naruto yang dahsyat di selat menghadap Pulau Awaji. Pegunungan di pedalaman menyimpan Lembah Iya yang terpencil dan jembatan gantung dari tali yang mendebarkan.",
+   "history": "Tokushima adalah rumah dari Awa Odori, festival tari berusia 400 tahun, dan pusaran air Naruto, termasuk yang terbesar di dunia akibat pasang surut.",
+   "getting": "Tokushima dapat dijangkau dengan bus dari Osaka/Kobe melintasi jembatan Akashi-Kaikyō (~2j30m).",
+   "see": [
+    "Festival Bon tari paling terkenal di Jepang dengan sejarah 400 tahun, menarik jutaan penonton setiap Agustus; pertunjukan dapat dilihat sepanjang tahun di",
+    "Di antara pusaran air pasang surut tercepat di dunia di Selat Naruto; terbaik dilihat dengan perahu wisata atau melalui koridor Uzu-no-Michi lantai kaca di bawah Jembatan Onaruto",
+    "Ngarai pegunungan terpencil dengan jembatan gantung Iya Kazurabashi sepanjang ~45m yang ditenun dari tali gunung, salah satu dari tiga jembatan tali langka Jepang."
+   ],
+   "eat": [
+    "Kaldu tulang babi kaya rasa soy yang disajikan dengan perut babi kukus manis-gurih dan sering telur mentah; tersedia dalam gaya stok putih/coklat/kuning terikat dengan daerah berbeda di",
+    "Buah jeruk aromatik kecil berwarna hijau; sekitar 98% sudachi Jepang ditanam di Tokushima, digunakan sebagai aksen wangi seperti lemon pada hidangan dan minuman.",
+    "Ubi jalar Naruto Kintoki dipuji karena manisnya alami; Naruto-dai (ikan sea bream) menjadi bertekstur padat di arus cepat selat."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "Tokushima's huge mid-August dance festival",
+   "deeper_en": "You can hear the sound of the river.",
+   "access": [
+    {
+     "from": "Tokyo (Haneda)",
+     "to": "Tokushima Awaodori Airport",
+     "time": "1 h 10 min",
+     "note": "JAL / ANA, ~10 penerbangan per hari"
+    },
+    {
+     "from": "Osaka / Kobe (Sannomiya)",
+     "to": "Tokushima Station",
+     "time": "~2 h 30 min",
+     "note": "bus jalan tol melintasi Jembatan Akashi-Kaikyō"
+    }
+   ],
+   "numbers": [
+    {
+     "label": "Sewa, apartemen kecil",
+     "sub": "per bulan, ≤29 m², kota Tokushima"
+    },
+    {
+     "label": "Semangkuk ramen",
+     "sub": "makan di luar, kota Tokushima"
+    },
+    {
+     "label": "Suhu rata-rata",
+     "sub": "rata-rata tahunan, 2023"
+    },
+    {
+     "label": "Kerumunan Awa Odori",
+     "sub": "penonton setiap Agustus"
+    },
+    {
+     "label": "Sudachi yang ditanam di sini",
+     "sub": "dari hasil panen Jepang"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Apakah Tokushima patut dikunjungi?",
+     "a": "Ya jika Anda lebih suka alam dan festival daripada berbelanja. Pusaran air Naruto, jembatan tali Lembah Iya dan Awa Odori adalah hal yang tidak dapat Anda lihat di tempat lain di Jepang."
+    },
+    {
+     "q": "Berapa hari yang saya butuhkan?",
+     "a": "Dua hari mencakup Naruto dan kota; tambahkan satu atau dua hari lagi untuk Lembah Iya dan Ngarai Oboke, yang berjarak 1,5–2 jam berkendara ke pedalaman."
+    },
+    {
+     "q": "Kapan pusaran air paling besar?",
+     "a": "Sekitar pasang surut musim semi dan musim gugur, kira-kira satu jam sebelum dan sesudah waktu puncak yang dipublikasikan. Periksa tabel pasang surut sebelum membeli tiket perahu."
+    }
+   ],
+   "lede": "Pusaran air bergema dan tarian Awa Odori yang memukau."
+  },
+  "naruto-whirlpools": {
+   "name": "Naruto Whirlpools",
+   "badge": "Keajaiban alam",
+   "tagline": "Pusaran pasang surut yang bisa Anda lihat dari atas — atau berlayar ke dalamnya.",
+   "summary": "Dua kali sehari, pasang surut mendorong Laut Pedalaman Seto melalui Selat Naruto yang lebar 1,3 km, dan air berputar membentuk pusaran di antara yang terbesar di dunia. Anda bisa menonton dari perahu, atau dari lantai kaca jalur Uzu-no-Michi yang tergantung di bawah Jembatan Ōnaruto.",
+   "facts": [
+    "Pusaran mencapai kira-kira 20 m melintang pada pasang surut semi-diurnal terkuat",
+    "Jalur Uzu-no-Michi: panjang 450 m di dalam gelagar jembatan, lantai kaca sekitar 45 m di atas air",
+    "Terbaik sekitar pasang surut semi-diurnal musim semi dan musim gugur, dalam kurun waktu sekitar satu jam dari puncak yang dipublikasikan; periksa tabel pasang surut sebelum membeli tiket"
+   ],
+   "access": "Bus lokal dari Stasiun JR Naruto ke Naruto Kōen (sekitar 20 menit); jembatan dan Uzu-no-Michi adalah jalan singkat dari taman.",
+   "guides": [
+    "Melodi stasiun menurut wilayah — suara tiba di Shikoku"
+   ]
+  },
+  "awa-odori-kaikan": {
+   "name": "Awa Odori Kaikan",
+   "badge": "Tradisi hidup",
+   "tagline": "Tari Bon berusia 400 tahun yang bisa Anda saksikan setiap hari, tidak hanya di Agustus.",
+   "summary": "Awa Odori adalah festival Bon dance terbesar di Jepang: empat malam Agustus ketika rombongan penari memenuhi jalan-jalan Tokushima. Lewatkan tanggalnya dan Anda tetap bisa melihatnya — Kaikan menyelenggarakan pertunjukan sepanjang tahun, dan teleferik Bizan berangkat dari lantai teratasnya untuk pemandangan kota.",
+   "facts": [
+    "Tanggal festival: 12–15 Agustus setiap tahun, di kota Tokushima",
+    "Lebih dari satu juta penonton setiap Agustus",
+    "Pertunjukan panggung harian di Kaikan; Teleferik Bizan berangkat dari lantai ke-5"
+   ],
+   "access": "Sekitar 10 menit berjalan kaki dari Stasiun JR Tokushima, di kaki Gunung Bizan.",
+   "guides": [
+    "Stempel stasiun — kumpulkan stempel stasiun sebelum Anda meninggalkan Tokushima"
+   ]
+  },
+  "iya-kazurabashi": {
+   "name": "Iya Kazurabashi",
+   "badge": "Lembah tersembunyi",
+   "tagline": "Sebuah jembatan yang ditenun dari akar pohon gunung, jauh di dalam lembah yang dilupakan jalan.",
+   "summary": "Lembah Iya adalah salah satu ngarai paling terpencil di Jepang, dan jembatan suspensi dari akar pohonnya adalah alasan sebagian besar pengunjung mengambil perjalanan ini. Jembatan bergoyang; papannya memiliki celah; sungai jauh di bawah. Jembatan dibangun kembali dengan akar pohon segar setiap beberapa tahun sehingga tetap menakutkan seperti ini.",
+   "facts": [
+    "Panjang sekitar 45 m, lebar 2 m, kira-kira 14 m di atas Sungai Iya; salah satu dari tiga jembatan akar pohon yang masih bertahan di Jepang",
+    "Ditenun kembali setiap tiga tahun dari akar pohon kiwi yang kuat (shirakuchikazura)",
+    "Terdekat: Biwa Falls (beberapa menit jalan kaki) dan Oboke Gorge di hilir"
+   ],
+   "access": "Bus dari Stasiun JR Oboke (Dosan Line) sekitar 25 menit ke Kazurabashi; mobil membuat lembah yang lebih luas menjadi lebih mudah.",
+   "guides": [
+    "Michi-no-eki stamp rally — Michi-no-Eki Oboke ada di jalan"
+   ]
+  },
+  "oboke-gorge": {
+   "name": "Oboke Gorge",
+   "badge": "Ngarai sungai",
+   "tagline": "Tebing marmer, air jade, dan perahu yang membawa Anda ke keduanya.",
+   "summary": "Sungai Yoshino telah memotong ngarai Oboke dan Koboke melalui schist kristal keras, meninggalkan dinding batu pucat di atas air hijau. Perahu wisata singkat beroperasi dari tepi sungai; perusahaan arung jeram menggunakan peregangan yang sama. Pada awal Mei, ratusan koinobori bendera ikan mas tergantung di seluruh ngarai.",
+   "facts": [
+    "Perahu wisata: sekitar 30 menit perjalanan pulang-pergi dari tepi sungai Oboke",
+    "JR Oboke Station di Dosan Line adalah pintu gerbang ke ngarai dan Lembah Iya",
+    "Michi-no-Eki Oboke (Lapis Oboke) di samping ngarai menampung museum yōkai dan museum batu"
+   ],
+   "access": "JR Oboke Station (sekitar 1 jam 15 menit dari Tokushima dengan limited express via Awa-Ikeda; sekitar 1 jam dari Kōchi). Dermaga perahu dan michi-no-eki adalah jarak pendek berjalan kaki atau satu halte bus.",
+   "guides": [
+    "Panduan reli perangko Michi-no-Eki",
+    "Eki stamps — stasiun JR Shikoku"
+   ]
+  },
+  "ryozenji-temple": {
+   "name": "Ryōzen-ji",
+   "badge": "Ziarah no. 1",
+   "tagline": "Tempat dimulainya ziarah 88 kuil Shikoku.",
+   "summary": "Ryōzen-ji adalah kuil nomor satu dari Shikoku Henro, ziarah 88 kuil yang mengelilingi pulau ini. Para peziarah membeli rompi putih, topi anyaman, tongkat, dan buku stempel mereka di sini sebelum berangkat; toko dan arus ohenro memberikan kuil kecil ini suasana yang tidak sebanding dengan ukurannya.",
+   "facts": [
+    "Kuil no. 1 dari 88 Shikoku; sirkuit penuh kira-kira 1.200 km",
+    "Barang peziarah (rompi hakui, tongkat kongōzue, buku stempel nōkyōchō) dijual di tempat",
+    "Kuil 1–10 terletak berdekatan sepanjang Sungai Yoshino, jadi hari pertama berjalan kaki sangat mungkin dilakukan"
+   ],
+   "access": "Sekitar 10 menit berjalan kaki dari Stasiun JR Bandō (Lini Kōtoku), 25 menit dengan kereta dari Tokushima.",
+   "guides": [
+    "Goshuin — cara kerja stempel kuil (nōkyō ziarah memiliki ide yang sama)",
+    "Memilih buku stempel goshuinchō"
+   ]
+  },
+  "ishima-island": {
+   "name": "Ishima",
+   "badge": "Pulau berpenghuni",
+   "tagline": "Sebuah pulau nelayan di Selat Kii tanpa mobil dan 165 penduduk.",
+   "summary": "Ishima terletak di lepas pantai Anan di muara Selat Kii. Desa ini tersebar padat di jalur tanah datar sehingga satu-satunya cara berpergian adalah dengan berjalan kaki. Udang lobster berduri adalah hasil tangkapan lokal; sebuah jalur perbukitan yang dilapisi 33 Budha batu melintasi pulau, dan mercusuar di sisi jauh adalah mercusuar tanpa awak pertama Jepang yang sepenuhnya otomatis.",
+   "facts": [
+    "Luas 1,44 km²; populasi 165",
+    "Sekitar 3.900 pengunjung per tahun (FY2016)",
+    "Ferry dari pelabuhan Tōshima (Anan) sekitar 30 menit, 3 keberangkatan per hari; tidak ada mobil di pulau",
+    "Ise-ebi (udang lobster berduri) adalah keistimewaan"
+   ],
+   "access": "Stasiun JR Anan → bus/taksi ke pelabuhan Tōshima → ferry 30 menit. Perjalanan sehari mungkin dilakukan sesuai jadwal 3 keberangkatan; periksa waktu kembali sebelum Anda naik.",
+   "guides": [
+    "Lebih banyak pulau kecil: panduan Kepulauan Izu"
+   ]
+  },
+  "takegashima-island": {
+   "name": "Takegashima",
+   "badge": "Pulau yang dihuni",
+   "tagline": "Pulau penangkap tuna yang bisa diakses dengan berkendara, dengan ikan badut di bawah dermaga.",
+   "summary": "Takegashima berada di ujung selatan Tokushima, terhubung ke daratan dengan jembatan. Penangkapan ikan adalah kegiatan utama di tempat ini, tetapi alasan pengunjung datang adalah airnya: museum laut, perahu dengan dasar kaca, sea kayak, dan snorkeling di atas terumbu karang tempat ikan badut hidup di ujung utara jangkauan mereka.",
+   "facts": [
+    "Luas 1,30 km²; populasi 214",
+    "Marine Jam (museum laut Kaiyō Town) dengan perahu dasar kaca dan akuarium kecil; tutup hari Selasa",
+    "Hidangan lokal: makanan laut kering, udang berduri, abalone"
+   ],
+   "access": "Bus dari Stasiun JR Mugi sekitar 40 menit, atau dari Stasiun Shishikui (Asa Coast Railway) sekitar 9 menit, ke Takegashima.",
+   "guides": [
+    "Pengamatan satwa liar di Jepang — di mana melihat apa"
+   ]
+  },
+  "shimadajima-island": {
+   "name": "Shimadajima",
+   "badge": "Pulau berpenghuni",
+   "tagline": "Pulau pertanian dan perikanan yang tenang di sebelah pusaran air.",
+   "summary": "Shimadajima terletak di laut dalam Naruto beberapa menit dari Jembatan Ōnaruto, tetapi merupakan dunia yang berbeda: ladang teratai, festival shrine kuno di mana portable shrine dibawa ke laut, dan hampir tidak ada pengunjung. Jalan tol melintas di sini, jadi Anda dapat mencapainya dengan mobil — atau naik ferry 4 menit dari Dōnoura.",
+   "facts": [
+    "Luas 5.72 km²; populasi 430",
+    "Ferry dari Dōnoura sekitar 4 menit, 10 keberangkatan sehari; juga dapat diakses melalui jalan via Naruto-kita IC",
+    "Spesialisasi: akar teratai dan beras varietas kuno; festival musim gugur Awai Shrine pada 16 Oktober"
+   ],
+   "access": "Dari Naruto: mobil via Naruto-kita IC, atau bus/taksi ke Dōnoura dan ferry 4 menit.",
+   "guides": [
+    "Goshuin di shrine kecil — cara memintanya"
+   ]
+  },
+  "hokkaido": {
+   "see": [
+    "Sebuah jalur air ikonik sepanjang 1.140 m yang dilapisi gudang batu asli dari era perdagangan maritim Hokkaido; saat senja 63 lampu gas menyala dan terpantul di air. A s",
+    "The Clock Tower (dibangun 1878) adalah menara jam tertua yang masih berjalan di Jepang dan merupakan Properti Budaya Penting Nasional; R Neo-Baroque Amerika era Meiji di dekatnya",
+    "Acara musim dingin terbesar Sapporo, menarik lebih dari 2 juta pengunjung setiap tahun di situs Odori, Susukino dan Tsudome. Edisi 2026 berlangsung 4-11 Februari 2026"
+   ],
+   "eat": [
+    "Perairan dingin Hokkaido menghasilkan kepiting, uni (bulu babi), ikura (telur salmon), kerang dan cumi-cumi yang sangat dihargai. Cara klasik untuk mencicipinya adalah mangkuk nasi makanan laut segar di",
+    "Kari berbahan kaldu pedas yang penuh dengan sayuran dan daging di atas nasi. Ini berasal dari Sapporo pada 1970-an dan menjadi hits nasional pada 2000-an; ada",
+    "Daging domba atau kambing dan sayuran dipanggang di meja pada panci logam kubah dan dicelupkan ke saus. Ini dianggap sebagai 'makanan jiwa' komunal Hokkaido."
+   ]
+  },
+  "aomori": {
+   "tagline": "Negara apel Jepang di ujung utara Honshu, terkenal dengan festival musim panas Nebuta yang spektakuler.",
+   "blurb": "Prefektur paling utara di Honshu, Aomori adalah kerajaan apel Jepang (sekitar 60% dari produksi nasional) dan rumah bagi Festival Nebuta yang meriah, dengan Hirosaki Castle termasuk di antara tempat-tempat terbaik untuk melihat bunga sakura di negara ini.",
+   "history": "Aomori (青森) menghadap Selat Tsugaru di ujung utara Honshu. Situs Sannai-Maruyama (三内丸山) menunjukkan pemukiman Jōmon besar dari lebih dari 5.000 tahun yang lalu, dan Hirosaki (弘前) berkembang sebagai kota kastil klan Tsugaru.",
+   "getting": "Sekitar 3 jam dari Tokyo dengan Tōhoku Shinkansen ke Shin-Aomori.",
+   "see": [
+    "Salah satu reruntuhan pemukiman periode Jomon terbesar di Jepang (kurang lebih 5.900-4.200 tahun yang lalu), bagian dari Situs Prasejarah Jomon UNESCO World Heritage yang tercatat pada tahun 2",
+    "Kastil bersejarah dengan menara pertahanan yang masih berdiri, terkenal sebagai salah satu tempat terbaik di Jepang untuk menyaksikan bunga sakura.",
+    "Rumah bagi patung 'Aomori-ken' (Aomori Dog) raksasa karya Yoshitomo Nara, ikon foto yang ikonik; berlokasi di sebelah reruntuhan Sannai-Maruyama."
+   ],
+   "eat": [
+    "Aomori adalah prefektur penghasil apel terkemuka di Jepang; Hirosaki terkenal dengan jalur pie apelnya dengan ~50 varietas toko lokal yang tercatat dalam panduan khusus.",
+    "Sup gaya Hachinohe yang berisi bulu landak laut (uni) dan abalone (awabi); kuah yang susu putih membuat uni terlihat seperti stroberi liar, maka namanya.",
+    "Kue ikan goreng gaya rumahan Hirosaki dari potongan kecil cumi-cumi dan sayuran; camilan lokal yang hemat jarang ditemukan di luar wilayah Tsugaru."
+   ],
+   "phrase_en": "Oishii!",
+   "word_en": "pelampung festival yang bercahaya raksasa",
+   "deeper_en": "Kamu dari mana? (pembuka percakapan alami yang digunakan penduduk lokal dengan para wisatawan)",
+   "lede": "Negara apel Jepang di ujung utara Honshu, terkenal dengan festival musim panas Nebuta yang spektakuler."
+  },
+  "iwate": {
+   "tagline": "Prefektur yang luas dan bergersang dengan kuil, garis pantai, dan tradisi cold-soba.",
+   "blurb": "Iwate adalah prefektur terluas kedua di Jepang, di Tohoku utara, menggabungkan kuil Warisan Dunia UNESCO dan taman Pure Land Hiraizumi dengan pantai Sanriku yang bergersang dengan teluk-teluk dalam dan perairannya yang kaya makanan laut. Ibu kota kastil-kota Morioka dinamai salah satu dari \"52 Tempat untuk Dikunjungi pada 2023\" majalah The New York Times.",
+   "history": "Iwate (岩手) adalah pusat Fujiwara Utara, yang membangun kuil-kuil bersalut emas di Hiraizumi (平泉) pada abad ke-12 sebagai surga Pure Land di bumi — kini sebuah Situs Warisan Dunia UNESCO.",
+   "getting": "Morioka berjarak ~2 jam 10 menit dari Tokyo dengan Tōhoku Shinkansen.",
+   "see": [
+    "Pusat situs Warisan Dunia UNESCO Hiraizumi: sebuah aula abad ke-12 yang seluruhnya dilapisi daun emas dengan hiasan mutiara, simbol Oshu Fu.",
+    "Bagian dari daftar UNESCO yang sama; taman Jodo (Pure Land) era Heian dengan kolam besar yang bertahan dalam bentuk asli abad ke-12.",
+    "Ngarai sepanjang 2 km di sepanjang Sungai Satetsu dengan tebing setinggi 100m+, dijelajahi dengan perahu berdatar datar yang didesak oleh seorang pelapak yang menyanyikan lagu rakyat lokal Geibi."
+   ],
+   "eat": [
+    "Pengalaman soba khas Iwate: porsi kecil satu gigitan mie buckwheat yang disajikan terus-menerus ke dalam mangkuk Anda dalam tantangan all-you-can-eat, sebuah Morioka.",
+    "Mie dingin yang kenyal dan elastis terbuat dari tepung gandum dan pati kentang dalam kaldu daging sapi jernih dengan kimchi, mentimun, telur dan sepotong buah; terinspirasi Korea dari Morioka.",
+    "Mie seperti udon datar dengan topping saus daging miso gurih, mentimun dan bawang putih, dicampur menyeluruh sebelum dimakan; dibawa kembali dari Manchuria pada 1945 dan sekarang menjadi favorit lokal."
+   ],
+   "phrase_en": "Apa yang Anda rekomendasikan?",
+   "word_en": "soba berukuran gigitan yang all-you-can-eat",
+   "deeper_en": "Pemandangan Iwate benar-benar indah, bukan?",
+   "lede": "Prefektur yang luas dan bergersang dengan kuil, garis pantai, dan tradisi cold-soba."
+  },
+  "miyagi": {
+   "tagline": "Rumah bagi Sendai yang meriah dan salah satu dari 'tiga pemandangan terindah' Jepang di Teluk Matsushima.",
+   "blurb": "Miyagi, di wilayah Tohoku Jepang, terkenal dengan Teluk Matsushima—salah satu dari \"Tiga Tempat Paling Indah di Jepang,\" dengan sekitar 260 pulau berpenghuni pohon pinus—dan ibukota yang meriah, Sendai, \"Kota Pohon\" yang dikenal karena daging sapi panggang (gyutan) dan festival Tanabata dengan pita kertas raksasa setiap Agustus.",
+   "history": "Miyagi (宮城) adalah domain Date Masamune (伊達政宗), panglima perang bermata satu yang mendirikan Sendai (仙台) pada tahun 1600 dan membentuk budayanya, dari kuliner hingga festival Tanabata.",
+   "getting": "Sendai berjarak ~1j30m dari Tokyo dengan Tōhoku Shinkansen — kota Tōhoku yang paling mudah dijangkau.",
+   "see": [
+    "Salah satu dari 'Tiga Pemandangan Jepang', dengan sekitar 260 pulau berpenghuni pohon pinus; ~1 jam dari Sendai, dapat dijangkau dengan kapal wisata.",
+    "Kuil Zen Harta Karun Nasional yang dibangun kembali oleh lord Date Masamune pada tahun 1609 sebagai kuil keluarga Date, dekat Matsushima; terkenal dengan pintu geser berlapis emas dan Burung Merak.",
+    "Situs di atas bukit dengan kastil Date Masamune yang memiliki patung berkuda ikonik Masamune dan pemandangan luas di atas Sendai; hanya tembok batu dan sebuah menara yang tersisa."
+   ],
+   "eat": [
+    "Hidangan paling ikonik Sendai, dipercaya berasal dari tahun 1940an. Dipanggang dengan arang, disajikan dengan nasi barley, sup ekor sapi dan acar; juga sebagai gyutan don, katsu.",
+    "Mochi dengan topping pasta manis berwarna hijau cerah dari edamame muda yang dilumat; permen khas Sendai yang juga ditemukan sebagai zunda shakes, daifuku dan manju.",
+    "Tiram besar dari Teluk Matsushima, kelezatan musim dingin yang dirayakan di Festival Tiram Februari dan dimakan dipanggang, digoreng (kaki fry) atau mentah."
+   ],
+   "phrase_en": "Apa yang Anda rekomendasikan?",
+   "word_en": "daging sapi panggang, spesialisasi Sendai",
+   "deeper_en": "Pemandangan yang indah, bukan?",
+   "lede": "Rumah bagi Sendai yang meriah dan salah satu dari 'tiga pemandangan terindah' Jepang di Teluk Matsushima."
+  },
+  "akita": {
+   "tagline": "Negeri salju dalam, beras dan sake, serta tradisi folk Namahage yang sengit.",
+   "blurb": "Akita adalah prefektur Tohoku utara yang bersalju, terkenal dengan Kanto Festival menampilkan tiang bambu raksasa berisi lentera yang diseimbangkan di tubuh penari, sake dan beras berkualitas tinggi, serta Lake Tazawa, danau terdalam Jepang. Tempat ini juga menjadi rumah tradisi Namahage—kunjungan makhluk jahat—dan pemandangan kota samurai era Edo yang terjaga dengan baik.",
+   "history": "Akita (秋田) adalah negeri beras dan sake kuno. Kakunodate (角館) melestarikan rumah samurai era Edo, dan semenanjung Oga (男鹿) menjaga ritual Tahun Baru Namahage (なまはげ) tetap hidup.",
+   "getting": "Akita berjarak ~3j40m dari Tokyo melalui Akita Shinkansen.",
+   "see": [
+    "Rumah ritual Tahun Baru Namahage, Warisan Budaya Takbenda UNESCO. Museum sepanjang tahun memungkinkan pengunjung melihat topeng dan demonstrasi Namahage langsung.",
+    "'Kyoto Kecil Tohoku': rumah samurai era Edo yang terjaga dengan dinding kayu hitam, terkenal dengan bunga sakura menangis di musim semi; enam manor terbuka untuk dikunjungi.",
+    "Danau terdalam Jepang (423,4 m) dengan air biru kobalt, patung Tatsuko emas, dan torii lakeside vermilion dari Gozanoishi Shrine."
+   ],
+   "eat": [
+    "Beras lokal yang dilumatkan ditekan pada tusuk cedar, dipanggang, lalu disimmer dalam hot pot ayam Hinai-jidori. Hidangan musim dingin ikonik Akita yang berasal dari Odate/utara.",
+    "Diperhitungkan di antara tiga besar udon Jepang. Mie gandum tipis, pipih, ditarik tangan dengan tekstur halus dan tegas, dibuat selama lebih dari 300 tahun di Inaniwa, Kota Yuzawa.",
+    "Acar lobak asap unik untuk Akita, di mana lobak dikeringkan asap di atas perapian (bukan dijemur) karena iklim bersalju; dihargai karena rasanya yang gurih dan berasap."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "para pengunjung ogre Tahun Baru dari Semenanjung Oga",
+   "deeper_en": "Salju di sini luar biasa, bukan?",
+   "lede": "Negeri salju dalam, beras dan sake, serta tradisi folk Namahage yang sengit."
+  },
+  "yamagata": {
+   "tagline": "Kuil gunung, bunga sakura, dan monster salju di Gunung Zaō.",
+   "blurb": "Yamagata, di wilayah Tohoku menghadap Laut Jepang, menghasilkan sekitar 70% bunga sakura Jepang dan merupakan rumah bagi kuil gunung tepi jurang Yamadera (Risshakuji). Di musim dingin, pohon cemara Gunung Zao membeku menjadi \"monster salju\" terkenal (juhyo) di atas lereng ski onsen-nya.",
+   "history": "Yamagata (山形) adalah tanah gunung suci. Penyair Bashō mendaki Yamadera (山寺) tepi jurang pada 1689, dan Dewa Sanzan (出羽三山) telah menarik pendaki gunung yamabushi selama lebih dari seribu tahun.",
+   "getting": "Yamagata berjarak ~2j30m dari Tokyo dengan Yamagata Shinkansen.",
+   "see": [
+    "Kuil pinggir gunung yang didirikan lebih dari 1.000 tahun lalu, dapat diakses melalui jalan batu 1.015 langkah; terkenal dikunjungi oleh penyair haiku Matsuo Basho, dengan pemandangan lembah yang menakjubkan",
+    "Kota sumber air panas tersembunyi era Taisho dengan ryokan kayu berjajar di tepi sungai, diterangi lampu gas di malam hari. Dibangun di sekitar bekas tambang perak dan sering menjadi pengganti St",
+    "Rangkaian gunung berapi aktif melintasi Yamagata dan Miyagi, dengan danau kawah Okama musim panas dan monster salju 'juhyo' musim dingin (pohon berlapis es) di resor ski"
+   ],
+   "eat": [
+    "Salah satu dari tiga merek wagyu teratas Jepang bersama Kobe dan Matsusaka, dihargai karena marbling halusnya; biasanya dinikmati sebagai sukiyaki atau yakiniku. Sapi digemukkan",
+    "Panci panas musim gugur yang gurih dengan akar taro, daging sapi dan sayuran dalam kuah berbahan kedelai atau miso. Penduduk lokal berkumpul untuk pesta 'imoni-kai' tepi sungai, dan Kota Yamagata mengadakan",
+    "Mie soba yang lebih tebal dan kenyal daripada norma nasional, disajikan di sepanjang 'jalan raya soba' prefektur; hidangan mie dingin adalah makanan pokok regional."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "bunga sakura — Yamagata menanam sebagian besar Jepang",
+   "deeper_en": "untuk menghargai suasana musiman atau pesona",
+   "lede": "Kuil gunung, bunga sakura, dan monster salju di Gunung Zaō."
+  },
+  "fukushima": {
+   "tagline": "Sejarah samurai, mata air panas, dan kebun buah di prefektur yang luas dan indah.",
+   "blurb": "Prefektur terbesar di Tohoku menurut luas, Fukushima menggabungkan sejarah samurai dan barang lacquer dari dataran tinggi Aizu dengan garis pantai Pasifik, dan terbagi menjadi tiga wilayah yang berbeda: pegunungan Aizu, Nakadori tengah, dan Hamadori pesisir. Terkenal karena kastil di atas bukit, resor mata air panas, dan pemandangan rel yang dramatis seperti Tadami Line.",
+   "history": "Wilayah Aizu (会津) di Fukushima (福島) adalah benteng samurai yang setia; para prajurit muda Byakkotai (白虎隊) dan Tsuruga Castle (鶴ヶ城) adalah pusat dari sejarah Perang Boshin tahun 1868.",
+   "getting": "Kōriyama/Fukushima berjarak ~1h20m–1h40m dari Tokyo dengan Tōhoku Shinkansen.",
+   "see": [
+    "Simbol klan samurai Aizu, terkenal karena berhasil bertahan dari pengepungan sebulan selama Perang Boshin tahun 1868. Memiliki kastil dengan atap genteng merah satu-satunya di Jepang; dikelilingi oleh",
+    "Kota pos era Edo yang terpelihara dengan baik dengan rumah-rumah beratap jerami di pegunungan barat daya; Distrik Pelestarian Penting yang ditetapkan secara nasional. Dulu",
+    "Sekelompok danau vulkanik dekat Mt. Bandai (terbentuk dari letusan tahun 1888) bersinar dengan warna hijau zamrud, kobalt, dan turquois yang berubah-ubah dari kandungan mineral. Sangat"
+   ],
+   "eat": [
+    "Salah satu dari 'Tiga Besar Ramen' Jepang bersama Sapporo dan Hakata. Dari Kitakata City di wilayah Aizu: mie keriting tebal, berkadar air tinggi, sudah disimpan dalam kuah yang",
+    "Sup perayaan tradisional Aizu yang dibuat dengan kaldu kerang-kerang kering dan bahan-bahan seperti telinga kayu dan jamur shiitake, konjac, taro, dan pakis, dibumbui dengan",
+    "Hidangan khas Ouchi-juku: soba buckwheat dimakan dengan menggunakan satu batang negi hijau panjang (bawang panjang) sebagai pengganti sumpit, yang juga berfungsi sebagai bumbu. Kebiasaan lokal yang"
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "the historic samurai region of western Fukushima",
+   "deeper_en": "The water here is delicious, isn't it? (polite observation about local spring water or sake quality)",
+   "lede": "Sejarah samurai, mata air panas, dan kebun buah di prefektur yang luas dan indah."
+  },
+  "ibaraki": {
+   "tagline": "Taman bunga musiman, patung Buddha raksasa, dan natto di sebelah utara Tokyo.",
+   "blurb": "Ibaraki, di pantai Pasifik timur laut Tokyo, terkenal dengan Hitachi Seaside Park dengan bukit nemophila biru di musim semi dan kochia merah di musim gugur, serta Kairakuen di Mito, salah satu dari \"Tiga Taman Besar\" Jepang dengan sekitar 3.000 pohon prem. Ibaraki juga merupakan rumah bagi Tsukuba Science City, pusat lembaga penelitian nasional.",
+   "history": "Ibaraki (茨城) adalah domain Mito (水戸) dari cabang senior Tokugawa; para daimyo Mito yang terpelajar menciptakan Kairaku-en (偕楽園), salah satu dari tiga taman besar Jepang, sebagai ruang yang dibagikan dengan masyarakat umum.",
+   "getting": "Mito dapat dicapai ~1j15m dari Tokyo dengan kereta terbatas ekspres; Hitachi Seaside Park dengan bus dari Katsuta.",
+   "see": [
+    "Salah satu dari tiga taman besar Jepang, dibangun oleh daimyo Tokugawa Nariaki sebagai taman yang terbuka untuk warga biasa. Terkenal karena ~3.000 pohon prem (ume) yang mekar pada bulan Fe",
+    "Dengan tinggi 120m, salah satu patung Buddha perunggu tertinggi di dunia. Sebuah lift naik ke dek observasi setingkat dada; dikelilingi oleh taman, pohon sakura dan teratai",
+    "Taman pesisir yang luas di Hitachinaka terkenal dengan ladang bunga musiman, komidi putar dan wahana; bukit nemophila musim semi adalah daya tarik utamanya."
+   ],
+   "eat": [
+    "Makanan paling ikonik Ibaraki: kacang kecil kedelai fermentasi dari Mito, dipuji karena kelengketan yang kuat, aroma kaya dan umami. Dimakan di atas nasi, pada roti panggang atau dalam pasta.",
+    "Ibaraki memproduksi lebih dari 90% hoshi-imo Jepang (Hitachinaka, Tokai, Naka). Alami manis, kenyal, tanpa gula tambahan; lapisan permukaan putih adalah kristal nat",
+    "Spesialisasi musim dingin pantai (Mito/Oarai). Ikan monkfish yang disimak dalam pot kaya; hampir setiap bagian dapat dimakan dan hati yang kaya kolagen sangat dihargai sebagai kelezatan."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "sticky fermented soybeans — Mito is famous for them",
+   "deeper_en": "to savor local flavors / to truly enjoy regional cuisine",
+   "lede": "Taman bunga musiman, patung Buddha raksasa, dan natto di sebelah utara Tokyo."
+  },
+  "tochigi": {
+   "tagline": "Rumah dari kuil-kuil yang megah dan air terjun di Nikkō.",
+   "blurb": "Tochigi, sekitar 100 km utara Tokyo, adalah rumah dari kuil dan candi berlapisan emas UNESCO World Heritage Nikko dan taman nasional sekitarnya dengan air terjun, danau, dan dedaunan musim gugur yang indah. Ibu kota Utsunomiya terkenal di seluruh Jepang sebagai kota gyoza (pangsit).",
+   "history": "Tochigi (栃木) memiliki Nikkō (日光), tempat Tokugawa Ieyasu dimakamkan pada 1617 di Tōshō-gū (東照宮) yang diukir dengan mewah, menjadikannya salah satu kompleks kuil paling penting di Jepang.",
+   "getting": "Nikkō berjarak ~2 jam dari Tokyo (jalur Tōbu dari Asakusa, atau shinkansen + transfer).",
+   "see": [
+    "Makam bergambar yang diukir dengan mewah dari shogun Tokugawa Ieyasu dan bagian dari 'Kuil dan Candi Nikko' UNESCO World Heritage. Terkenal dengan Tiga Monyet Bijak dan",
+    "Di luar Toshogu, situs UNESCO mencakup 103 struktur termasuk Kuil Rinnoji abad ke-8, Kuil Futarasan yang didedikasikan untuk gunung-gunung sakral Nikko, dan",
+    "Air terjun setinggi 97 meter dekat Danau Chuzenji di kaki Gunung Nantai, salah satu air terjun paling terkenal di Jepang; pasangan hari kedua klasik dengan kuil Nikko, spektakuler"
+   ],
+   "eat": [
+    "Utsunomiya adalah ibu kota gyoza gaya Jepang dengan lebih dari 300 toko spesialis; gaya lokal ringan dan berorientasi sayuran, disajikan ditumis di wajan (yaki), digoreng dalam minyak dalam (",
+    "Ramen regional dari kota Sano dengan kaldu berbasis kecap ringan dan mie buatan tangan yang kunyah dan lentur yang secara tradisional diaduk dengan tongkat bambu hijau (aodake). Sekitar",
+    "Tochigi adalah prefektur penghasil stroberi teratas Jepang; varietas Tochiotome yang manis dan berair adalah unggulan utama. Pertanian pemetik stroberi pilihan sendiri (misalnya sekitar Mashiko/N"
+   ],
+   "phrase_en": "Apa yang Anda rekomendasikan?",
+   "word_en": "pangsit tumis di wajan — spesialisasi Utsunomiya",
+   "deeper_en": "Mohon berhati-hati / Jagalah diri Anda",
+   "lede": "Rumah dari kuil-kuil yang megah dan air terjun di Nikkō."
+  },
+  "gunma": {
+   "tagline": "Resor air panas terkenal dan warisan pabrik sutra UNESCO.",
+   "blurb": "Prefektur pegunungan terkurung daratan di Kanto utara yang terkenal dengan mata air panasnya, termasuk Kusatsu Onsen, yang memiliki output air panas alami terbesar di Jepang. Prefektur ini juga menjadi rumah bagi Pabrik Sutra Tomioka yang merupakan Situs Warisan Dunia UNESCO dan tempat kelahiran boneka daruma.",
+   "history": "Gunma (群馬) meluncurkan era modern Jepang: Pabrik Sutra Tomioka (富岡製糸場), dibuka pada 1872, mekanisasi produksi sutra dan kini menjadi situs UNESCO. Pegunungannya menyimpan onsen berusia berabad-abad.",
+   "getting": "Takasaki berjarak ~50 menit dari Tokyo dengan shinkansen; kota-kota onsen dapat diakses dengan bus/jalur lokal.",
+   "see": [
+    "Situs Warisan Dunia UNESCO (2014), pabrik penggulung sutra modern pertama Jepang (didirikan 1872) memadukan arsitektur Barat dan Jepang; demonstrasi dan pertunjukan sutra langsung.",
+    "Salah satu dari tiga resor air panas teratas Jepang dengan output mata air alami tertinggi di negara ini; sumber Yubatake yang berasap dan lagu yumomi pengadukan air yang meriah.",
+    "Tangga batu bersejarah sepanjang 300 meter lebih (365 anak tangga) yang dilapisi toko kerajinan dan penginapan, terkenal dengan pesona retro dan air 'keemasan' berwarna cokelat yang kaya zat besi."
+   ],
+   "eat": [
+    "Gunma adalah wilayah penghasil gandum utama; udon Mizusawa (dianggap sebagai salah satu mie berkualitas tinggi Jepang, lembut dengan gigitan yang kokoh) dan udon himokawa yang ultra-lebar adalah hidangan khas.",
+    "Bun kukus yang ditusuk, dipanggang dan dilapisi dengan glasir miso manis. Camilan jalanan era Edo yang dicintai berasal dari Maebashi, dengan festival di Isesaki.",
+    "Gunma menghasilkan lebih dari 90% konjac taro Jepang, menjadikan makanan jeli rendah kalori yang ramah vegan ini produk lokal yang mendefinisikan."
+   ],
+   "phrase_en": "Where is the station?",
+   "word_en": "hot spring — Gunma has Japan's most famous ones",
+   "deeper_en": "to rest and recover one's fatigue in a hot spring",
+   "lede": "Resor air panas terkenal dan warisan pabrik sutra UNESCO."
+  },
+  "saitama": {
+   "tagline": "Kawagoe yang menyerupai Edo kecil, ditambah bonsai dan pinggiran kota yang ramai.",
+   "blurb": "Prefektur yang tidak berbatasan laut di utara Tokyo, Saitama paling dikenal karena townscape gudang 'Little Edo' Kawagoe dan gorge, shrine, serta hot spring di wilayah pegunungan Chichibu. Omiya, pusat urbannya, menampilkan Railway Museum dan desa bonsai bersejarah.",
+   "history": "Kawagoe di Saitama (埼玉) berkembang pesat sebagai kota pedagang yang memasok Edo; gudang kurazukuri tanah liat yang masih bertahan dan Bell Tower kayu (時の鐘) membuatnya mendapat julukan 'Little Edo' (小江戸).",
+   "getting": "Kawagoe berjarak ~30–45 menit dari pusat Tokyo dengan kereta api (Tōbu/Seibu/JR).",
+   "see": [
+    "Jalan-jalan bersejarah berjajar gudang yang diawetkan sejak periode Edo, dengan menara lonceng Toki no Kane yang ikonik yang masih berdentang empat kali setiap hari.",
+    "Shrine berusia sekitar 1.500 tahun yang terkenal sebagai 'power spot' perjodohan; festival musim panas 'Enmusubi Furin'-nya menampilkan sekitar 2.100 wind chime bergaya Edo di seluruh tempat.",
+    "Shrine pegunungan di ketinggian ~1.100 m yang mengubah serigala sebagai utusan ilahi; dianggap sebagai salah satu power spot spiritual teratas di wilayah Kanto."
+   ],
+   "eat": [
+    "Kerupuk nasi yang dipanggang keras dari Soka, berasal dari periode Edo ketika Soka adalah kota pos di jalan raya Nikko Kaido; dipress rata dengan press oshigawara untuk tekstur yang renyah.",
+    "Belut yang dipotong, dipisahkan tulangnya, ditusuk dan dipanggang dalam marinade saus kedelai manis; tradisi berusia ~200 tahun yang tetap hidup di sekitar Urawa, di mana lama menjadi makanan terlindungi.",
+    "Saitama adalah produsen udon terbesar kedua Jepang (setelah Kagawa) berkat produksi gandumnya, dengan banyak variasi lokal disajikan di seluruh prefektur."
+   ],
+   "phrase_en": "Saya akan memesan ini, terima kasih.",
+   "word_en": "'Little Edo' — julukan Kawagoe",
+   "deeper_en": "Tempat ini sama seperti jaman dulu, bukan?",
+   "lede": "Kawagoe yang menyerupai Edo kecil, ditambah bonsai dan pinggiran kota yang ramai."
+  },
+  "chiba": {
+   "tagline": "Tetangga tepi pantai Tokyo — gerbang bandara, pantai, dan kuil terkenal.",
+   "blurb": "Chiba adalah gerbang timur Jepang, rumah bagi Bandara Internasional Narita dan, di Urayasu, Tokyo Disney Resort, sementara Semenanjung Boso menawarkan pemandangan laut, pantai selancar dan 'Pandangan Neraka' Gunung Nokogiri yang menggantung di tebing.",
+   "history": "Chiba (千葉) telah lama menjadi lumbung pantai dan gerbang Edo/Tokyo; Narita-san Shinshō-ji (成田山新勝寺), didirikan pada tahun 940, menarik jutaan penyembah Tahun Baru setiap tahunnya.",
+   "getting": "Bandara Narita berada di Chiba; pusat Chiba ~40 menit dari Tokyo dengan kereta api.",
+   "see": [
+    "Kuil berusia 1.000+ tahun di dekat Bandara Narita yang menarik lebih dari 10 juta pengunjung per tahun; ritual api goma, pagoda Benda Budaya Penting, dan Omote yang ramai",
+    "Gunung 'Gigi Gergaji' setinggi 329m dengan salah satu Patung Buddha batu terbesar Jepang, lebih dari 1.500 patung arhat, dan pandangan tepi tebing 'Jigoku Nozoki' (Pandangan Neraka).",
+    "Mercusuar desain Inggris tahun 1874 di ujung paling timur wilayah Kanto, sebuah Properti Budaya Berwujud Terdaftar dan terdaftar di antara mercusuar teratas Jepang"
+   ],
+   "eat": [
+    "Chiba menghasilkan sebagian besar kacang tanah Jepang; dimakan rebus, panggang, berpenukar gula, atau dalam miso. Cinderamata wilayah khas.",
+    "Hidangan nelayan Semenanjung Boso berupa mackerel atau ikan selar cincang/ditumbuk yang dibumbui jahe dan miso.",
+    "Choshi telah menjadi pelabuhan perikanan teratas Jepang menurut volume selama bertahun-tahun berkat arus hangat/dingin yang bertemu; mangkuk sashimi segar dan tangkapan musiman adalah daya tarik."
+   ],
+   "phrase_en": "Where is the station?",
+   "word_en": "the major temple near Narita Airport",
+   "deeper_en": "I gratefully receive the local bounty of the sea (said before eating fresh seafood).",
+   "lede": "Tetangga tepi pantai Tokyo — gerbang bandara, pantai, dan kuil terkenal."
+  },
+  "tokyo": {
+   "see": [
+    "Kuil tertua Tokyo (didirikan abad ke-7), dimasuki melalui Kaminarimon Thunder Gate dan jalan belanja Nakamise yang ramai; kuil paling banyak dikunjungi di kota ini",
+    "Kuil yang didedikasikan untuk Kaisar Meiji dan Permaisuri Shoken, terletak di hutan buatan seluas lebih dari 700.000 meter persegi; menerima sekitar 3 juta penyembah pada Tahun Baru, t",
+    "Area shitamachi yang masih bertahan dengan jalan belanja Yanaka Ginza, Pemakaman Yanaka bersejarah, dan Kuil Nezu, salah satu kuil tertua Tokyo yang terkenal dengan bunga musim semi"
+   ],
+   "eat": [
+    "Hidangan shitamachi (pusat kota lama) khas Tokyo: adonan tepung encer dengan kubis dan topping yang dimasak oleh pengunjung di atas pemanggang meja. Tsukishima Monja Street",
+    "Tokyo (Edo lama) adalah tempat lahir sushi nigiri 'Edomae' menggunakan hasil laut Teluk Tokyo; panduan Tokyo resmi menampilkannya sebagai salah satu makanan lokal khas kota.",
+    "Ramen bergaya 'Tokyo-style' berbasis kecap adalah makanan pokok kota; Tokyo Ramen Street di samping Stasiun Tokyo mengumpulkan delapan toko terkemuka, masing-masing dengan variasi sendiri."
+   ]
+  },
+  "kanagawa": {
+   "tagline": "Daibutsu Kamakura yang megah, kota pelabuhan Yokohama, dan pemandian air panas Hakone.",
+   "blurb": "Tepat di selatan Tokyo, Kanagawa menggabungkan kota pelabuhan internasional Yokohama dengan Kamakura yang penuh kuil dan mantan ibukota, serta resor pemandian air panas vulkanik Hakone. Ini adalah prefektur wisata sehari yang sempurna dengan pemandangan pelabuhan, Daibutsu terbuka, dan pemandangan pulau tepi pantai.",
+   "history": "Kanagawa (神奈川) adalah ibukota abad pertengahan Jepang: Kamakura (鎌倉) berfungsi sebagai pusat shogun sejak 1185, dan Daibutsu perunggu (大仏) telah duduk di udara terbuka sejak abad ke-13. Yokohama (横浜) dibuka ke dunia pada 1859.",
+   "getting": "Yokohama ~30 menit, Kamakura ~1 jam, Hakone ~1 jam 25 menit dari Tokyo dengan kereta.",
+   "see": [
+    "Daibutsu perunggu abad ke-13, salah satu yang terbesar di Jepang; pengunjung dapat melangkah ke dalam patung yang berongga.",
+    "Kuil Shinto paling penting di Kamakura, didirikan 1063, didedikasikan untuk Hachiman dan sentral bagi sejarah samurai kota.",
+    "Kuil tepi danau di kaki Gunung Hakone, terkenal karena gerbang torii merah yang berdiri di Danau Ashinoko."
+   ],
+   "eat": [
+    "Chinatown terbesar di Jepang; terkenal karena nikuman dan gyoza kukus, plus ramen sanma-men yang dipengaruhi tiongkok lokal.",
+    "Tanda tangan Kamakura/Shonan: ikan teri lembut, sedikit asin disajikan di atas nasi. Nama-shirasu mentah hanya tersedia pada hari ditangkap.",
+    "Kari yang gurih berdasarkan resep yang diadopsi oleh Angkatan Laut Kekaisaran Jepang dari semur daging sapi Inggris; hidangan khas kota pelabuhan Yokosuka."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "Daibutsu — patung perunggu ikonik Kamakura",
+   "deeper_en": "Pemandangan yang bagus, bukan?",
+   "lede": "Daibutsu Kamakura yang megah, kota pelabuhan Yokohama, dan pemandian air panas Hakone."
+  },
+  "niigata": {
+   "tagline": "Beras, sake, dan salju di pantai Laut Jepang.",
+   "blurb": "Menghadap Laut Jepang, Niigata adalah jantung beras dan sake Jepang, terkenal dengan beras Koshihikari premium, puluhan pabrik sake, dan makanan laut yang melimpah. Di musim dingin, pegunungannya menerima beberapa salju bubuk terlebat di negara ini, menarik penggemar ski dan pencinta onsen ke \"Negeri Salju\" legendaris.",
+   "history": "Niigata (新潟) menjadi kaya melalui beras dan sebagai pelabuhan di Laut Jepang; Pulau Sado (佐渡島) pernah menjadi tambang emas dan tempat pengasingan bangsawan, meninggalkan budaya pulau yang khas.",
+   "getting": "Niigata berjarak ~2 jam, Echigo-Yuzawa ~1 jam 15 menit dari Tokyo dengan Jōetsu Shinkansen.",
+   "see": [
+    "Jembatan batu berarsitektur batu melengkung ikonik melintasi Sungai Shinano, sungai terpanjang Jepang, ditunjuk sebagai Properti Budaya Penting dan simbol Kota Niigata pusat.",
+    "Mansion dan taman yang terpelihara dari keluarga tuan tanah kaya Ito Echigo, dengan seni dan arsitektur yang menampilkan tradisi pedesaan Niigata; terkenal karena gia-nya.",
+    "Kuil Shinto kuno dan dihormati di kaki Gunung Yahiko, populer karena signifikansi spiritualnya dikombinasikan dengan pemandangan alam dan dedaunan musiman."
+   ],
+   "eat": [
+    "Niigata adalah wilayah beras teratas Jepang (Koshihikari yang dihargai) dan memiliki pabrik sake terbanyak di negara ini; beras dan sake adalah pasangan khasnya.",
+    "Beras Niigata premium dikukus dalam kotak cedar silinder 'wappa', ditaburi dengan bahan musiman gunung dan laut seperti salmon, tiram, atau ayam.",
+    "Hidangan sayuran rebus rumahan (konjac, wortel, akar teratai, shiitake, terkadang telur ikan salmon) yang dimakan penduduk lokal di festival dan Tahun Baru; sedikit dikenal di luar"
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "sake — Niigata is one of Japan's top regions for it",
+   "deeper_en": "The rice here is really delicious, isn't it?",
+   "lede": "Beras, sake, dan salju di pantai Laut Jepang."
+  },
+  "toyama": {
+   "tagline": "Tembok salju setinggi langit di Alpen dan teluk yang jernih dengan cumi-cumi kunang-kunang.",
+   "blurb": "Toyama terletak di antara puncak-puncak spektakuler Alpen Jepang Utara yang mencapai 3.000 meter dan perairan kaya makanan laut yang dalam di Teluk Toyama, dan terkenal dengan Tateyama Kurobe Alpine Route, di mana tembok salju musim semi menjulang hingga sekitar 20 meter. Tempat ini juga menawarkan desa gassho-zukuri berwarisan dunia UNESCO di Gokayama dan pemandian air panas tepi pantai terkenal yang menghadap ke pegunungan Tateyama.",
+   "history": "Toyama (富山) berkembang pesat berkat pedagang obat-obatan dan pengiriman laut; di pegunungan, kampung-kampung Gokayama (五箇山) mempertahankan rumah-rumah gasshō beratap jerami yang curam selama berabad-abad, kini terdaftar sebagai warisan UNESCO.",
+   "getting": "Toyama berjarak ~2 jam 10 menit dari Tokyo dengan Hokuriku Shinkansen.",
+   "see": [
+    "Bendungan lengkung tertinggi Jepang (186m), selesai 1963. Pembuangan air yang gemuruh (akhir Juni hingga pertengahan Oktober), ~10 ton/detik, adalah pertunjukan ikonik yang dipandang dari",
+    "Warisan Dunia UNESCO (1995) desa-desa bergentayangan gassho-zukuri di Kota Nanto; Anda dapat menginap di rumah peternakan warisan milik keluarga dan bersantap di sekitar",
+    "Rute penyeberangan gunung melintasi Alpen Jepang Utara yang terkenal dengan tembok salju ~14-18m di Murodo (2.450m); Snow Wall Walk berjalan kurang lebih pertengahan April hingga akhir Juni setiap"
+   ],
+   "eat": [
+    "Disebut 'Permata Teluk Toyama'; Teluk Toyama pada dasarnya adalah satu-satunya tempat di mana ikan ini ditangkap secara komersial. Disajikan sebagai sashimi, sushi, atau kakiage tempura, dihargai karena",
+    "Misteri Teluk Toyama' - cumi-cumi kecil yang bersinar biru-putih, ditangkap terutama di lepas pantai Namerikawa di musim semi. Persiapan lokal klasik adalah dengan miso cuka (sumiso)",
+    "Spesialisasi lokal era Edo: potongan ikan trout asin-asin ditusuk di atas nasi dan dibungkus daun bambu dalam kotak bulat. Bento stasiun Toyama terkenal / oleh-oleh."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "koridor tembok salju yang menjulang di Alpine Route",
+   "deeper_en": "Tembok salju ini benar-benar menakjubkan, bukan?",
+   "lede": "Tembok salju setinggi langit di Alpen dan teluk yang jernih dengan cumi-cumi kunang-kunang."
+  },
+  "ishikawa": {
+   "tagline": "Taman-taman Kanazawa dan daun emas, ditambah Semenanjung Noto yang kasar.",
+   "blurb": "Ishikawa membentang di sepanjang Laut Jepang, dengan kota benteng Kanazawa sebagai pusat dengan Kenrokuen yang terkenal, salah satu dari tiga taman besar Jepang, serta distrik geisha dan samurai yang terjaga. Di utara kota, Semenanjung Noto yang kasar menawarkan pemandangan pantai yang menakjubkan, kerajinan lakuer berusia berabad-abad, dan pasar makanan laut.",
+   "history": "Kanazawa di Ishikawa adalah tempat kedudukan klan Maeda yang kaya raya, hanya di bawah Tokugawa. Luput dari pengeboman saat perang, kota ini mempertahankan distrik samurai dan geisha serta taman Kenroku-en yang terkenal.",
+   "getting": "Kanazawa berjarak ~2h30m dari Tokyo dengan Hokuriku Shinkansen.",
+   "see": [
+    "Salah satu dari Tiga Taman Besar Jepang, di samping Benteng Kanazawa. Namanya berarti 'taman enam atribut' (keluasan, kesendirian, keahlian, kuno, air, dan ",
+    "Distrik teahouse (chaya) yang paling besar dan terjaga di Kanazawa, dengan rumah geisha bergaris kayu, toko daun emas, dan kafe tradisional di sepanjang gang sempit.",
+    "Kawasan pemukiman samurai terdahulu yang terjaga dengan dinding tanah liat dan gang; beberapa rumah lama terbuka untuk pengunjung, yang lain sekarang menjadi kafe dan toko kerajinan."
+   ],
+   "eat": [
+    "Ishikawa terletak di tempat bertemu arus laut hangat dan dingin Laut Jepang, memberikan makanan laut yang luar biasa; Pasar Omicho adalah 'Dapur Kanazawa' dengan 180+ toko. Musim dingin bri",
+    "Tanda tangan Kanazawa: bebek (kadang unggas lainnya) dilapisi tepung dan disimmer dengan sayuran musiman dalam dashi, memberikan kuah yang kental dan mengkilap yang khas.",
+    "Wagyu dari sapi hitam yang dipelihara di Semenanjung Noto; produksi sangat kecil sehingga jarang dikirim ke luar Ishikawa, menjadikannya kelezatan lokal murni yang dibandingkan"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "gold leaf — Kanazawa makes most of Japan's",
+   "deeper_en": "The scenery here is truly wonderful, isn't it?",
+   "lede": "Taman-taman Kanazawa dan daun emas, ditambah Semenanjung Noto yang kasar."
+  },
+  "fukui": {
+   "tagline": "Dinosaurus, tebing dramatis, dan sebuah kuil Zen yang megah.",
+   "blurb": "Fukui adalah \"Kerajaan Dinosaurus\" Jepang, rumah bagi Fukui Prefectural Dinosaur Museum dan sekitar 80% dari penemuan fosil dinosaurus negara ini. Prefektur ini juga menarik pengunjung ke pilar batu Tojinbo yang spektakuler di Laut Jepang dan kuil pelatihan Soto Zen yang tenang, Eiheiji.",
+   "history": "Fukui (福井) adalah rumah bagi Eihei-ji (永平寺), didirikan pada 1244 sebagai kuil kepala Sōtō Zen, dan memiliki begitu banyak fosil dinosaurus sehingga menyelenggarakan museum dinosaurus terkemuka Jepang.",
+   "getting": "Fukui dapat dicapai melalui Hokuriku Shinkansen (diperpanjang ke Tsuruga pada 2024).",
+   "see": [
+    "Salah satu dari dua kuil kepala Buddhisme Soto Zen; kompleks gunung dengan 70 bangunan yang dihuni oleh 200+ biksu dan biksuni, situs pelatihan Zen terbesar di Jepang.",
+    "Lebih dari satu kilometer tebing basalt kolumnar yang dramatis di sepanjang Laut Jepang; sebuah tempat di antara 'Top 100 Matahari Terbenam Jepang', paling indah dilihat melalui tur perahu saat matahari terbenam.",
+    "Salah satu museum dinosaurus terbaik di dunia dan terbesar di Jepang, dengan 50 rangka termasuk Fukuiraptor dan Fukuisaurus lokal plus dinosaurus animatronik."
+   ],
+   "eat": [
+    "Kepiting salju jantan premium yang mendarat di pantai Echizen, diberi label dengan stiker port kuning untuk keaslian. Musim dimulai pada 6 Nov; kelezatan musim dingin khas lokal.",
+    "Hidangan utara Fukui klasik: mie soba dingin dengan topping lobak parut, serpihan bonito dan bawang hijau. Mendapat ketenaran setelah Kaisar Showa memujinya pada 1947.",
+    "Makanan jiwa Fukui dengan sejarah 100+ tahun: potongan daging babi tipis dicelupkan dalam saus berbasis Worcestershire yang manis-gurih, disajikan di atas nasi (tanpa telur, tidak seperti katsu standar)."
+   ],
+   "phrase_en": "Apa yang Anda rekomendasikan?",
+   "word_en": "dinosaurus — Fukui adalah ibukota dinosaurus Jepang",
+   "deeper_en": "Pemandangan di sini benar-benar luar biasa, bukan?",
+   "lede": "Dinosaurus, tebing dramatis, dan sebuah kuil Zen yang megah."
+  },
+  "yamanashi": {
+   "tagline": "Danau-danau Gunung Fuji, perkebunan anggur, dan wilayah wine Jepang.",
+   "blurb": "Yamanashi yang tidak memiliki akses laut terletak di bayangan Gunung Fuji, berbagi puncak tertinggi dan paling ikonik Jepang dengan Shizuoka yang bersebelahan dan menampung Fuji Lima Danau yang indah. Ini juga merupakan wilayah wine terkemuka Jepang, dengan lebih dari 80 pabrik anggur yang berpusat pada anggur Koshu asli, ditambah kebun buah yang terkenal karena persik dan anggurnya.",
+   "history": "Yamanashi (山梨) adalah wilayah prajurit Takeda Shingen (武田信玄). Cekungan Kōfu (甲府) yang dikelilingi pegunungan menjadi wilayah wine terkemuka Jepang berkat anggur koshu asli.",
+   "getting": "Danau Kawaguchi berjarak ~2 jam dari Tokyo dengan bus atau kereta (melalui Ōtsuki).",
+   "see": [
+    "Pagoda bertingkat lima di atas Fujiyoshida yang dapat dicapai dengan ~400 langkah, menawarkan pemandangan Gunung Fuji yang ikonik; spektakuler dengan bunga sakura di pertengahan April dan au",
+    "Kuil induk sekte Buddha Nichiren; pengunjung mendaki 287 langkah batu yang curam (atau menggunakan ropeway) melewati gerbang, pagoda dan aula harta karun di gunung yang suci",
+    "Ibukota wine bersejarah Jepang dengan lebih dari 90 pabrik anggur yang terbuka untuk degustasi di tengah perkebunan anggur, perjalanan satu hari yang mudah dari Tokyo dan jantung budaya pembuatan wine Jepang."
+   ],
+   "eat": [
+    "Hidangan kenyamanan khas Yamanashi: mie gandum yang lebar dan pipih diseduh dalam kuah miso yang kaya dengan labu kabocha dan sayuran musiman, disajikan dalam pot besi.",
+    "Dibuat dari anggur Koshu asli; Yamanashi memiliki lebih dari 90 pabrik anggur yang memproduksi kira-kira 30% wine Jepang, dengan Koshu Valley di sekitar Katsunuma/Koshu City yang popu",
+    "Kikyo Shingen Mochi adalah mochi lembut yang ditaburi kinako dan disiram dengan sirup kuromitsu, souvenir terkenal yang lahir pada tahun 1968. Yamanashi juga merupakan produsen terkemuka persik Jepang"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "Mount Fuji — best viewed from Yamanashi's lakes",
+   "deeper_en": "The scenery is beautiful, isn't it?",
+   "lede": "Danau-danau Gunung Fuji, perkebunan anggur, dan wilayah wine Jepang."
+  },
+  "nagano": {
+   "tagline": "Puncak-puncak pegunungan, kuil besar Zenkō-ji, dan monyet salju di mata air panas.",
+   "blurb": "Sebuah prefektur terpencil dan bergunung-gunung di Jepang tengah yang dikelilingi puncak-puncak menjulang dari Japanese Alps, Nagano menjadi tuan rumah Olimpiade Musim Dingin 1998 dan menarik pengunjung dengan resor ski, kuil bersejarah, dan monyet salju liar yang mandi di mata air panas yang menguap di Jigokudani.",
+   "history": "Nagano (長野) berkembang di sekitar kuil kuno Zenkō-ji (善光寺) dan kota pos jalan raya Nakasendō (中山道). Ia menjadi tuan rumah Olimpiade Musim Dingin 1998, mengukuhkan statusnya sebagai jantung pegunungan Jepang.",
+   "getting": "Kota Nagano berjarak ~1h30m dari Tokyo dengan Hokuriku Shinkansen.",
+   "see": [
+    "Harta Karun Nasional dan salah satu benteng kayu kuil tertua yang masih bertahan di Jepang, terkenal dengan eksterior 'Crow Castle' hitam-putihnya yang mencolok melawan Jepang Utara",
+    "Kuil Buddha bersejarah abad ke-7 di Kota Nagano, rumah patung Amida Nyorai tertua Jepang. Sorotan adalah terowongan bawah tanah yang gelap gulita di mana pengunjung",
+    "Satu-satunya tempat di dunia di mana makaka Jepang liar mandi di mata air panas alami, terletak di lembah yang menguap pada ketinggian ~850m yang tertutup salju sepanjang tahun."
+   ],
+   "eat": [
+    "Mie soba gandum hitam khas Nagano; medan gunung yang kering lebih menguntungkan gandum hitam daripada beras. Togakushi di utara adalah salah satu wilayah soba paling terkenal di Jepang",
+    "Pangsit tradisional Nagano: adonan gandum hitam/gandum yang difermentasi dibungkus di sekitar isian seperti sayuran gunung sansai, nozawana, terong-miso, atau kacang merah manis",
+    "Beras yang ditumbuk dibentuk di atas tusuk datar, dilapisi saus miso kenari/wijen manis-gurih dan dipanggang; makanan jalanan Nagano pegunungan tengah yang mengenyangkan."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "mie soba gandum hitam — Shinshu (Nagano) terkenal karenanya",
+   "deeper_en": "Pegunungannya indah, bukan? (pengamatan sopan untuk dibagikan dengan penduduk lokal)",
+   "lede": "Puncak-puncak pegunungan, kuil besar Zenkō-ji, dan monyet salju di mata air panas."
+  },
+  "gifu": {
+   "tagline": "Desa-desa pegunungan dengan atap jerami dan kota tua tepi sungai Takayama.",
+   "blurb": "Prefektur terpencil dan bergunung di tengah Jepang, terkenal dengan rumah pertanian gassho-zukuri berwarisan UNESCO di Shirakawa-go dan jalan-jalan era Edo yang terjaga dengan baik di Takayama di Japan Alps. Juga memiliki Gero, termasuk dalam tiga resort mata air panas terbesar Jepang.",
+   "history": "Gifu (岐阜) terletak di jalur perdagangan dan pertempuran kuno — Sekigahara (関ヶ原), pertempuran penentu tahun 1600, terjadi di sini. Isolasi pegunungan melestarikan rumah pertanian berjerami Shirakawa-gō (白川郷) dan kota pedagang Takayama (高山).",
+   "getting": "Takayama berjarak ~2h20m dari Nagoya dengan kereta ekspres terbatas; Shirakawa-gō dengan bus.",
+   "see": [
+    "Desa warisan dunia UNESCO dengan rumah pertanian gassho-zukuri berjerami (beberapa berusia 250+ tahun), terutama terkenal karena pemandangan salju musim dingin dan pertunjukan cahaya Januari-Februari",
+    "Jalan-jalan pedagang era Edo yang terjaga dengan rumah bertingkat noren dan pabrik sake; rumah Festival Takayama, salah satu tiga festival terindah Jepang",
+    "Kota Air di dekat Sungai Nagara, dengan rumah gaya samurai Yanagimachi, jalanan pengrajin dan saluran air jernih yang mengalir di samping rumah-rumah tua."
+   ],
+   "eat": [
+    "Wagyu premium A5 dari sapi Jepang Hitam yang dibesarkan di Gifu selama 14+ bulan; disajikan sebagai steak, sushi, tusuk dan di mangkuk nasi di sekitar Takayama, dihargai karena keempukannya",
+    "Miso gaya Hida dengan sayuran (dan sering daging Hida) dipanggang di atas daun magnolia kering di atas hot plate, memberikan aroma yang earthy; spesialisasi Takayama klasik.",
+    "Ramen jiwa makanan Takayama: mie keriting tipis dalam kuah berbasis kecap sederhana, berbeda dari gaya yang lebih kaya di tempat lain."
+   ],
+   "phrase_en": "Oishii desu!",
+   "word_en": "gassho-zukuri",
+   "deeper_en": "Cuaca pegunungan berubah dengan mudah / tidak dapat diprediksi.",
+   "lede": "Desa-desa pegunungan dengan atap jerami dan kota tua tepi sungai Takayama."
+  },
+  "shizuoka": {
+   "tagline": "Gunung Fuji, perkebunan teh hijau, dan Semenanjung Izu yang indah.",
+   "blurb": "Shizuoka terkenal dengan pemandangan spektakuler Gunung Fuji dan menghasilkan sebagian besar teh hijau Jepang, sementara Semenanjung Izu menarik pengunjung dengan mata air panas pantai dan makanan laut segar.",
+   "history": "Shizuoka (静岡) adalah tempat Tokugawa Ieyasu menghabiskan tahun-tahun terakhirnya di Sunpu Castle (駿府城). Iklim yang lembut dan cerah membuat lerengnya menjadi jantung produsen teh hijau Jepang.",
+   "getting": "Kota Shizuoka berjarak ~1jam dari Tokyo dengan Tōkaidō Shinkansen.",
+   "see": [
+    "Kuil Toshogu pertama yang didedikasikan untuk Tokugawa Ieyasu; aula utama berusia 400 tahun ini ditetapkan sebagai Harta Karun Nasional pada 2010, dapat diakses melalui kereta kabel dari Niho",
+    "Puncak suci yang ikonik di Jepang; pada 2025 Shizuoka memperkenalkan aturan mengikat dengan biaya 4.000 yen dan pendaftaran pra-pendakian/kuis keselamatan online wajib melalui saluran resmi",
+    "Pantai berpohon pinus terkenal dengan pemandangan Gunung Fuji (bagian dari situs Warisan Dunia Fujisan) ditambah dataran tinggi Nihondaira yang menghadap Teluk Suruga, perkebunan teh dan Shimiz"
+   ],
+   "eat": [
+    "Shizuoka menghasilkan kira-kira 40% dari semua teh hijau Jepang, output terbesar dari provinsi mana pun; lereng yang asri dan air murni menghasilkan daun berkualitas tinggi.",
+    "Shizuoka adalah tempat kelahiran wasabi budidaya (Utogi); metode budidaya air tatamiishi tradisionalnya adalah Pertanian Penting yang Diakui PBB Secara Global",
+    "Ditangkap hanya di dua pelabuhan di Bumi, keduanya di Shizuoka (Yui dan Oigawa), dan hanya di musim terbatas; dimakan mentah di atas nasi, sebagai tempura kakiage, atau dalam 'oki lokal"
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "teh hijau — Shizuoka adalah produsen terbesar Jepang",
+   "deeper_en": "ungkapan rasa terima kasih sebelum makan (harfiah: 'Aku dengan hormat menerimanya')",
+   "lede": "Gunung Fuji, perkebunan teh hijau, dan Semenanjung Izu yang indah."
+  },
+  "aichi": {
+   "tagline": "Kastil Nagoya dan industri, ditambah sejarah era samurai.",
+   "blurb": "Aichi, berpusat pada Nagoya, kota terbesar keempat Jepang, adalah jantung industri otomotif (rumah Toyota) dan lokasi landmark feodal seperti Nagoya Castle dan Atsuta Shrine kuno. Pantai Mikawa Bay menawarkan pulau-pulau kecil dan keeperamah kayu asli Inuyama Castle, salah satu kastil tertua Jepang.",
+   "history": "Aichi (愛知) menghasilkan tiga pemersatu besar Jepang — Oda Nobunaga, Toyotomi Hideyoshi, dan Tokugawa Ieyasu. Nagoya (名古屋) kemudian menjadi raksasa industri dan tempat kelahiran Toyota.",
+   "getting": "Nagoya berjarak ~1 jam 40 menit dari Tokyo dan ~50 menit dari Kyoto dengan Tōkaidō Shinkansen.",
+   "see": [
+    "Bekas pusat kekuasaan Owari Tokugawa, terkenal dengan shachihoko bersayap emas (ornamen ikan harimau) dan Honmaru Palace yang dipulihkan mewah dengan lukisan layar berlapis emas",
+    "Salah satu kuil Shinto paling dihormati di Jepang (berusia lebih dari 1.900 tahun), yang memuja pedang suci Kusanagi-no-Tsurugi; Treasure Hall-nya menyimpan koleksi putar besar",
+    "Keeperamah kastil kayu tertua yang masih ada di Jepang, ditetapkan sebagai Harta Nasional yang bertengger di atas Sungai Kiso, dengan kota kastil bersejarah di bawahnya."
+   ],
+   "eat": [
+    "Potongan daging babi berbalut panko yang digoreng mendalam dan tertutup saus aka-miso merah kaya dari miso kedelai berusia panjang khas Aichi (Hatcho). Sebuah 'kekhususan Nagoya'",
+    "Belut air tawar panggang arang di atas nasi, dikatakan berasal dari Nagoya. Dimakan dalam tiga gaya: polos, dengan bumbu (nori, wasabi, bawang hijau), dan sebagai",
+    "Udon tebal dan kokoh yang disimmer dalam kuah aka-miso berisi ayam, tahu dan sayuran, disajikan dalam pot tanah liat yang mendidih. Hidangan staple Aichi yang mengenyangkan."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "pork cutlet with rich red-miso sauce, a Nagoya classic",
+   "deeper_en": "The flavor here is really exceptional, isn't it?",
+   "lede": "Kastil Nagoya dan industri, ditambah sejarah era samurai."
+  },
+  "mie": {
+   "tagline": "Kuil Shinto paling suci di Jepang di Ise dan tradisi penyelam mutiara Ama.",
+   "blurb": "Mie adalah rumah bagi Ise Jingu, kompleks kuil Shinto paling sakral di Jepang dengan 125 kuil, dan pantai Ise-Shima tempat Mikimoto menghasilkan mutiara budidaya pertama di dunia pada tahun 1893. Teluk Pasifik yang berlekuk di sini dipenuhi pulau-pulau dan dikerjakan oleh ama, wanita penyelam tradisional yang memanen abalone dan kerang.",
+   "history": "Mie (三重) adalah rumah Ise Jingū (伊勢神宮), kuil paling sakral dalam Shintoisme, yang dibangun kembali setiap 20 tahun selama lebih dari 1.300 tahun. Pantai Shima (志摩) adalah tempat lahir mutiara budidaya dan penyelam bebas Ama (海女).",
+   "getting": "Ise berjarak ~1 jam 20 menit dari Nagoya dengan kereta ekspres terbatas; ~2 jam dari Osaka.",
+   "see": [
+    "Kompleks kuil Shinto paling sakral di Jepang dengan 125 kuil, berpusat pada kuil Naiku (Dalam) dan Geku (Luar) yang didedikasikan untuk dewi matahari Amaterasu.",
+    "Dua batu laut yang dihubungkan oleh tali shimenawa sakral yang berat di Kuil Futami Okitama; simbol keharmonisan pernikahan, dengan matahari terbit terbingkai di antara keduanya dari Mei hingga Juli.",
+    "Jalan pasar gaya Edo di dekat Naiku Ise Jingu yang menampilkan kembali zaman keemasan budaya peziarah, dilapisi dengan kios makanan dan toko (rumah kue Akafuku mochi)."
+   ],
+   "eat": [
+    "Salah satu dari tiga merek wagyu teratas Jepang, dipelihara di wilayah Matsusaka; dihargai karena marbling intens dan tekstur meleleh di mulut, sering disajikan sebagai sukiyaki atau st",
+    "Mie yang sangat tebal dan lembut dengan hanya sejumlah kecil tare hitam pekat berbahan dasar kedelai manis; secara historis adalah makanan yang mudah dicerna bagi peziarah Kuil Ise.",
+    "Hidangan nelayan dari Ise-Shima: tuna/bonito yang direndam dalam saus kedelai dicampur tangan di atas nasi asam. Diakui sebagai 'Makanan 100 Tahun' (masakan lokal sejak"
+   ],
+   "phrase_en": "Apa yang Anda rekomendasikan?",
+   "word_en": "kuil Shinto paling sakral di Jepang",
+   "deeper_en": "untuk menghormati di kuil (verba yang tepat untuk mengunjungi Ise Jingū)",
+   "lede": "Kuil Shinto paling suci di Jepang di Ise dan tradisi penyelam mutiara Ama."
+  },
+  "shiga": {
+   "tagline": "Mengelilingi danau terbesar Jepang, dengan kastil yang memukau.",
+   "blurb": "Shiga mengelilingi Lake Biwa, danau air tawar terbesar Jepang dan salah satu yang tertua di dunia, dikelilingi oleh rute bersepeda sekitar 200 km. Prefektur ini menggabungkan kuil pulau di danau dan pelayaran perahu dengan kota kastil era Edo dan kanal pedagang yang hanya berjarak perjalanan kereta pendek dari Kyoto.",
+   "history": "Shiga (滋賀) mengelilingi Lake Biwa (琵琶湖), jantung strategis Jepang kuno. Hikone Castle (彦根城), diselesaikan pada 1622, adalah salah satu dari hanya dua belas menara asli yang masih berdiri.",
+   "getting": "Ōtsu/Hikone berjarak ~10–50 menit dari Kyoto dengan kereta.",
+   "see": [
+    "Harta Nasional yang diselesaikan pada 1622 dengan pemandangan ke Lake Biwa, salah satu dari segelintir menara kastil asli yang bertahan; padukan dengan Genkyuen Japanese yang berdampingan.",
+    "Kuil kepala dari sekte Buddha Tendai, kompleks berbelok dengan lebih dari 100 bangunan di puncak Mt. Hiei; terdaftar sebagai Situs Warisan Dunia UNESCO pada 1994.",
+    "Danau air tawar terbesar Jepang dan jantung Shiga, dikelilingi oleh kuil, kastil dan pemandangan indah; loop bersepeda Biwaichi yang terkenal mengelilingi tepinya."
+   ],
+   "eat": [
+    "Salah satu bentuk sushi tertua Jepang, berasal dari Shiga dari ikan crucian Nigorobuna yang ditangkap di Lake Biwa, diasinkan dan difermentasi dengan nasi; beraroma menyengat, rasa yang diperoleh—",
+    "Salah satu merek wagyu premium tertua Jepang, dipelihara di Shiga selama lebih dari 400 tahun; dihargai karena marbling halus dan disajikan sebagai steak, sukiyaki, atau shabu-shabu.",
+    "Hidangan mie kenyamanan B-grade lokal Hikone: kaldu gaya Jepang keemasan (tulang ayam dan ikan kering) penuh dengan kubis, tauge, jamur dan babi,"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "Lake Biwa, Japan's largest lake",
+   "deeper_en": "This is a local flavor, isn't it?",
+   "lede": "Mengelilingi danau terbesar Jepang, dengan kastil yang memukau."
+  },
+  "kyoto": {
+   "see": [
+    "Didirikan pada 711; terkenal dengan ribuan gerbang torii merah cinabari yang berbelok-belok menanjak ke Gunung Inari yang sakral (233m). Buka 24 jam, gratis, 5 menit dengan JR dari Kyoto Station ke Inari Station.",
+    "Sebuah paviliun Zen berlapis daun emas yang terpantul di kolam cerminnya; salah satu pemandangan paling sering difoto di Kyoto. Buka jam 9 pagi–5 sore, tiket masuk ~500 yen.",
+    "Jalur bambu sepanjang ~400m berjalan di antara gerbang utara Tenryu-ji dan Okochi-Sanso; gratis dan buka 24 jam. Tenryu-ji (didirikan 1339) adalah kuil Zen teratas Kyoto dan Situs Warisan Dunia UNESCO."
+   ],
+   "eat": [
+    "Masakan berkelas tinggi multi-hidangan Kyoto yang berkembang dari upacara teh; dianggap puncak fine dining Jepang, menekankan kesegaran, presentasi, dan keseimbangan rasa.",
+    "Ikan teri kering yang dimasak manis-gurih di atas soba hangat; dikatakan telah diciptakan pada 1882 di Matsuba dekat Teater Minamiza, dan menjadi makanan pokok Kyoto sejak saat itu.",
+    "Klasik Kyoto yang terkurung daratan lahir dari 'Saba Kaido' (Jalan Makerel): makerel yang diawetkan dengan garam dan cuka ditekan di atas nasi dan dibungkus kombu. Ditemukan di restoran-restoran lama."
+   ]
+  },
+  "osaka": {
+   "see": [
+    "Simbol Osaka, dibangun aslinya oleh Toyotomi Hideyoshi dan menjadi pusat penyatuan Jepang abad ke-16. Donjon saat ini (dibangun kembali 1931) menampung sejarah",
+    "Sering disebut sebagai kuil Buddha yang paling tua secara resmi dikelola di Jepang, didirikan pada 593 oleh Pangeran Shotoku. Pagoda lima lantainya yang berukuran ~37m dan Gokuraku-jodo yang tenang",
+    "Distrik hiburan tepi kanal Osaka yang penuh cahaya neon, rumah bagi tanda running-man Glico dan deretan pasar makanan jalan dan restoran yang padat - yang paling sering difoto"
+   ],
+   "eat": [
+    "Makanan jalan khas Osaka: bola adonan berasa dashi dengan gurita cincang, renyah di luar dan lengket di dalam, dihiasi dengan saus, mayo, aonori dan bonito. Bor",
+    "Panekuk asin berbahan dasar kubis dengan daging/makanan laut yang dimasak di atas griddle teppan, sering di meja Anda sendiri. Bentuk modern sangat erat kaitannya dengan Osaka dan merupakan p",
+    "Daging dan sayuran tusuk yang dilapisi adonan, berbalur tepung roti dan digoreng dalam, terkenal terkait dengan distrik Shinsekai dan aturan saus bersama 'tanpa pencelupan ganda' yang ketat."
+   ]
+  },
+  "hyogo": {
+   "tagline": "Kastil terindah Jepang di Himeji dan kota pelabuhan Kobe.",
+   "blurb": "Hyogo membentang dari kota pelabuhan kosmopolitan Kobe (rumah daging Kobe terkenal dunia) hingga Kastil Himeji yang merupakan Harta Karun Nasional, situs Warisan Dunia UNESCO pertama Jepang. Prefektur ini menjangkau Laut Pedalaman Seto melalui Pulau Awaji, yang terhubung ke daratan oleh Jembatan Akashi Kaikyo.",
+   "history": "Hyōgo (兵庫) membentang dari pantai ke pantai. Kastil Himeji (姫路城), 'Bangau Putih', bertahan utuh dari perang dan gempa bumi dan menjadi situs Warisan Dunia UNESCO pertama Jepang pada 1993. Kobe (神戸) dibuka sebagai pelabuhan perjanjian pada 1868.",
+   "getting": "Kobe berjarak ~30 menit dan Himeji ~40 menit dari Osaka dengan kereta.",
+   "see": [
+    "Situs Warisan Dunia UNESCO pertama Jepang, sebuah kastil feodal putih yang sempurna dengan julukan 'Kastil Bangau Putih'; terlihat sangat indah saat musim bunga sakura.",
+    "Kawasan bersejarah Kobe dengan residensi pedagang bergaya Barat (ijinkan) yang dibangun setelah pelabuhan dibuka pada akhir 1800-an; banyak di antaranya kini menjadi museum, kafe, dan toko.",
+    "Salah satu kota pemandian air panas tertua di Jepang, disebutkan dalam Nihon Shoki abad ke-8, di kaki Gunung Rokko dekat Kobe; terkenal dengan 'emas' (besi) dan 'perak'nya ("
+   ],
+   "eat": [
+    "Wagyu terkenal dunia dari sapi Tajima yang dibesarkan di Hyogo, dicari karena marbling yang intens dan tekstur yang meleleh di mulut; biasanya dipanggang dengan bumbu ringan (tepp",
+    "Bakso gurita yang lembut dan kaya telur dari Kota Akashi, dicelupkan dalam kaldu dashi ringan bukan saus; pendahulu takoyaki Osaka.",
+    "Versi Himeji dari hotpot musim dingin, dimakan secara khas dengan kuah cocol jahe-kecap asin di atas lobak, kentang, konjac, dan tahu."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "Kastil Himeji, kastil 'Bangau Putih'",
+   "deeper_en": "Saya dengan rendah hati menerima (diucapkan sebelum makan—terutama bermakna saat mencicipi gurita Akashi atau daging Kobe, mengakui rasa syukur kepada laut dan petani)",
+   "lede": "Kastil terindah Jepang di Himeji dan kota pelabuhan Kobe."
+  },
+  "nara": {
+   "tagline": "Ibukota pertama Jepang — sebuah patung Buddha raksasa dan rusa yang berkeliaran bebas.",
+   "blurb": "Nara adalah ibukota permanen pertama Jepang (710-784) dan memiliki lebih banyak situs Warisan Dunia UNESCO daripada prefektur lainnya, di mana kuil-kuil kuno, rusa sakral yang berkeliaran bebas, dan lereng bunga sakura bertemu. Prefektur Kansai yang tidak memiliki akses ke laut ini adalah museum hidup dari budaya istana awal negara.",
+   "history": "Nara (奈良) adalah ibukota permanen pertama Jepang (710–784). Great Buddha di Tōdai-ji (東大寺) dituang pada tahun 752, dan Hōryū-ji (法隆寺) menyimpan beberapa bangunan kayu tertua yang masih bertahan di dunia.",
+   "getting": "Nara berjarak ~45 menit dari Kyoto dan Osaka dengan kereta.",
+   "see": [
+    "Dibangun pada tahun 752 sebagai kepala semua kuil provinsi Jepang; Great Buddha Hall-nya menampung patung Buddha perunggu berukuran kira-kira 15 m dan merupakan landmark Warisan Dunia ikonik Nara.",
+    "Kuil merah-putih terkenal dengan ribuan lentera perunggu dan batu, yang dinyalakan secara seremonial dua kali setahun; dapat dicapai melalui jalan setapak berpepohonan di Nara Park.",
+    "Taman seluas 660 hektar di mana hampir 1.200 rusa yang berkeliaran bebas (dianggap sebagai utusan ilahi) bercampur dengan kuil-kuil Warisan Dunia; kerupuk rusa dijual di seluruh taman."
+   ],
+   "eat": [
+    "Nasi yang diasamkan dalam ukuran gigitan, ditaburi mackerel asin, salmon atau sea bream, dibungkus dalam daun persimmon antibakteri — metode pengawetan berusia lebih dari 200 tahun yang lahir di Nara.",
+    "Mie gandum tipis yang diregangkan dengan tangan tertua Jepang, dengan lebih dari 1.200 tahun sejarah di distrik Miwa, Kota Sakurai; dipuji karena teksturnya yang kenyal namun halus.",
+    "Kekhususan Nara sejak era ibukota Heijo-kyo abad ke-8, dibuat dengan berulang kali merendam labu, mentimun, jahe dan sayuran lainnya dalam ampas sake."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "deer — Nara Park's free-roaming residents",
+   "deeper_en": "Is it okay to give crackers to the deer?",
+   "lede": "Ibukota pertama Jepang — sebuah patung Buddha raksasa dan rusa yang berkeliaran bebas."
+  },
+  "wakayama": {
+   "tagline": "Gunung ziarah suci dan mata air panas pantai yang dramatis.",
+   "blurb": "Wakayama, di Semenanjung Kii selatan Osaka, adalah jantung spiritual Jepang: di sini terdapat kota biara Buddha Koyasan dan jalur ziarah kuno Kumano Kodo, keduanya bagian dari Warisan Dunia UNESCO \"Situs Suci dan Rute Ziarah di Pegunungan Kii.\" Garis pantai yang bersahaja menambah resor mata air panas, pantai pasir putih, dan Nachi Falls, air terjun tertinggi Jepang setinggi 133 meter.",
+   "history": "Wakayama (和歌山) adalah tanah suci: Kōbō Daishi mendirikan biara Kōyasan (高野山) pada 816, dan kuil-kuil Kumano (熊野) menjadi pusat rute ziarah yang ditempuh selama lebih dari seribu tahun — keduanya terdaftar UNESCO.",
+   "getting": "Kōyasan berjarak ~2 jam dari Osaka dengan kereta dan kereta gantung.",
+   "see": [
+    "Kompleks biara Warisan Dunia UNESCO yang didirikan oleh Kobo Daishi pada 816, dengan lebih dari 100 bangunan, makam Okunoin dan Danjo Garan. Bagian dari Situs Suci",
+    "Jalur ziarah kuno terdaftar UNESCO yang menghubungkan tiga kuil besar Kumano (Hongu Taisha, Hayatama Taisha, Nachi Taisha) melalui pegunungan Kii.",
+    "Air terjun jatuh tunggal tertinggi Jepang (133 m) yang dikelilingi pagoda tiga tingkat vermilion Seiganto-ji; salah satu pemandangan spiritual paling ikonik Jepang dan favorit utama"
+   ],
+   "eat": [
+    "Ramen khas Kota Wakayama dengan kuah tonkotsu-shoyu yang kaya dan mie tipis berwarna putih gading; penduduk setempat menyebutnya chuka soba. Sering dimakan saat",
+    "Wakayama menghasilkan sekitar 60% ume Jepang; varietas Nanko yang dihargai membuat umeboshi dan umeshu anggur bunga prem terbaik di negara ini. Suvenir lokal utama dan bahan",
+    "Masakan biara vegetarian bebas daging, ikan, bawang bombay dan bawang putih, disajikan di penginapan biara Mount Koya; menggunakan goma-dofu (tofu wijen) dan sayuran musiman pegunungan"
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "Mount Kōya, a sacred Buddhist monastery town",
+   "deeper_en": "I'm going to pay respects at a shrine or temple (polite phrase pilgrims use)",
+   "lede": "Gunung ziarah suci dan mata air panas pantai yang dramatis."
+  },
+  "tottori": {
+   "tagline": "Bukit pasir terkenal Jepang di Laut Jepang.",
+   "blurb": "Tottori adalah prefektur dengan populasi paling sedikit di Jepang, terletak di pesisir Laut Jepang di wilayah Chugoku dan terkenal terutama karena Tottori Sand Dunes, sebuah hamparan bukit pasir pantai berjarak 16 km yang berwarna emas di mana Anda dapat menunggangi unta atau bermain sandboard. Selain pasir, wilayah ini menawarkan puncak vulkanik yang curam (Mount Daisen), folklor yokai, dan kota tepi pantai yang tenang.",
+   "history": "Tottori (鳥取) adalah prefektur dengan populasi paling sedikit di Jepang. Bukit pasir pantainya yang agung (砂丘) telah terbentuk selama lebih dari 100.000 tahun dari pasir yang dibawa oleh Sungai Sendai dan Laut Jepang.",
+   "getting": "Tottori dapat diakses dengan kereta ekspres terbatas dari Okayama atau Osaka.",
+   "see": [
+    "Lapangan bukit pasir pantai paling terkenal di Jepang, sekitar 16 km arah timur-barat dan 2,4 km arah utara-selatan, terbentuk selama sekitar 100.000 tahun. Monumen Alam yang ditunjuk; sorotan termasuk th",
+    "Tepat di timur bukit pasir, satu-satunya museum di dunia yang didedikasikan untuk patung pasir, bertema 'menjelajahi dunia dengan pasir.' Seniman internasional menciptakan karya yang besar dan rumit",
+    "Aula Shugendo yang merupakan Harta Karun Nasional yang tertanam dalam rongga tebing sekitar 500 m di atas Mt. Mitoku, berasal dari abad ke-11-12 dan dibangun tanpa paku. Mencapainya memerlukan"
+   ],
+   "eat": [
+    "Kelezatan musim dingin khas Tottori — kepiting salju jantan yang mendarat di Laut Jepang, dihargai karena daging yang kokoh dan manis. Musim berlangsung dari awal November hingga 20 Maret; tingkat teratas",
+    "Ramen kaldu tulang sapi yang langka, lokal untuk Tottori, populer sejak tahun 1940-50an saat daerah ini memelihara ternak. Aroma yang manis dan kaya (lebih seperti roast-beef/sukiyaki daripada funk",
+    "Tottori terkenal karena buah-buahan berkualitas tinggi di dataran suburnya — pir Nijisseiki (Twentieth Century) yang renyah, semangka dan kesemek. Wilayah ini juga merupakan Jepang"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "sand dunes — Tottori's signature landscape",
+   "deeper_en": "The sand is hot.",
+   "lede": "Bukit pasir terkenal Jepang di Laut Jepang."
+  },
+  "shimane": {
+   "tagline": "Rumah Izumo Taisha, salah satu kuil Shinto tertua dan terbesar di Jepang.",
+   "blurb": "Shimane, di pantai San'in Jepang yang menghadap ke Laut Jepang, adalah \"Tanah Para Dewa\" yang penuh mitos, rumah bagi Izumo Taisha, salah satu kuil Shinto tertua dan paling dihormati di negara ini. Shimane juga memiliki Matsue Castle yang merupakan Harta Karun Nasional, Tambang Perak Iwami Ginzan yang terdaftar UNESCO World Heritage, dan Kepulauan Oki yang vulkanik.",
+   "history": "Shimane (島根) adalah tanah mitologi: Izumo Taisha (出雲大社) adalah salah satu kuil tertua di Jepang, didedikasikan untuk dewa pernikahan dan hubungan baik. Iwami Ginzan (石見銀山) pernah memasok sepertiga perak dunia.",
+   "getting": "Izumo/Matsue dapat dicapai dengan pesawat dari Tokyo atau dengan kereta limited express dari Okayama.",
+   "see": [
+    "Salah satu kuil Shinto tertua dan paling dihormati di Jepang, didedikasikan kepada Okuninushi, dewa en (ikatan/jodoh). Di bulan ke-10 lunar, para dewa Jepang berkumpul di",
+    "Dibangun pada 1611, salah satu dari segelintir kastil kayu asli yang bertahan dan merupakan Harta Karun Nasional; lantai teratasnya menawarkan pemandangan 360 derajat ke Matsue dan Danau Sh",
+    "Tambang perak kelas dunia yang terdaftar pada 2007 sebagai Situs Warisan Dunia UNESCO (warisan industri pertama di Asia); pengunjung dapat mengunjungi terowongan Ryugenji-mabu"
+   ],
+   "eat": [
+    "Salah satu dari tiga tradisi soba terbesar di Jepang; gandum hitam digiling bersama kulitnya, menghasilkan mie yang gelap, beraroma, dan kenyal. Sering disajikan gaya warigo dalam mangkuk bertingkat",
+    "Kerang air tawar yang dipanen dari Danau Shinji (Shinjiko); Shimane memimpin Jepang dalam produksi shijimi. Biasanya dimakan sebagai sup miso shijimi, dihargai untuk manfaat kesehatan hati",
+    "Ikan berdaging putih mewah yang mendarat di pantai Laut Jepang sekitar Matsue dan Izumo; disajikan panggang, sebagai sashimi, atau di atas nasi sebagai hidangan siang premium lokal."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "jodoh/membina ikatan — keahlian khusus Izumo Taisha",
+   "deeper_en": "Tempat ini tenang dan menyenangkan, bukan?",
+   "lede": "Rumah Izumo Taisha, salah satu kuil Shinto tertua dan terbesar di Jepang."
+  },
+  "okayama": {
+   "tagline": "Sebuah taman yang megah, sebuah 'kastil gagak', dan kota saluran Kurashiki.",
+   "blurb": "Okayama, salah satu prefektur terpanas di Jepang, adalah rumah bagi Korakuen, salah satu dari tiga taman lansekap besar negara ini, yang terletak di samping Okayama Castle dengan dinding berwarna hitam. Okayama juga terkenal dengan tradisi tembikar Bizen yang tidak mengkilap berusia seribu tahun.",
+   "history": "Okayama (岡山) mengikatkan identitasnya pada legenda anak laki-laki persik Momotarō (桃太郎). Kōraku-en (後楽園), yang dibangun pada 1700, termasuk dalam tiga taman besar Jepang, berdampingan dengan 'Crow Castle' yang berdinding hitam.",
+   "getting": "Okayama berjarak ~3h15m dari Tokyo dan ~45 menit dari Osaka dengan shinkansen.",
+   "see": [
+    "Salah satu dari Tiga Taman Besar Jepang, dibangun 1687-1700 oleh lord Ikeda Tsunamasa; dengan rumput, kolam, ladang teh dan padi dengan bunga musiman serta acara pencahayaan.",
+    "Menara berlapis hitam pertama kali dibangun 1597 dalam gaya Azuchi-Momoyama, direkonstruksi 1966; berpasangan dengan Korakuen yang berdekatan melalui tiket gabungan.",
+    "Distrik saluran era Edo dengan gudang berdinding putih, museum, dan kafe; tur perahu saluran adalah pengalaman khas kota ini."
+   ],
+   "eat": [
+    "Okayama dikenal sebagai 'Kerajaan Buah' Jepang, terkenal dengan buah persik putih Momotaro dan anggur Muscat of Alexandria tanpa biji; dimakan segar atau dalam parfait kafe.",
+    "Spesialisasi kelas B Kota Okayama: potongan daging babi berbalut tepung di atas nasi dengan saus demi-glace kaya alih-alih telur biasa.",
+    "Okonomiyaki gurih yang penuh dengan tiram segar dari kota nelayan Hinase di Kota Bizen; berasal dari 1960-an menggunakan tiram berlebih."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "the Peach Boy folktale tied to Okayama",
+   "deeper_en": "It's really peaceful here, isn't it?",
+   "lede": "Sebuah taman yang megah, sebuah 'kastil gagak', dan kota saluran Kurashiki."
+  },
+  "hiroshima": {
+   "tagline": "Peringatan perdamaian yang menyentuh hati dan torii mengambang di Miyajima.",
+   "blurb": "Hiroshima adalah rumah bagi dua Situs Warisan Dunia UNESCO: Atomic Bomb Dome dan Peace Memorial Park, yang menceritakan kisah Agustus 1945 dan panggilan global untuk perdamaian, serta gerbang torii \"mengambang\" berwarna merah ceria dari Itsukushima Shrine di Pulau Miyajima. Prefektur ini juga menawarkan pemandangan Seto Inland Sea, tiram segar, dan rute bersepeda Shimanami Kaido yang melompati pulau-pulau.",
+   "history": "Hiroshima (広島) menjadi simbol perdamaian global setelah pengeboman atom pada 6 Agustus 1945. Itsukushima Shrine (厳島神社) di Miyajima (宮島) yang terletak di dekatnya telah berdiri sejak abad ke-12, dengan torii-nya yang menjulang dari laut.",
+   "getting": "Hiroshima berjarak ~4j dari Tokyo dan ~1j25m dari Osaka dengan shinkansen.",
+   "see": [
+    "Situs Warisan Dunia UNESCO 160 m dari hiposentrum; kubah rangka dan Peace Memorial Museum yang berdekatan menceritakan sejarah pengeboman 1945 dan pesan perdamaian.",
+    "Kuil Warisan Dunia UNESCO yang dibangun di atas garis pasang surut, dengan gerbang torii mengambang berwarna merah merona yang ikonik dan berubah penampilan sesuai pasang surut; salah satu dari Tiga Situs Suci Jepang.",
+    "Kastil yang direkonstruksi didirikan pada 1589 oleh Mori Terumoto, dipasangkan dengan taman berjalan Shukkeien era Edo yang berdekatan yang meminimalkan lanskap alam yang indah."
+   ],
+   "eat": [
+    "Panekuk berlapis gurih dengan dasar crepes tipis, tumpukan kubis, dan mie yakisoba yang dimasak di atas griddle bersama-sama; hidangan khas kota, ditemukan di Okonomimura dan tempat lainnya.",
+    "Hiroshima adalah produsen tiram teratas Jepang, terkenal karena tiram gemuk dan krem dari perairan Miyajima; dimakan mentah, dipanggang, digoreng atau di atas nasi, dengan musim puncak sekitar Oktober hingga Maret.",
+    "Belut konger uap/panggang di atas nasi, klasik dari kawasan Miyajima; toko spesialisasi Aki-Miyajima yang berasal dari 1902 (Ueno) membuat hidangan ini ikonik."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "peace — the message of Hiroshima's memorial",
+   "deeper_en": "to pray for peace",
+   "lede": "Peringatan perdamaian yang menyentuh hati dan torii mengambang di Miyajima."
+  },
+  "yamaguchi": {
+   "tagline": "Jembatan lima busur yang spektakuler dan kuil vermilion yang meriah.",
+   "blurb": "Yamaguchi, di ujung barat Honshu, terkenal sebagai \"ibukota fugu (ikan buntal) Jepang\" melalui pelabuhan Shimonoseki dan untuk pemandangan yang sempurna seperti perairan biru Tsunoshima dan 123 torii vermilion Motonosumi Inari Shrine. Juga menjadi rumah lengkungan kayu elegan Jembatan Kintaikyo di Iwakuni dan kota kastil era Edo Hagi.",
+   "history": "Yamaguchi (山口) membentuk Jepang modern: samurai domain Chōshū (長州) dari sini memimpin Restorasi Meiji tahun 1868. Jembatan Kintai-kyō (錦帯橋), pertama kali dibangun tahun 1673, adalah keajaiban rekayasa lima busur kayu.",
+   "getting": "Shin-Yamaguchi terletak di jalur Sanyō Shinkansen; Iwakuni dekat Hiroshima.",
+   "see": [
+    "Jembatan kayu lima busur pertama kali dibangun tahun 1673 di atas Sungai Nishiki; ikonik pada musim bunga sakura dan musim gugur.",
+    "Gua kapur terbesar Jepang (~9-11 km total, ~1 km jalur berjalan publik) di bawah Taman Nasional Akiyoshidai; formasi terasering 'Seratus Piring' yang terkenal.",
+    "Salah satu kota kastil samurai yang paling terpelihara di Jepang dan rumah keramik Hagi-yaki; dinamai destinasi perjalanan New York Times untuk 2024."
+   ],
+   "eat": [
+    "Shimonoseki menangani volume ikan buntal terbesar di Jepang dan dikenal sebagai 'Ibukota Ikan Buntal'; diucapkan lokal 'fuku' yang berarti kebahagiaan. Terbaik Nov-Feb.",
+    "Mie cha-soba teh hijau yang dipanggang di ubin atap panas hingga garing, diisi daging iris, nori, telur dan momiji-oroshi. Berasal tahun 1962 sekitar Shimonoseki/Kaw.",
+    "Sushi berlapis tekan dengan topping berwarna-warni (telur, sakura denbu, shiitake, lotus root renkon lokal); dikatakan berasal 300+ tahun lalu sebagai persediaan pertempuran samurai."
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "ikan buntal — kelezatan terkenal (dan berlisensi) Shimonoseki",
+   "deeper_en": "Pemandangannya indah, bukan?",
+   "lede": "Jembatan lima busur yang spektakuler dan kuil vermilion yang meriah."
+  },
+  "kagawa": {
+   "tagline": "Prefektur terkecil Jepang — mie udon dan pulau seni.",
+   "blurb": "Prefektur terkecil Jepang memiliki dampak yang jauh melampaui ukurannya: dijuluki \"Prefektur Udon\" karena Sanuki udon yang kenyal disajikan di ratusan warung, dan ibukotanya menghadap Laut Seto yang penuh pulau, pintu gerbang ke pulau seni kontemporer yang terkenal dunia.",
+   "history": "Kagawa (香川) adalah prefektur terkecil Jepang, lama dikenal karena sanuki udon (讃岐うどん). Sejak 2010 Setouchi Triennale telah mengubah pulau-pulau Laut Dalam miliknya, dipimpin oleh Naoshima (直島), menjadi destinasi seni global.",
+   "getting": "Takamatsu berjarak ~50 menit dari Okayama dengan kereta melewati jembatan Seto-Ōhashi.",
+   "see": [
+    "Taman jalan kaki bergaya Matsudaira-clan berusia sekitar 300 tahun dengan luas sekitar 75 hektare, Tempat Keindahan Pemandangan Khusus terbesar di Jepang, pemenang bintang 3 dari Michel",
+    "Pulau seni kontemporer kelas dunia yang dijalankan oleh Benesse Art Site Naoshima — rumah dari Chichu Art Museum, Benesse House Museum, Lee Ufan Museum dan Honmura Art",
+    "Kuil kepala dari lebih dari 600 kuil Konpira, didedikasikan untuk dewa laut dan pelayaran yang aman. Terkenal karena 785 tangga batu menuju kuil utama (1.368 menuju kuil dalam"
+   ],
+   "eat": [
+    "Hidangan khas Kagawa dan alasan menjuluki dirinya 'Prefektur Udon' — mie gandum tebal, persegi, kenyal disajikan di ratusan warung lokal, sering dengan iriko (d",
+    "Paha ayam panggang utuh yang dibumbui sederhana dengan garam, merica dan bawang putih, disajikan di atas tulang. Diciptakan di Marugame pada 1952; tersedia sebagai 'wakadori' (muda) yang empuk atau",
+    "Wagyu Japanese Black premium dan yellowtail ternak dari Pulau Shodoshima menggunakan pakan/daun berbasis zaitun, keahlian Setouchi yang dihargai karena kaya namun menyegarkan"
+   ],
+   "phrase_en": "It's delicious!",
+   "word_en": "thick wheat noodles — Kagawa is the udon kingdom",
+   "deeper_en": "local/hometown flavor; authentic regional taste",
+   "lede": "Prefektur terkecil Jepang — mie udon dan pulau seni."
+  },
+  "ehime": {
+   "tagline": "Salah satu sumber air panas tertua Jepang dan kastil di atas bukit di Matsuyama.",
+   "blurb": "Ehime, di pantai barat laut Shikoku menghadap Laut Seto, terkenal dengan Dogo Onsen, salah satu sumber air panas tertua Jepang dengan lebih dari 1.000 tahun sejarah tercatat, dan pulau-pulau penghasil jeruk yang terhubung oleh rute bersepeda Shimanami Kaido. Iklim yang lembut, Kastil Matsuyama dari era feodal, dan kebun mikan (jeruk mandarin) membuatnya menjadi pintu gerbang yang santai untuk melompat antar pulau.",
+   "history": "Dōgo Onsen milik Ehime (愛媛) muncul dalam teks tertua Jepang sebagai tempat pemandian legendaris, dan rumah mandi kayu tahun 1894-nya menginspirasi rumah mandi dalam 'Spirited Away'. Matsuyama (松山) mempertahankan kastil original yang indah.",
+   "getting": "Matsuyama dapat dicapai dengan pesawat dari Tokyo/Osaka atau dengan kereta/bus melintasi Shikoku.",
+   "see": [
+    "Salah satu sumber air panas tertua Jepang (legenda mengatakan 3.000 tahun). Rumah mandi kayu ikonik adalah rumah mandi umum pertama yang ditetapkan sebagai Aset Budaya",
+    "Salah satu dari hanya dua belas menara kastil original yang bertahan dibangun sebelum akhir periode Edo, terletak di atas bukit dengan akses kereta gantung/lift dan 21 Aset Budaya",
+    "Rute jalan tol dan jembatan yang indah sepanjang 60+ km melintasi pulau-pulau Laut Seto, terkenal dunia sebagai jalur bersepeda yang menghubungkan Ehime ke Hiroshima dengan pemandangan laut yang memukau"
+   ],
+   "eat": [
+    "Hidangan khas Ehime. Dua gaya regional: gaya Matsuyama ikan bream panggang utuh dimasak dengan nasi, dan gaya Uwajima sashimi ikan bream mentah di atas nasi panas dengan",
+    "Kue goreng dalam yang renyah terbuat dari ikan kecil utuh yang digiling, makanan lezat Uwajima berusia berabad-abad yang dimakan begitu saja. Tradisi melacaknya ke pengrajin kue ikan yang dibawa dari Sendai",
+    "Ehime adalah produsen jeruk terdepan Jepang (mikan, iyokan, dekopon). Dijual dalam berbagai bentuk dari buah segar hingga bir berasa jeruk, gelato, dan jus."
+   ],
+   "phrase_en": "Cantik, bukan?",
+   "word_en": "salah satu rumah mandi sumber air panas tertua Jepang",
+   "deeper_en": "Ini tempat yang bagus, bukan?",
+   "lede": "Salah satu sumber air panas tertua Jepang dan kastil di atas bukit di Matsuyama."
+  },
+  "kochi": {
+   "tagline": "Sungai yang jernih, kastil terkenal, dan semangat reformer Sakamoto Ryōma.",
+   "blurb": "Kōchi tersebar di selatan Shikoku yang menghadap Samudra Pasifik yang liar, terkenal dengan Sungai Shimanto bebas bendungan (\"aliran terjernih\" Jepang), bonito bakar (katsuo no tataki), dan kaitan dengan reformer samurai Sakamoto Ryoma. Tanjung berbatu dan perairan jernih menanti para wisatawan yang menjelajahi jalur yang jarang dilalui.",
+   "history": "Kōchi (高知) melahirkan reformer Sakamoto Ryōma (坂本龍馬), tokoh kunci dalam Restorasi Meiji. Sungai Shimanto (四万十川) yang jernih dikenal sebagai 'aliran terjernih' Jepang.",
+   "getting": "Kōchi dapat dijangkau dengan pesawat dari Tokyo/Osaka atau dengan kereta ekspress terbatas lintas Shikoku.",
+   "see": [
+    "Salah satu dari hanya 12 kastil Jepang yang mempertahankan donjon asli periode Edo, dan satu-satunya yang mempertahankan menara asli dan Istana Honmaru; pemandangan 360 derajat",
+    "Pantai pemandangan ikonik dengan patung terkenal dan museum peringatan untuk pahlawan kampung halaman Sakamoto Ryoma, ditambah Akuarium Katsurahama di taman sekitarnya.",
+    "Festival musim panas khas Kota Kōchi: ~190 tim dan ~18.000 penari menggabungkan tari Yosakoi dengan penjepit naruko tradisional dengan musik modern di seluruh kota; 202"
+   ],
+   "eat": [
+    "Makanan jiwa khas Kōchi: bonito dengan kulit bakar menyala di atas jerami beras yang membara (warayaki), dipotong tebal, dan dimakan dengan garam atau ponzu plus bawang putih/jahe/bawang merah",
+    "Gaya penyajian perayaan sashimi, sushi, ikan bakar dan kelezatan musiman disusun bersama dalam satu piring besar ~36-39cm, secara tradisional untuk pernikahan",
+    "Gedung makanan dalam ruangan yang meriah di Kota Kōchi dengan ~60 kios dan tempat duduk bersama di mana Anda dapat mencoba katsuo no tataki dan hidangan lokal di tengah minuman 'okyaku' terkenal Kōchi"
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "seared bonito, Kōchi's signature dish",
+   "deeper_en": "The warmth and sincerity of people here is genuine, isn't it?",
+   "lede": "Sungai yang jernih, kastil terkenal, dan semangat reformer Sakamoto Ryōma."
+  },
+  "fukuoka": {
+   "tagline": "Kota pintu gerbang Kyūshū, terkenal dengan tonkotsu ramen dan kedai makanan jalanan.",
+   "blurb": "Fukuoka adalah prefektur terbesar dan paling vibrant di Kyushu, terkenal dengan Hakata ramen, yatai (kedai makanan terbuka) yang meriah di sepanjang Hakata Bay, dan sebagai pintu gerbang ke Asia dengan perjalanan ferry singkat dari Korea Selatan. Kota ini menggabungkan kehidupan kota modern yang ramai dengan kota-kota kastil dan pulau-pulau untuk day-trip yang mudah.",
+   "history": "Fukuoka (福岡) telah menjadi pintu gerbang Jepang ke benua Asia selama berabad-abad; pedagang Hakata (博多) membangun kekayaan perdagangannya, dan budaya yatai (屋台) jalanan tidak tertandingi di Jepang.",
+   "getting": "Fukuoka (Hakata) berjarak ~5 jam dari Tokyo dengan shinkansen, atau ~2 jam dengan pesawat.",
+   "see": [
+    "Kepala dari ~12.000 kuil Tenjin dan didedikasikan untuk Sugawara no Michizane, dewa pembelajaran; terkenal dengan ribuan pohon prem yang mekar pada Februari dan ikon",
+    "Didirikan pada tahun 757 M di Hakata pusat; rumah spiritual festival Hakata Gion Yamakasa bulan Juli dengan float-nya yang menjulang tinggi dan berpacu.",
+    "Kuil gunung ~21 menit dengan JR dari Hakata, rumah Patung Buddha Tidur Perunggu terbesar di dunia (41 m panjang, 300 ton); bagian dari ziarah 88 kuil Sasaguri."
+   ],
+   "eat": [
+    "Ramen signature Fukuoka: kuah tulang babi (tonkotsu) yang sangat kaya dan creamy disimmer selama berjam-jam dengan mie lurus tipis; lahir di distrik Hakata dan disajikan",
+    "Hot pot lokal daging sapi atau jeroan babi dengan kubis, kucai, dan cabai dalam kuah berbasis kecap atau miso, dimasak di meja; favorit musim dingin Fukuoka.",
+    "Kurang dikenal oleh turis asing tetapi dikatakan berasal dari Hakata: mie lembut dan elastis dalam kuah niboshi-katsuobushi-kombu yang jernih, sering dengan topping burdock tempu"
+   ],
+   "phrase_en": "Oishii!",
+   "word_en": "yatai — kedai makanan terbuka, institusi Fukuoka",
+   "deeper_en": "Aku akan mampir sebentar / Aku akan singgah sekilas",
+   "lede": "Kota pintu gerbang Kyūshū, terkenal dengan tonkotsu ramen dan kedai makanan jalanan."
+  },
+  "saga": {
+   "tagline": "Jantung porselen Jepang dan festival balon musim gugur yang meriah.",
+   "blurb": "Prefektur Saga adalah tempat kelahiran porselen Jepang, rumah bagi kota tembikar terkenal Arita, Imari dan Karatsu yang barangnya berwarna biru-putih telah diekspor ke Eropa selama lebih dari 400 tahun. Prefektur ini juga memiliki reruntuhan Yayoi periode Yoshinogari yang luas dan pasar cumi pagi yang ramai di Yobuko.",
+   "history": "Saga (佐賀) adalah tempat kelahiran porselen Jepang: pada awal tahun 1600-an, pengrajin di dekat Arita (有田) menemukan tanah liat kaolin dan mulai membuat barang-barang yang diekspor ke seluruh dunia sebagai 'Imari' (伊万里).",
+   "getting": "Saga berjarak ~40 menit dari Fukuoka (Hakata) dengan kereta ekspres terbatas.",
+   "see": [
+    "Salah satu dari tiga kuil Inari terbesar Jepang; ruang-ruang bermata air dibangun dengan tiang tinggi di lereng bukit (dijuluki Nikko Barat), menarik ~3 juta pengunjung per tahun.",
+    "Rekonstruksi 73,7 hektar dari salah satu permukiman periode Yayoi terbesar di Jepang, dengan menara pengawas, tempat tinggal dan artefak yang digali.",
+    "Tempat kelahiran porselen Jepang (produksi sejak 1616); jalan utama yang dilapisi galeri dan tungku kerja di mana Anda dapat menonton pengrajin dan membeli langsung."
+   ],
+   "eat": [
+    "Wagyu premium yang dipelihara secara eksklusif di Saga, dihargai karena marbling halus dan tekstur yang lumer di mulut; disajikan sebagai steak, sukiyaki atau shabu-shabu.",
+    "Teh hijau daun keriting khas yang ditanam di lembah Ureshino selama ~500 tahun, dengan aroma kaya dan profil yang sedikit pahit.",
+    "Hidangan yoshoku Saga City yang aneh diciptakan sekitar tahun 1977: nasi dengan topping daging yang ditumis, salad segar dan mayones. Makanan kenyamanan lokal yang jarang ditemukan di tempat lain."
+   ],
+   "phrase_en": "Apa yang Anda rekomendasikan?",
+   "word_en": "Porselen Arita — salah satu keramik paling terkenal Jepang",
+   "deeper_en": "Tembikar ini dibuat oleh tangan pengrajin.",
+   "lede": "Jantung porselen Jepang dan festival balon musim gugur yang meriah."
+  },
+  "nagasaki": {
+   "tagline": "Kota pelabuhan dengan sejarah lintas budaya, pemandangan perbukitan, dan taman perdamaian.",
+   "blurb": "Nagasaki adalah jendela utama Jepang ke dunia luar selama isolasi era Edo, dan kota pelabuhan yang berbukit ini menggabungkan warisan Belanda, Cina, dan Kristen dengan peringatan bom atom yang menyentuh hati. Prefektur ini juga mencakup 594 pulau, paling banyak di antara semua prefektur di Jepang, tersebar dengan gereja-gereja Kristen tersembunyi dan pantai yang sepi.",
+   "history": "Nagasaki (長崎) adalah satu-satunya jendela Jepang ke Barat selama isolasinya, berdagang melalui pulau buatan Dejima (出島). Kota ini membawa warisan Belanda, Cina, dan Kristen — dan kenangan 9 Agustus 1945.",
+   "getting": "Nagasaki berjarak ~1h30m dari Fukuoka melalui Nishi-Kyūshū Shinkansen + transfer.",
+   "see": [
+    "Museum terbuka di perbukitan dengan sembilan residensi bergaya Barat (1860-an–1910-an) di atas Pelabuhan Nagasaki, berpusat pada Glover Residence tahun 1863 yang merupakan bangunan tertua yang masih ada di Jepang",
+    "Dibangun pada 1865, gereja Kristen tertua yang masih ada di Jepang dan Harta Nasional, didedikasikan untuk 26 Martir Nagasaki; merupakan bagian dari 'Situs Kristen Tersembunyi",
+    "Pulau bekas pertambangan batu bara yang ditinggalkan ~20 km dari Pelabuhan Nagasaki, pernah menjadi salah satu tempat terpadat di dunia; dikunjungi hanya melalui tur perahu resmi. UNESCO"
+   ],
+   "eat": [
+    "Sup mie bergizi dalam kuah babi/ayam yang kental dipenuhi dengan makanan laut, babi dan sayuran, diciptakan di restoran Cina Shikairou pada akhir era Meiji. Nagasaki",
+    "Kerabat 'mie piring' dari champon: mie tipis goreng yang renyah (atau mie tebal lembut) ditaburi dengan kuah makanan laut dan sayuran yang mengental. Hidangan khas Nagasaki sejak",
+    "Kue spons madu yang lembab dibawa oleh pedagang Portugis pada abad ke-16 dan diadaptasi di Nagasaki; pembuat bersejarah Fukusaya berasal dari 1624."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "Nagasaki's hearty mixed noodle dish",
+   "deeper_en": "different cultures are blended together",
+   "lede": "Kota pelabuhan dengan sejarah lintas budaya, pemandangan perbukitan, dan taman perdamaian."
+  },
+  "kumamoto": {
+   "tagline": "Kastil megah dan salah satu kaldera vulkanik terbesar di dunia di Aso.",
+   "blurb": "Kumamoto adalah prefektur Kyushu yang ditentukan oleh alam dan sejarah yang dramatis: Kumamoto Castle yang mengesankan dan telah direkonstruksi, salah satu dari tiga kastil terbesar Jepang, dan Mount Aso, yang memiliki salah satu kaldera vulkanik aktif terbesar di dunia. Pantainya memanjang ke pulau-pulau Amakusa, rumah situs Kristen Tersembunyi yang terdaftar UNESCO dan makanan laut segar.",
+   "history": "Kumamoto (熊本) didefinisikan oleh kastilnya yang megah, dibangun oleh Katō Kiyomasa sekitar 1607, dan oleh Mount Aso (阿蘇), yang kalderanya yang sangat besar telah membentuk kehidupan di Kyūshū tengah selama berabad-abad.",
+   "getting": "Kumamoto berjarak ~40 menit dari Fukuoka (Hakata) dengan Kyūshū Shinkansen.",
+   "see": [
+    "Salah satu dari tiga kastil premier Jepang, diselesaikan pada 1607 oleh Kato Kiyomasa; terkenal dengan dinding batu 'musha-gaeshi' yang melengkung. Kini telah dibuka kembali untuk pengunjung setelah 2016",
+    "Taman jalan melingkar era Edo yang dibangun oleh para bangsawan Hosokawa, menampilkan kolam berair mata dan Mt. Fuji mini; rumah teh menawarkan matcha dengan pemandangan taman",
+    "Salah satu kaldera vulkanik terbesar di dunia; jalur kabel dan titik pandang memungkinkan pengunjung mendekati kawah Nakadake yang aktif di tengah padang rumput luas."
+   ],
+   "eat": [
+    "Kelezatan khas Kumamoto; daging kuda mentah yang diiris tipis disajikan dengan bawang putih/jahe parut dan saus kedelai. Prefektur memiliki produksi tertinggi di Jepang dan",
+    "Akar teratai yang diisi dengan pasta mustard-miso pedas, dibungkus tepung dan digoreng dalam. Berasal dari era Edo di bawah klan Hosokawa sebagai makanan bergizi.",
+    "Wagyu berambut merah yang dibesarkan di padang rumput vulkanik sekitar Mt. Aso; tanpa lemak namun kaya umami, sering disajikan sebagai mangkuk daging sapi. Produk dengan Indikasi Geografis terdaftar"
+   ],
+   "phrase_en": "Indah, bukan?",
+   "word_en": "gunung berapi — Mount Aso adalah raksasa wilayah ini",
+   "deeper_en": "Mohon berhati-hati terhadap abu vulkanik.",
+   "lede": "Kastil megah dan salah satu kaldera vulkanik terbesar di dunia di Aso."
+  },
+  "oita": {
+   "tagline": "Ibukota mata air panas Jepang — Beppu yang mengepul dan Yufuin yang bergaya.",
+   "blurb": "Oita dikenal luas sebagai ibukota onsen (mata air panas) Jepang, menghasilkan lebih banyak air mata air panas daripada prefektur lainnya, dengan \"neraka\" (jigoku) yang mengepul di Beppu dan Semenanjung Kunisaki yang vulkanik di Laut Seto Inland.",
+   "history": "Ōita (大分) menghasilkan lebih banyak air mata air panas daripada prefektur mana pun di Jepang. Beppu (別府) berkembang menjadi resor onsen yang besar, sementara patung-patung Budha batu Usuki (臼杵) diukir ke dalam tebing sekitar abad ke-12.",
+   "getting": "Beppu/Ōita berjarak ~2h dari Fukuoka (Hakata) dengan kereta ekspres terbatas.",
+   "see": [
+    "Tur mata air panas termal yang hidup dan terlalu panas untuk dimandikan termasuk Umi Jigoku berwarna biru kobalt dan Chinoike Jigoku berwarna merah darah; Beppu memiliki output mata air panas terbesar",
+    "Sekelompok patung Budha batu yang diukir ke dalam tebing batuan lebih dari 1.000 tahun yang lalu; 61 patung ditetapkan sebagai Harta Karun Nasional, berada di taman yang terkenal karena lotus musiman.",
+    "Kota mata air panas yang halus dan dapat diakses jalan kaki di bawah Mt. Yufu, dikenal karena kafe kerajinan dan pemandangan fajar yang berkabut di Danau Kinrinko."
+   ],
+   "eat": [
+    "Makanan jiwa Oita yang dikatakan berasal dari Beppu pada awal tahun 1920-an: ayam berempah jahe/bawang putih dalam adonan tempura ringan, disajikan dengan ponzu, mustard dan",
+    "Sup farmhouse Oita yang mengenyangkan dengan pangsit adonan gandum yang ditarik tangan diseduh dengan sayuran dan miso; hidangan pokok pedesaan dimakan sebagai makanan yang menghangatkan dan memuaskan.",
+    "Makarel dan ikan selar premium yang dibesarkan dalam arus ganas Saluran Bungo; berdaging tegas dan dihargai, sering dimakan sebagai sashimi."
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "the 'hells' — Beppu's vividly coloured hot springs (for viewing)",
+   "deeper_en": "to soak in a hot spring",
+   "lede": "Ibukota mata air panas Jepang — steaming Beppu dan chic Yufuin."
+  },
+  "miyazaki": {
+   "tagline": "Pantai Pasifik yang cerah, selancar, dan kuil-kuil yang dibungkus mitos.",
+   "blurb": "Miyazaki, di pantai tenggara Kyushu yang cerah, terkenal dengan garis pantai Pasifik subtropikalnya, pantai selancar dan jalan yang dipenuhi pohon palem, serta Takachiho Gorge, sebuah jurang vulkanik penuh kabut yang terikat pada mitos penciptaan Jepang.",
+   "history": "Miyazaki (宮崎) sarat dengan mitos penciptaan Jepang; Takachiho (高千穂) dikatakan sebagai tempat di mana cucu dewi matahari turun ke bumi. Pantainya yang cerah membuatnya menjadi tempat bulan madu yang populer di era Shōwa.",
+   "getting": "Miyazaki dapat dicapai dengan pesawat dari kota-kota besar, atau dengan kereta ekspres terbatas di dalam Kyūshū.",
+   "see": [
+    "Jurang vulkanik berbentuk V yang diukir oleh Sungai Gokase, dengan Air Terjun Manai setinggi 17m. Merupakan Tempat Keindahan Alam dan Monumen Alam yang Dilindungi; pengunjung dapat mendayung perahu di bawahnya",
+    "Kuil vermilion yang berada di dalam gua tepi pantai di tebing menghadap Pasifik, didedikasikan untuk Ugayafukiaezu-no-Mikoto, ayah dari kaisar pertama Jepang. Pengunjung melempar 'un",
+    "Kuil di sebuah pulau kecil yang dikelilingi hutan subtropis, dilingkari oleh platform batu 'Oni no Sentakuita' yang terkikis ombak, sebuah Monumen Alam yang Dilindungi yang dapat dijelajahi saat air surut."
+   ],
+   "eat": [
+    "Hidangan khas Miyazaki: ayam goreng berbalut tepung yang dicelupkan dalam cuka manis dan ditaburi saus tartar. Berasal dari Kota Nobeoka pada tahun 1950-an; saus tartar",
+    "Ayam lokal bebas kandang yang dipanggang dengan arang, dipotong ukuran gigitan, dibumbui dengan garam dan merica, dan disearing di atas api arang tinggi untuk mendapatkan warna hangus yang berasap.",
+    "Sushi roll lokal yang kurang terkenal dengan selada, udang dan mayonis rumahan di atas nasi sushi dalam rumput laut. Ditemukan pada tahun 1966 di Ippei Sushi di Kota Miyazaki dan dianggap"
+   ],
+   "phrase_en": "It's beautiful, isn't it?",
+   "word_en": "a gorge and mythical site in Japan's creation legends",
+   "deeper_en": "The scenery here is truly beautiful, isn't it?",
+   "lede": "Pantai Pasifik yang cerah, selancar, dan kuil-kuil yang dibungkus mitos."
+  },
+  "kagoshima": {
+   "tagline": "Gunung berapi aktif di seberang teluk dan pintu gerbang ke pulau-pulau hutan kuno.",
+   "blurb": "Kagoshima terletak di ujung selatan Kyushu di bawah Sakurajima, salah satu gunung berapi paling aktif di Jepang, yang meletus ratusan kali setahun di seberang teluk dari kota. Selain sejarah samurai dan mata air panasnya, prefektur ini memanjang ke pulau-pulau terpencil termasuk Yakushima yang terdaftar UNESCO, terkenal dengan hutan pohon cedar kuno.",
+   "history": "Kagoshima (鹿児島) adalah domain Satsuma (薩摩) yang membantu menggulingkan shogunate; villa taman lord-nya, Sengan-en (仙巌園), membingkai gunung berapi Sakurajima (桜島) yang mengepul di seberang teluk.",
+   "getting": "Kagoshima berjarak ~1j40m dari Fukuoka dengan Kyūshū Shinkansen, atau melalui udara.",
+   "see": [
+    "Villa dan taman klan Shimadzu tahun 1658 menggunakan gunung berapi Sakurajima yang aktif dan Teluk Kinko sebagai pemandangan pinjaman; bagian dari situs Warisan Dunia UNESCO revolusi industri.",
+    "Gunung berapi aktif ikonik menghadap Kota Kagoshima, dapat dijangkau dengan ferry singkat; jejak lava, mata air panas dan pusat pengunjung menjelaskan letusannya yang sering.",
+    "Jalan berpaving batu yang dilapisi rumah samurai berusia 250 tahun dan taman berlanskap; sering dipasangkan dengan Museum Perdamaian Chiran terdekat tentang sejarah Perang Dunia II."
+   ],
+   "eat": [
+    "Daging babi Berkshire khas Kagoshima yang berasal, dihargai karena lemak ringan yang manis; dinikmati sebagai shabu-shabu hot pot atau potongan tonkatsu.",
+    "Semangat jernih ~25% yang disaring dari ubi jalar manis lokal; Kagoshima memiliki 100+ pabrik minuman yang menghasilkan ribuan varietas.",
+    "Kue pasta ikan cincang yang digoreng dalam, makanan pokok Kagoshima dimakan sebagai camilan atau lauk pauk."
+   ],
+   "phrase_en": "What do you recommend?",
+   "word_en": "the active volcano looming over Kagoshima Bay",
+   "deeper_en": "Volcanic ash is falling",
+   "lede": "Gunung berapi aktif di seberang teluk dan pintu gerbang ke pulau-pulau hutan kuno."
+  },
+  "okinawa": {
+   "see": [
+    "Situs Warisan Dunia UNESCO tempat kedudukan Kerajaan Ryukyu di Naha. Aula utama (Seiden) terbakar pada 2019; rekonstruksi sedang berlangsung dengan penyelesaian direncanakan untuk musim gugur 2",
+    "Salah satu akuarium terbesar di dunia, didominasi oleh tangki Kuroshio Sea raksasa tempat hiu paus dan pari manta berenang. Atraksi unggulan Semenanjung Motobu.",
+    "Utaki (situs doa) paling suci dari Kerajaan Ryukyu, dikatakan sebagai tempat asalnya; bagian dari daftar Situs Gusuku UNESCO."
+   ],
+   "eat": [
+    "Tumisan khas Okinawa dengan labu pahit, tahu, telur dan babi. 'Champuru' berarti 'sesuatu yang tercampur' dalam dialek Okinawa; ditampilkan oleh JNTO sebagai hidangan yang wajib dicoba",
+    "Meskipun namanya begitu, dibuat dari gandum (bukan soba) sehingga lebih mirip udon; disajikan dalam kuah babi dan bonito yang gurih. Versi 'soki' disajikan dengan daging babi panggang yang empuk",
+    "Perut babi yang dipanggang perlahan-lahan dalam kecap asin, gula merah dan awamori (minuman keras beras lokal) hingga menjadi lembut dan lumer di mulut. Klasik dari masakan istana Ryukyu."
+   ]
+  }
+ }
+}

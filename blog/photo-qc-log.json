@@ -1,0 +1,999 @@
+{
+ "removed": [
+  {
+   "slug": "niigata",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/niigata-tile2-northern-culture-museum.webp",
+   "title": "Replica of La Cueva Pintada - Northern Cultures - National Museum of Antropology - Mexico 2024.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "niigata",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/niigata-tile5-sado-island-taiko-with-kodo.webp",
+   "title": "Sado-shima island, Manjojiki",
+   "source": "find47"
+  },
+  {
+   "slug": "niigata",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/niigata-see2-northern-culture-museum.webp",
+   "title": "Replica of the Cueva de la Candelaria - Northern Cultures - National Museum of Antropology - Mexico 2024 (2).jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "niigata",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/niigata-food3-noppe.webp",
+   "title": "Gentse feesten 2018 An-Sofie Noppe 18-07-2018 20-57-49.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "fukui",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/fukui-hero-fukui-prefectural-dinosaur-museum.webp",
+   "title": "Hakusan Heisenji Shrine",
+   "source": "find47"
+  },
+  {
+   "slug": "fukui",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/fukui-tile3-fukui-prefectural-dinosaur-museum.webp",
+   "title": "Autumn Leaves in Yokokan Garden",
+   "source": "find47"
+  },
+  {
+   "slug": "fukui",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/fukui-see3-fukui-prefectural-dinosaur-museum.webp",
+   "title": "My hometown",
+   "source": "find47"
+  },
+  {
+   "slug": "yamanashi",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/yamanashi-food3-shingen-mochi.webp",
+   "title": "Shin-Mei Fireworks",
+   "source": "find47"
+  },
+  {
+   "slug": "nagano",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/nagano-tile5-kiso-shikki-lacquerware.webp",
+   "title": "sunrise over Mt.Akadake (Mt.Yatsugatake) seen from Mt.KisoKomagatake.",
+   "source": "find47"
+  },
+  {
+   "slug": "nagano",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/nagano-see2-zenkoji-temple.webp",
+   "title": "Monkeying Around at Snow Monkey Park",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "gifu",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/gifu-tile5-mino-washi-papermaking.webp",
+   "title": "Mino Bridge",
+   "source": "find47"
+  },
+  {
+   "slug": "shizuoka",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/shizuoka-see1-kunozan-toshogu-shrine.webp",
+   "title": "David Stanley at Shimizu",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "shizuoka",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/shizuoka-see2-mount-fuji.webp",
+   "title": "Sun drying of Sakura shrimp",
+   "source": "find47"
+  },
+  {
+   "slug": "shizuoka",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/shizuoka-food1-shizuoka-green-tea.webp",
+   "title": "Departure of Sakura shrimp's fishing boats from Yui Fishing Port,Shizuoka.",
+   "source": "find47"
+  },
+  {
+   "slug": "shizuoka",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/shizuoka-food2-wasabi.webp",
+   "title": "Food",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "aichi",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/aichi-see2-atsuta-jingu.webp",
+   "title": "Atsuta-mae Crosswalk",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "aomori",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/aomori-tile1-sannai-maruyama-special-historic-site.webp",
+   "title": "Oirase mountain stream",
+   "source": "find47"
+  },
+  {
+   "slug": "aomori",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/aomori-tile3-aomori-museum-of-art.webp",
+   "title": "Aomori　Senjyoujiki and Kabutoiwa in Fukaura tawn",
+   "source": "find47"
+  },
+  {
+   "slug": "aomori",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/aomori-tile4-hirosaki-museum-of-contemporary-art.webp",
+   "title": "Hirosaki cherry blossoms",
+   "source": "find47"
+  },
+  {
+   "slug": "aomori",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/aomori-see3-aomori-museum-of-art.webp",
+   "title": "Lake Towada",
+   "source": "find47"
+  },
+  {
+   "slug": "aomori",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/aomori-food1-ringo.webp",
+   "title": "Mamma Mia. Over 118,000 visits to this photo. りんご娘のライブ コンサート © Glenn E Waters. Japan.",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "iwate",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/iwate-tile4-tono-folklore.webp",
+   "title": "“SL galaxy” running on the Megane(eye glasses) Bridge",
+   "source": "find47"
+  },
+  {
+   "slug": "iwate",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/iwate-food2-morioka-reimen.webp",
+   "title": "Mt.IWATE",
+   "source": "find47"
+  },
+  {
+   "slug": "iwate",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/iwate-food3-morioka-jajamen.webp",
+   "title": "Morioka city IWAYAMA observatory",
+   "source": "find47"
+  },
+  {
+   "slug": "miyagi",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/miyagi-tile1-matsushima-bay.webp",
+   "title": "Matsushima Bay, Japan",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "yamagata",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/yamagata-tile1-yamadera.webp",
+   "title": "Couple",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "yamagata",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/yamagata-see3-mount-zao.webp",
+   "title": "Haguro Mountain's Goddess and The Five-storied Pagoda",
+   "source": "find47"
+  },
+  {
+   "slug": "yamagata",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/yamagata-food1-yonezawa-beef.webp",
+   "title": "Yonezawa Landscape 2008 Spring",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "fukushima",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/fukushima-tile4-aizu-sazaedo.webp",
+   "title": "Aizu Buke-Yashiki (Samurai Residence)",
+   "source": "find47"
+  },
+  {
+   "slug": "hokkaido",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/hokkaido-tile2-sapporo-clock-tower.webp",
+   "title": "I'm an Ezo Squirrel and  a species endemic to Hokkaido!",
+   "source": "find47"
+  },
+  {
+   "slug": "hokkaido",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/hokkaido-tile3-sapporo-snow-festival.webp",
+   "title": "Goryokaku of snowstorm",
+   "source": "find47"
+  },
+  {
+   "slug": "hokkaido",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/hokkaido-tile4-upopoy-national-ainu-museum.webp",
+   "title": "Ainu four-handled basin, National Ainu Museum and Park.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "hokkaido",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/hokkaido-tile5-lake-akan-ainu-kotan.webp",
+   "title": "People playing on Shimamui Beach in Japan Hokkaido",
+   "source": "find47"
+  },
+  {
+   "slug": "hokkaido",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/hokkaido-see3-sapporo-snow-festival.webp",
+   "title": "Snowing in the old storehouse",
+   "source": "find47"
+  },
+  {
+   "slug": "mie",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/mie-hero-ise-jing-grand-shrine.webp",
+   "title": "A frog at the hand wash station",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "mie",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/mie-tile1-ise-jingu.webp",
+   "title": "Sanctuaire shintoïste Ise Jingu (exposition Fukami, Paris)",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "mie",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/mie-see1-ise-jingu.webp",
+   "title": "Sanctuaire shintoïste Ise Jingu (exposition Fukami, Paris)",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "shiga",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/shiga-tile3-lake-biwa.webp",
+   "title": "Horai",
+   "source": "find47"
+  },
+  {
+   "slug": "shiga",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/shiga-see2-hieizan-enryakuji.webp",
+   "title": "比叡山延暦寺 - Enryaku-ji // 2010.08.07 - 010",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "shiga",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/shiga-food2-omi-beef.webp",
+   "title": "omihachiman sunset",
+   "source": "find47"
+  },
+  {
+   "slug": "osaka",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/osaka-food1-takoyaki.webp",
+   "title": "Random breakfast",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "osaka",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/osaka-food3-kushikatsu.webp",
+   "title": "神鷹(Kamitaka)",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hyogo",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/hyogo-tile3-arima-onsen.webp",
+   "title": "HOTSPRING, ARIMA ONSEN",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/hyogo-tile4-nishiyama-sake-brewery-sake-tour.webp",
+   "title": "Kinosaki hot springs.(Cherry Brossomes at night.)",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/hyogo-tile5-arima-geiko-performance.webp",
+   "title": "Tenguiwa in the forest",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/hyogo-food1-kobe-beef.webp",
+   "title": "Sengari Dam",
+   "source": "find47"
+  },
+  {
+   "slug": "hyogo",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/hyogo-food2-akashiyaki.webp",
+   "title": "明石焼 (Akashiyaki)",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hyogo",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/hyogo-food3-himeji-oden.webp",
+   "title": "Nippon Shokubai Himeji Factory.",
+   "source": "find47"
+  },
+  {
+   "slug": "nara",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/nara-food2-miwa-somen.webp",
+   "title": "Wheat fields in Sakurai",
+   "source": "find47"
+  },
+  {
+   "slug": "wakayama",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/wakayama-tile5-tomogashima-islands.webp",
+   "title": "Tomogashima lighthouse plate.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "wakayama",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/wakayama-food1-wakayama-ramen.webp",
+   "title": "A morning glow of hashigui-iwa",
+   "source": "find47"
+  },
+  {
+   "slug": "wakayama",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/wakayama-food2-umeboshi.webp",
+   "title": "0412_003",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "tottori",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/tottori-tile2-the-sand-museum.webp",
+   "title": "Climbing the Dune",
+   "source": "find47"
+  },
+  {
+   "slug": "tottori",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/tottori-see1-tottori-sand-dunes.webp",
+   "title": "Uradome Corst",
+   "source": "find47"
+  },
+  {
+   "slug": "tottori",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/tottori-see2-the-sand-museum.webp",
+   "title": "P1000955",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "tottori",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/tottori-food2-tottori-gyukotsu-ramen.webp",
+   "title": "Ayugaeri waterfall in Noigura.",
+   "source": "find47"
+  },
+  {
+   "slug": "tottori",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/tottori-food3-twentieth-century-pear.webp",
+   "title": "Pyrus pyrifolia Twentieth Century 0zz.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "shimane",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/shimane-hero-izumo-taisha-grand-shrine.webp",
+   "title": "Inasa Beach.",
+   "source": "find47"
+  },
+  {
+   "slug": "shimane",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/shimane-tile1-izumo-taisha.webp",
+   "title": "Izumohinomisaki Lighthouse",
+   "source": "find47"
+  },
+  {
+   "slug": "shimane",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/shimane-see1-izumo-taisha.webp",
+   "title": "izumo kagura",
+   "source": "find47"
+  },
+  {
+   "slug": "shimane",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/shimane-see2-matsue-castle.webp",
+   "title": "Evening scene at the shores of Shinji Lake",
+   "source": "find47"
+  },
+  {
+   "slug": "okayama",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/okayama-tile4-kibitsu-shrine.webp",
+   "title": "New year decoration",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "okayama",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/okayama-see2-okayama-castle.webp",
+   "title": "Okayama Forest park German Forest",
+   "source": "find47"
+  },
+  {
+   "slug": "okayama",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/okayama-see3-kurashiki-bikan-historical-quarter.webp",
+   "title": "美観, 倉敷美観地区, くらしきびかんちく, Kurashiki Bikan Historical Quarter, 倉敷, Kurashiki, 岡山, Okayama",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "okayama",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/okayama-food1-momotaro-peaches.webp",
+   "title": "2005s395momotaro_9-70_o",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hiroshima",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/hiroshima-hero-peace-memorial-park.webp",
+   "title": "玫瑰-和平 Rosa Peace [日本廣島和平紀念公園 Hiroshima Peace Memorial Park, Japan]",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hiroshima",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/hiroshima-see1-atomic-bomb-dome.webp",
+   "title": "HIROSHIMA STREETCARS AT STOP M10 ATOMIC BOMB DOME JAPAN JUNE 2012",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "hiroshima",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/hiroshima-see3-hiroshima-castle.webp",
+   "title": "Cherry blossoms blooming national treasure Jodoji",
+   "source": "find47"
+  },
+  {
+   "slug": "yamaguchi",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/yamaguchi-tile2-akiyoshido-cave.webp",
+   "title": "No More Spelunking",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "yamaguchi",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/yamaguchi-see2-akiyoshido-cave.webp",
+   "title": "Excursion ticket（Yamaguchi Akiyoshido）.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "ibaraki",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/ibaraki-tile4-kasama-yaki-pottery-experience.webp",
+   "title": "Autumn Foliage Road at Night",
+   "source": "find47"
+  },
+  {
+   "slug": "ibaraki",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/ibaraki-food1-mito-natto.webp",
+   "title": "Kairakuen",
+   "source": "find47"
+  },
+  {
+   "slug": "tochigi",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/tochigi-hero-nikk-t-sh-g-shrine.webp",
+   "title": "Tochigi　Nikkou  Kegon Fall",
+   "source": "find47"
+  },
+  {
+   "slug": "tochigi",
+   "key": "tile5",
+   "verdict": "BAD",
+   "file": "img/tochigi-tile5-oya-history-museum-underground-stone-qua.webp",
+   "title": "Izuhara Spring",
+   "source": "find47"
+  },
+  {
+   "slug": "saitama",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/saitama-tile3-mitsumine-shrine-chichibu.webp",
+   "title": "Mt. Buko and Shibazakura",
+   "source": "find47"
+  },
+  {
+   "slug": "saitama",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/saitama-tile4-omiya-bonsai-village.webp",
+   "title": "Omiya Bonsai Village",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "saitama",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/saitama-see2-kawagoe-hikawa-shrine.webp",
+   "title": "川越冰川神社",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "saitama",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/saitama-food3-saitama-udon.webp",
+   "title": "Saitama　Hidaka city kourai   Claster amalryllis in kourai",
+   "source": "find47"
+  },
+  {
+   "slug": "chiba",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/chiba-hero-narita-san-shinsh-ji-temple.webp",
+   "title": "Map of Narita-san Shinshō-ji",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "chiba",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/chiba-tile4-choshi-electric-railway.webp",
+   "title": "Egawa coast",
+   "source": "find47"
+  },
+  {
+   "slug": "chiba",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/chiba-food1-peanuts.webp",
+   "title": "YOKOHAMA'S CHINATOWN & PEANUT CLUB 1960S: a watercolor by R.L. Huffstutter",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "chiba",
+   "key": "food2",
+   "verdict": "BAD",
+   "file": "img/chiba-food2-namero.webp",
+   "title": "Nikomi, yakiton, namero, sake and highball at Basara, Mitaka",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "tokyo",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/tokyo-see2-meiji-jingu.webp",
+   "title": "schoolgirls",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "tokyo",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/tokyo-food3-tokyo-ramen.webp",
+   "title": "The Tokyo Metropolitan Government",
+   "source": "find47"
+  },
+  {
+   "slug": "kanagawa",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/kanagawa-tile1-great-buddha-of-kamakura.webp",
+   "title": "Kamakura's wonderful shrine",
+   "source": "find47"
+  },
+  {
+   "slug": "kanagawa",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/kanagawa-tile2-tsurugaoka-hachimangu-shrine.webp",
+   "title": "Bows and Arrows",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "kanagawa",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/kanagawa-see1-great-buddha-of-kamakura.webp",
+   "title": "kamakura high school railway station",
+   "source": "find47"
+  },
+  {
+   "slug": "kanagawa",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/kanagawa-see2-tsurugaoka-hachimangu-shrine.webp",
+   "title": "Bows and Arrows",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "kanagawa",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/kanagawa-food1-yokohama-chinatown.webp",
+   "title": "The night owl",
+   "source": "find47"
+  },
+  {
+   "slug": "kanagawa",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/kanagawa-food3-yokosuka-navy-curry.webp",
+   "title": "120504-N-SF704-138.jpg",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "ehime",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/ehime-tile2-matsuyama-castle.webp",
+   "title": "Woods of Kumquat in park of Matsuyama jo castle",
+   "source": "find47"
+  },
+  {
+   "slug": "ehime",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/ehime-tile3-shimanami-kaido.webp",
+   "title": "See no evil speak no evil hear no evil",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "ehime",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/ehime-see3-shimanami-kaido.webp",
+   "title": "Toyo Ito Museum of Architecture, Imabari",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "kochi",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/kochi-see3-yosakoi-festival.webp",
+   "title": "高知よさこい祭り2006",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "fukuoka",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/fukuoka-food1-hakata-ramen.webp",
+   "title": "Hakata Ramen",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "nagasaki",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/nagasaki-see2-oura-church.webp",
+   "title": "Jenny @ Oura Church",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "nagasaki",
+   "key": "food1",
+   "verdict": "BAD",
+   "file": "img/nagasaki-food1-nagasaki-champon.webp",
+   "title": "Nagasaki Lantern Festival",
+   "source": "find47"
+  },
+  {
+   "slug": "kumamoto",
+   "key": "hero",
+   "verdict": "BAD",
+   "file": "img/kumamoto-hero-kumamoto-castle.webp",
+   "title": "Mt. Aso",
+   "source": "find47"
+  },
+  {
+   "slug": "kumamoto",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/kumamoto-tile1-kumamoto-castle.webp",
+   "title": "Kumamoto　Kusasennri at Aso",
+   "source": "find47"
+  },
+  {
+   "slug": "kumamoto",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/kumamoto-tile4-kurokawa-onsen.webp",
+   "title": "David Stanley at Sanga Ryokan",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "kumamoto",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/kumamoto-see1-kumamoto-castle.webp",
+   "title": "Kikuchi Valley",
+   "source": "find47"
+  },
+  {
+   "slug": "kumamoto",
+   "key": "food3",
+   "verdict": "BAD",
+   "file": "img/kumamoto-food3-akaushi.webp",
+   "title": "Mount Akaushi and Kurobe Dam from Mount Shiroumayari.jpg",
+   "source": "wikimedia"
+  },
+  {
+   "slug": "oita",
+   "key": "tile3",
+   "verdict": "BAD",
+   "file": "img/oita-tile3-yufuin-onsen-town.webp",
+   "title": "Go to Yufuin",
+   "source": "find47"
+  },
+  {
+   "slug": "miyazaki",
+   "key": "tile4",
+   "verdict": "BAD",
+   "file": "img/miyazaki-tile4-takachiho-yokagura.webp",
+   "title": "Mt.Takachiho from Mt.Karakuni",
+   "source": "find47"
+  },
+  {
+   "slug": "okinawa",
+   "key": "tile1",
+   "verdict": "BAD",
+   "file": "img/okinawa-tile1-shuri-castle.webp",
+   "title": "Okinawa Japan",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "okinawa",
+   "key": "tile2",
+   "verdict": "BAD",
+   "file": "img/okinawa-tile2-okinawa-churaumi-aquarium.webp",
+   "title": "Silvery Full Moon of Ryukyu",
+   "source": "find47"
+  },
+  {
+   "slug": "okinawa",
+   "key": "see1",
+   "verdict": "BAD",
+   "file": "img/okinawa-see1-shuri-castle.webp",
+   "title": "Okinawa Japan",
+   "source": "flickr/openverse"
+  },
+  {
+   "slug": "okinawa",
+   "key": "see2",
+   "verdict": "BAD",
+   "file": "img/okinawa-see2-okinawa-churaumi-aquarium.webp",
+   "title": "Okinawa　Iriomotejima　 Mangrove forest",
+   "source": "find47"
+  },
+  {
+   "slug": "okinawa",
+   "key": "see3",
+   "verdict": "BAD",
+   "file": "img/okinawa-see3-sefa-utaki.webp",
+   "title": "Oriental migratory locust",
+   "source": "flickr/openverse"
+  }
+ ],
+ "unsure": [
+  {
+   "slug": "toyama",
+   "key": "see1",
+   "verdict": "UNSURE",
+   "file": "img/toyama-see1-kurobe-dam.webp",
+   "title": "Toyama  Mikurigaike in Murodoudaira"
+  },
+  {
+   "slug": "toyama",
+   "key": "see3",
+   "verdict": "UNSURE",
+   "file": "img/toyama-see3-tateyama-kurobe-alpine-route-snow-corrid.webp",
+   "title": "Kurobedaira in Autumn"
+  },
+  {
+   "slug": "nagano",
+   "key": "hero",
+   "verdict": "UNSURE",
+   "file": "img/nagano-hero-zenk-ji-temple.webp",
+   "title": "IMG_1744"
+  },
+  {
+   "slug": "gifu",
+   "key": "see3",
+   "verdict": "UNSURE",
+   "file": "img/gifu-see3-gujo-hachiman-castle-town.webp",
+   "title": "Gujo-Hachiman Bourg Plaza.jpg"
+  },
+  {
+   "slug": "shizuoka",
+   "key": "tile5",
+   "verdict": "UNSURE",
+   "file": "img/shizuoka-tile5-ikadaba-wasabi-fields.webp",
+   "title": "Sea and Silver Grass in Izu Inatori Highland"
+  },
+  {
+   "slug": "aichi",
+   "key": "hero",
+   "verdict": "UNSURE",
+   "reason": "old black-and-white photo of Nagoya Castle (my own note)",
+   "file": "img/aichi-hero-nagoya-castle.webp",
+   "title": "Castle of Nagoya"
+  },
+  {
+   "slug": "nara",
+   "key": "food3",
+   "verdict": "UNSURE",
+   "file": "img/nara-food3-narazuke.webp",
+   "title": "Narazuke (36502180363).jpg"
+  },
+  {
+   "slug": "hiroshima",
+   "key": "tile4",
+   "verdict": "UNSURE",
+   "file": "img/hiroshima-tile4-tomonoura-old-port-town.webp",
+   "title": "Onomichi U2"
+  },
+  {
+   "slug": "ibaraki",
+   "key": "tile3",
+   "verdict": "UNSURE",
+   "file": "img/ibaraki-tile3-hitachi-seaside-park.webp",
+   "title": "Hitachi Seaside Park in Summer"
+  },
+  {
+   "slug": "tokyo",
+   "key": "see3",
+   "verdict": "UNSURE",
+   "file": "img/tokyo-see3-yanaka.webp",
+   "title": "brown cat"
+  },
+  {
+   "slug": "tokyo",
+   "key": "food1",
+   "verdict": "UNSURE",
+   "file": "img/tokyo-food1-monjayaki.webp",
+   "title": "MONJA! (Tsukishima, Tokyo, Japan)"
+  },
+  {
+   "slug": "kagawa",
+   "key": "tile3",
+   "verdict": "UNSURE",
+   "file": "img/kagawa-tile3-kotohira-gu.webp",
+   "title": "Kotohira-gu Shrine"
+  },
+  {
+   "slug": "fukuoka",
+   "key": "tile1",
+   "verdict": "UNSURE",
+   "file": "img/fukuoka-tile1-dazaifu-tenmangu-shrine.webp",
+   "title": "Dazaifu in the Rainy Season"
+  },
+  {
+   "slug": "fukuoka",
+   "key": "food2",
+   "verdict": "UNSURE",
+   "file": "img/fukuoka-food2-motsunabe.webp",
+   "title": "もつ鍋 / Motsunabe"
+  },
+  {
+   "slug": "nagasaki",
+   "key": "food3",
+   "verdict": "UNSURE",
+   "file": "img/nagasaki-food3-castella.webp",
+   "title": "Hokkaido Milk Castella."
+  },
+  {
+   "slug": "okinawa",
+   "key": "tile4",
+   "verdict": "UNSURE",
+   "file": "img/okinawa-tile4-yachimun-no-sato-pottery-village.webp",
+   "title": "Places found on Yachimun Street in Okinawa"
+  },
+  {
+   "slug": "kagoshima",
+   "key": "tile1",
+   "verdict": "UNSURE",
+   "reason": "lily flower close-up for Sengan-en (my own note)",
+   "file": "img/kagoshima-tile1-sengan-en-garden.webp",
+   "title": "美麗百合(鹿子百合) Lilium speciosum [日本鹿兒島仙巖園 Kagoshima Sengan-en Garden, Japan]"
+  }
+ ]
+}

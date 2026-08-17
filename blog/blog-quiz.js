@@ -169,7 +169,7 @@
     ['viator.com',       'medium',     AFF.viator_pid ? 'link' : ''],
     ['amazon.com',       'tag',        AFF.amazon_tag],
   ];
-  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url, byfood: AFF.byfood_url, buyee: AFF.buyee_url, zenmarket: AFF.zenmarket_url, remambo: AFF.remambo_url, neokyo: AFF.neokyo_url, whiterabbit: AFF.whiterabbit_url, twelvego: AFF.twelvego_url, wise: AFF.wise_url, safetywing: AFF.safetywing_url };
+  var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, yesim: AFF.yesim_url, ninjawifi: AFF.ninjawifi_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url, byfood: AFF.byfood_url, buyee: AFF.buyee_url, zenmarket: AFF.zenmarket_url, remambo: AFF.remambo_url, neokyo: AFF.neokyo_url, whiterabbit: AFF.whiterabbit_url, twelvego: AFF.twelvego_url, wise: AFF.wise_url, safetywing: AFF.safetywing_url };
 
   function wireAffs() {
     // Rewrite every affiliate anchor on the page — including ones outside .aff boxes,
