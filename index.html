@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://www.nihongo-hub.com/">
 <script type="application/ld+json">
 {
@@ -54,355 +56,168 @@
 <meta property="og:description" content="Learn Japanese with AI-powered quizzes and explore all 47 prefectures of Japan. Free level test, JLPT N5–N1 practice, travel guides, and culture.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.nihongo-hub.com/og-default.png">
-
-<meta charset="UTF-8">
 <meta name="google-site-verification" content="EhMnepwryL5Qwtq2GdZR7rfE4eXVBdjOzAKvZqcakXg" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NihongoHub — Master Japanese, Discover Japan</title>
 <meta name="description" content="Learn Japanese with AI-powered quizzes and explore all 47 prefectures of Japan. Free level test, JLPT N5–N1 practice, travel guides, and culture — start free.">
 <meta name="twitter:description" content="Learn Japanese with AI quizzes and explore Japan's 47 prefectures. Free level test, JLPT N5–N1 practice, and travel guides.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700;800&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+TC:wght@400;700&family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Karla:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet">
 <style>
+/* Direction A (2026-08-17): editorial, photo-first. Same tokens as the blog v2 prefecture pages. */
+:root{--paper:#f5efe3;--paper-2:#ede4d2;--ink:#1c1a16;--ink-2:#4a453c;--muted:#7a7263;--line:#d9cfb9;--seal:#c1301c;--accent:#1f3a5f;--card:#fffaf0;--r:14px;--max:1120px;
+  --sh:0 1px 0 rgba(0,0,0,.08),0 2px 6px rgba(28,26,22,.18),0 8px 20px rgba(28,26,22,.14);
+  --sh-seal:0 1px 0 rgba(0,0,0,.08),0 2px 6px rgba(193,48,28,.25),0 8px 20px rgba(193,48,28,.15)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ink:#18120a;--paper:#f4efe5;--red:#bf3325;--gold:#c8911f;
-  --soft:#e6ddd0;--muted:#796c5c;--white:#fdfaf3;--green:#2a7a4b;
-}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font:16px/1.6 Karla,system-ui,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,'Shippori Mincho B1',Georgia,serif;letter-spacing:-.01em;line-height:1.15;font-weight:600}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit}
+.w{max-width:var(--max);margin:0 auto;padding:0 20px}
+.jp{font-family:'Shippori Mincho B1',serif}
+.kicker{font:700 12px/1 Karla,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--seal)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
-/* ── LANG SWITCHER ── */
-.lang-bar{
-  position:fixed;top:0;left:0;right:0;z-index:300;
-  background:#0f0a04;
-  display:flex;justify-content:flex-end;align-items:center;
-  padding:0 60px;height:36px;
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
-.lang-btn{
-  background:none;border:none;color:rgba(255,255,255,0.45);
-  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
-  cursor:pointer;padding:6px 12px;letter-spacing:.4px;
-  transition:color .2s;display:flex;align-items:center;gap:5px;
-  white-space:nowrap;flex:0 0 auto;
-}
-.lang-btn:hover{color:rgba(255,255,255,.85)}
-.lang-btn.active{color:var(--gold);border-bottom:2px solid var(--gold)}
-.lang-divider{color:rgba(255,255,255,.15);font-size:11px;padding:0 2px}
+/* language bar (page-owned; site-chrome skips its own because setLang exists) */
+.lang-bar{background:var(--paper-2);border-bottom:1px solid var(--line);display:flex;justify-content:flex-end;align-items:center;gap:2px;height:34px;padding:0 max(14px,calc((100% - var(--max))/2 + 20px));overflow-x:auto;scrollbar-width:none}
+.lang-bar::-webkit-scrollbar{display:none}
+.lang-btn{background:none;border:0;color:var(--ink-2);font:500 12px Karla,sans-serif;padding:8px 10px;cursor:pointer;white-space:nowrap}
+.lang-btn:hover{color:var(--ink)}.lang-btn.active{color:var(--seal);font-weight:700}
+.lang-divider{color:var(--line);font-size:11px}
 
-/* ── NAV ── */
-.nav{
-  position:fixed;top:36px;left:0;right:0;z-index:200;
-  padding:16px 60px;
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(24,18,10,.97);backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-.logo{font-family:'Shippori Mincho',serif;font-size:21px;color:var(--white);letter-spacing:2px}
-.logo span{color:var(--red)}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.3px;transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-/* Echo (Shadowing) 連携リンクは金色アクセント + 🎙 アイコンで他と差別化 */
-.nav-shadowing{color:var(--gold) !important;border:1px solid rgba(200,145,31,.32);padding:5px 12px;border-radius:4px;transition:all .2s !important}
-.nav-shadowing:hover{background:rgba(200,145,31,.13);color:var(--gold) !important;border-color:var(--gold)}
-.btn-nav{background:var(--red);color:#fff;border:none;padding:9px 20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s}
-.btn-nav:hover{background:#a22b1e}
+/* nav (grouped links injected by lib/site-chrome.js into .nav-links; chip + hamburger land before .btn-nav) */
+.nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px max(20px,calc((100% - var(--max))/2 + 20px))}
+.logo{font:800 22px 'Shippori Mincho B1',serif;color:var(--ink);white-space:nowrap}.logo span{color:var(--seal)}
+.nav-links{display:flex;align-items:center;justify-content:center;flex:1;min-width:0}
+.btn-nav{background:var(--seal);color:#fff;border:0;padding:9px 16px;border-radius:9px;font:700 14px Karla,sans-serif;cursor:pointer;white-space:nowrap;box-shadow:var(--sh-seal)}
+.btn-nav:hover{filter:brightness(.94)}
+.nav .nh-navbtn,.nav .nh-navtop{color:var(--ink-2);font:500 14px Karla,sans-serif}
+.nav .nh-navbtn:hover,.nav .nh-navgroup.open>.nh-navbtn,.nav .nh-navgroup:focus-within>.nh-navbtn,.nav .nh-navtop:hover{color:var(--seal)}
+.nav .nh-navmenu{background:var(--card);border-color:var(--line);box-shadow:0 10px 28px rgba(28,26,22,.14)}
+.nav .nh-navitem{color:var(--ink)!important}.nav .nh-navitem:hover{background:var(--paper-2)}
+.nav .nh-chip{border-color:var(--accent);color:var(--accent);background:transparent;font-family:Karla,sans-serif}
+.nav .nh-chip[data-state="paid"]{background:var(--seal);border-color:var(--seal);color:#fff}
+nav.nav .nh-ham{color:var(--ink)!important}
+body nav.nav .nav-links{background:var(--card);border-bottom-color:var(--seal)}
+/* 769–860px: site-chrome renders the grouped nav expanded (its own ≤860 rule) while responsive.css only collapses at ≤768 — collapse here too */
+@media(max-width:860px){nav.nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:14px 20px 18px;border-bottom:2px solid var(--seal)}nav.nav .nav-links.nh-open{display:flex}nav.nav .nh-ham{display:inline-block}}
 
-/* ── HERO ── */
-.hero{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;padding-top:72px}/* svh: mobile URL bar makes 100vh taller than the visible screen */
-.hero-left{
-  background:var(--ink);
-  display:flex;flex-direction:column;justify-content:center;
-  padding:80px 60px;position:relative;z-index:2;
-}
-.hero-left::after{
-  content:'';position:absolute;right:-42px;top:0;bottom:0;width:84px;
-  background:var(--ink);clip-path:polygon(0 0,0 100%,100% 100%);z-index:3;
-}
-.kanji-bg{
-  position:absolute;font-family:'Noto Sans JP',serif;
-  font-size:280px;font-weight:700;color:rgba(255,255,255,.025);
-  top:50%;left:50%;transform:translate(-50%,-50%);
-  pointer-events:none;user-select:none;line-height:1;
-}
-.hero-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600}
-.hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(36px,4.4vw,62px);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:14px}
-.hero-title em{font-style:normal;color:var(--red)}
-.hero-promise{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(200,145,31,.13);border:1px solid rgba(200,145,31,.32);
-  padding:9px 16px;margin-bottom:22px;width:fit-content;
-}
-.hero-promise span{font-size:13px;color:var(--gold);font-weight:600}
-.hero-sub{font-size:15px;color:rgba(255,255,255,.55);line-height:1.75;max-width:400px;margin-bottom:38px}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-.btn-primary{background:var(--red);color:#fff;border:none;padding:14px 30px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}
-.btn-primary:hover{background:#a22b1e;transform:translateY(-2px)}
-.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.25);padding:14px 30px;font-family:'DM Sans',sans-serif;font-size:14px;cursor:pointer;transition:all .2s}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-stats{display:flex;gap:36px;margin-top:44px;padding-top:32px;border-top:1px solid rgba(255,255,255,.09)}
-.stat-num{font-family:'Shippori Mincho',serif;font-size:28px;font-weight:700;color:var(--white)}
-.stat-label{font-size:11px;color:rgba(255,255,255,.38);margin-top:3px;letter-spacing:.3px}
+/* hero: full-bleed CC photo + stamp */
+.ph{position:relative;margin-top:16px;border-radius:20px;overflow:hidden;min-height:520px;display:grid;align-items:end;color:#fff;background:var(--ink)}
+.ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,26,22,.08) 0%,rgba(28,26,22,.42) 38%,rgba(28,26,22,.84) 100%)}
+.ph-in{position:relative;z-index:1;padding:36px 32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.ph .kicker{color:var(--paper-2);text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.ph h1{font-size:clamp(34px,5vw,60px);max-width:16ch;margin-top:10px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.ph p{max-width:52ch;color:var(--paper-2);margin:12px 0 18px;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.stamp{width:88px;height:88px;border:3px solid #fff;border-radius:50%;display:grid;place-items:center;font:800 30px 'Shippori Mincho B1',serif;background:rgba(193,48,28,.85);transform:rotate(-8deg)}
+.cred{position:absolute;right:14px;top:12px;z-index:1;font-size:11px;color:#fff;background:rgba(28,26,22,.45);padding:3px 8px;border-radius:6px}
+.cred a{text-decoration:underline}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn-p,.btn-s{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700}
+.btn-p{background:#fff;color:var(--ink);box-shadow:var(--sh)}
+.btn-s{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-s:hover{background:rgba(255,255,255,.12)}
 
-/* Hero right */
-.hero-right{background:var(--white);display:flex;align-items:center;justify-content:center;padding:80px 52px;position:relative;overflow:hidden}
-.hero-cards{display:flex;flex-direction:column;gap:14px;width:100%;max-width:360px}
+/* prefecture strip */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:150px;gap:10px;overflow-x:auto;padding:14px 0 6px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.strip a{scroll-snap-align:start;position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:var(--paper-2)}
+.strip img{width:100%;height:100%;object-fit:cover}
+.strip b{position:absolute;left:10px;bottom:9px;color:#fff;font:600 15px Fraunces,serif;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.strip a.more{background:var(--ink);color:var(--paper);display:grid;place-items:center;text-align:center;padding:12px}
+.strip a.more b{position:static;text-shadow:none;font-size:17px}
+.credits{font-size:11.5px;color:var(--ink-2);line-height:1.5}.credits a{text-decoration:underline dotted}
 
-.streak-widget{background:var(--ink);padding:22px 26px;display:flex;align-items:center;gap:18px;animation:floatA 5s ease-in-out infinite}
-@keyframes floatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.streak-flame{font-size:36px;line-height:1}
-.streak-info{flex:1}
-.streak-label{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:3px}
-.streak-num{font-family:'Shippori Mincho',serif;font-size:30px;font-weight:800;color:var(--white);line-height:1}
-.streak-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:3px}
-.streak-days{display:flex;gap:5px}
-.streak-day{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:rgba(255,255,255,.3)}
-.streak-day.done{background:var(--gold);color:var(--ink)}
-.streak-day.today{background:var(--red);color:#fff}
+/* sections */
+.sec{padding:52px 0 8px}.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px}
+.sec h2{font-size:32px}.sec-h a{color:var(--accent);font-weight:700;white-space:nowrap}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(28,26,22,.1)}
+.card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.card .b{padding:14px 16px 16px;flex:1}.card h3{font-size:19px}.card p{margin:6px 0 0;color:var(--ink-2);font-size:14.5px}
+.card .cr{font-size:11px;color:var(--muted);margin-top:10px}.card .cr a{text-decoration:underline dotted}
+.tag{display:inline-block;font:700 11px/1 Karla,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--seal);margin-bottom:6px}
 
-.quiz-card{background:var(--paper);border:2px solid var(--soft);padding:22px 26px;animation:floatB 6s ease-in-out infinite;animation-delay:-2s}
-@keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.quiz-level-tag{font-size:10px;letter-spacing:3px;color:var(--red);text-transform:uppercase;font-weight:700;margin-bottom:10px}
-.quiz-q{font-family:'Noto Sans JP',sans-serif;font-size:24px;font-weight:700;margin-bottom:4px;color:var(--ink)}
-.quiz-r{font-size:12px;color:var(--muted);margin-bottom:16px}
-.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.quiz-opt{background:var(--white);border:1.5px solid var(--soft);padding:9px 12px;font-size:13px;cursor:pointer;transition:all .18s;font-family:'Noto Sans JP',sans-serif;text-align:left;color:var(--ink)}
-.quiz-opt:hover{background:var(--red);border-color:var(--red);color:#fff}
-.quiz-opt.correct{background:var(--green);border-color:var(--green);color:#fff}
-.quiz-opt.wrong{background:var(--red);border-color:var(--red);color:#fff;opacity:.7}
+/* two lanes: learn / letter */
+.lanes{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:52px}
+.lane{border-radius:var(--r);padding:26px 26px 24px}
+.lane h2{font-size:28px;margin-top:8px}
+.learn{background:var(--ink);color:var(--paper)}.learn h2{color:#fff}.learn .kicker{color:var(--paper-2)}.learn>p{color:var(--paper-2);margin-top:8px}
+.quiz{margin-top:14px;background:rgba(255,255,255,.07);border-radius:12px;padding:16px;font-size:15px}
+.quiz-tag{font:700 10px/1 Karla,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-2);margin-bottom:8px}
+.quiz-q{display:block;font-size:21px;line-height:1.3}
+.quiz-r{font-size:13px;color:var(--paper-2);margin:2px 0 10px}
+.quiz-opt{background:transparent;border:1px solid rgba(255,255,255,.35);color:var(--paper);border-radius:8px;padding:7px 11px;margin:4px 6px 0 0;font:15px 'Shippori Mincho B1',serif;cursor:pointer}
+.quiz-opt:hover{border-color:#fff}
+.quiz-opt.correct{background:var(--accent);border-color:var(--accent);color:#fff}
+.quiz-opt.wrong{background:var(--seal);border-color:var(--seal);color:#fff;opacity:.85}
+.learn-cta{display:inline-block;margin-top:16px;background:#fff;color:var(--ink);padding:12px 18px;border-radius:10px;font-weight:700;box-shadow:var(--sh)}
+.learn .note{font-size:13px;color:var(--paper-2);margin-top:12px}.learn .note a{text-decoration:underline}
+.learn .legal{font-size:11px;color:var(--line);margin-top:14px;line-height:1.5}
+.letter{background:var(--card);border:1px solid var(--line)}
+.letter>p{color:var(--ink-2);margin-top:8px}
+.nl-form{display:flex;gap:8px;margin-top:14px}
+.nl-form input{flex:1;min-width:0;padding:12px;border:1.5px solid var(--line);border-radius:9px;font:16px Karla,sans-serif;background:#fff;color:var(--ink)}
+.nl-form input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.nl-form button{background:var(--seal);color:#fff;border:0;border-radius:9px;padding:12px 16px;font:700 15px Karla,sans-serif;cursor:pointer;white-space:nowrap;box-shadow:var(--sh-seal)}
+.newsletter-note{font-size:12.5px;color:var(--muted);margin-top:10px}
+.nl-thanks{margin-top:14px;background:var(--paper);border:1.5px solid var(--accent);border-radius:10px;padding:14px 16px}
+.nl-thanks-head{font-weight:700;font-size:14px}
+.nl-reads{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.nl-read{display:block;font-size:13.5px;border-left:3px solid var(--seal);padding:6px 10px;background:var(--card);border-radius:0 8px 8px 0}
 
-.progress-widget{background:var(--ink);padding:18px 22px;animation:floatA 5s ease-in-out infinite;animation-delay:-1s}
-.pw-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.pw-title{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1px;text-transform:uppercase}
-.pw-level{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--gold);font-weight:700}
-.pw-bar-wrap{background:rgba(255,255,255,.1);height:5px;width:100%;margin-bottom:7px}
-.pw-bar{background:linear-gradient(90deg,var(--red),var(--gold));height:5px;width:68%}
-.pw-meta{display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.3)}
+/* move & buy */
+.mb-sec{margin-top:40px}
+.mb-sec h2{font-size:22px;margin-bottom:12px}
+.mb{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mb a{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.mb a:hover{border-color:var(--ink-2)}
+.mb h3{font-size:18px}.mb p{font-size:13.5px;color:var(--ink-2)}.mb .go{color:var(--accent);font-weight:700;font-size:13.5px;margin-top:4px}
 
-/* ── SHARED ── */
-section{padding:90px 60px}
-.section-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:12px;font-weight:600}
-.section-title{font-family:'Shippori Mincho',serif;font-size:clamp(28px,3.6vw,48px);font-weight:700;line-height:1.14;margin-bottom:16px}
-.section-sub{font-size:15.5px;color:var(--muted);line-height:1.72;max-width:520px}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+/* pricing (compact; DOM ids/classes/data-plan-cta kept for the auth + Stripe JS) */
+.pricing{margin-top:52px;border-top:1px solid var(--line);padding-top:28px}
+.pricing h2{font-size:22px}
+.pricing .lead{color:var(--ink-2);font-size:15px;margin-top:6px;max-width:64ch}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px 16px;position:relative;display:flex;flex-direction:column}
+.price-card.featured{border-color:var(--seal);box-shadow:0 8px 24px rgba(28,26,22,.08)}
+.price-badge{position:absolute;top:-10px;left:14px;background:var(--seal);color:#fff;font:700 10px/1 Karla,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:6px}
+.price-badge.alt{background:var(--accent)}
+.price-plan{font:700 11px/1 Karla,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.price-amount{font:600 30px/1 Fraunces,serif;margin-top:8px}
+.price-period{font-size:12.5px;color:var(--muted);margin:2px 0 10px}
+.price-features{list-style:none;flex:1;font-size:13.5px;color:var(--ink-2)}
+.price-features li{padding:4px 0 4px 16px;position:relative}
+.price-features li::before{content:"✓";position:absolute;left:0;color:var(--seal);font-weight:700}
+.btn-plan{width:100%;margin-top:12px;padding:11px;border-radius:9px;font:700 14px Karla,sans-serif;cursor:pointer;border:1.5px solid var(--line);background:transparent;color:var(--ink)}
+.btn-plan-ghost:hover{border-color:var(--ink)}
+.btn-plan-solid{background:var(--seal);border-color:var(--seal);color:#fff;box-shadow:var(--sh-seal)}
+.price-save{display:inline-block;background:var(--accent);color:#fff;font:700 9px/1 Karla,sans-serif;letter-spacing:.1em;padding:3px 6px;border-radius:4px;margin-left:4px;vertical-align:middle}
+.lifetime-note{font-size:11.5px;color:var(--muted);margin-top:8px;text-align:center}
+#gift-block{margin-top:20px;padding:22px 20px;background:var(--card);border:1.5px solid var(--accent);border-radius:var(--r);text-align:center}
+#gift-block h3{font-size:24px;margin:6px 0 8px}
+#gift-block>p{color:var(--ink-2);font-size:14.5px;max-width:56ch;margin:0 auto}
+#sponsor-counter{font-weight:700;color:var(--accent);margin:12px 0}
+#gift-cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;box-shadow:var(--sh)}
+#gift-block .small{font-size:12px;color:var(--muted);margin-top:12px}
 
-/* ── ROADMAP ── */
-.roadmap{background:var(--ink);color:var(--white)}
-.roadmap .section-title{color:var(--white)}
-.roadmap .section-sub{color:rgba(255,255,255,.5)}
-.roadmap-promise{display:flex;gap:0;margin:44px 0 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-.roadmap-step{flex:1;padding:32px 28px;border-right:1px solid rgba(255,255,255,.07);position:relative;transition:background .25s}
-.roadmap-step:last-child{border-right:none}
-.roadmap-step:hover{background:rgba(255,255,255,.04)}
-.rs-month{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
-.rs-goal{font-family:'Shippori Mincho',serif;font-size:19px;color:var(--white);font-weight:700;margin-bottom:8px}
-.rs-desc{font-size:13px;color:rgba(255,255,255,.43);line-height:1.65}
-.rs-badge{display:inline-flex;align-items:center;gap:5px;background:var(--red);color:#fff;font-size:10px;letter-spacing:1.5px;padding:4px 10px;margin-top:14px;font-weight:700;text-transform:uppercase}
-.rs-num{position:absolute;top:20px;right:24px;font-family:'Shippori Mincho',serif;font-size:64px;font-weight:800;color:rgba(255,255,255,.03);line-height:1}
+/* footer (page-owned; site-chrome only appends where .footer-social is missing) */
+footer{margin-top:56px;background:var(--ink);color:var(--paper-2);padding:48px 20px 40px}
+.foot{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-logo{font:800 22px 'Shippori Mincho B1',serif;color:#fff;display:block;margin-bottom:10px}.footer-logo span{color:var(--seal)}
+.footer-desc{font-size:13.5px;line-height:1.7;color:var(--line)}
+.footer-social{margin-top:14px;display:flex;flex-wrap:wrap;gap:14px}.footer-social a{font-size:12.5px;color:var(--line)}
+.footer-heading{font:700 11px/1 Karla,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-2);margin-bottom:14px}
+.footer-links{list-style:none}.footer-links li{margin-bottom:8px}.footer-links a{font-size:13.5px;color:var(--line)}
+.footer-links a:hover,.footer-social a:hover,.footer-bottom a:hover{color:#fff}
+.footer-bottom{background:var(--ink);border-top:1px solid rgba(255,255,255,.1);padding:14px 20px;font-size:11.5px;color:var(--line)}
+.footer-bottom>div{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom a{color:var(--paper-2);text-decoration:underline}
 
-/* ── FEATURES ── */
-.features{background:var(--white)}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:54px;background:var(--soft)}
-.feature-card{background:var(--white);padding:40px 32px;position:relative;overflow:hidden;transition:background .28s}
-.feature-card:hover{background:var(--ink)}
-.feature-card:hover .feature-title,.feature-card:hover .feature-desc{color:var(--white)}
-.feature-card:hover .feature-icon{color:var(--red)}
-.feature-icon{font-size:32px;margin-bottom:18px;display:block;transition:color .28s}
-.feature-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;margin-bottom:9px;transition:color .28s}
-.feature-desc{font-size:13px;line-height:1.7;color:var(--muted);transition:color .28s}
-.feature-new{position:absolute;top:18px;right:18px;background:var(--gold);color:var(--ink);font-size:9px;letter-spacing:2px;padding:3px 8px;font-weight:700;text-transform:uppercase}
-.feature-num{position:absolute;top:18px;right:18px;font-family:'Shippori Mincho',serif;font-size:54px;font-weight:800;color:rgba(0,0,0,.04);line-height:1}
-
-/* ── JLPT ── */
-.jlpt-section{background:var(--ink);color:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.jlpt-levels{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:32px}
-.level-pill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:16px 8px;text-align:center;cursor:pointer;transition:all .2s}
-.level-pill:hover,.level-pill.active{background:var(--red);border-color:var(--red)}
-.level-name{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;display:block;color:var(--white)}
-.level-desc{font-size:10px;color:rgba(255,255,255,.43);margin-top:4px;display:block}
-.level-pill:hover .level-desc,.level-pill.active .level-desc{color:rgba(255,255,255,.85)}
-.demo-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:32px}
-.demo-q{font-family:'Noto Sans JP',sans-serif;font-size:28px;margin-bottom:5px}
-.demo-reading{font-size:13px;color:rgba(255,255,255,.37);margin-bottom:24px}
-.demo-opts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:18px}
-.demo-opt{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);padding:12px 16px;font-size:14px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;color:var(--white);text-align:left}
-.demo-opt:hover{background:var(--red);border-color:var(--red)}
-.demo-opt.correct-ans{background:var(--green)!important;border-color:var(--green)!important}
-.demo-opt.wrong-ans{background:var(--red)!important;border-color:var(--red)!important;opacity:.65}
-.demo-result{font-size:13px;color:rgba(255,255,255,.43);min-height:18px}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* ── DASHBOARD ── */
-.dashboard{background:var(--paper)}
-.dash-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;margin-top:50px}
-.dash-main{background:var(--ink);padding:36px;color:var(--white)}
-.dash-title{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;margin-bottom:24px}
-.dash-skills{display:flex;flex-direction:column;gap:16px}
-.skill-row{display:flex;flex-direction:column;gap:7px}
-.skill-header{display:flex;justify-content:space-between;align-items:center}
-.skill-name{font-size:13px;color:rgba(255,255,255,.6)}
-.skill-pct{font-size:13px;color:var(--gold);font-weight:600}
-.skill-bar{background:rgba(255,255,255,.08);height:4px}
-.skill-fill{height:4px;background:linear-gradient(90deg,var(--red),var(--gold));transition:width 1.2s ease;width:0}
-.dash-side{display:flex;flex-direction:column;gap:14px}
-.dash-stat-card{background:var(--white);padding:24px;border:1px solid var(--soft)}
-.dsc-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.dsc-value{font-family:'Shippori Mincho',serif;font-size:36px;font-weight:800;line-height:1;color:var(--ink)}
-.dsc-sub{font-size:12px;color:var(--muted);margin-top:5px}
-.streak-track{display:flex;gap:5px;margin-top:12px}
-.st-dot{width:20px;height:20px;border-radius:50%;background:var(--soft)}
-.st-dot.lit{background:var(--gold)}
-.st-dot.fire{background:var(--red)}
-.jlpt-pred{background:var(--ink);padding:22px;color:var(--white)}
-.jp-tag{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.jp-level{font-family:'Shippori Mincho',serif;font-size:40px;font-weight:800;color:var(--white);line-height:1}
-.jp-sub{font-size:12px;color:rgba(255,255,255,.4);margin-top:5px}
-.jp-bar-wrap{background:rgba(255,255,255,.1);height:4px;margin-top:12px}
-.jp-bar-fill{background:var(--red);height:4px;width:68%}
-
-/* ── ANIME ── */
-.anime{background:var(--white)}
-.anime-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:50px}
-.anime-card{background:var(--ink);overflow:hidden;cursor:pointer;transition:transform .3s}
-.anime-card:hover{transform:translateY(-5px)}
-.anime-img{height:130px;display:flex;align-items:center;justify-content:center;font-size:56px;background:rgba(255,255,255,.04)}
-.anime-body{padding:18px}
-.anime-tag{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:7px;display:block}
-.anime-title{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--white);font-weight:700;margin-bottom:7px}
-.anime-phrase{font-family:'Noto Sans JP',sans-serif;font-size:15px;color:var(--gold);margin-bottom:3px}
-.anime-eng{font-size:12px;color:rgba(255,255,255,.4)}
-
-/* ── CULTURE ── */
-.culture{background:var(--paper)}
-.culture-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
-.culture-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4;background:var(--ink)}
-.culture-card-bg{position:absolute;inset:0;font-size:110px;display:flex;align-items:center;justify-content:center;opacity:.14;transition:transform .4s,opacity .4s}
-.culture-card:hover .culture-card-bg{transform:scale(1.1);opacity:.24}
-.culture-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px 20px;background:linear-gradient(to top,rgba(24,18,10,.95),transparent);transform:translateY(14px);transition:transform .28s}
-.culture-card:hover .culture-card-content{transform:translateY(0)}
-.culture-card-title{font-family:'Shippori Mincho',serif;font-size:17px;color:var(--white);font-weight:700;margin-bottom:5px}
-.culture-card-sub{font-size:12px;color:rgba(255,255,255,.52);line-height:1.5}
-.culture-ctag{position:absolute;top:16px;left:16px;background:var(--red);color:#fff;font-size:10px;letter-spacing:2px;padding:3px 9px;text-transform:uppercase;font-weight:600}
-
-/* ── TRAVEL ── */
-.travel{background:var(--soft)}
-.travel-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:50px}
-.travel-card{background:var(--white);overflow:hidden;transition:transform .28s;cursor:pointer}
-.travel-card:hover{transform:translateY(-4px)}
-.travel-img{height:180px;background:var(--ink);display:flex;align-items:center;justify-content:center;font-size:64px;position:relative}
-.travel-card:first-child .travel-img{height:260px}
-.travel-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(191,51,37,.26),transparent)}
-.travel-body{padding:24px}
-.travel-dest{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;margin-bottom:6px}
-.travel-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:16px}
-.travel-cta{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--red);text-decoration:none;transition:gap .18s}
-.travel-cta:hover{gap:10px}
-.affiliate-badge{background:var(--gold);color:var(--ink);font-size:9px;letter-spacing:1px;padding:2px 7px;margin-left:5px;vertical-align:middle;font-weight:700;text-transform:uppercase}
-
-/* ── PRICING ── */
-.pricing{background:var(--ink)}
-.pricing .section-title{color:var(--white)}
-.pricing .section-sub{color:rgba(255,255,255,.44)}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:50px;background:rgba(255,255,255,.06);max-width:920px;margin-left:auto;margin-right:auto}
-.price-card{background:var(--ink);padding:40px 28px;position:relative;border:1px solid rgba(255,255,255,.06)}
-.price-card.featured{background:var(--white);border-color:var(--white)}
-.price-badge{position:absolute;top:-1px;left:24px;background:var(--red);color:#fff;font-size:10px;letter-spacing:2px;padding:4px 11px;text-transform:uppercase;font-weight:700}
-.price-plan{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:16px}
-.price-card.featured .price-plan{color:var(--muted)}
-.price-amount{font-family:'Shippori Mincho',serif;font-size:46px;font-weight:800;line-height:1;margin-bottom:5px;color:var(--white)}
-.price-card.featured .price-amount{color:var(--ink)}
-.price-period{font-size:12px;color:rgba(255,255,255,.36);margin-bottom:26px}
-.price-card.featured .price-period{color:var(--muted)}
-.price-features{list-style:none;margin-bottom:30px}
-.price-features li{font-size:13px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:flex-start;gap:8px;line-height:1.45;color:rgba(255,255,255,.68)}
-.price-card.featured .price-features li{border-color:var(--soft);color:var(--ink)}
-.price-features li::before{content:'✓';color:var(--gold);font-weight:800;flex-shrink:0}
-.btn-plan{width:100%;padding:14px;font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.3px}
-.btn-plan-ghost{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.68)}
-.btn-plan-ghost:hover{border-color:rgba(255,255,255,.5);color:#fff}
-.btn-plan-solid{background:var(--red);border:none;color:#fff}
-.btn-plan-solid:hover{background:#a22b1e}
-.price-save{display:inline-block;background:var(--green);color:#fff;font-size:9px;letter-spacing:1.5px;padding:2px 8px;margin-left:6px;font-weight:700}
-.lifetime-note{font-size:11px;color:rgba(255,255,255,.38);margin-top:9px;text-align:center}
-.price-card.featured .lifetime-note{color:var(--muted)}
-
-/* ── NEWSLETTER ── */
-.newsletter{background:var(--paper);text-align:center;padding:80px 60px}
-.newsletter-form{display:flex;max-width:440px;margin:32px auto 0}
-.newsletter-input{flex:1;padding:14px 20px;background:var(--white);border:1.5px solid var(--soft);border-right:none;color:var(--ink);font-family:'DM Sans',sans-serif;font-size:16px;outline:none}/* ≥16px: iOS Safari zooms the page on focus below that */
-.newsletter-input:focus{border-color:var(--red)}
-.newsletter-input::placeholder{color:var(--muted)}
-.btn-subscribe{background:var(--red);color:#fff;border:none;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s}
-.btn-subscribe:hover{background:#a22b1e}
-.newsletter-note{font-size:12px;color:var(--muted);margin-top:12px}
-/* article preview cards + post-subscribe thank-you */
-.nl-reads{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:760px;margin:26px auto 4px}
-.nl-read{flex:1 1 220px;max-width:240px;text-align:left;background:var(--white);border:1.5px solid var(--soft);border-left:3px solid var(--red);padding:12px 14px;font-size:13px;line-height:1.5;color:var(--ink);text-decoration:none;transition:all .18s}
-.nl-read:hover{border-color:var(--red);transform:translateY(-2px)}
-.nl-read span{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:5px}
-.nl-thanks{max-width:600px;margin:24px auto 0;background:var(--white);border:1.5px solid var(--green);padding:18px 20px}
-.nl-thanks-head{font-size:14px;color:var(--ink);font-weight:600;margin-bottom:4px}
-.footer-social{margin-top:16px;display:flex;flex-wrap:wrap;gap:14px}
-.footer-social a{color:rgba(255,255,255,.5);text-decoration:none;font-size:12px;transition:color .2s}
-.footer-social a:hover{color:var(--gold)}
-
-/* ── FOOTER ── */
-footer{background:#100c06;color:rgba(255,255,255,.38);padding:56px 60px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px}
-.footer-logo{font-family:'Shippori Mincho',serif;font-size:21px;color:var(--white);margin-bottom:12px;display:block}
-.footer-logo span{color:var(--red)}
-.footer-desc{font-size:13px;line-height:1.72}
-.footer-heading{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.54);margin-bottom:16px}
-.footer-links{list-style:none}
-.footer-links li{margin-bottom:9px}
-.footer-links a{color:rgba(255,255,255,.38);text-decoration:none;font-size:13px;transition:color .2s}
-.footer-links a:hover{color:var(--gold)}
-.footer-bottom{background:#080604;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,.2)}
-
-/* ── RESPONSIVE ── */
-/* fixed lang-bar + nav must not cover anchor/scroll targets (#practice, #pricing, #newsletter).
-   On ≤768px the nav un-fixes (responsive.css), leaving only the 36px lang-bar. */
-html{scroll-padding-top:118px}
-@media(max-width:768px){html{scroll-padding-top:50px}}
-@media(max-width:960px){
-  .hero,.jlpt-section{grid-template-columns:1fr}
-  .hero-right,.hero-left::after{display:none}
-  .features-grid,.pricing-grid{grid-template-columns:1fr 1fr}
-  .culture-grid,.anime-grid{grid-template-columns:1fr 1fr}
-  .travel-grid,.dash-grid{grid-template-columns:1fr}
-  .roadmap-promise{flex-direction:column}
-  footer{grid-template-columns:1fr 1fr}
-  .nav,.lang-bar,section,.newsletter,.footer-bottom,footer{padding-left:20px;padding-right:20px}
-  .hero-left{padding:80px 20px 56px}
-}
-@media(max-width:600px){
-  .features-grid,.pricing-grid,.culture-grid,.anime-grid{grid-template-columns:1fr}
-  footer{grid-template-columns:1fr}
-  /* lang bar: keep buttons on one line and scroll horizontally instead of
-     wrapping (wrapping made tall buttons overflow the 36px bar onto the logo) */
-  .lang-bar{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-left:14px;padding-right:14px}
-  .lang-bar::-webkit-scrollbar{display:none}
-  .lang-btn{padding:6px 8px;font-size:11.5px}
-}
-
-/* Lang-specific font overrides */
-[data-lang="zh"] .hero-title,
-[data-lang="zh"] .section-title,
-[data-lang="zh"] .feature-title,
-[data-lang="zh"] .rs-goal,
-[data-lang="zh"] .dash-title{font-family:'Noto Sans TC',serif}
-[data-lang="th"] body,[data-lang="th"] .hero-sub,
-[data-lang="th"] .section-sub,[data-lang="th"] .feature-desc,
-[data-lang="th"] .rs-desc,[data-lang="th"] .travel-desc{font-family:'Noto Sans Thai',sans-serif}
-.pop-guides{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:10px;max-width:900px;margin:26px auto 0;text-align:left}
-.pop-guides a{display:block;padding:13px 15px;border:1px solid rgba(121,108,92,.28);border-radius:8px;background:var(--white);text-decoration:none;transition:border-color .15s,transform .15s}
-.pop-guides a:hover{border-color:var(--red);transform:translateY(-2px)}
-.pop-guides b{display:block;color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;margin-bottom:3px}
-.pop-guides span{display:block;color:var(--muted);font-size:13px;line-height:1.45}
-@media(max-width:640px){.pop-guides{grid-template-columns:1fr;margin-top:20px}}
+@media(max-width:820px){.grid3{grid-template-columns:1fr 1fr}.lanes{grid-template-columns:1fr}.ph-in{grid-template-columns:1fr}.stamp{display:none}.pricing-grid{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid3,.mb{grid-template-columns:1fr}.ph{min-height:460px;border-radius:14px}.ph::after{background:linear-gradient(180deg,rgba(28,26,22,.38) 0%,rgba(28,26,22,.86) 100%)}.ph-in{padding:24px 18px}.foot{grid-template-columns:1fr}.nl-form{flex-direction:column}.sec h2{font-size:26px}.lane{padding:20px 18px}.sec-h{flex-direction:column;align-items:flex-start;gap:6px}}
 </style>
 <link rel="stylesheet" href="styles/responsive.css">
 <link rel="stylesheet" href="styles/chrome.css">
@@ -417,280 +232,161 @@ html{scroll-padding-top:118px}
 
 <!-- LANG BAR -->
 <div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('en')">🇬🇧 English</button>
+  <button class="lang-btn active" onclick="setLang('en')">English</button>
   <span class="lang-divider">|</span>
-  <button class="lang-btn" onclick="setLang('zh')">🇹🇼 繁體中文</button>
+  <button class="lang-btn" onclick="setLang('zh')">繁體中文</button>
   <span class="lang-divider">|</span>
-  <button class="lang-btn" onclick="setLang('es')">🇪🇸 Español</button>
+  <button class="lang-btn" onclick="setLang('es')">Español</button>
   <span class="lang-divider">|</span>
-  <button class="lang-btn" onclick="setLang('th')">🇹🇭 ภาษาไทย</button>
+  <button class="lang-btn" onclick="setLang('th')">ภาษาไทย</button>
   <span class="lang-divider">|</span>
-  <button class="lang-btn" onclick="setLang('id')">🇮🇩 Indonesia</button>
+  <button class="lang-btn" onclick="setLang('id')">Indonesia</button>
   <span class="lang-divider">|</span>
-  <button class="lang-btn" onclick="setLang('ja')">🇯🇵 日本語</button>
+  <button class="lang-btn" onclick="setLang('ja')">日本語</button>
 </div>
-
-<!-- PRODUCT HUNT LAUNCH BANNER -->
-<a id="ph-banner" href="https://www.producthunt.com/products/nihongohub?embed=true&utm_source=banner-launch&utm_medium=banner&utm_campaign=banner-nihongohub" target="_blank" rel="noopener"
-   style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#da552f;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:9px 44px 9px 16px;text-align:center;position:relative;letter-spacing:.2px">
-  <span>🚀 We're live on Product Hunt today — your upvote means the world to us</span>
-  <span style="background:#fff;color:#da552f;border-radius:5px;padding:2px 10px;font-weight:700">Upvote ▲</span>
-  <button type="button" aria-label="Dismiss"
-    onclick="event.preventDefault();event.stopPropagation();document.getElementById('ph-banner').style.display='none'"
-    style="position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.85);font-size:17px;line-height:1;cursor:pointer">×</button>
-</a>
 
 <!-- NAV -->
 <nav class="nav">
-  <div class="logo">Nihongo<span>Hub</span></div>
+  <a class="logo" href="index.html">Nihongo<span>Hub</span></a>
   <div class="nav-links"><!-- grouped nav injected by lib/site-chrome.js (Learn / Explore Japan / My Journey + Pricing) --></div>
-  <button class="btn-nav" data-i18n="nav_cta" onclick="scrollToPractice()" style="background:transparent;color:var(--red);border:1px solid var(--red)">Start Free →</button>
+  <button class="btn-nav" data-i18n="nv_cta" onclick="location.href='onboarding.html'">Free level test</button>
 </nav>
 
+<main class="w">
+
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="kanji-bg">語</div>
-    <p class="hero-tag" data-i18n="hero_tag">Learn it · Live it · Travel it</p>
-    <h1 class="hero-title"><span data-i18n="hero_title1">Learn it. Live it.</span><br><em data-i18n="hero_title2">Travel it.</em></h1>
-    <div class="hero-promise"><span data-i18n="hero_promise">🗺️ Your whole Japan journey — one honest place</span></div>
-    <p class="hero-sub" data-i18n="hero_sub">JLPT and JFT exam prep, a 47-prefecture dataset built from public sources — 1,308 manhole cards, all 47 minimum wages, station-to-station travel times — and honest guides to moving to Japan. Free to start.</p>
-    <div class="hero-ctas">
-      <button class="btn-primary" data-i18n="hero_cta1" onclick="location.href='onboarding.html'">⚡ Find your level — 5 min, free</button>
-      <a class="btn-outline" href="prefectures.html" data-i18n="hero_cta2">Discover each region 🗾</a>
+<header class="ph">
+  <img src="blog/img/tokushima-hero-naruto-whirlpools.webp" width="1600" height="1065" alt="Naruto whirlpools, Tokushima" fetchpriority="high" decoding="async">
+  <span class="cred"><span data-i18n="h_photo">Photo</span>: <a href="https://search.find47.jp/en/i/JQkmW" target="_blank" rel="noopener">panpanzupan</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span>
+  <div class="ph-in">
+    <div>
+      <div class="kicker" data-i18n="h_kicker">47 prefectures · photo-first guides · one honest place</div>
+      <h1 data-i18n="h_title">Japan, one prefecture at a time.</h1>
+      <p data-i18n="h_sub">Where to go, what to eat, what to bring home, and the Japanese you’ll actually use — built from public data and CC photos, not brochures. Free to read. Free to start learning.</p>
+      <div class="btns"><a class="btn-p" href="prefectures.html" data-i18n="h_cta1">Open the 47-prefecture map →</a><a class="btn-s" href="onboarding.html" data-i18n="h_cta2">Find my level (5 min)</a></div>
     </div>
-    <div class="hero-stats">
-      <div><div class="stat-num">Free</div><div class="stat-label" data-i18n="stat1">Start Today</div></div>
-      <div><div class="stat-num">N1–N5</div><div class="stat-label" data-i18n="stat2">All JLPT Levels</div></div>
-      <div><div class="stat-num">1,308</div><div class="stat-label" data-i18n="stat3">Collectibles Mapped</div></div>
-    </div>
+    <div class="stamp" aria-hidden="true">徳島</div>
   </div>
-  <div class="hero-right">
-    <div class="hero-cards">
-      <div class="streak-widget">
-        <div class="streak-flame">🔥</div>
-        <div class="streak-info">
-          <div class="streak-label" data-i18n="streak_label">Quiz Streak</div>
-          <div class="streak-num" id="hw-streak-num">—</div>
-          <div class="streak-sub" id="hw-streak-sub" data-i18n="streak_sub">answer your first question →</div>
-        </div>
-        <div class="streak-days" id="hw-streak-days">
-          <div class="streak-day">·</div><div class="streak-day">·</div>
-          <div class="streak-day">·</div><div class="streak-day">·</div>
-          <div class="streak-day">·</div><div class="streak-day">·</div>
-          <div class="streak-day">·</div>
-        </div>
-      </div>
-      <div class="quiz-card">
-        <div class="quiz-level-tag">JLPT N5 · <span data-i18n="quiz_label">Daily Quiz</span></div>
-        <div class="quiz-q">毎朝　コーヒーを＿＿。</div>
-        <div class="quiz-r" data-i18n="quiz_sub">Every morning, I ___ coffee.</div>
-        <div class="quiz-opts">
-          <button class="quiz-opt" onclick="heroQuiz(this,true)">飲みます</button>
-          <button class="quiz-opt" onclick="heroQuiz(this,false)">食べます</button>
-          <button class="quiz-opt" onclick="heroQuiz(this,false)">見ます</button>
-          <button class="quiz-opt" onclick="heroQuiz(this,false)">聞きます</button>
-        </div>
-      </div>
-      <div class="progress-widget">
-        <div class="pw-header">
-          <span class="pw-title" data-i18n="pw_title">Your Progress</span>
-          <span class="pw-level" id="hw-lv-badge">Start free →</span>
-        </div>
-        <div class="pw-bar-wrap"><div class="pw-bar" id="hw-xp-bar" style="width:0%"></div></div>
-        <div class="pw-meta"><span id="hw-xp-left" data-i18n="pw_left">0 XP · Lv.1</span><span id="hw-xp-right" data-i18n="pw_right">Best streak: 0 🔥</span></div>
-      </div>
-    </div>
+</header>
+
+<!-- PREFECTURE STRIP -->
+<div class="strip">
+  <a href="blog/kyoto.html"><img src="blog/img/kyoto-hero-fushimi-inari-taisha.webp" width="1024" height="683" alt="Fushimi Inari Taisha, Kyoto" loading="lazy" decoding="async"><b>Kyoto</b></a>
+  <a href="blog/hokkaido.html"><img src="blog/img/hokkaido-hero-otaru-canal.webp" width="1600" height="1202" alt="Otaru Canal, Hokkaido" loading="lazy" decoding="async"><b>Hokkaido</b></a>
+  <a href="blog/okinawa.html"><img src="blog/img/okinawa-hero-shuri-castle.webp" width="1600" height="2133" alt="Shuri Castle, Okinawa" loading="lazy" decoding="async"><b>Okinawa</b></a>
+  <a href="blog/nagano.html"><img src="blog/img/nagano-hero-zenk-ji-temple.webp" width="1024" height="683" alt="Zenkō-ji temple, Nagano" loading="lazy" decoding="async"><b>Nagano</b></a>
+  <a href="blog/kanagawa.html"><img src="blog/img/kanagawa-hero-the-great-buddha.webp" width="1024" height="683" alt="The Great Buddha, Kanagawa" loading="lazy" decoding="async"><b>Kanagawa</b></a>
+  <a href="blog/nara.html"><img src="blog/img/nara-hero-t-dai-ji.webp" width="1024" height="576" alt="Tōdai-ji, Nara" loading="lazy" decoding="async"><b>Nara</b></a>
+  <a href="blog/ishikawa.html"><img src="blog/img/ishikawa-hero-kenroku-en-garden.webp" width="1600" height="1010" alt="Kenroku-en garden, Ishikawa" loading="lazy" decoding="async"><b>Ishikawa</b></a>
+  <a href="blog/tokushima-v2.html"><img src="blog/img/tokushima-hero-naruto-whirlpools.webp" width="1600" height="1065" alt="Naruto whirlpools, Tokushima" loading="lazy" decoding="async"><b>Tokushima</b></a>
+  <a class="more" href="blog/japan-prefectures.html"><b data-i18n="st_more">+ 39 more</b></a>
+</div>
+<p class="credits"><span data-i18n="st_photos">Photos</span>: Kyoto: <a href="https://www.flickr.com/photos/61533954@N00/33775913145" target="_blank" rel="noopener">Dimitry B</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>) · Hokkaido: <a href="https://search.find47.jp/en/i/ttYjm" target="_blank" rel="noopener">Yo_Takehana</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>) · Okinawa: <a href="https://search.find47.jp/en/i/qCFqX" target="_blank" rel="noopener">Hiroki_Hieda</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>) · Nagano: <a href="https://www.flickr.com/photos/94509941@N00/47992997093" target="_blank" rel="noopener">beggs</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>) · Kanagawa: <a href="https://www.flickr.com/photos/21186555@N07/39926546780" target="_blank" rel="noopener">Ray in Manila</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>) · Nara: <a href="https://www.flickr.com/photos/63234672@N04/14855836293" target="_blank" rel="noopener">Mustang Joe</a> (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>) · Ishikawa: <a href="https://search.find47.jp/en/i/MSwaP" target="_blank" rel="noopener">char</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>) · Tokushima: <a href="https://search.find47.jp/en/i/JQkmW" target="_blank" rel="noopener">panpanzupan</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>)</p>
+
+<!-- COLLECT JAPAN -->
+<section class="sec" id="collect">
+  <div class="sec-h"><h2 data-i18n="co_h">Collect Japan</h2><a href="blog/index.html" data-i18n="co_all">All collectible guides →</a></div>
+  <div class="grid3">
+    <a class="card" href="blog/goshuin-temple-shrine-stamps.html"><img src="blog/img/nara-hero-t-dai-ji.webp" width="1024" height="576" alt="Tōdai-ji, Nara" loading="lazy" decoding="async"><div class="b"><span class="tag" data-i18n="co1_tag">Goshuin</span><h3 data-i18n="co1_h">Shrine &amp; temple stamps</h3><p data-i18n="co1_p">What they mean, the etiquette, and how to collect them respectfully.</p><div class="cr"><span data-i18n="h_photo">Photo</span>: <a href="https://www.flickr.com/photos/63234672@N04/14855836293" target="_blank" rel="noopener">Mustang Joe</a> (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>)</div></div></a>
+    <a class="card" href="blog/manhole-cards-japan.html"><img src="blog/img/kanagawa-hero-the-great-buddha.webp" width="1024" height="683" alt="The Great Buddha of Kamakura, Kanagawa" loading="lazy" decoding="async"><div class="b"><span class="tag" data-i18n="co2_tag">Manhole cards</span><h3 data-i18n="co2_h">1,308 free cards, mapped</h3><p data-i18n="co2_p">The lot system, where to pick them up, and every prefecture’s designs.</p><div class="cr"><span data-i18n="h_photo">Photo</span>: <a href="https://www.flickr.com/photos/21186555@N07/39926546780" target="_blank" rel="noopener">Ray in Manila</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>)</div></div></a>
+    <a class="card" href="blog/eki-stamps-japan.html"><img src="blog/img/hokkaido-hero-otaru-canal.webp" width="1600" height="1202" alt="Otaru Canal, Hokkaido" loading="lazy" decoding="async"><div class="b"><span class="tag" data-i18n="co3_tag">Station stamps</span><h3 data-i18n="co3_h">Eki stamps &amp; the 6 melodies</h3><p data-i18n="co3_p">Stamps at the ticket gate, and the station jingles worth stopping for.</p><div class="cr"><span data-i18n="h_photo">Photo</span>: <a href="https://search.find47.jp/en/i/ttYjm" target="_blank" rel="noopener">Yo_Takehana</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>)</div></div></a>
   </div>
 </section>
 
-<!-- SITE GUIDE: explains + links every header destination -->
-<style>
-  .guide{padding:64px 24px;background:linear-gradient(180deg,transparent,rgba(224,166,52,.05))}
-  .guide-inner{max-width:1100px;margin:0 auto}
-  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
-  @media(max-width:900px){.guide-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.guide-grid{grid-template-columns:1fr}}
-  .guide-card{display:flex;flex-direction:column;gap:7px;text-decoration:none;color:var(--ink);
-    background:var(--white);border:2px solid var(--soft);border-radius:12px;padding:18px 16px;transition:border-color .14s,transform .14s}
-  .guide-card:hover{border-color:var(--gold);transform:translateY(-2px)}
-  .gc-ico{font-size:26px;line-height:1}
-  .gc-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:17px}
-  .gc-desc{font-size:13.5px;color:var(--muted);line-height:1.55;flex:1}
-  .gc-go{font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:600;color:var(--red)}
-</style>
-<!-- declutter (2026-06-26): "Start Here" 6-card grid relocated below the fold (after the
-     roadmap) so it no longer competes with the hero's two primary CTAs. See the section
-     moved further down this file. -->
-
-<!-- ROADMAP -->
-<section class="roadmap" id="roadmap">
-  <div class="reveal">
-    <p class="section-tag" style="color:var(--gold)" data-i18n="rm_tag">Your Learning Path</p>
-    <h2 class="section-title" data-i18n="rm_title">Your step-by-step path toward N3.<br>We show you what to study next.</h2>
-    <p class="section-sub" data-i18n="rm_sub">Unlike apps that leave you guessing, NihongoHub gives you a clear milestone map. Every week, you'll know exactly what you've learned and what's next.</p>
-  </div>
-  <div class="roadmap-promise reveal">
-    <div class="roadmap-step"><div class="rs-num">1</div><div class="rs-month" data-i18n="rm1_month">Month 1</div><div class="rs-goal" data-i18n="rm1_goal">Hiragana & Katakana</div><div class="rs-desc" data-i18n="rm1_desc">Master both scripts + 200 core vocabulary words. Read menus, signs, and simple sentences.</div><div class="rs-badge" data-i18n="rm1_badge">✓ N5 Foundation</div></div>
-    <div class="roadmap-step"><div class="rs-num">2</div><div class="rs-month" data-i18n="rm2_month">Month 2–3</div><div class="rs-goal" data-i18n="rm2_goal">Grammar & Kanji</div><div class="rs-desc" data-i18n="rm2_desc">100 essential Kanji, basic grammar patterns, and conversational phrases for real situations.</div><div class="rs-badge" data-i18n="rm2_badge">✓ N5 Ready</div></div>
-    <div class="roadmap-step"><div class="rs-num">3</div><div class="rs-month" data-i18n="rm3_month">Month 4–5</div><div class="rs-goal" data-i18n="rm3_goal">Intermediate Fluency</div><div class="rs-desc" data-i18n="rm3_desc">Expand to 500+ Kanji, complex grammar, and reading authentic Japanese texts and media.</div><div class="rs-badge" data-i18n="rm3_badge">✓ N4 Ready</div></div>
-    <div class="roadmap-step"><div class="rs-num">4</div><div class="rs-month" data-i18n="rm4_month">Month 6</div><div class="rs-goal" data-i18n="rm4_goal">N3 Exam Prep</div><div class="rs-desc" data-i18n="rm4_desc">Targeted quiz drilling and weak-area review to build exam confidence.</div><div class="rs-badge" data-i18n="rm4_badge">🎯 N3 Target</div></div>
-  </div>
-  <div class="reveal" style="text-align:center;margin-top:32px">
-    <a href="kana.html" class="rm-zero-cta" style="display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--ink);font-weight:700;text-decoration:none;border-radius:10px;padding:15px 26px;font-size:16px"><span style="font-family:'Shippori Mincho',serif;font-size:22px">あ</span><span data-i18n="rm_zero_cta">Brand new? Learn かな free — Month 1 starts here →</span></a>
-  </div>
-</section>
-
-<!-- START HERE — relocated below the fold (declutter 2026-06-26) -->
-<section class="guide" id="guide">
-  <div class="guide-inner">
-    <div class="reveal">
-      <p class="section-tag" style="color:var(--gold)" data-i18n="gd_tag">Start Here</p>
-      <h2 class="section-title" data-i18n="gd_title">Where do you want to start?</h2>
-      <p class="section-sub" data-i18n="gd_sub">NihongoHub follows your whole relationship with Japan — learn it, live it, travel it. Pick where you are.</p>
+<!-- LEARN / LETTER (ids #learn #practice #newsletter are linked from blog + other pages) -->
+<section class="lanes" id="learn">
+  <div class="lane learn" id="practice">
+    <div class="kicker" data-i18n="ln_kicker">Learn</div>
+    <h2 data-i18n="ln_h">Say it before you go.</h2>
+    <p data-i18n="ln_p">Free JLPT-style questions, N5–N1, generated fresh. Find your level in five minutes — no sign-up.</p>
+    <div class="quiz">
+      <div class="quiz-tag" data-i18n="qz_label">Sample · JLPT N5</div>
+      <b class="quiz-q jp">毎朝　コーヒーを＿＿。</b>
+      <div class="quiz-r" data-i18n="qz_sub">Every morning, I ___ coffee.</div>
+      <button class="quiz-opt" onclick="heroQuiz(this,true)">飲みます</button><button class="quiz-opt" onclick="heroQuiz(this,false)">食べます</button><button class="quiz-opt" onclick="heroQuiz(this,false)">見ます</button><button class="quiz-opt" onclick="heroQuiz(this,false)">聞きます</button>
     </div>
-    <div class="guide-grid reveal">
-      <a class="guide-card" href="onboarding.html"><span class="gc-ico">🇯🇵</span><span class="gc-title" data-i18n="pc1_title">Learn Japanese</span><span class="gc-go" data-i18n="pc1_go">Find my level →</span></a>
-      <a class="guide-card" href="exam-prep.html"><span class="gc-ico">📝</span><span class="gc-title" data-i18n="pc5_title">Pass the JLPT/JFT</span><span class="gc-go" data-i18n="pc5_go">Exam prep + free sample →</span></a>
-      <a class="guide-card" href="blog/moving-to-japan-guide.html"><span class="gc-ico">🛂</span><span class="gc-title" data-i18n="pc6_title">Move to Japan</span><span class="gc-go" data-i18n="pc6_go">Living-in-Japan guide →</span></a>
-      <a class="guide-card" href="blog/index.html"><span class="gc-ico">⛩️</span><span class="gc-title" data-i18n="pc2_title">Understand Japan</span><span class="gc-go" data-i18n="pc2_go">Read the guides →</span></a>
-      <a class="guide-card" href="prefectures.html"><span class="gc-ico">✈️</span><span class="gc-title" data-i18n="pc3_title">Plan a trip</span><span class="gc-go" data-i18n="pc3_go">Open the map →</span></a>
-      <a class="guide-card" href="rpg.html"><span class="gc-ico">🎮</span><span class="gc-title" data-i18n="pc4_title">Play &amp; collect</span><span class="gc-go" data-i18n="pc4_go">Start your journey →</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features" id="learn">
-  <div class="reveal">
-    <p class="section-tag" data-i18n="ft_tag">What We Offer</p>
-    <h2 class="section-title" data-i18n="ft_title">Every tool you need,<br>in one place.</h2>
-  </div>
-  <div class="features-grid reveal">
-    <div class="feature-card"><div class="feature-num">01</div><span class="feature-icon">🔥</span><div class="feature-title" data-i18n="f1_title">Streak Counter</div><p class="feature-desc" data-i18n="f1_desc">Track your consecutive correct answers and personal best. Every question earns XP and levels up your guide Akari.</p></div>
-    <div class="feature-card"><div class="feature-num">02</div><span class="feature-icon">🤖</span><div class="feature-title" data-i18n="f2_title">AI Question Generator</div><p class="feature-desc" data-i18n="f2_desc">Infinite JLPT-style questions (N5–N1) generated fresh every session. Choose your topic — transport, food, travel, and more.</p></div>
-    <div class="feature-card"><div class="feature-num">03</div><span class="feature-icon">🗾</span><div class="feature-title" data-i18n="f4_title">47-Prefecture Quest</div><p class="feature-desc" data-i18n="f4_desc">A clickable map of all 47 prefectures with data-grounded stats. Each region opens its own quiz battle and rare-creature pixel art.</p></div>
-    <div class="feature-card"><div class="feature-num">04</div><span class="feature-icon">🗾</span><div class="feature-title" data-i18n="f5_title">Culture Deep Dives</div><p class="feature-desc" data-i18n="f5_desc">Weekly essays on Japanese culture and society — written by people who actually live here.</p></div>
-    <div class="feature-card"><div class="feature-num">05</div><span class="feature-icon">✈️</span><div class="feature-title" data-i18n="f6_title">Travel Japanese</div><p class="feature-desc" data-i18n="f6_desc">Phrase packs, etiquette guides, and survival vocabulary. What to say at shrines, izakayas, and combini.</p></div>
-  </div>
-</section>
-
-<!-- JLPT — AI POWERED via /api/generate -->
-<section class="jlpt-section" id="practice">
-  <div class="reveal">
-    <p class="section-tag" style="color:var(--gold)" data-i18n="jlpt_tag">Live AI Practice</p>
-    <h2 class="section-title" style="color:var(--white)" data-i18n="jlpt_title">AI-generated questions.<br>Every level. Every day.</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,.5)" data-i18n="jlpt_sub">Fresh questions created by AI in real time — never the same test twice. Pick a level and tap New Question.</p>
-    <a href="onboarding.html" id="main-quiz-cta" class="jlpt-cta" data-i18n="jlpt_cta_new" style="display:inline-flex;align-items:center;gap:9px;margin:8px 0 2px;background:var(--red);color:#fff;text-decoration:none;padding:15px 28px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;border-radius:7px">⚡ Find your level (5 min) — free →</a>
-    <p style="font-size:13.5px;color:rgba(255,255,255,.5);margin-top:14px;line-height:1.6;max-width:520px" data-i18n="jlpt_cta_note">No signup — 12 questions, instant level. <a id="skip-cta" href="quiz.html" style="color:var(--gold)">Skip to free quiz →</a></p>
+    <a href="onboarding.html" id="main-quiz-cta" class="learn-cta" data-i18n="jlpt_cta_new">Find your level (5 min) — free →</a>
+    <p class="note" data-i18n="jlpt_cta_note">No signup — 12 questions, instant level. <a id="skip-cta" href="quiz.html">Skip to free quiz →</a></p>
     <script>
       // Returning users skip diagnostic
       (function(){
         try {
           if(localStorage.getItem('nh_onboarding_done') === '1'){
             var cta = document.getElementById('main-quiz-cta');
-            if(cta){ cta.href = 'dashboard.html'; cta.textContent = '📊 Open your dashboard →'; }
+            if(cta){ cta.href = 'dashboard.html'; cta.textContent = 'Open your dashboard →'; cta.removeAttribute('data-i18n'); }
             var skip = document.getElementById('skip-cta'); if(skip) skip.style.display = 'none';
           }
         } catch(e){}
       })();
     </script>
-    <p style="font-size:11px;color:rgba(255,255,255,.28);margin-top:14px;line-height:1.6" data-i18n="jlpt_legal">Questions are independently AI-generated and not affiliated with or endorsed by the Japan Foundation or JEES. "JLPT" is used only to indicate difficulty level.</p>
+    <p class="legal" data-i18n="jlpt_legal">Questions are independently AI-generated and not affiliated with or endorsed by the Japan Foundation or JEES. "JLPT" is used only to indicate difficulty level.</p>
   </div>
-</section>
-
-<!-- CULTURE -->
-<section class="culture" id="culture">
-  <div class="reveal">
-    <p class="section-tag" data-i18n="cu_tag">Culture & Lifestyle</p>
-    <h2 class="section-title" data-i18n="cu_title">Japan beyond the textbook.</h2>
-    <p class="section-sub" data-i18n="cu_sub">We write about etiquette, seasons, food and everyday life — one prefecture at a time, on the blog.</p>
-    <div class="pop-guides">
-      <a href="blog/goshuin-temple-shrine-stamps.html"><b>⛩️ Goshuin</b><span>Shrine &amp; temple seal-stamps — the etiquette, and how to collect them</span></a>
-      <a href="blog/japan-100-castles-goshuin.html"><b>🏯 100 Famous Castles</b><span>The 12 surviving original keeps, and the castle stamp rally</span></a>
-      <a href="blog/anime-pilgrimage-japan.html"><b>🎬 Anime pilgrimage</b><span>The real places behind the scenes, prefecture by prefecture</span></a>
-      <a href="blog/manhole-cards-japan.html"><b>🪧 Manhole cards</b><span>Japan's free collectible sewer-cover cards, and how to get them</span></a>
-      <a href="blog/gundam-manholes-japan.html"><b>🤖 Gundam manholes</b><span>RX-78-2 covers donated to towns nationwide — where to find them</span></a>
-      <a href="blog/pokefuta-pokemon-manholes-japan.html"><b>🗾 Pokéfuta</b><span>The 47-prefecture Pokémon manhole hunt</span></a>
+  <div class="lane letter" id="newsletter">
+    <div class="kicker" data-i18n="lt_kicker">Free · weekly</div>
+    <h2 data-i18n="lt_h">One prefecture a week, in your inbox.</h2>
+    <p data-i18n="lt_p">Where to go, what to eat, what to bring home — plus new collectible hunts. Unsubscribe anytime.</p>
+    <form class="nl-form" id="nlForm" novalidate>
+      <label class="sr" for="nlEmail">Email</label>
+      <input id="nlEmail" type="email" name="email" required autocomplete="email" data-i18n-placeholder="nl_placeholder" placeholder="your@email.com">
+      <button type="submit" data-i18n="lt_btn">Send me the letter →</button>
+    </form>
+    <p class="newsletter-note" data-i18n="nl_note">Weekly. Free. Unsubscribe whenever you like.</p>
+    <div class="nl-thanks" id="nlThanks" hidden>
+      <p class="nl-thanks-head" data-i18n="nl_thanks_head">✓ You’re in — the first note arrives this week. Meanwhile, start with these:</p>
+      <div class="nl-reads">
+        <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/silk-silkworms-and-river-rafting" target="_blank" rel="noopener">Silk, Silkworms &amp; River Rafting — Gunma &amp; Saitama</a>
+        <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/japans-little-tray-ancient-courtesy-3f2" target="_blank" rel="noopener">Japan's Little Tray — Yamagata's sacred mountains</a>
+        <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/riding-the-sl-ginga-steam-train-through" target="_blank" rel="noopener">Riding the SL Ginga steam train through Ihatov</a>
+      </div>
     </div>
-    <a href="blog/index.html" class="jlpt-cta" style="display:inline-flex;align-items:center;gap:9px;margin:24px 0 2px;background:var(--red);color:#fff;text-decoration:none;padding:15px 28px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;border-radius:7px" data-i18n="cu_cta">Read the 47-prefecture blog →</a>
   </div>
 </section>
 
-<!-- TRAVEL -->
-<section class="travel" id="travel">
-  <div class="reveal">
-    <p class="section-tag" data-i18n="tr_tag">Travel Japan</p>
-    <h2 class="section-title" data-i18n="tr_title">Ready to go? We'll help<br>you get there.</h2>
-    <p class="section-sub" data-i18n="tr_sub">Partner travel guides combine language prep with trip planning. Arrive in Japan ready to speak, not just point. <span class="affiliate-badge">PARTNER</span></p>
-  </div>
-  <div class="travel-grid reveal">
-    <div class="travel-card"><div class="travel-img">🗼<div class="travel-img-overlay"></div></div><div class="travel-body"><div class="travel-dest" data-i18n="td1">Tokyo</div><p class="travel-desc" data-i18n="td1_desc">From Shibuya Crossing to hidden izakayas — your complete language + travel guide. Includes 200 must-know Tokyo phrases.</p><a href="prefectures.html?pref=tokyo" class="travel-cta" data-i18n="td1_cta">Plan your Tokyo trip →</a></div></div>
-    <div class="travel-card"><div class="travel-img">⛩️<div class="travel-img-overlay"></div></div><div class="travel-body"><div class="travel-dest" data-i18n="td2">Kyoto</div><p class="travel-desc" data-i18n="td2_desc">Temples, tea ceremonies, geisha districts. Learn the formal Japanese for Japan's cultural heart.</p><a href="prefectures.html?pref=kyoto" class="travel-cta" data-i18n="td2_cta">Explore Kyoto →</a></div></div>
-    <div class="travel-card"><div class="travel-img">🏔️<div class="travel-img-overlay"></div></div><div class="travel-body"><div class="travel-dest" data-i18n="td3">Hokkaido</div><p class="travel-desc" data-i18n="td3_desc">Powder snow, seafood markets, untouched nature. The language guide for Japan's wild north.</p><a href="prefectures.html?pref=hokkaido" class="travel-cta" data-i18n="td3_cta">Discover Hokkaido →</a></div></div>
+<!-- MOVE & BUY -->
+<section class="mb-sec" id="move">
+  <h2 data-i18n="mb_h">Move &amp; buy</h2>
+  <div class="mb">
+    <a href="blog/moving-to-japan-guide.html"><h3 data-i18n="pc6_title">Move to Japan</h3><p data-i18n="mb1_p">Visas, housing, the first 90 days — the practical timeline.</p><span class="go" data-i18n="pc6_go">Living-in-Japan guide →</span></a>
+    <a href="blog/buy-from-japan-proxy-services.html"><h3 data-i18n="mb2_title">Buy from Japan</h3><p data-i18n="mb2_p">Buyee, ZenMarket, Remambo, Neokyo — fees and when to use which.</p><span class="go" data-i18n="mb2_go">Proxy services compared →</span></a>
   </div>
 </section>
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
-  <div class="reveal" style="text-align:center">
-    <p class="section-tag" style="color:var(--gold)" data-i18n="pr_tag">Pricing</p>
-    <h2 class="section-title" data-i18n="pr_title">Simple pricing.<br>Serious results.</h2>
-    <p class="section-sub" style="margin:0 auto" data-i18n="pr_sub">Start free. Upgrade anytime. Cancel anytime. Or own it forever with Lifetime.</p>
-  </div>
-  <div class="pricing-grid reveal">
+  <h2 data-i18n="pr_title">Simple pricing.<br>Serious results.</h2>
+  <p class="lead" data-i18n="pr_line">Everything above is free. Unlimited quiz, spaced repetition and PDF sheets are in Pro — $9.99/mo or $149 once.</p>
+  <div class="pricing-grid">
     <div class="price-card"><div class="price-plan" data-i18n="pl1_name">Free</div><div class="price-amount">$0</div><div class="price-period" data-i18n="pl1_period">forever</div><ul class="price-features"><li data-i18n="pl1_f1">Unlimited N5 &amp; N4 questions</li><li data-i18n="pl1_f2">N3–N1: 30 questions a day</li><li data-i18n="pl1_f3">Streak + readiness dashboard</li><li data-i18n="pl1_f4">Prefecture Quest + culture</li></ul><button class="btn-plan btn-plan-ghost" data-plan-cta="free" data-i18n="pl1_btn">Get Started Free</button></div>
-    <div class="price-card featured"><div class="price-badge" data-i18n="pl2_badge">Most Popular</div><div class="price-plan" data-i18n="pl2_name">Pro</div><div class="price-amount">$9.99</div><div class="price-period" data-i18n="pl2_period">per month</div><ul class="price-features"><li data-i18n="pl2_pro1">Unlimited questions — no daily cap</li><li data-i18n="pl2_pro2">Every level, N5 to N1</li><li data-i18n="pl2_pro3">Unlimited spaced-repetition review</li><li data-i18n="pl2_pro4">Printable PDF study sheets</li><li data-i18n="pl2_pro5">Streak, badges & readiness dashboard</li></ul><button class="btn-plan btn-plan-solid" data-plan-cta="pro" data-i18n="pl2_btn">Start Pro — $9.99/mo</button><div class="lifetime-note">or $79.99/year <span class="price-save" data-i18n="pl2_save">SAVE 33%</span></div></div>
-    <div class="price-card"><div class="price-badge" style="background:var(--gold);color:var(--ink)" data-i18n="pl4_badge">Best Value</div><div class="price-plan" data-i18n="pl4_name">Lifetime</div><div class="price-amount" style="color:var(--gold)">$149</div><div class="price-period" data-i18n="pl4_period">one-time</div><ul class="price-features"><li data-i18n="pl4_f1">Everything in Pro — forever</li><li data-i18n="pl4_f2">All future content included</li><li data-i18n="pl4_f3">No recurring charges, ever</li><li data-i18n="pl4_f4">Founding member badge</li><li data-i18n="pl4_f5">Early access to new features</li></ul><button class="btn-plan btn-plan-ghost" style="border-color:var(--gold);color:var(--gold)" data-plan-cta="lifetime" data-i18n="pl4_btn">Own It Forever</button><div class="lifetime-note" style="color:rgba(255,255,255,.35)" data-i18n="pl4_note">~15 months of Pro</div></div>
+    <div class="price-card featured"><div class="price-badge" data-i18n="pl2_badge">Most Popular</div><div class="price-plan" data-i18n="pl2_name">Pro</div><div class="price-amount">$9.99</div><div class="price-period" data-i18n="pl2_period">per month</div><ul class="price-features"><li data-i18n="pl2_pro1">Unlimited questions — no daily cap</li><li data-i18n="pl2_pro2">Every level, N5 to N1</li><li data-i18n="pl2_pro3">Unlimited spaced-repetition review</li><li data-i18n="pl2_pro4">Printable PDF study sheets</li><li data-i18n="pl2_pro5">Streak, badges &amp; readiness dashboard</li></ul><button class="btn-plan btn-plan-solid" data-plan-cta="pro" data-i18n="pl2_btn">Start Pro — $9.99/mo</button><div class="lifetime-note">or $79.99/year <span class="price-save" data-i18n="pl2_save">SAVE 33%</span></div></div>
+    <div class="price-card"><div class="price-badge alt" data-i18n="pl4_badge">Best Value</div><div class="price-plan" data-i18n="pl4_name">Lifetime</div><div class="price-amount">$149</div><div class="price-period" data-i18n="pl4_period">one-time</div><ul class="price-features"><li data-i18n="pl4_f1">Everything in Pro — forever</li><li data-i18n="pl4_f2">All future content included</li><li data-i18n="pl4_f3">No recurring charges, ever</li><li data-i18n="pl4_f4">Founding member badge</li><li data-i18n="pl4_f5">Early access to new features</li></ul><button class="btn-plan btn-plan-ghost" data-plan-cta="lifetime" data-i18n="pl4_btn">Own It Forever</button><div class="lifetime-note" data-i18n="pl4_note">~15 months of Pro</div></div>
   </div>
 
-  <!-- Pay-it-forward gift block (Phase 3) — emotional ledger, single Stripe Payment Link, zero new Vercel Functions. -->
-  <div id="gift-block" style="max-width:920px;margin:50px auto 0;padding:32px 28px;background:rgba(255,215,0,.06);border:2px solid rgba(255,215,0,.4);border-radius:14px;text-align:center;color:#fdf6e3">
-    <div style="font-family:'Press Start 2P',monospace;font-size:11px;letter-spacing:1.5px;color:#FFD700;margin-bottom:14px" data-i18n="gift_tag">⛩  GIVE THE GIFT OF LANGUAGE</div>
-    <h3 style="font-family:'DotGothic16',sans-serif;font-size:30px;line-height:1.35;margin:0 0 12px" data-i18n="gift_h">$5 = 10 students get 1 month of Pro.</h3>
-    <p style="color:rgba(253,246,227,.7);font-size:15px;line-height:1.6;margin:0 auto 18px;max-width:560px" data-i18n="gift_p">No subscription. Buy 10 Pro codes for $5, and we email them to you to share — your Discord, a subreddit, a friend cramming for JLPT. Every code redeemed = one more learner with a fairer start.</p>
-    <div id="sponsor-counter" style="font-family:'DotGothic16',sans-serif;color:#FFD700;font-size:18px;margin-bottom:18px;min-height:1.4em" data-i18n-tpl="gift_count" data-count="0">Total students sponsored: <strong id="sponsor-counter-num">…</strong></div>
-    <a id="gift-cta" href="#" target="_blank" rel="noopener" style="display:inline-block;background:#FFD700;color:#0d0a14;font-family:'DotGothic16',sans-serif;font-weight:700;font-size:17px;padding:14px 28px;border-radius:10px;text-decoration:none;letter-spacing:.5px" data-i18n="gift_btn">🎁 Gift 10 Students — $5</a>
-    <p style="color:rgba(253,246,227,.4);font-size:12px;margin:14px 0 0" data-i18n="gift_note">Codes are emailed instantly. Redeem at /redeem.html. Valid 1 year.</p>
+  <!-- Pay-it-forward gift block (Phase 3) — single Stripe Payment Link from /api/public-config; hidden by JS until the link exists. -->
+  <div id="gift-block">
+    <div class="kicker" data-i18n="gift_tag">Give the gift of language</div>
+    <h3 data-i18n="gift_h">$5 = 10 students get 1 month of Pro.</h3>
+    <p data-i18n="gift_p">No subscription. Buy 10 Pro codes for $5, and we email them to you to share — your Discord, a subreddit, a friend cramming for JLPT. Every code redeemed = one more learner with a fairer start.</p>
+    <div id="sponsor-counter" data-i18n-tpl="gift_count" data-count="0">Total students sponsored: <strong id="sponsor-counter-num">…</strong></div>
+    <a id="gift-cta" href="#" target="_blank" rel="noopener" data-i18n="gift_btn">Gift 10 students — $5</a>
+    <p class="small" data-i18n="gift_note">Codes are emailed instantly. Redeem at /redeem.html. Valid 1 year.</p>
   </div>
 </section>
 
-<!-- NEWSLETTER (2026-06-04 Ridgeline-style rewrite per channel-execution-deep-research §2.4) -->
-<section class="newsletter" id="newsletter">
-  <p class="section-tag" data-i18n="nl_tag">47 Notes from Japan</p>
-  <h2 class="section-title" data-i18n="nl_title">Shall we visit one of the 47 with us this week?</h2>
-  <p style="color:var(--muted);font-size:15px;margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto" data-i18n="nl_sub">A weekly note from a family of three slowly walking through Japan's 47 prefectures — one place, one phrase, one small thing we noticed.</p>
-  <div class="nl-reads">
-    <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/silk-silkworms-and-river-rafting" target="_blank" rel="noopener"><span data-i18n="nl_read_tag">Read free</span>Silk, Silkworms &amp; River Rafting — Gunma &amp; Saitama</a>
-    <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/japans-little-tray-ancient-courtesy-3f2" target="_blank" rel="noopener"><span data-i18n="nl_read_tag">Read free</span>Japan's Little Tray — Yamagata's sacred mountains</a>
-    <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/riding-the-sl-ginga-steam-train-through" target="_blank" rel="noopener"><span data-i18n="nl_read_tag">Read free</span>Riding the SL Ginga steam train through Ihatov</a>
-  </div>
-  <form class="newsletter-form" id="nlForm" novalidate>
-    <input class="newsletter-input" id="nlEmail" type="email" name="email" required data-i18n-placeholder="nl_placeholder" placeholder="your@email.com">
-    <button class="btn-subscribe" type="submit" data-i18n="nl_btn">Subscribe</button>
-  </form>
-  <p class="newsletter-note" data-i18n="nl_note">Weekly. Free. Unsubscribe whenever you like.</p>
-  <div class="nl-thanks" id="nlThanks" hidden>
-    <p class="nl-thanks-head" data-i18n="nl_thanks_head">✓ You’re in — the first note arrives this week. Meanwhile, start with these:</p>
-    <div class="nl-reads" style="margin-top:14px">
-      <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/silk-silkworms-and-river-rafting" target="_blank" rel="noopener">Silk, Silkworms &amp; River Rafting — Gunma &amp; Saitama</a>
-      <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/japans-little-tray-ancient-courtesy-3f2" target="_blank" rel="noopener">Japan's Little Tray — Yamagata's sacred mountains</a>
-      <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/riding-the-sl-ginga-steam-train-through" target="_blank" rel="noopener">Riding the SL Ginga steam train through Ihatov</a>
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- FOOTER -->
 <footer>
-  <div><span class="footer-logo">Nihongo<span>Hub</span></span><p class="footer-desc" data-i18n="footer_desc">AI-powered Japanese learning for the globally curious. Real phrases, all 47 prefectures.</p><div class="footer-social"><a href="https://ikimonohakasefamily.substack.com" target="_blank" rel="noopener">Substack</a><a href="https://www.youtube.com/@JepangMenarik" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/familyikimono" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@familyikimono" target="_blank" rel="noopener">Threads</a><a href="https://www.pinterest.com/ikimonofamily" target="_blank" rel="noopener">Pinterest</a></div><a href="https://www.producthunt.com/products/nihongohub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-nihongohub" target="_blank" rel="noopener" style="display:inline-block;margin-top:18px"><img alt="NihongoHub - Learn Japanese with AI quizzes & explore all 47 prefectures | Product Hunt" width="250" height="54" style="width:250px;height:54px" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1166429&theme=dark&t=1781075439104"></a></div>
-  <div><div class="footer-heading" data-i18n="fl1_head">Learn</div><ul class="footer-links"><li><a href="onboarding.html" data-i18n="fl1_6">Find your level</a></li><li><a href="quiz.html" data-i18n="fl1_1">JLPT Practice</a></li><li><a href="dashboard.html" data-i18n="fl1_7">Progress dashboard</a></li><li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" data-i18n="fl1_2">Shadowing (Echo)</a></li><li><a href="prefectures.html" data-i18n="fl1_5">47-Prefecture Quest</a></li><li><a href="#travel" data-i18n="fl1_4">Travel Phrases</a></li></ul></div>
+  <div class="foot">
+  <div><span class="footer-logo">Nihongo<span>Hub</span></span><p class="footer-desc" data-i18n="footer_desc">AI-powered Japanese learning for the globally curious. Real phrases, all 47 prefectures.</p><div class="footer-social"><a href="https://ikimonohakasefamily.substack.com" target="_blank" rel="noopener">Substack</a><a href="https://www.youtube.com/@JepangMenarik" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/familyikimono" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@familyikimono" target="_blank" rel="noopener">Threads</a><a href="https://www.pinterest.com/ikimonofamily" target="_blank" rel="noopener">Pinterest</a></div><a href="https://www.producthunt.com/products/nihongohub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-nihongohub" target="_blank" rel="noopener" style="display:inline-block;margin-top:18px"><img alt="NihongoHub - Learn Japanese with AI quizzes & explore all 47 prefectures | Product Hunt" width="250" height="54" style="width:250px;height:54px" loading="lazy" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1166429&theme=dark&t=1781075439104"></a></div>
+  <div><div class="footer-heading" data-i18n="fl1_head">Learn</div><ul class="footer-links"><li><a href="onboarding.html" data-i18n="fl1_6">Find your level</a></li><li><a href="quiz.html" data-i18n="fl1_1">JLPT Practice</a></li><li><a href="dashboard.html" data-i18n="fl1_7">Progress dashboard</a></li><li><a href="https://shadowing-app-theta.vercel.app?source=nihongohub" target="_blank" rel="noopener" data-i18n="fl1_2">Shadowing (Echo)</a></li><li><a href="prefectures.html" data-i18n="fl1_5">47-Prefecture Quest</a></li><li><a href="prefectures.html" data-i18n="fl1_4">Travel Phrases</a></li></ul></div>
   <div><div class="footer-heading" data-i18n="fl2_head">Explore</div><ul class="footer-links"><li><a href="blog/index.html" data-i18n="fl2_1">Culture Articles</a></li><li><a href="blog/index.html" data-i18n="fl2_2">Japan Travel</a></li><li><a href="#newsletter" data-i18n="fl2_3">Newsletter</a></li><li><a href="blog/index.html" data-i18n="fl2_4">Blog</a></li><li><a href="https://japananswerindex.com" target="_blank" rel="noopener">Japan Answer Index</a></li></ul></div>
   <div><div class="footer-heading" data-i18n="fl3_head">Company</div><ul class="footer-links"><li><a href="about.html" data-i18n="fl3_1">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#pricing" data-i18n="fl3_2">Pricing</a></li><li><a href="affiliate.html" data-i18n="fl3_3">Affiliate Program</a></li><li><a href="contact.html" data-i18n="fl3_4">Contact</a></li></ul></div>
+  </div>
 </footer>
-<div class="footer-bottom">
+<div class="footer-bottom"><div>
   <span>© 2026 NihongoHub. All rights reserved.</span>
-  <span><a href="tokushoho.html" style="color:rgba(255,255,255,.45);text-decoration:underline">特定商取引法に基づく表記</a> · <span data-i18n="footer_legal">Privacy · Terms · Affiliate Disclosure</span></span>
-</div>
+  <span><a href="tokushoho.html">特定商取引法に基づく表記</a> · <span data-i18n="footer_legal">Privacy · Terms · Affiliate Disclosure</span></span>
+</div></div>
 
 <script>
 /* ═══════════════════════════════════════════
@@ -698,462 +394,94 @@ html{scroll-padding-top:118px}
 ═══════════════════════════════════════════ */
 const T = {
   en: {
-    nav_roadmap:"Roadmap", nav_learn:"Learn", nav_culture:"Culture", nav_travel:"Travel Japan", nav_explore:"Explore 🗾", nav_quiz:"⚔️ Quiz", nav_pricing:"Pricing", nav_shadowing:"🎙 Shadowing", nav_cta:"Start Free →",
-    hero_tag:"Learn it · Live it · Travel it", hero_title1:"Learn it. Live it.", hero_title2:"Travel it.",
-    hero_promise:"🗺️ Your whole Japan journey — one honest place",
-    hero_sub:"JLPT and JFT exam prep, a 47-prefecture dataset built from public sources — 1,308 manhole cards, all 47 minimum wages, station-to-station travel times — and honest guides to moving to Japan. Free to start.",
-    hero_cta1:"⚡ Find your level — 5 min, free", hero_cta2:"Discover each region 🗾",
-    stat1:"Start Today", stat2:"All JLPT Levels", stat3:"Collectibles Mapped",
-    streak_label:"Quiz Streak", streak_sub:"answer your first question →",
-    quiz_label:"Daily Quiz", quiz_sub:"She wakes up every morning ___.",
-    pw_title:"JLPT Readiness", pw_left:"Started N4 ✓", pw_right:"N3 exam in ~6 weeks",
-    rm_tag:"Your Learning Path", rm_title:"Your step-by-step path toward N3.<br>We show you what to study next.",
-    rm_sub:"Unlike apps that leave you guessing, NihongoHub gives you a clear milestone map.",
-    rm_zero_cta:"Brand new? Learn かな free — Month 1 starts here →",
-    rm1_month:"Month 1", rm1_goal:"Hiragana & Katakana", rm1_desc:"Master both scripts + 200 core vocabulary words. Read menus, signs, and simple sentences.", rm1_badge:"✓ N5 Foundation",
-    rm2_month:"Month 2–3", rm2_goal:"Grammar & Kanji", rm2_desc:"100 essential Kanji, basic grammar patterns, and conversational phrases for real situations.", rm2_badge:"✓ N5 Ready",
-    rm3_month:"Month 4–5", rm3_goal:"Intermediate Fluency", rm3_desc:"Expand to 500+ Kanji, complex grammar, and reading authentic Japanese texts and media.", rm3_badge:"✓ N4 Ready",
-    rm4_month:"Month 6", rm4_goal:"N3 Exam Prep", rm4_desc:"Targeted quiz drilling and weak-area review to build exam confidence.", rm4_badge:"🎯 N3 Target",
-    gd_tag:"Start Here", gd_title:"Where do you want to start?", gd_sub:"NihongoHub follows your whole relationship with Japan — learn it, live it, travel it. Pick where you are.", pc5_title:"Pass the JLPT/JFT", pc5_go:"Exam prep + free sample →", pc6_title:"Move to Japan", pc6_go:"Living-in-Japan guide →",
-    pc1_title:"Learn Japanese", pc1_desc:"Find your JLPT level in 5 minutes, then practise with AI quizzes that adapt to you — N5 to N1, free to start.", pc1_go:"Find my level →",
-    pc2_title:"Understand Japan", pc2_desc:"Etiquette, seasons, food and everyday life — honest culture guides for all 47 prefectures, written by people who live here.", pc2_go:"Read the guides →",
-    pc3_title:"Plan a trip", pc3_desc:"A clickable map of every prefecture with what to see, the local words to know, and where to stay and book.", pc3_go:"Open the map →",
-    pc4_title:"Play & collect", pc4_desc:"Turn study into a quest: clear quizzes, earn titles and gear, light up the map and grow your own character.", pc4_go:"Start your journey →",
-    gd1_title:"Roadmap", gd1_desc:"Your step-by-step path toward N3 — know exactly what's next.", gd1_go:"See the path →",
-    gd2_title:"Learn", gd2_desc:"Every study tool in one place — streaks, AI quiz battles, 47-prefecture quest and shadowing practice.", gd2_go:"What we offer →",
-    gd3_title:"Culture", gd3_desc:"Etiquette, seasons and everyday life — read it on the blog, one prefecture at a time.", gd3_go:"Open the blog →",
-    gd4_title:"Travel Japan", gd4_desc:"Language plus trip planning for Tokyo, Kyoto, Hokkaido and beyond.", gd4_go:"Plan a trip →",
-    gd5_title:"Explore", gd5_desc:"A clickable map of all 47 prefectures with data-grounded stats and quiz battles.", gd5_go:"Open the map →",
-    gd6_title:"Wildlife", gd6_desc:"Each prefecture's rare creatures from GBIF, drawn as pixel art. Yukika's territory.", gd6_go:"Meet them →",
-    gd7_title:"Quiz", gd7_desc:"AI-generated JLPT battles, N5 to N1. Earn XP and power up your guide Akari.", gd7_go:"Start a battle →",
-    gd8_title:"Pricing", gd8_desc:"Start free. Go Pro monthly, or own it forever with Lifetime.", gd8_go:"See plans →",
-    gd9_title:"Shadowing", gd9_desc:"Practice speaking with YouTube shadowing in our sister app, Echo.", gd9_go:"Open Echo →",
-    ft_tag:"What We Offer", ft_title:"Every tool you need,<br>in one place.",
-    f1_title:"Streak & Habit Engine", f1_desc:"Daily streaks, weekly targets, and achievement badges keep you consistent. Miss a day and lose your flame.",
-    f2_title:"AI Question Generator", f2_desc:"Infinite JLPT-style questions generated fresh every session. The AI adapts to your weak points automatically.",
-    f3_title:"JLPT Readiness Score", f3_desc:"A live dashboard shows your predicted exam score and how many weeks until you're ready.",
-    f4_title:"47-Prefecture Quest", f4_desc:"A clickable map of all 47 prefectures with data-grounded stats. Each region opens its own quiz battle and rare-creature pixel art.",
-    f5_title:"Culture Deep Dives", f5_desc:"Weekly essays on Japanese culture written by people who actually live here.",
-    f6_title:"Travel Japanese", f6_desc:"Phrase packs, etiquette guides, and survival vocabulary for your Japan trip.",
-    jlpt_tag:"Live AI Practice", jlpt_title:"AI-generated questions.<br>Every level. Every day.", jlpt_sub:"Fresh questions created by AI in real time — never the same test twice.",
+    nv_cta:"Free level test", h_kicker:"47 prefectures · photo-first guides · one honest place", h_title:"Japan, one prefecture at a time.", h_sub:"Where to go, what to eat, what to bring home, and the Japanese you’ll actually use — built from public data and CC photos, not brochures. Free to read. Free to start learning.", h_cta1:"Open the 47-prefecture map →", h_cta2:"Find my level (5 min)", h_photo:"Photo", st_more:"+ 39 more", st_photos:"Photos", co_h:"Collect Japan", co_all:"All collectible guides →", co1_tag:"Goshuin", co1_h:"Shrine &amp; temple stamps", co1_p:"What they mean, the etiquette, and how to collect them respectfully.", co2_tag:"Manhole cards", co2_h:"1,308 free cards, mapped", co2_p:"The lot system, where to pick them up, and every prefecture’s designs.", co3_tag:"Station stamps", co3_h:"Eki stamps &amp; the 6 melodies", co3_p:"Stamps at the ticket gate, and the station jingles worth stopping for.", ln_kicker:"Learn", ln_h:"Say it before you go.", ln_p:"Free JLPT-style questions, N5–N1, generated fresh. Find your level in five minutes — no sign-up.", qz_label:"Sample · JLPT N5", qz_sub:"Every morning, I ___ coffee.", lt_kicker:"Free · weekly", lt_h:"One prefecture a week, in your inbox.", lt_p:"Where to go, what to eat, what to bring home — plus new collectible hunts. Unsubscribe anytime.", lt_btn:"Send me the letter →", mb_h:"Move &amp; buy", mb1_p:"Visas, housing, the first 90 days — the practical timeline.", mb2_title:"Buy from Japan", mb2_go:"Proxy services compared →", mb2_p:"Buyee, ZenMarket, Remambo, Neokyo — fees and when to use which.", pr_line:"Everything above is free. Unlimited quiz, spaced repetition and PDF sheets are in Pro — $9.99/mo or $149 once.", jlpt_cta_new:"Find your level (5 min) — free →", jlpt_cta_note:"No signup — 12 questions, instant level. <a id=\"skip-cta\" href=\"quiz.html\">Skip to free quiz →</a>", gift_tag:"Give the gift of language", gift_h:"$5 = 10 students get 1 month of Pro.", gift_p:"No subscription. Buy 10 Pro codes for $5, and we email them to you to share — your Discord, a subreddit, a friend cramming for JLPT. Every code redeemed = one more learner with a fairer start.", gift_count:"Total students sponsored: <strong id=\"sponsor-counter-num\">…</strong>", gift_btn:"Gift 10 students — $5", gift_note:"Codes are emailed instantly. Redeem at /redeem.html. Valid 1 year.", nl_read_tag:"Read free", nl_thanks_head:"✓ You’re in — the first note arrives this week. Meanwhile, start with these:", fl1_6:"Find your level", fl1_7:"Progress dashboard",
+    pc6_title:"Move to Japan", pc6_go:"Living-in-Japan guide →",
     jlpt_legal:"Questions are independently AI-generated and not affiliated with or endorsed by the Japan Foundation or JEES.",
-    jlpt_prompt:"Select a level and tap New Question.",
-    btn_new:"⚡ New Question", btn_loading:"Generating…", btn_explain:"💡 Explain Answer",
-    ai_note:"Questions generated by Claude AI · For practice only · Not official exam material",
-    gen_error:"Generation failed. Please try again.", rate_limit:"Daily free limit reached.",
-    lv_beginner:"Beginner", lv_basic:"Basic", lv_inter:"Intermediate", lv_adv:"Advanced", lv_exp:"Expert",
-    db_tag:"Progress Dashboard", db_title:"Always know exactly<br>where you stand.", db_sub:"Your JLPT readiness score updates after every quiz.",
-    db_main_title:"Skill Breakdown — Current Level: N3",
-    sk1:"Vocabulary", sk2:"Grammar", sk3:"Kanji Reading", sk4:"Listening", sk5:"Reading Speed",
-    ds1_label:"Current Streak", ds1_sub:"days in a row", ds2_label:"Questions Answered", ds2_sub:"this month",
-    jp_tag:"JLPT Prediction", jp_sub:"Exam-ready in ~6 weeks",
-    an_tag:"Anime & Manga Japanese", an_title:"Learn the Japanese<br>you actually want to speak.", an_sub:"Textbooks teach formal Japanese. We teach you what anime characters actually say.",
-    an1_tag:"Action / Shonen", an1_title:"Battle Expressions", an1_eng:'"Don\'t give up!" — used in everyday encouragement',
-    an2_tag:"Slice of Life", an2_title:"Daily Conversation", an2_eng:'"Good work today!" — essential workplace phrase',
-    an3_tag:"Fantasy / Isekai", an3_title:"Dramatic Japanese", an3_eng:'"No way…!" — expresses disbelief, very natural',
-    an4_tag:"Food & Culture", an4_title:"Restaurant Japanese", an4_eng:'"Let\'s eat!" — said before every meal in Japan',
-    cu_tag:"Culture & Lifestyle", cu_title:"Japan beyond the textbook.", cu_sub:"We write about etiquette, seasons, food and everyday life — one prefecture at a time, on the blog.", cu_cta:"Read the 47-prefecture blog →",
-    cc1_tag:"Tradition", cc1_title:"Shrine Etiquette", cc1_sub:"How to behave at Shinto shrines — clapping, bowing, and what to say",
-    cc2_tag:"Food", cc2_title:"Ramen Culture", cc2_sub:"Regional styles, ordering etiquette, and vocabulary of the ramen shop",
-    cc3_tag:"Seasons", cc3_title:"Hanami Tradition", cc3_sub:"Cherry blossom viewing customs, vocabulary, and what to bring",
-    cc4_tag:"Work", cc4_title:"Japanese Work Culture", cc4_sub:"Keigo, business cards, and the unwritten rules of Japanese offices",
-    tr_tag:"Travel Japan", tr_title:"Ready to go? We'll help<br>you get there.", tr_sub:"Partner travel guides combine language prep with trip planning.",
-    td1:"Tokyo", td1_desc:"From Shibuya Crossing to hidden izakayas — your complete language + travel guide.", td1_cta:"Plan your Tokyo trip →",
-    td2:"Kyoto", td2_desc:"Temples, tea ceremonies, geisha districts. Learn the formal Japanese for Japan's cultural heart.", td2_cta:"Explore Kyoto →",
-    td3:"Hokkaido", td3_desc:"Powder snow, seafood markets, untouched nature. The language guide for Japan's wild north.", td3_cta:"Discover Hokkaido →",
-    pr_tag:"Pricing", pr_title:"Simple pricing.<br>Serious results.", pr_sub:"Start free. Upgrade anytime. Or own it forever with Lifetime.",
-    pl1_name:"Free", pl1_period:"forever", pl1_f1:"Unlimited N5 & N4 questions", pl1_f2:"N3–N1: 30 questions a day", pl1_f3:"Streak + readiness dashboard", pl1_f4:"Prefecture Quest + culture", pl1_btn:"Get Started Free",
-    pl2_badge:"Most Popular", pl2_name:"Pro", pl2_period:"per month", pl2_f1:"Unlimited AI questions", pl2_f2:"All JLPT levels N1–N5", pl2_f3:"Full streak + badge system", pl2_f4:"JLPT readiness dashboard", pl2_f5:"47-Prefecture Quest access", pl2_f6:"Full culture library", pl2_f7:"Travel phrase packs", pl2_btn:"Start Pro — $9.99/mo", pl2_save:"SAVE 33%", pl2_pro1:"Unlimited questions — no daily cap", pl2_pro2:"Every level, N5 to N1", pl2_pro3:"Unlimited spaced-repetition review", pl2_pro4:"Printable PDF study sheets", pl2_pro5:"Streak, badges & readiness dashboard",
-    pl3_name:"Academic", pl3_period:"per month", pl3_f1:"Everything in Pro", pl3_f2:"Academic Japanese module", pl3_f3:"Research vocabulary packs", pl3_f4:"Formal writing guides", pl3_f5:"PDF study exports", pl3_btn:"Go Academic",
+    pr_tag:"Pricing", pr_title:"Simple pricing.<br>Serious results.", pl1_name:"Free", pl1_period:"forever", pl1_f1:"Unlimited N5 & N4 questions", pl1_f2:"N3–N1: 30 questions a day", pl1_f3:"Streak + readiness dashboard", pl1_f4:"Prefecture Quest + culture", pl1_btn:"Get Started Free",
+    pl2_badge:"Most Popular", pl2_name:"Pro", pl2_period:"per month", pl2_btn:"Start Pro — $9.99/mo", pl2_save:"SAVE 33%", pl2_pro1:"Unlimited questions — no daily cap", pl2_pro2:"Every level, N5 to N1", pl2_pro3:"Unlimited spaced-repetition review", pl2_pro4:"Printable PDF study sheets", pl2_pro5:"Streak, badges & readiness dashboard",
     pl4_badge:"Best Value", pl4_name:"Lifetime", pl4_period:"one-time", pl4_f1:"Everything in Pro — forever", pl4_f2:"All future content included", pl4_f3:"No recurring charges, ever", pl4_f4:"Founding member badge", pl4_f5:"Early access to new features", pl4_btn:"Own It Forever", pl4_note:"~15 months of Pro",
-    nl_tag:"47 Notes from Japan", nl_title:"Shall we visit one of the 47 with us this week?", nl_sub:"A weekly note from a family of three slowly walking through Japan's 47 prefectures — one place, one phrase, one small thing we noticed.", nl_placeholder:"your@email.com", nl_btn:"Subscribe", nl_note:"Weekly. Free. Unsubscribe whenever you like.",
+    nl_placeholder:"your@email.com", nl_btn:"Subscribe", nl_note:"Weekly. Free. Unsubscribe whenever you like.",
     footer_desc:"AI-powered Japanese learning for the global curious.",
-    fl1_head:"Learn", fl1_1:"JLPT Practice", fl1_2:"Shadowing (Echo)", fl1_5:"47-Prefecture Quest", fl1_3:"Academic Japanese", fl1_4:"Travel Phrases", fl1_6:"Find your level", fl1_7:"Progress dashboard",
+    fl1_head:"Learn", fl1_1:"JLPT Practice", fl1_2:"Shadowing (Echo)", fl1_5:"47-Prefecture Quest", fl1_4:"Travel Phrases", fl1_6:"Find your level", fl1_7:"Progress dashboard",
     fl2_head:"Explore", fl2_1:"Culture Articles", fl2_2:"Japan Travel", fl2_3:"Newsletter", fl2_4:"Blog",
     fl3_head:"Company", fl3_1:"About", fl3_2:"Pricing", fl3_3:"Affiliate Program", fl3_4:"Contact",
-    footer_legal:"Privacy · Terms · Affiliate Disclosure",
-    demo_correct:"✓ Correct! Keep going.", demo_wrong:"✗ Not quite — answer: "
-  },
+    footer_legal:"Privacy · Terms · Affiliate Disclosure"
+    },
 
   zh: {
-    nav_roadmap:"學習路線", nav_learn:"開始學習", nav_culture:"日本文化", nav_travel:"旅遊日本", nav_explore:"探索日本 🗾", nav_quiz:"⚔️ 測驗", nav_pricing:"定價", nav_shadowing:"🎙 跟讀練習", nav_cta:"免費開始 →",
-    hero_tag:"學習 · 生活 · 旅遊", hero_title1:"學日語，住日本，", hero_title2:"遊遍日本。",
-    hero_promise:"🗺️ 你與日本的整段旅程，一個誠實的地方",
-    hero_sub:"JLPT 與 JFT 應試準備、以公開資料建立的 47 都道府縣資料庫 — 1,308 張人孔蓋卡、47 都道府縣最低工資、車站間交通時間 — 以及誠實的赴日移居指南。免費開始使用。",
-    hero_cta1:"⚡ 測你的程度 — 5 分鐘・免費", hero_cta2:"認識各地魅力 🗾",
-    stat1:"今天開始", stat2:"全JLPT級別", stat3:"已收錄收藏品",
-    streak_label:"連續學習天數", streak_sub:"連續天數",
-    quiz_label:"每日測驗", quiz_sub:"她每天早上___起床。",
-    pw_title:"JLPT 備考進度", pw_left:"已完成N4 ✓", pw_right:"約6週後考N3",
-    rm_tag:"您的學習路線", rm_title:"邁向 N3 的逐步路徑。<br>每一步我們都陪您走。",
-    rm_sub:"不同於讓您猜測的應用程式，NihongoHub為您提供清晰的里程碑地圖。",
-    rm_zero_cta:"完全新手？免費學ひらがな — 第一個月從這裡開始 →",
-    rm1_month:"第1個月", rm1_goal:"平假名與片假名", rm1_desc:"掌握兩套字母 + 200個核心詞彙。能閱讀菜單、標誌和簡單句子。", rm1_badge:"✓ N5 基礎",
-    rm2_month:"第2-3個月", rm2_goal:"文法與漢字", rm2_desc:"100個必學漢字、基礎文法句型，以及日常會話用語。", rm2_badge:"✓ N5 合格",
-    rm3_month:"第4-5個月", rm3_goal:"中級流利度", rm3_desc:"擴展到500+漢字、複雜文法，並閱讀真實日語文本和各類媒體。", rm3_badge:"✓ N4 合格",
-    rm4_month:"第6個月", rm4_goal:"N3 考試準備", rm4_desc:"針對性測驗練習與弱點複習，建立應考信心。", rm4_badge:"🎯 N3 目標",
-    gd_tag:"從這裡開始", gd_title:"你想從哪裡開始？", gd_sub:"NihongoHub 陪你走完與日本的整段關係 — 學習、生活、旅遊。選擇你現在的位置。", pc5_title:"通過 JLPT/JFT", pc5_go:"應試準備＋免費試做 →", pc6_title:"移居日本", pc6_go:"赴日生活指南 →",
-    pc1_title:"學日語", pc1_desc:"5 分鐘測出 JLPT 程度，再用會隨你調整的 AI 測驗練習 — N5 到 N1，免費開始。", pc1_go:"測我的程度 →",
-    pc2_title:"認識日本", pc2_desc:"禮儀、季節、飲食與日常 — 由住在當地的人撰寫的 47 縣誠實文化指南。", pc2_go:"閱讀指南 →",
-    pc3_title:"規劃旅行", pc3_desc:"可點擊的各縣地圖：看點、當地用語、住宿與訂房一次到位。", pc3_go:"打開地圖 →",
-    pc4_title:"遊玩・收集", pc4_desc:"把學習變成任務：通關測驗、獲得稱號與裝備、點亮地圖、培養自己的角色。", pc4_go:"開始旅程 →",
-    gd1_title:"學習路線", gd1_desc:"邁向 N3 的逐步路徑 — 下一步永遠清楚。", gd1_go:"看路線 →",
-    gd2_title:"開始學習", gd2_desc:"連續學習、AI 測驗對戰、47 都道府縣探索、跟讀練習 — 全部一站式。", gd2_go:"我們的服務 →",
-    gd3_title:"日本文化", gd3_desc:"禮儀、季節、日常生活 — 在部落格上，一個都道府縣一篇文章慢慢讀。", gd3_go:"打開部落格 →",
-    gd4_title:"旅遊日本", gd4_desc:"語言準備加上行程規劃 — 東京、京都、北海道與更多。", gd4_go:"計畫旅程 →",
-    gd5_title:"探索日本", gd5_desc:"47 都道府縣的可點擊地圖，附有數據佐證的統計與測驗對戰。", gd5_go:"打開地圖 →",
-    gd6_title:"野生生物", gd6_desc:"來自 GBIF 的每個都道府縣稀有生物，畫成像素藝術 — Yukika 的領域。", gd6_go:"去看牠們 →",
-    gd7_title:"測驗", gd7_desc:"AI 生成的 JLPT 對戰，N5 到 N1。獲得 XP，讓嚮導 Akari 升級。", gd7_go:"開始對戰 →",
-    gd8_title:"定價", gd8_desc:"免費開始。每月升級 Pro，或一次買斷 Lifetime。", gd8_go:"查看方案 →",
-    gd9_title:"跟讀練習", gd9_desc:"用我們的姊妹應用 Echo，跟著 YouTube 練習口說。", gd9_go:"打開 Echo →",
-    ft_tag:"我們的服務", ft_title:"您需要的每個工具，<br>一個平台全搞定。",
-    f1_title:"連續學習引擎", f1_desc:"每日連續、每週目標和成就徽章讓您保持一致。錯過一天就失去您的火焰。",
-    f2_title:"AI 題目生成器", f2_desc:"每次練習都生成全新的JLPT風格題目。AI自動針對您的弱點進行調整。",
-    f3_title:"JLPT 備考評分", f3_desc:"即時儀表板顯示您的預測考試分數和距離考試準備好還需幾週。",
-    f4_title:"47都道府縣探索", f4_desc:"47都道府縣的可點擊地圖，附數據佐證的統計資料。每個地區可進入專屬的測驗對戰與稀有生物像素畫廊。",
-    f5_title:"文化深度解析", f5_desc:"每週由真正住在日本的人撰寫的日本文化深度文章。",
-    f6_title:"旅遊日語", f6_desc:"旅遊日本的短語包、禮儀指南和生存詞彙。",
-    jlpt_tag:"即時AI練習", jlpt_title:"AI即時生成題目。<br>每個級別。每一天。", jlpt_sub:"每道題目由AI全新生成 — 永不重複。",
+    nv_cta:"免費程度測驗", h_kicker:"47 都道府縣 · 以照片為主的指南 · 一個誠實的地方", h_title:"日本，一次一個縣。", h_sub:"去哪裡、吃什麼、帶什麼回家，以及你真正用得上的日語 — 以公開資料與 CC 授權照片打造，不是旅遊手冊。免費閱讀，免費開始學習。", h_cta1:"打開 47 都道府縣地圖 →", h_cta2:"測我的程度（5 分鐘）", h_photo:"照片", st_more:"+ 還有 39 個縣", st_photos:"照片", co_h:"收集日本", co_all:"所有收藏指南 →", co1_tag:"御朱印", co1_h:"神社與寺院的印章", co1_p:"它們的意義、參拜禮儀，以及如何以尊重的方式收集。", co2_tag:"人孔蓋卡", co2_h:"1,308 張免費卡片，全部標在地圖上", co2_p:"發行批次制度、領取地點，以及每個縣的設計。", co3_tag:"車站印章", co3_h:"驗票口的印章與 6 首發車音樂", co3_p:"驗票口旁的印章，以及值得停下腳步聆聽的車站音樂。", ln_kicker:"學習", ln_h:"出發前，先會說。", ln_p:"免費的 JLPT 風格題目，N5–N1，每次全新生成。5 分鐘測出你的程度 — 不必註冊。", qz_label:"範例 · JLPT N5", qz_sub:"每天早上我___咖啡。", lt_kicker:"免費 · 每週", lt_h:"每週一個縣，寄到你的信箱。", lt_p:"去哪裡、吃什麼、帶什麼回家 — 還有新的收藏尋寶。隨時可以取消。", lt_btn:"寄信給我 →", mb_h:"移居與購物", mb1_p:"簽證、住房、最初 90 天 — 實用時間表。", mb2_title:"從日本購物", mb2_go:"代購服務比較 →", mb2_p:"Buyee、ZenMarket、Remambo、Neokyo — 費用與適用情境。", pr_line:"以上全部免費。無限測驗、間隔重複與 PDF 學習表在 Pro 方案 — 每月 $9.99，或一次 $149。", jlpt_cta_new:"測你的程度（5 分鐘）— 免費 →", jlpt_cta_note:"不必註冊 — 12 題，立即知道程度。<a id=\"skip-cta\" href=\"quiz.html\">直接做免費測驗 →</a>", gift_tag:"送出語言的禮物", gift_h:"$5 = 10 位學生獲得 1 個月 Pro。", gift_p:"無需訂閱。用 $5 購買 10 組 Pro 兌換碼，我們會寄到你的信箱，供你分享 — 你的 Discord、某個 subreddit、正在準備 JLPT 的朋友。每一組被兌換的碼，就是一位獲得更公平起點的學習者。", gift_count:"已贊助學生總數：<strong id=\"sponsor-counter-num\">…</strong>", gift_btn:"贊助 10 位學生 — $5", gift_note:"兌換碼立即寄出。於 /redeem.html 兌換。有效期 1 年。", nl_read_tag:"免費閱讀", nl_thanks_head:"✓ 訂閱成功 — 第一封信本週寄出。在此之前，先從這些開始：", fl1_6:"測我的程度", fl1_7:"學習進度儀表板",
+    pc6_title:"移居日本", pc6_go:"赴日生活指南 →",
     jlpt_legal:"練習題目由AI獨立生成，與日本國際交流基金會或JEES無關。",
-    jlpt_prompt:"選擇級別後點擊「新題目」。",
-    btn_new:"⚡ 新題目", btn_loading:"生成中…", btn_explain:"💡 解析答案",
-    ai_note:"由Claude AI生成 · 僅供練習 · 非官方考試材料",
-    gen_error:"生成失敗，請重試。", rate_limit:"今日免費額度已用完。",
-    lv_beginner:"初級", lv_basic:"基礎", lv_inter:"中級", lv_adv:"進階", lv_exp:"專家",
-    db_tag:"學習進度儀表板", db_title:"隨時掌握<br>自己的學習狀況。", db_sub:"每次測驗後JLPT備考評分自動更新。",
-    db_main_title:"技能分析 — 當前級別：N3",
-    sk1:"詞彙", sk2:"文法", sk3:"漢字閱讀", sk4:"聽力理解", sk5:"閱讀速度",
-    ds1_label:"連續學習天數", ds1_sub:"連續天數", ds2_label:"已回答題目數", ds2_sub:"本月",
-    jp_tag:"JLPT 預測", jp_sub:"約6週後可參加考試",
-    an_tag:"動漫與漫畫日語", an_title:"學習您真正<br>想說的日語。", an_sub:"教科書教的是正式日語。我們教您動漫角色真正說的話。",
-    an1_tag:"動作 / 少年漫", an1_title:"戰鬥用語", an1_eng:'"不要放棄！" — 日常鼓勵用語',
-    an2_tag:"日常生活", an2_title:"日常對話", an2_eng:'"辛苦了！" — 職場必備用語',
-    an3_tag:"奇幻 / 異世界", an3_title:"戲劇性日語", an3_eng:'"不可能吧…！" — 表達驚訝，非常自然',
-    an4_tag:"美食與文化", an4_title:"餐廳日語", an4_eng:'"開動了！" — 在日本每次用餐前都會說',
-    cu_tag:"文化與生活方式", cu_title:"超越教科書的日本。", cu_sub:"我們撰寫禮儀、季節、飲食和日常生活 — 每次一個都道府縣，全部都在部落格上。", cu_cta:"閱讀47都道府縣部落格 →",
-    cc1_tag:"傳統", cc1_title:"神社禮儀", cc1_sub:"如何在神道神社行為舉止 — 拍手、鞠躬和應說的話",
-    cc2_tag:"美食", cc2_title:"拉麵文化", cc2_sub:"各地口味、點餐禮儀和拉麵店必備詞彙",
-    cc3_tag:"季節", cc3_title:"賞花傳統", cc3_sub:"賞櫻花習俗、相關詞彙和應攜帶的物品",
-    cc4_tag:"職場", cc4_title:"日本職場文化", cc4_sub:"敬語、名片和日本辦公室的不成文規定",
-    tr_tag:"旅遊日本", tr_title:"準備出發了嗎？<br>我們幫您實現。", tr_sub:"合作旅遊指南結合語言準備和行程規劃。",
-    td1:"東京", td1_desc:"從涉谷十字路口到隱藏的居酒屋 — 完整的語言+旅遊指南。", td1_cta:"規劃東京之旅 →",
-    td2:"京都", td2_desc:"寺廟、茶道、藝妓區。學習日本文化之心所需的正式日語。", td2_cta:"探索京都 →",
-    td3:"北海道", td3_desc:"粉雪、海鮮市場、原始自然。日本北部野性之地的語言指南。", td3_cta:"探索北海道 →",
-    pr_tag:"定價", pr_title:"簡單定價。<br>認真出成果。", pr_sub:"免費開始。隨時升級。或者終身擁有。",
-    pl1_name:"免費", pl1_period:"永久免費", pl1_f1:"N5、N4 無限作答", pl1_f2:"N3–N1 每日30題", pl1_f3:"連續記錄＋程度儀表板", pl1_f4:"縣府任務＋文化", pl1_btn:"免費開始",
-    pl2_badge:"最受歡迎", pl2_name:"專業版", pl2_period:"每月", pl2_f1:"無限AI題目", pl2_f2:"全JLPT級別N1-N5", pl2_f3:"完整連續+徽章系統", pl2_f4:"JLPT備考儀表板", pl2_f5:"47都道府縣探索通行證", pl2_f6:"完整文化資料庫", pl2_f7:"旅遊短語包", pl2_btn:"開始專業版 — $9.99/月", pl2_save:"省33%", pl2_pro1:"題目無限 — 無每日上限", pl2_pro2:"N5 至 N1 全級別", pl2_pro3:"間隔重複複習無限", pl2_pro4:"可列印的 PDF 學習表", pl2_pro5:"連續記錄・徽章・程度儀表板",
-    pl3_name:"學術版", pl3_period:"每月", pl3_f1:"包含專業版所有功能", pl3_f2:"學術日語模組", pl3_f3:"研究詞彙包", pl3_f4:"正式寫作指南", pl3_f5:"PDF學習匯出", pl3_btn:"選擇學術版",
+    pr_tag:"定價", pr_title:"簡單定價。<br>認真出成果。", pl1_name:"免費", pl1_period:"永久免費", pl1_f1:"N5、N4 無限作答", pl1_f2:"N3–N1 每日30題", pl1_f3:"連續記錄＋程度儀表板", pl1_f4:"縣府任務＋文化", pl1_btn:"免費開始",
+    pl2_badge:"最受歡迎", pl2_name:"專業版", pl2_period:"每月", pl2_btn:"開始專業版 — $9.99/月", pl2_save:"省33%", pl2_pro1:"題目無限 — 無每日上限", pl2_pro2:"N5 至 N1 全級別", pl2_pro3:"間隔重複複習無限", pl2_pro4:"可列印的 PDF 學習表", pl2_pro5:"連續記錄・徽章・程度儀表板",
     pl4_badge:"最划算", pl4_name:"終身版", pl4_period:"一次性付款", pl4_f1:"永久包含專業版所有功能", pl4_f2:"所有未來內容包含在內", pl4_f3:"永不再收費", pl4_f4:"創始會員徽章", pl4_f5:"搶先體驗新功能", pl4_btn:"永久擁有", pl4_note:"相當於約15個月專業版",
-    nl_tag:"47 Notes from Japan", nl_title:"這個禮拜，要不要跟我們一起走一個縣？", nl_sub:"一家三口慢慢走過日本47個都道府縣，每週寄一封信 — 一個地方、一個短語、我們注意到的一件小事。", nl_placeholder:"您的電子郵件", nl_btn:"訂閱", nl_note:"每週一封。免費。隨時取消。",
+    nl_placeholder:"您的電子郵件", nl_btn:"訂閱", nl_note:"每週一封。免費。隨時取消。",
     footer_desc:"為全球好奇者提供的AI日語學習。",
-    fl1_head:"學習", fl1_1:"JLPT練習", fl1_2:"跟讀練習 (Echo)", fl1_5:"47都道府縣探索", fl1_3:"學術日語", fl1_4:"旅遊短語", fl1_6:"測你的程度", fl1_7:"學習儀表板",
+    fl1_head:"學習", fl1_1:"JLPT練習", fl1_2:"跟讀練習 (Echo)", fl1_5:"47都道府縣探索", fl1_4:"旅遊短語", fl1_6:"測你的程度", fl1_7:"學習儀表板",
     fl2_head:"探索", fl2_1:"文化文章", fl2_2:"日本旅遊", fl2_3:"電子報", fl2_4:"部落格",
     fl3_head:"公司", fl3_1:"關於我們", fl3_2:"定價", fl3_3:"聯盟計劃", fl3_4:"聯絡我們",
-    footer_legal:"隱私政策 · 服務條款 · 聯盟披露",
-    demo_correct:"✓ 正確！繼續加油。", demo_wrong:"✗ 不對 — 正確答案："
-  },
+    footer_legal:"隱私政策 · 服務條款 · 聯盟披露"
+    },
 
   es: {
-    nav_roadmap:"Ruta", nav_learn:"Aprender", nav_culture:"Cultura", nav_travel:"Viaja a Japón", nav_explore:"Explora 🗾", nav_quiz:"⚔️ Quiz", nav_pricing:"Precios", nav_shadowing:"🎙 Shadowing", nav_cta:"Empezar Gratis →",
-    hero_tag:"Apréndelo · Vívelo · Recórrelo", hero_title1:"Aprende japonés. Vive Japón.", hero_title2:"Recorre Japón.",
-    hero_promise:"🗺️ Toda tu relación con Japón, en un lugar honesto",
-    hero_sub:"Preparación para el JLPT y el JFT, un conjunto de datos de las 47 prefecturas creado a partir de fuentes públicas — 1.308 tarjetas de alcantarilla, los 47 salarios mínimos, tiempos de viaje entre estaciones — y guías honestas para mudarte a Japón. Gratis para empezar.",
-    hero_cta1:"⚡ Descubre tu nivel — 5 min, gratis", hero_cta2:"Descubre cada región 🗾",
-    stat1:"Empieza Hoy", stat2:"Todos los Niveles", stat3:"Coleccionables Mapeados",
-    streak_label:"Racha Actual", streak_sub:"días seguidos",
-    quiz_label:"Quiz Diario", quiz_sub:"Ella se despierta todas las mañanas ___.",
-    pw_title:"Preparación JLPT", pw_left:"N4 completado ✓", pw_right:"Examen N3 en ~6 semanas",
-    rm_tag:"Tu Ruta de Aprendizaje", rm_title:"Tu camino paso a paso hacia el N3.<br>Te mostramos cada paso.",
-    rm_sub:"A diferencia de las apps que te dejan adivinar, NihongoHub te da un mapa claro de hitos.",
-    rm_zero_cta:"¿Principiante total? Aprende かな gratis — el Mes 1 empieza aquí →",
-    rm1_month:"Mes 1", rm1_goal:"Hiragana y Katakana", rm1_desc:"Domina ambos sistemas + 200 palabras básicas. Lee menús, letreros y oraciones simples.", rm1_badge:"✓ Base N5",
-    rm2_month:"Mes 2–3", rm2_goal:"Gramática y Kanji", rm2_desc:"100 Kanji esenciales, patrones gramaticales básicos y frases de conversación cotidiana.", rm2_badge:"✓ N5 Listo",
-    rm3_month:"Mes 4–5", rm3_goal:"Fluidez Intermedia", rm3_desc:"Expande a 500+ Kanji, gramática compleja y lectura de textos auténticos y diversos medios.", rm3_badge:"✓ N4 Listo",
-    rm4_month:"Mes 6", rm4_goal:"Preparación Examen N3", rm4_desc:"Práctica de cuestionarios enfocada y repaso de puntos débiles para ganar confianza.", rm4_badge:"🎯 Objetivo N3",
-    gd_tag:"Empieza Aquí", gd_title:"¿Por dónde quieres empezar?", gd_sub:"NihongoHub acompaña toda tu relación con Japón — apréndelo, vívelo, recórrelo. Elige dónde estás.", pc5_title:"Aprueba el JLPT/JFT", pc5_go:"Preparación + muestra gratis →", pc6_title:"Múdate a Japón", pc6_go:"Guía para vivir en Japón →",
-    pc1_title:"Aprende japonés", pc1_desc:"Descubre tu nivel JLPT en 5 minutos y practica con quizzes de IA que se adaptan a ti — de N5 a N1, gratis.", pc1_go:"Ver mi nivel →",
-    pc2_title:"Entiende Japón", pc2_desc:"Etiqueta, estaciones, comida y vida diaria — guías culturales honestas de las 47 prefecturas, por quienes viven aquí.", pc2_go:"Leer las guías →",
-    pc3_title:"Planea un viaje", pc3_desc:"Un mapa de cada prefectura con qué ver, las palabras locales y dónde alojarte y reservar.", pc3_go:"Abrir el mapa →",
-    pc4_title:"Juega y colecciona", pc4_desc:"Convierte el estudio en una misión: supera quizzes, gana títulos y equipo, ilumina el mapa y haz crecer tu personaje.", pc4_go:"Empezar mi viaje →",
-    gd1_title:"Ruta", gd1_desc:"Tu camino paso a paso hacia el N3 — sabe exactamente qué sigue.", gd1_go:"Ver la ruta →",
-    gd2_title:"Aprender", gd2_desc:"Todas las herramientas de estudio en un solo lugar — rachas, batallas de quiz IA, misión por las 47 prefecturas y shadowing.", gd2_go:"Qué ofrecemos →",
-    gd3_title:"Cultura", gd3_desc:"Etiqueta, estaciones y vida cotidiana — léelo en el blog, una prefectura a la vez.", gd3_go:"Abrir el blog →",
-    gd4_title:"Viaja a Japón", gd4_desc:"Idioma más planificación de viaje para Tokio, Kioto, Hokkaido y más.", gd4_go:"Planea un viaje →",
-    gd5_title:"Explorar", gd5_desc:"Un mapa interactivo de las 47 prefecturas con estadísticas verificadas y batallas de quiz.", gd5_go:"Abrir el mapa →",
-    gd6_title:"Fauna", gd6_desc:"Criaturas raras de cada prefectura desde GBIF, dibujadas como pixel art. Territorio de Yukika.", gd6_go:"Conócelas →",
-    gd7_title:"Quiz", gd7_desc:"Batallas JLPT generadas por IA, N5 a N1. Gana XP y mejora a tu guía Akari.", gd7_go:"Empezar batalla →",
-    gd8_title:"Precios", gd8_desc:"Empieza gratis. Pasa a Pro mensual, o tenlo para siempre con Lifetime.", gd8_go:"Ver planes →",
-    gd9_title:"Shadowing", gd9_desc:"Practica hablando con shadowing de YouTube en nuestra app hermana, Echo.", gd9_go:"Abrir Echo →",
-    ft_tag:"Lo Que Ofrecemos", ft_title:"Todas las herramientas<br>en un solo lugar.",
-    f1_title:"Motor de Racha y Hábitos", f1_desc:"Rachas diarias, metas semanales y medallas de logros te mantienen constante.",
-    f2_title:"Generador de Preguntas IA", f2_desc:"Preguntas estilo JLPT generadas frescas en cada sesión. La IA se adapta a tus puntos débiles.",
-    f3_title:"Puntuación de Preparación JLPT", f3_desc:"Un panel en vivo muestra tu puntuación predicha y cuántas semanas faltan para estar listo.",
-    f4_title:"Misión por las 47 Prefecturas", f4_desc:"Un mapa interactivo de las 47 prefecturas con estadísticas verificadas. Cada región abre su propia batalla de quiz y arte pixelado de criaturas raras.",
-    f5_title:"Inmersión Cultural", f5_desc:"Ensayos semanales sobre cultura japonesa escritos por personas que realmente viven allí.",
-    f6_title:"Japonés de Viaje", f6_desc:"Paquetes de frases, guías de etiqueta y vocabulario de supervivencia para tu viaje.",
-    jlpt_tag:"Práctica IA en Vivo", jlpt_title:"Preguntas generadas por IA.<br>Cada nivel. Cada día.", jlpt_sub:"Preguntas nuevas creadas por IA en tiempo real — nunca el mismo examen dos veces.",
+    nv_cta:"Test de nivel gratis", h_kicker:"47 prefecturas · guías con fotos primero · un lugar honesto", h_title:"Japón, una prefectura a la vez.", h_sub:"Adónde ir, qué comer, qué llevarte a casa y el japonés que de verdad usarás — hecho con datos públicos y fotos CC, no con folletos. Gratis para leer. Gratis para empezar a aprender.", h_cta1:"Abrir el mapa de las 47 prefecturas →", h_cta2:"Descubrir mi nivel (5 min)", h_photo:"Foto", st_more:"+ 39 más", st_photos:"Fotos", co_h:"Colecciona Japón", co_all:"Todas las guías de coleccionables →", co1_tag:"Goshuin", co1_h:"Sellos de santuarios y templos", co1_p:"Qué significan, la etiqueta y cómo coleccionarlos con respeto.", co2_tag:"Tarjetas de alcantarilla", co2_h:"1.308 tarjetas gratis, en el mapa", co2_p:"El sistema de lotes, dónde recogerlas y los diseños de cada prefectura.", co3_tag:"Sellos de estación", co3_h:"Sellos eki y las 6 melodías", co3_p:"Sellos junto a los tornos, y las melodías de estación por las que vale la pena detenerse.", ln_kicker:"Aprende", ln_h:"Dilo antes de ir.", ln_p:"Preguntas gratis estilo JLPT, N5–N1, generadas al momento. Descubre tu nivel en cinco minutos — sin registro.", qz_label:"Ejemplo · JLPT N5", qz_sub:"Cada mañana ___ café.", lt_kicker:"Gratis · semanal", lt_h:"Una prefectura por semana, en tu correo.", lt_p:"Adónde ir, qué comer, qué llevarte a casa — más nuevas cacerías de coleccionables. Cancela cuando quieras.", lt_btn:"Envíame la carta →", mb_h:"Mudarse y comprar", mb1_p:"Visados, vivienda, los primeros 90 días — el calendario práctico.", mb2_title:"Comprar desde Japón", mb2_go:"Servicios proxy comparados →", mb2_p:"Buyee, ZenMarket, Remambo, Neokyo — tarifas y cuándo usar cada uno.", pr_line:"Todo lo anterior es gratis. El quiz ilimitado, la repetición espaciada y las hojas PDF están en Pro — $9.99/mes o $149 una sola vez.", jlpt_cta_new:"Descubre tu nivel (5 min) — gratis →", jlpt_cta_note:"Sin registro — 12 preguntas, nivel al instante. <a id=\"skip-cta\" href=\"quiz.html\">Ir al quiz gratis →</a>", gift_tag:"Regala el idioma", gift_h:"$5 = 10 estudiantes reciben 1 mes de Pro.", gift_p:"Sin suscripción. Compra 10 códigos Pro por $5 y te los enviamos por correo para compartir — tu Discord, un subreddit, un amigo que estudia para el JLPT. Cada código canjeado = un estudiante más con un comienzo más justo.", gift_count:"Estudiantes apadrinados en total: <strong id=\"sponsor-counter-num\">…</strong>", gift_btn:"Regalar a 10 estudiantes — $5", gift_note:"Los códigos se envían al instante. Canjéalos en /redeem.html. Válidos 1 año.", nl_read_tag:"Leer gratis", nl_thanks_head:"✓ Ya estás dentro — la primera carta llega esta semana. Mientras tanto, empieza por estas:", fl1_6:"Descubre tu nivel", fl1_7:"Panel de progreso",
+    pc6_title:"Múdate a Japón", pc6_go:"Guía para vivir en Japón →",
     jlpt_legal:"Las preguntas son generadas por IA de forma independiente, sin afiliación con Japan Foundation o JEES.",
-    jlpt_prompt:"Selecciona un nivel y toca Nueva Pregunta.",
-    btn_new:"⚡ Nueva Pregunta", btn_loading:"Generando…", btn_explain:"💡 Explicar Respuesta",
-    ai_note:"Generado por Claude AI · Solo práctica · No es material oficial",
-    gen_error:"Error al generar. Intenta de nuevo.", rate_limit:"Límite diario gratuito alcanzado.",
-    lv_beginner:"Principiante", lv_basic:"Básico", lv_inter:"Intermedio", lv_adv:"Avanzado", lv_exp:"Experto",
-    db_tag:"Panel de Progreso", db_title:"Siempre sabe exactamente<br>dónde estás.", db_sub:"Tu puntuación de preparación JLPT se actualiza después de cada quiz.",
-    db_main_title:"Desglose de Habilidades — Nivel Actual: N3",
-    sk1:"Vocabulario", sk2:"Gramática", sk3:"Lectura de Kanji", sk4:"Comprensión Auditiva", sk5:"Velocidad de Lectura",
-    ds1_label:"Racha Actual", ds1_sub:"días seguidos", ds2_label:"Preguntas Respondidas", ds2_sub:"este mes",
-    jp_tag:"Predicción JLPT", jp_sub:"Listo para el examen en ~6 semanas",
-    an_tag:"Japonés de Anime y Manga", an_title:"Aprende el japonés<br>que realmente quieres hablar.", an_sub:"Los libros de texto enseñan japonés formal. Nosotros te enseñamos lo que dicen los personajes de anime.",
-    an1_tag:"Acción / Shonen", an1_title:"Expresiones de Batalla", an1_eng:'"¡No te rindas!" — usado para animar en la vida cotidiana',
-    an2_tag:"Slice of Life", an2_title:"Conversación Diaria", an2_eng:'"¡Buen trabajo hoy!" — frase esencial en el trabajo',
-    an3_tag:"Fantasía / Isekai", an3_title:"Japonés Dramático", an3_eng:'"¡No puede ser…!" — expresa incredulidad, muy natural',
-    an4_tag:"Comida y Cultura", an4_title:"Japonés de Restaurante", an4_eng:'"¡Buen provecho!" — se dice antes de cada comida en Japón',
-    cu_tag:"Cultura y Estilo de Vida", cu_title:"Japón más allá del libro de texto.", cu_sub:"Escribimos sobre etiqueta, estaciones, comida y vida cotidiana — una prefectura a la vez, en el blog.", cu_cta:"Lee el blog de las 47 prefecturas →",
-    cc1_tag:"Tradición", cc1_title:"Etiqueta en Santuarios", cc1_sub:"Cómo comportarse en santuarios sintoístas — aplaudir, reverenciar y qué decir",
-    cc2_tag:"Comida", cc2_title:"Cultura del Ramen", cc2_sub:"Estilos regionales, etiqueta al pedir y vocabulario del restaurante de ramen",
-    cc3_tag:"Estaciones", cc3_title:"Tradición Hanami", cc3_sub:"Costumbres para ver los cerezos, vocabulario y qué llevar",
-    cc4_tag:"Trabajo", cc4_title:"Cultura Laboral Japonesa", cc4_sub:"Keigo, tarjetas de visita y las reglas no escritas de las oficinas japonesas",
-    tr_tag:"Viaja a Japón", tr_title:"¿Listo para partir?<br>Te ayudamos a llegar.", tr_sub:"Guías de viaje asociadas que combinan preparación lingüística con planificación de viajes.",
-    td1:"Tokio", td1_desc:"Desde el cruce de Shibuya hasta los izakayas escondidos — tu guía completa de idioma + viaje.", td1_cta:"Planifica tu viaje a Tokio →",
-    td2:"Kioto", td2_desc:"Templos, ceremonias de té, barrios geisha. Aprende el japonés formal para el corazón cultural de Japón.", td2_cta:"Explora Kioto →",
-    td3:"Hokkaido", td3_desc:"Nieve en polvo, mercados de mariscos, naturaleza intacta. La guía de idioma para el norte salvaje de Japón.", td3_cta:"Descubre Hokkaido →",
-    pr_tag:"Precios", pr_title:"Precios simples.<br>Resultados serios.", pr_sub:"Empieza gratis. Actualiza cuando quieras. O tenlo para siempre.",
-    pl1_name:"Gratis", pl1_period:"para siempre", pl1_f1:"N5 y N4 ilimitado", pl1_f2:"N3–N1: 30 preguntas/día", pl1_f3:"Racha + panel de nivel", pl1_f4:"Misión de prefecturas + cultura", pl1_btn:"Empezar Gratis",
-    pl2_badge:"Más Popular", pl2_name:"Pro", pl2_period:"por mes", pl2_f1:"Preguntas IA ilimitadas", pl2_f2:"Todos los niveles JLPT N1–N5", pl2_f3:"Sistema completo de racha y medallas", pl2_f4:"Panel de preparación JLPT", pl2_f5:"Acceso a la Misión por las 47 Prefecturas", pl2_f6:"Biblioteca cultural completa", pl2_f7:"Paquetes de frases de viaje", pl2_btn:"Empezar Pro — $9.99/mes", pl2_save:"AHORRA 33%", pl2_pro1:"Preguntas ilimitadas — sin tope diario", pl2_pro2:"Todos los niveles, N5 a N1", pl2_pro3:"Repaso espaciado ilimitado", pl2_pro4:"Hojas de estudio PDF imprimibles", pl2_pro5:"Racha, medallas y panel de nivel",
-    pl3_name:"Académico", pl3_period:"por mes", pl3_f1:"Todo en Pro", pl3_f2:"Módulo de japonés académico", pl3_f3:"Paquetes de vocabulario investigativo", pl3_f4:"Guías de escritura formal", pl3_f5:"Exportaciones PDF de estudio", pl3_btn:"Ir a Académico",
+    pr_tag:"Precios", pr_title:"Precios simples.<br>Resultados serios.", pl1_name:"Gratis", pl1_period:"para siempre", pl1_f1:"N5 y N4 ilimitado", pl1_f2:"N3–N1: 30 preguntas/día", pl1_f3:"Racha + panel de nivel", pl1_f4:"Misión de prefecturas + cultura", pl1_btn:"Empezar Gratis",
+    pl2_badge:"Más Popular", pl2_name:"Pro", pl2_period:"por mes", pl2_btn:"Empezar Pro — $9.99/mes", pl2_save:"AHORRA 33%", pl2_pro1:"Preguntas ilimitadas — sin tope diario", pl2_pro2:"Todos los niveles, N5 a N1", pl2_pro3:"Repaso espaciado ilimitado", pl2_pro4:"Hojas de estudio PDF imprimibles", pl2_pro5:"Racha, medallas y panel de nivel",
     pl4_badge:"Mejor Valor", pl4_name:"Vitalicio", pl4_period:"pago único", pl4_f1:"Todo en Pro — para siempre", pl4_f2:"Todo el contenido futuro incluido", pl4_f3:"Sin cargos recurrentes, nunca", pl4_f4:"Insignia de miembro fundador", pl4_f5:"Acceso anticipado a nuevas funciones", pl4_btn:"Tenlo Para Siempre", pl4_note:"~15 meses de Pro",
-    nl_tag:"47 Notes from Japan", nl_title:"¿Vamos juntos a una de las 47 esta semana?", nl_sub:"Una nota semanal de una familia de tres que camina despacio por las 47 prefecturas de Japón — un lugar, una frase, una pequeña cosa que notamos.", nl_placeholder:"tu@email.com", nl_btn:"Suscribirse", nl_note:"Semanal. Gratis. Cancela cuando quieras.",
+    nl_placeholder:"tu@email.com", nl_btn:"Suscribirse", nl_note:"Semanal. Gratis. Cancela cuando quieras.",
     footer_desc:"Aprendizaje de japonés con IA para los curiosos del mundo.",
-    fl1_head:"Aprender", fl1_1:"Práctica JLPT", fl1_2:"Shadowing (Echo)", fl1_5:"Misión por las 47 Prefecturas", fl1_3:"Japonés Académico", fl1_4:"Frases de Viaje",
+    fl1_head:"Aprender", fl1_1:"Práctica JLPT", fl1_2:"Shadowing (Echo)", fl1_5:"Misión por las 47 Prefecturas", fl1_4:"Frases de Viaje",
     fl2_head:"Explorar", fl2_1:"Artículos Culturales", fl2_2:"Viaje a Japón", fl2_3:"Boletín", fl2_4:"Blog",
     fl3_head:"Empresa", fl3_1:"Acerca de", fl3_2:"Precios", fl3_3:"Programa de Afiliados", fl3_4:"Contacto",
-    footer_legal:"Privacidad · Términos · Divulgación de Afiliados",
-    demo_correct:"✓ ¡Correcto! Sigue adelante.", demo_wrong:"✗ No del todo — respuesta: "
-  },
+    footer_legal:"Privacidad · Términos · Divulgación de Afiliados"
+    },
 
   th: {
-    nav_roadmap:"แผนการเรียน", nav_learn:"เรียนภาษา", nav_culture:"วัฒนธรรม", nav_travel:"เที่ยวญี่ปุ่น", nav_explore:"สำรวจญี่ปุ่น 🗾", nav_quiz:"⚔️ ควิซ", nav_pricing:"ราคา", nav_shadowing:"🎙 ฝึกพูดตาม", nav_cta:"เริ่มฟรี →",
-    hero_tag:"เรียน · ใช้ชีวิต · เที่ยว", hero_title1:"เรียนรู้ ใช้ชีวิต", hero_title2:"และเที่ยวญี่ปุ่น",
-    hero_promise:"🗺️ ทุกความสัมพันธ์ของคุณกับญี่ปุ่น รวมไว้ในที่เดียว ตรงไปตรงมา",
-    hero_sub:"เตรียมสอบ JLPT และ JFT ชุดข้อมูล 47 จังหวัดที่สร้างจากแหล่งข้อมูลสาธารณะ — การ์ดฝาท่อ 1,308 ใบ ค่าแรงขั้นต่ำครบ 47 จังหวัด เวลาเดินทางระหว่างสถานี — และคู่มือย้ายไปญี่ปุ่นอย่างตรงไปตรงมา เริ่มฟรี",
-    hero_cta1:"⚡ วัดระดับของคุณ — 5 นาที ฟรี", hero_cta2:"ค้นพบเสน่ห์แต่ละภูมิภาค 🗾",
-    stat1:"เริ่มวันนี้", stat2:"ทุกระดับ JLPT", stat3:"ของสะสมที่รวบรวมไว้",
-    streak_label:"ความต่อเนื่องปัจจุบัน", streak_sub:"วันติดต่อกัน",
-    quiz_label:"แบบทดสอบประจำวัน", quiz_sub:"เธอตื่นนอนทุกเช้า ___",
-    pw_title:"ความพร้อมสอบ JLPT", pw_left:"ผ่าน N4 แล้ว ✓", pw_right:"สอบ N3 อีกประมาณ 6 สัปดาห์",
-    rm_tag:"เส้นทางการเรียนรู้ของคุณ", rm_title:"เส้นทางทีละขั้นสู่ N3<br>เราบอกทุกขั้นตอน",
-    rm_sub:"ต่างจากแอปอื่นที่ให้คุณเดาเอง NihongoHub ให้แผนที่ไมล์สโตนที่ชัดเจน",
-    rm_zero_cta:"เพิ่งเริ่ม? เรียนかなฟรี — เดือนที่ 1 เริ่มตรงนี้ →",
-    rm1_month:"เดือนที่ 1", rm1_goal:"ฮิรางานะและคาตาคานะ", rm1_desc:"เชี่ยวชาญทั้งสองอักษร + คำศัพท์พื้นฐาน 200 คำ อ่านเมนู ป้าย และประโยคง่ายๆ ได้", rm1_badge:"✓ พื้นฐาน N5",
-    rm2_month:"เดือนที่ 2-3", rm2_goal:"ไวยากรณ์และคันจิ", rm2_desc:"คันจิ 100 ตัวที่จำเป็น รูปแบบไวยากรณ์พื้นฐาน และวลีสนทนาในชีวิตจริง", rm2_badge:"✓ พร้อมสอบ N5",
-    rm3_month:"เดือนที่ 4-5", rm3_goal:"ความคล่องระดับกลาง", rm3_desc:"ขยายไปถึงคันจิ 500+ ตัว ไวยากรณ์ซับซ้อน และอ่านข้อความญี่ปุ่นจริงและสื่อต่างๆ", rm3_badge:"✓ พร้อมสอบ N4",
-    rm4_month:"เดือนที่ 6", rm4_goal:"เตรียมสอบ N3", rm4_desc:"แบบฝึกหัดแบบเจาะจงและทบทวนจุดอ่อน เพื่อสร้างความมั่นใจในการสอบ", rm4_badge:"🎯 เป้าหมาย N3",
-    gd_tag:"เริ่มที่นี่", gd_title:"อยากเริ่มจากตรงไหน？", gd_sub:"NihongoHub อยู่กับคุณตลอดความสัมพันธ์กับญี่ปุ่น — เรียน ใช้ชีวิต และเที่ยว เลือกจุดที่คุณอยู่ตอนนี้", pc5_title:"สอบ JLPT/JFT ให้ผ่าน", pc5_go:"เตรียมสอบ + ตัวอย่างฟรี →", pc6_title:"ย้ายไปญี่ปุ่น", pc6_go:"คู่มือใช้ชีวิตในญี่ปุ่น →",
-    pc1_title:"เรียนภาษาญี่ปุ่น", pc1_desc:"วัดระดับ JLPT ใน 5 นาที แล้วฝึกกับควิซ AI ที่ปรับตามคุณ — N5 ถึง N1 เริ่มฟรี", pc1_go:"วัดระดับของฉัน →",
-    pc2_title:"เข้าใจญี่ปุ่น", pc2_desc:"มารยาท ฤดูกาล อาหาร และชีวิตประจำวัน — ไกด์วัฒนธรรมจริงใจครบ 47 จังหวัด เขียนโดยคนที่อยู่ที่นี่", pc2_go:"อ่านไกด์ →",
-    pc3_title:"วางแผนเที่ยว", pc3_desc:"แผนที่จังหวัดแบบคลิกได้ พร้อมจุดเที่ยว คำท้องถิ่นที่ควรรู้ และที่พักที่จองได้", pc3_go:"เปิดแผนที่ →",
-    pc4_title:"เล่นและสะสม", pc4_desc:"เปลี่ยนการเรียนเป็นเควสต์: ผ่านควิซ รับฉายาและไอเทม จุดไฟแผนที่ และปั้นตัวละครของคุณ", pc4_go:"เริ่มการผจญภัย →",
-    gd1_title:"แผนการเรียน", gd1_desc:"เส้นทางทีละขั้นสู่ N3 — รู้ชัดเสมอว่าก้าวต่อไปคืออะไร", gd1_go:"ดูเส้นทาง →",
-    gd2_title:"เรียน", gd2_desc:"เครื่องมือเรียนทุกอย่างในที่เดียว — สตรีค, ควิซ AI, เควสต์ 47 จังหวัด, ฝึก shadowing", gd2_go:"ที่เรานำเสนอ →",
-    gd3_title:"วัฒนธรรม", gd3_desc:"มารยาท ฤดูกาล และชีวิตประจำวัน — อ่านที่บล็อก ทีละจังหวัด", gd3_go:"เปิดบล็อก →",
-    gd4_title:"เที่ยวญี่ปุ่น", gd4_desc:"ภาษา + วางแผนทริปสำหรับโตเกียว เกียวโต ฮอกไกโด และที่อื่น ๆ", gd4_go:"วางแผนทริป →",
-    gd5_title:"สำรวจ", gd5_desc:"แผนที่คลิกได้ของ 47 จังหวัด พร้อมสถิติจากข้อมูลจริงและด่านควิซ", gd5_go:"เปิดแผนที่ →",
-    gd6_title:"สัตว์ป่า", gd6_desc:"สัตว์หายากของแต่ละจังหวัดจาก GBIF วาดเป็นพิกเซลอาร์ต — ดินแดนของ Yukika", gd6_go:"ไปเจอพวกเขา →",
-    gd7_title:"ควิซ", gd7_desc:"ด่านควิซ JLPT สร้างโดย AI N5 ถึง N1 รับ XP เพื่อพัฒนาเจ้าไกด์ Akari", gd7_go:"เริ่มต่อสู้ →",
-    gd8_title:"ราคา", gd8_desc:"เริ่มฟรี อัปเป็น Pro รายเดือน หรือซื้อตลอดชีพด้วย Lifetime", gd8_go:"ดูแพ็กเกจ →",
-    gd9_title:"Shadowing", gd9_desc:"ฝึกพูดตามคลิป YouTube ในแอปพี่น้องของเรา Echo", gd9_go:"เปิด Echo →",
-    ft_tag:"สิ่งที่เราให้", ft_title:"ทุกเครื่องมือที่คุณต้องการ<br>ในที่เดียว",
-    f1_title:"ระบบความต่อเนื่องและนิสัย", f1_desc:"ความต่อเนื่องรายวัน เป้าหมายรายสัปดาห์ และเหรียญรางวัลช่วยให้คุณสม่ำเสมอ",
-    f2_title:"ตัวสร้างคำถาม AI", f2_desc:"คำถามสไตล์ JLPT ใหม่ทุกครั้ง AI ปรับตามจุดอ่อนของคุณโดยอัตโนมัติ",
-    f3_title:"คะแนนความพร้อมสอบ JLPT", f3_desc:"แดชบอร์ดแบบเรียลไทม์แสดงคะแนนสอบที่คาดการณ์และอีกกี่สัปดาห์จึงจะพร้อม",
-    f4_title:"เควสต์ 47 จังหวัด", f4_desc:"แผนที่คลิกได้ของทั้ง 47 จังหวัด พร้อมสถิติจากข้อมูลจริง แต่ละพื้นที่เปิดด่านควิซและภาพพิกเซลของสัตว์หายากของตัวเอง",
-    f5_title:"เจาะลึกวัฒนธรรม", f5_desc:"บทความรายสัปดาห์เกี่ยวกับวัฒนธรรมญี่ปุ่นเขียนโดยคนที่อาศัยอยู่ที่นั่นจริงๆ",
-    f6_title:"ภาษาญี่ปุ่นสำหรับท่องเที่ยว", f6_desc:"ชุดวลี คู่มือมารยาท และคำศัพท์สำหรับการเดินทางของคุณ",
-    jlpt_tag:"ฝึกสดด้วย AI", jlpt_title:"คำถามสร้างโดย AI<br>ทุกระดับ ทุกวัน", jlpt_sub:"คำถามใหม่สร้างโดย AI แบบเรียลไทม์ — ไม่ซ้ำเลย",
+    nv_cta:"ทดสอบระดับฟรี", h_kicker:"47 จังหวัด · คู่มือที่เน้นภาพถ่าย · ที่เดียวที่ตรงไปตรงมา", h_title:"ญี่ปุ่น ทีละจังหวัด", h_sub:"ไปที่ไหน กินอะไร ซื้ออะไรกลับบ้าน และภาษาญี่ปุ่นที่คุณจะได้ใช้จริง — สร้างจากข้อมูลสาธารณะและภาพถ่าย CC ไม่ใช่โบรชัวร์ อ่านฟรี เริ่มเรียนฟรี", h_cta1:"เปิดแผนที่ 47 จังหวัด →", h_cta2:"วัดระดับของฉัน (5 นาที)", h_photo:"ภาพ", st_more:"+ อีก 39 จังหวัด", st_photos:"ภาพถ่าย", co_h:"สะสมญี่ปุ่น", co_all:"คู่มือของสะสมทั้งหมด →", co1_tag:"โกะชูอิน", co1_h:"ตราประทับศาลเจ้าและวัด", co1_p:"ความหมาย มารยาท และวิธีสะสมอย่างให้เกียรติ", co2_tag:"การ์ดฝาท่อ", co2_h:"การ์ดฟรี 1,308 ใบ บนแผนที่", co2_p:"ระบบล็อต จุดรับการ์ด และลวดลายของทุกจังหวัด", co3_tag:"ตราประทับสถานี", co3_h:"เอกิสแตมป์และเมโลดี้ 6 เพลง", co3_p:"ตราประทับข้างประตูตรวจตั๋ว และเสียงเพลงประจำสถานีที่ควรหยุดฟัง", ln_kicker:"เรียน", ln_h:"พูดได้ก่อนออกเดินทาง", ln_p:"ข้อสอบสไตล์ JLPT ฟรี N5–N1 สร้างใหม่ทุกครั้ง วัดระดับของคุณใน 5 นาที — ไม่ต้องสมัคร", qz_label:"ตัวอย่าง · JLPT N5", qz_sub:"ทุกเช้าฉัน___กาแฟ", lt_kicker:"ฟรี · รายสัปดาห์", lt_h:"สัปดาห์ละหนึ่งจังหวัด ส่งถึงกล่องจดหมายคุณ", lt_p:"ไปที่ไหน กินอะไร ซื้ออะไรกลับบ้าน — พร้อมภารกิจล่าของสะสมใหม่ ๆ ยกเลิกได้ทุกเมื่อ", lt_btn:"ส่งจดหมายให้ฉัน →", mb_h:"ย้ายและซื้อ", mb1_p:"วีซ่า ที่พัก 90 วันแรก — ไทม์ไลน์ที่ใช้ได้จริง", mb2_title:"ซื้อของจากญี่ปุ่น", mb2_go:"เปรียบเทียบบริการพร็อกซี →", mb2_p:"Buyee, ZenMarket, Remambo, Neokyo — ค่าธรรมเนียมและควรใช้เจ้าไหนเมื่อไร", pr_line:"ทั้งหมดข้างต้นฟรี ควิซไม่จำกัด การทบทวนแบบเว้นระยะ และชีต PDF อยู่ใน Pro — $9.99/เดือน หรือ $149 ครั้งเดียว", jlpt_cta_new:"วัดระดับของคุณ (5 นาที) — ฟรี →", jlpt_cta_note:"ไม่ต้องสมัคร — 12 ข้อ รู้ระดับทันที <a id=\"skip-cta\" href=\"quiz.html\">ข้ามไปทำควิซฟรี →</a>", gift_tag:"มอบภาษาเป็นของขวัญ", gift_h:"$5 = นักเรียน 10 คนได้ Pro 1 เดือน", gift_p:"ไม่ต้องสมัครสมาชิก ซื้อโค้ด Pro 10 ชุดในราคา $5 แล้วเราจะส่งอีเมลให้คุณนำไปแบ่งปัน — Discord ของคุณ, subreddit, เพื่อนที่กำลังเตรียมสอบ JLPT ทุกโค้ดที่ถูกใช้ = ผู้เรียนอีกหนึ่งคนที่ได้จุดเริ่มต้นที่เป็นธรรมขึ้น", gift_count:"นักเรียนที่ได้รับการสนับสนุนทั้งหมด: <strong id=\"sponsor-counter-num\">…</strong>", gift_btn:"มอบให้นักเรียน 10 คน — $5", gift_note:"โค้ดส่งทางอีเมลทันที แลกได้ที่ /redeem.html ใช้ได้ 1 ปี", nl_read_tag:"อ่านฟรี", nl_thanks_head:"✓ สมัครสำเร็จ — จดหมายฉบับแรกจะมาถึงสัปดาห์นี้ ระหว่างนี้เริ่มจากบทความเหล่านี้:", fl1_6:"วัดระดับของคุณ", fl1_7:"แดชบอร์ดความคืบหน้า",
+    pc6_title:"ย้ายไปญี่ปุ่น", pc6_go:"คู่มือใช้ชีวิตในญี่ปุ่น →",
     jlpt_legal:"คำถามสร้างโดย AI อิสระ ไม่เกี่ยวข้องกับ Japan Foundation หรือ JEES",
-    jlpt_prompt:"เลือกระดับแล้วแตะ \"คำถามใหม่\"",
-    btn_new:"⚡ คำถามใหม่", btn_loading:"กำลังสร้าง…", btn_explain:"💡 อธิบายคำตอบ",
-    ai_note:"สร้างโดย Claude AI · สำหรับฝึกเท่านั้น · ไม่ใช่วัสดุสอบทางการ",
-    gen_error:"สร้างไม่สำเร็จ กรุณาลองอีกครั้ง", rate_limit:"ใช้โควต้าฟรีรายวันหมดแล้ว",
-    lv_beginner:"เริ่มต้น", lv_basic:"พื้นฐาน", lv_inter:"กลาง", lv_adv:"สูง", lv_exp:"เชี่ยวชาญ",
-    db_tag:"แดชบอร์ดความก้าวหน้า", db_title:"รู้ชัดเสมอว่า<br>ตัวเองอยู่ตรงไหน", db_sub:"คะแนนความพร้อม JLPT อัพเดทหลังทุกแบบทดสอบ",
-    db_main_title:"วิเคราะห์ทักษะ — ระดับปัจจุบัน: N3",
-    sk1:"คำศัพท์", sk2:"ไวยากรณ์", sk3:"การอ่านคันจิ", sk4:"การฟัง", sk5:"ความเร็วในการอ่าน",
-    ds1_label:"ความต่อเนื่องปัจจุบัน", ds1_sub:"วันติดต่อกัน", ds2_label:"คำถามที่ตอบแล้ว", ds2_sub:"เดือนนี้",
-    jp_tag:"การทำนาย JLPT", jp_sub:"พร้อมสอบในประมาณ 6 สัปดาห์",
-    an_tag:"ภาษาญี่ปุ่นจากอนิเมะและมังงะ", an_title:"เรียนภาษาญี่ปุ่น<br>ที่คุณอยากพูดจริงๆ", an_sub:"หนังสือเรียนสอนภาษาทางการ เราสอนสิ่งที่ตัวละครอนิเมะพูดจริงๆ",
-    an1_tag:"แอ็คชั่น / โชเน็น", an1_title:"สำนวนการต่อสู้", an1_eng:'"อย่ายอมแพ้!" — ใช้ให้กำลังใจในชีวิตประจำวัน',
-    an2_tag:"ชีวิตประจำวัน", an2_title:"การสนทนาประจำวัน", an2_eng:'"ทำงานเหนื่อยนะ!" — วลีสำคัญในที่ทำงาน',
-    an3_tag:"แฟนตาซี / อิเซไก", an3_title:"ภาษาญี่ปุ่นดราม่า", an3_eng:'"ไม่น่าเชื่อ…!" — แสดงความประหลาดใจ ดูเป็นธรรมชาติมาก',
-    an4_tag:"อาหารและวัฒนธรรม", an4_title:"ภาษาญี่ปุ่นในร้านอาหาร", an4_eng:'"กินข้าวแล้วนะ!" — พูดก่อนทานอาหารทุกมื้อในญี่ปุ่น',
-    cu_tag:"วัฒนธรรมและไลฟ์สไตล์", cu_title:"ญี่ปุ่นที่อยู่นอกเหนือตำรา", cu_sub:"เราเขียนเรื่องมารยาท ฤดูกาล อาหาร และชีวิตประจำวัน — จังหวัดละหนึ่งบทความ ทั้งหมดบนบล็อก", cu_cta:"อ่านบล็อก 47 จังหวัด →",
-    cc1_tag:"ประเพณี", cc1_title:"มารยาทในศาลเจ้า", cc1_sub:"วิธีปฏิบัติตัวในศาลเจ้าชินโต — การปรบมือ การโค้ง และสิ่งที่ควรพูด",
-    cc2_tag:"อาหาร", cc2_title:"วัฒนธรรมราเมน", cc2_sub:"สไตล์ตามภูมิภาค มารยาทการสั่ง และคำศัพท์ในร้านราเมน",
-    cc3_tag:"ฤดูกาล", cc3_title:"ประเพณีฮานามิ", cc3_sub:"ประเพณีชมดอกซากุระ คำศัพท์ และสิ่งที่ควรพกไป",
-    cc4_tag:"การทำงาน", cc4_title:"วัฒนธรรมการทำงานญี่ปุ่น", cc4_sub:"ภาษาสุภาพ นามบัตร และกฎที่ไม่ได้เขียนของสำนักงานญี่ปุ่น",
-    tr_tag:"เที่ยวญี่ปุ่น", tr_title:"พร้อมไปแล้วหรือยัง?<br>เราช่วยคุณได้", tr_sub:"คู่มือท่องเที่ยวพาร์ทเนอร์รวมการเตรียมภาษาและการวางแผนทริป",
-    td1:"โตเกียว", td1_desc:"จากสี่แยกชิบูย่าถึงอิซากายะซ่อนเร้น — คู่มือภาษา + ท่องเที่ยวสมบูรณ์", td1_cta:"วางแผนทริปโตเกียว →",
-    td2:"เกียวโต", td2_desc:"วัด พิธีชงชา ย่านเกอิชา เรียนภาษาญี่ปุ่นทางการสำหรับหัวใจวัฒนธรรมญี่ปุ่น", td2_cta:"สำรวจเกียวโต →",
-    td3:"ฮอกไกโด", td3_desc:"หิมะผง ตลาดอาหารทะเล ธรรมชาติบริสุทธิ์ คู่มือภาษาสำหรับภาคเหนือป่าของญี่ปุ่น", td3_cta:"ค้นพบฮอกไกโด →",
-    pr_tag:"ราคา", pr_title:"ราคาเข้าใจง่าย<br>ผลลัพธ์จริงจัง", pr_sub:"เริ่มฟรี อัพเกรดเมื่อพร้อม หรือเป็นเจ้าของตลอดชีพ",
-    pl1_name:"ฟรี", pl1_period:"ตลอดไป", pl1_f1:"N5 และ N4 ไม่จำกัด", pl1_f2:"N3–N1: 30 ข้อ/วัน", pl1_f3:"สตรีค + แดชบอร์ดระดับ", pl1_f4:"เควสต์จังหวัด + วัฒนธรรม", pl1_btn:"เริ่มใช้งานฟรี",
-    pl2_badge:"ยอดนิยม", pl2_name:"Pro", pl2_period:"ต่อเดือน", pl2_f1:"คำถาม AI ไม่จำกัด", pl2_f2:"ทุกระดับ JLPT N1-N5", pl2_f3:"ระบบความต่อเนื่องและเหรียญครบ", pl2_f4:"แดชบอร์ดความพร้อม JLPT", pl2_f5:"เข้าใช้งานเควสต์ 47 จังหวัด", pl2_f6:"ห้องสมุดวัฒนธรรมครบถ้วน", pl2_f7:"ชุดวลีท่องเที่ยว", pl2_btn:"เริ่ม Pro — $9.99/เดือน", pl2_save:"ประหยัด 33%", pl2_pro1:"คำถามไม่จำกัด — ไม่มีลิมิตรายวัน", pl2_pro2:"ทุกระดับ N5 ถึง N1", pl2_pro3:"ทบทวนแบบเว้นช่วงไม่จำกัด", pl2_pro4:"ชีตทบทวน PDF พิมพ์ได้", pl2_pro5:"สตรีค เหรียญ และแดชบอร์ดระดับ",
-    pl3_name:"วิชาการ", pl3_period:"ต่อเดือน", pl3_f1:"ทุกอย่างใน Pro", pl3_f2:"โมดูลภาษาญี่ปุ่นวิชาการ", pl3_f3:"ชุดคำศัพท์วิจัย", pl3_f4:"คู่มือการเขียนทางการ", pl3_f5:"ส่งออก PDF เพื่อการศึกษา", pl3_btn:"เลือกวิชาการ",
+    pr_tag:"ราคา", pr_title:"ราคาเข้าใจง่าย<br>ผลลัพธ์จริงจัง", pl1_name:"ฟรี", pl1_period:"ตลอดไป", pl1_f1:"N5 และ N4 ไม่จำกัด", pl1_f2:"N3–N1: 30 ข้อ/วัน", pl1_f3:"สตรีค + แดชบอร์ดระดับ", pl1_f4:"เควสต์จังหวัด + วัฒนธรรม", pl1_btn:"เริ่มใช้งานฟรี",
+    pl2_badge:"ยอดนิยม", pl2_name:"Pro", pl2_period:"ต่อเดือน", pl2_btn:"เริ่ม Pro — $9.99/เดือน", pl2_save:"ประหยัด 33%", pl2_pro1:"คำถามไม่จำกัด — ไม่มีลิมิตรายวัน", pl2_pro2:"ทุกระดับ N5 ถึง N1", pl2_pro3:"ทบทวนแบบเว้นช่วงไม่จำกัด", pl2_pro4:"ชีตทบทวน PDF พิมพ์ได้", pl2_pro5:"สตรีค เหรียญ และแดชบอร์ดระดับ",
     pl4_badge:"คุ้มค่าที่สุด", pl4_name:"ตลอดชีพ", pl4_period:"จ่ายครั้งเดียว", pl4_f1:"ทุกอย่างใน Pro — ตลอดไป", pl4_f2:"เนื้อหาในอนาคตทั้งหมดรวมอยู่", pl4_f3:"ไม่มีค่าใช้จ่ายซ้ำ ไม่มีเลย", pl4_f4:"เหรียญสมาชิกผู้ก่อตั้ง", pl4_f5:"เข้าถึงฟีเจอร์ใหม่ก่อนใคร", pl4_btn:"เป็นเจ้าของตลอดชีพ", pl4_note:"เทียบเท่า Pro ประมาณ 15 เดือน",
-    nl_tag:"47 Notes from Japan", nl_title:"สัปดาห์นี้ไปเที่ยวจังหวัดหนึ่งใน 47 ด้วยกันไหม?", nl_sub:"จดหมายรายสัปดาห์จากครอบครัวสามคนที่เดินไปทั่ว 47 จังหวัดของญี่ปุ่นอย่างช้าๆ — หนึ่งสถานที่ หนึ่งวลี เรื่องเล็กๆ ที่เราสังเกตเห็น", nl_placeholder:"อีเมลของคุณ", nl_btn:"สมัคร", nl_note:"รายสัปดาห์ ฟรี ยกเลิกได้ตลอดเวลา",
+    nl_placeholder:"อีเมลของคุณ", nl_btn:"สมัคร", nl_note:"รายสัปดาห์ ฟรี ยกเลิกได้ตลอดเวลา",
     footer_desc:"การเรียนภาษาญี่ปุ่นด้วย AI สำหรับผู้ที่อยากรู้จักโลก",
-    fl1_head:"เรียน", fl1_1:"ฝึกสอบ JLPT", fl1_2:"Shadowing (Echo)", fl1_5:"เควสต์ 47 จังหวัด", fl1_3:"ภาษาญี่ปุ่นวิชาการ", fl1_4:"วลีท่องเที่ยว",
+    fl1_head:"เรียน", fl1_1:"ฝึกสอบ JLPT", fl1_2:"Shadowing (Echo)", fl1_5:"เควสต์ 47 จังหวัด", fl1_4:"วลีท่องเที่ยว",
     fl2_head:"สำรวจ", fl2_1:"บทความวัฒนธรรม", fl2_2:"ท่องเที่ยวญี่ปุ่น", fl2_3:"จดหมายข่าว", fl2_4:"บล็อก",
     fl3_head:"บริษัท", fl3_1:"เกี่ยวกับเรา", fl3_2:"ราคา", fl3_3:"โปรแกรมพันธมิตร", fl3_4:"ติดต่อ",
-    footer_legal:"นโยบายความเป็นส่วนตัว · ข้อกำหนด · การเปิดเผยพันธมิตร",
-    demo_correct:"✓ ถูกต้อง! สู้ต่อไป", demo_wrong:"✗ ไม่ใช่ — คำตอบที่ถูกต้องคือ: "
-  },
+    footer_legal:"นโยบายความเป็นส่วนตัว · ข้อกำหนด · การเปิดเผยพันธมิตร"
+    },
 
   id: {
-    nav_roadmap:"Peta Belajar", nav_learn:"Belajar", nav_culture:"Budaya", nav_travel:"Wisata Jepang", nav_explore:"Jelajahi 🗾", nav_quiz:"⚔️ Kuis", nav_pricing:"Harga", nav_shadowing:"🎙 Shadowing", nav_cta:"Mulai Gratis →",
-    hero_tag:"Pelajari · Jalani · Jelajahi", hero_title1:"Belajar, tinggal,", hero_title2:"dan menjelajah Jepang.",
-    hero_promise:"🗺️ Seluruh perjalananmu dengan Jepang, di satu tempat yang jujur",
-    hero_sub:"Persiapan ujian JLPT dan JFT, dataset 47 prefektur yang dibangun dari sumber publik — 1.308 kartu manhole, 47 upah minimum, waktu tempuh antarstasiun — plus panduan jujur untuk pindah ke Jepang. Gratis untuk memulai.",
-    hero_cta1:"⚡ Cek level-mu — 5 menit, gratis", hero_cta2:"Kenali pesona tiap daerah 🗾",
-    stat1:"Mulai Hari Ini", stat2:"Semua Level JLPT", stat3:"Koleksi Terpetakan",
-    streak_label:"Streak Saat Ini", streak_sub:"hari berturut-turut",
-    quiz_label:"Kuis Harian", quiz_sub:"Dia bangun setiap pagi ___.",
-    pw_title:"Kesiapan JLPT", pw_left:"Selesai N4 ✓", pw_right:"Ujian N3 dalam ~6 minggu",
-    rm_tag:"Jalur Belajar Anda", rm_title:"Jalur bertahap menuju N3.<br>Kami tunjukkan setiap langkahnya.",
-    rm_sub:"Berbeda dari aplikasi lain yang membuat Anda menebak-nebak, NihongoHub memberi Anda peta milestone yang jelas.",
-    rm_zero_cta:"Benar-benar baru? Belajar かな gratis — Bulan 1 mulai di sini →",
-    rm1_month:"Bulan 1", rm1_goal:"Hiragana & Katakana", rm1_desc:"Kuasai kedua aksara + 200 kosakata inti. Baca menu, rambu, dan kalimat sederhana.", rm1_badge:"✓ Fondasi N5",
-    rm2_month:"Bulan 2–3", rm2_goal:"Tata Bahasa & Kanji", rm2_desc:"100 Kanji esensial, pola tata bahasa dasar, dan frasa percakapan untuk situasi nyata.", rm2_badge:"✓ Siap N5",
-    rm3_month:"Bulan 4–5", rm3_goal:"Kefasihan Menengah", rm3_desc:"Perluas ke 500+ Kanji, tata bahasa kompleks, dan membaca teks Jepang asli dan beragam media.", rm3_badge:"✓ Siap N4",
-    rm4_month:"Bulan 6", rm4_goal:"Persiapan Ujian N3", rm4_desc:"Latihan kuis terarah dan tinjauan titik lemah untuk membangun rasa percaya diri ujian.", rm4_badge:"🎯 Target N3",
-    gd_tag:"Mulai Dari Sini", gd_title:"Mau mulai dari mana?", gd_sub:"NihongoHub menemani seluruh hubunganmu dengan Jepang — pelajari, jalani, jelajahi. Pilih kamu ada di tahap yang mana.", pc5_title:"Lulus JLPT/JFT", pc5_go:"Persiapan + sampel gratis →", pc6_title:"Pindah ke Jepang", pc6_go:"Panduan tinggal di Jepang →",
-    pc1_title:"Belajar bahasa Jepang", pc1_desc:"Cek level JLPT dalam 5 menit, lalu berlatih dengan kuis AI yang menyesuaikan diri — N5 sampai N1, gratis.", pc1_go:"Cek levelku →",
-    pc2_title:"Memahami Jepang", pc2_desc:"Etiket, musim, makanan, dan kehidupan sehari-hari — panduan budaya jujur untuk 47 prefektur, ditulis oleh yang tinggal di sini.", pc2_go:"Baca panduannya →",
-    pc3_title:"Rencanakan trip", pc3_desc:"Peta tiap prefektur yang bisa diklik: tempat wisata, kata lokal penting, dan tempat menginap & pesan.", pc3_go:"Buka peta →",
-    pc4_title:"Main & koleksi", pc4_desc:"Ubah belajar jadi quest: tuntaskan kuis, raih gelar dan perlengkapan, nyalakan peta, dan kembangkan karaktermu.", pc4_go:"Mulai petualangan →",
-    gd1_title:"Peta Belajar", gd1_desc:"Jalur langkah demi langkah menuju N3 — selalu tahu langkah berikutnya.", gd1_go:"Lihat jalurnya →",
-    gd2_title:"Belajar", gd2_desc:"Semua alat belajar dalam satu tempat — streak, pertempuran kuis AI, petualangan 47 prefektur, dan shadowing.", gd2_go:"Yang kami tawarkan →",
-    gd3_title:"Budaya", gd3_desc:"Etiket, musim, dan kehidupan sehari-hari — baca di blog, satu prefektur dalam satu artikel.", gd3_go:"Buka blog →",
-    gd4_title:"Wisata Jepang", gd4_desc:"Bahasa plus perencanaan perjalanan untuk Tokyo, Kyoto, Hokkaido, dan lainnya.", gd4_go:"Rencanakan perjalanan →",
-    gd5_title:"Jelajahi", gd5_desc:"Peta interaktif 47 prefektur dengan statistik berbasis data dan pertempuran kuis.", gd5_go:"Buka peta →",
-    gd6_title:"Satwa Liar", gd6_desc:"Makhluk langka tiap prefektur dari GBIF, digambar sebagai pixel art — wilayah Yukika.", gd6_go:"Temui mereka →",
-    gd7_title:"Kuis", gd7_desc:"Pertempuran JLPT yang dihasilkan AI, N5 sampai N1. Dapatkan XP dan kuatkan pemandu Akari.", gd7_go:"Mulai pertempuran →",
-    gd8_title:"Harga", gd8_desc:"Mulai gratis. Naik ke Pro bulanan, atau miliki selamanya dengan Lifetime.", gd8_go:"Lihat paket →",
-    gd9_title:"Shadowing", gd9_desc:"Latih bicara dengan shadowing YouTube di aplikasi saudari kami, Echo.", gd9_go:"Buka Echo →",
-    ft_tag:"Yang Kami Tawarkan", ft_title:"Semua alat yang Anda butuhkan,<br>dalam satu tempat.",
-    f1_title:"Mesin Streak & Kebiasaan", f1_desc:"Streak harian, target mingguan, dan lencana pencapaian menjaga konsistensi Anda.",
-    f2_title:"Generator Soal AI", f2_desc:"Soal bergaya JLPT yang segar setiap sesi. AI beradaptasi dengan titik lemah Anda secara otomatis.",
-    f3_title:"Skor Kesiapan JLPT", f3_desc:"Dashboard langsung menampilkan prediksi skor ujian dan berapa minggu lagi sampai Anda siap.",
-    f4_title:"Petualangan 47 Prefektur", f4_desc:"Peta interaktif 47 prefektur dengan statistik berbasis data. Setiap wilayah membuka pertempuran kuis dan pixel art makhluk langka tersendiri.",
-    f5_title:"Pendalaman Budaya", f5_desc:"Esai mingguan tentang budaya Jepang ditulis oleh orang yang benar-benar tinggal di sana.",
-    f6_title:"Bahasa Jepang untuk Wisata", f6_desc:"Paket frasa, panduan etiket, dan kosakata bertahan untuk perjalanan Anda ke Jepang.",
-    jlpt_tag:"Latihan AI Langsung", jlpt_title:"Soal dihasilkan AI.<br>Setiap level. Setiap hari.", jlpt_sub:"Soal baru dibuat oleh AI secara real-time — tidak pernah tes yang sama.",
+    nv_cta:"Tes level gratis", h_kicker:"47 prefektur · panduan berbasis foto · satu tempat yang jujur", h_title:"Jepang, satu prefektur setiap kali.", h_sub:"Ke mana pergi, apa yang dimakan, apa yang dibawa pulang, dan bahasa Jepang yang benar-benar akan kamu pakai — dibuat dari data publik dan foto CC, bukan brosur. Gratis dibaca. Gratis mulai belajar.", h_cta1:"Buka peta 47 prefektur →", h_cta2:"Cari level saya (5 menit)", h_photo:"Foto", st_more:"+ 39 lagi", st_photos:"Foto", co_h:"Koleksi Jepang", co_all:"Semua panduan koleksi →", co1_tag:"Goshuin", co1_h:"Stempel kuil Buddha &amp; kuil Shinto", co1_p:"Maknanya, etikanya, dan cara mengoleksinya dengan hormat.", co2_tag:"Kartu manhole", co2_h:"1.308 kartu gratis, dipetakan", co2_p:"Sistem lot, tempat mengambilnya, dan desain setiap prefektur.", co3_tag:"Stempel stasiun", co3_h:"Stempel eki &amp; 6 melodinya", co3_p:"Stempel di gerbang tiket, dan jingle stasiun yang layak dihentikan sejenak.", ln_kicker:"Belajar", ln_h:"Ucapkan sebelum berangkat.", ln_p:"Soal gratis bergaya JLPT, N5–N1, dibuat baru setiap kali. Temukan levelmu dalam lima menit — tanpa daftar.", qz_label:"Contoh · JLPT N5", qz_sub:"Setiap pagi saya ___ kopi.", lt_kicker:"Gratis · mingguan", lt_h:"Satu prefektur seminggu, di kotak masukmu.", lt_p:"Ke mana pergi, apa yang dimakan, apa yang dibawa pulang — plus perburuan koleksi baru. Berhenti kapan saja.", lt_btn:"Kirimkan suratnya →", mb_h:"Pindah &amp; belanja", mb1_p:"Visa, tempat tinggal, 90 hari pertama — linimasa yang praktis.", mb2_title:"Belanja dari Jepang", mb2_go:"Perbandingan jasa proxy →", mb2_p:"Buyee, ZenMarket, Remambo, Neokyo — biaya dan kapan memakai yang mana.", pr_line:"Semua di atas gratis. Kuis tanpa batas, pengulangan berjeda, dan lembar PDF ada di Pro — $9.99/bulan atau $149 sekali bayar.", jlpt_cta_new:"Temukan levelmu (5 menit) — gratis →", jlpt_cta_note:"Tanpa daftar — 12 soal, level langsung keluar. <a id=\"skip-cta\" href=\"quiz.html\">Langsung ke kuis gratis →</a>", gift_tag:"Hadiahkan bahasa", gift_h:"$5 = 10 pelajar mendapat Pro 1 bulan.", gift_p:"Tanpa langganan. Beli 10 kode Pro seharga $5, dan kami kirimkan lewat email untuk kamu bagikan — Discord-mu, sebuah subreddit, teman yang sedang mengejar JLPT. Setiap kode yang ditukar = satu pelajar lagi dengan awal yang lebih adil.", gift_count:"Total pelajar yang disponsori: <strong id=\"sponsor-counter-num\">…</strong>", gift_btn:"Hadiahkan untuk 10 pelajar — $5", gift_note:"Kode dikirim seketika lewat email. Tukarkan di /redeem.html. Berlaku 1 tahun.", nl_read_tag:"Baca gratis", nl_thanks_head:"✓ Kamu sudah terdaftar — surat pertama tiba minggu ini. Sementara itu, mulai dari sini:", fl1_6:"Temukan levelmu", fl1_7:"Dasbor kemajuan",
+    pc6_title:"Pindah ke Jepang", pc6_go:"Panduan tinggal di Jepang →",
     jlpt_legal:"Soal dibuat oleh AI secara independen, tidak berafiliasi dengan Japan Foundation atau JEES.",
-    jlpt_prompt:"Pilih level dan ketuk Soal Baru.",
-    btn_new:"⚡ Soal Baru", btn_loading:"Menghasilkan…", btn_explain:"💡 Jelaskan Jawaban",
-    ai_note:"Dibuat oleh Claude AI · Hanya untuk latihan · Bukan materi ujian resmi",
-    gen_error:"Gagal menghasilkan. Silakan coba lagi.", rate_limit:"Batas harian gratis tercapai.",
-    lv_beginner:"Pemula", lv_basic:"Dasar", lv_inter:"Menengah", lv_adv:"Lanjutan", lv_exp:"Ahli",
-    db_tag:"Dashboard Kemajuan", db_title:"Selalu tahu persis<br>di mana posisi Anda.", db_sub:"Skor kesiapan JLPT Anda diperbarui setelah setiap kuis.",
-    db_main_title:"Analisis Kemampuan — Level Saat Ini: N3",
-    sk1:"Kosakata", sk2:"Tata Bahasa", sk3:"Membaca Kanji", sk4:"Pemahaman Mendengar", sk5:"Kecepatan Membaca",
-    ds1_label:"Streak Saat Ini", ds1_sub:"hari berturut-turut", ds2_label:"Soal Terjawab", ds2_sub:"bulan ini",
-    jp_tag:"Prediksi JLPT", jp_sub:"Siap ujian dalam ~6 minggu",
-    an_tag:"Bahasa Jepang Anime & Manga", an_title:"Pelajari bahasa Jepang<br>yang benar-benar ingin Anda kuasai.", an_sub:"Buku teks mengajarkan bahasa Jepang formal. Kami mengajarkan apa yang karakter anime benar-benar katakan.",
-    an1_tag:"Aksi / Shonen", an1_title:"Ekspresi Pertarungan", an1_eng:'"Jangan menyerah!" — digunakan untuk memberi semangat sehari-hari',
-    an2_tag:"Slice of Life", an2_title:"Percakapan Sehari-hari", an2_eng:'"Kerja keras hari ini!" — frasa penting di tempat kerja',
-    an3_tag:"Fantasi / Isekai", an3_title:"Bahasa Jepang Dramatis", an3_eng:'"Tidak mungkin…!" — mengungkapkan ketidakpercayaan, sangat natural',
-    an4_tag:"Makanan & Budaya", an4_title:"Bahasa Jepang Restoran", an4_eng:'"Selamat makan!" — diucapkan sebelum makan di Jepang',
-    cu_tag:"Budaya & Gaya Hidup", cu_title:"Jepang di luar buku teks.", cu_sub:"Kami menulis tentang etiket, musim, makanan, dan kehidupan sehari-hari — satu prefektur dalam satu artikel, semuanya di blog.", cu_cta:"Baca blog 47 prefektur →",
-    cc1_tag:"Tradisi", cc1_title:"Etiket di Kuil", cc1_sub:"Cara berperilaku di kuil Shinto — bertepuk tangan, membungkuk, dan apa yang harus dikatakan",
-    cc2_tag:"Kuliner", cc2_title:"Budaya Ramen", cc2_sub:"Gaya regional, etiket memesan, dan kosakata warung ramen",
-    cc3_tag:"Musim", cc3_title:"Tradisi Hanami", cc3_sub:"Kebiasaan melihat bunga sakura, kosakata, dan apa yang harus dibawa",
-    cc4_tag:"Pekerjaan", cc4_title:"Budaya Kerja Jepang", cc4_sub:"Bahasa sopan, kartu nama, dan aturan tak tertulis kantor Jepang",
-    tr_tag:"Wisata Jepang", tr_title:"Siap berangkat?<br>Kami bantu Anda sampai ke sana.", tr_sub:"Panduan wisata mitra menggabungkan persiapan bahasa dengan perencanaan perjalanan.",
-    td1:"Tokyo", td1_desc:"Dari persimpangan Shibuya hingga izakaya tersembunyi — panduan bahasa + wisata lengkap.", td1_cta:"Rencanakan wisata Tokyo →",
-    td2:"Kyoto", td2_desc:"Kuil, upacara minum teh, distrik geisha. Pelajari bahasa Jepang formal untuk jantung budaya Jepang.", td2_cta:"Jelajahi Kyoto →",
-    td3:"Hokkaido", td3_desc:"Salju serbuk, pasar makanan laut, alam yang masih asli. Panduan bahasa untuk utara Jepang yang liar.", td3_cta:"Temukan Hokkaido →",
-    pr_tag:"Harga", pr_title:"Harga sederhana.<br>Hasil serius.", pr_sub:"Mulai gratis. Upgrade kapan saja. Atau miliki selamanya.",
-    pl1_name:"Gratis", pl1_period:"selamanya", pl1_f1:"N5 & N4 tanpa batas", pl1_f2:"N3–N1: 30 soal/hari", pl1_f3:"Streak + dashboard kesiapan", pl1_f4:"Quest prefektur + budaya", pl1_btn:"Mulai Gratis",
-    pl2_badge:"Paling Populer", pl2_name:"Pro", pl2_period:"per bulan", pl2_f1:"Soal AI tak terbatas", pl2_f2:"Semua level JLPT N1–N5", pl2_f3:"Sistem streak + lencana lengkap", pl2_f4:"Dashboard kesiapan JLPT", pl2_f5:"Akses Petualangan 47 Prefektur", pl2_f6:"Perpustakaan budaya lengkap", pl2_f7:"Paket frasa wisata", pl2_btn:"Mulai Pro — $9.99/bln", pl2_save:"HEMAT 33%", pl2_pro1:"Soal tanpa batas — tanpa kuota harian", pl2_pro2:"Semua level, N5 sampai N1", pl2_pro3:"Review spaced-repetition tanpa batas", pl2_pro4:"Lembar belajar PDF siap cetak", pl2_pro5:"Streak, lencana & dasbor kesiapan",
-    pl3_name:"Akademik", pl3_period:"per bulan", pl3_f1:"Semua yang ada di Pro", pl3_f2:"Modul bahasa Jepang akademik", pl3_f3:"Paket kosakata penelitian", pl3_f4:"Panduan menulis formal", pl3_f5:"Ekspor PDF untuk belajar", pl3_btn:"Pilih Akademik",
+    pr_tag:"Harga", pr_title:"Harga sederhana.<br>Hasil serius.", pl1_name:"Gratis", pl1_period:"selamanya", pl1_f1:"N5 & N4 tanpa batas", pl1_f2:"N3–N1: 30 soal/hari", pl1_f3:"Streak + dashboard kesiapan", pl1_f4:"Quest prefektur + budaya", pl1_btn:"Mulai Gratis",
+    pl2_badge:"Paling Populer", pl2_name:"Pro", pl2_period:"per bulan", pl2_btn:"Mulai Pro — $9.99/bln", pl2_save:"HEMAT 33%", pl2_pro1:"Soal tanpa batas — tanpa kuota harian", pl2_pro2:"Semua level, N5 sampai N1", pl2_pro3:"Review spaced-repetition tanpa batas", pl2_pro4:"Lembar belajar PDF siap cetak", pl2_pro5:"Streak, lencana & dasbor kesiapan",
     pl4_badge:"Nilai Terbaik", pl4_name:"Seumur Hidup", pl4_period:"pembayaran sekali", pl4_f1:"Semua di Pro — selamanya", pl4_f2:"Semua konten masa depan termasuk", pl4_f3:"Tidak ada biaya berulang, selamanya", pl4_f4:"Lencana anggota pendiri", pl4_f5:"Akses awal ke fitur baru", pl4_btn:"Miliki Selamanya", pl4_note:"~15 bulan Pro",
-    nl_tag:"47 Notes from Japan", nl_title:"Minggu ini, mau jalan ke salah satu dari 47 bersama kami?", nl_sub:"Catatan mingguan dari keluarga bertiga yang berjalan pelan menyusuri 47 prefektur Jepang — satu tempat, satu frasa, satu hal kecil yang kami perhatikan.", nl_placeholder:"email@anda.com", nl_btn:"Langganan", nl_note:"Mingguan. Gratis. Berhenti kapan saja.",
+    nl_placeholder:"email@anda.com", nl_btn:"Langganan", nl_note:"Mingguan. Gratis. Berhenti kapan saja.",
     footer_desc:"Belajar bahasa Jepang dengan AI untuk jiwa yang penasaran.",
-    fl1_head:"Belajar", fl1_1:"Latihan JLPT", fl1_2:"Shadowing (Echo)", fl1_5:"Petualangan 47 Prefektur", fl1_3:"Bahasa Jepang Akademik", fl1_4:"Frasa Wisata",
+    fl1_head:"Belajar", fl1_1:"Latihan JLPT", fl1_2:"Shadowing (Echo)", fl1_5:"Petualangan 47 Prefektur", fl1_4:"Frasa Wisata",
     fl2_head:"Jelajahi", fl2_1:"Artikel Budaya", fl2_2:"Wisata Jepang", fl2_3:"Newsletter", fl2_4:"Blog",
     fl3_head:"Perusahaan", fl3_1:"Tentang Kami", fl3_2:"Harga", fl3_3:"Program Afiliasi", fl3_4:"Kontak",
-    footer_legal:"Privasi · Syarat & Ketentuan · Pengungkapan Afiliasi",
-    demo_correct:"✓ Benar! Terus lanjutkan.", demo_wrong:"✗ Kurang tepat — jawaban: "
-  },
+    footer_legal:"Privasi · Syarat & Ketentuan · Pengungkapan Afiliasi"
+    },
 
   ja: {
-    nav_roadmap:"ロードマップ", nav_learn:"学ぶ", nav_culture:"文化", nav_travel:"日本を旅する", nav_explore:"探索 🗾", nav_quiz:"⚔️ クイズ", nav_pricing:"料金", nav_shadowing:"🎙 シャドーイング", nav_cta:"無料で始める →",
-    hero_tag:"学ぶ・住む・旅する", hero_title1:"学び、暮らし、", hero_title2:"旅する日本。",
-    hero_promise:"🗺️ 日本との関わりぜんぶを、ひとつの正直な場所で",
-    hero_sub:"JLPT・JFTの試験対策、公開資料から作った47都道府県データセット — マンホールカード1,308種、47都道府県の最低賃金、駅間の所要時間 — そして日本への移住の正直なガイド。無料で始められます。",
-    hero_cta1:"⚡ レベル測定 — 5分・無料", hero_cta2:"各地の魅力を知る 🗾",
-    stat1:"今日から", stat2:"全 JLPT レベル", stat3:"収録コレクタブル数",
-    streak_label:"連続日数", streak_sub:"日連続",
-    quiz_label:"今日のクイズ", quiz_sub:"彼女は毎朝___起きます。",
-    pw_title:"JLPT 進捗", pw_left:"N4 達成 ✓", pw_right:"N3 まで残り約 6 週",
-    rm_tag:"あなたの学習ルート", rm_title:"N3 への一歩ずつの道筋。<br>次に何を学ぶか示します。",
-    rm_sub:"NihongoHub は、何をいつ学ぶかを毎週はっきり示すマイルストーン地図を用意しています。",
-    rm_zero_cta:"まったくの初心者？ かなを無料で — Month 1 はここから →",
-    rm1_month:"1 ヶ月目", rm1_goal:"ひらがな・カタカナ", rm1_desc:"両方の文字 + 200 の基本語彙を習得。メニュー、看板、簡単な文が読めるように。", rm1_badge:"✓ N5 の土台",
-    rm2_month:"2–3 ヶ月目", rm2_goal:"文法と漢字", rm2_desc:"必須漢字 100 + 基礎文法パターン + 日常会話フレーズ。", rm2_badge:"✓ N5 合格レベル",
-    rm3_month:"4–5 ヶ月目", rm3_goal:"中級の流暢さ", rm3_desc:"漢字 500+、複雑な文法、本物の日本語テキストや各種メディアを読む。", rm3_badge:"✓ N4 合格レベル",
-    rm4_month:"6 ヶ月目", rm4_goal:"N3 試験対策", rm4_desc:"的を絞ったクイズ演習と弱点復習で、試験の自信を養う。", rm4_badge:"🎯 N3 目標",
-    gd_tag:"ここから始める", gd_title:"何から始めますか？", gd_sub:"NihongoHub は日本との関わりの全部に寄り添います — 学ぶ・住む・旅する。今いる場所を選んでください。", pc5_title:"JLPT/JFTに合格", pc5_go:"試験対策＋無料サンプル →", pc6_title:"日本へ移住", pc6_go:"移住・生活ガイド →",
-    pc1_title:"日本語を学ぶ", pc1_desc:"5分でJLPTレベルを診断 → あなたに合わせて変化するAIクイズで練習。N5〜N1、無料で開始。", pc1_go:"レベルを測定 →",
-    pc2_title:"日本を知る", pc2_desc:"マナー・季節・食・暮らし — 現地に住む人が書く、47都道府県の誠実な文化ガイド。", pc2_go:"ガイドを読む →",
-    pc3_title:"旅行を計画する", pc3_desc:"クリックできる県別マップ。見どころ・現地の言葉・泊まる場所と予約までひとつに。", pc3_go:"マップを開く →",
-    pc4_title:"遊ぶ・集める", pc4_desc:"学習をクエストに。クイズをクリアして称号や装備を獲得、地図を点灯させ、自分のキャラを育てよう。", pc4_go:"冒険を始める →",
-    gd1_title:"ロードマップ", gd1_desc:"N3 までの一歩ずつの道筋 — 次に何をするかが常にはっきり。", gd1_go:"道筋を見る →",
-    gd2_title:"学ぶ", gd2_desc:"ストリーク、AI クイズバトル、47 都道府県クエスト、シャドーイング — 学習ツールを一か所に。", gd2_go:"提供する機能 →",
-    gd3_title:"文化", gd3_desc:"マナー、季節、暮らし — ブログで、47 都道府県をひとつずつ。", gd3_go:"ブログを開く →",
-    gd4_title:"日本を旅する", gd4_desc:"言語準備と旅の計画を、東京、京都、北海道、そしてその先まで。", gd4_go:"旅を計画 →",
-    gd5_title:"探索", gd5_desc:"47 都道府県をクリックして開く統計データ付きの地図とクイズバトル。", gd5_go:"地図を開く →",
-    gd6_title:"生き物", gd6_desc:"GBIF からの 47 都道府県の希少生物を、ドット絵で。Yukika の領域。", gd6_go:"会いに行く →",
-    gd7_title:"クイズ", gd7_desc:"AI が作る JLPT バトル、N5 から N1 まで。XP を稼いでガイドの Akari を育てる。", gd7_go:"バトル開始 →",
-    gd8_title:"料金", gd8_desc:"まず無料で。月額の Pro、または買い切りの Lifetime。", gd8_go:"プランを見る →",
-    gd9_title:"シャドーイング", gd9_desc:"姉妹アプリ Echo で YouTube を使ったシャドーイング練習。", gd9_go:"Echo を開く →",
-    ft_tag:"提供する機能", ft_title:"必要な学習ツールが、<br>ひとつの場所に。",
-    f1_title:"ストリーク・習慣エンジン", f1_desc:"毎日のストリーク、週間目標、達成バッジで継続を支えます。一日抜けると火が消える仕様。",
-    f2_title:"AI 問題ジェネレーター", f2_desc:"毎回新しい JLPT 形式の問題を AI が生成。弱点を自動で学習します。",
-    f3_title:"JLPT 準備度スコア", f3_desc:"あと何週で本試験に間に合うかを、ライブダッシュボードで可視化。",
-    f4_title:"47 都道府県クエスト", f4_desc:"47 都道府県をクリックして開く統計データ付きの地図。地域ごとにクイズバトルと希少生物のドット絵が用意されています。",
-    f5_title:"カルチャー深掘り", f5_desc:"日本に実際に住む人が書く、文化と生活のエッセイ。",
-    f6_title:"旅の日本語", f6_desc:"フレーズパック・マナー集・サバイバル語彙。神社、居酒屋、コンビニで使う言葉。",
-    jlpt_tag:"ライブ AI 演習", jlpt_title:"AI が問題を生成。<br>毎レベル、毎日。", jlpt_sub:"毎回新しい AI 問題 — 同じテストは二度と出ません。",
+    nv_cta:"無料レベル測定", h_kicker:"47都道府県 · 写真が主役のガイド · 正直な場所をひとつ", h_title:"日本を、一県ずつ。", h_sub:"どこへ行き、何を食べ、何を持ち帰るか、そして実際に使う日本語 — 公開データと CC 写真から作りました。パンフレットではありません。読むのは無料、学び始めるのも無料。", h_cta1:"47都道府県マップを開く →", h_cta2:"レベルを測る（5分）", h_photo:"写真", st_more:"+ ほか39県", st_photos:"写真", co_h:"日本を集める", co_all:"収集ガイドをすべて見る →", co1_tag:"御朱印", co1_h:"神社とお寺の印", co1_p:"意味と作法、そして敬意をもって集める方法。", co2_tag:"マンホールカード", co2_h:"無料カード1,308種を地図に", co2_p:"配布ロットの仕組み、受け取れる場所、各県のデザイン。", co3_tag:"駅スタンプ", co3_h:"駅スタンプと6つの発車メロディ", co3_p:"改札脇のスタンプと、足を止めたくなる駅の音楽。", ln_kicker:"学ぶ", ln_h:"行く前に、言えるように。", ln_p:"無料の JLPT 形式問題、N5〜N1、毎回新しく生成。5分でレベルがわかります — 登録不要。", qz_label:"サンプル · JLPT N5", qz_sub:"毎朝、コーヒーを＿＿。", lt_kicker:"無料 · 週1回", lt_h:"週にひとつの県を、あなたの受信箱へ。", lt_p:"どこへ行き、何を食べ、何を持ち帰るか — 新しい収集ネタも。いつでも解除できます。", lt_btn:"手紙を受け取る →", mb_h:"移住と買い物", mb1_p:"ビザ、住まい、最初の90日 — 実用的なタイムライン。", mb2_title:"日本から買う", mb2_go:"代理購入サービス比較 →", mb2_p:"Buyee・ZenMarket・Remambo・Neokyo — 手数料と使い分け。", pr_line:"ここまでは全部無料。無制限クイズ・間隔反復・PDF シートは Pro — 月 $9.99 か、一度きり $149。", jlpt_cta_new:"レベルを測る（5分）— 無料 →", jlpt_cta_note:"登録不要 — 12問で即判定。<a id=\"skip-cta\" href=\"quiz.html\">無料クイズへ進む →</a>", gift_tag:"ことばを贈る", gift_h:"$5 で、10人の学習者に Pro を1ヶ月。", gift_p:"サブスクではありません。$5 で Pro コード10枚を購入すると、メールでお届けします — あなたの Discord、subreddit、JLPT 直前の友人へ。使われたコード1枚が、より公平なスタートを切る学習者1人。", gift_count:"支援した学習者の合計: <strong id=\"sponsor-counter-num\">…</strong>", gift_btn:"10人に贈る — $5", gift_note:"コードは即時メール送付。/redeem.html で引き換え。有効期間1年。", nl_read_tag:"無料で読む", nl_thanks_head:"✓ 登録完了 — 最初の手紙は今週届きます。それまでは、こちらから：", fl1_6:"レベルを測る", fl1_7:"学習ダッシュボード",
+    pc6_title:"日本へ移住", pc6_go:"移住・生活ガイド →",
     jlpt_legal:"問題は AI により独立して生成されており、日本国際教育支援協会（JEES）や日本国際交流基金とは無関係です。",
-    jlpt_prompt:"レベルを選んで「新しい問題」をタップ。",
-    btn_new:"⚡ 新しい問題", btn_loading:"生成中…", btn_explain:"💡 解説を見る",
-    ai_note:"Claude AI が生成した問題 · 学習用 · 公式試験素材ではありません",
-    gen_error:"生成に失敗しました。もう一度お試しください。", rate_limit:"無料利用枠の上限に達しました。",
-    lv_beginner:"入門", lv_basic:"基礎", lv_inter:"中級", lv_adv:"上級", lv_exp:"エキスパート",
-    db_tag:"進捗ダッシュボード", db_title:"自分の現在地が、<br>いつでもはっきり分かる。", db_sub:"クイズのたびに JLPT 準備度スコアが更新されます。",
-    db_main_title:"スキル分布 — 現在のレベル: N3",
-    sk1:"語彙", sk2:"文法", sk3:"漢字読み", sk4:"聴解", sk5:"読解速度",
-    ds1_label:"連続日数", ds1_sub:"日連続", ds2_label:"今月の解答数", ds2_sub:"今月",
-    jp_tag:"JLPT 予測", jp_sub:"あと約 6 週で本試験対応",
-    cu_tag:"文化と暮らし", cu_title:"教科書の向こう側にある日本。", cu_sub:"マナー、季節、食、日常 — 47 都道府県をひとつずつ、ブログで書いていきます。", cu_cta:"47都道府県ブログを読む →",
-    tr_tag:"日本を旅する", tr_title:"行く準備、お手伝いします。", tr_sub:"言語準備と旅の計画を組み合わせた、提携トラベルガイド。",
-    td1:"東京", td1_desc:"渋谷の交差点から路地裏の居酒屋まで — 言語と旅をまとめたガイド。必須フレーズ 200 つき。", td1_cta:"東京の旅を計画 →",
-    td2:"京都", td2_desc:"寺、茶道、花街。日本文化の中心で使われる丁寧な日本語を学ぶ。", td2_cta:"京都を探索 →",
-    td3:"北海道", td3_desc:"パウダースノー、海鮮市場、手つかずの自然。日本の北を旅する言葉。", td3_cta:"北海道を発見 →",
-    pr_tag:"料金", pr_title:"シンプルな料金。<br>本気の成果。", pr_sub:"まず無料で。いつでも Pro へ。Lifetime なら一度買って一生使えます。",
-    pl1_name:"Free", pl1_period:"永久無料", pl1_f1:"N5・N4 は無制限", pl1_f2:"N3〜N1 は 1 日 30 問", pl1_f3:"ストリーク＋習熟度ダッシュボード", pl1_f4:"県クエスト＋カルチャー", pl1_btn:"無料で始める",
-    pl2_badge:"人気", pl2_name:"Pro", pl2_period:"月額", pl2_f1:"AI 問題 無制限", pl2_f2:"全 JLPT レベル N1–N5", pl2_f3:"ストリーク + バッジ フル機能", pl2_f4:"JLPT 準備度ダッシュボード", pl2_f5:"47 都道府県クエスト アクセス", pl2_f6:"カルチャーライブラリ全公開", pl2_f7:"旅のフレーズパック", pl2_btn:"Pro を始める — $9.99/月", pl2_save:"33% お得", pl2_pro1:"問題が無制限 — 1日上限なし", pl2_pro2:"N5〜N1 全レベル", pl2_pro3:"間隔反復の復習が無制限", pl2_pro4:"印刷できるPDF学習シート", pl2_pro5:"ストリーク・バッジ・習熟度ダッシュボード",
+    pr_tag:"料金", pr_title:"シンプルな料金。<br>本気の成果。", pl1_name:"Free", pl1_period:"永久無料", pl1_f1:"N5・N4 は無制限", pl1_f2:"N3〜N1 は 1 日 30 問", pl1_f3:"ストリーク＋習熟度ダッシュボード", pl1_f4:"県クエスト＋カルチャー", pl1_btn:"無料で始める",
+    pl2_badge:"人気", pl2_name:"Pro", pl2_period:"月額", pl2_btn:"Pro を始める — $9.99/月", pl2_save:"33% お得", pl2_pro1:"問題が無制限 — 1日上限なし", pl2_pro2:"N5〜N1 全レベル", pl2_pro3:"間隔反復の復習が無制限", pl2_pro4:"印刷できるPDF学習シート", pl2_pro5:"ストリーク・バッジ・習熟度ダッシュボード",
     pl4_badge:"おすすめ", pl4_name:"Lifetime", pl4_period:"買い切り", pl4_f1:"Pro の全機能 — 一生", pl4_f2:"今後の追加コンテンツも込み", pl4_f3:"継続課金一切なし", pl4_f4:"創設メンバーバッジ", pl4_f5:"新機能の早期アクセス", pl4_btn:"一生使う", pl4_note:"Pro 約 15 ヶ月分",
-    nl_tag:"47 Notes from Japan", nl_title:"今週、47 のうちのひとつに、一緒に行ってみませんか？", nl_sub:"3 人家族が日本の 47 都道府県をゆっくり歩きながら毎週送るノート — ひとつの場所、ひとつのフレーズ、ひとつの小さな気づき。", nl_placeholder:"your@email.com", nl_btn:"購読する", nl_note:"毎週・無料・いつでも解除可。",
+    nl_placeholder:"your@email.com", nl_btn:"購読する", nl_note:"毎週・無料・いつでも解除可。",
     footer_desc:"AI で支える日本語学習プラットフォーム。",
-    fl1_head:"学ぶ", fl1_1:"JLPT 演習", fl1_2:"シャドーイング (Echo)", fl1_5:"47 都道府県クエスト", fl1_3:"アカデミック日本語", fl1_4:"旅のフレーズ", fl1_6:"レベル測定", fl1_7:"学習ダッシュボード",
+    fl1_head:"学ぶ", fl1_1:"JLPT 演習", fl1_2:"シャドーイング (Echo)", fl1_5:"47 都道府県クエスト", fl1_4:"旅のフレーズ", fl1_6:"レベル測定", fl1_7:"学習ダッシュボード",
     fl2_head:"探索", fl2_1:"カルチャー記事", fl2_2:"日本の旅", fl2_3:"ニュースレター", fl2_4:"ブログ",
     fl3_head:"運営", fl3_1:"私たちについて", fl3_2:"料金", fl3_3:"アフィリエイトプログラム", fl3_4:"お問い合わせ",
-    footer_legal:"プライバシー · 利用規約 · アフィリエイト開示",
-    demo_correct:"✓ 正解！その調子。", demo_wrong:"✗ おしい — 答え: "
-  }
+    footer_legal:"プライバシー · 利用規約 · アフィリエイト開示"
+    }
 };
 
 /* ═══════════════════════════════════════════
@@ -1197,73 +525,36 @@ function setLang(lang) {
 })();
 
 /* ═══════════════════════════════════════════
-   SCROLL REVEAL
-═══════════════════════════════════════════ */
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 70);
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(r => revealObs.observe(r));
-
-/* ═══════════════════════════════════════════
-   SKILL BAR ANIMATION
-═══════════════════════════════════════════ */
-const barObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.skill-fill').forEach(bar => {
-        bar.style.width = bar.dataset.w + '%';
-      });
-    }
-  });
-}, { threshold: 0.3 });
-document.querySelectorAll('.dash-main').forEach(el => barObs.observe(el));
-
-/* ═══════════════════════════════════════════
-   HERO QUIZ
+   SAMPLE QUIZ (Learn lane)
 ═══════════════════════════════════════════ */
 function heroQuiz(el, correct) {
   document.querySelectorAll('.quiz-opt').forEach(o => o.classList.remove('correct','wrong'));
   el.classList.add(correct ? 'correct' : 'wrong');
 }
-
-/* ═══════════════════════════════════════════
-   CTA navigation — scroll-to-section helpers (PR-21)
-═══════════════════════════════════════════ */
-function scrollToPractice() {
-  const el = document.getElementById('practice');
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-function scrollToRoadmap() {
-  const el = document.getElementById('roadmap');
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 
 <!-- ===== Free Trial Auth widget (Supabase) — self-contained ===== -->
 <style>
-  #nhAuthFab{position:fixed;right:18px;bottom:18px;z-index:900;background:#16100a;color:#fff;border:2px solid #4ECDC4;
-    border-radius:999px;padding:11px 18px;font:600 14px/1 'Noto Sans JP',system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-  #nhAuthFab:hover{background:#241a0f}
+  #nhAuthFab{position:fixed;right:18px;bottom:18px;z-index:900;background:var(--ink);color:#fff;border:2px solid var(--seal);
+    border-radius:999px;padding:11px 18px;font:600 14px/1 Karla,system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  #nhAuthFab:hover{background:var(--ink-2)}
   #nhAuthOv{position:fixed;inset:0;z-index:1000;background:rgba(10,8,6,.55);display:none;align-items:center;justify-content:center;padding:18px}
   #nhAuthOv.on{display:flex}
-  #nhAuthCard{background:#fff;color:#16100a;max-width:380px;width:100%;border-radius:14px;padding:24px;font-family:'Noto Sans JP',system-ui,sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+  #nhAuthCard{background:var(--card);color:var(--ink);max-width:380px;width:100%;border-radius:14px;padding:24px;font-family:Karla,system-ui,sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.3)}
   #nhAuthCard h3{margin:0 0 4px;font-size:20px}
-  #nhAuthCard p.sub{margin:0 0 16px;color:#7a6a52;font-size:13px}
-  #nhAuthCard input{width:100%;padding:11px 12px;margin:6px 0;border:1.5px solid #ddcfb6;border-radius:8px;font-size:16px}
-  #nhAuthCard button.primary{width:100%;padding:12px;margin-top:8px;background:#4ECDC4;color:#0a2a28;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer}
+  #nhAuthCard p.sub{margin:0 0 16px;color:var(--muted);font-size:13px}
+  #nhAuthCard input{width:100%;padding:11px 12px;margin:6px 0;border:1.5px solid var(--line);border-radius:8px;font-size:16px}
+  #nhAuthCard button.primary{width:100%;padding:12px;margin-top:8px;background:var(--seal);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer}
   #nhAuthCard button.primary:disabled{opacity:.5;cursor:default}
-  #nhAuthCard .muted{font-size:13px;color:#7a6a52;margin-top:12px;text-align:center}
-  #nhAuthCard .muted a{color:#bf3325;cursor:pointer;text-decoration:underline}
+  #nhAuthCard .muted{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+  #nhAuthCard .muted a{color:var(--seal);cursor:pointer;text-decoration:underline}
   #nhAuthMsg{font-size:13px;margin-top:10px;min-height:1.2em}
-  #nhAuthMsg.err{color:#bf3325}#nhAuthMsg.ok{color:#15803d}
+  #nhAuthMsg.err{color:var(--seal)}#nhAuthMsg.ok{color:#15803d}
   #nhAuthCard .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
-  #nhAuthClose{background:none;border:none;font-size:22px;cursor:pointer;color:#7a6a52;line-height:1}
+  #nhAuthClose{background:none;border:none;font-size:22px;cursor:pointer;color:var(--muted);line-height:1}
   .nh-pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#eef7ef;color:#15803d;margin:8px 0}
-  #nhAuthCard button.ghost{width:100%;padding:10px;margin-top:8px;background:transparent;border:1.5px solid #ddcfb6;border-radius:8px;cursor:pointer;font-size:14px}
+  #nhAuthCard button.ghost{width:100%;padding:10px;margin-top:8px;background:transparent;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;font-size:14px}
 </style>
 <button id="nhAuthFab" hidden>👤 Log in / Free Trial</button>
 <div id="nhAuthOv" role="dialog" aria-modal="true">
@@ -1443,7 +734,7 @@ function scrollToRoadmap() {
       ? 'Back on Free: N5 & N4 unlimited, N3–N1 capped at 30/day. Go Pro for unlimited N3–N1.'
       : 'Your Free account: N5 & N4 unlimited, N3–N1 up to 30/day, streak + readiness dashboard, prefecture quest and culture — all included. Start a 7-day trial for unlimited N3–N1.';
     planEl.innerHTML = '<span class="nh-pill">' + label + '</span>'
-      + '<p style="font-size:12.5px;color:#7a6a52;margin:8px 0 2px;line-height:1.5">' + desc + '</p>';
+      + '<p style="font-size:12.5px;color:var(--muted);margin:8px 0 2px;line-height:1.5">' + desc + '</p>';
     const wantsFree = pendingPlan === 'free' || pendingPlan === null;
     const wantsPaid = pendingPlan === 'pro' || pendingPlan === 'lifetime';
     $('nhStartTrial').style.display = (wantsFree && st.trial_status === 'never_started' && st.plan === 'free') ? '' : 'none';
@@ -1490,40 +781,6 @@ function scrollToRoadmap() {
 })();
 </script>
 <script>
-/* ── hero widgets: pull real data from quiz localStorage ── */
-(function(){
-  try{
-    const xp  = parseInt(localStorage.getItem('nh_quiz_xp')||'0',10)||0;
-    const str = parseInt(localStorage.getItem('nh_streak')||'0',10)||0;
-    const best= parseInt(localStorage.getItem('nh_best_streak')||'0',10)||0;
-    const lv  = 1 + Math.floor(xp/50);
-    const pct = (xp % 50) * 2;
-
-    // streak widget
-    const sNum  = document.getElementById('hw-streak-num');
-    const sSub  = document.getElementById('hw-streak-sub');
-    const sDays = document.getElementById('hw-streak-days');
-    if(sNum) sNum.textContent = str > 0 ? str : '—';
-    if(sSub) sSub.textContent = str > 0 ? 'correct in a row' : 'answer your first question →';
-    if(sDays && str > 0){
-      const dots = sDays.querySelectorAll('.streak-day');
-      dots.forEach((d,i)=>{
-        d.textContent = i < Math.min(str,7) ? '✓' : '·';
-        d.classList.toggle('done', i < Math.min(str,7));
-      });
-    }
-
-    // progress widget
-    const lvBadge = document.getElementById('hw-lv-badge');
-    const xpBar   = document.getElementById('hw-xp-bar');
-    const xpLeft  = document.getElementById('hw-xp-left');
-    const xpRight = document.getElementById('hw-xp-right');
-    if(lvBadge) lvBadge.textContent = xp > 0 ? ('Lv.'+lv+' · '+xp+' XP') : 'Start free →';
-    if(xpBar)   xpBar.style.width   = pct+'%';
-    if(xpLeft)  xpLeft.textContent  = xp > 0 ? (xp+' XP earned') : '0 XP';
-    if(xpRight) xpRight.textContent = 'Best streak: '+(best||0)+' 🔥';
-  }catch(e){}
-})();
 /* Newsletter → first-party list (public.subscribers via PostgREST + anon key, INSERT-only RLS;
  * same writer as blog/blog-quiz.js). Since 2026-08-17 the address stays with NihongoHub instead of
  * going to Substack. On failure the reader gets the legacy Substack link so nobody is stuck. */
