@@ -34,6 +34,7 @@
 5. migrations/2026-06-05-leaderboard.sql
 6. migrations/2026-06-12-pay-it-forward-promo-codes.sql
 7. GO-LIVE-OWNER-STEPS.md STEP A の 3 番目（users_self_read_plan）
+8. migrations/2026-08-17-subscribers.sql（自社メール名簿。blog/blog-quiz.js がブラウザから anon key で INSERT する）
 ```
 
 `*-rollback.sql` は適用しない（取り消し用）。

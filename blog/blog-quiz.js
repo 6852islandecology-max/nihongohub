@@ -366,13 +366,17 @@
   else run();
 })();
 
-// Lead magnet — email capture on every blog / killer page. Building an owned email
-// list is the one asset we keep (affiliate clicks aren't ours); it also pre-qualifies
-// the high-intent "move to / study in Japan" segment we monetise via study-abroad
-// affiliates. Posts to the existing Substack so there's no new backend.
+// Lead magnet — first-party email capture on every blog / killer page. The list is the
+// one asset that stays ours (affiliate clicks and Substack subscribers aren't). Since
+// 2026-08-17 the address is written straight into public.subscribers via PostgREST with
+// the anon key (INSERT-only RLS; see supabase/migrations/2026-08-17-subscribers.sql) —
+// no api/ function (Hobby cap 12/12) and no third-party list. Copy is aimed at the
+// audience that actually arrives (prefecture / collectible / shopping readers), with a
+// small side door for learners to the 7-day starter.
 (function(){
-  var SUBSTACK = 'https://ikimonohakasefamily.substack.com/subscribe';
   var CHECKLIST = '/sources/japan-starter-7-days.html';
+  var CFG_URL = '/api/public-config';
+  var SUBSTACK_FALLBACK = 'https://ikimonohakasefamily.substack.com/subscribe';
   function run(){
     var article = document.querySelector('article, main, .wrap') || document.body;
     if (!article || document.getElementById('nh-leadmagnet')) return;
@@ -383,23 +387,67 @@
       '#nh-leadmagnet h3{font-family:"DotGothic16",sans-serif;font-size:19px;margin:8px 0 4px;color:#16100a}' +
       '#nh-leadmagnet p{font-size:14px;color:#7a6a52;margin:0 0 12px;line-height:1.55}' +
       '#nh-leadmagnet form{display:flex;gap:8px;flex-wrap:wrap}' +
-      '#nh-leadmagnet input{flex:1;min-width:180px;padding:11px 13px;border:2px solid #ddcfb6;border-radius:7px;font:16px "DM Sans",sans-serif;background:#fff}' + // ≥16px: iOS zooms on focus below that
+      '#nh-leadmagnet input[type=email]{flex:1;min-width:180px;padding:11px 13px;border:2px solid #ddcfb6;border-radius:7px;font:16px "DM Sans",sans-serif;background:#fff}' + // ≥16px: iOS zooms on focus below that
+      '#nh-leadmagnet .lm-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}' +
       '#nh-leadmagnet button{font-family:"DotGothic16",sans-serif;font-size:15px;background:#bf3325;color:#fff;border:none;border-radius:7px;padding:11px 18px;cursor:pointer;white-space:nowrap}' +
-      '#nh-leadmagnet small{display:block;color:#7a6a52;font-size:12px;margin-top:8px}';
+      '#nh-leadmagnet button[disabled]{opacity:.6;cursor:default}' +
+      '#nh-leadmagnet small{display:block;color:#7a6a52;font-size:12px;margin-top:8px}' +
+      '#nh-leadmagnet .lm-msg{font-size:14px;margin:0;color:#16100a}' +
+      '#nh-leadmagnet .lm-msg.err{color:#bf3325}';
     document.head.appendChild(st);
     var box = document.createElement('div');
     box.id = 'nh-leadmagnet';
     box.innerHTML =
-      '<div class="lm-k">FREE · 7-DAY STARTER</div>' +
-      '<h3>Your free 7-day Japan starter</h3>' +
-      '<p>One small step a day — your first Japanese, plus the move or the job. No sign-up needed to read it.</p>' +
-      '<p style="margin:0 0 12px"><a href="' + CHECKLIST + '" target="_blank" rel="noopener" style="display:inline-block;font-family:\'DotGothic16\',sans-serif;font-size:15px;background:#bf3325;color:#fff;text-decoration:none;border-radius:7px;padding:11px 18px">Open the 7-day starter →</a></p>' +
-      '<form action="' + SUBSTACK + '" method="get" target="_blank" rel="noopener">' +
-      '<input type="email" name="email" required placeholder="your@email.com" aria-label="Email address">' +
-      '<button type="submit">Get the weekly note too →</button>' +
+      '<div class="lm-k">FREE · WEEKLY</div>' +
+      '<h3>Japan, one prefecture a week</h3>' +
+      '<p>Where to go, what to eat, what to bring home — plus new collectible hunts (manhole cards, goshuin, station stamps). One short email. Unsubscribe anytime.</p>' +
+      '<form novalidate>' +
+      '<input type="email" name="email" required autocomplete="email" placeholder="your@email.com" aria-label="Email address">' +
+      '<input class="lm-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+      '<button type="submit">Send me the prefecture letter →</button>' +
       '</form>' +
-      '<small>Optional. One short email a week. Unsubscribe anytime.</small>';
+      '<small>By subscribing you agree to receive emails from NihongoHub. We never sell or share your address. Learning Japanese? <a href="' + CHECKLIST + '" rel="noopener">Start with the free 7-day starter →</a></small>';
     article.appendChild(box);
+
+    var form = box.querySelector('form'), input = form.querySelector('input[type=email]'), btn = form.querySelector('button');
+    function say(msg, isErr){
+      var p = document.createElement('p'); p.className = 'lm-msg' + (isErr ? ' err' : ''); p.textContent = msg;
+      form.parentNode.replaceChild(p, form);
+    }
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (form.querySelector('.lm-hp').value) return; // bot filled the honeypot
+      var email = (input.value || '').trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { input.focus(); input.setAttribute('aria-invalid', 'true'); return; }
+      btn.disabled = true; btn.textContent = 'Sending…';
+      var ref = null;
+      try { ref = (window.NH_FUNNEL && window.NH_FUNNEL.src) || new URLSearchParams(location.search).get('utm_source') || null; } catch (e0) {}
+      var row = {
+        email: email,
+        source: location.pathname.slice(0, 200),
+        lang: (document.documentElement.getAttribute('lang') || 'en').slice(0, 16),
+        ref: ref ? String(ref).slice(0, 64) : null
+      };
+      fetch(CFG_URL).then(function(r){ return r.json(); }).then(function(cfg){
+        if (!cfg || !cfg.supabaseUrl || !cfg.supabaseAnonKey) throw new Error('nocfg');
+        return fetch(cfg.supabaseUrl + '/rest/v1/subscribers', {
+          method: 'POST',
+          headers: { 'apikey': cfg.supabaseAnonKey, 'Authorization': 'Bearer ' + cfg.supabaseAnonKey, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+          body: JSON.stringify(row)
+        });
+      }).then(function(r){
+        if (r.status === 201 || r.status === 409) say(r.status === 409 ? 'You’re already on the list — thank you.' : 'You’re in. The first prefecture letter arrives this week.');
+        else throw new Error('http ' + r.status);
+      }).catch(function(){
+        // Until public.subscribers exists (owner runs the migration) or if PostgREST is down,
+        // fall back to the legacy Substack sign-up so the reader is never stuck.
+        btn.disabled = false; btn.textContent = 'Send me the prefecture letter →';
+        var old = box.querySelector('.lm-msg.err'); if (old) old.remove();
+        var p = document.createElement('p'); p.className = 'lm-msg err';
+        p.innerHTML = 'Something went wrong. Please try again in a moment, or <a href="' + SUBSTACK_FALLBACK + '?email=' + encodeURIComponent(email) + '" target="_blank" rel="noopener">subscribe via Substack →</a>';
+        form.parentNode.insertBefore(p, form.nextSibling);
+      });
+    });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
   else run();
