@@ -112,6 +112,21 @@ section.blk{padding:52px 0 8px}
 .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feed a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);font-size:14px}
 .feed a b{display:block;font-family:Fraunces,serif;font-weight:600;font-size:16px;line-height:1.3;margin-bottom:6px}.feed a small{color:var(--muted)}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tags a{font-size:13px;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:5px 11px;background:var(--card)}
+/* "right now": horizontal strip under the mosaic on small screens, sticky right rail on desktop */
+.rail .h{margin-bottom:12px}.rail .h h2{font-size:22px}
+.rail .feed{gap:10px}.rail .feed a{padding:12px 14px}.rail .feed a b{font-size:15px}
+.rail .tags{margin-top:10px}
+@media (max-width:1099px){
+.rail{padding:28px 0 0}
+.rail .feed{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;margin:0 -20px;padding:0 20px 8px;scrollbar-width:thin}
+.rail .feed a{flex:0 0 min(78vw,320px);scroll-snap-align:start}
+}
+@media (min-width:1100px){
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 280px;grid-template-rows:repeat(6,auto);column-gap:36px;align-items:start}
+.cols>section{grid-column:1}
+.cols>aside.rail{grid-column:2;grid-row:1/7;position:sticky;top:20px;margin-top:52px;padding:0;max-height:calc(100vh - 40px);overflow-y:auto;scrollbar-width:thin}
+.rail .feed{grid-template-columns:1fr}
+}
 /* final cta */
 .final{margin:56px 0 0;position:relative;border-radius:18px;overflow:hidden;min-height:300px;display:grid;place-items:center;text-align:center;color:#fff}
 .final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.final::before{content:"";position:absolute;inset:0;background:rgba(28,26,22,.55)}
@@ -371,6 +386,8 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
   <div class="mosaic"><figure><img class="" src="../img/tochigi-tile1-nikko-toshogu-shrine.webp" width="960" height="640" alt="Nikko Toshogu Shrine, Tochigi Prefecture, Japan" loading="lazy" decoding="async"><figcaption>Nikko Toshogu Shrine</figcaption></figure><figure><img class="" src="../img/tochigi-tile3-kegon-falls.webp" width="960" height="640" alt="Kegon Falls, Tochigi Prefecture, Japan" loading="lazy" decoding="async"><figcaption>Kegon Falls</figcaption></figure></div>
   <p class="credits">Foto: Nikko Toshogu Shrine — <a href="https://www.flickr.com/photos/92475647@N05/30617178684" rel="noopener">bethom33</a> via Flickr, <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="license noopener">CC BY-SA 2.0</a> · Kegon Falls — <a href="https://search.find47.jp/en/i/cGhsA" rel="noopener">taka14</a> via FIND/47, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a></p>
 
+  <div class="cols">
+  <aside class="blk rail" id="now"><div class="h"><h2>Tochigi sekarang juga</h2></div><div class="feed"><a href="https://en.japantravel.com/tochigi/nikko-named-one-of-six-top-places-to-travel-in-2026/72018" target="_blank" rel="noopener"><b>Nikko Named One of Six Top Places to Travel in 2026</b><small>Japan Travel</small></a><a href="https://en.japantravel.com/tochigi/nikko-toshogu-shrine-autumn-grand-festival/31990" target="_blank" rel="noopener"><b>Nikko Toshogu Shrine Autumn Grand Festival 2026</b><small>Japan Travel</small></a><a href="https://eyt-japan.com/oya-history-museum/" target="_blank" rel="noopener"><b>Oya History Museum: A Vast Underground World - Exploring a Real Stone Quarry</b><small>EYT JAPAN</small></a></div><div class="tags"><a href="https://www.instagram.com/explore/tags/nikko/" target="_blank" rel="noopener">#nikko</a><a href="https://www.instagram.com/explore/tags/ashikagaflowerpark/" target="_blank" rel="noopener">#ashikagaflowerpark</a><a href="https://www.instagram.com/explore/tags/utsunomiyagyoza/" target="_blank" rel="noopener">#utsunomiyagyoza</a></div></aside>
   <section class="blk" id="access">
     <div class="h"><span class="n">01</span><h2>Cara sampai</h2><a class="btn hb" data-aff="twelvego" href="https://12go.asia/en/travel/japan" target="_blank" rel="sponsored noopener">Pesan bus & kereta <span class="pr">PR</span></a></div>
     <div class="access"><div class="route" style="grid-column:1/-1;grid-template-columns:1fr"><div><p style="margin:0">Nikkō berjarak ~2 jam dari Tokyo (jalur Tōbu dari Asakusa, atau shinkansen + transfer).</p></div></div></div>
@@ -399,14 +416,13 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
       <div class="ph"><div class="k">Satu lagi</div><div class="jp">気をつけてください</div><div class="ro">ki wo tsukete kudasai</div><div class="en">Mohon berhati-hati / Jagalah diri Anda</div><div class="row"><a href="../../index.html#learn">Berlatih lebih banyak bahasa Jepang →</a></div></div>
     </div>
   </section>
-
-  <section class="blk" id="now"><div class="h"><span class="n">06</span><h2>Tochigi sekarang juga</h2></div><div class="feed"><a href="https://en.japantravel.com/tochigi/nikko-named-one-of-six-top-places-to-travel-in-2026/72018" target="_blank" rel="noopener"><b>Nikko Named One of Six Top Places to Travel in 2026</b><small>Japan Travel</small></a><a href="https://en.japantravel.com/tochigi/nikko-toshogu-shrine-autumn-grand-festival/31990" target="_blank" rel="noopener"><b>Nikko Toshogu Shrine Autumn Grand Festival 2026</b><small>Japan Travel</small></a><a href="https://eyt-japan.com/oya-history-museum/" target="_blank" rel="noopener"><b>Oya History Museum: A Vast Underground World - Exploring a Real Stone Quarry</b><small>EYT JAPAN</small></a></div><div class="tags"><a href="https://www.instagram.com/explore/tags/nikko/" target="_blank" rel="noopener">#nikko</a><a href="https://www.instagram.com/explore/tags/ashikagaflowerpark/" target="_blank" rel="noopener">#ashikagaflowerpark</a><a href="https://www.instagram.com/explore/tags/utsunomiyagyoza/" target="_blank" rel="noopener">#utsunomiyagyoza</a></div></section>
+  </div>
 
   <div class="final"><img class="" src="../img/tochigi-tile1-nikko-toshogu-shrine.webp" width="960" height="640" alt="Nikko Toshogu Shrine, Tochigi Prefecture, Japan" loading="lazy" decoding="async"><div class="in"><h2>Menginap di Tochigi</h2><p>Bandingkan ryokan, hotel bisnis dan penginapan lokal.</p><a class="btn" data-aff="booking" data-aff-fallback="https://www.booking.com/searchresults.html?ss=Tochigi%20Japan" href="https://www.booking.com/searchresults.html?ss=Tochigi%20Japan" target="_blank" rel="sponsored noopener">Temukan tempat menginap <span class="pr">PR</span></a></div></div>
 
   
 
-  <section class="blk" id="next"><div class="h"><span class="n">08</span><h2>Sebelah</h2></div><div class="nb"><a href="../id/ibaraki.html"><b>Ibaraki</b><span>Seasonal flower parks, a giant Buddha, and natto just north of Tokyo.</span></a><a href="../id/gunma.html"><b>Gunma</b><span>Famous hot-spring resorts and a UNESCO silk-mill heritage.</span></a><a href="../../prefectures.html?pref=tochigi"><b>Mainkan peta 47 prefektur</b><span>Buka Tochigi di penjelajah gaya RPG.</span></a></div></section>
+  <section class="blk" id="next"><div class="h"><span class="n">07</span><h2>Sebelah</h2></div><div class="nb"><a href="../id/ibaraki.html"><b>Ibaraki</b><span>Seasonal flower parks, a giant Buddha, and natto just north of Tokyo.</span></a><a href="../id/gunma.html"><b>Gunma</b><span>Famous hot-spring resorts and a UNESCO silk-mill heritage.</span></a><a href="../../prefectures.html?pref=tochigi"><b>Mainkan peta 47 prefektur</b><span>Buka Tochigi di penjelajah gaya RPG.</span></a></div></section>
 
   <p class="disc">Tautan bertanda PR adalah tautan afiliasi: jika Anda memesan melalui tautan tersebut kami mungkin mendapatkan komisi tanpa biaya tambahan untuk Anda. Foto: Nikko Toshogu Shrine — <a href="https://www.flickr.com/photos/92475647@N05/30617178684" rel="noopener">bethom33</a> via Flickr, <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="license noopener">CC BY-SA 2.0</a> · Kegon Falls — <a href="https://search.find47.jp/en/i/cGhsA" rel="noopener">taka14</a> via FIND/47, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> · Nikko Toshogu Shrine — <a href="https://www.flickr.com/photos/92475647@N05/32835531305" rel="noopener">bethom33</a> via Flickr, <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="license noopener">CC BY-SA 2.0</a> · Kegon Falls — <a href="https://search.find47.jp/en/i/uPnm6" rel="noopener">Yuto</a> via FIND/47, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> · Utsunomiya Gyoza — <a href="https://www.flickr.com/photos/31029865@N06/15282811931" rel="noopener">Dick Thomas Johnson</a> via Flickr, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a> · Sano Ramen — <a href="https://commons.wikimedia.org/wiki/File:Sano_ramen_at_Nikko_Ken.jpg" rel="noopener">Nearby Tokyo</a> via Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · Tochiotome strawberries — <a href="https://commons.wikimedia.org/wiki/File:Strawberry_Tochiotome_-_Apr_7,_2026.jpg" rel="noopener">Ryohei Noda</a> via Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener">CC BY 4.0</a>. Map: Geolonia (MIT).</p>
 </main>

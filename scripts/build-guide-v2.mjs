@@ -7,9 +7,10 @@
  * Writes: blog/<slug>-v2.html   (prototype path; noindex until it replaces blog/<slug>.html)
  *
  * Block order (studyinjapan/GaijinPot pattern, photo before prose, one affiliate per block):
- *   hero photo + stamp -> summary + locator map -> photo mosaic -> access timeline (12Go/eSIM)
+ *   hero photo + stamp -> summary + locator map -> photo mosaic -> trending ("right now": horizontal strip
+ *   under the mosaic on <1100px, sticky right rail beside blocks 01-05 on desktop) -> access timeline (12Go/eSIM)
  *   -> what to see (Viator per spot) -> what to eat (byFood) -> numbers w/ sources -> learn the Japanese (italki)
- *   -> trending -> final CTA (hotels) -> neighbours
+ *   -> final CTA (hotels) -> FAQ -> neighbours
  *
  * Run: node scripts/build-guide-v2.mjs tokushima
  */
@@ -234,6 +235,21 @@ section.blk{padding:52px 0 8px}
 .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feed a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);font-size:14px}
 .feed a b{display:block;font-family:Fraunces,serif;font-weight:600;font-size:16px;line-height:1.3;margin-bottom:6px}.feed a small{color:var(--muted)}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tags a{font-size:13px;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:5px 11px;background:var(--card)}
+/* "right now": horizontal strip under the mosaic on small screens, sticky right rail on desktop */
+.rail .h{margin-bottom:12px}.rail .h h2{font-size:22px}
+.rail .feed{gap:10px}.rail .feed a{padding:12px 14px}.rail .feed a b{font-size:15px}
+.rail .tags{margin-top:10px}
+@media (max-width:1099px){
+.rail{padding:28px 0 0}
+.rail .feed{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;margin:0 -20px;padding:0 20px 8px;scrollbar-width:thin}
+.rail .feed a{flex:0 0 min(78vw,320px);scroll-snap-align:start}
+}
+@media (min-width:1100px){
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 280px;grid-template-rows:repeat(6,auto);column-gap:36px;align-items:start}
+.cols>section{grid-column:1}
+.cols>aside.rail{grid-column:2;grid-row:1/7;position:sticky;top:20px;margin-top:52px;padding:0;max-height:calc(100vh - 40px);overflow-y:auto;scrollbar-width:thin}
+.rail .feed{grid-template-columns:1fr}
+}
 /* final cta */
 .final{margin:56px 0 0;position:relative;border-radius:18px;overflow:hidden;min-height:300px;display:grid;place-items:center;text-align:center;color:#fff}
 .final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.final::before{content:"";position:absolute;inset:0;background:rgba(28,26,22,.55)}
@@ -272,6 +288,8 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
   <div class="mosaic">${P.mosaic.map(k => `<figure>${photo(slug, k, '', '(max-width:820px) 50vw, 25vw')}<figcaption>${esc(CREDITS[slug][k]?.label || '')}</figcaption></figure>`).join('')}</div>
   <p class="credits">${u('photos')}: ${P.mosaic.map(k => credit(slug, k)).join(' · ')}</p>
 
+  <div class="cols">
+  ${(nh.feed || []).length ? `<aside class="blk rail" id="now"><div class="h"><h2>${esc(name)} ${u('rightnow')}</h2></div><div class="feed">${nh.feed.map(f => `<a href="${esc(f.url)}" target="_blank" rel="noopener"><b>${esc(f.title)}</b><small>${esc(f.source)}</small></a>`).join('')}</div>${(nh.hashtags || []).length ? `<div class="tags">${nh.hashtags.map(h => `<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.label)}</a>`).join('')}</div>` : ''}</aside>` : ''}
   <section class="blk" id="access">
     <div class="h"><span class="n">01</span><h2>${u('getting')}</h2><a class="btn hb" data-aff="twelvego" href="https://12go.asia/en/travel/japan" target="_blank" rel="sponsored noopener">${u('bookbus')} <span class="pr">PR</span></a></div>
     <div class="access">${v.access.length ? v.access.map((r, i) => { const ta = tr('access', i, null) || {}; return `<div class="route"><div class="ic">${MODE_ICON[r.mode]}</div><div class="tl"><div><span class="stn">${esc(ta.from || r.from)}</span></div><div><span class="t">${esc(ta.time || r.time)}</span><small>${esc(ta.note || r.note)}</small></div><div><span class="stn">${esc(ta.to || r.to)}</span></div></div></div>`; }).join('') : `<div class="route" style="grid-column:1/-1;grid-template-columns:1fr"><div><p style="margin:0">${esc(GETTING)}</p></div></div>`}</div>
@@ -305,14 +323,13 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
       ${ex.deeper_phrase ? `<div class="ph"><div class="k">${u('onemore')}</div><div class="jp">${esc(ex.deeper_phrase.jp || ex.deeper_phrase)}</div><div class="ro">${esc(ex.deeper_phrase.ro || '')}</div><div class="en">${esc((TP && TP.deeper_en) || ex.deeper_phrase.en || '')}</div><div class="row"><a href="${S}index.html#learn">${u('practisemore')}</a></div></div>` : ''}
     </div>
   </section>` : ''}
-
-  ${(nh.feed || []).length ? `<section class="blk" id="now"><div class="h"><span class="n">06</span><h2>${esc(name)} ${u('rightnow')}</h2></div><div class="feed">${nh.feed.slice(0, 3).map(f => `<a href="${esc(f.url)}" target="_blank" rel="noopener"><b>${esc(f.title)}</b><small>${esc(f.source)}</small></a>`).join('')}</div>${(nh.hashtags || []).length ? `<div class="tags">${nh.hashtags.map(h => `<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.label)}</a>`).join('')}</div>` : ''}</section>` : ''}
+  </div>
 
   <div class="final">${photo(slug, P.mosaic[0] || P.hero)}<div class="in"><h2>${u('sleepin')} ${esc(name)}</h2><p>${u('compare')}</p><a class="btn" data-aff="booking" data-aff-fallback="https://www.booking.com/searchresults.html?ss=${enc(name + ' Japan')}" href="https://www.booking.com/searchresults.html?ss=${enc(name + ' Japan')}" target="_blank" rel="sponsored noopener">${u('findstay')} <span class="pr">PR</span></a></div></div>
 
-  ${v.faq.length ? `<section class="blk faq" id="faq"><div class="h"><span class="n">07</span><h2>${u('faq')}</h2></div>${v.faq.map(([q, a], i) => { const tf = tr('faq', i, null) || {}; return `<details><summary>${esc(tf.q || q)}</summary><p>${esc(tf.a || a)}</p></details>`; }).join('')}</section>` : ''}
+  ${v.faq.length ? `<section class="blk faq" id="faq"><div class="h"><span class="n">06</span><h2>${u('faq')}</h2></div>${v.faq.map(([q, a], i) => { const tf = tr('faq', i, null) || {}; return `<details><summary>${esc(tf.q || q)}</summary><p>${esc(tf.a || a)}</p></details>`; }).join('')}</section>` : ''}
 
-  <section class="blk" id="next"><div class="h"><span class="n">08</span><h2>${u('nextdoor')}</h2></div><div class="nb">${neighbours.map(n => `<a href="${B}${lang === 'en' ? '' : lang + '/'}${n.slug}.html"><b>${esc(n.romaji)}</b><span>${esc(n.lede || n.blurb || '')}</span></a>`).join('')}<a href="${S}prefectures.html?pref=${slug}"><b>${u('playmapcard')}</b><span>${esc(u('unlock').replace('{name}', name))}</span></a></div></section>
+  <section class="blk" id="next"><div class="h"><span class="n">07</span><h2>${u('nextdoor')}</h2></div><div class="nb">${neighbours.map(n => `<a href="${B}${lang === 'en' ? '' : lang + '/'}${n.slug}.html"><b>${esc(n.romaji)}</b><span>${esc(n.lede || n.blurb || '')}</span></a>`).join('')}<a href="${S}prefectures.html?pref=${slug}"><b>${u('playmapcard')}</b><span>${esc(u('unlock').replace('{name}', name))}</span></a></div></section>
 
   <p class="disc">${u('disclosure')} ${u('photos')}: ${allCredits.map(k => credit(slug, k)).join(' · ')}. Map: Geolonia (MIT).</p>
 </main>

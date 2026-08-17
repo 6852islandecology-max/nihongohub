@@ -112,6 +112,21 @@ section.blk{padding:52px 0 8px}
 .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feed a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);font-size:14px}
 .feed a b{display:block;font-family:Fraunces,serif;font-weight:600;font-size:16px;line-height:1.3;margin-bottom:6px}.feed a small{color:var(--muted)}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tags a{font-size:13px;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:5px 11px;background:var(--card)}
+/* "right now": horizontal strip under the mosaic on small screens, sticky right rail on desktop */
+.rail .h{margin-bottom:12px}.rail .h h2{font-size:22px}
+.rail .feed{gap:10px}.rail .feed a{padding:12px 14px}.rail .feed a b{font-size:15px}
+.rail .tags{margin-top:10px}
+@media (max-width:1099px){
+.rail{padding:28px 0 0}
+.rail .feed{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;margin:0 -20px;padding:0 20px 8px;scrollbar-width:thin}
+.rail .feed a{flex:0 0 min(78vw,320px);scroll-snap-align:start}
+}
+@media (min-width:1100px){
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 280px;grid-template-rows:repeat(6,auto);column-gap:36px;align-items:start}
+.cols>section{grid-column:1}
+.cols>aside.rail{grid-column:2;grid-row:1/7;position:sticky;top:20px;margin-top:52px;padding:0;max-height:calc(100vh - 40px);overflow-y:auto;scrollbar-width:thin}
+.rail .feed{grid-template-columns:1fr}
+}
 /* final cta */
 .final{margin:56px 0 0;position:relative;border-radius:18px;overflow:hidden;min-height:300px;display:grid;place-items:center;text-align:center;color:#fff}
 .final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.final::before{content:"";position:absolute;inset:0;background:rgba(28,26,22,.55)}
@@ -371,6 +386,8 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
   <div class="mosaic"><figure><img class="" src="../img/niigata-tile1-bandai-bridge.webp" width="960" height="720" alt="Bandai Bridge, Niigata Prefecture, Japan" loading="lazy" decoding="async"><figcaption>Bandai Bridge</figcaption></figure><figure><img class="" src="../img/niigata-tile3-yahiko-shrine.webp" width="960" height="639" alt="Yahiko Shrine, Niigata Prefecture, Japan" loading="lazy" decoding="async"><figcaption>Yahiko Shrine</figcaption></figure></div>
   <p class="credits">Fotos: Bandai Bridge — <a href="https://www.flickr.com/photos/126057645@N04/15682098885" rel="noopener">izunavi</a> via Flickr, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a> · Yahiko Shrine — <a href="https://search.find47.jp/en/i/7bSri" rel="noopener">FIND/47 contributor</a> via FIND/47, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a></p>
 
+  <div class="cols">
+  <aside class="blk rail" id="now"><div class="h"><h2>Niigata ahora mismo</h2></div><div class="feed"><a href="https://www.echigo-tsumari.jp/en/travelinformation/tunnel_of_light/" target="_blank" rel="noopener"><b>Kiyotsu Gorge Tunnel of Light (Tunnel of Light) — Echigo-Tsumari Art Field official page</b><small>Echigo-Tsumari Art Field</small></a><a href="https://www.japan.travel/en/japans-local-treasures/kiyotsu-gorge-tunnel-niigata-2020/" target="_blank" rel="noopener"><b>Kiyotsu Gorge Tunnel in Niigata — Japan's Local Treasures (JNTO)</b><small>Japan National Tourism Organization</small></a><a href="https://gatachira.com/local/178977/" target="_blank" rel="noopener"><b>Niigata Prefecture: 394 shops that opened in 2025 (ramen, first-to-region cafes, etc.)</b><small>Gatachira local info site</small></a></div><div class="tags"><a href="https://www.instagram.com/explore/tags/niigata/" target="_blank" rel="noopener">#niigata</a><a href="https://www.instagram.com/explore/tags/kiyotsukyo/" target="_blank" rel="noopener">#kiyotsukyo</a><a href="https://www.instagram.com/explore/tags/%E6%96%B0%E6%BD%9F%E6%97%85%E8%A1%8C/" target="_blank" rel="noopener">#%E6%96%B0%E6%BD%9F%E6%97%85%E8%A1%8C</a></div></aside>
   <section class="blk" id="access">
     <div class="h"><span class="n">01</span><h2>Cómo llegar</h2><a class="btn hb" data-aff="twelvego" href="https://12go.asia/en/travel/japan" target="_blank" rel="sponsored noopener">Reserva autobuses y trenes <span class="pr">PR</span></a></div>
     <div class="access"><div class="route" style="grid-column:1/-1;grid-template-columns:1fr"><div><p style="margin:0">Niigata está a ~2h, Echigo-Yuzawa a ~1h15m desde Tokio en Jōetsu Shinkansen.</p></div></div></div>
@@ -399,14 +416,13 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
       <div class="ph"><div class="k">Una más</div><div class="jp">お米がおいしいですね。</div><div class="ro">Okome ga oishii desu ne.</div><div class="en">The rice here is really delicious, isn't it?</div><div class="row"><a href="../../index.html#learn">Practica más japonés →</a></div></div>
     </div>
   </section>
-
-  <section class="blk" id="now"><div class="h"><span class="n">06</span><h2>Niigata ahora mismo</h2></div><div class="feed"><a href="https://www.echigo-tsumari.jp/en/travelinformation/tunnel_of_light/" target="_blank" rel="noopener"><b>Kiyotsu Gorge Tunnel of Light (Tunnel of Light) — Echigo-Tsumari Art Field official page</b><small>Echigo-Tsumari Art Field</small></a><a href="https://www.japan.travel/en/japans-local-treasures/kiyotsu-gorge-tunnel-niigata-2020/" target="_blank" rel="noopener"><b>Kiyotsu Gorge Tunnel in Niigata — Japan's Local Treasures (JNTO)</b><small>Japan National Tourism Organization</small></a><a href="https://gatachira.com/local/178977/" target="_blank" rel="noopener"><b>Niigata Prefecture: 394 shops that opened in 2025 (ramen, first-to-region cafes, etc.)</b><small>Gatachira local info site</small></a></div><div class="tags"><a href="https://www.instagram.com/explore/tags/niigata/" target="_blank" rel="noopener">#niigata</a><a href="https://www.instagram.com/explore/tags/kiyotsukyo/" target="_blank" rel="noopener">#kiyotsukyo</a><a href="https://www.instagram.com/explore/tags/%E6%96%B0%E6%BD%9F%E6%97%85%E8%A1%8C/" target="_blank" rel="noopener">#%E6%96%B0%E6%BD%9F%E6%97%85%E8%A1%8C</a></div></section>
+  </div>
 
   <div class="final"><img class="" src="../img/niigata-tile1-bandai-bridge.webp" width="960" height="720" alt="Bandai Bridge, Niigata Prefecture, Japan" loading="lazy" decoding="async"><div class="in"><h2>Duerme en Niigata</h2><p>Compara ryokan, hoteles de negocios y posadas locales.</p><a class="btn" data-aff="booking" data-aff-fallback="https://www.booking.com/searchresults.html?ss=Niigata%20Japan" href="https://www.booking.com/searchresults.html?ss=Niigata%20Japan" target="_blank" rel="sponsored noopener">Encuentra lugares para hospedarte <span class="pr">PR</span></a></div></div>
 
   
 
-  <section class="blk" id="next"><div class="h"><span class="n">08</span><h2>Puerta al lado</h2></div><div class="nb"><a href="../es/nagano.html"><b>Nagano</b><span>Alpine peaks, the great Zenkō-ji temple, and snow monkeys in hot springs.</span></a><a href="../es/toyama.html"><b>Toyama</b><span>Towering snow walls in the Alps and glassy bays of firefly squid.</span></a><a href="../../prefectures.html?pref=niigata"><b>Juega con el mapa de los 47 prefecturas</b><span>Desbloquea Niigata en el explorador estilo RPG.</span></a></div></section>
+  <section class="blk" id="next"><div class="h"><span class="n">07</span><h2>Puerta al lado</h2></div><div class="nb"><a href="../es/nagano.html"><b>Nagano</b><span>Alpine peaks, the great Zenkō-ji temple, and snow monkeys in hot springs.</span></a><a href="../es/toyama.html"><b>Toyama</b><span>Towering snow walls in the Alps and glassy bays of firefly squid.</span></a><a href="../../prefectures.html?pref=niigata"><b>Juega con el mapa de los 47 prefecturas</b><span>Desbloquea Niigata en el explorador estilo RPG.</span></a></div></section>
 
   <p class="disc">Los enlaces marcados como PR son enlaces de afiliados: si reservas a través de ellos, podemos ganar una comisión sin costo adicional para ti. Fotos: Sado Island — <a href="https://search.find47.jp/en/i/1gBz1" rel="noopener">Yoshiyuki_Ito</a> via FIND/47, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> · Bandai Bridge — <a href="https://www.flickr.com/photos/126057645@N04/15682098885" rel="noopener">izunavi</a> via Flickr, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a> · Yahiko Shrine — <a href="https://search.find47.jp/en/i/7bSri" rel="noopener">FIND/47 contributor</a> via FIND/47, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> · Bandai Bridge — <a href="https://www.flickr.com/photos/126057645@N04/15496902097" rel="noopener">izunavi</a> via Flickr, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a> · Yahiko Shrine — <a href="https://www.flickr.com/photos/123468106@N03/25283586961" rel="noopener">foooomio</a> via Flickr, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a> · Koshihikari rice — <a href="https://www.flickr.com/photos/15622795@N05/3368902299" rel="noopener">emrank</a> via Flickr, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a>. Map: Geolonia (MIT).</p>
 </main>
