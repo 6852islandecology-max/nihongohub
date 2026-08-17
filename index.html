@@ -665,13 +665,13 @@ html{scroll-padding-top:118px}
     <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/japans-little-tray-ancient-courtesy-3f2" target="_blank" rel="noopener"><span data-i18n="nl_read_tag">Read free</span>Japan's Little Tray — Yamagata's sacred mountains</a>
     <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/riding-the-sl-ginga-steam-train-through" target="_blank" rel="noopener"><span data-i18n="nl_read_tag">Read free</span>Riding the SL Ginga steam train through Ihatov</a>
   </div>
-  <form class="newsletter-form" id="nlForm" action="https://ikimonohakasefamily.substack.com/subscribe" method="get" target="_blank">
+  <form class="newsletter-form" id="nlForm" novalidate>
     <input class="newsletter-input" id="nlEmail" type="email" name="email" required data-i18n-placeholder="nl_placeholder" placeholder="your@email.com">
     <button class="btn-subscribe" type="submit" data-i18n="nl_btn">Subscribe</button>
   </form>
   <p class="newsletter-note" data-i18n="nl_note">Weekly. Free. Unsubscribe whenever you like.</p>
   <div class="nl-thanks" id="nlThanks" hidden>
-    <p class="nl-thanks-head" data-i18n="nl_thanks_head">✓ One more step — confirm in the tab that just opened. While you wait, start with these:</p>
+    <p class="nl-thanks-head" data-i18n="nl_thanks_head">✓ You’re in — the first note arrives this week. Meanwhile, start with these:</p>
     <div class="nl-reads" style="margin-top:14px">
       <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/silk-silkworms-and-river-rafting" target="_blank" rel="noopener">Silk, Silkworms &amp; River Rafting — Gunma &amp; Saitama</a>
       <a class="nl-read" href="https://ikimonohakasefamily.substack.com/p/japans-little-tray-ancient-courtesy-3f2" target="_blank" rel="noopener">Japan's Little Tray — Yamagata's sacred mountains</a>
@@ -1524,10 +1524,38 @@ function scrollToRoadmap() {
     if(xpRight) xpRight.textContent = 'Best streak: '+(best||0)+' 🔥';
   }catch(e){}
 })();
-/* reveal post-subscribe thank-you (form still opens Substack confirm in a new tab) */
+/* Newsletter → first-party list (public.subscribers via PostgREST + anon key, INSERT-only RLS;
+ * same writer as blog/blog-quiz.js). Since 2026-08-17 the address stays with NihongoHub instead of
+ * going to Substack. On failure the reader gets the legacy Substack link so nobody is stuck. */
 (function(){
-  var f = document.getElementById('nlForm'), t = document.getElementById('nlThanks');
-  if(f && t){ f.addEventListener('submit', function(){ t.hidden = false; setTimeout(function(){ t.scrollIntoView({behavior:'smooth',block:'center'}); }, 120); }); }
+  var f = document.getElementById('nlForm'), t = document.getElementById('nlThanks'), inp = document.getElementById('nlEmail');
+  if(!f || !t || !inp) return;
+  var btn = f.querySelector('button[type=submit]'), label = btn ? btn.textContent : '';
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = (inp.value || '').trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ inp.focus(); return; }
+    if(btn){ btn.disabled = true; btn.textContent = '…'; }
+    var ref = null; try { ref = new URLSearchParams(location.search).get('utm_source'); } catch(e0){}
+    fetch('/api/public-config').then(function(r){ return r.json(); }).then(function(cfg){
+      if(!cfg || !cfg.supabaseUrl || !cfg.supabaseAnonKey) throw new Error('nocfg');
+      return fetch(cfg.supabaseUrl + '/rest/v1/subscribers', {
+        method:'POST',
+        headers:{ 'apikey':cfg.supabaseAnonKey, 'Authorization':'Bearer ' + cfg.supabaseAnonKey, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
+        body: JSON.stringify({ email:email, source:'/index.html#newsletter', lang:(document.documentElement.lang || 'en').slice(0,16), ref: ref ? String(ref).slice(0,64) : null })
+      });
+    }).then(function(r){
+      if(r.status !== 201 && r.status !== 409) throw new Error('http ' + r.status);
+      f.hidden = true; t.hidden = false;
+      setTimeout(function(){ t.scrollIntoView({behavior:'smooth',block:'center'}); }, 120);
+    }).catch(function(){
+      if(btn){ btn.disabled = false; btn.textContent = label; }
+      var old = document.getElementById('nlErr'); if(old) old.remove();
+      var p = document.createElement('p'); p.id = 'nlErr'; p.className = 'newsletter-note'; p.style.color = '#bf3325';
+      p.innerHTML = 'Something went wrong. Please try again, or <a href="https://ikimonohakasefamily.substack.com/subscribe?email=' + encodeURIComponent(email) + '" target="_blank" rel="noopener">subscribe via Substack →</a>';
+      f.parentNode.insertBefore(p, f.nextSibling);
+    });
+  });
 })();
 
 /* ─── Pay-it-forward (Phase 3) ──────────────────────────────────────────────

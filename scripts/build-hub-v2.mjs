@@ -88,6 +88,7 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
 </main>
 <footer>© 2026 NihongoHub · <a href="index.html">All guides</a> · <a href="../index.html">Home</a> · Photos: free licences, credited on each prefecture page · Map: Geolonia (MIT)</footer>
 <script>document.querySelectorAll('.bigmap g.prefecture').forEach(function(g){var c=g.className.baseVal.split(' ')[0];var rel=${JSON.stringify(RELEASE.prefectures)};g.addEventListener('click',function(){location.href=c+(rel.indexOf(c)>=0?'-v2.html':'.html');});g.style.cursor='pointer';});</script>
+<script src="blog-quiz.js"></script>
 </body>
 </html>`;
 writeFileSync(ROOT + 'blog/japan-prefectures.html', html);

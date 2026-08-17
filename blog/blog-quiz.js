@@ -377,7 +377,68 @@
   var CHECKLIST = '/sources/japan-starter-7-days.html';
   var CFG_URL = '/api/public-config';
   var SUBSTACK_FALLBACK = 'https://ikimonohakasefamily.substack.com/subscribe';
+  var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+  // Shared writer: resolves {dup:false} on 201, {dup:true} on 409, rejects otherwise.
+  // Exposed as window.NH_SUBSCRIBE so other capture points on the page (the mid-article
+  // #nl-box in the collectible cluster, hub pages) write to the same list.
+  function subscribe(email, extra){
+    var ref = null;
+    try { ref = (window.NH_FUNNEL && window.NH_FUNNEL.src) || new URLSearchParams(location.search).get('utm_source') || null; } catch (e0) {}
+    var row = {
+      email: email,
+      source: ((extra && extra.source) || location.pathname).slice(0, 200),
+      lang: (document.documentElement.getAttribute('lang') || 'en').slice(0, 16),
+      ref: ref ? String(ref).slice(0, 64) : null
+    };
+    return fetch(CFG_URL).then(function(r){ return r.json(); }).then(function(cfg){
+      if (!cfg || !cfg.supabaseUrl || !cfg.supabaseAnonKey) throw new Error('nocfg');
+      return fetch(cfg.supabaseUrl + '/rest/v1/subscribers', {
+        method: 'POST',
+        headers: { 'apikey': cfg.supabaseAnonKey, 'Authorization': 'Bearer ' + cfg.supabaseAnonKey, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+        body: JSON.stringify(row)
+      });
+    }).then(function(r){
+      if (r.status === 201) return { dup: false };
+      if (r.status === 409) return { dup: true };
+      throw new Error('http ' + r.status);
+    });
+  }
+  window.NH_SUBSCRIBE = subscribe;
+
+  // Collectible-cluster articles carry a hand-written mid-article #nl-box whose only action
+  // was a Substack link. Swap that link for an inline form on the same list (10 pages, no
+  // per-file edit). The box keeps its own copy; we only change where the address goes.
+  function rewireNlBox(){
+    var nl = document.getElementById('nl-box'); if (!nl || nl.querySelector('form')) return;
+    var a = nl.querySelector('a[data-aff="newsletter"]'); if (!a) return;
+    var wrap = a.parentNode;
+    var f = document.createElement('form'); f.setAttribute('novalidate', '');
+    f.style.cssText = 'display:flex;gap:8px;flex-wrap:wrap;margin-top:8px';
+    f.innerHTML = '<input type="email" name="email" required autocomplete="email" placeholder="your@email.com" aria-label="Email address" style="flex:1;min-width:180px;padding:10px 12px;border:1px solid #b8a88a;border-radius:6px;font-size:16px;background:#fff">' +
+      '<button type="submit" style="background:#6b5b3e;color:#fff;border:none;border-radius:6px;padding:10px 16px;cursor:pointer;font-size:14px;white-space:nowrap">Subscribe free →</button>';
+    wrap.parentNode.replaceChild(f, wrap);
+    var inp = f.querySelector('input'), b = f.querySelector('button');
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = (inp.value || '').trim();
+      if (!EMAIL_RE.test(email)) { inp.focus(); return; }
+      b.disabled = true; b.textContent = 'Sending…';
+      subscribe(email, { source: location.pathname + '#nl-box' }).then(function(res){
+        var p = document.createElement('p'); p.style.cssText = 'margin:8px 0 0;font-size:14px';
+        p.textContent = res.dup ? 'You’re already on the list — thank you.' : 'You’re in. The first note arrives this week.';
+        f.parentNode.replaceChild(p, f);
+      }).catch(function(){
+        b.disabled = false; b.textContent = 'Subscribe free →';
+        var p = document.createElement('p'); p.style.cssText = 'margin:8px 0 0;font-size:13px;color:#bf3325';
+        p.innerHTML = 'Something went wrong. Try again, or <a href="' + SUBSTACK_FALLBACK + '?email=' + encodeURIComponent(email) + '" target="_blank" rel="noopener">subscribe via Substack →</a>';
+        f.parentNode.insertBefore(p, f.nextSibling);
+      });
+    });
+  }
+
   function run(){
+    rewireNlBox();
     var article = document.querySelector('article, main, .wrap') || document.body;
     if (!article || document.getElementById('nh-leadmagnet')) return;
     var st = document.createElement('style');
@@ -418,26 +479,10 @@
       e.preventDefault();
       if (form.querySelector('.lm-hp').value) return; // bot filled the honeypot
       var email = (input.value || '').trim();
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { input.focus(); input.setAttribute('aria-invalid', 'true'); return; }
+      if (!EMAIL_RE.test(email)) { input.focus(); input.setAttribute('aria-invalid', 'true'); return; }
       btn.disabled = true; btn.textContent = 'Sending…';
-      var ref = null;
-      try { ref = (window.NH_FUNNEL && window.NH_FUNNEL.src) || new URLSearchParams(location.search).get('utm_source') || null; } catch (e0) {}
-      var row = {
-        email: email,
-        source: location.pathname.slice(0, 200),
-        lang: (document.documentElement.getAttribute('lang') || 'en').slice(0, 16),
-        ref: ref ? String(ref).slice(0, 64) : null
-      };
-      fetch(CFG_URL).then(function(r){ return r.json(); }).then(function(cfg){
-        if (!cfg || !cfg.supabaseUrl || !cfg.supabaseAnonKey) throw new Error('nocfg');
-        return fetch(cfg.supabaseUrl + '/rest/v1/subscribers', {
-          method: 'POST',
-          headers: { 'apikey': cfg.supabaseAnonKey, 'Authorization': 'Bearer ' + cfg.supabaseAnonKey, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
-          body: JSON.stringify(row)
-        });
-      }).then(function(r){
-        if (r.status === 201 || r.status === 409) say(r.status === 409 ? 'You’re already on the list — thank you.' : 'You’re in. The first prefecture letter arrives this week.');
-        else throw new Error('http ' + r.status);
+      subscribe(email).then(function(res){
+        say(res.dup ? 'You’re already on the list — thank you.' : 'You’re in. The first prefecture letter arrives this week.');
       }).catch(function(){
         // Until public.subscribers exists (owner runs the migration) or if PostgREST is down,
         // fall back to the legacy Substack sign-up so the reader is never stuck.
@@ -448,6 +493,46 @@
         form.parentNode.insertBefore(p, form.nextSibling);
       });
     });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+
+// Classic → v2 hand-off. On a classic prefecture guide (/blog/<slug>.html or
+// /blog/<lang>/<slug>.html) whose photo-first v2 twin is already indexable, put a
+// one-line banner under the H1 pointing to <slug>-v2.html. Reads blog/v2-release.json
+// at runtime, so it follows the staged release (release-v2.mjs) with no rebuild of the
+// classic pages; unreleased prefectures show nothing.
+(function(){
+  var m = location.pathname.match(/^\/blog\/(?:(zh|es|th|id)\/)?([a-z-]+)\.html$/);
+  if (!m || /-v2$/.test(m[2])) return;
+  var lang = m[1] || 'en', slug = m[2];
+  var NAMES = {};
+  ('Hokkaido Aomori Iwate Miyagi Akita Yamagata Fukushima Ibaraki Tochigi Gunma Saitama ' +
+   'Chiba Tokyo Kanagawa Niigata Toyama Ishikawa Fukui Yamanashi Nagano Gifu Shizuoka ' +
+   'Aichi Mie Shiga Kyoto Osaka Hyogo Nara Wakayama Tottori Shimane Okayama Hiroshima ' +
+   'Yamaguchi Tokushima Kagawa Ehime Kochi Fukuoka Saga Nagasaki Kumamoto Oita Miyazaki ' +
+   'Kagoshima Okinawa').split(' ').forEach(function(n){ NAMES[n.toLowerCase()] = n; });
+  if (!NAMES[slug]) return;
+  var COPY = {
+    en: ['New photo-first guide to ', ' →'],
+    zh: ['全新照片版指南：', ' →'],
+    es: ['Nueva guía con fotos de ', ' →'],
+    th: ['ไกด์ฉบับใหม่พร้อมภาพถ่าย: ', ' →'],
+    id: ['Panduan baru berfoto: ', ' →']
+  };
+  function run(){
+    fetch('/blog/v2-release.json').then(function(r){ return r.json(); }).then(function(rel){
+      if (!rel || !rel.prefectures || rel.prefectures.indexOf(slug) < 0) return;
+      var h1 = document.querySelector('article h1, main h1, h1'); if (!h1 || document.getElementById('nh-v2-banner')) return;
+      var a = document.createElement('a');
+      a.id = 'nh-v2-banner';
+      a.href = slug + '-v2.html';
+      a.style.cssText = 'display:block;margin:12px 0 4px;padding:10px 14px;background:#16100a;color:#f4efe6;border-radius:8px;text-decoration:none;font-size:14px;line-height:1.5';
+      var c = COPY[lang] || COPY.en;
+      a.innerHTML = '📸 <b>' + c[0] + NAMES[slug] + '</b>' + c[1];
+      h1.parentNode.insertBefore(a, h1.nextSibling);
+    }).catch(function(){});
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
   else run();
