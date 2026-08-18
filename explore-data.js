@@ -3187,12 +3187,6 @@ window.NH_EXTRA = {
     "title": "Yume no Tsuribashi (2025) - Best of TikTok, Instagram & Reddit Travel Guide",
     "source": "Airial Travel",
     "url": "https://www.airial.travel/attractions/japan/kawanehon/yume-no-tsuribashi-X46ZUjRw"
-   },
-   {
-    "tag": "trend",
-    "title": "Mishima Skywalk: Fuji Views, Zipline & Day Trip Guide (2026)",
-    "source": "Japan Uncharted",
-    "url": "https://japanuncharted.com/shizuoka/scenic-view/mishima-skywalk-guide"
    }
   ],
   "hashtags": [
@@ -4478,12 +4472,6 @@ window.NH_EXTRA = {
     "title": "Tottori Sand Dunes (2025) – Best of TikTok, Instagram & Reddit Travel Guide",
     "source": "Airial Travel (social-media trend aggregator, 2025)",
     "url": "https://www.airial.travel/attractions/japan/tottori/tottori-sand-dunes-Oom7RG7D"
-   },
-   {
-    "tag": "trend",
-    "title": "Discover Tottori Sand Dunes and the Hometown of Detective Conan: A Unique Japan Travel Experience",
-    "source": "Visit Inside Japan (2025)",
-    "url": "https://visitinsidejapan.com/travel-in-japan/discover-tottori-sand-dunes-and-the-hometown-of-detective-conan-a-unique-japan-travel-experience/"
    }
   ],
   "hashtags": [
@@ -5964,12 +5952,6 @@ window.NH_EXTRA = {
     "title": "teamLab: A Forest Where Gods Live - GC, Mid Jul-Early Nov, 2026",
     "source": "Japan Cheapo",
     "url": "https://japancheapo.com/events/teamlab-a-forest-where-gods-live-gc/"
-   },
-   {
-    "tag": "trend",
-    "title": "Saga Prefecture Guide: Kyushu's Hidden Gem (2026)",
-    "source": "Japan Uncharted",
-    "url": "https://japanuncharted.com/saga/city-guide/saga-prefecture-overview"
    }
   ],
   "hashtags": [

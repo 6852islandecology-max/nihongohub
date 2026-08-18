@@ -540,13 +540,13 @@ function heroQuiz(el, correct) {
   .nh-pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#eef7ef;color:#15803d;margin:8px 0}
   #nhAuthCard button.ghost{width:100%;padding:10px;margin-top:8px;background:transparent;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;font-size:14px}
 </style>
-<button id="nhAuthFab" hidden>👤 Log in / Free Trial</button>
+<button id="nhAuthFab" hidden>👤 Log in / Sign up</button>
 <div id="nhAuthOv" role="dialog" aria-modal="true">
   <div id="nhAuthCard">
-    <div class="row"><h3 id="nhAuthTitle">Start your free trial</h3><button id="nhAuthClose" aria-label="Close">×</button></div>
+    <div class="row"><h3 id="nhAuthTitle">Create your free account</h3><button id="nhAuthClose" aria-label="Close">×</button></div>
     <!-- logged-out form -->
     <div id="nhAuthForm">
-      <p class="sub">7-day free trial · no credit card required.</p>
+      <p class="sub">Free · saves your progress across devices · no card.</p>
       <input id="nhEmail" type="email" placeholder="you@example.com" autocomplete="email">
       <input id="nhPass" type="password" placeholder="Password (min 6 chars)" autocomplete="current-password">
       <button class="primary" id="nhSubmit">Sign up &amp; start</button>
@@ -613,7 +613,7 @@ function heroQuiz(el, correct) {
 
   $('nhToggle').onclick = () => {
     mode = mode === 'signup' ? 'login' : 'signup';
-    $('nhAuthTitle').textContent = mode === 'signup' ? 'Start your free trial' : 'Welcome back';
+    $('nhAuthTitle').textContent = mode === 'signup' ? 'Create your free account' : 'Welcome back';
     $('nhSubmit').textContent = mode === 'signup' ? 'Sign up & start' : 'Log in';
     $('nhToggleTxt').textContent = mode === 'signup' ? 'Already have an account?' : 'New here?';
     $('nhToggle').textContent = mode === 'signup' ? 'Log in' : 'Create account';
@@ -689,7 +689,7 @@ function heroQuiz(el, correct) {
       const { data: { session } } = await sb.auth.getSession();
       if (!session) {
         mode = 'signup';
-        $('nhAuthTitle').textContent = pendingPlan === 'free' ? 'Start your free trial' : (pendingPlan === 'lifetime' ? 'Sign up & buy Lifetime' : 'Sign up & start Pro');
+        $('nhAuthTitle').textContent = 'Create your free account';
       }
     });
   });
@@ -698,7 +698,7 @@ function heroQuiz(el, correct) {
     const { data: { session } } = await sb.auth.getSession();
     if (!session) {
       $('nhAuthForm').style.display = ''; $('nhAccount').style.display = 'none';
-      fab.textContent = '👤 Log in / Free Trial';
+      fab.textContent = '👤 Log in / Sign up';
       return;
     }
     $('nhAuthForm').style.display = 'none'; $('nhAccount').style.display = '';

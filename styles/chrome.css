@@ -83,3 +83,12 @@ footer[data-nh-footer] .nh-foot-tag { font-size: 12px; color: rgba(255, 255, 255
     display: none !important;
   }
 }
+
+/* Footer newsletter (2026-08-17) — on both injected and page-owned footers */
+.nh-foot-nl { max-width: 520px; margin: 14px auto 6px; text-align: center; }
+.nh-foot-nl-h { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.85); margin-bottom: 8px; }
+.nh-foot-nl-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.nh-foot-nl input { flex: 1; min-width: 200px; padding: 10px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); color: #fff; font-size: 16px; }
+.nh-foot-nl button { background: var(--gold, #c8911f); color: #1c1a16; border: 0; border-radius: 8px; padding: 10px 14px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.nh-foot-nl button[disabled] { opacity: .6; cursor: default; }
+.nh-foot-nl-s { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 8px; }

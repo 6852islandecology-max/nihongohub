@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.nihongo-hub.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.nihongo-hub.com/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.nihongo-hub.com/kana.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/prefectures.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -13,6 +12,12 @@
   <url><loc>https://www.nihongo-hub.com/relocation-timeline.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/tokutei-ginou-id.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/about.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/faq.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/contact.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/affiliate.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/quiz.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/rpg.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/shadow-match.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/animal-colors-japan-science.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/anime-pilgrimage-japan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/id/anime-pilgrimage-japan.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>

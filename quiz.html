@@ -866,7 +866,7 @@ function srsReviewedToday(){
 function srsBumpReviewed(){
   try { localStorage.setItem('nh_srs_count', JSON.stringify({ date: srsTodayKey(), n: srsReviewedToday()+1 })); } catch(e){}
 }
-function srsCapReached(){ return !planFull() && srsReviewedToday() >= FREE_SRS_DAILY; }
+function srsCapReached(){ return false; } // 2026-08-17: free while we build — SRS review uncapped (was !planFull() && reviewed >= FREE_SRS_DAILY)
 function showReviewLimit(){
   const modal = document.getElementById('limit-modal');
   if(!modal) return;

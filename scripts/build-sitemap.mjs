@@ -22,13 +22,15 @@ const main = [
   // Live it / Travel it — previously orphaned territory pages (now crawlable as the "whole map")
   "where-next.html", "transfer-cost.html", "relocation-timeline.html", "tokutei-ginou-id.html",
   // About / authority surface
-  "about.html",
+  "about.html", "faq.html", "contact.html", "affiliate.html",
+  // App surfaces that were reachable but unlisted (2026-08-17 audit)
+  "quiz.html", "rpg.html", "shadow-match.html",
 ];
 
 const urls = [];
 const add = (path, priority) => urls.push({ loc: `${BASE}/${path}`, priority });
 
-add("", "1.0"); // root
+// root "/" is the same document as index.html — listed once via main[] (2026-08-17)
 main.forEach((p) => add(p, p === "index.html" ? "1.0" : "0.8"));
 // standalone (non-prefecture) blog pages — auto-discovered from blog/*.html so
 // new themed guides are never silently dropped (replaces a hardcoded 5-slug list

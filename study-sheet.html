@@ -66,9 +66,7 @@ h2.sec{font-family:'DotGothic16',sans-serif;font-size:16px;margin:22px 0 12px;bo
 
 <script>
 function g(k,d){ try{ const v=localStorage.getItem(k); return v==null?d:v; }catch(e){ return d; } }
-function full(){
-  try{ const p=JSON.parse(localStorage.getItem('nh_plan_cache')||'null'); return !!(p && (p.state==='paid'||p.state==='trial')); }catch(e){ return false; }
-}
+function full(){ return true; } // 2026-08-17: free while we build — study sheets open to everyone (plan gate kept in git history)
 function esc(s){ const d=document.createElement('div'); d.textContent=String(s==null?'':s); return d.innerHTML; }
 function stripTags(s){ const d=document.createElement('div'); d.innerHTML=String(s||''); return d.textContent||d.innerText||''; }
 
