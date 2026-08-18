@@ -8783,5 +8783,351 @@
       "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:David_Iwaoka&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:David Iwaoka (page does not exist)\">David Iwaoka</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "tori-no-ichi-kumade-japan": {
+    "dates": {
+      "key": "dates",
+      "label": "Ōtori Shrine, Asakusa, on a rooster night",
+      "query": [
+        "Tori no Ichi Otori Shrine Asakusa night",
+        "Tori no ichi Asakusa lanterns",
+        "Ootori jinja Asakusa"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-dates-tori-shrine-asakusa-on-a-rooster-night.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "ov:8ff3bade-14db-41a3-9243-97ee49c557d9",
+      "title": "Tori no Ichi Fair",
+      "source_page": "https://www.flickr.com/photos/34530295@N06/4098131170",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "artist": "Yoshikazu TAKADA",
+      "artist_html": "",
+      "fetched_from": "flickr/openverse"
+    },
+    "hours": {
+      "key": "hours",
+      "label": "The market runs through the night",
+      "query": [
+        "Tori no Ichi crowd night",
+        "Tori-no-ichi Hanazono Shrine night",
+        "Tori no ichi Shinjuku"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-hours-the-market-runs-through-the-night.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Cock Festival at Hanazono-Shrine, Shinjuku 2010 (1).JPG",
+      "title": "Cock Festival at Hanazono-Shrine, Shinjuku 2010 (1).JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cock_Festival_at_Hanazono-Shrine,_Shinjuku_2010_(1).JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "掬茶",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E6%8E%AC%E8%8C%B6\" title=\"User:掬茶\">掬茶</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kumade": {
+      "key": "kumade",
+      "label": "A decorated kumade",
+      "query": [
+        "kumade rake decorated",
+        "kumade Tori no Ichi",
+        "engi kumade"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-kumade-a-decorated-kumade.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Rake.Kumade Torino-ichi-Festival of Ootori-Shrine at Ookunitama-Shrine Fuchu-city Tokyo Japan 2024.no1.jpg",
+      "title": "Rake.Kumade Torino-ichi-Festival of Ootori-Shrine at Ookunitama-Shrine Fuchu-city Tokyo Japan 2024.no1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Rake.Kumade_Torino-ichi-Festival_of_Ootori-Shrine_at_Ookunitama-Shrine_Fuchu-city_Tokyo_Japan_2024.no1.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Fuchu",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Fuchu\" title=\"User:Fuchu\">Fuchu</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kumade2": {
+      "key": "kumade2",
+      "label": "Kumade stall",
+      "query": [
+        "kumade stall lucky charms",
+        "kumade okame",
+        "Tori no Ichi kumade stall"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-kumade2-kumade-stall.webp",
+      "width": 960,
+      "height": 642,
+      "source_id": "wm:File:Okame market selling rake,Kawaguchi city,Japan.jpg",
+      "title": "Okame market selling rake,Kawaguchi city,Japan.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Okame_market_selling_rake,Kawaguchi_city,Japan.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Katorisi",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Katorisi&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Katorisi (page does not exist)\">Katorisi</a>",
+      "fetched_from": "wikimedia"
+    },
+    "where1": {
+      "key": "where1",
+      "label": "Hanazono Shrine, Shinjuku",
+      "query": [
+        "Hanazono Shrine Shinjuku",
+        "Hanazono Jinja",
+        "Hanazono Shrine torii"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-where1-hanazono-shrine-shinjuku.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Hanazono shrine. Shinjuku. Tokyo. (42654941572).jpg",
+      "title": "Hanazono shrine. Shinjuku. Tokyo. (42654941572).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hanazono_shrine._Shinjuku._Tokyo._(42654941572).jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/88123769@N02\">Bernard Spragg. NZ</a> from Christchurch, New Zealand",
+      "fetched_from": "wikimedia"
+    },
+    "kansai": {
+      "key": "kansai",
+      "label": "Ōtori Taisha, Sakai",
+      "query": [
+        "Otori Taisha Sakai",
+        "Ōtori taisha",
+        "Otori Grand Shrine Sakai"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-kansai-tori-taisha-sakai.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:Otori-taisha, Goushiden.jpg",
+      "title": "Otori-taisha, Goushiden.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Otori-taisha,_Goushiden.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Saigen Jiro",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Saigen_Jiro\" title=\"User:Saigen Jiro\">Saigen Jiro</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kumade3": {
+      "key": "kumade3",
+      "label": "A kumade sold at Ōtori Shrine",
+      "query": [
+        "酉の市Torinoichi000"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-kumade3-a-kumade-sold-at-tori-shrine.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:酉の市Torinoichi000.jpg",
+      "title": "酉の市Torinoichi000.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E9%85%89%E3%81%AE%E5%B8%82Torinoichi000.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Jipanguguru",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Jipanguguru&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Jipanguguru (page does not exist)\">Jipanguguru</a>",
+      "fetched_from": "wikimedia"
+    },
+    "stall": {
+      "key": "stall",
+      "label": "Inside a kumade stall, Hanazono Shrine, November 2025",
+      "query": [
+        "Hanazono shrine tori no ichi fair20251124"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-stall-inside-a-kumade-stall-hanazono-shrine-no.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Hanazono shrine tori no ichi fair20251124.jpg",
+      "title": "Hanazono shrine tori no ichi fair20251124.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hanazono_shrine_tori_no_ichi_fair20251124.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Mozzucu",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Mozzucu&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Mozzucu (page does not exist)\">Mozzucu</a>",
+      "fetched_from": "wikimedia"
+    },
+    "where2": {
+      "key": "where2",
+      "label": "Chōkoku-ji, beside Ōtori Shrine",
+      "query": [
+        "Chokoku-ji (Taito)03"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-where2-ch-koku-ji-beside-tori-shrine.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Chokoku-ji (Taito)03.jpg",
+      "title": "Chokoku-ji (Taito)03.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Chokoku-ji_(Taito)03.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Higa4",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Higa4\" title=\"User:Higa4\">Higa4</a>",
+      "fetched_from": "wikimedia"
+    },
+    "okame": {
+      "key": "okame",
+      "label": "Okame on a giant kumade at Ōtori Shrine",
+      "query": [
+        "Otori Shrine @ Iriya (13824370665)"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-okame-okame-on-a-giant-kumade-at-tori-shrine.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Otori Shrine @ Iriya (13824370665).jpg",
+      "title": "Otori Shrine @ Iriya (13824370665).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Otori_Shrine_@_Iriya_(13824370665).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Guilhem Vellut from Annecy, France",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/22539273@N00\">Guilhem Vellut</a> from Annecy, France",
+      "fetched_from": "wikimedia"
+    },
+    "asakusa": {
+      "key": "asakusa",
+      "label": "Ōtori Shrine, Asakusa, dressed for the market",
+      "query": [
+        "Ootori jinja.JPG",
+        "Ootori jinja"
+      ],
+      "file": "img/tori-no-ichi-kumade-japan-asakusa-tori-shrine-asakusa-dressed-for-the-mark.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Ootori jinja.JPG",
+      "title": "Ootori jinja.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ootori_jinja.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Jerry fish tkc",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Jerry_fish_tkc&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Jerry fish tkc (page does not exist)\">Jerry fish tkc</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "manhole-cards-japan": {
+    "toyama": {
+      "key": "toyama",
+      "label": "Toyama city cover",
+      "query": [
+        "Toyama manhole cover",
+        "Toyama city manhole",
+        "Toyama manhole"
+      ],
+      "file": "img/manhole-cards-japan-toyama-toyama-city-cover.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Toyama manhole cover.png",
+      "title": "Toyama manhole cover.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Toyama_manhole_cover.png",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Thomas Housieaux",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Tomhousi\" title=\"User:Tomhousi\">Thomas Housieaux</a>",
+      "fetched_from": "wikimedia"
+    },
+    "yokote": {
+      "key": "yokote",
+      "label": "Yokote, Akita: kamakura snow huts",
+      "query": [
+        "Manhole cover in Yokote, Akita"
+      ],
+      "file": "img/manhole-cards-japan-yokote-yokote-akita-kamakura-snow-huts.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Manhole cover in Yokote, Akita.jpg",
+      "title": "Manhole cover in Yokote, Akita.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Manhole_cover_in_Yokote,_Akita.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "掬茶",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E6%8E%AC%E8%8C%B6\" title=\"User:掬茶\">掬茶</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kumamoto": {
+      "key": "kumamoto",
+      "label": "Kumamoto city cover",
+      "query": [
+        "Manhole cover of Kumamoto, Kumamoto"
+      ],
+      "file": "img/manhole-cards-japan-kumamoto-kumamoto-city-cover.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Manhole cover of Kumamoto, Kumamoto.jpg",
+      "title": "Manhole cover of Kumamoto, Kumamoto.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Manhole_cover_of_Kumamoto,_Kumamoto.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "そらみみ",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%9D%E3%82%89%E3%81%BF%E3%81%BF\" title=\"User:そらみみ\">そらみみ</a>",
+      "fetched_from": "wikimedia"
+    },
+    "tokorozawa": {
+      "key": "tokorozawa",
+      "label": "Tokorozawa, Saitama: the Anzai-Aizu biplane",
+      "query": [
+        "Manhole cover Tokorozawa colored"
+      ],
+      "file": "img/manhole-cards-japan-tokorozawa-tokorozawa-saitama-the-anzai-aizu-biplan.webp",
+      "width": 900,
+      "height": 900,
+      "source_id": "wm:File:Manhole cover Tokorozawa colored.jpg",
+      "title": "Manhole cover Tokorozawa colored.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Manhole_cover_Tokorozawa_colored.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "designed by: Tokorozawa-city photographed by: tokoro koko",
+      "artist_html": "designed by: <a href=\"//commons.wikimedia.org/wiki/%E6%89%80%E6%B2%A2%E5%B8%82\" class=\"mw-redirect\" title=\"所沢市\">Tokorozawa-city</a><br>photographed by: <a href=\"//commons.wikimedia.org/wiki/User:Tokorokoko\" title=\"User:Tokorokoko\">tokoro koko </a>",
+      "fetched_from": "wikimedia"
+    },
+    "hiroshima": {
+      "key": "hiroshima",
+      "label": "Hiroshima city cover with Carp Boy",
+      "query": [
+        "Manhole hiroshima.jpg",
+        "Manhole hiroshima"
+      ],
+      "file": "img/manhole-cards-japan-hiroshima-hiroshima-city-cover-with-carp-boy.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Manhole hiroshima.jpg",
+      "title": "Manhole hiroshima.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Manhole_hiroshima.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "VKaeru",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:VKaeru\" title=\"User:VKaeru\">VKaeru</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kobe": {
+      "key": "kobe",
+      "label": "Kobe city cover",
+      "query": [
+        "Manhole cover of Kobe, Hyogo.JPG",
+        "Manhole cover of Kobe, Hyogo"
+      ],
+      "file": "img/manhole-cards-japan-kobe-kobe-city-cover.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Manhole cover of Kobe, Hyogo.JPG",
+      "title": "Manhole cover of Kobe, Hyogo.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Manhole_cover_of_Kobe,_Hyogo.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "そらみみ (Soramimi)",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%9D%E3%82%89%E3%81%BF%E3%81%BF\" title=\"User:そらみみ\">そらみみ</a> (Soramimi)",
+      "fetched_from": "wikimedia"
+    },
+    "osaka": {
+      "key": "osaka",
+      "label": "Osaka city cover, coloured version, with Osaka Castle",
+      "query": [
+        "Osaka Castle manhole cover.png",
+        "Osaka Castle manhole cover"
+      ],
+      "file": "img/manhole-cards-japan-osaka-osaka-city-cover-coloured-version-with-o.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Osaka Castle manhole cover.png",
+      "title": "Osaka Castle manhole cover.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_manhole_cover.png",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Thomas Housieaux",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Tomhousi\" title=\"User:Tomhousi\">Thomas Housieaux</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }

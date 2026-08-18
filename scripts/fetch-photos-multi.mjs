@@ -160,6 +160,33 @@ Object.assign(PHOTOS, {
     { key: 'see3',  q: ['Sapporo Snow Festival', 'Yuki Matsuri Sapporo', 'snow sculpture Sapporo'], must: /snow festival|yuki matsuri|雪まつり|snow sculpture/i, label: 'Sapporo Snow Festival' },
   ],
 });
+// ---- blog article photo sets (2026-08-19): collectible-cluster articles get 8-12 in-body photos.
+// Wikimedia first (curated titles, no personality-rights surprises), Flickr second. Every candidate is
+// eyeballed before injection (scripts/inject-article-photos.mjs reads img-credits-multi.json).
+Object.assign(PHOTOS, {
+  'tori-no-ichi-kumade-japan': [
+    { key: 'dates',   q: ['Tori no Ichi Otori Shrine Asakusa night', 'Tori no ichi Asakusa lanterns', 'Ootori jinja Asakusa'], must: /tori.?no.?ichi|otori|ootori|鷲神社|酉の市/i, sources: ['wikimedia', 'flickr'], label: 'Ōtori Shrine, Asakusa, on a rooster night' },
+    { key: 'hours',   q: ['Tori no Ichi crowd night', 'Tori-no-ichi Hanazono Shrine night', 'Tori no ichi Shinjuku'], must: /tori.?no.?ichi|hanazono|花園|酉の市/i, sources: ['wikimedia', 'flickr'], label: 'The market runs through the night' },
+    { key: 'kumade',  q: ['kumade rake decorated', 'kumade Tori no Ichi', 'engi kumade'], must: /kumade|熊手|rake/i, sources: ['wikimedia', 'flickr'], label: 'A decorated kumade' },
+    { key: 'kumade2', q: ['kumade stall lucky charms', 'kumade okame', 'Tori no Ichi kumade stall'], must: /kumade|熊手|tori.?no.?ichi|酉の市/i, sources: ['wikimedia', 'flickr'], label: 'Kumade stall' },
+    { key: 'kumade3', q: ['酉の市Torinoichi000'], must: /^酉の市Torinoichi000/i, sources: ['wikimedia'], label: 'A kumade sold at Ōtori Shrine' }, // hand-picked 2026-08-19
+    { key: 'stall',   q: ['Hanazono shrine tori no ichi fair20251124'], must: /Hanazono shrine tori no ichi fair2025/i, sources: ['wikimedia'], label: 'Inside a kumade stall, Hanazono Shrine, November 2025' }, // hand-picked
+    { key: 'asakusa', q: ['Ootori jinja.JPG', 'Ootori jinja'], must: /^Ootori jinja\.JPG/i, sources: ['wikimedia'], label: 'Ōtori Shrine, Asakusa, dressed for the market' }, // hand-picked
+    { key: 'where1',  q: ['Hanazono Shrine Shinjuku', 'Hanazono Jinja', 'Hanazono Shrine torii'], must: /hanazono|花園神社/i, sources: ['wikimedia', 'flickr'], label: 'Hanazono Shrine, Shinjuku' },
+    { key: 'where2',  q: ['Chokoku-ji (Taito)03'], must: /^Chokoku-ji \(Taito\)03/i, sources: ['wikimedia'], label: 'Chōkoku-ji, beside Ōtori Shrine' }, // hand-picked (auto pick was the Ena temple of the same name)
+    { key: 'kansai',  q: ['Otori Taisha Sakai', 'Ōtori taisha', 'Otori Grand Shrine Sakai'], must: /[oō]tori.?taisha|大鳥大社|sakai|堺/i, sources: ['wikimedia', 'flickr'], label: 'Ōtori Taisha, Sakai' },
+    { key: 'okame',   q: ['Otori Shrine @ Iriya (13824370665)'], must: /Otori Shrine @ Iriya \(13824370665\)/i, sources: ['wikimedia'], label: 'Okame on a giant kumade at Ōtori Shrine' }, // hand-picked
+  ],
+  'manhole-cards-japan': [
+    { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
+    { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked
+    { key: 'toyama',  q: ['Toyama manhole cover', 'Toyama city manhole', 'Toyama manhole'], must: /toyama|富山/i, sources: ['wikimedia', 'flickr'], label: 'Toyama city cover' },
+    { key: 'osaka',   q: ['Osaka Castle manhole cover.png', 'Osaka Castle manhole cover'], must: /^Osaka Castle manhole cover\.png/i, sources: ['wikimedia'], label: 'Osaka city cover, coloured version, with Osaka Castle' }, // hand-picked
+    { key: 'yokote',  q: ['Manhole cover in Yokote, Akita'], must: /^Manhole cover in Yokote, Akita/i, sources: ['wikimedia'], label: 'Yokote, Akita: kamakura snow huts' }, // hand-picked
+    { key: 'kumamoto', q: ['Manhole cover of Kumamoto, Kumamoto'], must: /^Manhole cover of Kumamoto, Kumamoto/i, sources: ['wikimedia'], label: 'Kumamoto city cover' }, // hand-picked
+    { key: 'tokorozawa', q: ['Manhole cover Tokorozawa colored'], must: /^Manhole cover Tokorozawa colored/i, sources: ['wikimedia'], label: 'Tokorozawa, Saitama: the Anzai-Aizu biplane' }, // hand-picked
+  ],
+});
 const PREF_OF = { tokushima: 'tokushima', 'naruto-whirlpools': 'tokushima', 'awa-odori-kaikan': 'tokushima', 'iya-kazurabashi': 'tokushima', 'ryozenji-temple': 'tokushima', 'oboke-gorge': 'tokushima', 'ishima-island': 'tokushima', 'takegashima-island': 'tokushima', 'shimadajima-island': 'tokushima' }; // slug -> FIND/47 prefecture slug (spot slugs map to their prefecture)
 
 // FIND/47 static archive: /en/images%253Farea=<area>%26prefectures=<pref>[%26page=N].html
