@@ -109,7 +109,7 @@
   "visitors": null,
   "wikiJa": "厚岸小島",
   "wikiEn": "Kojima (Hokkaido)",
-  "enSource": "interwiki"
+  "enSource": "search"
  },
  {
   "ja": "大島",
@@ -173,7 +173,7 @@
   "visitors": 15482,
   "wikiJa": null,
   "wikiEn": "Kinkasan",
-  "enSource": "interwiki"
+  "enSource": "search"
  },
  {
   "ja": "田代島",
@@ -429,7 +429,7 @@
   "visitors": 3228,
   "wikiJa": "利島",
   "wikiEn": "To-shima, Tokyo",
-  "enSource": "interwiki"
+  "enSource": "search"
  },
  {
   "ja": "新島",
@@ -525,7 +525,7 @@
   "visitors": null,
   "wikiJa": null,
   "wikiEn": "Aogashima",
-  "enSource": "interwiki"
+  "enSource": "search"
  },
  {
   "ja": "父島",
@@ -833,9 +833,9 @@
  },
  {
   "ja": "淡路島",
-  "yomi": "",
-  "name": "",
-  "pref": "滋賀県",
+  "yomi": "あわじしま",
+  "name": "Awaji Island",
+  "pref": "兵庫県",
   "area": 592.51,
   "pop": 134717,
   "households": 52294,
@@ -843,15 +843,15 @@
   "elev": 608,
   "popChange": -8324,
   "visitors": 13012000,
-  "wikiJa": null,
-  "wikiEn": null,
-  "enSource": null
+  "wikiJa": "淡路島",
+  "wikiEn": "Awaji Island",
+  "enSource": "interwiki"
  },
  {
   "ja": "沼島",
-  "yomi": "",
-  "name": "",
-  "pref": "滋賀県",
+  "yomi": "ぬしま",
+  "name": "Nushima",
+  "pref": "兵庫県",
   "area": 2.73,
   "pop": 430,
   "households": 206,
@@ -859,15 +859,15 @@
   "elev": 125,
   "popChange": -76,
   "visitors": 20200,
-  "wikiJa": null,
+  "wikiJa": "沼島",
   "wikiEn": null,
   "enSource": null
  },
  {
   "ja": "男鹿島",
-  "yomi": "",
-  "name": "",
-  "pref": "滋賀県",
+  "yomi": "たんがしま",
+  "name": "Tangashima",
+  "pref": "兵庫県",
   "area": 4.53,
   "pop": 38,
   "households": 23,
@@ -875,7 +875,7 @@
   "elev": 193,
   "popChange": -34,
   "visitors": 55600,
-  "wikiJa": null,
+  "wikiJa": "男鹿島",
   "wikiEn": null,
   "enSource": null
  },
@@ -883,7 +883,7 @@
   "ja": "家島",
   "yomi": "ぃスしま",
   "name": "Ieshima",
-  "pref": "滋賀県",
+  "pref": "兵庫県",
   "area": 5.4,
   "pop": 2693,
   "households": 1157,
@@ -897,9 +897,9 @@
  },
  {
   "ja": "坊勢島",
-  "yomi": "",
-  "name": "",
-  "pref": "滋賀県",
+  "yomi": "ぼうぜじま",
+  "name": "Bōzejima",
+  "pref": "兵庫県",
   "area": 1.87,
   "pop": 2165,
   "households": 792,
@@ -907,7 +907,7 @@
   "elev": 100,
   "popChange": -390,
   "visitors": 72900,
-  "wikiJa": null,
+  "wikiJa": "坊勢島",
   "wikiEn": null,
   "enSource": null
  },
@@ -915,7 +915,7 @@
   "ja": "西島",
   "yomi": "ーしじま",
   "name": "Shijima",
-  "pref": "滋賀県",
+  "pref": "兵庫県",
   "area": 6.52,
   "pop": null,
   "households": 2,
@@ -923,7 +923,7 @@
   "elev": 276,
   "popChange": null,
   "visitors": null,
-  "wikiJa": null,
+  "wikiJa": "西島 (兵庫県)",
   "wikiEn": null,
   "enSource": null
  },
@@ -1005,7 +1005,7 @@
   "visitors": null,
   "wikiJa": "長島 (岡山県)",
   "wikiEn": "Nagashima Aiseien Sanatorium",
-  "enSource": "interwiki"
+  "enSource": "search"
  },
  {
   "ja": "前島",

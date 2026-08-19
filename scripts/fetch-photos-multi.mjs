@@ -271,6 +271,12 @@ Object.assign(PHOTOS, {
     { key: 'hagi', q: ['Hagi-Horiuchi Yamaguchi samurai quarter.JPG'], must: /^Hagi-Horiuchi Yamaguchi samurai quarter\.JPG/i, sources: ['wikimedia'], label: 'The Horiuchi samurai quarter, Hagi' },
     { key: 'matsumoto', q: ['Matsumoto Castle05s5s4592.jpg'], must: /^Matsumoto Castle05s5s4592\.jpg/i, sources: ['wikimedia'], label: 'Matsumoto Castle' },
   ],
+  'seto-inland-sea-islands': [ // hand-picked 2026-08-19
+    { key: 'hero', q: ['男木島の集落2015-11-03 001.JPG'], must: /^男木島の集落2015-11-03 001\.JPG/i, sources: ['wikimedia'], label: 'The village of Ogijima, Kagawa, stacked up its hill above the harbour' },
+    { key: 'angel', q: ['Angel Road Shodo Island Japan11bs5.jpg'], must: /^Angel Road Shodo Island Japan11bs5\.jpg/i, sources: ['wikimedia'], label: 'Angel Road sandbar, Shōdoshima' },
+    { key: 'itsukushima', q: ['厳島神社と大鳥居.JPG'], must: /^厳島神社と大鳥居\.JPG/i, sources: ['wikimedia'], label: 'Itsukushima Shrine and its great torii, Miyajima' },
+    { key: 'oyamazumi', q: ['Ōyamazumi-jinja shinmon.JPG'], must: /^Ōyamazumi-jinja shinmon\.JPG/i, sources: ['wikimedia'], label: 'Ōyamazumi Shrine on Ōmishima, the guardian shrine of the Inland Sea' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked

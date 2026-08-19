@@ -40,7 +40,9 @@ function parseCsv(text) {
   return rows.filter(r => r.length > 1).map(r => Object.fromEntries(head.map((h, i) => [h.replace(/^﻿/, ''), r[i] ?? ''])));
 }
 const num = (v) => { const s = String(v ?? '').replace(/,/g, '').trim(); return /^-?\d+(\.\d+)?$/.test(s) ? Number(s) : null; };
-const cleanPref = (p) => String(p || '').replace(/\(.*?\)/g, '').trim();       // 宮城県(推定) -> 宮城県
+// index-derived prefecture errors in the CSV (所在地 OCR broken -> wrong index page): fix by island name
+const PREF_FIX = { '淡路島': '兵庫県', '沼島': '兵庫県', '男鹿島': '兵庫県', '家島': '兵庫県', '坊勢島': '兵庫県', '西島': '兵庫県' };
+const cleanPref = (p, name) => PREF_FIX[name] || String(p || '').replace(/\(.*?\)/g, '').trim();       // 宮城県(推定) -> 宮城県
 const prefStem = (p) => cleanPref(p).replace(/[都道府県]$/, '');                // 宮城県 -> 宮城 (北海道 -> 北海)
 
 const all = parseCsv(fs.readFileSync(CSV, 'utf8'));
@@ -92,7 +94,7 @@ const out = [];
 let n = 0;
 for (const r of islands) {
   if (n >= limit) break; n++;
-  const ja = r['島名'], pref = cleanPref(r['都道府県']);
+  const ja = r['島名'], pref = cleanPref(r['都道府県'], ja);
   const w = await wiki(ja, pref);
   let romaji = (r['ローマ字'] || '').trim();
   romaji = romaji ? romaji.charAt(0) + romaji.slice(1).toLowerCase() : '';

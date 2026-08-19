@@ -10396,5 +10396,115 @@
       "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "seto-inland-sea-islands": {
+    "naoshima": {
+      "key": "naoshima",
+      "label": "Honmura ferry terminal on Naoshima, Kagawa",
+      "query": [
+        "Naoshima honmura port terminal.jpg"
+      ],
+      "file": "img/japan-inhabited-islands-naoshima-honmura-ferry-terminal-on-naoshima-kagaw.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Naoshima honmura port terminal.jpg",
+      "title": "Naoshima honmura port terminal.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Naoshima_honmura_port_terminal.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Artandgeograph",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Artandgeograph&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Artandgeograph (page does not exist)\">Artandgeograph</a>",
+      "fetched_from": "wikimedia"
+    },
+    "ferry": {
+      "key": "setouchi",
+      "label": "Islands of the Seto Inland Sea from the ferry deck",
+      "query": [
+        "Shodo seen from the ferry (6453265785).jpg"
+      ],
+      "file": "img/japan-inhabited-islands-setouchi-islands-of-the-seto-inland-sea-from-the-.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:Shodo seen from the ferry (6453265785).jpg",
+      "title": "Shodo seen from the ferry (6453265785).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Shodo_seen_from_the_ferry_(6453265785).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Maarten Heerlien from Voorschoten, The Netherlands",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/65847118@N06\">Maarten Heerlien</a> from Voorschoten, The Netherlands",
+      "fetched_from": "wikimedia"
+    },
+    "hero": {
+      "key": "hero",
+      "label": "The village of Ogijima, Kagawa, stacked up its hill above the harbour",
+      "query": [
+        "男木島の集落2015-11-03 001.JPG"
+      ],
+      "file": "img/seto-inland-sea-islands-hero-the-village-of-ogijima-kagawa-stacked-up.webp",
+      "width": 1600,
+      "height": 1200,
+      "source_id": "wm:File:男木島の集落2015-11-03 001.JPG",
+      "title": "男木島の集落2015-11-03 001.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E7%94%B7%E6%9C%A8%E5%B3%B6%E3%81%AE%E9%9B%86%E8%90%BD2015-11-03_001.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "屋嶋の仙人",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E5%B1%8B%E5%B6%8B%E3%81%AE%E4%BB%99%E4%BA%BA&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:屋嶋の仙人 (page does not exist)\">屋嶋の仙人</a>",
+      "fetched_from": "wikimedia"
+    },
+    "angel": {
+      "key": "angel",
+      "label": "Angel Road sandbar, Shōdoshima",
+      "query": [
+        "Angel Road Shodo Island Japan11bs5.jpg"
+      ],
+      "file": "img/seto-inland-sea-islands-angel-angel-road-sandbar-sh-doshima.webp",
+      "width": 960,
+      "height": 638,
+      "source_id": "wm:File:Angel Road Shodo Island Japan11bs5.jpg",
+      "title": "Angel Road Shodo Island Japan11bs5.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Angel_Road_Shodo_Island_Japan11bs5.jpg",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "663highland",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+      "fetched_from": "wikimedia"
+    },
+    "itsukushima": {
+      "key": "itsukushima",
+      "label": "Itsukushima Shrine and its great torii, Miyajima",
+      "query": [
+        "厳島神社と大鳥居.JPG"
+      ],
+      "file": "img/seto-inland-sea-islands-itsukushima-itsukushima-shrine-and-its-great-torii-m.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:厳島神社と大鳥居.JPG",
+      "title": "厳島神社と大鳥居.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E5%8E%B3%E5%B3%B6%E7%A5%9E%E7%A4%BE%E3%81%A8%E5%A4%A7%E9%B3%A5%E5%B1%85.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Pistachio001",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Pistachio001&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Pistachio001 (page does not exist)\">Pistachio001</a>",
+      "fetched_from": "wikimedia"
+    },
+    "oyamazumi": {
+      "key": "oyamazumi",
+      "label": "Ōyamazumi Shrine on Ōmishima, the guardian shrine of the Inland Sea",
+      "query": [
+        "Ōyamazumi-jinja shinmon.JPG"
+      ],
+      "file": "img/seto-inland-sea-islands-oyamazumi-yamazumi-shrine-on-mishima-the-guardian-.webp",
+      "width": 960,
+      "height": 709,
+      "source_id": "wm:File:Ōyamazumi-jinja shinmon.JPG",
+      "title": "Ōyamazumi-jinja shinmon.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%C5%8Cyamazumi-jinja_shinmon.JPG",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Saigen Jiro",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Saigen_Jiro\" title=\"User:Saigen Jiro\">Saigen Jiro</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }

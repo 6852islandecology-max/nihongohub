@@ -3,13 +3,14 @@
 // Reads blog/data/aquariums.json (name, url, ...), crawls the homepage + up to N linked info pages
 // (料金 / 営業 / 休館 / アクセス / ticket / hours / access), and writes candidate snippets to
 // blog/data/aquariums-scrape.json for human review. Never writes prices into aquariums.json itself.
-// Usage: node scripts/aquarium-scrape.mjs [id ...]   (no ids = all)
+// Usage: node scripts/aquarium-scrape.mjs [--set aquariums|zoos] [id ...]   (no ids = all)
 import fs from 'node:fs'; import path from 'node:path'; import os from 'node:os';
 const ROOT = path.join(os.homedir(), '.secretary/projects/nihongohub');
-const DATA = path.join(ROOT, 'blog/data/aquariums.json'); const OUT = path.join(ROOT, 'blog/data/aquariums-scrape.json');
+const SET = process.argv.includes('--set') ? process.argv[process.argv.indexOf('--set') + 1] : 'aquariums'; // aquariums | zoos
+const DATA = path.join(ROOT, `blog/data/${SET}.json`); const OUT = path.join(ROOT, `blog/data/${SET}-scrape.json`);
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36 NihongoHub-research (contact: support@nihongo-hub.com)';
 const list = JSON.parse(fs.readFileSync(DATA, 'utf8'));
-const only = process.argv.slice(2).filter(a => !a.startsWith('--'));
+const only = process.argv.slice(2).filter((a, i, arr) => !a.startsWith('--') && arr[i - 1] !== '--set');
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {};
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
