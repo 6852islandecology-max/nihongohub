@@ -292,6 +292,16 @@ Object.assign(PHOTOS, {
     { key: 'hirado', q: ['Sight of the juxtaposition of Church and Buddhist Temples, Kagamigawa-cho Hirado 2014.jpg'], must: /^Sight of the juxtaposition of Church and Buddhist Temples, Kagamigawa-cho Hirado 2014\.jpg/i, sources: ['wikimedia'], label: 'Hirado — a church spire behind Buddhist temple roofs, the island\'s signature view' },
     { key: 'iki', q: ['Saruiwa 2009A.jpg'], must: /^Saruiwa 2009A\.jpg/i, sources: ['wikimedia'], label: 'Saruiwa, the monkey rock, on Iki' },
   ],
+  'sea-of-japan-islands': [ // hand-picked 2026-08-19
+    { key: 'hero', q: ['View of Kuniga coast, Nishinoshima (1).jpg'], must: /^View of Kuniga coast, Nishinoshima \(1\)\.jpg/i, sources: ['wikimedia'], label: 'The Kuniga coast of Nishinoshima, Oki Islands' },
+    { key: 'oki2', q: ['Tsūtenkyō Arch at Kuniga coast, Nishinoshima.jpg'], must: /^Tsūtenkyō Arch at Kuniga coast, Nishinoshima\.jpg/i, sources: ['wikimedia'], label: 'Tsūtenkyō arch on the Kuniga coast, Oki' },
+    { key: 'rebun', q: ['Rebun Island 20140814-2.jpg'], must: /^Rebun Island 20140814-2\.jpg/i, sources: ['wikimedia'], label: 'Rebun Island, the northernmost inhabited island in Japan' },
+    { key: 'sado', q: ['Taraibune in Sado Ogi.jpg'], must: /^Taraibune in Sado Ogi\.jpg/i, sources: ['wikimedia'], label: 'Tub boats at Ogi, Sado' },
+    { key: 'rishiri', q: ['Mt Rishiri.jpg'], must: /^Mt Rishiri\.jpg/i, sources: ['wikimedia'], label: 'Mount Rishiri — the whole island is the volcano' },
+    { key: 'tsunoshima', q: ['角島大橋 (38654569244).jpg'], must: /^角島大橋 \(38654569244\)\.jpg/i, sources: ['wikimedia'], label: 'Tsunoshima Bridge, Yamaguchi' },
+    { key: 'hegura', q: ['Hegura island -13 (175815774).jpg'], must: /^Hegura island -13 \(175815774\)\.jpg/i, sources: ['wikimedia'], label: 'Hegurajima, 50 km off the Noto Peninsula — a village of ama divers' },
+    { key: 'noko', q: ['Beach on Nokonoshima Island 20140506-1.JPG'], must: /^Beach on Nokonoshima Island 20140506-1\.JPG/i, sources: ['wikimedia'], label: 'Nokonoshima, ten minutes from Fukuoka' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked

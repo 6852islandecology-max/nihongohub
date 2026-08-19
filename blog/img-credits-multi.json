@@ -10726,5 +10726,151 @@
       "artist_html": "ぱちょぴ（投稿者）撮影",
       "fetched_from": "wikimedia"
     }
+  },
+  "sea-of-japan-islands": {
+    "hero": {
+      "key": "hero",
+      "label": "The Kuniga coast of Nishinoshima, Oki Islands",
+      "query": [
+        "View of Kuniga coast, Nishinoshima (1).jpg"
+      ],
+      "file": "img/sea-of-japan-islands-hero-the-kuniga-coast-of-nishinoshima-oki-isl.webp",
+      "width": 1600,
+      "height": 1067,
+      "source_id": "wm:File:View of Kuniga coast, Nishinoshima (1).jpg",
+      "title": "View of Kuniga coast, Nishinoshima (1).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:View_of_Kuniga_coast,_Nishinoshima_(1).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yuvalr",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Yuvalr&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Yuvalr (page does not exist)\">Yuvalr</a>",
+      "fetched_from": "wikimedia"
+    },
+    "oki2": {
+      "key": "oki2",
+      "label": "Tsūtenkyō arch on the Kuniga coast, Oki",
+      "query": [
+        "Tsūtenkyō Arch at Kuniga coast, Nishinoshima.jpg"
+      ],
+      "file": "img/sea-of-japan-islands-oki2-ts-tenky-arch-on-the-kuniga-coast-oki.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Tsūtenkyō Arch at Kuniga coast, Nishinoshima.jpg",
+      "title": "Tsūtenkyō Arch at Kuniga coast, Nishinoshima.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ts%C5%ABtenky%C5%8D_Arch_at_Kuniga_coast,_Nishinoshima.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yuvalr",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Yuvalr&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Yuvalr (page does not exist)\">Yuvalr</a>",
+      "fetched_from": "wikimedia"
+    },
+    "rebun": {
+      "key": "rebun",
+      "label": "Rebun Island, the northernmost inhabited island in Japan",
+      "query": [
+        "Rebun Island 20140814-2.jpg"
+      ],
+      "file": "img/sea-of-japan-islands-rebun-rebun-island-the-northernmost-inhabited-.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:Rebun Island 20140814-2.jpg",
+      "title": "Rebun Island 20140814-2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Rebun_Island_20140814-2.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Suicasmo",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Suicasmo\" title=\"User:Suicasmo\">Suicasmo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "sado": {
+      "key": "sado",
+      "label": "Tub boats at Ogi, Sado",
+      "query": [
+        "Taraibune in Sado Ogi.jpg"
+      ],
+      "file": "img/sea-of-japan-islands-sado-tub-boats-at-ogi-sado.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Taraibune in Sado Ogi.jpg",
+      "title": "Taraibune in Sado Ogi.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Taraibune_in_Sado_Ogi.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "rhodnite",
+      "artist_html": "rhodnite",
+      "fetched_from": "wikimedia"
+    },
+    "rishiri": {
+      "key": "rishiri",
+      "label": "Mount Rishiri — the whole island is the volcano",
+      "query": [
+        "Mt Rishiri.jpg"
+      ],
+      "file": "img/sea-of-japan-islands-rishiri-mount-rishiri-the-whole-island-is-the-vo.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Mt Rishiri.jpg",
+      "title": "Mt Rishiri.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Mt_Rishiri.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Japanexperterna.se",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Japanexperterna.se\" title=\"User:Japanexperterna.se\">Japanexperterna.se</a>",
+      "fetched_from": "wikimedia"
+    },
+    "tsunoshima": {
+      "key": "tsunoshima",
+      "label": "Tsunoshima Bridge, Yamaguchi",
+      "query": [
+        "角島大橋 (38654569244).jpg"
+      ],
+      "file": "img/sea-of-japan-islands-tsunoshima-tsunoshima-bridge-yamaguchi.webp",
+      "width": 960,
+      "height": 641,
+      "source_id": "wm:File:角島大橋 (38654569244).jpg",
+      "title": "角島大橋 (38654569244).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E8%A7%92%E5%B3%B6%E5%A4%A7%E6%A9%8B_(38654569244).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Thomas Au",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/26446319@N00\">Thomas Au</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hegura": {
+      "key": "hegura",
+      "label": "Hegurajima, 50 km off the Noto Peninsula — a village of ama divers",
+      "query": [
+        "Hegura island -13 (175815774).jpg"
+      ],
+      "file": "img/sea-of-japan-islands-hegura-hegurajima-50-km-off-the-noto-peninsula-.webp",
+      "width": 960,
+      "height": 641,
+      "source_id": "wm:File:Hegura island -13 (175815774).jpg",
+      "title": "Hegura island -13 (175815774).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hegura_island_-13_(175815774).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "tsuda from Tsushima, Aichi, Japan",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/68701696@N00\">tsuda</a> from Tsushima, Aichi, Japan",
+      "fetched_from": "wikimedia"
+    },
+    "noko": {
+      "key": "noko",
+      "label": "Nokonoshima, ten minutes from Fukuoka",
+      "query": [
+        "Beach on Nokonoshima Island 20140506-1.JPG"
+      ],
+      "file": "img/sea-of-japan-islands-noko-nokonoshima-ten-minutes-from-fukuoka.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Beach on Nokonoshima Island 20140506-1.JPG",
+      "title": "Beach on Nokonoshima Island 20140506-1.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Beach_on_Nokonoshima_Island_20140506-1.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "そらみみ",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%9D%E3%82%89%E3%81%BF%E3%81%BF\" title=\"User:そらみみ\">そらみみ</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }
