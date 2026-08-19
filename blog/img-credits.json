@@ -1102,5 +1102,29 @@
     "width": 1600,
     "height": 1067,
     "fetched_from": "wikimedia"
+  },
+  "japanese-razors-feather-kai-guide": {
+    "query": "Feather Popular Razor (14067356604)",
+    "title": "File:Feather Popular Razor (14067356604).jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-razors-feather-kai-guide.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Feather_Popular_Razor_(14067356604).jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/89717389@N05\">András Bögöly</a> from Győr, Hungary",
+    "width": 1600,
+    "height": 900,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-hand-tools-saws-chisels-planes-guide": {
+    "query": "Jap saw Dozuki P2100027",
+    "title": "File:Jap saw Dozuki P2100027.JPG",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-hand-tools-saws-chisels-planes-guide.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jap_saw_Dozuki_P2100027.JPG",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist_html": "Joachim Müllerchen",
+    "width": 1600,
+    "height": 1197,
+    "fetched_from": "wikimedia"
   }
 }

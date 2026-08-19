@@ -62,6 +62,8 @@ const SUBJECT_OVERRIDE = {
   'daruma-markets-japan': 'Daruma dolls at Daruma-ji, Takasaki',
   'yamanote-line-departure-melodies': 'E235 series train on the Yamanote Line, Tokyo',
   'japan-station-melodies-by-region': '323 series train on the Osaka Loop Line',
+  'japanese-razors-feather-kai-guide': 'Feather Popular double-edge safety razor, made in Seki',
+  'japanese-hand-tools-saws-chisels-planes-guide': 'Japanese dozuki pull saw with a replaceable blade',
 };
 
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
