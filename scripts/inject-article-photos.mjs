@@ -20,6 +20,14 @@ const PLACEMENTS = {
     { anchor: 'kansai', keys: ['kansai'] },
     { anchor: 'okame',  keys: ['okame'] },
   ],
+  'japan-aquariums-compared': [
+    { anchor: 'lede',   keys: ['lede'] },   // 'lede' = after the <p class="lede"> paragraph (hero)
+    { anchor: 'how',    keys: ['aquamarine'] },
+    { anchor: 'picks',  keys: ['churaumi2', 'kaiyukan', 'kamogawa', 'nagoya', 'kamo', 'notojima'] },
+    { anchor: 'tokyo',  keys: ['sumida', 'tuna'] },
+    { anchor: 'kansai', keys: ['kyoto', 'toba'] },
+    { anchor: 'native', keys: ['biwako', 'salamander'] },
+  ],
   'manhole-cards-japan': [
     { anchor: 'what',    keys: ['osaka'] },
     { anchor: 'collect', keys: ['yokote', 'tokorozawa'] },
@@ -47,7 +55,7 @@ function inject(slug, { report = false, touch = true } = {}) {
     const b = block(slug, pl, C); if (!b) { console.log(`SKIP ${slug}#${pl.anchor} (no photos)`); continue; }
     const re = new RegExp('<!--article-photos:' + pl.anchor + '-->[^]*?<!--/article-photos:' + pl.anchor + '-->'); // [^] = any char incl. newline
     if (re.test(html)) { html = html.replace(re, b); n++; continue; }
-    const h2 = html.search(new RegExp(`<h2[^>]*id="${pl.anchor}"`)); if (h2 < 0) { console.log(`MISS ${slug}#${pl.anchor} (no h2)`); continue; }
+    const h2 = pl.anchor === 'lede' ? html.search(/<p class="lede"/) : html.search(new RegExp(`<h2[^>]*id="${pl.anchor}"`)); if (h2 < 0) { console.log(`MISS ${slug}#${pl.anchor} (no h2)`); continue; }
     const pEnd = html.indexOf('</p>', h2); if (pEnd < 0) continue;
     html = html.slice(0, pEnd + 4) + '\n' + b + html.slice(pEnd + 4); n++;
   }

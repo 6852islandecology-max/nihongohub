@@ -177,6 +177,22 @@ Object.assign(PHOTOS, {
     { key: 'kansai',  q: ['Otori Taisha Sakai', 'Ōtori taisha', 'Otori Grand Shrine Sakai'], must: /[oō]tori.?taisha|大鳥大社|sakai|堺/i, sources: ['wikimedia', 'flickr'], label: 'Ōtori Taisha, Sakai' },
     { key: 'okame',   q: ['Otori Shrine @ Iriya (13824370665)'], must: /Otori Shrine @ Iriya \(13824370665\)/i, sources: ['wikimedia'], label: 'Okame on a giant kumade at Ōtori Shrine' }, // hand-picked
   ],
+  'japan-aquariums-compared': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'lede', q: ['Okinawa Aquarium.jpg'], must: /^Okinawa Aquarium\.jpg/i, sources: ['wikimedia'], label: 'The Kuroshio Sea tank at Okinawa Churaumi Aquarium' },
+    { key: 'aquamarine', q: ['Aquamarine Fukushima 20100124.JPG'], must: /^Aquamarine Fukushima 20100124\.JPG/i, sources: ['wikimedia'], label: 'Aquamarine Fukushima, Iwaki' },
+    { key: 'churaumi2', q: ['Whale Shark - Churaumi aquarium, Okinawa, Japan.jpg'], must: /^Whale Shark - Churaumi aquarium, Okinawa, Japan\.jpg/i, sources: ['wikimedia'], label: 'Whale shark, Okinawa Churaumi Aquarium' },
+    { key: 'kaiyukan', q: ['The spectacular Whale shark (6453177275).jpg'], must: /^The spectacular Whale shark \(6453177275\)\.jpg/i, sources: ['wikimedia'], label: 'Whale shark in the Pacific tank, Osaka Kaiyukan' },
+    { key: 'kamogawa', q: ['Orca show at Kamogawa Sea World 3.jpg'], must: /^Orca show at Kamogawa Sea World 3\.jpg/i, sources: ['wikimedia'], label: 'Orca show, Kamogawa Sea World' },
+    { key: 'kamo', q: ['Kamo Aquarium 20160505.jpg'], must: /^Kamo Aquarium 20160505\.jpg/i, sources: ['wikimedia'], label: 'Kamo Aquarium on the Tsuruoka coast' },
+    { key: 'nagoya', q: ['Port of Nagoya Public Aquarium1.jpg'], must: /^Port of Nagoya Public Aquarium1\.jpg/i, sources: ['wikimedia'], label: 'Port of Nagoya Public Aquarium' },
+    { key: 'notojima', q: ['のとじま水族館.JPG'], must: /^のとじま水族館\.JPG/i, sources: ['wikimedia'], label: 'Notojima Aquarium' },
+    { key: 'sumida', q: ['Fishes in Sumida Aquarium 20180215.jpg'], must: /^Fishes in Sumida Aquarium 20180215\.jpg/i, sources: ['wikimedia'], label: 'Sumida Aquarium, Tokyo Skytree Town' },
+    { key: 'tuna', q: ['Pacific bluefin tuna.jpg'], must: /^Pacific bluefin tuna\.jpg/i, sources: ['wikimedia'], label: 'Pacific bluefin tuna — the species in Kasai\'s doughnut tank' },
+    { key: 'kyoto', q: ['KYOTO AQUARIUM.JPG'], must: /^KYOTO AQUARIUM\.JPG/i, sources: ['wikimedia'], label: 'Kyoto Aquarium' },
+    { key: 'toba', q: ['Dugong Serena.jpg'], must: /^Dugong Serena\.jpg/i, sources: ['wikimedia'], label: 'Serena the dugong, Toba Aquarium' },
+    { key: 'biwako', q: ['Lake Biwa Aquarium.jpg'], must: /^Lake Biwa Aquarium\.jpg/i, sources: ['wikimedia'], label: 'The tunnel tank at the Lake Biwa Museum' },
+    { key: 'salamander', q: ['Andrias japonicus pair.jpg'], must: /^Andrias japonicus pair\.jpg/i, sources: ['wikimedia'], label: 'Japanese giant salamanders' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked

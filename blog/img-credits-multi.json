@@ -9129,5 +9129,259 @@
       "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Tomhousi\" title=\"User:Tomhousi\">Thomas Housieaux</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "japan-aquariums-compared": {
+    "lede": {
+      "key": "lede",
+      "label": "The Kuroshio Sea tank at Okinawa Churaumi Aquarium",
+      "query": [
+        "Okinawa Aquarium.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-lede-the-kuroshio-sea-tank-at-okinawa-churaum.webp",
+      "width": 960,
+      "height": 641,
+      "source_id": "wm:File:Okinawa Aquarium.jpg",
+      "title": "Okinawa Aquarium.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Okinawa_Aquarium.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Jordy Meow",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:JordyMeow\" title=\"User:JordyMeow\">Jordy Meow</a>",
+      "fetched_from": "wikimedia"
+    },
+    "aquamarine": {
+      "key": "aquamarine",
+      "label": "Aquamarine Fukushima, Iwaki",
+      "query": [
+        "Aquamarine Fukushima 20100124.JPG"
+      ],
+      "file": "img/japan-aquariums-compared-aquamarine-aquamarine-fukushima-iwaki.webp",
+      "width": 960,
+      "height": 642,
+      "source_id": "wm:File:Aquamarine Fukushima 20100124.JPG",
+      "title": "Aquamarine Fukushima 20100124.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aquamarine_Fukushima_20100124.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "DAJF",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:DAJF\" title=\"User:DAJF\">DAJF</a>",
+      "fetched_from": "wikimedia"
+    },
+    "churaumi2": {
+      "key": "churaumi2",
+      "label": "Whale shark, Okinawa Churaumi Aquarium",
+      "query": [
+        "Whale Shark - Churaumi aquarium, Okinawa, Japan.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-churaumi2-whale-shark-okinawa-churaumi-aquarium.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:Whale Shark - Churaumi aquarium, Okinawa, Japan.jpg",
+      "title": "Whale Shark - Churaumi aquarium, Okinawa, Japan.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Whale_Shark_-_Churaumi_aquarium,_Okinawa,_Japan.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "pelican from Tokyo, Japan",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/85936780@N00\">pelican</a> from Tokyo, Japan",
+      "fetched_from": "wikimedia"
+    },
+    "kaiyukan": {
+      "key": "kaiyukan",
+      "label": "Whale shark in the Pacific tank, Osaka Kaiyukan",
+      "query": [
+        "The spectacular Whale shark (6453177275).jpg"
+      ],
+      "file": "img/japan-aquariums-compared-kaiyukan-whale-shark-in-the-pacific-tank-osaka-ka.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:The spectacular Whale shark (6453177275).jpg",
+      "title": "The spectacular Whale shark (6453177275).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:The_spectacular_Whale_shark_(6453177275).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Maarten Heerlien from Voorschoten, The Netherlands",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/65847118@N06\">Maarten Heerlien</a> from Voorschoten, The Netherlands",
+      "fetched_from": "wikimedia"
+    },
+    "kamogawa": {
+      "key": "kamogawa",
+      "label": "Orca show, Kamogawa Sea World",
+      "query": [
+        "Orca show at Kamogawa Sea World 3.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-kamogawa-orca-show-kamogawa-sea-world.webp",
+      "width": 960,
+      "height": 723,
+      "source_id": "wm:File:Orca show at Kamogawa Sea World 3.jpg",
+      "title": "Orca show at Kamogawa Sea World 3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Orca_show_at_Kamogawa_Sea_World_3.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Syced",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Syced\" title=\"User:Syced\">Syced</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kamo": {
+      "key": "kamo",
+      "label": "Kamo Aquarium on the Tsuruoka coast",
+      "query": [
+        "Kamo Aquarium 20160505.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-kamo-kamo-aquarium-on-the-tsuruoka-coast.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Kamo Aquarium 20160505.jpg",
+      "title": "Kamo Aquarium 20160505.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kamo_Aquarium_20160505.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "掬茶",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E6%8E%AC%E8%8C%B6\" title=\"User:掬茶\">掬茶</a>",
+      "fetched_from": "wikimedia"
+    },
+    "nagoya": {
+      "key": "nagoya",
+      "label": "Port of Nagoya Public Aquarium",
+      "query": [
+        "Port of Nagoya Public Aquarium1.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-nagoya-port-of-nagoya-public-aquarium.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Port of Nagoya Public Aquarium1.jpg",
+      "title": "Port of Nagoya Public Aquarium1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Port_of_Nagoya_Public_Aquarium1.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Bariston",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Bariston&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Bariston (page does not exist)\">Bariston</a>",
+      "fetched_from": "wikimedia"
+    },
+    "notojima": {
+      "key": "notojima",
+      "label": "Notojima Aquarium",
+      "query": [
+        "のとじま水族館.JPG"
+      ],
+      "file": "img/japan-aquariums-compared-notojima-notojima-aquarium.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:のとじま水族館.JPG",
+      "title": "のとじま水族館.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E3%81%AE%E3%81%A8%E3%81%98%E3%81%BE%E6%B0%B4%E6%97%8F%E9%A4%A8.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "C1815",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:C1815&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:C1815 (page does not exist)\">C1815</a>",
+      "fetched_from": "wikimedia"
+    },
+    "sumida": {
+      "key": "sumida",
+      "label": "Sumida Aquarium, Tokyo Skytree Town",
+      "query": [
+        "Fishes in Sumida Aquarium 20180215.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-sumida-sumida-aquarium-tokyo-skytree-town.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Fishes in Sumida Aquarium 20180215.jpg",
+      "title": "Fishes in Sumida Aquarium 20180215.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Fishes_in_Sumida_Aquarium_20180215.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Hal 0005",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Hal_0005\" title=\"User:Hal 0005\">Hal 0005</a>",
+      "fetched_from": "wikimedia"
+    },
+    "tuna": {
+      "key": "tuna",
+      "label": "Pacific bluefin tuna — the species in Kasai's doughnut tank",
+      "query": [
+        "Pacific bluefin tuna.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-tuna-pacific-bluefin-tuna-the-species-in-kasa.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Pacific bluefin tuna.jpg",
+      "title": "Pacific bluefin tuna.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Pacific_bluefin_tuna.jpg",
+      "license": "CC BY 2.1 jp",
+      "license_url": "https://creativecommons.org/licenses/by/2.1/jp/deed.en",
+      "artist": "aes256",
+      "artist_html": "aes256",
+      "fetched_from": "wikimedia"
+    },
+    "kyoto": {
+      "key": "kyoto",
+      "label": "Kyoto Aquarium",
+      "query": [
+        "KYOTO AQUARIUM.JPG"
+      ],
+      "file": "img/japan-aquariums-compared-kyoto-kyoto-aquarium.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:KYOTO AQUARIUM.JPG",
+      "title": "KYOTO AQUARIUM.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:KYOTO_AQUARIUM.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Kirakirameister",
+      "artist_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "fetched_from": "wikimedia"
+    },
+    "toba": {
+      "key": "toba",
+      "label": "Serena the dugong, Toba Aquarium",
+      "query": [
+        "Dugong Serena.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-toba-serena-the-dugong-toba-aquarium.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Dugong Serena.jpg",
+      "title": "Dugong Serena.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Dugong_Serena.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Miyuki Meinaka",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Miyuki_Meinaka\" title=\"User:Miyuki Meinaka\">Miyuki Meinaka</a>",
+      "fetched_from": "wikimedia"
+    },
+    "biwako": {
+      "key": "biwako",
+      "label": "The tunnel tank at the Lake Biwa Museum",
+      "query": [
+        "Lake Biwa Aquarium.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-biwako-the-tunnel-tank-at-the-lake-biwa-museum.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:Lake Biwa Aquarium.jpg",
+      "title": "Lake Biwa Aquarium.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Lake_Biwa_Aquarium.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "28n",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:28n&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:28n (page does not exist)\">28n</a>",
+      "fetched_from": "wikimedia"
+    },
+    "salamander": {
+      "key": "salamander",
+      "label": "Japanese giant salamanders",
+      "query": [
+        "Andrias japonicus pair.jpg"
+      ],
+      "file": "img/japan-aquariums-compared-salamander-japanese-giant-salamanders.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Andrias japonicus pair.jpg",
+      "title": "Andrias japonicus pair.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Andrias_japonicus_pair.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "V31S70",
+      "artist_html": "V31S70",
+      "fetched_from": "wikimedia"
+    }
   }
 }

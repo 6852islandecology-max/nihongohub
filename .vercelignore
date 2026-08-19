@@ -76,3 +76,4 @@ strategic-review-2026-04-30.md
 # 2026-08-16: FIND/47 catalog cache used only by scripts/fetch-photos-multi.mjs (public data, but not a page)
 blog/find47-catalog.json
 blog/photo-qc-log.json
+blog/data/aquariums-scrape.json
