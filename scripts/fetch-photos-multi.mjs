@@ -202,6 +202,61 @@ Object.assign(PHOTOS, {
     { key: 'naoshima', q: ['Naoshima honmura port terminal.jpg'], must: /^Naoshima honmura port terminal\.jpg/i, sources: ['wikimedia'], label: 'Honmura ferry terminal on Naoshima, Kagawa' },
     { key: 'gotosat', q: ['Goto Islands ISS065.jpg'], must: /^Goto Islands ISS065\.jpg/i, sources: ['wikimedia'], label: 'The Gotō archipelago off Nagasaki, photographed from the ISS' },
   ],
+  'goshuin-temple-shrine-stamps': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'kashima', q: ['鹿島神宮・御朱印.jpg'], must: /^鹿島神宮・御朱印\.jpg/i, sources: ['wikimedia'], label: 'A goshuin from Kashima Jingū: brushed calligraphy over the shrine\'s vermilion seals' },
+    { key: 'munakata', q: ['宗像大社沖津宮御朱印.jpg'], must: /^宗像大社沖津宮御朱印\.jpg/i, sources: ['wikimedia'], label: 'Goshuin of Munakata Taisha\'s Okitsu-gū' },
+    { key: 'book', q: ['Goshuincho with five shuin.jpg'], must: /^Goshuincho with five shuin\.jpg/i, sources: ['wikimedia'], label: 'A goshuinchō open at five entries' },
+    { key: 'office', q: ['猿田彦神社 - 授与所.jpg'], must: /^猿田彦神社 - 授与所\.jpg/i, sources: ['wikimedia'], label: 'The juyosho (shrine office) at Sarutahiko Shrine, Ise — where you ask' },
+    { key: 'queue', q: ['11 jyuyo.jpg'], must: /^11 jyuyo\.jpg/i, sources: ['wikimedia'], label: 'Waiting at a shrine office window' },
+    { key: 'sign', q: ['Omuroyama Sengen Shrine Shuin sign 2.jpg'], must: /^Omuroyama Sengen Shrine Shuin sign 2\.jpg/i, sources: ['wikimedia'], label: 'A shrine sign in three languages: the stamp is only for those who received a goshuin' },
+    { key: 'fushimi', q: ['Fushimi Inari Romon Torii.jpg'], must: /^Fushimi Inari Romon Torii\.jpg/i, sources: ['wikimedia'], label: 'Fushimi Inari Taisha, Kyoto — one of the most-visited goshuin spots in Japan' },
+    { key: 'seasonal', q: ['Sanoharagoshuin01.jpg'], must: /^Sanoharagoshuin01\.jpg/i, sources: ['wikimedia'], label: 'A seasonal, colour-printed goshuin' },
+    { key: 'ishiura', q: ['Ishiura Shrine Goshuin 20200820.jpg'], must: /^Ishiura Shrine Goshuin 20200820\.jpg/i, sources: ['wikimedia'], label: 'A limited goshuin from Ishiura Shrine, Kanazawa' },
+  ],
+  'eki-stamps-japan': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'tokyo', q: ['Tokyo station eki stamp.jpg'], must: /^Tokyo station eki stamp\.jpg/i, sources: ['wikimedia'], label: 'The Tokyo Station eki stamp, with the Marunouchi building in the design' },
+    { key: 'nippori', q: ['Nippori station eki stamp.jpg'], must: /^Nippori station eki stamp\.jpg/i, sources: ['wikimedia'], label: 'Nippori Station\'s stamp' },
+    { key: 'stand', q: ['Watashinotabi-Stump-Stand.JPG'], must: /^Watashinotabi-Stump-Stand\.JPG/i, sources: ['wikimedia'], label: 'A "Watashi no Tabi" stamp stand — the classic JR East design' },
+    { key: 'himeji', q: ['Memorial Stamp of Himeji Station.jpg'], must: /^Memorial Stamp of Himeji Station\.jpg/i, sources: ['wikimedia'], label: 'The stamp desk at JR Himeji Station' },
+    { key: 'kaze', q: ['風の峠駅駅スタンプ.jpg'], must: /^風の峠駅駅スタンプ\.jpg/i, sources: ['wikimedia'], label: 'A stamp impression: every station\'s design is different' },
+    { key: 'nara', q: ['奈良駅 2014 駅スタンプ (14003064021).jpg'], must: /^奈良駅 2014 駅スタンプ \(14003064021\)\.jpg/i, sources: ['wikimedia'], label: 'Stamping at Nara Station' },
+    { key: 'marunouchi', q: ['Tokyo Station (Marunouchi Building) 1.jpg'], must: /^Tokyo Station \(Marunouchi Building\) 1\.jpg/i, sources: ['wikimedia'], label: 'Tokyo Station\'s Marunouchi building — the image on its stamp' },
+  ],
+  'japan-100-castles-goshuin': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'himeji', q: ['Himeji castle-Daitensyu.jpg'], must: /^Himeji castle-Daitensyu\.jpg/i, sources: ['wikimedia'], label: 'Himeji Castle\'s main keep — No. 59 on the 100 Famous Castles list and an original keep' },
+    { key: 'hikone', q: ['Hikone Castle November 2016 -02.jpg'], must: /^Hikone Castle November 2016 -02\.jpg/i, sources: ['wikimedia'], label: 'Hikone Castle, one of the five keeps designated National Treasures' },
+    { key: 'nijo', q: ['どうする家康 二条城御城印.jpg'], must: /^どうする家康 二条城御城印\.jpg/i, sources: ['wikimedia'], label: 'A gojōin from Nijō Castle, Kyoto — the paid castle certificate, not the rally stamp' },
+    { key: 'kamakura', q: ['鎌倉殿御城印.jpg'], must: /^鎌倉殿御城印\.jpg/i, sources: ['wikimedia'], label: 'A commemorative gojōin' },
+    { key: 'matsue', q: ['Matsue castle01bs4592.jpg'], must: /^Matsue castle01bs4592\.jpg/i, sources: ['wikimedia'], label: 'Matsue Castle — original keep, National Treasure since 2015' },
+    { key: 'inuyama', q: ['Castle in Inuyama.JPG'], must: /^Castle in Inuyama\.JPG/i, sources: ['wikimedia'], label: 'Inuyama Castle in cherry-blossom season — one of the twelve original keeps' },
+    { key: 'stairs', q: ['松本城天守内階段.JPG'], must: /^松本城天守内階段\.JPG/i, sources: ['wikimedia'], label: 'Inside Matsumoto Castle\'s keep: the steep original stairs are the tell of a real one' },
+  ],
+  'autumn-goshuin-momiji-japan': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'tofukuji', q: ['TofukujiTsutenkyo Koyou.jpg'], must: /^TofukujiTsutenkyo Koyou\.jpg/i, sources: ['wikimedia'], label: 'Tsūten-kyō bridge at Tōfuku-ji, Kyoto, in autumn colour' },
+    { key: 'shimogamo', q: ['下賀茂神社の西参道の鳥居と紅葉 Pcs34560 IMG3374.jpg'], must: /^下賀茂神社の西参道の鳥居と紅葉 Pcs34560 IMG3374\.jpg/i, sources: ['wikimedia'], label: 'Autumn at Shimogamo Shrine\'s west approach, Kyoto' },
+    { key: 'korankei1', q: ['香嵐渓の紅葉 (愛知県豊田市足助町) - panoramio.jpg'], must: /^香嵐渓の紅葉 \(愛知県豊田市足助町\) - panoramio\.jpg/i, sources: ['wikimedia'], label: 'Kōrankei gorge, Aichi, at peak colour' },
+    { key: 'korankei2', q: ['香嵐渓 (愛知県豊田市足助町) - panoramio (5).jpg'], must: /^香嵐渓 \(愛知県豊田市足助町\) - panoramio \(5\)\.jpg/i, sources: ['wikimedia'], label: 'The red Taigetsu-kyō bridge at Kōrankei' },
+    { key: 'lightup', q: ['紅葉ライトアップ 田村神社 東参道途中.jpg'], must: /^紅葉ライトアップ 田村神社 東参道途中\.jpg/i, sources: ['wikimedia'], label: 'Autumn illumination on a shrine approach' },
+  ],
+  'goshuincho-guide-japan': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'open', q: ['Goshuincho with five shuin.jpg'], must: /^Goshuincho with five shuin\.jpg/i, sources: ['wikimedia'], label: 'A goshuinchō open at five entries' },
+    { key: 'bag', q: ['Red stamp book drawstring bag.jpg'], must: /^Red stamp book drawstring bag\.jpg/i, sources: ['wikimedia'], label: 'A drawstring bag for carrying the book' },
+    { key: 'isagawa', q: ['Isagawa-jinja Shuin.jpg'], must: /^Isagawa-jinja Shuin\.jpg/i, sources: ['wikimedia'], label: 'A page from Isagawa Shrine, Nara' },
+    { key: 'office', q: ['猿田彦神社 - 授与所.jpg'], must: /^猿田彦神社 - 授与所\.jpg/i, sources: ['wikimedia'], label: 'The shrine office where the book is written in' },
+  ],
+  'goshuincho-stamp-notebooks-guide': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'open', q: ['Goshuincho with five shuin.jpg'], must: /^Goshuincho with five shuin\.jpg/i, sources: ['wikimedia'], label: 'A goshuinchō open at five entries' },
+    { key: 'bag', q: ['Red stamp book drawstring bag.jpg'], must: /^Red stamp book drawstring bag\.jpg/i, sources: ['wikimedia'], label: 'A drawstring bag for carrying the book' },
+    { key: 'sign', q: ['Omuroyama Sengen Shrine Shuin sign 2.jpg'], must: /^Omuroyama Sengen Shrine Shuin sign 2\.jpg/i, sources: ['wikimedia'], label: 'A shrine sign: the stamp is only for those who received a goshuin — not a stamp rally' },
+  ],
+  'kirie-goshuin-japan': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'open', q: ['Goshuincho with five shuin.jpg'], must: /^Goshuincho with five shuin\.jpg/i, sources: ['wikimedia'], label: 'A goshuinchō — kirie goshuin are usually handed out on loose sheets to keep with it' },
+    { key: 'bag', q: ['Red stamp book drawstring bag.jpg'], must: /^Red stamp book drawstring bag\.jpg/i, sources: ['wikimedia'], label: 'A drawstring bag protects the book and loose sheets' },
+  ],
+  'character-manholes-japan': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'yura', q: ['Yura Station.jpg'], must: /^Yura Station\.jpg/i, sources: ['wikimedia'], label: 'Yura Station in Hokuei, Tottori — the gateway to the Conan manholes' },
+    { key: 'ashi', q: ['Sightseeing Cruise @ Lake Ashi @ From Togendai to Hakone-Machi (10621220604).jpg'], must: /^Sightseeing Cruise @ Lake Ashi @ From Togendai to Hakone-Machi \(10621220604\)\.jpg/i, sources: ['wikimedia'], label: 'Lake Ashi, Hakone — the Evangelion covers are around the lake towns' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked

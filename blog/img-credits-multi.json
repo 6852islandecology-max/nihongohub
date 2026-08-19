@@ -9532,5 +9532,651 @@
       "artist_html": "Image Science and Analysis Laboratory, NASA - Johnson Space Center. \"The Gateway to Astronaut Photography of Earth.\"",
       "fetched_from": "wikimedia"
     }
+  },
+  "goshuin-temple-shrine-stamps": {
+    "kashima": {
+      "key": "kashima",
+      "label": "A goshuin from Kashima Jingū: brushed calligraphy over the shrine's vermilion seals",
+      "query": [
+        "鹿島神宮・御朱印.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-kashima-a-goshuin-from-kashima-jing-brushed-call.webp",
+      "width": 960,
+      "height": 1390,
+      "source_id": "wm:File:鹿島神宮・御朱印.jpg",
+      "title": "鹿島神宮・御朱印.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E9%B9%BF%E5%B3%B6%E7%A5%9E%E5%AE%AE%E3%83%BB%E5%BE%A1%E6%9C%B1%E5%8D%B0.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Alpharigid",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Alpharigid&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Alpharigid (page does not exist)\">Alpharigid</a>",
+      "fetched_from": "wikimedia"
+    },
+    "munakata": {
+      "key": "munakata",
+      "label": "Goshuin of Munakata Taisha's Okitsu-gū",
+      "query": [
+        "宗像大社沖津宮御朱印.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-munakata-goshuin-of-munakata-taisha-s-okitsu-g.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:宗像大社沖津宮御朱印.jpg",
+      "title": "宗像大社沖津宮御朱印.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E5%AE%97%E5%83%8F%E5%A4%A7%E7%A4%BE%E6%B2%96%E6%B4%A5%E5%AE%AE%E5%BE%A1%E6%9C%B1%E5%8D%B0.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Indiana jo",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Indiana_jo\" title=\"User:Indiana jo\">Indiana jo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "book": {
+      "key": "book",
+      "label": "A goshuinchō open at five entries",
+      "query": [
+        "Goshuincho with five shuin.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-book-a-goshuinch-open-at-five-entries.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Goshuincho with five shuin.jpg",
+      "title": "Goshuincho with five shuin.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Goshuincho_with_five_shuin.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Immanuelle",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Immanuelle\" title=\"User:Immanuelle\">Immanuelle</a>",
+      "fetched_from": "wikimedia"
+    },
+    "office": {
+      "key": "office",
+      "label": "The juyosho (shrine office) at Sarutahiko Shrine, Ise — where you ask",
+      "query": [
+        "猿田彦神社 - 授与所.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-office-the-juyosho-shrine-office-at-sarutahiko-.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:猿田彦神社 - 授与所.jpg",
+      "title": "猿田彦神社 - 授与所.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E7%8C%BF%E7%94%B0%E5%BD%A6%E7%A5%9E%E7%A4%BE_-_%E6%8E%88%E4%B8%8E%E6%89%80.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yanajin33",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Yanajin33\" title=\"User:Yanajin33\">Yanajin33</a>",
+      "fetched_from": "wikimedia"
+    },
+    "queue": {
+      "key": "queue",
+      "label": "Waiting at a shrine office window",
+      "query": [
+        "11 jyuyo.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-queue-waiting-at-a-shrine-office-window.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:11 jyuyo.jpg",
+      "title": "11 jyuyo.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:11_jyuyo.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "田頭寛",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E7%94%B0%E9%A0%AD%E5%AF%9B&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:田頭寛 (page does not exist)\">田頭寛</a>",
+      "fetched_from": "wikimedia"
+    },
+    "sign": {
+      "key": "sign",
+      "label": "A shrine sign in three languages: the stamp is only for those who received a goshuin",
+      "query": [
+        "Omuroyama Sengen Shrine Shuin sign 2.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-sign-a-shrine-sign-in-three-languages-the-sta.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Omuroyama Sengen Shrine Shuin sign 2.jpg",
+      "title": "Omuroyama Sengen Shrine Shuin sign 2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Omuroyama_Sengen_Shrine_Shuin_sign_2.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Immanuelle",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Immanuelle\" title=\"User:Immanuelle\">Immanuelle</a>",
+      "fetched_from": "wikimedia"
+    },
+    "fushimi": {
+      "key": "fushimi",
+      "label": "Fushimi Inari Taisha, Kyoto — one of the most-visited goshuin spots in Japan",
+      "query": [
+        "Fushimi Inari Romon Torii.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-fushimi-fushimi-inari-taisha-kyoto-one-of-the-mo.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Fushimi Inari Romon Torii.jpg",
+      "title": "Fushimi Inari Romon Torii.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Fushimi_Inari_Romon_Torii.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Yanajin33",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Yanajin33\" title=\"User:Yanajin33\">Yanajin33</a>",
+      "fetched_from": "wikimedia"
+    },
+    "seasonal": {
+      "key": "seasonal",
+      "label": "A seasonal, colour-printed goshuin",
+      "query": [
+        "Sanoharagoshuin01.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-seasonal-a-seasonal-colour-printed-goshuin.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Sanoharagoshuin01.jpg",
+      "title": "Sanoharagoshuin01.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sanoharagoshuin01.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "里司",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E9%87%8C%E5%8F%B8&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:里司 (page does not exist)\">里司</a>",
+      "fetched_from": "wikimedia"
+    },
+    "ishiura": {
+      "key": "ishiura",
+      "label": "A limited goshuin from Ishiura Shrine, Kanazawa",
+      "query": [
+        "Ishiura Shrine Goshuin 20200820.jpg"
+      ],
+      "file": "img/goshuin-temple-shrine-stamps-ishiura-a-limited-goshuin-from-ishiura-shrine-ka.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Ishiura Shrine Goshuin 20200820.jpg",
+      "title": "Ishiura Shrine Goshuin 20200820.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ishiura_Shrine_Goshuin_20200820.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "先従隗始",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E5%85%88%E5%BE%93%E9%9A%97%E5%A7%8B&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:先従隗始 (page does not exist)\">先従隗始</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "eki-stamps-japan": {
+    "tokyo": {
+      "key": "tokyo",
+      "label": "The Tokyo Station eki stamp, with the Marunouchi building in the design",
+      "query": [
+        "Tokyo station eki stamp.jpg"
+      ],
+      "file": "img/eki-stamps-japan-tokyo-the-tokyo-station-eki-stamp-with-the-mar.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Tokyo station eki stamp.jpg",
+      "title": "Tokyo station eki stamp.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tokyo_station_eki_stamp.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Artem.G",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Artem.G&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Artem.G (page does not exist)\">Artem.G</a>",
+      "fetched_from": "wikimedia"
+    },
+    "nippori": {
+      "key": "nippori",
+      "label": "Nippori Station's stamp",
+      "query": [
+        "Nippori station eki stamp.jpg"
+      ],
+      "file": "img/eki-stamps-japan-nippori-nippori-station-s-stamp.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Nippori station eki stamp.jpg",
+      "title": "Nippori station eki stamp.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Nippori_station_eki_stamp.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Artem.G",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Artem.G&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Artem.G (page does not exist)\">Artem.G</a>",
+      "fetched_from": "wikimedia"
+    },
+    "stand": {
+      "key": "stand",
+      "label": "A \"Watashi no Tabi\" stamp stand — the classic JR East design",
+      "query": [
+        "Watashinotabi-Stump-Stand.JPG"
+      ],
+      "file": "img/eki-stamps-japan-stand-a-watashi-no-tabi-stamp-stand-the-classi.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Watashinotabi-Stump-Stand.JPG",
+      "title": "Watashinotabi-Stump-Stand.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Watashinotabi-Stump-Stand.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Kone",
+      "artist_html": "Kone",
+      "fetched_from": "wikimedia"
+    },
+    "himeji": {
+      "key": "himeji",
+      "label": "The stamp desk at JR Himeji Station",
+      "query": [
+        "Memorial Stamp of Himeji Station.jpg"
+      ],
+      "file": "img/eki-stamps-japan-himeji-the-stamp-desk-at-jr-himeji-station.webp",
+      "width": 960,
+      "height": 1440,
+      "source_id": "wm:File:Memorial Stamp of Himeji Station.jpg",
+      "title": "Memorial Stamp of Himeji Station.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Memorial_Stamp_of_Himeji_Station.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Corpse Reviver",
+      "artist_html": "Corpse Reviver",
+      "fetched_from": "wikimedia"
+    },
+    "kaze": {
+      "key": "kaze",
+      "label": "A stamp impression: every station's design is different",
+      "query": [
+        "風の峠駅駅スタンプ.jpg"
+      ],
+      "file": "img/eki-stamps-japan-kaze-a-stamp-impression-every-station-s-desig.webp",
+      "width": 960,
+      "height": 1440,
+      "source_id": "wm:File:風の峠駅駅スタンプ.jpg",
+      "title": "風の峠駅駅スタンプ.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E9%A2%A8%E3%81%AE%E5%B3%A0%E9%A7%85%E9%A7%85%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "S.Nagae",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:S.Nagae&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:S.Nagae (page does not exist)\">S.Nagae</a>",
+      "fetched_from": "wikimedia"
+    },
+    "marunouchi": {
+      "key": "marunouchi",
+      "label": "Tokyo Station's Marunouchi building — the image on its stamp",
+      "query": [
+        "Tokyo Station (Marunouchi Building) 1.jpg"
+      ],
+      "file": "img/eki-stamps-japan-marunouchi-tokyo-station-s-marunouchi-building-the-.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Tokyo Station (Marunouchi Building) 1.jpg",
+      "title": "Tokyo Station (Marunouchi Building) 1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tokyo_Station_(Marunouchi_Building)_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Alexandr3126",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Alexandr3126\" title=\"User:Alexandr3126\">Alexandr3126</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "japan-100-castles-goshuin": {
+    "himeji": {
+      "key": "himeji",
+      "label": "Himeji Castle's main keep — No. 59 on the 100 Famous Castles list and an original keep",
+      "query": [
+        "Himeji castle-Daitensyu.jpg"
+      ],
+      "file": "img/japan-100-castles-goshuin-himeji-himeji-castle-s-main-keep-no-59-on-the-1.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Himeji castle-Daitensyu.jpg",
+      "title": "Himeji castle-Daitensyu.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Himeji_castle-Daitensyu.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "KENPEI",
+      "artist_html": "KENPEI",
+      "fetched_from": "wikimedia"
+    },
+    "nijo": {
+      "key": "nijo",
+      "label": "A gojōin from Nijō Castle, Kyoto — the paid castle certificate, not the rally stamp",
+      "query": [
+        "どうする家康 二条城御城印.jpg"
+      ],
+      "file": "img/japan-100-castles-goshuin-nijo-a-goj-in-from-nij-castle-kyoto-the-paid-.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:どうする家康 二条城御城印.jpg",
+      "title": "どうする家康 二条城御城印.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E3%81%A9%E3%81%86%E3%81%99%E3%82%8B%E5%AE%B6%E5%BA%B7_%E4%BA%8C%E6%9D%A1%E5%9F%8E%E5%BE%A1%E5%9F%8E%E5%8D%B0.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "京都新観光提言懇談会メンバー",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E4%BA%AC%E9%83%BD%E6%96%B0%E8%A6%B3%E5%85%89%E6%8F%90%E8%A8%80%E6%87%87%E8%AB%87%E4%BC%9A%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:京都新観光提言懇談会メンバー (page does not exist)\">京都新観光提言懇談会メンバー</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kamakura": {
+      "key": "kamakura",
+      "label": "A commemorative gojōin",
+      "query": [
+        "鎌倉殿御城印.jpg"
+      ],
+      "file": "img/japan-100-castles-goshuin-kamakura-a-commemorative-goj-in.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:鎌倉殿御城印.jpg",
+      "title": "鎌倉殿御城印.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E9%8E%8C%E5%80%89%E6%AE%BF%E5%BE%A1%E5%9F%8E%E5%8D%B0.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Indiana jo",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Indiana_jo\" title=\"User:Indiana jo\">Indiana jo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "matsue": {
+      "key": "matsue",
+      "label": "Matsue Castle — original keep, National Treasure since 2015",
+      "query": [
+        "Matsue castle01bs4592.jpg"
+      ],
+      "file": "img/japan-100-castles-goshuin-matsue-matsue-castle-original-keep-national-tre.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:Matsue castle01bs4592.jpg",
+      "title": "Matsue castle01bs4592.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Matsue_castle01bs4592.jpg",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "663highland",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+      "fetched_from": "wikimedia"
+    },
+    "inuyama": {
+      "key": "inuyama",
+      "label": "Inuyama Castle in cherry-blossom season — one of the twelve original keeps",
+      "query": [
+        "Castle in Inuyama.JPG"
+      ],
+      "file": "img/japan-100-castles-goshuin-inuyama-inuyama-castle-in-cherry-blossom-season-.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Castle in Inuyama.JPG",
+      "title": "Castle in Inuyama.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Castle_in_Inuyama.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "ThorstenS",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:ThorstenS\" title=\"User:ThorstenS\">ThorstenS</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "autumn-goshuin-momiji-japan": {
+    "tofukuji": {
+      "key": "tofukuji",
+      "label": "Tsūten-kyō bridge at Tōfuku-ji, Kyoto, in autumn colour",
+      "query": [
+        "TofukujiTsutenkyo Koyou.jpg"
+      ],
+      "file": "img/autumn-goshuin-momiji-japan-tofukuji-ts-ten-ky-bridge-at-t-fuku-ji-kyoto-in-a.webp",
+      "width": 960,
+      "height": 658,
+      "source_id": "wm:File:TofukujiTsutenkyo Koyou.jpg",
+      "title": "TofukujiTsutenkyo Koyou.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:TofukujiTsutenkyo_Koyou.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "＋－",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/User:%EF%BC%8B%EF%BC%8D\" class=\"extiw\" title=\"ja:User:＋－\">＋－</a>",
+      "fetched_from": "wikimedia"
+    },
+    "shimogamo": {
+      "key": "shimogamo",
+      "label": "Autumn at Shimogamo Shrine's west approach, Kyoto",
+      "query": [
+        "下賀茂神社の西参道の鳥居と紅葉 Pcs34560 IMG3374.jpg"
+      ],
+      "file": "img/autumn-goshuin-momiji-japan-shimogamo-autumn-at-shimogamo-shrine-s-west-approa.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:下賀茂神社の西参道の鳥居と紅葉 Pcs34560 IMG3374.jpg",
+      "title": "下賀茂神社の西参道の鳥居と紅葉 Pcs34560 IMG3374.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E4%B8%8B%E8%B3%80%E8%8C%82%E7%A5%9E%E7%A4%BE%E3%81%AE%E8%A5%BF%E5%8F%82%E9%81%93%E3%81%AE%E9%B3%A5%E5%B1%85%E3%81%A8%E7%B4%85%E8%91%89_Pcs34560_IMG3374.jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "pcs34560",
+      "artist_html": "pcs34560",
+      "fetched_from": "wikimedia"
+    },
+    "korankei2": {
+      "key": "korankei2",
+      "label": "The red Taigetsu-kyō bridge at Kōrankei",
+      "query": [
+        "香嵐渓 (愛知県豊田市足助町) - panoramio (5).jpg"
+      ],
+      "file": "img/autumn-goshuin-momiji-japan-korankei2-the-red-taigetsu-ky-bridge-at-k-rankei.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:香嵐渓 (愛知県豊田市足助町) - panoramio (5).jpg",
+      "title": "香嵐渓 (愛知県豊田市足助町) - panoramio (5).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E9%A6%99%E5%B5%90%E6%B8%93_(%E6%84%9B%E7%9F%A5%E7%9C%8C%E8%B1%8A%E7%94%B0%E5%B8%82%E8%B6%B3%E5%8A%A9%E7%94%BA)_-_panoramio_(5).jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "gundam2345",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161021012037/http://www.panoramio.com/user/2284372?with_photo_id=62811577\">gundam2345</a>",
+      "fetched_from": "wikimedia"
+    },
+    "lightup": {
+      "key": "lightup",
+      "label": "Autumn illumination on a shrine approach",
+      "query": [
+        "紅葉ライトアップ 田村神社 東参道途中.jpg"
+      ],
+      "file": "img/autumn-goshuin-momiji-japan-lightup-autumn-illumination-on-a-shrine-approach.webp",
+      "width": 960,
+      "height": 540,
+      "source_id": "wm:File:紅葉ライトアップ 田村神社 東参道途中.jpg",
+      "title": "紅葉ライトアップ 田村神社 東参道途中.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E7%B4%85%E8%91%89%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A2%E3%83%83%E3%83%97_%E7%94%B0%E6%9D%91%E7%A5%9E%E7%A4%BE_%E6%9D%B1%E5%8F%82%E9%81%93%E9%80%94%E4%B8%AD.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Sugikats",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Sugikats&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Sugikats (page does not exist)\">Sugikats</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "goshuincho-guide-japan": {
+    "open": {
+      "key": "open",
+      "label": "A goshuinchō open at five entries",
+      "query": [
+        "Goshuincho with five shuin.jpg"
+      ],
+      "file": "img/goshuincho-guide-japan-open-a-goshuinch-open-at-five-entries.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Goshuincho with five shuin.jpg",
+      "title": "Goshuincho with five shuin.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Goshuincho_with_five_shuin.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Immanuelle",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Immanuelle\" title=\"User:Immanuelle\">Immanuelle</a>",
+      "fetched_from": "wikimedia"
+    },
+    "bag": {
+      "key": "bag",
+      "label": "A drawstring bag for carrying the book",
+      "query": [
+        "Red stamp book drawstring bag.jpg"
+      ],
+      "file": "img/goshuincho-guide-japan-bag-a-drawstring-bag-for-carrying-the-book.webp",
+      "width": 960,
+      "height": 737,
+      "source_id": "wm:File:Red stamp book drawstring bag.jpg",
+      "title": "Red stamp book drawstring bag.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Red_stamp_book_drawstring_bag.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Haziq Faruqi",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Haziq_Faruqi&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Haziq Faruqi (page does not exist)\">Haziq Faruqi</a>",
+      "fetched_from": "wikimedia"
+    },
+    "isagawa": {
+      "key": "isagawa",
+      "label": "A page from Isagawa Shrine, Nara",
+      "query": [
+        "Isagawa-jinja Shuin.jpg"
+      ],
+      "file": "img/goshuincho-guide-japan-isagawa-a-page-from-isagawa-shrine-nara.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Isagawa-jinja Shuin.jpg",
+      "title": "Isagawa-jinja Shuin.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Isagawa-jinja_Shuin.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Immanuelle",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Immanuelle\" title=\"User:Immanuelle\">Immanuelle</a>",
+      "fetched_from": "wikimedia"
+    },
+    "office": {
+      "key": "office",
+      "label": "The shrine office where the book is written in",
+      "query": [
+        "猿田彦神社 - 授与所.jpg"
+      ],
+      "file": "img/goshuincho-guide-japan-office-the-shrine-office-where-the-book-is-writ.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:猿田彦神社 - 授与所.jpg",
+      "title": "猿田彦神社 - 授与所.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E7%8C%BF%E7%94%B0%E5%BD%A6%E7%A5%9E%E7%A4%BE_-_%E6%8E%88%E4%B8%8E%E6%89%80.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yanajin33",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Yanajin33\" title=\"User:Yanajin33\">Yanajin33</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "goshuincho-stamp-notebooks-guide": {
+    "open": {
+      "key": "open",
+      "label": "A goshuinchō open at five entries",
+      "query": [
+        "Goshuincho with five shuin.jpg"
+      ],
+      "file": "img/goshuincho-stamp-notebooks-guide-open-a-goshuinch-open-at-five-entries.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Goshuincho with five shuin.jpg",
+      "title": "Goshuincho with five shuin.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Goshuincho_with_five_shuin.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Immanuelle",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Immanuelle\" title=\"User:Immanuelle\">Immanuelle</a>",
+      "fetched_from": "wikimedia"
+    },
+    "bag": {
+      "key": "bag",
+      "label": "A drawstring bag for carrying the book",
+      "query": [
+        "Red stamp book drawstring bag.jpg"
+      ],
+      "file": "img/goshuincho-stamp-notebooks-guide-bag-a-drawstring-bag-for-carrying-the-book.webp",
+      "width": 960,
+      "height": 737,
+      "source_id": "wm:File:Red stamp book drawstring bag.jpg",
+      "title": "Red stamp book drawstring bag.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Red_stamp_book_drawstring_bag.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Haziq Faruqi",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Haziq_Faruqi&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Haziq Faruqi (page does not exist)\">Haziq Faruqi</a>",
+      "fetched_from": "wikimedia"
+    },
+    "sign": {
+      "key": "sign",
+      "label": "A shrine sign: the stamp is only for those who received a goshuin — not a stamp rally",
+      "query": [
+        "Omuroyama Sengen Shrine Shuin sign 2.jpg"
+      ],
+      "file": "img/goshuincho-stamp-notebooks-guide-sign-a-shrine-sign-the-stamp-is-only-for-thos.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Omuroyama Sengen Shrine Shuin sign 2.jpg",
+      "title": "Omuroyama Sengen Shrine Shuin sign 2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Omuroyama_Sengen_Shrine_Shuin_sign_2.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Immanuelle",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Immanuelle\" title=\"User:Immanuelle\">Immanuelle</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "kirie-goshuin-japan": {
+    "open": {
+      "key": "open",
+      "label": "A goshuinchō — kirie goshuin are usually handed out on loose sheets to keep with it",
+      "query": [
+        "Goshuincho with five shuin.jpg"
+      ],
+      "file": "img/kirie-goshuin-japan-open-a-goshuinch-kirie-goshuin-are-usually-ha.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Goshuincho with five shuin.jpg",
+      "title": "Goshuincho with five shuin.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Goshuincho_with_five_shuin.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Immanuelle",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Immanuelle\" title=\"User:Immanuelle\">Immanuelle</a>",
+      "fetched_from": "wikimedia"
+    },
+    "bag": {
+      "key": "bag",
+      "label": "A drawstring bag protects the book and loose sheets",
+      "query": [
+        "Red stamp book drawstring bag.jpg"
+      ],
+      "file": "img/kirie-goshuin-japan-bag-a-drawstring-bag-protects-the-book-and-l.webp",
+      "width": 960,
+      "height": 737,
+      "source_id": "wm:File:Red stamp book drawstring bag.jpg",
+      "title": "Red stamp book drawstring bag.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Red_stamp_book_drawstring_bag.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Haziq Faruqi",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Haziq_Faruqi&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Haziq Faruqi (page does not exist)\">Haziq Faruqi</a>",
+      "fetched_from": "wikimedia"
+    }
+  },
+  "character-manholes-japan": {
+    "yura": {
+      "key": "yura",
+      "label": "Yura Station in Hokuei, Tottori — the gateway to the Conan manholes",
+      "query": [
+        "Yura Station.jpg"
+      ],
+      "file": "img/character-manholes-japan-yura-yura-station-in-hokuei-tottori-the-gatew.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Yura Station.jpg",
+      "title": "Yura Station.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Yura_Station.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "本人撮影",
+      "artist_html": "本人撮影",
+      "fetched_from": "wikimedia"
+    },
+    "ashi": {
+      "key": "ashi",
+      "label": "Lake Ashi, Hakone — the Evangelion covers are around the lake towns",
+      "query": [
+        "Sightseeing Cruise @ Lake Ashi @ From Togendai to Hakone-Machi (10621220604).jpg"
+      ],
+      "file": "img/character-manholes-japan-ashi-lake-ashi-hakone-the-evangelion-covers-a.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Sightseeing Cruise @ Lake Ashi @ From Togendai to Hakone-Machi (10621220604).jpg",
+      "title": "Sightseeing Cruise @ Lake Ashi @ From Togendai to Hakone-Machi (10621220604).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sightseeing_Cruise_@_Lake_Ashi_@_From_Togendai_to_Hakone-Machi_(10621220604).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Guilhem Vellut from Annecy, France",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/22539273@N00\">Guilhem Vellut</a> from Annecy, France",
+      "fetched_from": "wikimedia"
+    }
   }
 }
