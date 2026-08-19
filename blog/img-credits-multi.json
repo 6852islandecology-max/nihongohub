@@ -10872,5 +10872,169 @@
       "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%9D%E3%82%89%E3%81%BF%E3%81%BF\" title=\"User:そらみみ\">そらみみ</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "izu-ogasawara-islands": {
+    "hero": {
+      "key": "hero",
+      "label": "Ōgiike lagoon on Minamijima, off Chichijima — the Ogasawara Islands",
+      "query": [
+        "Minamijima.jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-hero-giike-lagoon-on-minamijima-off-chichijim.webp",
+      "width": 1280,
+      "height": 960,
+      "source_id": "wm:File:Minamijima.jpg",
+      "title": "Minamijima.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Minamijima.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "しんかわな",
+      "artist_html": "しんかわな",
+      "fetched_from": "wikimedia"
+    },
+    "chichijima": {
+      "key": "chichijima",
+      "label": "Futami port, Chichijima — where the Ogasawara-maru arrives after 24 hours",
+      "query": [
+        "Port of Futami, Chichijima, Ogasawara.jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-chichijima-futami-port-chichijima-where-the-ogasawa.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Port of Futami, Chichijima, Ogasawara.jpg",
+      "title": "Port of Futami, Chichijima, Ogasawara.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Port_of_Futami,_Chichijima,_Ogasawara.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Si-take. at Japanese Wikipedia (しいたけ)",
+      "artist_html": "<a href=\"https://en.wikipedia.org/wiki/ja:User:Si-take.\" class=\"extiw\" title=\"w:ja:User:Si-take.\">Si-take.</a> at <a href=\"https://en.wikipedia.org/wiki/ja:\" class=\"extiw\" title=\"w:ja:\">Japanese Wikipedia</a>(しいたけ)",
+      "fetched_from": "wikimedia"
+    },
+    "hahajima": {
+      "key": "hahajima",
+      "label": "Hahajima from Kofuji, at the southern end of the inhabited islands",
+      "query": [
+        "View from Kofuji at Hahajima 2.jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-hahajima-hahajima-from-kofuji-at-the-southern-end.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:View from Kofuji at Hahajima 2.jpg",
+      "title": "View from Kofuji at Hahajima 2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:View_from_Kofuji_at_Hahajima_2.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Ootahara",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Ootahara\" title=\"User:Ootahara\">Ootahara</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hachijo": {
+      "key": "hachijo",
+      "label": "Hachijō-Fuji, Hachijōjima",
+      "query": [
+        "Mount Hachijofuji.jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-hachijo-hachij-fuji-hachij-jima.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:Mount Hachijofuji.jpg",
+      "title": "Mount Hachijofuji.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Mount_Hachijofuji.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "akabane_hiro2",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/akabane_hiro2/\">akabane_hiro2</a>",
+      "fetched_from": "wikimedia"
+    },
+    "kozu": {
+      "key": "kozu",
+      "label": "Kōzushima village from the hill",
+      "query": [
+        "Kozushima village (DSC03444).jpeg"
+      ],
+      "file": "img/izu-ogasawara-islands-kozu-k-zushima-village-from-the-hill.webp",
+      "width": 960,
+      "height": 638,
+      "source_id": "wm:File:Kozushima village (DSC03444).jpeg",
+      "title": "Kozushima village (DSC03444).jpeg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kozushima_village_(DSC03444).jpeg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "TomazVajngerl",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:TomazVajngerl&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:TomazVajngerl (page does not exist)\">TomazVajngerl</a>",
+      "fetched_from": "wikimedia"
+    },
+    "niijima": {
+      "key": "niijima",
+      "label": "Habushiura, the six-kilometre surf beach on Niijima",
+      "query": [
+        "Niijima Habushiura Beach.jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-niijima-habushiura-the-six-kilometre-surf-beach-.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Niijima Habushiura Beach.jpg",
+      "title": "Niijima Habushiura Beach.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Niijima_Habushiura_Beach.jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Soica2001 ( talk )",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Soica2001\" title=\"User:Soica2001\">Soica2001</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Soica2001\" title=\"User talk:Soica2001\"><span class=\"signature-talk\">talk</span></a>)",
+      "fetched_from": "wikimedia"
+    },
+    "miyake": {
+      "key": "miyake",
+      "label": "Miyakejima from the air, Mount Oyama in the middle",
+      "query": [
+        "View of Miyakejima from aircraft.jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-miyake-miyakejima-from-the-air-mount-oyama-in-t.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:View of Miyakejima from aircraft.jpg",
+      "title": "View of Miyakejima from aircraft.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:View_of_Miyakejima_from_aircraft.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "さかおり",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%95%E3%81%8B%E3%81%8A%E3%82%8A\" title=\"User:さかおり\">さかおり</a>",
+      "fetched_from": "wikimedia"
+    },
+    "mihara": {
+      "key": "mihara",
+      "label": "The crater of Mount Mihara, Izu Ōshima",
+      "query": [
+        "Crater Lookout @ Mount Mihara @ Oshima (9612795532).jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-mihara-the-crater-of-mount-mihara-izu-shima.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Crater Lookout @ Mount Mihara @ Oshima (9612795532).jpg",
+      "title": "Crater Lookout @ Mount Mihara @ Oshima (9612795532).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Crater_Lookout_@_Mount_Mihara_@_Oshima_(9612795532).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Guilhem Vellut from Annecy, France",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/22539273@N00\">Guilhem Vellut</a> from Annecy, France",
+      "fetched_from": "wikimedia"
+    },
+    "aogashima": {
+      "key": "aogashima",
+      "label": "Aogashima: the Maruyama cone inside the outer caldera",
+      "query": [
+        "Aogasima maruyama.jpg"
+      ],
+      "file": "img/izu-ogasawara-islands-aogashima-aogashima-the-maruyama-cone-inside-the-o.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Aogasima maruyama.jpg",
+      "title": "Aogasima maruyama.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aogasima_maruyama.jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Soica2001 ( talk )",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Soica2001\" title=\"User:Soica2001\">Soica2001</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Soica2001\" title=\"User talk:Soica2001\"><span class=\"signature-talk\">talk</span></a>)",
+      "fetched_from": "wikimedia"
+    }
   }
 }

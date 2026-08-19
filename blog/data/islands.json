@@ -512,7 +512,7 @@
   "enSource": "interwiki"
  },
  {
-  "ja": "百ケ島",
+  "ja": "青ヶ島",
   "yomi": "あおがしま",
   "name": "Aogashima",
   "pref": "東京都",
@@ -525,7 +525,8 @@
   "visitors": null,
   "wikiJa": null,
   "wikiEn": "Aogashima",
-  "enSource": "search"
+  "enSource": "search",
+  "jaNote": "OCR read 百ケ島; corrected 2026-08-19"
  },
  {
   "ja": "父島",
@@ -6047,5 +6048,22 @@
   "wikiEn": "Nakadōri Island",
   "source": "ja.wikipedia 中通島 (面積・周囲・標高 infobox; 人口=2010年国勢調査, 本文) — not in the SHIMADAS CSV extraction",
   "enSource": "interwiki"
+ },
+ {
+  "ja": "式根島",
+  "yomi": "しきねじま",
+  "name": "Shikine-jima",
+  "pref": "東京都",
+  "area": 3.67,
+  "pop": 550,
+  "households": null,
+  "coast": null,
+  "elev": 109,
+  "popChange": null,
+  "visitors": null,
+  "wikiJa": "式根島",
+  "wikiEn": "Shikine-jima",
+  "enSource": "interwiki",
+  "source": "ja.wikipedia 式根島 (面積・標高 infobox; 人口=約550人 本文) — not in the SHIMADAS CSV extraction"
  }
 ]

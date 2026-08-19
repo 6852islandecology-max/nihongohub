@@ -302,6 +302,17 @@ Object.assign(PHOTOS, {
     { key: 'hegura', q: ['Hegura island -13 (175815774).jpg'], must: /^Hegura island -13 \(175815774\)\.jpg/i, sources: ['wikimedia'], label: 'Hegurajima, 50 km off the Noto Peninsula — a village of ama divers' },
     { key: 'noko', q: ['Beach on Nokonoshima Island 20140506-1.JPG'], must: /^Beach on Nokonoshima Island 20140506-1\.JPG/i, sources: ['wikimedia'], label: 'Nokonoshima, ten minutes from Fukuoka' },
   ],
+  'izu-ogasawara-islands': [ // hand-picked 2026-08-19
+    { key: 'hero', q: ['Minamijima.jpg'], must: /^Minamijima\.jpg/i, sources: ['wikimedia'], label: 'Ōgiike lagoon on Minamijima, off Chichijima — the Ogasawara Islands' },
+    { key: 'aogashima', q: ['Aogasima maruyama.jpg'], must: /^Aogasima maruyama\.jpg/i, sources: ['wikimedia'], label: 'Aogashima: the Maruyama cone inside the outer caldera' },
+    { key: 'chichijima', q: ['Port of Futami, Chichijima, Ogasawara.jpg'], must: /^Port of Futami, Chichijima, Ogasawara\.jpg/i, sources: ['wikimedia'], label: 'Futami port, Chichijima — where the Ogasawara-maru arrives after 24 hours' },
+    { key: 'hahajima', q: ['View from Kofuji at Hahajima 2.jpg'], must: /^View from Kofuji at Hahajima 2\.jpg/i, sources: ['wikimedia'], label: 'Hahajima from Kofuji, at the southern end of the inhabited islands' },
+    { key: 'hachijo', q: ['Mount Hachijofuji.jpg'], must: /^Mount Hachijofuji\.jpg/i, sources: ['wikimedia'], label: 'Hachijō-Fuji, Hachijōjima' },
+    { key: 'kozu', q: ['Kozushima village (DSC03444).jpeg'], must: /^Kozushima village \(DSC03444\)\.jpeg/i, sources: ['wikimedia'], label: 'Kōzushima village from the hill' },
+    { key: 'niijima', q: ['Niijima Habushiura Beach.jpg'], must: /^Niijima Habushiura Beach\.jpg/i, sources: ['wikimedia'], label: 'Habushiura, the six-kilometre surf beach on Niijima' },
+    { key: 'miyake', q: ['View of Miyakejima from aircraft.jpg'], must: /^View of Miyakejima from aircraft\.jpg/i, sources: ['wikimedia'], label: 'Miyakejima from the air, Mount Oyama in the middle' },
+    { key: 'mihara', q: ['Crater Lookout @ Mount Mihara @ Oshima (9612795532).jpg'], must: /^Crater Lookout @ Mount Mihara @ Oshima \(9612795532\)\.jpg/i, sources: ['wikimedia'], label: 'The crater of Mount Mihara, Izu Ōshima' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked
