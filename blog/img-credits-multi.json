@@ -10506,5 +10506,133 @@
       "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Saigen_Jiro\" title=\"User:Saigen Jiro\">Saigen Jiro</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "japan-zoos-compared": {
+    "hero": {
+      "key": "hero",
+      "label": "King penguins on their winter walk at Asahiyama Zoo, Asahikawa",
+      "query": [
+        "旭山動物園 (2309862259).jpg"
+      ],
+      "file": "img/japan-zoos-compared-hero-king-penguins-on-their-winter-walk-at-as.webp",
+      "width": 1280,
+      "height": 853,
+      "source_id": "wm:File:旭山動物園 (2309862259).jpg",
+      "title": "旭山動物園 (2309862259).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E6%97%AD%E5%B1%B1%E5%8B%95%E7%89%A9%E5%9C%92_(2309862259).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Yamaguchi Yoshiaki from Japan",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/37807125@N00\">Yamaguchi Yoshiaki</a> from Japan",
+      "fetched_from": "wikimedia"
+    },
+    "tama": {
+      "key": "tama",
+      "label": "The lion bus at Tama Zoological Park",
+      "query": [
+        "多摩動物公園ライオンバス (7917055360).jpg"
+      ],
+      "file": "img/japan-zoos-compared-tama-the-lion-bus-at-tama-zoological-park.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:多摩動物公園ライオンバス (7917055360).jpg",
+      "title": "多摩動物公園ライオンバス (7917055360).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E5%A4%9A%E6%91%A9%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%90%E3%82%B9_(7917055360).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Toshihiro Gamo",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/55658968@N00\">Toshihiro Gamo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "fuji": {
+      "key": "fuji",
+      "label": "Lions at Fuji Safari Park",
+      "query": [
+        "富士サファリパーク ライオン2 Fuji-safari-park-Lion2.jpg"
+      ],
+      "file": "img/japan-zoos-compared-fuji-lions-at-fuji-safari-park.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:富士サファリパーク ライオン2 Fuji-safari-park-Lion2.jpg",
+      "title": "富士サファリパーク ライオン2 Fuji-safari-park-Lion2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E5%AF%8C%E5%A3%AB%E3%82%B5%E3%83%95%E3%82%A1%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF_%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B32_Fuji-safari-park-Lion2.jpg",
+      "license": "CC BY 2.1 jp",
+      "license_url": "https://creativecommons.org/licenses/by/2.1/jp/deed.en",
+      "artist": "しんのすけ さん https://photozou.jp/photo/show/1057511/168411950 (フォト蔵)",
+      "artist_html": "しんのすけ さん  <a rel=\"nofollow\" class=\"external free\" href=\"https://photozou.jp/photo/show/1057511/168411950\">https://photozou.jp/photo/show/1057511/168411950</a>  (フォト蔵)",
+      "fetched_from": "wikimedia"
+    },
+    "tsushima": {
+      "key": "tsushima",
+      "label": "Tsushima leopard cat — the endangered island cat bred in a handful of Japanese zoos",
+      "query": [
+        "Tsushima Cat 001.jpg"
+      ],
+      "file": "img/japan-zoos-compared-tsushima-tsushima-leopard-cat-the-endangered-isla.webp",
+      "width": 960,
+      "height": 1440,
+      "source_id": "wm:File:Tsushima Cat 001.jpg",
+      "title": "Tsushima Cat 001.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tsushima_Cat_001.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Pontafon",
+      "artist_html": "Pontafon",
+      "fetched_from": "wikimedia"
+    },
+    "serow": {
+      "key": "serow",
+      "label": "Japanese serow, a native mountain goat-antelope, in the wild",
+      "query": [
+        "Capricornis crispus s2.jpg"
+      ],
+      "file": "img/japan-zoos-compared-serow-japanese-serow-a-native-mountain-goat-an.webp",
+      "width": 960,
+      "height": 960,
+      "source_id": "wm:File:Capricornis crispus s2.jpg",
+      "title": "Capricornis crispus s2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Capricornis_crispus_s2.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Alpsdake",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Alpsdake\" title=\"User:Alpsdake\">Alpsdake</a>",
+      "fetched_from": "wikimedia"
+    },
+    "koala": {
+      "key": "koala",
+      "label": "Koala at Higashiyama Zoo, Nagoya",
+      "query": [
+        "コアラ（東山動植物園）.JPG"
+      ],
+      "file": "img/japan-zoos-compared-koala-koala-at-higashiyama-zoo-nagoya.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:コアラ（東山動植物園）.JPG",
+      "title": "コアラ（東山動植物園）.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E3%82%B3%E3%82%A2%E3%83%A9%EF%BC%88%E6%9D%B1%E5%B1%B1%E5%8B%95%E6%A4%8D%E7%89%A9%E5%9C%92%EF%BC%89.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "C1815",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:C1815&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:C1815 (page does not exist)\">C1815</a>",
+      "fetched_from": "wikimedia"
+    },
+    "nogeyama": {
+      "key": "nogeyama",
+      "label": "Nogeyama Zoo, Yokohama — free entry",
+      "query": [
+        "Nogeyama Zoo.JPG"
+      ],
+      "file": "img/japan-zoos-compared-nogeyama-nogeyama-zoo-yokohama-free-entry.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Nogeyama Zoo.JPG",
+      "title": "Nogeyama Zoo.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Nogeyama_Zoo.JPG",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "Dddeco",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Dddeco\" title=\"User:Dddeco\">Dddeco</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }

@@ -277,6 +277,15 @@ Object.assign(PHOTOS, {
     { key: 'itsukushima', q: ['厳島神社と大鳥居.JPG'], must: /^厳島神社と大鳥居\.JPG/i, sources: ['wikimedia'], label: 'Itsukushima Shrine and its great torii, Miyajima' },
     { key: 'oyamazumi', q: ['Ōyamazumi-jinja shinmon.JPG'], must: /^Ōyamazumi-jinja shinmon\.JPG/i, sources: ['wikimedia'], label: 'Ōyamazumi Shrine on Ōmishima, the guardian shrine of the Inland Sea' },
   ],
+  'japan-zoos-compared': [ // hand-picked 2026-08-19
+    { key: 'hero', q: ['旭山動物園 (2309862259).jpg'], must: /^旭山動物園 \(2309862259\)\.jpg/i, sources: ['wikimedia'], label: 'King penguins on their winter walk at Asahiyama Zoo, Asahikawa' },
+    { key: 'tama', q: ['多摩動物公園ライオンバス (7917055360).jpg'], must: /^多摩動物公園ライオンバス \(7917055360\)\.jpg/i, sources: ['wikimedia'], label: 'The lion bus at Tama Zoological Park' },
+    { key: 'fuji', q: ['富士サファリパーク ライオン2 Fuji-safari-park-Lion2.jpg'], must: /^富士サファリパーク ライオン2 Fuji-safari-park-Lion2\.jpg/i, sources: ['wikimedia'], label: 'Lions at Fuji Safari Park' },
+    { key: 'tsushima', q: ['Tsushima Cat 001.jpg'], must: /^Tsushima Cat 001\.jpg/i, sources: ['wikimedia'], label: 'Tsushima leopard cat — the endangered island cat bred in a handful of Japanese zoos' },
+    { key: 'serow', q: ['Capricornis crispus s2.jpg'], must: /^Capricornis crispus s2\.jpg/i, sources: ['wikimedia'], label: 'Japanese serow, a native mountain goat-antelope, in the wild' },
+    { key: 'koala', q: ['コアラ（東山動植物園）.JPG'], must: /^コアラ（東山動植物園）\.JPG/i, sources: ['wikimedia'], label: 'Koala at Higashiyama Zoo, Nagoya' },
+    { key: 'nogeyama', q: ['Nogeyama Zoo.JPG'], must: /^Nogeyama Zoo\.JPG/i, sources: ['wikimedia'], label: 'Nogeyama Zoo, Yokohama — free entry' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked
