@@ -167,5 +167,22 @@
   "wikiEn": "Hatoma",
   "enSource": "interwiki",
   "source": "ja.wikipedia (面積 infobox; 人口 65 (2022-06 竹富町)) — not in the SHIMADAS CSV extraction"
+ },
+ {
+  "ja": "網地島",
+  "yomi": "あじしま",
+  "name": "Ajishima",
+  "pref": "宮城県",
+  "area": 6.49,
+  "pop": 247,
+  "households": null,
+  "coast": 20.7,
+  "elev": 101,
+  "popChange": null,
+  "visitors": null,
+  "wikiJa": "網地島",
+  "wikiEn": "Aji Island",
+  "enSource": "interwiki",
+  "source": "ja.wikipedia 網地島 (面積・周囲・標高 infobox, 石巻市; 人口 247 = 2020年国勢調査) — not in the SHIMADAS CSV extraction"
  }
 ]

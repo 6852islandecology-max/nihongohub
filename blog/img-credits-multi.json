@@ -11200,5 +11200,169 @@
       "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/tanaka_juuyoh/\">TANAKA Juuyoh (田中十洋)</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "pacific-coast-islands": {
+    "hero": {
+      "key": "hero",
+      "label": "Kashiwajima, Kōchi — a fishing village on a bridged islet at the end of Shikoku",
+      "query": [
+        "Kashiwajima 01.jpg"
+      ],
+      "file": "img/pacific-coast-islands-hero-kashiwajima-k-chi-a-fishing-village-on-a.webp",
+      "width": 1600,
+      "height": 1063,
+      "source_id": "wm:File:Kashiwajima 01.jpg",
+      "title": "Kashiwajima 01.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kashiwajima_01.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Reggaeman",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Reggaeman\" title=\"User:Reggaeman\">Reggaeman</a>",
+      "fetched_from": "wikimedia"
+    },
+    "matsushima": {
+      "key": "matsushima",
+      "label": "Matsushima Bay, Miyagi — the inhabited islands are the ones behind the famous ones",
+      "query": [
+        "Matsushima miyagi z.JPG"
+      ],
+      "file": "img/pacific-coast-islands-matsushima-matsushima-bay-miyagi-the-inhabited-isla.webp",
+      "width": 960,
+      "height": 541,
+      "source_id": "wm:File:Matsushima miyagi z.JPG",
+      "title": "Matsushima miyagi z.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Matsushima_miyagi_z.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Chensiyuan",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Chensiyuan\" title=\"User:Chensiyuan\">Chensiyuan</a>",
+      "fetched_from": "wikimedia"
+    },
+    "tashiro": {
+      "key": "tashiro",
+      "label": "A resident of Tashirojima, the cat island off Ishinomaki",
+      "query": [
+        "Nekotarou(a cat of Tashirojima island).JPG"
+      ],
+      "file": "img/pacific-coast-islands-tashiro-a-resident-of-tashirojima-the-cat-island.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Nekotarou(a cat of Tashirojima island).JPG",
+      "title": "Nekotarou(a cat of Tashirojima island).JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Nekotarou(a_cat_of_Tashirojima_island).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "暇・カキコ",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E6%9A%87%E3%83%BB%E3%82%AB%E3%82%AD%E3%82%B3&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:暇・カキコ (page does not exist)\">暇・カキコ</a>",
+      "fetched_from": "wikimedia"
+    },
+    "enoshima": {
+      "key": "enoshima",
+      "label": "Enoshima — the torii at the top of the shopping street, Fujisawa behind",
+      "query": [
+        "Fujisawa as seen from Enoshima Island 130809 7.jpg"
+      ],
+      "file": "img/pacific-coast-islands-enoshima-enoshima-the-torii-at-the-top-of-the-sho.webp",
+      "width": 960,
+      "height": 604,
+      "source_id": "wm:File:Fujisawa as seen from Enoshima Island 130809 7.jpg",
+      "title": "Fujisawa as seen from Enoshima Island 130809 7.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Fujisawa_as_seen_from_Enoshima_Island_130809_7.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "DXR",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:DXR\" title=\"User:DXR\">DXR</a>",
+      "fetched_from": "wikimedia"
+    },
+    "jogashima": {
+      "key": "jogashima",
+      "label": "Umanose-dōmon, the rock arch on Jōgashima at the tip of the Miura Peninsula",
+      "query": [
+        "Umanose-Domon Jogashima Island.jpg"
+      ],
+      "file": "img/pacific-coast-islands-jogashima-umanose-d-mon-the-rock-arch-on-j-gashima.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Umanose-Domon Jogashima Island.jpg",
+      "title": "Umanose-Domon Jogashima Island.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Umanose-Domon_Jogashima_Island.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Osumi Akari",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Osumi_Akari\" title=\"User:Osumi Akari\">Osumi Akari</a>",
+      "fetched_from": "wikimedia"
+    },
+    "himaka": {
+      "key": "himaka",
+      "label": "Octopus pots on Himakajima, Aichi",
+      "query": [
+        "Himakajima 2011-08.JPG"
+      ],
+      "file": "img/pacific-coast-islands-himaka-octopus-pots-on-himakajima-aichi.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Himakajima 2011-08.JPG",
+      "title": "Himakajima 2011-08.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Himakajima_2011-08.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "At by At",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:At_by_At\" title=\"User:At by At\">At by At</a>",
+      "fetched_from": "wikimedia"
+    },
+    "toshi": {
+      "key": "toshi",
+      "label": "Tōshijima, the largest of the Toba islands",
+      "query": [
+        "Tōshijima 01.jpg"
+      ],
+      "file": "img/pacific-coast-islands-toshi-t-shijima-the-largest-of-the-toba-island.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Tōshijima 01.jpg",
+      "title": "Tōshijima 01.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:T%C5%8Dshijima_01.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "merec0 from Kyoto, Japan",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/30048871@N00\">merec0</a> from Kyoto, Japan",
+      "fetched_from": "wikimedia"
+    },
+    "kii": {
+      "key": "kii",
+      "label": "The coast of Kii Ōshima where the Ottoman frigate Ertuğrul was wrecked in 1890",
+      "query": [
+        "Kii oshima turkey ship crash001.JPG"
+      ],
+      "file": "img/pacific-coast-islands-kii-the-coast-of-kii-shima-where-the-ottoman.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Kii oshima turkey ship crash001.JPG",
+      "title": "Kii oshima turkey ship crash001.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kii_oshima_turkey_ship_crash001.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Opqr",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Opqr\" title=\"User:Opqr\">Opqr</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hoto": {
+      "key": "hoto",
+      "label": "Hotojima, Ōita — a tuna-fishing village stacked up the hillside",
+      "query": [
+        "保戸島.jpg"
+      ],
+      "file": "img/pacific-coast-islands-hoto-hotojima-ita-a-tuna-fishing-village-stac.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:保戸島.jpg",
+      "title": "保戸島.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E4%BF%9D%E6%88%B8%E5%B3%B6.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Torochan22",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Torochan22&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Torochan22 (page does not exist)\">Torochan22</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }

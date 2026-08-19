@@ -625,9 +625,9 @@
   "enSource": null
  },
  {
-  "ja": "日問歿島",
-  "yomi": "",
-  "name": "",
+  "ja": "日間賀島",
+  "yomi": "ひまかじま",
+  "name": "Himakajima",
   "pref": "愛知県",
   "area": 0.77,
   "pop": 1896,
@@ -636,9 +636,10 @@
   "elev": 32,
   "popChange": -4155,
   "visitors": 247000,
-  "wikiJa": null,
-  "wikiEn": null,
-  "enSource": null
+  "wikiJa": "日間賀島",
+  "wikiEn": "Himakajima",
+  "enSource": "interwiki",
+  "jaNote": "OCR read 日問歿島; corrected 2026-08-19"
  },
  {
   "ja": "篠島",
@@ -737,9 +738,9 @@
   "enSource": null
  },
  {
-  "ja": "猪子",
-  "yomi": "",
-  "name": "",
+  "ja": "間崎島",
+  "yomi": "まさきじま",
+  "name": "Masakijima",
   "pref": "三重県",
   "area": 0.36,
   "pop": 69,
@@ -748,9 +749,10 @@
   "elev": 22,
   "popChange": -49,
   "visitors": 2200,
-  "wikiJa": null,
+  "wikiJa": "間崎島",
   "wikiEn": null,
-  "enSource": null
+  "enSource": null,
+  "jaNote": "OCR read 猪子; 間崎島 (Ago Bay, 0.36 km²) per ja.wikipedia; corrected 2026-08-19"
  },
  {
   "ja": "大高崎島",
@@ -773,7 +775,7 @@
   "yomi": "かしこじま",
   "name": "Kashiko Island",
   "pref": "三重県",
-  "area": 66,
+  "area": 0.68,
   "pop": 107,
   "households": 68,
   "coast": 7.3,
@@ -782,13 +784,14 @@
   "visitors": null,
   "wikiJa": "賢島",
   "wikiEn": "Kashiko Island",
-  "enSource": "interwiki"
+  "enSource": "interwiki",
+  "areaNote": "OCR read 066; 0.68 per ja.wikipedia infobox (0.6814) 2026-08-19"
  },
  {
   "ja": "中ノ島",
-  "yomi": "",
-  "name": "",
-  "pref": "三重県",
+  "yomi": "なかのしま",
+  "name": "Nakanoshima",
+  "pref": "和歌山県",
   "area": 0.07,
   "pop": 20,
   "households": 20,
@@ -796,9 +799,10 @@
   "elev": 41,
   "popChange": -4,
   "visitors": null,
-  "wikiJa": null,
+  "wikiJa": "中ノ島 (和歌山県)",
   "wikiEn": null,
-  "enSource": null
+  "enSource": null,
+  "jaNote": "row belongs to 那智勝浦町 (Wakayama), not Mie; corrected 2026-08-19"
  },
  {
   "ja": "紀伊大島",
@@ -3077,7 +3081,7 @@
   "yomi": "おおしま",
   "name": "Ōshima",
   "pref": "高知県",
-  "area": 0.046,
+  "area": 1.01,
   "pop": 488,
   "households": 227,
   "coast": 4.2,
@@ -3086,7 +3090,8 @@
   "visitors": null,
   "wikiJa": "大島 (高知県)",
   "wikiEn": null,
-  "enSource": null
+  "enSource": null,
+  "areaNote": "OCR read 0.046; 1.01 per ja.wikipedia 大島 (高知県) infobox 2026-08-19"
  },
  {
   "ja": "沖の島",
@@ -3123,8 +3128,8 @@
  {
   "ja": "塩子島",
   "yomi": "",
-  "name": "",
-  "pref": "高知県",
+  "name": null,
+  "pref": "愛媛県",
   "area": 0.51,
   "pop": 23,
   "households": 10,
@@ -3134,7 +3139,8 @@
   "visitors": 800,
   "wikiJa": null,
   "wikiEn": null,
-  "enSource": null
+  "enSource": null,
+  "jaNote": "row is 宇和島市 (Ehime), not Kochi; island name unverified (no ja.wikipedia article for 塩子島) — left unnamed 2026-08-19"
  },
  {
   "ja": "日振島",
@@ -6207,5 +6213,22 @@
   "wikiEn": "Hatoma",
   "enSource": "interwiki",
   "source": "ja.wikipedia (面積 infobox; 人口 65 (2022-06 竹富町)) — not in the SHIMADAS CSV extraction"
+ },
+ {
+  "ja": "網地島",
+  "yomi": "あじしま",
+  "name": "Ajishima",
+  "pref": "宮城県",
+  "area": 6.49,
+  "pop": 247,
+  "households": null,
+  "coast": 20.7,
+  "elev": 101,
+  "popChange": null,
+  "visitors": null,
+  "wikiJa": "網地島",
+  "wikiEn": "Aji Island",
+  "enSource": "interwiki",
+  "source": "ja.wikipedia 網地島 (面積・周囲・標高 infobox, 石巻市; 人口 247 = 2020年国勢調査) — not in the SHIMADAS CSV extraction"
  }
 ]

@@ -324,6 +324,17 @@ Object.assign(PHOTOS, {
     { key: 'suwanose', q: ['Suwanosejima.jpg'], must: /^Suwanosejima\.jpg/i, sources: ['wikimedia'], label: 'Suwanosejima, Tokara — an island that is mostly an active volcano' },
     { key: 'amami', q: ['Amami beach.jpg'], must: /^Amami beach\.jpg/i, sources: ['wikimedia'], label: 'A bay on Amami Ōshima' },
   ],
+  'pacific-coast-islands': [ // hand-picked 2026-08-19
+    { key: 'hero', q: ['Kashiwajima 01.jpg'], must: /^Kashiwajima 01\.jpg/i, sources: ['wikimedia'], label: 'Kashiwajima, Kōchi — a fishing village on a bridged islet at the end of Shikoku' },
+    { key: 'matsushima', q: ['Matsushima miyagi z.JPG'], must: /^Matsushima miyagi z\.JPG/i, sources: ['wikimedia'], label: 'Matsushima Bay, Miyagi — the inhabited islands are the ones behind the famous ones' },
+    { key: 'tashiro', q: ['Nekotarou(a cat of Tashirojima island).JPG'], must: /^Nekotarou\(a cat of Tashirojima island\)\.JPG/i, sources: ['wikimedia'], label: 'A resident of Tashirojima, the cat island off Ishinomaki' },
+    { key: 'enoshima', q: ['Fujisawa as seen from Enoshima Island 130809 7.jpg'], must: /^Fujisawa as seen from Enoshima Island 130809 7\.jpg/i, sources: ['wikimedia'], label: 'Enoshima — the torii at the top of the shopping street, Fujisawa behind' },
+    { key: 'jogashima', q: ['Umanose-Domon Jogashima Island.jpg'], must: /^Umanose-Domon Jogashima Island\.jpg/i, sources: ['wikimedia'], label: 'Umanose-dōmon, the rock arch on Jōgashima at the tip of the Miura Peninsula' },
+    { key: 'himaka', q: ['Himakajima 2011-08.JPG'], must: /^Himakajima 2011-08\.JPG/i, sources: ['wikimedia'], label: 'Octopus pots on Himakajima, Aichi' },
+    { key: 'toshi', q: ['Tōshijima 01.jpg'], must: /^Tōshijima 01\.jpg/i, sources: ['wikimedia'], label: 'Tōshijima, the largest of the Toba islands' },
+    { key: 'kii', q: ['Kii oshima turkey ship crash001.JPG'], must: /^Kii oshima turkey ship crash001\.JPG/i, sources: ['wikimedia'], label: 'The coast of Kii Ōshima where the Ottoman frigate Ertuğrul was wrecked in 1890' },
+    { key: 'hoto', q: ['保戸島.jpg'], must: /^保戸島\.jpg/i, sources: ['wikimedia'], label: 'Hotojima, Ōita — a tuna-fishing village stacked up the hillside' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked
