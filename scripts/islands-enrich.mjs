@@ -68,7 +68,7 @@ async function check(title, pref) {
   // reject administrative articles: the prefecture itself, a district, a city/town/village
   if (/[都道府県郡市区町村]$/.test(p.title.replace(/\s*\(.*\)$/, ''))) return null;
   if (/^(都道府県|日本の(市町村|地方)|.{1,6}[郡市区町村])$/.test(p.title)) return null;
-  if (!/島|嶼|礁/.test(p.title)) return null;                                    // island articles only
+  if (!/島|嶼|礁/.test(p.title) && !/^[^。]{0,60}島/.test(intro)) return null;   // island articles only (対馬-type titles pass if the first sentence says 島)
   const reading = (intro.match(/^[^（(]{1,20}[（(]([ぁ-んー・]{2,20})/) || [])[1] || '';
   return { ja: p.title, en: p.langlinks?.[0]?.title || null, reading: reading.split('・')[0] };
 }
@@ -99,7 +99,7 @@ for (const r of islands) {
   let romaji = (r['ローマ字'] || '').trim();
   romaji = romaji ? romaji.charAt(0) + romaji.slice(1).toLowerCase() : '';
   const enTitle = w.en ? w.en.replace(/\s*\(.*\)$/, '').replace(/,\s*[A-Z].*$/, '') : '';
-  const yomi = r['よみ'] || w.reading || '';
+  const yomi = w.reading || r['よみ'] || '';                                       // the verified article's reading beats the OCR'd CSV one
   const fromKana = hepburn(yomi);
   out.push({
     ja, yomi, name: enTitle || fromKana || romaji || '', pref,
@@ -111,6 +111,9 @@ for (const r of islands) {
   if (n % 25 === 0) { fs.writeFileSync(CACHE, JSON.stringify(cache)); console.log(' ', n, '/', islands.length); }
 }
 fs.writeFileSync(CACHE, JSON.stringify(cache));
+// supplement: islands the CSV extraction missed. Figures and source are given per row (not SHIMADAS).
+const EXTRA = path.join(HOME, '.secretary/projects/nihongohub/blog/data/islands-extra.json');
+if (fs.existsSync(EXTRA)) for (const x of JSON.parse(fs.readFileSync(EXTRA, 'utf8'))) if (!out.some(i => i.ja === x.ja && i.pref === x.pref)) out.push(x);
 // an article claimed by more than one island cannot identify either of them
 const claims = {};
 for (const i of out) if (i.wikiJa) (claims[i.wikiJa] ||= []).push(i);

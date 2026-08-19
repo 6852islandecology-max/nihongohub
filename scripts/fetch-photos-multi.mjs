@@ -286,6 +286,12 @@ Object.assign(PHOTOS, {
     { key: 'koala', q: ['コアラ（東山動植物園）.JPG'], must: /^コアラ（東山動植物園）\.JPG/i, sources: ['wikimedia'], label: 'Koala at Higashiyama Zoo, Nagoya' },
     { key: 'nogeyama', q: ['Nogeyama Zoo.JPG'], must: /^Nogeyama Zoo\.JPG/i, sources: ['wikimedia'], label: 'Nogeyama Zoo, Yokohama — free entry' },
   ],
+  'nagasaki-islands': [ // hand-picked 2026-08-19
+    { key: 'hero', q: ['Aso Bay viewed from Mount Jo-2.jpg'], must: /^Aso Bay viewed from Mount Jo-2\.jpg/i, sources: ['wikimedia'], label: 'Asō Bay, Tsushima — the drowned valleys of the island\'s middle' },
+    { key: 'church', q: ['Kashiragashima Church-1.JPG'], must: /^Kashiragashima Church-1\.JPG/i, sources: ['wikimedia'], label: 'Kashiragashima Church, one of the Gotō churches on the World Heritage list' },
+    { key: 'hirado', q: ['Sight of the juxtaposition of Church and Buddhist Temples, Kagamigawa-cho Hirado 2014.jpg'], must: /^Sight of the juxtaposition of Church and Buddhist Temples, Kagamigawa-cho Hirado 2014\.jpg/i, sources: ['wikimedia'], label: 'Hirado — a church spire behind Buddhist temple roofs, the island\'s signature view' },
+    { key: 'iki', q: ['Saruiwa 2009A.jpg'], must: /^Saruiwa 2009A\.jpg/i, sources: ['wikimedia'], label: 'Saruiwa, the monkey rock, on Iki' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked

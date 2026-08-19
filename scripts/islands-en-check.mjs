@@ -68,6 +68,9 @@ for (const i of list) {
   else i.enSource = null;
 }
 fs.writeFileSync(CACHE, JSON.stringify(cache));
+// an English article claimed by more than one island (Takashima x4, Oshima x3) identifies none of them
+const claims = {}; for (const i of list) if (i.wikiEn && i.enSource === 'search') (claims[i.wikiEn] ||= []).push(i);
+for (const [t, g] of Object.entries(claims)) if (g.length > 1) { for (const i of g) { i.wikiEn = null; i.enSource = null; } console.log('  ambiguous en, dropped:', t, 'x' + g.length); }
 fs.writeFileSync(DATA, JSON.stringify(list, null, 1));
 const usable = list.filter(i => i.name && i.pop != null && i.area != null);
 console.log(`english-page pass: ${checked} searched, ${found} extra articles found`);

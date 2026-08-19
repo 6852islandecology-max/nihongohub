@@ -10634,5 +10634,97 @@
       "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Dddeco\" title=\"User:Dddeco\">Dddeco</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "nagasaki-islands": {
+    "hisaka": {
+      "key": "hero",
+      "label": "Hisakajima in the Gotō Islands, Nagasaki — houses, boats and one road",
+      "query": [
+        "久賀島.JPG"
+      ],
+      "file": "img/japan-inhabited-islands-hero-hisakajima-in-the-got-islands-nagasaki-h.webp",
+      "width": 1600,
+      "height": 900,
+      "source_id": "wm:File:久賀島.JPG",
+      "title": "久賀島.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E4%B9%85%E8%B3%80%E5%B3%B6.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Indiana jo",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Indiana_jo\" title=\"User:Indiana jo\">Indiana jo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hero": {
+      "key": "hero",
+      "label": "Asō Bay, Tsushima — the drowned valleys of the island's middle",
+      "query": [
+        "Aso Bay viewed from Mount Jo-2.jpg"
+      ],
+      "file": "img/nagasaki-islands-hero-as-bay-tsushima-the-drowned-valleys-of-t.webp",
+      "width": 1600,
+      "height": 1064,
+      "source_id": "wm:File:Aso Bay viewed from Mount Jo-2.jpg",
+      "title": "Aso Bay viewed from Mount Jo-2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aso_Bay_viewed_from_Mount_Jo-2.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Saigen Jiro",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Saigen_Jiro\" title=\"User:Saigen Jiro\">Saigen Jiro</a>",
+      "fetched_from": "wikimedia"
+    },
+    "church": {
+      "key": "church",
+      "label": "Kashiragashima Church, one of the Gotō churches on the World Heritage list",
+      "query": [
+        "Kashiragashima Church-1.JPG"
+      ],
+      "file": "img/nagasaki-islands-church-kashiragashima-church-one-of-the-got-chu.webp",
+      "width": 960,
+      "height": 641,
+      "source_id": "wm:File:Kashiragashima Church-1.JPG",
+      "title": "Kashiragashima Church-1.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kashiragashima_Church-1.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Indiana jo",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Indiana_jo\" title=\"User:Indiana jo\">Indiana jo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hirado": {
+      "key": "hirado",
+      "label": "Hirado — a church spire behind Buddhist temple roofs, the island's signature view",
+      "query": [
+        "Sight of the juxtaposition of Church and Buddhist Temples, Kagamigawa-cho Hirado 2014.jpg"
+      ],
+      "file": "img/nagasaki-islands-hirado-hirado-a-church-spire-behind-buddhist-te.webp",
+      "width": 960,
+      "height": 1440,
+      "source_id": "wm:File:Sight of the juxtaposition of Church and Buddhist Temples, Kagamigawa-cho Hirado 2014.jpg",
+      "title": "Sight of the juxtaposition of Church and Buddhist Temples, Kagamigawa-cho Hirado 2014.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sight_of_the_juxtaposition_of_Church_and_Buddhist_Temples,_Kagamigawa-cho_Hirado_2014.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Tomio344456",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Tomio344456&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Tomio344456 (page does not exist)\">Tomio344456</a>",
+      "fetched_from": "wikimedia"
+    },
+    "iki": {
+      "key": "iki",
+      "label": "Saruiwa, the monkey rock, on Iki",
+      "query": [
+        "Saruiwa 2009A.jpg"
+      ],
+      "file": "img/nagasaki-islands-iki-saruiwa-the-monkey-rock-on-iki.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Saruiwa 2009A.jpg",
+      "title": "Saruiwa 2009A.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Saruiwa_2009A.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "ぱちょぴ（投稿者）撮影",
+      "artist_html": "ぱちょぴ（投稿者）撮影",
+      "fetched_from": "wikimedia"
+    }
   }
 }

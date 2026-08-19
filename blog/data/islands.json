@@ -1,7 +1,7 @@
 [
  {
   "ja": "礼文島",
-  "yomi": "れぷんとう",
+  "yomi": "れぶんとう",
   "name": "Rebun Island",
   "pref": "北海道",
   "area": 81.64,
@@ -49,7 +49,7 @@
  },
  {
   "ja": "天売島",
-  "yomi": "てつりとっ",
+  "yomi": "てうりとう",
   "name": "Teuri Island",
   "pref": "北海道",
   "area": 5.47,
@@ -81,8 +81,8 @@
  },
  {
   "ja": "室津島",
-  "yomi": "かもめじま",
-  "name": "Kamomejima",
+  "yomi": "むろつじま",
+  "name": "Murotsujima",
   "pref": "北海道",
   "area": 0.3,
   "pop": 8,
@@ -171,9 +171,9 @@
   "elev": 444,
   "popChange": -8,
   "visitors": 15482,
-  "wikiJa": null,
+  "wikiJa": "金華山 (宮城県)",
   "wikiEn": "Kinkasan",
-  "enSource": "search"
+  "enSource": "interwiki"
  },
  {
   "ja": "田代島",
@@ -273,7 +273,7 @@
  },
  {
   "ja": "飛島",
-  "yomi": "とぴしま",
+  "yomi": "とびしま",
   "name": "Tobishima",
   "pref": "山形県",
   "area": 2.75,
@@ -289,7 +289,7 @@
  },
  {
   "ja": "粟島",
-  "yomi": "しま",
+  "yomi": "あわしま",
   "name": "Awashima Island",
   "pref": "新潟県",
   "area": 9.78,
@@ -401,7 +401,7 @@
  },
  {
   "ja": "大島",
-  "yomi": "おおしま",
+  "yomi": "いずおおしま",
   "name": "Izu Ōshima",
   "pref": "東京都",
   "area": 90.76,
@@ -433,7 +433,7 @@
  },
  {
   "ja": "新島",
-  "yomi": "ーしじま",
+  "yomi": "にいじま",
   "name": "Nii-jima",
   "pref": "東京都",
   "area": 22.97,
@@ -657,7 +657,7 @@
  },
  {
   "ja": "答志島",
-  "yomi": "とっしじま",
+  "yomi": "とうしじま",
   "name": "Tōshijima",
   "pref": "三重県",
   "area": 6.96,
@@ -769,7 +769,7 @@
  },
  {
   "ja": "賢島",
-  "yomi": "ーしま",
+  "yomi": "かしこじま",
   "name": "Kashiko Island",
   "pref": "三重県",
   "area": 66,
@@ -913,8 +913,8 @@
  },
  {
   "ja": "西島",
-  "yomi": "ーしじま",
-  "name": "Shijima",
+  "yomi": "にしじま",
+  "name": "Nishijima",
   "pref": "兵庫県",
   "area": 6.52,
   "pop": null,
@@ -961,8 +961,8 @@
  },
  {
   "ja": "大多府島",
-  "yomi": "かしらじま",
-  "name": "Kashirajima",
+  "yomi": "おおたぶじま",
+  "name": "Ōtabujima",
   "pref": "岡山県",
   "area": 0.4,
   "pop": 71,
@@ -1025,8 +1025,8 @@
  },
  {
   "ja": "黒島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "くろしま",
+  "name": "Kuroshima",
   "pref": "岡山県",
   "area": 0.1,
   "pop": null,
@@ -1057,7 +1057,7 @@
  },
  {
   "ja": "犬島",
-  "yomi": "しま",
+  "yomi": "いぬじま",
   "name": "Inujima",
   "pref": "岡山県",
   "area": 0.54,
@@ -1169,7 +1169,7 @@
  },
  {
   "ja": "真鍋島",
-  "yomi": "まなぺしま",
+  "yomi": "まなべしま",
   "name": "Manabeshima",
   "pref": "岡山県",
   "area": 1.49,
@@ -1233,8 +1233,8 @@
  },
  {
   "ja": "島田島",
-  "yomi": "たかしま",
-  "name": "Takashima",
+  "yomi": "しまだじま",
+  "name": "Shimadajima",
   "pref": "徳島県",
   "area": 2.59,
   "pop": 4459,
@@ -1281,7 +1281,7 @@
  },
  {
   "ja": "小豆島",
-  "yomi": "しよっどしま",
+  "yomi": "しょうどしま",
   "name": "Shōdoshima",
   "pref": "香川県",
   "area": 153.25,
@@ -1361,8 +1361,8 @@
  },
  {
   "ja": "向島",
-  "yomi": "むかスじま",
-  "name": "Mukasujima",
+  "yomi": "むかえじま",
+  "name": "Mukaejima",
   "pref": "香川県",
   "area": 0.74,
   "pop": 15,
@@ -1473,8 +1473,8 @@
  },
  {
   "ja": "牛島",
-  "yomi": "っしじま",
-  "name": "Sshijima",
+  "yomi": "うしじま",
+  "name": "Ushijima",
   "pref": "香川県",
   "area": 0.84,
   "pop": 10,
@@ -1585,7 +1585,7 @@
  },
  {
   "ja": "粟島",
-  "yomi": "しま",
+  "yomi": "あわしま",
   "name": "Awashima Island",
   "pref": "香川県",
   "area": 3.67,
@@ -1633,8 +1633,8 @@
  },
  {
   "ja": "田島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "たしま",
+  "name": "Tashima",
   "pref": "広島県",
   "area": 8.62,
   "pop": 1480,
@@ -1777,8 +1777,8 @@
  },
  {
   "ja": "佐木島",
-  "yomi": "さぎじま",
-  "name": "Sagijima",
+  "yomi": "さぎしま",
+  "name": "Sagishima",
   "pref": "広島県",
   "area": 8.71,
   "pop": 681,
@@ -1809,8 +1809,8 @@
  },
  {
   "ja": "契島",
-  "yomi": "ちぎりじま",
-  "name": "Chigirijima",
+  "yomi": "ちぎりしま",
+  "name": "Chigirishima",
   "pref": "広島県",
   "area": 0.09,
   "pop": 32,
@@ -1889,8 +1889,8 @@
  },
  {
   "ja": "豊島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "とよしま",
+  "name": "Toyoshima",
   "pref": "広島県",
   "area": 5.64,
   "pop": 1179,
@@ -1953,8 +1953,8 @@
  },
  {
   "ja": "鹿島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "かしま",
+  "name": "Kashima",
   "pref": "広島県",
   "area": 2.62,
   "pop": 258,
@@ -2177,8 +2177,8 @@
  },
  {
   "ja": "鵜島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "うしま",
+  "name": "Ushima",
   "pref": "愛媛県",
   "area": 0.76,
   "pop": 23,
@@ -2204,8 +2204,8 @@
   "popChange": -4529,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Nii Ōshima",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "津島",
@@ -2225,8 +2225,8 @@
  },
  {
   "ja": "大下島",
-  "yomi": "おおけしま",
-  "name": "Ōkeshima",
+  "yomi": "おおげしま",
+  "name": "Ōgeshima",
   "pref": "愛媛県",
   "area": 1.75,
   "pop": 69,
@@ -2305,8 +2305,8 @@
  },
  {
   "ja": "比岐島",
-  "yomi": "くるしま",
-  "name": "Kurushima",
+  "yomi": "ひきじま",
+  "name": "Hikijima",
   "pref": "愛媛県",
   "area": 0.3,
   "pop": 3,
@@ -2316,12 +2316,12 @@
   "popChange": 0,
   "visitors": null,
   "wikiJa": "比岐島",
-  "wikiEn": "Kurushima",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "大島",
-  "yomi": "おおしま",
+  "yomi": "にいおおしま",
   "name": "Nii Ōshima",
   "pref": "愛媛県",
   "area": 2.14,
@@ -2332,8 +2332,8 @@
   "popChange": -67,
   "visitors": 43600,
   "wikiJa": null,
-  "wikiEn": "Nii Ōshima",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "安居島",
@@ -2353,8 +2353,8 @@
  },
  {
   "ja": "興居島",
-  "yomi": "あいじま",
-  "name": "Aijima",
+  "yomi": "ごごしま",
+  "name": "Gogoshima",
   "pref": "愛媛県",
   "area": 8.4,
   "pop": 1118,
@@ -2545,8 +2545,8 @@
  },
  {
   "ja": "前島",
-  "yomi": "じま",
-  "name": "Jima",
+  "yomi": "まえじま",
+  "name": "Maejima",
   "pref": "山口県",
   "area": 1.09,
   "pop": 7,
@@ -2593,8 +2593,8 @@
  },
  {
   "ja": "平郡島",
-  "yomi": "へいくんとっ",
-  "name": "Heikunto",
+  "yomi": "へいぐんとう",
+  "name": "Heiguntō",
   "pref": "山口県",
   "area": 16.56,
   "pop": 348,
@@ -2673,8 +2673,8 @@
  },
  {
   "ja": "佐合島",
-  "yomi": "つじま",
-  "name": "Tsujima",
+  "yomi": "さごうじま",
+  "name": "Sagōjima",
   "pref": "山口県",
   "area": 1.32,
   "pop": 17,
@@ -2705,8 +2705,8 @@
  },
  {
   "ja": "牛島",
-  "yomi": "っしま",
-  "name": "Sshima",
+  "yomi": "うしま",
+  "name": "Ushima",
   "pref": "山口県",
   "area": 1.9,
   "pop": 46,
@@ -2865,7 +2865,7 @@
  },
  {
   "ja": "大根島",
-  "yomi": "たいこんしま",
+  "yomi": "だいこんじま",
   "name": "Daikon Island",
   "pref": "島根県",
   "area": 6.74,
@@ -2913,8 +2913,8 @@
  },
  {
   "ja": "櫃島",
-  "yomi": "おおしま",
-  "name": "Ōshima",
+  "yomi": "ひつしま",
+  "name": "Hitsushima",
   "pref": "山口県",
   "area": 3,
   "pop": 677,
@@ -2924,8 +2924,8 @@
   "popChange": -146,
   "visitors": 3700,
   "wikiJa": "櫃島",
-  "wikiEn": "Suō-Ōshima",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "青海島",
@@ -3137,8 +3137,8 @@
  },
  {
   "ja": "日振島",
-  "yomi": "ひぶりじま",
-  "name": "Hiburijima",
+  "yomi": "ひぶりしま",
+  "name": "Hiburishima",
   "pref": "愛媛県",
   "area": 3.74,
   "pop": 289,
@@ -3201,7 +3201,7 @@
  },
  {
   "ja": "大島",
-  "yomi": "おおしま",
+  "yomi": "にいおおしま",
   "name": "Nii Ōshima",
   "pref": "愛媛県",
   "area": 0.75,
@@ -3212,8 +3212,8 @@
   "popChange": -51,
   "visitors": 1700,
   "wikiJa": null,
-  "wikiEn": "Nii Ōshima",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "黒島",
@@ -3233,8 +3233,8 @@
  },
  {
   "ja": "津久見島",
-  "yomi": "くろしま",
-  "name": "Kuroshima",
+  "yomi": "つくみしま",
+  "name": "Tsukumishima",
   "pref": "大分県",
   "area": 0.29,
   "pop": 35,
@@ -3345,8 +3345,8 @@
  },
  {
   "ja": "馬島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "うましま",
+  "name": "Umashima",
   "pref": "福岡県",
   "area": 0.26,
   "pop": 31,
@@ -3361,8 +3361,8 @@
  },
  {
   "ja": "藍島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "あいのしま",
+  "name": "Ainoshima",
   "pref": "福岡県",
   "area": 0.68,
   "pop": 243,
@@ -3372,8 +3372,8 @@
   "popChange": -34,
   "visitors": 16100,
   "wikiJa": "藍島",
-  "wikiEn": null,
-  "enSource": null
+  "wikiEn": "Ainoshima (Shingū)",
+  "enSource": "search"
  },
  {
   "ja": "地島",
@@ -3441,7 +3441,7 @@
  },
  {
   "ja": "玄界島",
-  "yomi": "けんかいじま",
+  "yomi": "げんかいじま",
   "name": "Genkai Island",
   "pref": "福岡県",
   "area": 1.16,
@@ -3601,8 +3601,8 @@
  },
  {
   "ja": "向島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "むくしま",
+  "name": "Mukushima",
   "pref": "佐賀県",
   "area": 0.3,
   "pop": 56,
@@ -3617,8 +3617,8 @@
  },
  {
   "ja": "対馬島",
-  "yomi": "",
-  "name": "",
+  "yomi": "つしま",
+  "name": "Tsushima Island",
   "pref": "長崎県",
   "area": 695.74,
   "pop": 31301,
@@ -3627,9 +3627,9 @@
   "elev": 648,
   "popChange": -2929,
   "visitors": 462400,
-  "wikiJa": null,
-  "wikiEn": null,
-  "enSource": null
+  "wikiJa": "対馬",
+  "wikiEn": "Tsushima Island",
+  "enSource": "interwiki"
  },
  {
   "ja": "海栗島",
@@ -3724,8 +3724,8 @@
   "popChange": -34,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Ōshima, Nagasaki (Kitamatsuura)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "長島",
@@ -3804,8 +3804,8 @@
   "popChange": -4236,
   "visitors": 302077,
   "wikiJa": "鷹島 (長崎県)",
-  "wikiEn": "Takashima, Nagasaki (Nishisonogi)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "黒島",
@@ -3889,7 +3889,7 @@
  },
  {
   "ja": "平戸島",
-  "yomi": "ひらどしま",
+  "yomi": "ひらどじま",
   "name": "Hirado Island",
   "pref": "長崎県",
   "area": 163.42,
@@ -3916,8 +3916,8 @@
   "popChange": -4,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Takashima, Nagasaki (Nishisonogi)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "生月島",
@@ -3948,8 +3948,8 @@
   "popChange": -23,
   "visitors": 1600,
   "wikiJa": null,
-  "wikiEn": "Takashima, Nagasaki (Nishisonogi)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "黒島",
@@ -3980,13 +3980,13 @@
   "popChange": null,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Ōshima, Nagasaki (Kitamatsuura)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "前島",
-  "yomi": "じま",
-  "name": "Jima",
+  "yomi": "まえじま",
+  "name": "Maejima",
   "pref": "長崎県",
   "area": 0.26,
   "pop": 5,
@@ -4033,8 +4033,8 @@
  },
  {
   "ja": "寺島",
-  "yomi": "らしま",
-  "name": "Rashima",
+  "yomi": "てらしま",
+  "name": "Terashima",
   "pref": "長崎県",
   "area": 0.78,
   "pop": 203,
@@ -4049,8 +4049,8 @@
  },
  {
   "ja": "大島",
-  "yomi": "らしま",
-  "name": "Rashima",
+  "yomi": "おおしま",
+  "name": "Ōshima",
   "pref": "長崎県",
   "area": 12.08,
   "pop": 5185,
@@ -4172,12 +4172,12 @@
   "popChange": -116,
   "visitors": 103000,
   "wikiJa": null,
-  "wikiEn": "Takashima, Nagasaki (Nishisonogi)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "樺島",
-  "yomi": "はしま",
+  "yomi": "かばしま",
   "name": "Kabashima",
   "pref": "長崎県",
   "area": 2.32,
@@ -4241,8 +4241,8 @@
  },
  {
   "ja": "野崎島",
-  "yomi": "むしま",
-  "name": "Mushima",
+  "yomi": "のざきじま",
+  "name": "Nozakijima",
   "pref": "長崎県",
   "area": 0.69,
   "pop": 3,
@@ -4332,13 +4332,13 @@
   "popChange": -12,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Ōshima, Nagasaki (Kitamatsuura)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "白瀬",
-  "yomi": "",
-  "name": "",
+  "yomi": "しろぜ",
+  "name": "Shiroze",
   "pref": "長崎県",
   "area": 168.31,
   "pop": 18121,
@@ -4347,7 +4347,7 @@
   "elev": 443,
   "popChange": -2038,
   "visitors": 261522,
-  "wikiJa": null,
+  "wikiJa": "白瀬",
   "wikiEn": null,
   "enSource": null
  },
@@ -4369,8 +4369,8 @@
  },
  {
   "ja": "桐ノ小島",
-  "yomi": "じま",
-  "name": "Jima",
+  "yomi": "きりのこじま",
+  "name": "Kirinokojima",
   "pref": "長崎県",
   "area": 0.04,
   "pop": 8,
@@ -4465,8 +4465,8 @@
  },
  {
   "ja": "前島",
-  "yomi": "まえしま",
-  "name": "Maeshima",
+  "yomi": "まえじま",
+  "name": "Maejima",
   "pref": "長崎県",
   "area": 0.47,
   "pop": 23,
@@ -4545,8 +4545,8 @@
  },
  {
   "ja": "黄島",
-  "yomi": "しま",
-  "name": "Shima",
+  "yomi": "おうしま",
+  "name": "Ōshima",
   "pref": "長崎県",
   "area": 1.39,
   "pop": 41,
@@ -4668,8 +4668,8 @@
   "popChange": -18,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Yushima (island)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "湯島",
@@ -4684,8 +4684,8 @@
   "popChange": -81,
   "visitors": 5034,
   "wikiJa": null,
-  "wikiEn": "Yushima (island)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "永浦島",
@@ -4865,8 +4865,8 @@
  },
  {
   "ja": "横島",
-  "yomi": "よーしま",
-  "name": "Yōshima",
+  "yomi": "よこしま",
+  "name": "Yokoshima",
   "pref": "熊本県",
   "area": 0.83,
   "pop": 1,
@@ -4945,8 +4945,8 @@
  },
  {
   "ja": "諸浦島",
-  "yomi": "しょつらじま",
-  "name": "Shotsurajima",
+  "yomi": "しょうらじま",
+  "name": "Shōrajima",
   "pref": "鹿児島県",
   "area": 3.87,
   "pop": 412,
@@ -5404,8 +5404,8 @@
   "popChange": -10,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Miyagi Island (Uruma, Okinawa)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "屋我地島",
@@ -5425,8 +5425,8 @@
  },
  {
   "ja": "古宇利島",
-  "yomi": "つりじま",
-  "name": "Tsurijima",
+  "yomi": "こうりじま",
+  "name": "Kōrijima",
   "pref": "沖縄県",
   "area": 3.17,
   "pop": 346,
@@ -5457,7 +5457,7 @@
  },
  {
   "ja": "瀬底島",
-  "yomi": "せそーしま",
+  "yomi": "せそこじま",
   "name": "Sesoko Island",
   "pref": "沖縄県",
   "area": 2.99,
@@ -5484,8 +5484,8 @@
   "popChange": -1,
   "visitors": 59814,
   "wikiJa": null,
-  "wikiEn": "Minna Island, Tarama",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "平安座島",
@@ -5516,8 +5516,8 @@
   "popChange": -153,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Miyagi Island (Uruma, Okinawa)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "伊計島",
@@ -5596,8 +5596,8 @@
   "popChange": null,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Ou Island (Nanjō)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "瀬長島",
@@ -5617,7 +5617,7 @@
  },
  {
   "ja": "前島",
-  "yomi": "しま",
+  "yomi": "まえしま",
   "name": "Mae Island",
   "pref": "沖縄県",
   "area": 1.59,
@@ -5740,8 +5740,8 @@
   "popChange": -2,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Ou Island (Nanjō)",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "オーハ島",
@@ -5868,8 +5868,8 @@
   "popChange": null,
   "visitors": null,
   "wikiJa": null,
-  "wikiEn": "Minna Island, Tarama",
-  "enSource": "search"
+  "wikiEn": null,
+  "enSource": null
  },
  {
   "ja": "石垣島",
@@ -6029,6 +6029,23 @@
   "visitors": 40545,
   "wikiJa": "与那国島",
   "wikiEn": "Yonaguni",
+  "enSource": "interwiki"
+ },
+ {
+  "ja": "中通島",
+  "yomi": "なかどおりじま",
+  "name": "Nakadōri Island",
+  "pref": "長崎県",
+  "area": 168.34,
+  "pop": 20167,
+  "households": null,
+  "coast": 278.8,
+  "elev": 442,
+  "popChange": null,
+  "visitors": null,
+  "wikiJa": "中通島",
+  "wikiEn": "Nakadōri Island",
+  "source": "ja.wikipedia 中通島 (面積・周囲・標高 infobox; 人口=2010年国勢調査, 本文) — not in the SHIMADAS CSV extraction",
   "enSource": "interwiki"
  }
 ]
