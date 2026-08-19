@@ -9383,5 +9383,154 @@
       "artist_html": "V31S70",
       "fetched_from": "wikimedia"
     }
+  },
+  "japan-inhabited-islands": {
+    "ferry": {
+      "key": "ferry",
+      "label": "A local island ferry in the Seto Inland Sea",
+      "query": [
+        "Island Kofujikisen.jpg"
+      ],
+      "file": "img/japan-inhabited-islands-ferry-a-local-island-ferry-in-the-seto-inland-.webp",
+      "width": 960,
+      "height": 662,
+      "source_id": "wm:File:Island Kofujikisen.jpg",
+      "title": "Island Kofujikisen.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Island_Kofujikisen.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Olegushka",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Olegushka&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Olegushka (page does not exist)\">Olegushka</a>",
+      "fetched_from": "wikimedia"
+    },
+    "anan": {
+      "key": "hero",
+      "label": "Ishima, off the Tokushima coast — 165 people, no cars",
+      "query": [
+        "Ishima Tokushima",
+        "Ishima Anan",
+        "Ishima island",
+        "Ishima lighthouse"
+      ],
+      "file": "img/ishima-island-hero-ishima-anan.webp",
+      "width": 1600,
+      "height": 1067,
+      "source_id": "wm:File:Ishima Island from the sea.jpg",
+      "title": "Ishima Island from the sea.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ishima_Island_from_the_sea.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "LT sfm",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:LT_sfm&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:LT sfm (page does not exist)\">LT sfm</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hero": {
+      "key": "hero",
+      "label": "Hisakajima in the Gotō Islands, Nagasaki — houses, boats and one road",
+      "query": [
+        "久賀島.JPG"
+      ],
+      "file": "img/japan-inhabited-islands-hero-hisakajima-in-the-got-islands-nagasaki-h.webp",
+      "width": 1600,
+      "height": 900,
+      "source_id": "wm:File:久賀島.JPG",
+      "title": "久賀島.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E4%B9%85%E8%B3%80%E5%B3%B6.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Indiana jo",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Indiana_jo\" title=\"User:Indiana jo\">Indiana jo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "setouchi": {
+      "key": "setouchi",
+      "label": "Islands of the Seto Inland Sea from the ferry deck",
+      "query": [
+        "Shodo seen from the ferry (6453265785).jpg"
+      ],
+      "file": "img/japan-inhabited-islands-setouchi-islands-of-the-seto-inland-sea-from-the-.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:Shodo seen from the ferry (6453265785).jpg",
+      "title": "Shodo seen from the ferry (6453265785).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Shodo_seen_from_the_ferry_(6453265785).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Maarten Heerlien from Voorschoten, The Netherlands",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/65847118@N06\">Maarten Heerlien</a> from Voorschoten, The Netherlands",
+      "fetched_from": "wikimedia"
+    },
+    "aogashima": {
+      "key": "aogashima",
+      "label": "Aogashima, Tokyo — a village of about 170 people inside a volcanic caldera",
+      "query": [
+        "Aogasima maruyama.jpg"
+      ],
+      "file": "img/japan-inhabited-islands-aogashima-aogashima-tokyo-a-village-of-about-170-p.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Aogasima maruyama.jpg",
+      "title": "Aogasima maruyama.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aogasima_maruyama.jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Soica2001 ( talk )",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Soica2001\" title=\"User:Soica2001\">Soica2001</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Soica2001\" title=\"User talk:Soica2001\"><span class=\"signature-talk\">talk</span></a>)",
+      "fetched_from": "wikimedia"
+    },
+    "shikine": {
+      "key": "shikine",
+      "label": "Shikinejima in the Izu Islands, seen from the shore",
+      "query": [
+        "赤崎遊歩道付近から式根島 - panoramio.jpg"
+      ],
+      "file": "img/japan-inhabited-islands-shikine-shikinejima-in-the-izu-islands-seen-from.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:赤崎遊歩道付近から式根島 - panoramio.jpg",
+      "title": "赤崎遊歩道付近から式根島 - panoramio.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E8%B5%A4%E5%B4%8E%E9%81%8A%E6%AD%A9%E9%81%93%E4%BB%98%E8%BF%91%E3%81%8B%E3%82%89%E5%BC%8F%E6%A0%B9%E5%B3%B6_-_panoramio.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Y.Kowashi",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161111065449/http://www.panoramio.com/user/5340311?with_photo_id=47727763\">Y.Kowashi</a>",
+      "fetched_from": "wikimedia"
+    },
+    "naoshima": {
+      "key": "naoshima",
+      "label": "Honmura ferry terminal on Naoshima, Kagawa",
+      "query": [
+        "Naoshima honmura port terminal.jpg"
+      ],
+      "file": "img/japan-inhabited-islands-naoshima-honmura-ferry-terminal-on-naoshima-kagaw.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Naoshima honmura port terminal.jpg",
+      "title": "Naoshima honmura port terminal.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Naoshima_honmura_port_terminal.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Artandgeograph",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Artandgeograph&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Artandgeograph (page does not exist)\">Artandgeograph</a>",
+      "fetched_from": "wikimedia"
+    },
+    "gotosat": {
+      "key": "gotosat",
+      "label": "The Gotō archipelago off Nagasaki, photographed from the ISS",
+      "query": [
+        "Goto Islands ISS065.jpg"
+      ],
+      "file": "img/japan-inhabited-islands-gotosat-the-got-archipelago-off-nagasaki-photogr.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Goto Islands ISS065.jpg",
+      "title": "Goto Islands ISS065.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Goto_Islands_ISS065.jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Image Science and Analysis Laboratory, NASA - Johnson Space Center. \"The Gateway to Astronaut Photography of Earth.\"",
+      "artist_html": "Image Science and Analysis Laboratory, NASA - Johnson Space Center. \"The Gateway to Astronaut Photography of Earth.\"",
+      "fetched_from": "wikimedia"
+    }
   }
 }

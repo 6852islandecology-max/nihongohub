@@ -193,6 +193,15 @@ Object.assign(PHOTOS, {
     { key: 'biwako', q: ['Lake Biwa Aquarium.jpg'], must: /^Lake Biwa Aquarium\.jpg/i, sources: ['wikimedia'], label: 'The tunnel tank at the Lake Biwa Museum' },
     { key: 'salamander', q: ['Andrias japonicus pair.jpg'], must: /^Andrias japonicus pair\.jpg/i, sources: ['wikimedia'], label: 'Japanese giant salamanders' },
   ],
+  'japan-inhabited-islands': [ // hand-picked from Commons candidate sheets 2026-08-19
+    { key: 'hero', q: ['久賀島.JPG'], must: /^久賀島\.JPG/i, sources: ['wikimedia'], label: 'Hisakajima in the Gotō Islands, Nagasaki — houses, boats and one road' },
+    { key: 'setouchi', q: ['Shodo seen from the ferry (6453265785).jpg'], must: /^Shodo seen from the ferry \(6453265785\)\.jpg/i, sources: ['wikimedia'], label: 'Islands of the Seto Inland Sea from the ferry deck' },
+    { key: 'ferry', q: ['Island Kofujikisen.jpg'], must: /^Island Kofujikisen\.jpg/i, sources: ['wikimedia'], label: 'A local island ferry in the Seto Inland Sea' },
+    { key: 'aogashima', q: ['Aogasima maruyama.jpg'], must: /^Aogasima maruyama\.jpg/i, sources: ['wikimedia'], label: 'Aogashima, Tokyo — a village of about 170 people inside a volcanic caldera' },
+    { key: 'shikine', q: ['赤崎遊歩道付近から式根島 - panoramio.jpg'], must: /^赤崎遊歩道付近から式根島 - panoramio\.jpg/i, sources: ['wikimedia'], label: 'Shikinejima in the Izu Islands, seen from the shore' },
+    { key: 'naoshima', q: ['Naoshima honmura port terminal.jpg'], must: /^Naoshima honmura port terminal\.jpg/i, sources: ['wikimedia'], label: 'Honmura ferry terminal on Naoshima, Kagawa' },
+    { key: 'gotosat', q: ['Goto Islands ISS065.jpg'], must: /^Goto Islands ISS065\.jpg/i, sources: ['wikimedia'], label: 'The Gotō archipelago off Nagasaki, photographed from the ISS' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked
