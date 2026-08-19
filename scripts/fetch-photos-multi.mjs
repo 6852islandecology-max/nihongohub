@@ -313,6 +313,17 @@ Object.assign(PHOTOS, {
     { key: 'miyake', q: ['View of Miyakejima from aircraft.jpg'], must: /^View of Miyakejima from aircraft\.jpg/i, sources: ['wikimedia'], label: 'Miyakejima from the air, Mount Oyama in the middle' },
     { key: 'mihara', q: ['Crater Lookout @ Mount Mihara @ Oshima (9612795532).jpg'], must: /^Crater Lookout @ Mount Mihara @ Oshima \(9612795532\)\.jpg/i, sources: ['wikimedia'], label: 'The crater of Mount Mihara, Izu Ōshima' },
   ],
+  'nansei-islands': [ // hand-picked 2026-08-19
+    { key: 'hero', q: ['Aerial view of Ishigaki island Taketomi and Kohama 2014.jpg'], must: /^Aerial view of Ishigaki island Taketomi and Kohama 2014\.jpg/i, sources: ['wikimedia'], label: 'Taketomi and Kohama on the reef off Ishigaki, Yaeyama Islands' },
+    { key: 'taketomi', q: ['Village in Taketomi Island - located at southwest Japan.jpg'], must: /^Village in Taketomi Island - located at southwest Japan\.jpg/i, sources: ['wikimedia'], label: 'The red-roofed village on Taketomi' },
+    { key: 'hateruma', q: ['Hateruma nishihama 2.jpg'], must: /^Hateruma nishihama 2\.jpg/i, sources: ['wikimedia'], label: 'Nishihama on Hateruma, the southernmost inhabited island in Japan' },
+    { key: 'yonaguni', q: ['Yonaguni agarizaki.jpg'], must: /^Yonaguni agarizaki\.jpg/i, sources: ['wikimedia'], label: 'Cape Agarizaki, Yonaguni — Taiwan is 111 km west' },
+    { key: 'zamami', q: ['Ama beach in Zamami Island.jpg'], must: /^Ama beach in Zamami Island\.jpg/i, sources: ['wikimedia'], label: 'Ama beach, Zamami — the Kerama Islands' },
+    { key: 'irabu', q: ['Miyako irabu ohashi 2014 1.jpg'], must: /^Miyako irabu ohashi 2014 1\.jpg/i, sources: ['wikimedia'], label: 'The Irabu Bridge from Miyako — 3.5 km, toll-free' },
+    { key: 'yakushima', q: ['Shiratani Unsui Gorge 06.jpg'], must: /^Shiratani Unsui Gorge 06\.jpg/i, sources: ['wikimedia'], label: 'Shiratani Unsuikyō, Yakushima' },
+    { key: 'suwanose', q: ['Suwanosejima.jpg'], must: /^Suwanosejima\.jpg/i, sources: ['wikimedia'], label: 'Suwanosejima, Tokara — an island that is mostly an active volcano' },
+    { key: 'amami', q: ['Amami beach.jpg'], must: /^Amami beach\.jpg/i, sources: ['wikimedia'], label: 'A bay on Amami Ōshima' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked

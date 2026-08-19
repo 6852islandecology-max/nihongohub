@@ -11036,5 +11036,169 @@
       "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Soica2001\" title=\"User:Soica2001\">Soica2001</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Soica2001\" title=\"User talk:Soica2001\"><span class=\"signature-talk\">talk</span></a>)",
       "fetched_from": "wikimedia"
     }
+  },
+  "nansei-islands": {
+    "hero": {
+      "key": "hero",
+      "label": "Taketomi and Kohama on the reef off Ishigaki, Yaeyama Islands",
+      "query": [
+        "Aerial view of Ishigaki island Taketomi and Kohama 2014.jpg"
+      ],
+      "file": "img/nansei-islands-hero-taketomi-and-kohama-on-the-reef-off-ishi.webp",
+      "width": 1600,
+      "height": 1067,
+      "source_id": "wm:File:Aerial view of Ishigaki island Taketomi and Kohama 2014.jpg",
+      "title": "Aerial view of Ishigaki island Taketomi and Kohama 2014.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Ishigaki_island_Taketomi_and_Kohama_2014.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Junpei Abe",
+      "artist_html": "Junpei Abe",
+      "fetched_from": "wikimedia"
+    },
+    "taketomi": {
+      "key": "taketomi",
+      "label": "The red-roofed village on Taketomi",
+      "query": [
+        "Village in Taketomi Island - located at southwest Japan.jpg"
+      ],
+      "file": "img/nansei-islands-taketomi-the-red-roofed-village-on-taketomi.webp",
+      "width": 960,
+      "height": 638,
+      "source_id": "wm:File:Village in Taketomi Island - located at southwest Japan.jpg",
+      "title": "Village in Taketomi Island - located at southwest Japan.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Village_in_Taketomi_Island_-_located_at_southwest_Japan.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "ippei &amp; janine naoi",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/ippei-janine/\">ippei &amp; janine naoi</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hateruma": {
+      "key": "hateruma",
+      "label": "Nishihama on Hateruma, the southernmost inhabited island in Japan",
+      "query": [
+        "Hateruma nishihama 2.jpg"
+      ],
+      "file": "img/nansei-islands-hateruma-nishihama-on-hateruma-the-southernmost-i.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Hateruma nishihama 2.jpg",
+      "title": "Hateruma nishihama 2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hateruma_nishihama_2.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Paipateroma",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Paipateroma&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Paipateroma (page does not exist)\">Paipateroma</a>",
+      "fetched_from": "wikimedia"
+    },
+    "yonaguni": {
+      "key": "yonaguni",
+      "label": "Cape Agarizaki, Yonaguni — Taiwan is 111 km west",
+      "query": [
+        "Yonaguni agarizaki.jpg"
+      ],
+      "file": "img/nansei-islands-yonaguni-cape-agarizaki-yonaguni-taiwan-is-111-km.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Yonaguni agarizaki.jpg",
+      "title": "Yonaguni agarizaki.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Yonaguni_agarizaki.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Metatron",
+      "artist_html": "Metatron",
+      "fetched_from": "wikimedia"
+    },
+    "zamami": {
+      "key": "zamami",
+      "label": "Ama beach, Zamami — the Kerama Islands",
+      "query": [
+        "Ama beach in Zamami Island.jpg"
+      ],
+      "file": "img/nansei-islands-zamami-ama-beach-zamami-the-kerama-islands.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:Ama beach in Zamami Island.jpg",
+      "title": "Ama beach in Zamami Island.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ama_beach_in_Zamami_Island.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Hashi photo",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:Hashi_photo\" class=\"extiw\" title=\"ja:user:Hashi photo\">Hashi photo</a>",
+      "fetched_from": "wikimedia"
+    },
+    "irabu": {
+      "key": "irabu",
+      "label": "The Irabu Bridge from Miyako — 3.5 km, toll-free",
+      "query": [
+        "Miyako irabu ohashi 2014 1.jpg"
+      ],
+      "file": "img/nansei-islands-irabu-the-irabu-bridge-from-miyako-3-5-km-toll.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Miyako irabu ohashi 2014 1.jpg",
+      "title": "Miyako irabu ohashi 2014 1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miyako_irabu_ohashi_2014_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Paipateroma",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Paipateroma&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Paipateroma (page does not exist)\">Paipateroma</a>",
+      "fetched_from": "wikimedia"
+    },
+    "yakushima": {
+      "key": "yakushima",
+      "label": "Shiratani Unsuikyō, Yakushima",
+      "query": [
+        "Shiratani Unsui Gorge 06.jpg"
+      ],
+      "file": "img/nansei-islands-yakushima-shiratani-unsuiky-yakushima.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Shiratani Unsui Gorge 06.jpg",
+      "title": "Shiratani Unsui Gorge 06.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Shiratani_Unsui_Gorge_06.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Σ64",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/User:%CE%A364\" class=\"extiw\" title=\"ja:User:Σ64\">Σ64</a>",
+      "fetched_from": "wikimedia"
+    },
+    "suwanose": {
+      "key": "suwanose",
+      "label": "Suwanosejima, Tokara — an island that is mostly an active volcano",
+      "query": [
+        "Suwanosejima.jpg"
+      ],
+      "file": "img/nansei-islands-suwanose-suwanosejima-tokara-an-island-that-is-mo.webp",
+      "width": 960,
+      "height": 517,
+      "source_id": "wm:File:Suwanosejima.jpg",
+      "title": "Suwanosejima.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Suwanosejima.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Ray_go",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Ray_go\" title=\"User:Ray go\">Ray_go</a>",
+      "fetched_from": "wikimedia"
+    },
+    "amami": {
+      "key": "amami",
+      "label": "A bay on Amami Ōshima",
+      "query": [
+        "Amami beach.jpg"
+      ],
+      "file": "img/nansei-islands-amami-a-bay-on-amami-shima.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Amami beach.jpg",
+      "title": "Amami beach.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Amami_beach.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "TANAKA Juuyoh (田中十洋)",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/tanaka_juuyoh/\">TANAKA Juuyoh (田中十洋)</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }
