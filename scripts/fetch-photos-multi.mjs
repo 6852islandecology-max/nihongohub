@@ -257,6 +257,20 @@ Object.assign(PHOTOS, {
     { key: 'yura', q: ['Yura Station.jpg'], must: /^Yura Station\.jpg/i, sources: ['wikimedia'], label: 'Yura Station in Hokuei, Tottori — the gateway to the Conan manholes' },
     { key: 'ashi', q: ['Sightseeing Cruise @ Lake Ashi @ From Togendai to Hakone-Machi (10621220604).jpg'], must: /^Sightseeing Cruise @ Lake Ashi @ From Togendai to Hakone-Machi \(10621220604\)\.jpg/i, sources: ['wikimedia'], label: 'Lake Ashi, Hakone — the Evangelion covers are around the lake towns' },
   ],
+  'japan-towns-to-live': [ // hand-picked from Commons candidate sheets 2026-08-19 (JLF hero images were not good enough)
+    { key: 'omihachiman', q: ['Hachimanbori07s3200.jpg'], must: /^Hachimanbori07s3200\.jpg/i, sources: ['wikimedia'], label: 'Hachiman-bori moat, Omihachiman, Shiga' },
+    { key: 'mishima', q: ['Genbei River 2011-09-18 (a).jpg'], must: /^Genbei River 2011-09-18 \(a\)\.jpg/i, sources: ['wikimedia'], label: 'The Genbei River, spring water through central Mishima' },
+    { key: 'matsue', q: ['Matsue Castle in Japan, Horikawa Moats 松江城 堀川遊覧船.jpg'], must: /^Matsue Castle in Japan, Horikawa Moats 松江城 堀川遊覧船\.jpg/i, sources: ['wikimedia'], label: 'Matsue Castle and the Horikawa moat boats' },
+    { key: 'yanagawa', q: ['Yanagawa cruise ac (1).jpg'], must: /^Yanagawa cruise ac \(1\)\.jpg/i, sources: ['wikimedia'], label: 'Poling the canals of Yanagawa, Fukuoka' },
+    { key: 'gujo', q: ['Gujo-shi Gujo-hachiman kitamachi, Gifu, castle town.JPG'], must: /^Gujo-shi Gujo-hachiman kitamachi, Gifu, castle town\.JPG/i, sources: ['wikimedia'], label: 'Gujō Hachiman, Gifu' },
+    { key: 'ogaki', q: ['Ogaki City Suimon River 2010-10.JPG'], must: /^Ogaki City Suimon River 2010-10\.JPG/i, sources: ['wikimedia'], label: 'The Suimon River in Ōgaki, Gifu' },
+    { key: 'hikone', q: ['Hikone castle5537.JPG'], must: /^Hikone castle5537\.JPG/i, sources: ['wikimedia'], label: 'Hikone Castle keep — a National Treasure' },
+    { key: 'inuyama', q: ['Castle in Inuyama.JPG'], must: /^Castle in Inuyama\.JPG/i, sources: ['wikimedia'], label: 'Inuyama Castle above the Kiso River' },
+    { key: 'hirosaki', q: ['Cherry blossoms along the moat of Hirosaki Castle at night 20260420a.jpg'], must: /^Cherry blossoms along the moat of Hirosaki Castle at night 20260420a\.jpg/i, sources: ['wikimedia'], label: 'Cherry blossoms along the moat of Hirosaki Castle' },
+    { key: 'takayama', q: ['Sanmachi Takayama02ds3872.jpg'], must: /^Sanmachi Takayama02ds3872\.jpg/i, sources: ['wikimedia'], label: 'Sanmachi, the preserved merchant streets of Takayama' },
+    { key: 'hagi', q: ['Hagi-Horiuchi Yamaguchi samurai quarter.JPG'], must: /^Hagi-Horiuchi Yamaguchi samurai quarter\.JPG/i, sources: ['wikimedia'], label: 'The Horiuchi samurai quarter, Hagi' },
+    { key: 'matsumoto', q: ['Matsumoto Castle05s5s4592.jpg'], must: /^Matsumoto Castle05s5s4592\.jpg/i, sources: ['wikimedia'], label: 'Matsumoto Castle' },
+  ],
   'manhole-cards-japan': [
     { key: 'hiroshima', q: ['Manhole hiroshima.jpg', 'Manhole hiroshima'], must: /^Manhole hiroshima\.jpg/i, sources: ['wikimedia'], label: 'Hiroshima city cover with Carp Boy' }, // hand-picked
     { key: 'kobe',    q: ['Manhole cover of Kobe, Hyogo.JPG', 'Manhole cover of Kobe, Hyogo'], must: /^Manhole cover of Kobe, Hyogo\.JPG/i, sources: ['wikimedia'], label: 'Kobe city cover' }, // hand-picked

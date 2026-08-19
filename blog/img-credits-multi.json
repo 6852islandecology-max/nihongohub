@@ -10178,5 +10178,223 @@
       "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/22539273@N00\">Guilhem Vellut</a> from Annecy, France",
       "fetched_from": "wikimedia"
     }
+  },
+  "japan-towns-to-live": {
+    "omihachiman": {
+      "key": "omihachiman",
+      "label": "Hachiman-bori moat, Omihachiman, Shiga",
+      "query": [
+        "Hachimanbori07s3200.jpg"
+      ],
+      "file": "img/japan-towns-to-live-omihachiman-hachiman-bori-moat-omihachiman-shiga.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:Hachimanbori07s3200.jpg",
+      "title": "Hachimanbori07s3200.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hachimanbori07s3200.jpg",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "663highland",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+      "fetched_from": "wikimedia"
+    },
+    "mishima": {
+      "key": "mishima",
+      "label": "The Genbei River, spring water through central Mishima",
+      "query": [
+        "Genbei River 2011-09-18 (a).jpg"
+      ],
+      "file": "img/japan-towns-to-live-mishima-the-genbei-river-spring-water-through-ce.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Genbei River 2011-09-18 (a).jpg",
+      "title": "Genbei River 2011-09-18 (a).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Genbei_River_2011-09-18_(a).jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Batholith",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/User:Batholith\" class=\"extiw\" title=\"ja:User:Batholith\">Batholith</a>",
+      "fetched_from": "wikimedia"
+    },
+    "matsue": {
+      "key": "matsue",
+      "label": "Matsue Castle and the Horikawa moat boats",
+      "query": [
+        "Matsue Castle in Japan, Horikawa Moats 松江城 堀川遊覧船.jpg"
+      ],
+      "file": "img/japan-towns-to-live-matsue-matsue-castle-and-the-horikawa-moat-boat.webp",
+      "width": 960,
+      "height": 785,
+      "source_id": "wm:File:Matsue Castle in Japan, Horikawa Moats 松江城 堀川遊覧船.jpg",
+      "title": "Matsue Castle in Japan, Horikawa Moats 松江城 堀川遊覧船.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Matsue_Castle_in_Japan,_Horikawa_Moats_%E6%9D%BE%E6%B1%9F%E5%9F%8E_%E5%A0%80%E5%B7%9D%E9%81%8A%E8%A6%A7%E8%88%B9.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Mister99",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Mister99&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Mister99 (page does not exist)\">Mister99</a>",
+      "fetched_from": "wikimedia"
+    },
+    "yanagawa": {
+      "key": "yanagawa",
+      "label": "Poling the canals of Yanagawa, Fukuoka",
+      "query": [
+        "Yanagawa cruise ac (1).jpg"
+      ],
+      "file": "img/japan-towns-to-live-yanagawa-poling-the-canals-of-yanagawa-fukuoka.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:Yanagawa cruise ac (1).jpg",
+      "title": "Yanagawa cruise ac (1).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Yanagawa_cruise_ac_(1).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Asturio Cantabrio",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Asturio_Cantabrio\" title=\"User:Asturio Cantabrio\">Asturio Cantabrio</a>",
+      "fetched_from": "wikimedia"
+    },
+    "gujo": {
+      "key": "gujo",
+      "label": "Gujō Hachiman, Gifu",
+      "query": [
+        "Gujo-shi Gujo-hachiman kitamachi, Gifu, castle town.JPG"
+      ],
+      "file": "img/japan-towns-to-live-gujo-guj-hachiman-gifu.webp",
+      "width": 960,
+      "height": 624,
+      "source_id": "wm:File:Gujo-shi Gujo-hachiman kitamachi, Gifu, castle town.JPG",
+      "title": "Gujo-shi Gujo-hachiman kitamachi, Gifu, castle town.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Gujo-shi_Gujo-hachiman_kitamachi,_Gifu,_castle_town.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Isoyan",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Isoyan&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Isoyan (page does not exist)\">Isoyan</a>",
+      "fetched_from": "wikimedia"
+    },
+    "ogaki": {
+      "key": "ogaki",
+      "label": "The Suimon River in Ōgaki, Gifu",
+      "query": [
+        "Ogaki City Suimon River 2010-10.JPG"
+      ],
+      "file": "img/japan-towns-to-live-ogaki-the-suimon-river-in-gaki-gifu.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Ogaki City Suimon River 2010-10.JPG",
+      "title": "Ogaki City Suimon River 2010-10.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ogaki_City_Suimon_River_2010-10.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "At by At",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:At_by_At\" title=\"User:At by At\">At by At</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hikone": {
+      "key": "hikone",
+      "label": "Hikone Castle keep — a National Treasure",
+      "query": [
+        "Hikone castle5537.JPG"
+      ],
+      "file": "img/japan-towns-to-live-hikone-hikone-castle-keep-a-national-treasure.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Hikone castle5537.JPG",
+      "title": "Hikone castle5537.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hikone_castle5537.JPG",
+      "license": "CC BY 2.1 jp",
+      "license_url": "https://creativecommons.org/licenses/by/2.1/jp/deed.en",
+      "artist": "日: Jnn",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:nnn\" class=\"extiw\" title=\"ja:利用者:nnn\">日:</a><a href=\"//commons.wikimedia.org/wiki/User:Jnn\" title=\"User:Jnn\">Jnn</a>",
+      "fetched_from": "wikimedia"
+    },
+    "inuyama": {
+      "key": "inuyama",
+      "label": "Inuyama Castle above the Kiso River",
+      "query": [
+        "Castle in Inuyama.JPG"
+      ],
+      "file": "img/japan-towns-to-live-inuyama-inuyama-castle-above-the-kiso-river.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Castle in Inuyama.JPG",
+      "title": "Castle in Inuyama.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Castle_in_Inuyama.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "ThorstenS",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:ThorstenS\" title=\"User:ThorstenS\">ThorstenS</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hirosaki": {
+      "key": "hirosaki",
+      "label": "Cherry blossoms along the moat of Hirosaki Castle",
+      "query": [
+        "Cherry blossoms along the moat of Hirosaki Castle at night 20260420a.jpg"
+      ],
+      "file": "img/japan-towns-to-live-hirosaki-cherry-blossoms-along-the-moat-of-hirosa.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Cherry blossoms along the moat of Hirosaki Castle at night 20260420a.jpg",
+      "title": "Cherry blossoms along the moat of Hirosaki Castle at night 20260420a.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cherry_blossoms_along_the_moat_of_Hirosaki_Castle_at_night_20260420a.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "掬茶",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E6%8E%AC%E8%8C%B6\" title=\"User:掬茶\">掬茶</a>",
+      "fetched_from": "wikimedia"
+    },
+    "takayama": {
+      "key": "takayama",
+      "label": "Sanmachi, the preserved merchant streets of Takayama",
+      "query": [
+        "Sanmachi Takayama02ds3872.jpg"
+      ],
+      "file": "img/japan-towns-to-live-takayama-sanmachi-the-preserved-merchant-streets-.webp",
+      "width": 960,
+      "height": 643,
+      "source_id": "wm:File:Sanmachi Takayama02ds3872.jpg",
+      "title": "Sanmachi Takayama02ds3872.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sanmachi_Takayama02ds3872.jpg",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "663highland",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+      "fetched_from": "wikimedia"
+    },
+    "hagi": {
+      "key": "hagi",
+      "label": "The Horiuchi samurai quarter, Hagi",
+      "query": [
+        "Hagi-Horiuchi Yamaguchi samurai quarter.JPG"
+      ],
+      "file": "img/japan-towns-to-live-hagi-the-horiuchi-samurai-quarter-hagi.webp",
+      "width": 960,
+      "height": 638,
+      "source_id": "wm:File:Hagi-Horiuchi Yamaguchi samurai quarter.JPG",
+      "title": "Hagi-Horiuchi Yamaguchi samurai quarter.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hagi-Horiuchi_Yamaguchi_samurai_quarter.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Isoyan",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Isoyan&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Isoyan (page does not exist)\">Isoyan</a>",
+      "fetched_from": "wikimedia"
+    },
+    "matsumoto": {
+      "key": "matsumoto",
+      "label": "Matsumoto Castle",
+      "query": [
+        "Matsumoto Castle05s5s4592.jpg"
+      ],
+      "file": "img/japan-towns-to-live-matsumoto-matsumoto-castle.webp",
+      "width": 960,
+      "height": 639,
+      "source_id": "wm:File:Matsumoto Castle05s5s4592.jpg",
+      "title": "Matsumoto Castle05s5s4592.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Matsumoto_Castle05s5s4592.jpg",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "663highland",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }
