@@ -41,6 +41,12 @@
       "slug": "science-swallowtail-mimicry-supergene-japan",
       "topic": "Female-limited Batesian mimicry and its dsx-based supergene switch, plus frequency-dependent maintenance of the polymorphism (メス限定ベイツ型擬態と超遺伝子スイッチ・頻度依存選択)",
       "species": ["Papilio polytes (シロオビアゲハ)", "Papilio memnon (ナガサキアゲハ)", "Pachliopta aristolochiae (ベニモンアゲハ)", "Atrophaneura alcinous (ジャコウアゲハ)"]
+    },
+    {
+      "date": "2026-08-23",
+      "slug": "science-butterfly-uv-mate-recognition-japan",
+      "topic": "UV-based sexual dichromatism and male mate recognition, with seasonal plasticity of the female signal (紫外線による性的二色性・雄の配偶者認知・季節による変化)",
+      "species": ["Pieris rapae crucivora (モンシロチョウ)"]
     }
   ]
 }
