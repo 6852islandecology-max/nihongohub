@@ -137,6 +137,8 @@ const TOPIC = {
   'japanese-pottery-towns-guide-arita':'Tozan Shrine01',
   'japanese-pottery-towns-guide-bizen':'Imbe Bizen Okayama pref Japan07s3',
   'japanese-pottery-towns-guide-shigaraki':'信楽焼の狸 - panoramio',
+  // souvenir hub (2026-08-23, content-strategy 確定版 の hub): Kappabashi kitchenware street
+  'japan-souvenirs-worth-carrying-home':'Kappabashi-dori streetcorner (Kitchen town - southern end) a sunny morning in Tokyo Japan.jpg',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 
