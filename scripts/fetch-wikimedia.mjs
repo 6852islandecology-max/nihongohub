@@ -139,6 +139,13 @@ const TOPIC = {
   'japanese-pottery-towns-guide-shigaraki':'信楽焼の狸 - panoramio',
   // souvenir hub (2026-08-23, content-strategy 確定版 の hub): Kappabashi kitchenware street
   'japan-souvenirs-worth-carrying-home':'Kappabashi-dori streetcorner (Kitchen town - southern end) a sunny morning in Tokyo Japan.jpg',
+  // walkable-islands article (2026-08-23): computed from blog/data/islands.json
+  'japan-islands-you-can-walk-around':'Biwako Okishima aerial.jpg',
+  'japan-islands-you-can-walk-around-okishima':'Okishima alley ac (1).jpg',
+  'japan-islands-you-can-walk-around-ainoshima':'相島の猫.jpg',
+  'japan-islands-you-can-walk-around-manabeshima':'Row of houses in Manabeshima.jpg',
+  'japan-islands-you-can-walk-around-kudaka':'Stone wall in Kudaka Island 202401.jpg',
+  'japan-islands-you-can-walk-around-himakajima':'Himakajima Island.jpg',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 

@@ -1438,5 +1438,77 @@
     "width": 1600,
     "height": 1273,
     "fetched_from": "wikimedia"
+  },
+  "japan-islands-you-can-walk-around": {
+    "query": "Biwako Okishima aerial.jpg",
+    "title": "File:Biwako Okishima aerial.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-islands-you-can-walk-around.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Biwako_Okishima_aerial.jpg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%83%96%E3%83%AB%E3%83%BC%E3%83%8E%E3%83%BB%E3%83%97%E3%83%A9%E3%82%B9&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ブルーノ・プラス (page does not exist)\">ブルーノ・プラス</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japan-islands-you-can-walk-around-okishima": {
+    "query": "Okishima alley ac (1).jpg",
+    "title": "File:Okishima alley ac (1).jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-islands-you-can-walk-around-okishima.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Okishima_alley_ac_(1).jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Asturio_Cantabrio\" title=\"User:Asturio Cantabrio\">Asturio Cantabrio</a>",
+    "width": 1600,
+    "height": 1064,
+    "fetched_from": "wikimedia"
+  },
+  "japan-islands-you-can-walk-around-ainoshima": {
+    "query": "相島の猫.jpg",
+    "title": "File:相島の猫.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-islands-you-can-walk-around-ainoshima.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E7%9B%B8%E5%B3%B6%E3%81%AE%E7%8C%AB.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:ShinguTown&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ShinguTown (page does not exist)\">ShinguTown</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japan-islands-you-can-walk-around-manabeshima": {
+    "query": "Row of houses in Manabeshima.jpg",
+    "title": "File:Row of houses in Manabeshima.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-islands-you-can-walk-around-manabeshima.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Row_of_houses_in_Manabeshima.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E3%83%96%E3%83%AB%E3%83%BC%E3%83%8E%E3%83%BB%E3%83%97%E3%83%A9%E3%82%B9&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ブルーノ・プラス (page does not exist)\">ブルーノ・プラス</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japan-islands-you-can-walk-around-kudaka": {
+    "query": "Stone wall in Kudaka Island 202401.jpg",
+    "title": "File:Stone wall in Kudaka Island 202401.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-islands-you-can-walk-around-kudaka.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Stone_wall_in_Kudaka_Island_202401.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Kugel~commonswiki\" title=\"User:Kugel~commonswiki\">Kugel~commonswiki</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japan-islands-you-can-walk-around-himakajima": {
+    "query": "Himakajima Island.jpg",
+    "title": "File:Meitetu himakajima 01.JPG",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japan-islands-you-can-walk-around-himakajima.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Meitetu_himakajima_01.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Kamakura\" title=\"User:Kamakura\">Kamakura</a>",
+    "width": 1600,
+    "height": 1065,
+    "fetched_from": "wikimedia"
   }
 }
