@@ -237,6 +237,17 @@
   // anchors fire aff_gogonihon even while the URL is still the honest fallback).
   // The ASP-side SubID layer (param name differs per network: aff_sub / clickref /
   // marker) is a separate, per-network-verified follow-up.
+  // 2026-08-23: translated pages live at /blog/<lang>/<slug>.html and used to report the
+  // same slug as the English original, so zh/es/th/id affiliate and Similar-places clicks
+  // were indistinguishable from English ones. Prefix the locale so they can be told apart.
+  function pageSlug() {
+    var parts = location.pathname.toLowerCase().split('/').filter(Boolean);
+    var last = (parts.pop() || 'index').replace(/\.html?$/, '');
+    var dir = parts.pop() || '';
+    var loc = /^(zh|es|th|id)$/.test(dir) ? dir + '_' : '';
+    return (loc + last).replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'index';
+  }
+
   if (!window.__NH_AFFCLICK__) {
     window.__NH_AFFCLICK__ = true;
     document.addEventListener('click', function (e) {
@@ -246,8 +257,7 @@
       // [a-z0-9_] with "_" runs collapsed so the first "__" is the delimiter.
       var key = (a.getAttribute('data-aff') || 'link').toLowerCase()
         .replace(/[^a-z0-9_]/g, '').replace(/__+/g, '_').slice(0, 24) || 'link';
-      var page = (location.pathname.toLowerCase().split('/').pop() || 'index').replace(/\.html?$/, '')
-        .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'index';
+      var page = pageSlug();
       try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('aff_' + key + '__' + page); } catch (e2) {}
     }, true);
   }
@@ -259,8 +269,7 @@
     document.addEventListener('click', function (e) {
       var a = e.target && e.target.closest && e.target.closest('.nh-simplaces a');
       if (!a) return;
-      var page = (location.pathname.toLowerCase().split('/').pop() || 'index').replace(/\.html?$/, '')
-        .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'index';
+      var page = pageSlug();
       try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('sim_click__' + page); } catch (e2) {}
     }, true);
   }
