@@ -1282,5 +1282,77 @@
     "width": 1600,
     "height": 1200,
     "fetched_from": "wikimedia"
+  },
+  "japanese-whisky-towns-guide": {
+    "query": "Nikka Whisky Yoichi Distillery. Still House",
+    "title": "File:Nikka Whisky Yoichi Distillery. Still House.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-whisky-towns-guide.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Still_House.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%95%E3%81%8B%E3%81%8A%E3%82%8A\" title=\"User:さかおり\">さかおり</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-whisky-towns-guide-yoichi": {
+    "query": "Nikka Whisky Yoichi Distillery. The former residence of the Taketsuru. C",
+    "title": "File:Nikka Whisky Yoichi Distillery. The former residence of the Taketsuru. C.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-whisky-towns-guide-yoichi.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._The_former_residence_of_the_Taketsuru._C.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%95%E3%81%8B%E3%81%8A%E3%82%8A\" title=\"User:さかおり\">さかおり</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-whisky-towns-guide-yamazaki": {
+    "query": "Yamazaki Distillery 山崎蒸留所17",
+    "title": "File:Yamazaki Distillery 山崎蒸留所17.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-whisky-towns-guide-yamazaki.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yamazaki_Distillery_%E5%B1%B1%E5%B4%8E%E8%92%B8%E7%95%99%E6%89%8017.jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist_html": "Toukou Sousui 淙穂鶫箜",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-whisky-towns-guide-hakushu": {
+    "query": "Hakushu Distillery",
+    "title": "File:Suntory-hakushu-distillery.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-whisky-towns-guide-hakushu.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Suntory-hakushu-distillery.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Iwai.masaharu\" title=\"User:Iwai.masaharu\">iwaim</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Iwai.masaharu\" title=\"User talk:Iwai.masaharu\"><span class=\"signature-talk\">talk</span></a>)",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-whisky-towns-guide-mars": {
+    "query": "Honbo syuzo sinsyu factory",
+    "title": "File:Honbo syuzo sinsyu factory.JPG",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-whisky-towns-guide-mars.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Honbo_syuzo_sinsyu_factory.JPG",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Opqr\" title=\"User:Opqr\">Opqr</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-whisky-towns-guide-chichibu": {
+    "query": "Chichibu Shrine - 秩父神社 - panoramio",
+    "title": "File:Chichibu Shrine - 秩父神社 - panoramio.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-whisky-towns-guide-chichibu.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chichibu_Shrine_-_%E7%A7%A9%E7%88%B6%E7%A5%9E%E7%A4%BE_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161029111131/http://www.panoramio.com/user/7145732?with_photo_id=101498992\">Carbonium</a>",
+    "width": 1600,
+    "height": 1060,
+    "fetched_from": "wikimedia"
   }
 }

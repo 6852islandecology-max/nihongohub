@@ -123,6 +123,13 @@ const TOPIC = {
   'japanese-tea-regions-guide-yame':'Yame Tea Plantation 03',
   'japanese-tea-regions-guide-sayama':'狭山茶畑 - panoramio',
   'japanese-tea-regions-guide-gyokuro':'Gyokuro-with-kyusu',
+  // whisky-towns spoke (2026-08-23, content-strategy 確定版 spoke #3)
+  'japanese-whisky-towns-guide':'Nikka Whisky Yoichi Distillery. Still House',
+  'japanese-whisky-towns-guide-yoichi':'Nikka Whisky Yoichi Distillery. The former residence of the Taketsuru. C',
+  'japanese-whisky-towns-guide-yamazaki':'Yamazaki Distillery 山崎蒸留所17',
+  'japanese-whisky-towns-guide-hakushu':'Hakushu Distillery',
+  'japanese-whisky-towns-guide-mars':'Honbo syuzo sinsyu factory',
+  'japanese-whisky-towns-guide-chichibu':'Chichibu Shrine - 秩父神社 - panoramio',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 
