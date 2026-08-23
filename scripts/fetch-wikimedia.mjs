@@ -112,6 +112,17 @@ const TOPIC = {
   // (Fuji City tea terraces under Mt Fuji); in-body = Chiran tea fields, Kagoshima.
   'japanese-tea-regions-guide':'Obuchi Sasaba',
   'japanese-tea-regions-guide-b':'知覧町茶畑 20150922 - panoramio',
+  // 2026-08-23 写真密度の底上げ: 勝っている収集型記事は7-12枚/記事(280-420語/枚)だったのに対し
+  // spoke #1/#2 は2枚(1600-1900語/枚)しかなかった。産地ごとに1枚を基本にする。
+  'japanese-knife-towns-guide-seki':'Seki Sword Tradition Museum 1',
+  'japanese-knife-towns-guide-echizen':'Masakage Yuki Bunka 170mm (2026)-104A7635',
+  'japanese-knife-towns-guide-tsubame':'Tsubamesanjo Jibasan Center, Roadside Station, Niigata, Japan, August 2019',
+  'japanese-knife-towns-guide-miki':'Miki hardware Festival 01',
+  'japanese-tea-regions-guide-shaded':'Tee-beschatet-gross',
+  'japanese-tea-regions-guide-uji':'Byodoin Phoenix Hall Uji 2009',
+  'japanese-tea-regions-guide-yame':'Yame Tea Plantation 03',
+  'japanese-tea-regions-guide-sayama':'狭山茶畑 - panoramio',
+  'japanese-tea-regions-guide-gyokuro':'Gyokuro-with-kyusu',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 

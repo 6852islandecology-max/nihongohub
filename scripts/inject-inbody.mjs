@@ -29,13 +29,40 @@ const CONFIG = [
   { pseudo: 'japan-100-castles-goshuin-b', file: 'japan-100-castles-goshuin.html', after: '<h2 id="twelve">The 12 original surviving keeps (the real hook)</h2>' },
   { pseudo: 'gundam-manholes-japan-b', file: 'gundam-manholes-japan.html', after: '<h2 id="where">Where to find them</h2>' },
   // knife-towns spoke (2026-08-23): the Sakai Hamono museum building, at the head of the town rundown
-  { pseudo: 'japanese-knife-towns-guide-b', file: 'japanese-knife-towns-guide.html', after: '<h2 id="towns">The five towns, honestly</h2>',
+  { pseudo: 'japanese-knife-towns-guide-b', file: 'japanese-knife-towns-guide.html', after: "<h3>Sakai, Osaka — the professional chef's town</h3>", cls: 'inline-photo',
     alt: 'Sakai Traditional Crafts Museum building, Sakai, Osaka, Japan',
     cap: 'The Sakai Traditional Crafts Museum (Sakai Denshokan), home of the free "Sakai Hamono Museum CUT" exhibit' },
-  // tea-regions spoke (2026-08-23): Chiran tea fields, at the head of the region rundown
-  { pseudo: 'japanese-tea-regions-guide-b', file: 'japanese-tea-regions-guide.html', after: '<h2 id="regions">The five regions, honestly</h2>',
+  { pseudo: 'japanese-knife-towns-guide-seki', file: 'japanese-knife-towns-guide.html', after: '<h3>Seki, Gifu — 700 years, and the volume behind your kitchen drawer</h3>', cls: 'inline-photo',
+    alt: 'Tachi sword on display at the Seki Traditional Swordsmith Museum, Seki, Gifu, Japan',
+    cap: 'A tachi in the Seki Traditional Swordsmith Museum, where a Seki smith forges in public once a month' },
+  { pseudo: 'japanese-knife-towns-guide-echizen', file: 'japanese-knife-towns-guide.html', after: '<h3>Echizen, Fukui — the one where you can make your own</h3>', cls: 'inline-photo',
+    alt: 'Hand-forged Echizen bunka kitchen knife with a magnolia handle, Fukui, Japan',
+    cap: 'A hand-forged bunka from Echizen — the first cutlery in Japan designated a national Traditional Craft' },
+  { pseudo: 'japanese-knife-towns-guide-tsubame', file: 'japanese-knife-towns-guide.html', after: '<h3>Tsubame-Sanjo, Niigata — four days a year, a hundred open factories</h3>', cls: 'inline-photo',
+    alt: 'Tsubame-Sanjo Jibasan Center, Niigata, Japan',
+    cap: 'The Tsubame-Sanjo Jibasan Center — what is open in the weeks when the factories are not' },
+  { pseudo: 'japanese-knife-towns-guide-miki', file: 'japanese-knife-towns-guide.html', after: '<h3>Miki, Hyogo — the one that is not about kitchen knives</h3>', cls: 'inline-photo',
+    alt: 'Stage and crowd at the Miki Hardware Festival, Miki, Hyogo, Japan',
+    cap: "The Miki Hardware Festival (2013 edition) — the town's tool trade turned into two days of markets" },
+  // tea-regions spoke (2026-08-23): one photo per region, plus the shading explainer and the buying section
+  { pseudo: 'japanese-tea-regions-guide-shaded', file: 'japanese-tea-regions-guide.html', after: '<h2 id="choose">Three things that decide which region you want</h2>',
+    alt: 'Tea bushes under black shading netting on frames, Japan',
+    cap: 'Shading frames over tea bushes — the step that turns ordinary leaf into gyokuro and tencha' },
+  { pseudo: 'japanese-tea-regions-guide-uji', file: 'japanese-tea-regions-guide.html', after: '<h3>Uji, Kyoto — the matcha that wins the competition</h3>', cls: 'inline-photo',
+    alt: 'Byodo-in Phoenix Hall reflected in its pond, Uji, Kyoto, Japan',
+    cap: 'Byōdō-in in Uji — the matcha workshops are five to ten minutes from here' },
+  { pseudo: 'japanese-tea-regions-guide-yame', file: 'japanese-tea-regions-guide.html', after: '<h3>Yame, Fukuoka — gyokuro, and a 25-year streak</h3>', cls: 'inline-photo',
+    alt: 'Terraced tea fields in the hills of Yame, Fukuoka, Japan',
+    cap: 'Tea terraces at Yame, Fukuoka — twenty-five consecutive gyokuro production-area prizes' },
+  { pseudo: 'japanese-tea-regions-guide-b', file: 'japanese-tea-regions-guide.html', after: '<h3>Chiran, Kagoshima — the new number one, with samurai gardens</h3>', cls: 'inline-photo',
     alt: 'Tea fields at Chiran, Minamikyushu, Kagoshima, Japan',
     cap: 'Tea fields at Chiran, Minamikyūshū, Kagoshima' },
+  { pseudo: 'japanese-tea-regions-guide-sayama', file: 'japanese-tea-regions-guide.html', after: '<h3>Sayama, Saitama — the one you can do before dinner</h3>', cls: 'inline-photo',
+    alt: 'Sayama tea fields with pylons behind, Saitama, Japan',
+    cap: 'Sayama tea fields in Saitama — a working crop at the cold northern edge, inside a Tokyo day trip' },
+  { pseudo: 'japanese-tea-regions-guide-gyokuro', file: 'japanese-tea-regions-guide.html', after: '<h2 id="buy">What to bring home, and what not to</h2>',
+    alt: 'Brewed Japanese green tea in a cup beside a kyusu teapot',
+    cap: 'Brewed leaf tea with a kyūsu — buy the amount you will drink in a few weeks, not a keepsake tin' },
 ];
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -58,7 +85,11 @@ async function run() {
     if (!src) { console.log('SKIP (no src image) ' + c.pseudo); continue; }
     const out = path.join(IMGDIR, `${c.pseudo}.webp`);
     fs.mkdirSync(IMGDIR, { recursive: true });
-    await sharp(src).resize({ width: 1280, withoutEnlargement: true }).webp({ quality: 80 }).toFile(out);
+    // 2026-08-23: the CSS renders these at aspect-ratio 16/9 with object-fit:cover, so any
+    // stored pixels outside that band were downloaded and then cropped away. Crop to 16:9
+    // here instead (same centre crop the browser was doing) — typically 40-60% fewer bytes.
+    await sharp(src).resize(1280, 720, { fit: 'cover', position: 'centre', withoutEnlargement: true })
+      .webp({ quality: 74 }).toFile(out);
 
     // 2026-08-23: Commons file names make poor alt text and captions ("Sakai HAMONO Museum",
     // "知覧町茶畑 20150922 - panoramio"). Hand-written text used to be wiped on every re-run,
@@ -68,7 +99,7 @@ async function run() {
     const artist = artistName(rec.artist_html);
     const fig =
 `<!--inbody:${c.pseudo}-->
-<figure class="lead-photo">
+<figure class="${c.cls || 'lead-photo'}">
   <img src="img/${c.pseudo}.webp" alt="${esc(altText)}" loading="lazy" width="1280" decoding="async">
   <figcaption>${esc(title)} — photo by ${esc(artist)}, <a href="${esc(rec.license_url || '')}" target="_blank" rel="noopener nofollow">${esc(rec.license || 'CC')}</a>, via <a href="${esc(rec.source_page || '')}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a></figcaption>
 </figure>
@@ -76,16 +107,17 @@ async function run() {
 
     const fp = path.join(BLOG, c.file);
     let html = fs.readFileSync(fp, 'utf8');
+    // 2026-08-23: the old code replaced an existing block in place, so changing `after`
+    // silently did nothing and the photo stayed where it was first injected. Strip any
+    // existing block first, then insert at the anchor — `after` is authoritative, and
+    // re-running still produces the same file.
     const marker = new RegExp(`<!--inbody:${c.pseudo}-->[\\s\\S]*?<!--/inbody:${c.pseudo}-->\\n?`);
-    if (marker.test(html)) {
-      html = html.replace(marker, fig + '\n');
-    } else {
-      const idx = html.indexOf(c.after);
-      if (idx === -1) { console.log('SKIP (anchor not found) ' + c.file + ' :: ' + c.after); continue; }
-      const insertAt = html.indexOf('\n', idx + c.after.length);
-      const at = insertAt === -1 ? idx + c.after.length : insertAt;
-      html = html.slice(0, at) + '\n' + fig + html.slice(at);
-    }
+    const stripped = html.replace(marker, '');
+    const idx = stripped.indexOf(c.after);
+    if (idx === -1) { console.log('SKIP (anchor not found) ' + c.file + ' :: ' + c.after); continue; }
+    const insertAt = stripped.indexOf('\n', idx + c.after.length);
+    const at = insertAt === -1 ? idx + c.after.length : insertAt;
+    html = stripped.slice(0, at) + '\n' + fig + stripped.slice(at);
     fs.writeFileSync(fp, html);
     console.log(`OK    ${c.file} <- ${c.pseudo}.webp  [${rec.license}]`);
     ok++;

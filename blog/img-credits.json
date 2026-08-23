@@ -1174,5 +1174,113 @@
     "width": 1600,
     "height": 1067,
     "fetched_from": "wikimedia"
+  },
+  "japanese-knife-towns-guide-seki": {
+    "query": "Seki Sword Tradition Museum 1",
+    "title": "File:Seki Sword Tradition Museum 20211016 03.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-knife-towns-guide-seki.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Seki_Sword_Tradition_Museum_20211016_03.jpg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E5%85%88%E5%BE%93%E9%9A%97%E5%A7%8B&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:先従隗始 (page does not exist)\">先従隗始</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-knife-towns-guide-echizen": {
+    "query": "Masakage Yuki Bunka 170mm (2026)-104A7635",
+    "title": "File:Masakage Yuki Bunka 170mm (2026)-104A7635.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-knife-towns-guide-echizen.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Masakage_Yuki_Bunka_170mm_(2026)-104A7635.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Frank_Schulenburg\" title=\"User:Frank Schulenburg\">Frank Schulenburg</a>",
+    "width": 1600,
+    "height": 900,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-knife-towns-guide-tsubame": {
+    "query": "Tsubamesanjo Jibasan Center, Roadside Station, Niigata, Japan, August 2019",
+    "title": "File:Tsubamesanjo Jibasan Center, Roadside Station, Niigata, Japan, August 2019.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-knife-towns-guide-tsubame.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tsubamesanjo_Jibasan_Center,_Roadside_Station,_Niigata,_Japan,_August_2019.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Tail_furry\" title=\"User:Tail furry\">Tail furry</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-knife-towns-guide-miki": {
+    "query": "Miki hardware Festival 01",
+    "title": "File:Miki hardware Festival in 2013 No,5.JPG",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-knife-towns-guide-miki.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Miki_hardware_Festival_in_2013_No,5.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Mti\" title=\"User:Mti\">Mti</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-tea-regions-guide-shaded": {
+    "query": "Tee-beschatet-gross",
+    "title": "File:Tee-beschatet-gross.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-tea-regions-guide-shaded.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tee-beschatet-gross.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Westermeierw&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Westermeierw (page does not exist)\">Westermeierw</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-tea-regions-guide-uji": {
+    "query": "Byodoin Phoenix Hall Uji 2009",
+    "title": "File:Byodoin Phoenix Hall Uji 2009.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-tea-regions-guide-uji.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Byodoin_Phoenix_Hall_Uji_2009.jpg",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+    "width": 1600,
+    "height": 1065,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-tea-regions-guide-yame": {
+    "query": "Yame Tea Plantation 03",
+    "title": "File:Yame tea plantation 2009.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-tea-regions-guide-yame.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yame_tea_plantation_2009.jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist_html": "kanegen",
+    "width": 1600,
+    "height": 1063,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-tea-regions-guide-sayama": {
+    "query": "狭山茶畑 - panoramio",
+    "title": "File:狭山茶畑 - panoramio.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-tea-regions-guide-sayama.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E7%8B%AD%E5%B1%B1%E8%8C%B6%E7%95%91_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161014044138/http://www.panoramio.com/user/3311385?with_photo_id=23533603\">y.moroi</a>",
+    "width": 1600,
+    "height": 1071,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-tea-regions-guide-gyokuro": {
+    "query": "Gyokuro-with-kyusu",
+    "title": "File:Gyokuro-with-kyusu.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-tea-regions-guide-gyokuro.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gyokuro-with-kyusu.jpg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Washing_Machine\" title=\"User:Washing Machine\">Washing Machine</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
   }
 }
