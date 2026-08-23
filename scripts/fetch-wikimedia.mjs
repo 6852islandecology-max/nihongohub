@@ -153,6 +153,13 @@ const TOPIC = {
   'onsen-towns-near-tokyo-without-a-car-kinugawa':'170826 Kinugawa Onsen Station Nikko Japan02s3.jpg',
   'onsen-towns-near-tokyo-without-a-car-yuzawa':'Echigo-Yuzawa Station',
   'onsen-towns-near-tokyo-without-a-car-kusatsu':'草津温泉の湯畑03.jpg',
+  // crowd-free day trips experiment (2026-08-23, 20% 実験枠 #2)
+  'day-trips-from-tokyo-without-the-crowds':'佐原 小野川 - panoramio.jpg',
+  'day-trips-from-tokyo-without-the-crowds-sawara':'Street View of Sawara, Katori 4.JPG',
+  'day-trips-from-tokyo-without-the-crowds-sakura':'Sakura Samurai Residences 01.jpg',
+  'day-trips-from-tokyo-without-the-crowds-mashiko':'MashikoDaiseiGama202410.jpg',
+  'day-trips-from-tokyo-without-the-crowds-ikaho':'伊香保温泉 石段街 - panoramio.jpg',
+  'day-trips-from-tokyo-without-the-crowds-enoshima':'Constructed areas on Enoshima 9.jpg',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 

@@ -1582,5 +1582,77 @@
     "width": 1600,
     "height": 1067,
     "fetched_from": "wikimedia"
+  },
+  "day-trips-from-tokyo-without-the-crowds": {
+    "query": "佐原 小野川 - panoramio.jpg",
+    "title": "File:佐原 小野川 - panoramio.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/day-trips-from-tokyo-without-the-crowds.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%8E%9F_%E5%B0%8F%E9%87%8E%E5%B7%9D_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161030163501/http://www.panoramio.com/user/8455996?with_photo_id=112475092\">teki photo</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "day-trips-from-tokyo-without-the-crowds-sawara": {
+    "query": "Street View of Sawara, Katori 4.JPG",
+    "title": "File:Street View of Sawara, Katori 4.JPG",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/day-trips-from-tokyo-without-the-crowds-sawara.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Street_View_of_Sawara,_Katori_4.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:%E3%81%9D%E3%82%89%E3%81%BF%E3%81%BF\" title=\"User:そらみみ\">そらみみ</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "day-trips-from-tokyo-without-the-crowds-sakura": {
+    "query": "Sakura Samurai Residences 01.jpg",
+    "title": "File:Sakura Samurai Residences 01.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/day-trips-from-tokyo-without-the-crowds-sakura.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sakura_Samurai_Residences_01.jpg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Higa4\" title=\"User:Higa4\">Higa4</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "day-trips-from-tokyo-without-the-crowds-mashiko": {
+    "query": "MashikoDaiseiGama202410.jpg",
+    "title": "File:MashikoDaiseiGama202410.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/day-trips-from-tokyo-without-the-crowds-mashiko.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:MashikoDaiseiGama202410.jpg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:FukuroWaraw\" title=\"User:FukuroWaraw\">FukuroWaraw</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "day-trips-from-tokyo-without-the-crowds-ikaho": {
+    "query": "伊香保温泉 石段街 - panoramio.jpg",
+    "title": "File:伊香保温泉 石段街 - panoramio.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/day-trips-from-tokyo-without-the-crowds-ikaho.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E4%BC%8A%E9%A6%99%E4%BF%9D%E6%B8%A9%E6%B3%89_%E7%9F%B3%E6%AE%B5%E8%A1%97_-_panoramio.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161015233148/http://www.panoramio.com/user/3121916?with_photo_id=32667722\">noppo3</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "day-trips-from-tokyo-without-the-crowds-enoshima": {
+    "query": "Constructed areas on Enoshima 9.jpg",
+    "title": "File:Constructed areas on Enoshima 9.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/day-trips-from-tokyo-without-the-crowds-enoshima.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Constructed_areas_on_Enoshima_9.jpg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Syced\" title=\"User:Syced\">Syced</a>",
+    "width": 1600,
+    "height": 2125,
+    "fetched_from": "wikimedia"
   }
 }
