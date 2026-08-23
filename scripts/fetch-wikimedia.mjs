@@ -108,6 +108,10 @@ const TOPIC = {
   // (Seki-made, landscape product shot, crops to 16:9); in-body = Sakai Takayuki at Aoki-hamono.
   'japanese-knife-towns-guide':'Santoku-Kai-Shun-Nagare',
   'japanese-knife-towns-guide-b':'Sakai HAMONO Museum',
+  // tea-regions spoke (2026-08-23, content-strategy 確定版 spoke #2): lead = Obuchi Sasaba
+  // (Fuji City tea terraces under Mt Fuji); in-body = Chiran tea fields, Kagoshima.
+  'japanese-tea-regions-guide':'Obuchi Sasaba',
+  'japanese-tea-regions-guide-b':'知覧町茶畑 20150922 - panoramio',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 

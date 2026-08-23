@@ -29,7 +29,13 @@ const CONFIG = [
   { pseudo: 'japan-100-castles-goshuin-b', file: 'japan-100-castles-goshuin.html', after: '<h2 id="twelve">The 12 original surviving keeps (the real hook)</h2>' },
   { pseudo: 'gundam-manholes-japan-b', file: 'gundam-manholes-japan.html', after: '<h2 id="where">Where to find them</h2>' },
   // knife-towns spoke (2026-08-23): the Sakai Hamono museum building, at the head of the town rundown
-  { pseudo: 'japanese-knife-towns-guide-b', file: 'japanese-knife-towns-guide.html', after: '<h2 id="towns">The five towns, honestly</h2>' },
+  { pseudo: 'japanese-knife-towns-guide-b', file: 'japanese-knife-towns-guide.html', after: '<h2 id="towns">The five towns, honestly</h2>',
+    alt: 'Sakai Traditional Crafts Museum building, Sakai, Osaka, Japan',
+    cap: 'The Sakai Traditional Crafts Museum (Sakai Denshokan), home of the free "Sakai Hamono Museum CUT" exhibit' },
+  // tea-regions spoke (2026-08-23): Chiran tea fields, at the head of the region rundown
+  { pseudo: 'japanese-tea-regions-guide-b', file: 'japanese-tea-regions-guide.html', after: '<h2 id="regions">The five regions, honestly</h2>',
+    alt: 'Tea fields at Chiran, Minamikyushu, Kagoshima, Japan',
+    cap: 'Tea fields at Chiran, Minamikyūshū, Kagoshima' },
 ];
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -54,12 +60,16 @@ async function run() {
     fs.mkdirSync(IMGDIR, { recursive: true });
     await sharp(src).resize({ width: 1280, withoutEnlargement: true }).webp({ quality: 80 }).toFile(out);
 
-    const title = cleanTitle(rec.title);
+    // 2026-08-23: Commons file names make poor alt text and captions ("Sakai HAMONO Museum",
+    // "知覧町茶畑 20150922 - panoramio"). Hand-written text used to be wiped on every re-run,
+    // so an entry can carry its own alt/cap here and stay stable across re-injection.
+    const title = c.cap || cleanTitle(rec.title);
+    const altText = c.alt || title;
     const artist = artistName(rec.artist_html);
     const fig =
 `<!--inbody:${c.pseudo}-->
 <figure class="lead-photo">
-  <img src="img/${c.pseudo}.webp" alt="${esc(title)}" loading="lazy" width="1280" decoding="async">
+  <img src="img/${c.pseudo}.webp" alt="${esc(altText)}" loading="lazy" width="1280" decoding="async">
   <figcaption>${esc(title)} — photo by ${esc(artist)}, <a href="${esc(rec.license_url || '')}" target="_blank" rel="noopener nofollow">${esc(rec.license || 'CC')}</a>, via <a href="${esc(rec.source_page || '')}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a></figcaption>
 </figure>
 <!--/inbody:${c.pseudo}-->`;

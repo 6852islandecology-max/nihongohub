@@ -1150,5 +1150,29 @@
     "width": 1600,
     "height": 1200,
     "fetched_from": "wikimedia"
+  },
+  "japanese-tea-regions-guide": {
+    "query": "Obuchi Sasaba",
+    "title": "File:Obuchi Sasaba.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-tea-regions-guide.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Obuchi_Sasaba.jpg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://app.find47.jp/ja/u/OnRZG/\">SHori</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-tea-regions-guide-b": {
+    "query": "知覧町茶畑 20150922 - panoramio",
+    "title": "File:知覧町茶畑 20150922 - panoramio.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-tea-regions-guide-b.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E7%9F%A5%E8%A6%A7%E7%94%BA%E8%8C%B6%E7%95%91_20150922_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161101165919/http://www.panoramio.com/user/7153172?with_photo_id=124004360\">690 Noda</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
   }
 }
