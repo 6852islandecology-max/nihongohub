@@ -183,7 +183,7 @@ const HEAD = (title, desc, htmlLang, extraHead, cssPrefix) => `<!DOCTYPE html>
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:type" content="article">${extraHead}
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Karla:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${cssPrefix}blog.css">
 </head>`;
 
@@ -399,6 +399,21 @@ ${tipBlock}
 `;
 }
 
+// 2026-08-23: the themed/plan/learn card sections in blog/index.html are hand-maintained
+// and were not part of this generator's output, so every rebuild silently deleted them
+// (77 cards at the time this was written). Read them back out of the existing file and
+// re-emit them verbatim. Returns '' if the file or the markers are missing, so a fresh
+// checkout still builds.
+function themedBlock() {
+  try {
+    const cur = readFileSync(new URL("index.html", BLOG_DIR), "utf8");
+    const a = cur.indexOf("<!--themed:start");
+    const b = cur.indexOf("<!--themed:end-->");
+    if (a === -1 || b === -1 || b < a) return "";
+    return cur.slice(a, b + "<!--themed:end-->".length);
+  } catch { return ""; }
+}
+
 function indexHTML() {
   const ui = UI.en;
   const order = ["hokkaido","tohoku","kanto","chubu","kansai","chugoku","shikoku","kyushu-okinawa"];
@@ -425,6 +440,7 @@ function indexHTML() {
   <div class="tag">▶ PREFECTURE GUIDES</div>
   <h1>Japan, one prefecture at a time</h1>
   <p class="lede">Free, honest travel guides for Japanese learners — all 47 prefectures.</p>
+  ${themedBlock()}
   ${sections}
   <div class="cta-box"><a href="../prefectures.html">⚔️ See them on the Explore map →</a></div>
 </div>

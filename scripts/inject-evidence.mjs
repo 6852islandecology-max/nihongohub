@@ -84,7 +84,7 @@ function evidenceBlock(p, summary, L) {
     : '';
   return `<!--evidence-->
 <div style="background:#fbf6ec;border:2px solid #e6ddd0;border-left:4px solid #c8911f;border-radius:10px;padding:12px 15px;margin:14px 0;font-size:14px;line-height:1.65">
-<div style="font-family:'Press Start 2P',monospace;font-size:9px;color:#c8911f;letter-spacing:.5px;margin-bottom:5px">${L.kicker}</div>
+<div style="font-family:Karla,system-ui,sans-serif;font-size:9px;color:#c8911f;letter-spacing:.5px;margin-bottom:5px">${L.kicker}</div>
 <div style="color:#2c2620">${escHtml(summary)}</div>
 ${picks ? `<div style="margin-top:7px;color:#4a4036;font-size:13.5px">${picks}${srcLink}</div>` : ''}</div>
 <!--/evidence-->`;

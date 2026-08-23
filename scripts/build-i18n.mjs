@@ -53,7 +53,7 @@ function articleHTML(lang, slug) {
 <meta property="og:description" content="${esc(t.lede)}">
 ${hreflang(slug)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Karla:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../blog.css">
 <style>.langsw{font-family:var(--dot);font-size:13px}.langsw a{color:#fff;text-decoration:none;opacity:.8}.langsw a[aria-current]{color:var(--gold);opacity:1;font-weight:700}</style>
 </head>
@@ -133,7 +133,7 @@ function indexHTML(lang) {
 <link rel="alternate" hreflang="en" href="../index.html">
 ${LANGS.map(l=>`<link rel="alternate" hreflang="${l.htmlLang}" href="${l.code===lang?'index.html':`../${l.code}/index.html`}">`).join("\n")}
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=DM+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Karla:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../blog.css">
 <style>.langsw{font-family:var(--dot);font-size:13px}.langsw a{color:#fff;text-decoration:none;opacity:.8}.langsw a[aria-current]{color:var(--gold);opacity:1;font-weight:700}</style>
 </head>

@@ -9,7 +9,7 @@ html { -webkit-text-size-adjust: 100%; }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap');
 [lang="th"], [lang="th"] * , [data-lang="th"], [data-lang="th"] *,
 html[lang="th"] body, html[lang="th"] body * {
-  font-family: 'Noto Sans Thai', 'DM Sans', sans-serif !important;
+  font-family: 'Noto Sans Thai', Karla, system-ui, sans-serif !important;
   line-height: 1.75;
 }
 /* Restore Japanese font for Japanese content even on Thai pages */
