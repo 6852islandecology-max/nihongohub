@@ -806,10 +806,18 @@
         (refHost && refHost.indexOf('nihongo-hub') < 0 && refHost.indexOf('localhost') < 0 ? 'other' : 'direct');
       try { localStorage.setItem('nh_src', src); } catch (e) {}
     }
+    // First-touch landing path, stored once next to nh_src. Answers "which page
+    // brought this person to the site" for signups/subscribes, which nh_src
+    // (channel only) cannot. Path only — never query strings, so no PII.
+    var land = localStorage.getItem('nh_land') || '';
+    if (!land) {
+      land = (location.pathname || '/').slice(0, 120);
+      try { localStorage.setItem('nh_land', land); } catch (e) {}
+    }
     var send = function (ev, from) {
       try { fetch('/api/count?ev=' + ev + '&src=' + src + '&aid=' + aid + (from ? '&from=' + from : ''), { keepalive: true }).catch(function () {}); } catch (e) {}
     };
-    window.NH_FUNNEL = { track: send, src: src };
+    window.NH_FUNNEL = { track: send, src: src, land: land };
     // In-site journey: remember this tab's previous page class so the server
     // can count from>to transitions (nh:fnav). sessionStorage = per-tab, no PII.
     var prev = '';

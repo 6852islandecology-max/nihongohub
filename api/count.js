@@ -54,7 +54,10 @@ export default async function handler(req, res) {
     // measurable per page. ev is regex-bounded before it is ever used as a Redis
     // hash field.
     const isAff = /^aff_[a-z0-9_]{1,76}$/.test(ev);
-    if (!URL || !TOKEN || (!FUNNEL_EVENTS.has(ev) && !isAff)) {
+    // Similar-places clicks (sim_click__<page-slug>, 2026-08-23): the 11月判定の
+    // 指標④。nh:fnav の blog>blog では READ NEXT 経由と区別できないため専用イベント。
+    const isSim = /^sim_click__[a-z0-9_]{1,48}$/.test(ev);
+    if (!URL || !TOKEN || (!FUNNEL_EVENTS.has(ev) && !isAff && !isSim)) {
       res.status(200).json({ ok: false });
       return;
     }

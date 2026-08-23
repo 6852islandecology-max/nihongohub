@@ -3,11 +3,20 @@
 // only if Stripe is configured (so trial works even before Stripe go-live).
 import { getSupabase } from "../lib/supabase.js";
 import { isAuthConfigured, isSupabaseConfigured, isStripeConfigured } from "../lib/env.js";
-import { methodGuard, requireAuth, getStripe } from "../lib/http.js";
-import { trackFunnel } from "../lib/funnel-server.js";
+import { methodGuard, requireAuth, getStripe, parseBody } from "../lib/http.js";
+import { trackFunnel, FUNNEL_SOURCES } from "../lib/funnel-server.js";
 import { initSentry, captureApiError } from "../lib/sentry.js";
 
 const TRIAL_DAYS = 7;
+
+// 2026-08-23: 登録がどのページ経由かを残す。Redis の日次カウンタは集計値しか持たず、
+// 実登録2件(07-03/07-23)がどちらの記事から来たか後から辿れなかったため、
+// 経路を Postgres 側(trial_events.metadata = JSONB)に落とす。移行 SQL は不要。
+// 受け取るのはパスだけ。クエリ文字列や外部 URL は保存しない(PII を持ち込まない)。
+const PATH_RE = /^\/[\w\-./]{0,120}$/;
+function safePath(v) {
+  return typeof v === "string" && PATH_RE.test(v) ? v : null;
+}
 
 export default async function handler(req, res) {
   initSentry();
@@ -18,6 +27,12 @@ export default async function handler(req, res) {
 
   const user = await requireAuth(req, res);
   if (!user) return;
+
+  // 計測は登録を壊してはいけないので、値が無い/不正でも null にして先へ進む。
+  const body = parseBody(req);
+  const src = FUNNEL_SOURCES.has(body?.src) ? body.src : "other";
+  const land = safePath(body?.land);   // first-touch landing page (localStorage nh_land)
+  const page = safePath(body?.page);   // page the signup happened on
 
   const db = getSupabase(); // service-role client
   const { data: profile } = await db
@@ -60,9 +75,9 @@ export default async function handler(req, res) {
   await db.from("trial_events").insert({
     user_id: user.id,
     event_type: "trial_started",
-    metadata: { stripe_customer_id: stripeCustomerId },
+    metadata: { stripe_customer_id: stripeCustomerId, src, land, page },
   });
-  await trackFunnel("trial_start", user.id);
+  await trackFunnel("trial_start", user.id, src);
 
   return res.status(200).json({
     trial_status: "active",

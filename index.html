@@ -660,7 +660,15 @@ function heroQuiz(el, correct) {
   $('nhStartTrial').onclick = async () => {
     $('nhStartTrial').disabled = true; $('nhAuthMsg2').textContent = 'Starting your trial…';
     try {
-      const r = await authedFetch('/api/trial-start', { method: 'POST' });
+      const r = await authedFetch('/api/trial-start', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          src: (localStorage.getItem('nh_src') || 'other'),
+          land: (localStorage.getItem('nh_land') || ''),
+          page: location.pathname,
+        }),
+      });
       const j = await r.json();
       if (r.ok) { $('nhAuthMsg2').textContent = '🎉 Trial active! ' + (j.days_remaining || 7) + ' days of full access.'; }
       else { $('nhAuthMsg2').textContent = j.error || 'Could not start trial.'; }

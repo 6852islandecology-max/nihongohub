@@ -64,11 +64,12 @@ for (const day of dates) {
 
 // Supabase actuals
 const actuals = {};
+const signupPaths = [];
 if (S_URL && S_KEY) {
   try {
     const since = `${dates[0]}T00:00:00Z`;
     const r = await fetch(
-      `${S_URL}/rest/v1/trial_events?select=event_type,created_at&created_at=gte.${since}&limit=10000`,
+      `${S_URL}/rest/v1/trial_events?select=event_type,created_at,metadata&created_at=gte.${since}&limit=10000`,
       { headers: { apikey: S_KEY, Authorization: `Bearer ${S_KEY}` } },
     );
     if (r.ok) {
@@ -76,6 +77,16 @@ if (S_URL && S_KEY) {
         const day = String(e.created_at).slice(0, 10);
         (actuals[day] = actuals[day] || {})[e.event_type] =
           (actuals[day][e.event_type] || 0) + 1;
+        // 2026-08-23: 登録の経路。src/land/page は api/trial-start.js が入れる。
+        // 2026-08-23 より前の行にはこれらが無いので、その場合は行ごと出さない。
+        if (e.event_type === "trial_started" && e.metadata && e.metadata.land) {
+          signupPaths.push({
+            day,
+            src: e.metadata.src || "?",
+            land: e.metadata.land,
+            page: e.metadata.page || "?",
+          });
+        }
       }
     }
   } catch { /* report still useful without DB cross-check */ }
@@ -166,6 +177,37 @@ console.log("affiliate clicks: " + (affs.length ? affs.map(([s, v]) => `${s}=${v
 for (const [net] of affs) {
   const pages = Object.entries(affByPage[net] || {}).sort((a, b) => b[1] - a[1]);
   if (pages.length) console.log(`  ${net} by page: ` + pages.map(([s, v]) => `${s}=${v}`).join("  "));
+}
+
+// Similar-places clicks (sim_click__<page-slug>, 2026-08-23) — 11月判定の指標④。
+// CTR の分母はそのページの pv_blog なので、ここではクリック数のみをページ別に出す。
+const simByPage = {};
+for (const r of rows) {
+  for (const [k, v] of Object.entries(r.counts)) {
+    if (!k.startsWith("sim_click__")) continue;
+    const page = k.slice(11);
+    simByPage[page] = (simByPage[page] || 0) + v;
+  }
+}
+const sims = Object.entries(simByPage).sort((a, b) => b[1] - a[1]);
+if (sims.length) {
+  console.log("similar-places clicks: " + sims.reduce((a, [, v]) => a + v, 0) +
+    "  by page: " + sims.map(([s, v]) => `${s}=${v}`).join("  "));
+}
+
+// signup attribution — one line per trial, plus a landing-page tally.
+// 2026-08-23 以降の登録だけが対象(それ以前は経路が記録されていない)。
+if (signupPaths.length) {
+  console.log("\nsignups by path (trial_started, since 2026-08-23):");
+  for (const s of signupPaths) {
+    console.log(`  ${s.day}  src=${s.src}  landed=${s.land}  signed-up-on=${s.page}`);
+  }
+  const landTot = {};
+  for (const s of signupPaths) landTot[s.land] = (landTot[s.land] || 0) + 1;
+  console.log("  by landing page: " +
+    Object.entries(landTot).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k}=${v}`).join("  "));
+} else {
+  console.log("\nsignups by path: none recorded in this window");
 }
 
 console.log("");
