@@ -248,6 +248,9 @@
     return (loc + last).replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'index';
   }
 
+  // 記事単位の分母を作るため、他の IIFE (pv ビーコン) からも同じ規則で slug を引けるようにする。
+  window.NH_PAGE_SLUG = pageSlug;
+
   if (!window.__NH_AFFCLICK__) {
     window.__NH_AFFCLICK__ = true;
     document.addEventListener('click', function (e) {
@@ -397,6 +400,10 @@
 // small side door for learners to the 7-day starter.
 (function(){
   var CHECKLIST = '/sources/japan-starter-7-days.html';
+  // 2026-08-23: 差し出す物を「毎週のメール」から「いま受け取れる印刷物」に変えた。
+  // 導線を全部つないだ6日間で登録0行。読者が交換する相手は将来の約束ではない。
+  // 中身は既存記事の事実だけ (scripts/build-field-kit-pdf.py)。
+  var FIELD_KIT = '/downloads/japan-craft-collectible-field-kit.pdf';
   var CFG_URL = '/api/public-config';
   var SUBSTACK_FALLBACK = 'https://ikimonohakasefamily.substack.com/subscribe';
   var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
@@ -438,7 +445,7 @@
     var f = document.createElement('form'); f.setAttribute('novalidate', '');
     f.style.cssText = 'display:flex;gap:8px;flex-wrap:wrap;margin-top:8px';
     f.innerHTML = '<input type="email" name="email" required autocomplete="email" placeholder="your@email.com" aria-label="Email address" style="flex:1;min-width:180px;padding:10px 12px;border:1px solid #b8a88a;border-radius:6px;font-size:16px;background:#fff">' +
-      '<button type="submit" style="background:#6b5b3e;color:#fff;border:none;border-radius:6px;padding:10px 16px;cursor:pointer;font-size:14px;white-space:nowrap">Subscribe free →</button>';
+      '<button type="submit" style="background:#6b5b3e;color:#fff;border:none;border-radius:6px;padding:10px 16px;cursor:pointer;font-size:14px;white-space:nowrap">Get the free field kit →</button>';
     wrap.parentNode.replaceChild(f, wrap);
     var inp = f.querySelector('input'), b = f.querySelector('button');
     f.addEventListener('submit', function(e){
@@ -448,10 +455,12 @@
       b.disabled = true; b.textContent = 'Sending…';
       subscribe(email, { source: location.pathname + '#nl-box' }).then(function(res){
         var p = document.createElement('p'); p.style.cssText = 'margin:8px 0 0;font-size:14px';
-        p.textContent = res.dup ? 'You’re already on the list — thank you.' : 'You’re in. The first note arrives this week.';
+        p.innerHTML = (res.dup ? 'You’re already on the list — thank you. ' : 'You’re in. ') +
+          'Here is the kit: <a href="' + FIELD_KIT + '" target="_blank" rel="noopener"><b>download the Field Kit (PDF, 8 pages)</b></a>. ' +
+          'One prefecture letter follows each week.';
         f.parentNode.replaceChild(p, f);
       }).catch(function(){
-        b.disabled = false; b.textContent = 'Subscribe free →';
+        b.disabled = false; b.textContent = 'Get the free field kit →';
         var p = document.createElement('p'); p.style.cssText = 'margin:8px 0 0;font-size:13px;color:#bf3325';
         p.innerHTML = 'Something went wrong. Try again, or <a href="' + SUBSTACK_FALLBACK + '?email=' + encodeURIComponent(email) + '" target="_blank" rel="noopener">subscribe via Substack →</a>';
         f.parentNode.insertBefore(p, f.nextSibling);
@@ -481,13 +490,13 @@
     var box = document.createElement('div');
     box.id = 'nh-leadmagnet';
     box.innerHTML =
-      '<div class="lm-k">FREE · WEEKLY</div>' +
-      '<h3>Japan, one prefecture a week</h3>' +
-      '<p>Where to go, what to eat, what to bring home — plus new collectible hunts (manhole cards, goshuin, station stamps). One short email. Unsubscribe anytime.</p>' +
+      '<div class="lm-k">FREE PRINTABLE · 8 PAGES</div>' +
+      '<h3>The Japan Craft &amp; Collectible Field Kit</h3>' +
+      '<p>Print it and carry it: which craft town makes what, what to check before you buy, the five free collections (manhole cards, goshuin, station stamps), 18 shop phrases in Japanese, and the tax-free rules that change on 1 November 2026. Yours now — then one prefecture a week by email. Unsubscribe anytime.</p>' +
       '<form novalidate>' +
       '<input type="email" name="email" required autocomplete="email" placeholder="your@email.com" aria-label="Email address">' +
       '<input class="lm-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
-      '<button type="submit">Send me the prefecture letter →</button>' +
+      '<button type="submit">Send me the field kit →</button>' +
       '</form>' +
       '<small>By subscribing you agree to receive emails from NihongoHub. We never sell or share your address. Learning Japanese? <a href="' + CHECKLIST + '" rel="noopener">Start with the free 7-day starter →</a></small>';
     article.appendChild(box);
@@ -497,6 +506,14 @@
       var p = document.createElement('p'); p.className = 'lm-msg' + (isErr ? ' err' : ''); p.textContent = msg;
       form.parentNode.replaceChild(p, form);
     }
+    // 登録が通ったらその場で渡す。メール配信を待たせない (配信は週次で別に動く)。
+    function deliver(dup){
+      var p = document.createElement('p'); p.className = 'lm-msg';
+      p.innerHTML = (dup ? 'You’re already on the list — thank you. ' : 'You’re in. ') +
+        '<a href="' + FIELD_KIT + '" target="_blank" rel="noopener"><b>Download the Field Kit (PDF, 8 pages) →</b></a>' +
+        '<br>The first prefecture letter arrives this week.';
+      form.parentNode.replaceChild(p, form);
+    }
     form.addEventListener('submit', function(e){
       e.preventDefault();
       if (form.querySelector('.lm-hp').value) return; // bot filled the honeypot
@@ -504,11 +521,11 @@
       if (!EMAIL_RE.test(email)) { input.focus(); input.setAttribute('aria-invalid', 'true'); return; }
       btn.disabled = true; btn.textContent = 'Sending…';
       subscribe(email).then(function(res){
-        say(res.dup ? 'You’re already on the list — thank you.' : 'You’re in. The first prefecture letter arrives this week.');
+        deliver(res.dup);
       }).catch(function(){
         // Until public.subscribers exists (owner runs the migration) or if PostgREST is down,
         // fall back to the legacy Substack sign-up so the reader is never stuck.
-        btn.disabled = false; btn.textContent = 'Send me the prefecture letter →';
+        btn.disabled = false; btn.textContent = 'Send me the field kit →';
         var old = box.querySelector('.lm-msg.err'); if (old) old.remove();
         var p = document.createElement('p'); p.className = 'lm-msg err';
         p.innerHTML = 'Something went wrong. Please try again in a moment, or <a href="' + SUBSTACK_FALLBACK + '?email=' + encodeURIComponent(email) + '" target="_blank" rel="noopener">subscribe via Substack →</a>';
@@ -847,6 +864,13 @@
       prev = sessionStorage.getItem('nh_pv_prev') || '';
       sessionStorage.setItem('nh_pv_prev', 'blog');
     } catch (e) {}
-    send('pv_blog', prev);
+    // 2026-08-23: 記事別の閲覧数を残す。aff_*__<slug> と sim_click__<slug> は記事別に
+    // 取れているのに、分母 (その記事が何回読まれたか) が pv_blog の合計しか無く、
+    // 「クリックされない記事」と「読まれていない記事」を区別できなかった。
+    // サーバ側 (api/count.js) が pv_blog__<slug> を受けると、従来どおりの pv_blog も
+    // 同時に積むので、既存の系列と 11月判定の連続性は壊れない。
+    var pslug = '';
+    try { pslug = (window.NH_PAGE_SLUG && window.NH_PAGE_SLUG()) || ''; } catch (e) {}
+    send(pslug ? 'pv_blog__' + pslug : 'pv_blog', prev);
   } catch (e) {}
 })();

@@ -138,8 +138,17 @@ if (top.length) {
 }
 
 // page views by type (all pv_* events this window) — "which pages get used"
+// pv_blog__<slug> (2026-08-23-) is the per-article denominator and is reported in its own
+// section below; the server writes the aggregate pv_blog for the same hit, so counting the
+// slug rows here as well would double them.
 const pageTot = {};
-for (const r of rows) for (const [k, v] of Object.entries(r.counts)) if (k.startsWith("pv_")) pageTot[k.slice(3)] = (pageTot[k.slice(3)] || 0) + v;
+const pvByPage = {};
+for (const r of rows) for (const [k, v] of Object.entries(r.counts)) {
+  if (!k.startsWith("pv_")) continue;
+  const cut = k.indexOf("__");
+  if (cut >= 0) { const p = k.slice(cut + 2); pvByPage[p] = (pvByPage[p] || 0) + v; continue; }
+  pageTot[k.slice(3)] = (pageTot[k.slice(3)] || 0) + v;
+}
 const pages = Object.entries(pageTot).sort((a, b) => b[1] - a[1]);
 if (pages.length) console.log("\npage views by type: " + pages.map(([s, v]) => `${s}=${v}`).join("  "));
 
@@ -193,6 +202,28 @@ const sims = Object.entries(simByPage).sort((a, b) => b[1] - a[1]);
 if (sims.length) {
   console.log("similar-places clicks: " + sims.reduce((a, [, v]) => a + v, 0) +
     "  by page: " + sims.map(([s, v]) => `${s}=${v}`).join("  "));
+}
+
+// 記事別の分母と分子 (2026-08-23-)。これが無い間は「押されない記事」と「読まれていない記事」が
+// 区別できなかった。クリック率は分母が小さいうちは値として使わないこと (目安は 100 閲覧)。
+const affByPageAll = {};
+for (const net of Object.keys(affByPage)) {
+  for (const [p, v] of Object.entries(affByPage[net])) affByPageAll[p] = (affByPageAll[p] || 0) + v;
+}
+const artPages = [...new Set([...Object.keys(pvByPage), ...Object.keys(affByPageAll), ...Object.keys(simByPage)])];
+if (artPages.length) {
+  const rowsArt = artPages.map((p) => {
+    const views = pvByPage[p] || 0, aff = affByPageAll[p] || 0, sim = simByPage[p] || 0;
+    return { p, views, aff, sim, ctr: views ? (100 * aff) / views : null };
+  }).sort((a, b) => b.views - a.views || b.aff - a.aff);
+  console.log("\nper article (views vs clicks) — pv_blog__<slug> は 2026-08-23 から記録開始:");
+  console.log("  " + "article".padEnd(42) + "views".padStart(7) + "aff".padStart(6) + "sim".padStart(6) + "aff/view".padStart(10));
+  for (const r of rowsArt.slice(0, 25)) {
+    console.log("  " + r.p.slice(0, 42).padEnd(42) + String(r.views).padStart(7) + String(r.aff).padStart(6) +
+      String(r.sim).padStart(6) + (r.ctr === null ? "-" : r.ctr.toFixed(1) + "%").padStart(10));
+  }
+  const noView = rowsArt.filter((r) => !r.views && (r.aff || r.sim)).length;
+  if (noView) console.log(`  (${noView} 件はクリックのみで閲覧数が無い = 計測開始前のクリック)`);
 }
 
 // signup attribution — one line per trial, plus a landing-page tally.

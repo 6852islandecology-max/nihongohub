@@ -57,7 +57,13 @@ export default async function handler(req, res) {
     // Similar-places clicks (sim_click__<page-slug>, 2026-08-23): the 11月判定の
     // 指標④。nh:fnav の blog>blog では READ NEXT 経由と区別できないため専用イベント。
     const isSim = /^sim_click__[a-z0-9_]{1,48}$/.test(ev);
-    if (!URL || !TOKEN || (!FUNNEL_EVENTS.has(ev) && !isAff && !isSim)) {
+    // Per-article pageviews (pv_blog__<page-slug>, 2026-08-23): the denominator that was
+    // missing. Clicks were already per page (aff_*__<slug>, sim_click__<slug>) but views
+    // were only counted per page *type*, so "nobody clicked" and "nobody read it" looked
+    // the same. The aggregate pv_blog is still written below, uniques and transitions
+    // included, so the existing series is unbroken.
+    const isBlogSlug = /^pv_blog__[a-z0-9_]{1,48}$/.test(ev);
+    if (!URL || !TOKEN || (!FUNNEL_EVENTS.has(ev) && !isAff && !isSim && !isBlogSlug)) {
       res.status(200).json({ ok: false });
       return;
     }
@@ -66,7 +72,13 @@ export default async function handler(req, res) {
       ? req.query.aid : null;
     const from = typeof req.query.from === "string" && NAV_FROM.has(req.query.from)
       ? req.query.from : null;
-    await trackFunnel(ev, aid, src, from);
+    if (isBlogSlug) {
+      // 記事別は件数だけ (HyperLogLog を slug 分作らない)。集計と遷移は従来の pv_blog に残す。
+      await trackFunnel(ev, null, null, null);
+      await trackFunnel("pv_blog", aid, src, from);
+    } else {
+      await trackFunnel(ev, aid, src, from);
+    }
     res.status(200).json({ ok: true });
     return;
   }
