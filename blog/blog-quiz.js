@@ -252,6 +252,19 @@
     }, true);
   }
 
+  // Similar-places clicks (2026-08-23, 11月判定の指標④): links inside .nh-simplaces fire
+  // sim_click__<page-slug>. nh:fnav の blog>blog では READ NEXT と区別できないため専用計測。
+  if (!window.__NH_SIMCLICK__) {
+    window.__NH_SIMCLICK__ = true;
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('.nh-simplaces a');
+      if (!a) return;
+      var page = (location.pathname.toLowerCase().split('/').pop() || 'index').replace(/\.html?$/, '')
+        .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'index';
+      try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('sim_click__' + page); } catch (e2) {}
+    }, true);
+  }
+
   function run() { wireAffs(); injectFoodAff(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
   else run();

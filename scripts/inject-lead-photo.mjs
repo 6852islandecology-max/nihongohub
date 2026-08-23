@@ -175,9 +175,15 @@ function injectFile(absFile, { slug, pref, subject, outName, alt, captionHtml, f
 </figure>
 <!--/lead-photo-->`;
 
-  // 1) body: replace existing block or insert after the lede paragraph
-  if (html.includes('<!--lead-photo-->')) {
+  // 1) body: replace existing block, or use a bare opening marker as the insertion
+  //    point, or fall back to inserting after the lede paragraph.
+  //    2026-08-23: a hand-written article that carried only <!--lead-photo--> (no closing
+  //    marker) took the first branch, matched nothing, and was silently left photo-less
+  //    while the script still reported OK. A bare marker now means "put it here".
+  if (/<!--lead-photo-->[\s\S]*?<!--\/lead-photo-->/.test(html)) {
     html = html.replace(/<!--lead-photo-->[\s\S]*?<!--\/lead-photo-->/, figure);
+  } else if (html.includes('<!--lead-photo-->')) {
+    html = html.replace('<!--lead-photo-->', figure);
   } else {
     html = html.replace(/(<p class="lede">[\s\S]*?<\/p>)/, `$1\n${figure}`);
   }

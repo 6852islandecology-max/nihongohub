@@ -104,6 +104,10 @@ const TOPIC = {
   // Seki/Sanjo blade-trade guides (2026-08-19): the actual products, CC BY, picked from contact sheets
   'japanese-razors-feather-kai-guide':'Feather Popular Razor (14067356604)',
   'japanese-hand-tools-saws-chisels-planes-guide':'Jap saw Dozuki P2100027',
+  // knife-towns spoke (2026-08-23, content-strategy 確定版 spoke #1): lead = Shun santoku
+  // (Seki-made, landscape product shot, crops to 16:9); in-body = Sakai Takayuki at Aoki-hamono.
+  'japanese-knife-towns-guide':'Santoku-Kai-Shun-Nagare',
+  'japanese-knife-towns-guide-b':'Sakai HAMONO Museum',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 

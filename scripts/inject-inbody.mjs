@@ -28,6 +28,8 @@ const CONFIG = [
   { pseudo: 'goshuin-temple-shrine-stamps-b', file: 'goshuin-temple-shrine-stamps.html', after: '<h2 id="spots">Famous spots for goshuin</h2>' },
   { pseudo: 'japan-100-castles-goshuin-b', file: 'japan-100-castles-goshuin.html', after: '<h2 id="twelve">The 12 original surviving keeps (the real hook)</h2>' },
   { pseudo: 'gundam-manholes-japan-b', file: 'gundam-manholes-japan.html', after: '<h2 id="where">Where to find them</h2>' },
+  // knife-towns spoke (2026-08-23): the Sakai Hamono museum building, at the head of the town rundown
+  { pseudo: 'japanese-knife-towns-guide-b', file: 'japanese-knife-towns-guide.html', after: '<h2 id="towns">The five towns, honestly</h2>' },
 ];
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
