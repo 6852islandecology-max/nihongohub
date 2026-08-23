@@ -1354,5 +1354,77 @@
     "width": 1600,
     "height": 1060,
     "fetched_from": "wikimedia"
+  },
+  "japanese-pottery-towns-guide": {
+    "query": "常滑（土管坂） - panoramio",
+    "title": "File:常滑（土管坂） - panoramio.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-pottery-towns-guide.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E5%B8%B8%E6%BB%91%EF%BC%88%E5%9C%9F%E7%AE%A1%E5%9D%82%EF%BC%89_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161015042748/http://www.panoramio.com/user/2284372?with_photo_id=30299962\">gundam2345</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-pottery-towns-guide-tokoname": {
+    "query": "Yakimono-sanpomichi Tokoname (Aichi) 22.jpg",
+    "title": "File:Yakimono-sanpomichi Tokoname (Aichi) 22.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-pottery-towns-guide-tokoname.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yakimono-sanpomichi_Tokoname_(Aichi)_22.jpg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Hyppolyte_de_Saint-Rambert\" title=\"User:Hyppolyte de Saint-Rambert\">Hyppolyte de Saint-Rambert</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-pottery-towns-guide-mashiko": {
+    "query": "2023年（令和5年）春の益子陶器市「益子焼窯元共販センター」。",
+    "title": "File:2023年（令和5年）春の益子陶器市「益子焼窯元共販センター」。.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-pottery-towns-guide-mashiko.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:2023%E5%B9%B4%EF%BC%88%E4%BB%A4%E5%92%8C5%E5%B9%B4%EF%BC%89%E6%98%A5%E3%81%AE%E7%9B%8A%E5%AD%90%E9%99%B6%E5%99%A8%E5%B8%82%E3%80%8C%E7%9B%8A%E5%AD%90%E7%84%BC%E7%AA%AF%E5%85%83%E5%85%B1%E8%B2%A9%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%8D%E3%80%82.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:FukuroWaraw\" title=\"User:FukuroWaraw\">FukuroWaraw</a>",
+    "width": 1600,
+    "height": 955,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-pottery-towns-guide-arita": {
+    "query": "Tozan Shrine01",
+    "title": "File:Tozan Shrine01.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-pottery-towns-guide-arita.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist_html": "STA3816",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-pottery-towns-guide-bizen": {
+    "query": "Imbe Bizen Okayama pref Japan07s3",
+    "title": "File:Imbe Bizen Okayama pref Japan07s3.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-pottery-towns-guide-bizen.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Imbe_Bizen_Okayama_pref_Japan07s3.jpg",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+    "width": 1600,
+    "height": 1050,
+    "fetched_from": "wikimedia"
+  },
+  "japanese-pottery-towns-guide-shigaraki": {
+    "query": "信楽焼の狸 - panoramio",
+    "title": "File:信楽焼の狸 - panoramio.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/japanese-pottery-towns-guide-shigaraki.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E4%BF%A1%E6%A5%BD%E7%84%BC%E3%81%AE%E7%8B%B8_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161110005722/http://www.panoramio.com/user/1737350?with_photo_id=40883150\">Toshimasa Kaige (tka…</a>",
+    "width": 1600,
+    "height": 1195,
+    "fetched_from": "wikimedia"
   }
 }

@@ -130,6 +130,13 @@ const TOPIC = {
   'japanese-whisky-towns-guide-hakushu':'Hakushu Distillery',
   'japanese-whisky-towns-guide-mars':'Honbo syuzo sinsyu factory',
   'japanese-whisky-towns-guide-chichibu':'Chichibu Shrine - 秩父神社 - panoramio',
+  // pottery-towns spoke (2026-08-23, content-strategy 確定版 spoke #4)
+  'japanese-pottery-towns-guide':'常滑（土管坂） - panoramio',
+  'japanese-pottery-towns-guide-tokoname':'Yakimono-sanpomichi Tokoname (Aichi) 22.jpg',
+  'japanese-pottery-towns-guide-mashiko':'2023年（令和5年）春の益子陶器市「益子焼窯元共販センター」。',
+  'japanese-pottery-towns-guide-arita':'Tozan Shrine01',
+  'japanese-pottery-towns-guide-bizen':'Imbe Bizen Okayama pref Japan07s3',
+  'japanese-pottery-towns-guide-shigaraki':'信楽焼の狸 - panoramio',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 
