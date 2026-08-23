@@ -1510,5 +1510,77 @@
     "width": 1600,
     "height": 1065,
     "fetched_from": "wikimedia"
+  },
+  "onsen-towns-near-tokyo-without-a-car": {
+    "query": "草津温泉の湯畑01.jpg",
+    "title": "File:草津温泉の湯畑01.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/onsen-towns-near-tokyo-without-a-car.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%E3%81%AE%E6%B9%AF%E7%95%9101.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Jranar\" title=\"User:Jranar\">くろふね</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "onsen-towns-near-tokyo-without-a-car-atami": {
+    "query": "Atami city view 2024 Nov 3 various.jpeg",
+    "title": "File:Atami city view 2024 Nov 3 various.jpeg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/onsen-towns-near-tokyo-without-a-car-atami.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Atami_city_view_2024_Nov_3_various.jpeg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Nesnad\" title=\"User:Nesnad\">Nesnad</a>",
+    "width": 1600,
+    "height": 1200,
+    "fetched_from": "wikimedia"
+  },
+  "onsen-towns-near-tokyo-without-a-car-hakone": {
+    "query": "161222 Hakone-Yumoto Station Hakone Japan01n.jpg",
+    "title": "File:161222 Hakone-Yumoto Station Hakone Japan01n.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/onsen-towns-near-tokyo-without-a-car-hakone.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:161222_Hakone-Yumoto_Station_Hakone_Japan01n.jpg",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "onsen-towns-near-tokyo-without-a-car-kinugawa": {
+    "query": "170826 Kinugawa Onsen Station Nikko Japan02s3.jpg",
+    "title": "File:170826 Kinugawa Onsen Station Nikko Japan02s3.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/onsen-towns-near-tokyo-without-a-car-kinugawa.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:170826_Kinugawa_Onsen_Station_Nikko_Japan02s3.jpg",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:663highland\" class=\"extiw\" title=\"ja:user:663highland\">663highland</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
+  },
+  "onsen-towns-near-tokyo-without-a-car-yuzawa": {
+    "query": "Echigo-Yuzawa Station",
+    "title": "File:Echigo-Yuzawa Station 2018-08-10.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/onsen-towns-near-tokyo-without-a-car-yuzawa.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Echigo-Yuzawa_Station_2018-08-10.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Stck_w\" title=\"User:Stck w\">Stck w</a>",
+    "width": 1600,
+    "height": 900,
+    "fetched_from": "wikimedia"
+  },
+  "onsen-towns-near-tokyo-without-a-car-kusatsu": {
+    "query": "草津温泉の湯畑03.jpg",
+    "title": "File:草津温泉の湯畑03.jpg",
+    "path": "C:/Users/Yurik/.secretary/projects/nihongohub/blog/img-src/onsen-towns-near-tokyo-without-a-car-kusatsu.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%E3%81%AE%E6%B9%AF%E7%95%9103.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Jranar\" title=\"User:Jranar\">くろふね</a>",
+    "width": 1600,
+    "height": 1067,
+    "fetched_from": "wikimedia"
   }
 }

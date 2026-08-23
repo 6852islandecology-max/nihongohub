@@ -146,6 +146,13 @@ const TOPIC = {
   'japan-islands-you-can-walk-around-manabeshima':'Row of houses in Manabeshima.jpg',
   'japan-islands-you-can-walk-around-kudaka':'Stone wall in Kudaka Island 202401.jpg',
   'japan-islands-you-can-walk-around-himakajima':'Himakajima Island.jpg',
+  // car-free onsen experiment (2026-08-23, 20% 実験枠 #1)
+  'onsen-towns-near-tokyo-without-a-car':'草津温泉の湯畑01.jpg',
+  'onsen-towns-near-tokyo-without-a-car-atami':'Atami city view 2024 Nov 3 various.jpeg',
+  'onsen-towns-near-tokyo-without-a-car-hakone':'161222 Hakone-Yumoto Station Hakone Japan01n.jpg',
+  'onsen-towns-near-tokyo-without-a-car-kinugawa':'170826 Kinugawa Onsen Station Nikko Japan02s3.jpg',
+  'onsen-towns-near-tokyo-without-a-car-yuzawa':'Echigo-Yuzawa Station',
+  'onsen-towns-near-tokyo-without-a-car-kusatsu':'草津温泉の湯畑03.jpg',
 };
 const TARGETS = { ...PREF, ...TOPIC };
 
