@@ -183,6 +183,8 @@ ${footer()}
   document.getElementById('issearch').addEventListener('input',function(e){ q=e.target.value.trim().toLowerCase(); apply(); });
 })();
 </script>
+<!-- 計測 (2026-08-23): これが無いと pv_blog__<slug> も aff_* も飛ばず、記事別レポートに行が出ない -->
+<script src="blog-quiz.js" defer><\/script>
 </body>
 </html>
 `;

@@ -240,11 +240,16 @@
   // 2026-08-23: translated pages live at /blog/<lang>/<slug>.html and used to report the
   // same slug as the English original, so zh/es/th/id affiliate and Similar-places clicks
   // were indistinguishable from English ones. Prefix the locale so they can be told apart.
+  // 親ディレクトリ1つだけを見ると /blog/zh/spots/<slug>.html で dir が "spots" になり、
+  // 徳島のスポット8件 × 5言語の40本が同じ slug に合流していた (2026-08-23 修正)。
+  // パスの残り全部から言語セグメントを探す。
   function pageSlug() {
     var parts = location.pathname.toLowerCase().split('/').filter(Boolean);
     var last = (parts.pop() || 'index').replace(/\.html?$/, '');
-    var dir = parts.pop() || '';
-    var loc = /^(zh|es|th|id)$/.test(dir) ? dir + '_' : '';
+    var loc = '';
+    for (var i = 0; i < parts.length; i++) {
+      if (/^(zh|es|th|id)$/.test(parts[i])) { loc = parts[i] + '_'; break; }
+    }
     return (loc + last).replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'index';
   }
 

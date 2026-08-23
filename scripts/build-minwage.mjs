@@ -395,6 +395,8 @@ ${hreflang}
   </div>
 </article>
 <footer>© 2026 NihongoHub · <a href="index.html">${esc(t.allGuides.replace(/[←-]/g, "").trim())}</a> · <a href="${homePrefix}index.html">Home</a></footer>
+<!-- 計測 (2026-08-23): これが無いと pv_blog__<slug> も aff_* も飛ばず、記事別レポートに行が出ない -->
+<script src="${cssPrefix}blog-quiz.js" defer><\/script>
 </body>
 </html>
 `;

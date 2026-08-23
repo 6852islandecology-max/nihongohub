@@ -123,6 +123,8 @@ function apply(){rows.forEach(function(r){var ok=(pf==='all'||r.dataset.pref===p
 var f=document.getElementById('sfilter');f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');pf=b.dataset.p;apply();});
 document.getElementById('ssearch').addEventListener('input',function(e){q=e.target.value.trim().toLowerCase();apply();});})();
 </script>
+<!-- 計測 (2026-08-23): これが無いと pv_blog__<slug> も aff_* も飛ばず、記事別レポートに行が出ない -->
+<script src="blog-quiz.js" defer><\/script>
 </body>
 </html>
 `;

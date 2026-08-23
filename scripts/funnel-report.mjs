@@ -212,16 +212,22 @@ for (const net of Object.keys(affByPage)) {
 }
 const artPages = [...new Set([...Object.keys(pvByPage), ...Object.keys(affByPageAll), ...Object.keys(simByPage)])];
 if (artPages.length) {
+  // 分子 (aff_*__slug) は 2026-08-12 から、分母 (pv_blog__slug) は 2026-08-23 から記録している。
+  // 窓が分母の記録開始より前に伸びていると、両者の期間が違うまま割ることになり
+  // 「閲覧1・クリック7 = 700%」のような数字が出る。期間が揃うまで率は出さない。
+  const PV_SLUG_SINCE = "2026-08-23"; // = api/count.js の isBlogSlug 追加日
+  const sameWindow = dates[0] >= PV_SLUG_SINCE;
   const rowsArt = artPages.map((p) => {
     const views = pvByPage[p] || 0, aff = affByPageAll[p] || 0, sim = simByPage[p] || 0;
-    return { p, views, aff, sim, ctr: views ? (100 * aff) / views : null };
+    return { p, views, aff, sim, ctr: (views && sameWindow) ? aff / views : null };
   }).sort((a, b) => b.views - a.views || b.aff - a.aff);
   console.log("\nper article (views vs clicks) — pv_blog__<slug> は 2026-08-23 から記録開始:");
-  console.log("  " + "article".padEnd(42) + "views".padStart(7) + "aff".padStart(6) + "sim".padStart(6) + "aff/view".padStart(10));
+  console.log("  " + "article".padEnd(42) + "views".padStart(7) + "aff".padStart(6) + "sim".padStart(6) + "clicks/pv".padStart(11));
   for (const r of rowsArt.slice(0, 25)) {
     console.log("  " + r.p.slice(0, 42).padEnd(42) + String(r.views).padStart(7) + String(r.aff).padStart(6) +
-      String(r.sim).padStart(6) + (r.ctr === null ? "-" : r.ctr.toFixed(1) + "%").padStart(10));
+      String(r.sim).padStart(6) + (r.ctr === null ? "-" : r.ctr.toFixed(2)).padStart(11));
   }
+  if (!sameWindow) console.log(`  (clicks/pv は窓が ${PV_SLUG_SINCE} 以降に収まるまで出さない。分母の記録開始がその日のため)`);
   const noView = rowsArt.filter((r) => !r.views && (r.aff || r.sim)).length;
   if (noView) console.log(`  (${noView} 件はクリックのみで閲覧数が無い = 計測開始前のクリック)`);
 }
