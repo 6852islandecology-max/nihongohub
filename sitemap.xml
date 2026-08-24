@@ -18,6 +18,16 @@
   <url><loc>https://www.nihongo-hub.com/quiz.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/rpg.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/shadow-match.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/aichi-v2.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/id/aichi-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/es/aichi-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/th/aichi-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/zh/aichi-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/akita-v2.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/id/akita-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/es/akita-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/th/akita-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/zh/akita-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/animal-colors-japan-science.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/anime-pilgrimage-japan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/id/anime-pilgrimage-japan.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -55,6 +65,11 @@
   <url><loc>https://www.nihongo-hub.com/blog/es/evangelion-hakone-guide.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/th/evangelion-hakone-guide.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/zh/evangelion-hakone-guide.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/fukui-v2.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/id/fukui-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/es/fukui-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/th/fukui-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/zh/fukui-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/fukuoka-v2.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/id/fukuoka-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/es/fukuoka-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -211,6 +226,11 @@
   <url><loc>https://www.nihongo-hub.com/blog/es/nara-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/th/nara-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/zh/nara-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/niigata-v2.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/id/niigata-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/es/niigata-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/th/niigata-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nihongo-hub.com/blog/zh/niigata-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/oita-v2.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/id/oita-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nihongo-hub.com/blog/es/oita-v2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
