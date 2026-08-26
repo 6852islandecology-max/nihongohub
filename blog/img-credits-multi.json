@@ -11364,5 +11364,61 @@
       "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Torochan22&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Torochan22 (page does not exist)\">Torochan22</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "gojoin-castle-stamps-japan": {
+    "oshi": {
+      "key": "oshi",
+      "label": "Oshi Castle in Gyōda, Saitama — the \"floating castle\" with rotating limited-edition gojōin",
+      "query": [
+        "Oshi Castle 忍城 - panoramio.jpg"
+      ],
+      "file": "img/gojoin-castle-stamps-japan-oshi-oshi-castle-in-gy-da-saitama-the-floatin.webp",
+      "width": 960,
+      "height": 589,
+      "source_id": "wm:File:Oshi Castle 忍城 - panoramio.jpg",
+      "title": "Oshi Castle 忍城 - panoramio.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Oshi_Castle_%E5%BF%8D%E5%9F%8E_-_panoramio.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Yoshio Kohara",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161031213529/http://www.panoramio.com/user/1146018?with_photo_id=115687480\">Yoshio Kohara</a>",
+      "fetched_from": "wikimedia"
+    },
+    "ueda": {
+      "key": "ueda",
+      "label": "Ueda Castle's gate, Nagano — its gojōin bears the Sanada six-coin crest",
+      "query": [
+        "The gate of Ueda castle (2020394910).jpg"
+      ],
+      "file": "img/gojoin-castle-stamps-japan-ueda-ueda-castle-s-gate-nagano-its-goj-in-bea.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:The gate of Ueda castle (2020394910).jpg",
+      "title": "The gate of Ueda castle (2020394910).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:The_gate_of_Ueda_castle_(2020394910).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Yamaguchi Yoshiaki from Japan",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/37807125@N00\">Yamaguchi Yoshiaki</a> from Japan",
+      "fetched_from": "wikimedia"
+    },
+    "hikone": {
+      "key": "hikone",
+      "label": "Hikone Castle, Shiga — a National Treasure keep whose gojōin carries the Ii clan crest",
+      "query": [
+        "Hikone castle5537.JPG"
+      ],
+      "file": "img/gojoin-castle-stamps-japan-hikone-hikone-castle-shiga-a-national-treasure-.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Hikone castle5537.JPG",
+      "title": "Hikone castle5537.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hikone_castle5537.JPG",
+      "license": "CC BY 2.1 jp",
+      "license_url": "https://creativecommons.org/licenses/by/2.1/jp/deed.en",
+      "artist": "日: Jnn",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:nnn\" class=\"extiw\" title=\"ja:利用者:nnn\">日:</a><a href=\"//commons.wikimedia.org/wiki/User:Jnn\" title=\"User:Jnn\">Jnn</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }

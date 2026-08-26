@@ -222,6 +222,11 @@ Object.assign(PHOTOS, {
     { key: 'nara', q: ['奈良駅 2014 駅スタンプ (14003064021).jpg'], must: /^奈良駅 2014 駅スタンプ \(14003064021\)\.jpg/i, sources: ['wikimedia'], label: 'Stamping at Nara Station' },
     { key: 'marunouchi', q: ['Tokyo Station (Marunouchi Building) 1.jpg'], must: /^Tokyo Station \(Marunouchi Building\) 1\.jpg/i, sources: ['wikimedia'], label: 'Tokyo Station\'s Marunouchi building — the image on its stamp' },
   ],
+  'gojoin-castle-stamps-japan': [ // hand-picked from Commons candidate sheets 2026-08-26
+    { key: 'hikone', q: ['Hikone castle5537.JPG'], must: /^Hikone castle5537\.JPG/i, sources: ['wikimedia'], label: 'Hikone Castle, Shiga — a National Treasure keep whose gojōin carries the Ii clan crest' },
+    { key: 'oshi', q: ['Oshi Castle 忍城 - panoramio.jpg'], must: /^Oshi Castle 忍城 - panoramio\.jpg/i, sources: ['wikimedia'], label: 'Oshi Castle in Gyōda, Saitama — the "floating castle" with rotating limited-edition gojōin' },
+    { key: 'ueda', q: ['The gate of Ueda castle (2020394910).jpg'], must: /^The gate of Ueda castle \(2020394910\)\.jpg/i, sources: ['wikimedia'], label: 'Ueda Castle\'s gate, Nagano — its gojōin bears the Sanada six-coin crest' },
+  ],
   'japan-100-castles-goshuin': [ // hand-picked from Commons candidate sheets 2026-08-19
     { key: 'himeji', q: ['Himeji castle-Daitensyu.jpg'], must: /^Himeji castle-Daitensyu\.jpg/i, sources: ['wikimedia'], label: 'Himeji Castle\'s main keep — No. 59 on the 100 Famous Castles list and an original keep' },
     { key: 'hikone', q: ['Hikone Castle November 2016 -02.jpg'], must: /^Hikone Castle November 2016 -02\.jpg/i, sources: ['wikimedia'], label: 'Hikone Castle, one of the five keeps designated National Treasures' },
