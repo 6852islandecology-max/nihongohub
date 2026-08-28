@@ -858,8 +858,25 @@
       land = (location.pathname || '/').slice(0, 120);
       try { localStorage.setItem('nh_land', land); } catch (e) {}
     }
+    // 再訪セッション判定 (2026-08-28): nh_seen_day = 最後に訪れた日 (ローカル日付)。
+    // 判定はセッションに1回だけ行い sessionStorage に固定する。日付だけで毎ページ
+    // 判定すると、1ページ目で nh_seen_day が今日に更新され2ページ目から再訪でなく
+    // なる (Gemini 反証 2026-08-28 で判明した破綻の修正)。localStorage 消去・別端末は
+    // 新規扱い = 過小計測側に倒れる。
+    var isRet = '0';
+    try {
+      var d0 = new Date();
+      var today = d0.getFullYear() + '-' + ('0' + (d0.getMonth() + 1)).slice(-2) + '-' + ('0' + d0.getDate()).slice(-2);
+      isRet = sessionStorage.getItem('nh_is_ret') || '';
+      if (!isRet) {
+        var seen = localStorage.getItem('nh_seen_day') || '';
+        isRet = (seen && seen < today) ? '1' : '0';
+        sessionStorage.setItem('nh_is_ret', isRet);
+      }
+      localStorage.setItem('nh_seen_day', today);
+    } catch (e) { isRet = '0'; }
     var send = function (ev, from) {
-      try { fetch('/api/count?ev=' + ev + '&src=' + src + '&aid=' + aid + (from ? '&from=' + from : ''), { keepalive: true }).catch(function () {}); } catch (e) {}
+      try { fetch('/api/count?ev=' + ev + '&src=' + src + '&aid=' + aid + (from ? '&from=' + from : '') + (isRet === '1' ? '&ret=1' : ''), { keepalive: true }).catch(function () {}); } catch (e) {}
     };
     window.NH_FUNNEL = { track: send, src: src, land: land };
     // In-site journey: remember this tab's previous page class so the server
@@ -877,5 +894,45 @@
     var pslug = '';
     try { pslug = (window.NH_PAGE_SLUG && window.NH_PAGE_SLUG()) || ''; } catch (e) {}
     send(pslug ? 'pv_blog__' + pslug : 'pv_blog', prev);
+    // Recently added (2026-08-28): 再訪セッションのみ、READ NEXT の直上に控えめな
+    // 新着1行を出す。設計判断 (Gemini/ChatGPT 反証を反映):
+    //  - 文言はコンテンツ主語の "Recently added"。"your last visit" 等の追跡を
+    //    意識させる語は使わない。匿名ID (nh_aid) は表示条件に使わない。
+    //  - 新規訪問者には出さない (オーナー方針: 新規が大多数、目立たせない)。
+    //  - 挿入位置は readnext 直上 = below the fold なので CLS への影響は無視できる。
+    //    readnext の無いページには出さない。
+    //  - blog/whats-new.json が 21日より古い / 空なら何も出さない (鮮度切れの
+    //    サイレント誤表示より非表示に倒す)。生成は scripts/build-whats-new.mjs。
+    if (isRet === '1') {
+      try {
+        fetch('/blog/whats-new.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (wn) {
+          if (!wn || !wn.generated || !wn.items || !wn.items.length) return;
+          var age = (Date.now() - new Date(wn.generated + 'T00:00:00Z').getTime()) / 86400000;
+          if (age > 21) return;
+          var here = (location.pathname.split('/').pop() || '').toLowerCase();
+          var items = [];
+          for (var wi = 0; wi < wn.items.length && items.length < 3; wi++) {
+            var it = wn.items[wi];
+            if (it && it.t && it.u && it.u.split('/').pop().toLowerCase() !== here) items.push(it);
+          }
+          if (!items.length) return;
+          var nav = document.querySelector('nav.readnext');
+          if (!nav || !nav.parentNode) return;
+          var box = document.createElement('div');
+          box.className = 'nh-recent';
+          box.style.cssText = 'font-size:.82em;opacity:.72;margin:1.4em 0 .5em;';
+          box.appendChild(document.createTextNode('Recently added: '));
+          for (var wj = 0; wj < items.length; wj++) {
+            if (wj) box.appendChild(document.createTextNode(' · '));
+            var a = document.createElement('a');
+            a.href = items[wj].u;
+            a.textContent = items[wj].t;
+            a.addEventListener('click', function () { try { send('wn_click'); } catch (e2) {} });
+            box.appendChild(a);
+          }
+          nav.parentNode.insertBefore(box, nav);
+        }).catch(function () {});
+      } catch (e) {}
+    }
   } catch (e) {}
 })();

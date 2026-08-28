@@ -56,9 +56,13 @@ const rows = [];
 for (const day of dates) {
   const cmds = [["HGETALL", `nh:f:${day}`], ["HGETALL", `nh:fsrc:${day}`], ["HGETALL", `nh:fnav:${day}`]];
   for (const s of UNIQ_STAGES) cmds.push(["PFCOUNT", `nh:fu:${day}:${s}`]);
+  // 再訪 (2026-08-28-): visitors = 全pvユニーク (分母)、ret = 再訪セッションのユニーク。
+  cmds.push(["PFCOUNT", `nh:fu:${day}:visitors`], ["PFCOUNT", `nh:fu:${day}:ret`]);
   const out = await redis(cmds);
   const uniq = {};
   UNIQ_STAGES.forEach((s, i) => (uniq[s] = Number(out[3 + i]) || 0));
+  uniq.visitors = Number(out[3 + UNIQ_STAGES.length]) || 0;
+  uniq.ret = Number(out[4 + UNIQ_STAGES.length]) || 0;
   rows.push({ day, counts: toObj(out[0]), bySrc: toObj(out[1]), nav: toObj(out[2]), uniq });
 }
 
@@ -104,6 +108,10 @@ const COLS = [
   ["upOK", (r) => r.counts.upgrade_success],
   ["db:trial", (r) => (actuals[r.day] || {}).trial_started],
   ["db:paid", (r) => ((actuals[r.day] || {}).upgraded_pro || 0) + ((actuals[r.day] || {}).upgraded_lifetime || 0)],
+  // 再訪 (2026-08-28-): vis_u = 全pvユニーク、ret_u = 再訪ユニーク、retPV = 再訪セッションのPV。
+  ["vis_u", (r) => r.uniq.visitors],
+  ["ret_u", (r) => r.uniq.ret],
+  ["retPV", (r) => r.counts.pv_ret],
 ];
 
 const pad = (v, w) => String(v ?? 0).padStart(w);
@@ -123,6 +131,16 @@ const paid = (tot.paid_pro || 0) + (tot.paid_lifetime || 0);
 const pct = (a, b) => (b > 0 ? ((100 * a) / b).toFixed(1) + "%" : "-");
 console.log(`\nwindow: LP ${lp} → trial ${trial} (${pct(trial, lp)}) → checkout ${chk} (${pct(chk, trial)}) → paid ${paid} (${pct(paid, chk)})`);
 if (tot.churn_pro) console.log(`churn_pro: ${tot.churn_pro}`);
+// 再訪 (2026-08-28-): 日次ユニークの合計なので「延べ再訪者-日」。分母の記録も同日開始。
+// 過小計測側に倒れる設計 (localStorage 消去・別端末は新規扱い) を踏まえて読む。
+{
+  const visSum = rows.reduce((a, r) => a + (r.uniq.visitors || 0), 0);
+  const retSum = rows.reduce((a, r) => a + (r.uniq.ret || 0), 0);
+  const retPv = tot.pv_ret || 0;
+  if (visSum > 0) {
+    console.log(`returning (2026-08-28-): 再訪 ${retSum} / 全 ${visSum} visitor-days (${pct(retSum, visSum)})  再訪PV ${retPv}  wn_click ${tot.wn_click || 0}`);
+  }
+}
 
 // per-source totals (all events with a source dimension)
 const srcTot = {};
@@ -145,6 +163,7 @@ const pageTot = {};
 const pvByPage = {};
 for (const r of rows) for (const [k, v] of Object.entries(r.counts)) {
   if (!k.startsWith("pv_")) continue;
+  if (k === "pv_ret") continue; // 再訪セッションのPV合計はページ種別ではない (returning 行で出す)
   const cut = k.indexOf("__");
   if (cut >= 0) { const p = k.slice(cut + 2); pvByPage[p] = (pvByPage[p] || 0) + v; continue; }
   pageTot[k.slice(3)] = (pageTot[k.slice(3)] || 0) + v;

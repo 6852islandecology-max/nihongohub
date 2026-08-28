@@ -27,6 +27,7 @@ const FUNNEL_EVENTS = new Set([
   "pv_lp", "pv_onboarding", "pv_quiz", "pv_dashboard", "pv_prefectures", "pv_rpg",
   "pv_kana", "pv_wildlife", "pv_rank", "pv_blog", "pv_examprep", "pv_wherenext",
   "pv_other", "upgrade_success", "qa_ping",
+  "wn_click", // Recently added ストリップのクリック (2026-08-28、再訪者限定表示)
 ]);
 
 // Previous-page classes accepted on pv_* beacons (in-site transition tracking).
@@ -72,12 +73,14 @@ export default async function handler(req, res) {
       ? req.query.aid : null;
     const from = typeof req.query.from === "string" && NAV_FROM.has(req.query.from)
       ? req.query.from : null;
+    // 再訪フラグ (2026-08-28): クライアントの再訪セッションが付ける。pv_* 以外では無視される。
+    const ret = req.query.ret === "1";
     if (isBlogSlug) {
       // 記事別は件数だけ (HyperLogLog を slug 分作らない)。集計と遷移は従来の pv_blog に残す。
       await trackFunnel(ev, null, null, null);
-      await trackFunnel("pv_blog", aid, src, from);
+      await trackFunnel("pv_blog", aid, src, from, ret);
     } else {
-      await trackFunnel(ev, aid, src, from);
+      await trackFunnel(ev, aid, src, from, ret);
     }
     res.status(200).json({ ok: true });
     return;

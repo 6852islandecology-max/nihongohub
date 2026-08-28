@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vercel dev",
     "deploy": "vercel --prod",
-    "test": "node scripts/test-srs.mjs && node scripts/test-api-endpoints.mjs",
+    "test": "node scripts/test-srs.mjs && node scripts/test-api-endpoints.mjs && node scripts/check-whats-new.mjs",
     "blog:photos:fetch": "node scripts/fetch-wikimedia.mjs",
     "blog:photos:inject": "node scripts/inject-lead-photo.mjs --all",
     "blog:photos:sheet": "node scripts/contact-sheet.mjs"
