@@ -15,7 +15,7 @@ import { execSync } from 'node:child_process';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const PLAN = ROOT + 'blog/v2-release-plan.json', STATE = ROOT + 'blog/v2-release.json';
 const plan = JSON.parse(readFileSync(PLAN, 'utf8')), state = JSON.parse(readFileSync(STATE, 'utf8'));
-const today = new Date().toISOString().slice(0, 10);
+const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10); // JST calendar day
 const args = process.argv.slice(2);
 if (args.includes('--status')) {
   console.log('released:', state.prefectures.join(' '));
