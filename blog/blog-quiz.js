@@ -171,12 +171,29 @@
   ];
   var FULL = { gogonihon: AFF.gogonihon_url, italki: AFF.italki_url, yesim: AFF.yesim_url, ninjawifi: AFF.ninjawifi_url, preply: AFF.preply_url, klook: AFF.klook_url || AFF.kkday_url, byfood: AFF.byfood_url, buyee: AFF.buyee_url, zenmarket: AFF.zenmarket_url, remambo: AFF.remambo_url, neokyo: AFF.neokyo_url, whiterabbit: AFF.whiterabbit_url, twelvego: AFF.twelvego_url, wise: AFF.wise_url, safetywing: AFF.safetywing_url };
 
+  // Map a Klook/KKday href to a KKday destination so the Involve Asia redirect can
+  // deep-link to it (invl.me/...?url=<dest> lands on <dest> with tracking intact —
+  // verified 2026-08-29). KKday URLs pass through; Klook city/search URLs become
+  // KKday keyword searches; anything else returns '' (generic KKday landing).
+  function kkdayTarget(h) {
+    if (h.indexOf('kkday.com') >= 0) return h;
+    var m = h.match(/klook\.com\/[^\/]*\/city\/\d+-([a-z-]+?)-things-to-do/);
+    if (!m) m = h.match(/klook\.com\/[^\/]*\/search\/?\?query=([^&]+)/);
+    if (m) return 'https://www.kkday.com/en/product/productlist?keyword=' + encodeURIComponent(decodeURIComponent(m[1]).replace(/-/g, ' '));
+    return '';
+  }
+
   function wireAffs() {
     // Rewrite every affiliate anchor on the page — including ones outside .aff boxes,
     // e.g. the comparison-table cells on the premium-experiences page. Empty IDs/URLs are
     // skipped, so unconfigured links keep their honest non-affiliate fallback.
     document.querySelectorAll('a[data-aff]').forEach(function(a) {
       var key = a.getAttribute('data-aff');
+      if (key === 'klook' && !AFF.klook_url && AFF.kkday_url) { // KKday substitution, destination preserved
+        var t = kkdayTarget(a.getAttribute('href') || '');
+        a.setAttribute('href', t ? AFF.kkday_url + '?url=' + encodeURIComponent(t) : AFF.kkday_url);
+        return;
+      }
       if (key && FULL[key]) { a.setAttribute('href', FULL[key]); return; } // single-landing override
       var h = a.getAttribute('href') || '';
       for (var i = 0; i < DOMAIN_PARAM.length; i++) {
