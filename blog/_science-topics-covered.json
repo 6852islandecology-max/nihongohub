@@ -47,6 +47,12 @@
       "slug": "science-butterfly-uv-mate-recognition-japan",
       "topic": "UV-based sexual dichromatism and male mate recognition, with seasonal plasticity of the female signal (紫外線による性的二色性・雄の配偶者認知・季節による変化)",
       "species": ["Pieris rapae crucivora (モンシロチョウ)"]
+    },
+    {
+      "date": "2026-08-30",
+      "slug": "science-death-feigning-beetles-japan",
+      "topic": "Death-feigning (thanatosis/tonic immobility): diurnal periodicity, heritability via artificial selection, predator-specific tactic switching, and mating-cost trade-off (擬死・日周性・遺伝率・戦術・代償)",
+      "species": ["Agrypnus binodulus (サビキコリ)", "Cylas formicarius (甘藷小象虫)", "Tribolium castaneum (red flour beetle)", "Hasarius adansoni (jumping spider, predator)"]
     }
   ]
 }
