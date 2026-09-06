@@ -53,6 +53,12 @@
       "slug": "science-death-feigning-beetles-japan",
       "topic": "Death-feigning (thanatosis/tonic immobility): diurnal periodicity, heritability via artificial selection, predator-specific tactic switching, and mating-cost trade-off (擬死・日周性・遺伝率・戦術・代償)",
       "species": ["Agrypnus binodulus (サビキコリ)", "Cylas formicarius (甘藷小象虫)", "Tribolium castaneum (red flour beetle)", "Hasarius adansoni (jumping spider, predator)"]
+    },
+    {
+      "date": "2026-09-06",
+      "slug": "science-jewel-beetle-polarized-light-japan",
+      "topic": "Structural color, helicoidal (Bouligand) cuticle architecture, and circularly polarized light reflection/detection, plus the tamamushi-iro idiom (構造色・螺旋構造・円偏光・玉虫色の語源)",
+      "species": ["Chrysochroa fulgidissima (ヤマトタマムシ)", "Chrysina gloriosa (related jewel scarab, circular-polarization detection studied in this species)"]
     }
   ]
 }
