@@ -329,11 +329,11 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
 
   ${v.faq.length ? `<section class="blk faq" id="faq"><div class="h"><span class="n">06</span><h2>${u('faq')}</h2></div>${v.faq.map(([q, a], i) => { const tf = tr('faq', i, null) || {}; return `<details><summary>${esc(tf.q || q)}</summary><p>${esc(tf.a || a)}</p></details>`; }).join('')}</section>` : ''}
 
-  <section class="blk" id="next"><div class="h"><span class="n">07</span><h2>${u('nextdoor')}</h2></div><div class="nb">${neighbours.map(n => `<a href="${B}${lang === 'en' ? '' : lang + '/'}${n.slug}.html"><b>${esc(n.romaji)}</b><span>${esc(n.lede || n.blurb || '')}</span></a>`).join('')}<a href="${S}prefectures.html?pref=${slug}"><b>${u('playmapcard')}</b><span>${esc(u('unlock').replace('{name}', name))}</span></a></div></section>
+  <section class="blk" id="next"><div class="h"><span class="n">07</span><h2>${u('nextdoor')}</h2></div><div class="nb">${neighbours.map(n => `<a href="${B}${lang === 'en' ? n.slug + '-v2' : lang + '/' + n.slug}.html"><b>${esc(n.romaji)}</b><span>${esc(n.lede || n.blurb || '')}</span></a>`).join('')}<a href="${S}prefectures.html?pref=${slug}"><b>${u('playmapcard')}</b><span>${esc(u('unlock').replace('{name}', name))}</span></a></div></section>
 
   <p class="disc">${u('disclosure')} ${u('photos')}: ${allCredits.map(k => credit(slug, k)).join(' · ')}. Map: Geolonia (MIT).</p>
 </main>
-<footer>© 2026 NihongoHub · <a href="${B}index.html">${u('allguides')}</a> · <a href="${S}index.html">${u('home')}</a> · <a href="${B}${lang === 'en' ? '' : lang + '/'}${slug}.html">${u('classic')}</a></footer>
+<footer>© 2026 NihongoHub · <a href="${B}index.html">${u('allguides')}</a> · <a href="${S}index.html">${u('home')}</a>${lang === 'en' ? '' : ` · <a href="${B}${lang}/${slug}.html">${u('classic')}</a>`}</footer>
 <script defer src="/_vercel/insights/script.js"></script>
 <script src="${S}lib/config.js"></script>
 <script src="${B}blog-quiz.js"></script>

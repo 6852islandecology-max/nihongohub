@@ -30,5 +30,242 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/blog/tokushima.html",
+      "destination": "/blog/tokushima-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chiba.html",
+      "destination": "/blog/chiba-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/gunma.html",
+      "destination": "/blog/gunma-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/yamanashi.html",
+      "destination": "/blog/yamanashi-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tochigi.html",
+      "destination": "/blog/tochigi-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kagawa.html",
+      "destination": "/blog/kagawa-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/shiga.html",
+      "destination": "/blog/shiga-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/yamaguchi.html",
+      "destination": "/blog/yamaguchi-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ehime.html",
+      "destination": "/blog/ehime-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kochi.html",
+      "destination": "/blog/kochi-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/oita.html",
+      "destination": "/blog/oita-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/toyama.html",
+      "destination": "/blog/toyama-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kumamoto.html",
+      "destination": "/blog/kumamoto-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ishikawa.html",
+      "destination": "/blog/ishikawa-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/nagasaki.html",
+      "destination": "/blog/nagasaki-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/saga.html",
+      "destination": "/blog/saga-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/miyazaki.html",
+      "destination": "/blog/miyazaki-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kagoshima.html",
+      "destination": "/blog/kagoshima-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fukuoka.html",
+      "destination": "/blog/fukuoka-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/okinawa.html",
+      "destination": "/blog/okinawa-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kyoto.html",
+      "destination": "/blog/kyoto-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/osaka.html",
+      "destination": "/blog/osaka-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tokyo.html",
+      "destination": "/blog/tokyo-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/nara.html",
+      "destination": "/blog/nara-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/wakayama.html",
+      "destination": "/blog/wakayama-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mie.html",
+      "destination": "/blog/mie-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/nagano.html",
+      "destination": "/blog/nagano-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/gifu.html",
+      "destination": "/blog/gifu-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/shizuoka.html",
+      "destination": "/blog/shizuoka-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aichi.html",
+      "destination": "/blog/aichi-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/niigata.html",
+      "destination": "/blog/niigata-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fukui.html",
+      "destination": "/blog/fukui-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/akita.html",
+      "destination": "/blog/akita-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/iwate.html",
+      "destination": "/blog/iwate-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/miyagi.html",
+      "destination": "/blog/miyagi-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/yamagata.html",
+      "destination": "/blog/yamagata-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fukushima.html",
+      "destination": "/blog/fukushima-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ibaraki.html",
+      "destination": "/blog/ibaraki-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/saitama.html",
+      "destination": "/blog/saitama-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/shimane.html",
+      "destination": "/blog/shimane-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/okayama.html",
+      "destination": "/blog/okayama-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tottori.html",
+      "destination": "/blog/tottori-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hiroshima.html",
+      "destination": "/blog/hiroshima-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hyogo.html",
+      "destination": "/blog/hyogo-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kanagawa.html",
+      "destination": "/blog/kanagawa-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aomori.html",
+      "destination": "/blog/aomori-v2.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hokkaido.html",
+      "destination": "/blog/hokkaido-v2.html",
+      "permanent": true
+    }
   ]
 }

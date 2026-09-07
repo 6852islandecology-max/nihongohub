@@ -54,8 +54,9 @@ for (const dir of ["blog/spots", ...["zh", "id", "th", "es"].map((l) => `blog/${
   if (!existsSync(new URL(dir + "/", ROOT))) continue;
   readdirSync(new URL(dir + "/", ROOT)).filter((f) => f.endsWith(".html")).sort().forEach((f) => { if (!isNoindex(`${dir}/${f}`)) add(`${dir}/${f}`, dir === "blog/spots" ? "0.7" : "0.6"); });
 }
-// English prefecture guides
-GUIDES.forEach((g) => add(`blog/${g.slug}.html`, "0.7"));
+// English prefecture guides — skip URLs that vercel.json 301s (old EN guides -> -v2, 2026-09-07)
+const redirected = new Set((JSON.parse(readFileSync(new URL("vercel.json", ROOT), "utf8")).redirects || []).map((r) => r.source.replace(/^\//, "")));
+GUIDES.forEach((g) => { if (!redirected.has(`blog/${g.slug}.html`)) add(`blog/${g.slug}.html`, "0.7"); });
 // language variants (only if generated)
 for (const lang of LANGS) {
   if (existsSync(new URL(`blog/${lang}/index.html`, ROOT))) add(`blog/${lang}/index.html`, "0.6");
