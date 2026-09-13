@@ -59,6 +59,12 @@
       "slug": "science-jewel-beetle-polarized-light-japan",
       "topic": "Structural color, helicoidal (Bouligand) cuticle architecture, and circularly polarized light reflection/detection, plus the tamamushi-iro idiom (構造色・螺旋構造・円偏光・玉虫色の語源)",
       "species": ["Chrysochroa fulgidissima (ヤマトタマムシ)", "Chrysina gloriosa (related jewel scarab, circular-polarization detection studied in this species)"]
+    },
+    {
+      "date": "2026-09-13",
+      "slug": "science-wasp-mullerian-mimicry-japan",
+      "topic": "Müllerian mimicry among defended wasp species, Batesian mimicry by harmless lookalikes, and geographic shift in an invasive hornet's coloration (ミュラー型擬態・ベイツ型擬態・外来種の体色変化)",
+      "species": ["Vespa mandarinia (オオスズメバチ)", "Vespa simillima xanthoptera (キイロスズメバチ)", "Vespa crabro (European hornet, predator-response study)", "Vespa velutina (invasive hornet established on Tsushima Island, Nagasaki)"]
     }
   ]
 }
