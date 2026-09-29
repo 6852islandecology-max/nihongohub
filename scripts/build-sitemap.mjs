@@ -61,7 +61,8 @@ GUIDES.forEach((g) => { if (!redirected.has(`blog/${g.slug}.html`)) add(`blog/${
 for (const lang of LANGS) {
   if (existsSync(new URL(`blog/${lang}/index.html`, ROOT))) add(`blog/${lang}/index.html`, "0.6");
   GUIDES.forEach((g) => {
-    if (existsSync(new URL(`blog/${lang}/${g.slug}.html`, ROOT))) add(`blog/${lang}/${g.slug}.html`, "0.6");
+    // translated classic guides that vercel.json 301s to -v2 (scripts/consolidate-translated-prefs.mjs) are skipped too
+    if (existsSync(new URL(`blog/${lang}/${g.slug}.html`, ROOT)) && !redirected.has(`blog/${lang}/${g.slug}.html`)) add(`blog/${lang}/${g.slug}.html`, "0.6");
   });
 }
 

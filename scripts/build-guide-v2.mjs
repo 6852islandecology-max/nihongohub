@@ -27,6 +27,10 @@ function loadT(lang) { const f = ROOT + 'blog/translations-v2/' + lang + '.json'
 import { UI_EN } from './v2-ui-strings.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
+// Classic guides that vercel.json 301s to -v2 (EN since 2026-09-07; translated languages via
+// scripts/consolidate-translated-prefs.mjs). Links must point straight at -v2 for those.
+const REDIRECTED = new Set((JSON.parse(readFileSync(ROOT + 'vercel.json', 'utf8')).redirects || []).map((r) => r.source.replace(/^\//, '')));
+const guideHref = (lang, slug) => lang === 'en' ? slug + '-v2' : lang + '/' + slug + (REDIRECTED.has(`blog/${lang}/${slug}.html`) ? '-v2' : '');
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const enc = (s) => encodeURIComponent(s);
 
@@ -329,11 +333,11 @@ footer{margin-top:56px;padding:26px 20px;background:var(--ink);color:#c9c0ad;fon
 
   ${v.faq.length ? `<section class="blk faq" id="faq"><div class="h"><span class="n">06</span><h2>${u('faq')}</h2></div>${v.faq.map(([q, a], i) => { const tf = tr('faq', i, null) || {}; return `<details><summary>${esc(tf.q || q)}</summary><p>${esc(tf.a || a)}</p></details>`; }).join('')}</section>` : ''}
 
-  <section class="blk" id="next"><div class="h"><span class="n">07</span><h2>${u('nextdoor')}</h2></div><div class="nb">${neighbours.map(n => `<a href="${B}${lang === 'en' ? n.slug + '-v2' : lang + '/' + n.slug}.html"><b>${esc(n.romaji)}</b><span>${esc(n.lede || n.blurb || '')}</span></a>`).join('')}<a href="${S}prefectures.html?pref=${slug}"><b>${u('playmapcard')}</b><span>${esc(u('unlock').replace('{name}', name))}</span></a></div></section>
+  <section class="blk" id="next"><div class="h"><span class="n">07</span><h2>${u('nextdoor')}</h2></div><div class="nb">${neighbours.map(n => `<a href="${B}${guideHref(lang, n.slug)}.html"><b>${esc(n.romaji)}</b><span>${esc(n.lede || n.blurb || '')}</span></a>`).join('')}<a href="${S}prefectures.html?pref=${slug}"><b>${u('playmapcard')}</b><span>${esc(u('unlock').replace('{name}', name))}</span></a></div></section>
 
   <p class="disc">${u('disclosure')} ${u('photos')}: ${allCredits.map(k => credit(slug, k)).join(' · ')}. Map: Geolonia (MIT).</p>
 </main>
-<footer>© 2026 NihongoHub · <a href="${B}index.html">${u('allguides')}</a> · <a href="${S}index.html">${u('home')}</a>${lang === 'en' ? '' : ` · <a href="${B}${lang}/${slug}.html">${u('classic')}</a>`}</footer>
+<footer>© 2026 NihongoHub · <a href="${B}index.html">${u('allguides')}</a> · <a href="${S}index.html">${u('home')}</a>${lang === 'en' || REDIRECTED.has(`blog/${lang}/${slug}.html`) ? '' : ` · <a href="${B}${lang}/${slug}.html">${u('classic')}</a>`}</footer>
 <script defer src="/_vercel/insights/script.js"></script>
 <script src="${S}lib/config.js"></script>
 <script src="${B}blog-quiz.js"></script>
