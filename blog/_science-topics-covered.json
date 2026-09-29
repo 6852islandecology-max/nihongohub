@@ -71,6 +71,12 @@
       "slug": "science-newt-aposematism-toxin-japan",
       "topic": "Aposematic warning coloration and tetrodotoxin defense, with a geographic mosaic of signal/behavior between island and mainland populations, and a documented mismatch between signal conspicuousness and toxin level (警告色・テトロドトキシン・島と本土の地理的モザイク・正直でないシグナル)",
       "species": ["Cynops pyrrhogaster (アカハライモリ, Japanese fire-bellied newt)"]
+    },
+    {
+      "date": "2026-09-29",
+      "slug": "science-hare-coat-color-mismatch-japan",
+      "topic": "Seasonal coat-colour moult, geographic polymorphism without genetic divergence in the mainland Japanese hare, and climate-driven camouflage mismatch in Hokkaido's Ezo mountain hare (季節換毛・体色の地理的多型・気候変動による保護色のミスマッチ)",
+      "species": ["Lepus brachyurus (ノウサギ, Japanese hare)", "Lepus timidus ainu (エゾユキウサギ, Ezo mountain hare)"]
     }
   ]
 }
