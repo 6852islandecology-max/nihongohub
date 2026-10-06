@@ -11420,5 +11420,115 @@
       "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:nnn\" class=\"extiw\" title=\"ja:利用者:nnn\">日:</a><a href=\"//commons.wikimedia.org/wiki/User:Jnn\" title=\"User:Jnn\">Jnn</a>",
       "fetched_from": "wikimedia"
     }
+  },
+  "hagoita-ichi-asakusa-japan": {
+    "hero": {
+      "key": "hero",
+      "label": "Hagoita stalls at Sensō-ji during the year-end market, December 2014",
+      "query": [
+        "Hagoita-onsale-asakusa-dec2014.jpg"
+      ],
+      "file": "img/hagoita-ichi-asakusa-japan-hero-hagoita-stalls-at-sens-ji-during-the-yea.webp",
+      "width": 1600,
+      "height": 1459,
+      "source_id": "wm:File:Hagoita-onsale-asakusa-dec2014.jpg",
+      "title": "Hagoita-onsale-asakusa-dec2014.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hagoita-onsale-asakusa-dec2014.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Nesnad",
+      "artist_html": "Nesnad",
+      "fetched_from": "wikimedia"
+    },
+    "grounds": {
+      "key": "grounds",
+      "label": "A stall in Sensō-ji's grounds during hagoita-ichi, with Imado-ware beckoning cats beside the paddles",
+      "query": [
+        "浅草寺境内 露天風景（羽子板市）.jpg"
+      ],
+      "file": "img/hagoita-ichi-asakusa-japan-grounds-a-stall-in-sens-ji-s-grounds-during-hago.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:浅草寺境内 露天風景（羽子板市）.jpg",
+      "title": "浅草寺境内 露天風景（羽子板市）.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E6%B5%85%E8%8D%89%E5%AF%BA%E5%A2%83%E5%86%85_%E9%9C%B2%E5%A4%A9%E9%A2%A8%E6%99%AF%EF%BC%88%E7%BE%BD%E5%AD%90%E6%9D%BF%E5%B8%82%EF%BC%89.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Marusime",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Marusime&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Marusime (page does not exist)\">Marusime</a>",
+      "fetched_from": "wikimedia"
+    },
+    "oshie": {
+      "key": "oshie",
+      "label": "Oshie hagoita up close: padded-fabric figures raised off the paddle",
+      "query": [
+        "Hagoita-onsale-zoomin-asakusa-dec2014.jpg"
+      ],
+      "file": "img/hagoita-ichi-asakusa-japan-oshie-oshie-hagoita-up-close-padded-fabric-fig.webp",
+      "width": 960,
+      "height": 809,
+      "source_id": "wm:File:Hagoita-onsale-zoomin-asakusa-dec2014.jpg",
+      "title": "Hagoita-onsale-zoomin-asakusa-dec2014.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hagoita-onsale-zoomin-asakusa-dec2014.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Nesnad",
+      "artist_html": "Nesnad",
+      "fetched_from": "wikimedia"
+    },
+    "display": {
+      "key": "display",
+      "label": "A display hagoita in its glass case, the way households set one out for the New Year",
+      "query": [
+        "Battledore decoration,hagoita,katori-city,japan.JPG"
+      ],
+      "file": "img/hagoita-ichi-asakusa-japan-display-a-display-hagoita-in-its-glass-case-the-.webp",
+      "width": 960,
+      "height": 1280,
+      "source_id": "wm:File:Battledore decoration,hagoita,katori-city,japan.JPG",
+      "title": "Battledore decoration,hagoita,katori-city,japan.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Battledore_decoration,hagoita,katori-city,japan.JPG",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "katorisi",
+      "artist_html": "katorisi",
+      "fetched_from": "wikimedia"
+    },
+    "print": {
+      "key": "print",
+      "label": "A battledore and shuttlecock in a surimono print by Kikugawa Eishin, 1810s",
+      "query": [
+        "Slaghout en pluimbal-Rijksmuseum RP-P-1958-532.jpeg"
+      ],
+      "file": "img/hagoita-ichi-asakusa-japan-print-a-battledore-and-shuttlecock-in-a-surimo.webp",
+      "width": 960,
+      "height": 708,
+      "source_id": "wm:File:Slaghout en pluimbal-Rijksmuseum RP-P-1958-532.jpeg",
+      "title": "Slaghout en pluimbal-Rijksmuseum RP-P-1958-532.jpeg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Slaghout_en_pluimbal-Rijksmuseum_RP-P-1958-532.jpeg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Kikugawa Eishin (poems: Hōrai Kanemaru)",
+      "artist_html": "<div class=\"fn value\">\nKikugawa Eishin; Kikugawa Eishin; Hôrai Kanemaru</div>",
+      "fetched_from": "wikimedia"
+    },
+    "kiyochika": {
+      "key": "kiyochika",
+      "label": "Year-end Market at Sensō-ji, a woodblock print by Kobayashi Kiyochika, 1881",
+      "query": [
+        "Kiyochika Year-end Market Sensoji"
+      ],
+      "file": "img/hagoita-ichi-asakusa-japan-kiyochika-year-end-market-at-sens-ji-a-woodblock-p.webp",
+      "width": 960,
+      "height": 617,
+      "source_id": "wm:File:Kobayashi Kiyochika (1881) Year-end Market at Sensōji temple.jpg",
+      "title": "Kobayashi Kiyochika (1881) Year-end Market at Sensōji temple.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kobayashi_Kiyochika_(1881)_Year-end_Market_at_Sens%C5%8Dji_temple.jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "Kobayashi Kiyochika",
+      "artist_html": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Kobayashi_Kiyochika\" class=\"extiw\" title=\"w:en:Kobayashi Kiyochika\"><span title=\"Japanese artist (1847-1915)\">Kobayashi Kiyochika</span></a></bdi>",
+      "fetched_from": "wikimedia"
+    }
   }
 }

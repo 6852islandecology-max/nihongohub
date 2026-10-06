@@ -227,6 +227,14 @@ Object.assign(PHOTOS, {
     { key: 'oshi', q: ['Oshi Castle 忍城 - panoramio.jpg'], must: /^Oshi Castle 忍城 - panoramio\.jpg/i, sources: ['wikimedia'], label: 'Oshi Castle in Gyōda, Saitama — the "floating castle" with rotating limited-edition gojōin' },
     { key: 'ueda', q: ['The gate of Ueda castle (2020394910).jpg'], must: /^The gate of Ueda castle \(2020394910\)\.jpg/i, sources: ['wikimedia'], label: 'Ueda Castle\'s gate, Nagano — its gojōin bears the Sanada six-coin crest' },
   ],
+  'hagoita-ichi-asakusa-japan': [ // hand-picked from Commons candidate sheets 2026-10-06 (pop-culture character paddles avoided)
+    { key: 'hero', q: ['Hagoita-onsale-asakusa-dec2014.jpg'], must: /^Hagoita-onsale-asakusa-dec2014\.jpg/i, sources: ['wikimedia'], label: 'Hagoita stalls at Sensō-ji during the year-end market, December 2014' },
+    { key: 'grounds', q: ['浅草寺境内 露天風景（羽子板市）.jpg'], must: /^浅草寺境内 露天風景（羽子板市）\.jpg/i, sources: ['wikimedia'], label: 'A stall in Sensō-ji\'s grounds during hagoita-ichi, with Imado-ware beckoning cats beside the paddles' },
+    { key: 'kiyochika', q: ['Kiyochika Year-end Market Sensoji'], must: /^Kobayashi Kiyochika \(1881\) Year-end Market at Sens/i, sources: ['wikimedia'], art: true, label: 'Year-end Market at Sensō-ji, a woodblock print by Kobayashi Kiyochika, 1881' },
+    { key: 'oshie', q: ['Hagoita-onsale-zoomin-asakusa-dec2014.jpg'], must: /^Hagoita-onsale-zoomin-asakusa-dec2014\.jpg/i, sources: ['wikimedia'], label: 'Oshie hagoita up close: padded-fabric figures raised off the paddle' },
+    { key: 'display', q: ['Battledore decoration,hagoita,katori-city,japan.JPG'], must: /^Battledore decoration,hagoita,katori-city,japan\.JPG/i, sources: ['wikimedia'], label: 'A display hagoita in its glass case, the way households set one out for the New Year' },
+    { key: 'print', q: ['Slaghout en pluimbal-Rijksmuseum RP-P-1958-532.jpeg'], must: /^Slaghout en pluimbal-Rijksmuseum RP-P-1958-532\.jpeg/i, sources: ['wikimedia'], label: 'A battledore and shuttlecock in a surimono print by Kikugawa Eishin, 1810s' },
+  ],
   'japan-100-castles-goshuin': [ // hand-picked from Commons candidate sheets 2026-08-19
     { key: 'himeji', q: ['Himeji castle-Daitensyu.jpg'], must: /^Himeji castle-Daitensyu\.jpg/i, sources: ['wikimedia'], label: 'Himeji Castle\'s main keep — No. 59 on the 100 Famous Castles list and an original keep' },
     { key: 'hikone', q: ['Hikone Castle November 2016 -02.jpg'], must: /^Hikone Castle November 2016 -02\.jpg/i, sources: ['wikimedia'], label: 'Hikone Castle, one of the five keeps designated National Treasures' },
@@ -488,7 +496,7 @@ async function fromWikimedia(spec, used) {
     const cands = Object.values(j?.query?.pages || {}).map(p => ({ title: p.title, info: (p.imageinfo || [])[0] })).filter(x => x.info)
       .map(c => {
         const inf = c.info, ext = inf.extmetadata || {}; const title = c.title.replace(/^File:/, '');
-        if (used.has('wm:' + c.title) || !licenseOf(ext).free || !/image\/(jpeg|png|webp)/.test(inf.mime || '') || BAD_SUBJECT.test(title)) return null;
+        if (used.has('wm:' + c.title) || !licenseOf(ext).free || !/image\/(jpeg|png|webp)/.test(inf.mime || '') || (BAD_SUBJECT.test(title) && !spec.art)) return null; // spec.art: hand-picked historical artwork, exact-title must
         if (spec.must && !spec.must.test(title + ' ' + stripHtml(ext?.ImageDescription?.value))) return null;
         const toks = q.toLowerCase().split(/\s+/).filter(t => t.length > 2); const hits = toks.filter(t => title.toLowerCase().includes(t)).length; if (!hits) return null;
         let s = hits * 60 + Math.min(inf.width, 4000) / 40 + (wantLand ? (inf.width >= inf.height ? 300 : -50) : 0) - (inf.width < 1000 ? 200 : 0);
