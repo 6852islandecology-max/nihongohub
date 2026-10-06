@@ -77,6 +77,12 @@
       "slug": "science-hare-coat-color-mismatch-japan",
       "topic": "Seasonal coat-colour moult, geographic polymorphism without genetic divergence in the mainland Japanese hare, and climate-driven camouflage mismatch in Hokkaido's Ezo mountain hare (季節換毛・体色の地理的多型・気候変動による保護色のミスマッチ)",
       "species": ["Lepus brachyurus (ノウサギ, Japanese hare)", "Lepus timidus ainu (エゾユキウサギ, Ezo mountain hare)"]
+    },
+    {
+      "date": "2026-10-06",
+      "slug": "science-akiakane-red-dragonfly-japan",
+      "topic": "Redox-based yellow-to-red colour change in maturing male Sympetrum dragonflies (ommochrome pigments), and the 1990s decline of Sympetrum frequens linked to rice nursery-box insecticides (赤とんぼ・成熟色・フィプロニル)",
+      "species": ["Sympetrum frequens (アキアカネ)", "Sympetrum darwinianum", "Crocothemis servilia (ショウジョウトンボ)"]
     }
   ]
 }
