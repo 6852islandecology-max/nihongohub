@@ -20,6 +20,12 @@ const PLACEMENTS = {
     { anchor: 'kansai', keys: ['kansai'] },
     { anchor: 'okame',  keys: ['okame'] },
   ],
+  'dam-cards-japan': [
+    { anchor: 'what',  keys: ['museum'] },
+    { anchor: 'rules', keys: ['office', 'tokuyama'] },
+    { anchor: 'count', keys: ['yanba'] },
+    { anchor: 'tokyo', keys: ['ogouchi'] },
+  ],
   'hagoita-ichi-asakusa-japan': [
     { anchor: 'history', keys: ['kiyochika'] },
     { anchor: 'oshie',   keys: ['oshie'] },

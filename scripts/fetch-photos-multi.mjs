@@ -227,6 +227,14 @@ Object.assign(PHOTOS, {
     { key: 'oshi', q: ['Oshi Castle 忍城 - panoramio.jpg'], must: /^Oshi Castle 忍城 - panoramio\.jpg/i, sources: ['wikimedia'], label: 'Oshi Castle in Gyōda, Saitama — the "floating castle" with rotating limited-edition gojōin' },
     { key: 'ueda', q: ['The gate of Ueda castle (2020394910).jpg'], must: /^The gate of Ueda castle \(2020394910\)\.jpg/i, sources: ['wikimedia'], label: 'Ueda Castle\'s gate, Nagano — its gojōin bears the Sanada six-coin crest' },
   ],
+  'dam-cards-japan': [ // hand-picked from Commons candidate sheets 2026-11-06 (no free photos of the cards themselves exist)
+    { key: 'hero', q: ['Miyagasedam.JPG'], must: /^Miyagasedam\.JPG/i, sources: ['wikimedia'], label: 'Miyagase Dam, Kanagawa, releasing water' },
+    { key: 'ogouchi', q: ['Okutama lake Ogouchi dam 3045572203'], must: /^Okutama lake\(Ogouchi dam\) \(3045572203\)\.jpg/i, sources: ['wikimedia'], label: 'Ogōchi Dam on Lake Okutama, one of Tokyo\'s two dam-card dams' },
+    { key: 'office', q: ['Tokuyama Dam Office 20220918'], must: /^Tokuyama Dam Office 20220918\.jpg/i, sources: ['wikimedia'], label: 'Tokuyama Dam\'s management office in Gifu, where its card is handed out' },
+    { key: 'tokuyama', q: ['Tokuyama Dam from Mount Hanabusa'], must: /^Tokuyama Dam from Mount Hanabusa\.jpg/i, sources: ['wikimedia'], label: 'Tokuyama Dam and its reservoir from Mount Hanabusa' },
+    { key: 'yanba', q: ['Yanba Dam 2020-02-09 1'], must: /^Yanba Dam 2020-02-09 1\.jpg/i, sources: ['wikimedia'], label: 'Yanba Dam, Gunma, in February 2020' },
+    { key: 'museum', q: ['Miyagase Dam museum'], must: /^Miyagase Dam museum\.jpg/i, sources: ['wikimedia'], label: 'The visitor building at Miyagase Dam' },
+  ],
   'hagoita-ichi-asakusa-japan': [ // hand-picked from Commons candidate sheets 2026-10-06 (pop-culture character paddles avoided)
     { key: 'hero', q: ['Hagoita-onsale-asakusa-dec2014.jpg'], must: /^Hagoita-onsale-asakusa-dec2014\.jpg/i, sources: ['wikimedia'], label: 'Hagoita stalls at Sensō-ji during the year-end market, December 2014' },
     { key: 'grounds', q: ['浅草寺境内 露天風景（羽子板市）.jpg'], must: /^浅草寺境内 露天風景（羽子板市）\.jpg/i, sources: ['wikimedia'], label: 'A stall in Sensō-ji\'s grounds during hagoita-ichi, with Imado-ware beckoning cats beside the paddles' },

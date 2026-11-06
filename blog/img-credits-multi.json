@@ -11530,5 +11530,115 @@
       "artist_html": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Kobayashi_Kiyochika\" class=\"extiw\" title=\"w:en:Kobayashi Kiyochika\"><span title=\"Japanese artist (1847-1915)\">Kobayashi Kiyochika</span></a></bdi>",
       "fetched_from": "wikimedia"
     }
+  },
+  "dam-cards-japan": {
+    "hero": {
+      "key": "hero",
+      "label": "Miyagase Dam, Kanagawa, releasing water",
+      "query": [
+        "Miyagasedam.JPG"
+      ],
+      "file": "img/dam-cards-japan-hero-miyagase-dam-kanagawa-releasing-water.webp",
+      "width": 1600,
+      "height": 1200,
+      "source_id": "wm:File:Miyagasedam.JPG",
+      "title": "Miyagasedam.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miyagasedam.JPG",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Σ64",
+      "artist_html": "<a href=\"https://ja.wikipedia.org/wiki/user:%CE%A364\" class=\"extiw\" title=\"ja:user:Σ64\">Σ64</a>",
+      "fetched_from": "wikimedia"
+    },
+    "ogouchi": {
+      "key": "ogouchi",
+      "label": "Ogōchi Dam on Lake Okutama, one of Tokyo's two dam-card dams",
+      "query": [
+        "Okutama lake Ogouchi dam 3045572203"
+      ],
+      "file": "img/dam-cards-japan-ogouchi-og-chi-dam-on-lake-okutama-one-of-tokyo-.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Okutama lake(Ogouchi dam) (3045572203).jpg",
+      "title": "Okutama lake(Ogouchi dam) (3045572203).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Okutama_lake(Ogouchi_dam)_(3045572203).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Yamaguchi Yoshiaki from Japan",
+      "artist_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/37807125@N00\">Yamaguchi Yoshiaki</a> from Japan",
+      "fetched_from": "wikimedia"
+    },
+    "office": {
+      "key": "office",
+      "label": "Tokuyama Dam's management office in Gifu, where its card is handed out",
+      "query": [
+        "Tokuyama Dam Office 20220918"
+      ],
+      "file": "img/dam-cards-japan-office-tokuyama-dam-s-management-office-in-gifu.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Tokuyama Dam Office 20220918.jpg",
+      "title": "Tokuyama Dam Office 20220918.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tokuyama_Dam_Office_20220918.jpg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "先従隗始",
+      "artist_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%E5%85%88%E5%BE%93%E9%9A%97%E5%A7%8B&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:先従隗始 (page does not exist)\">先従隗始</a>",
+      "fetched_from": "wikimedia"
+    },
+    "tokuyama": {
+      "key": "tokuyama",
+      "label": "Tokuyama Dam and its reservoir from Mount Hanabusa",
+      "query": [
+        "Tokuyama Dam from Mount Hanabusa"
+      ],
+      "file": "img/dam-cards-japan-tokuyama-tokuyama-dam-and-its-reservoir-from-moun.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Tokuyama Dam from Mount Hanabusa.jpg",
+      "title": "Tokuyama Dam from Mount Hanabusa.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tokuyama_Dam_from_Mount_Hanabusa.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Alpsdake",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Alpsdake\" title=\"User:Alpsdake\">Alpsdake</a>",
+      "fetched_from": "wikimedia"
+    },
+    "yanba": {
+      "key": "yanba",
+      "label": "Yanba Dam, Gunma, in February 2020",
+      "query": [
+        "Yanba Dam 2020-02-09 1"
+      ],
+      "file": "img/dam-cards-japan-yanba-yanba-dam-gunma-in-february-2020.webp",
+      "width": 960,
+      "height": 640,
+      "source_id": "wm:File:Yanba Dam 2020-02-09 1.jpg",
+      "title": "Yanba Dam 2020-02-09 1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Yanba_Dam_2020-02-09_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Qurren",
+      "artist_html": "photo: <a href=\"//commons.wikimedia.org/wiki/User:Qurren\" title=\"User:Qurren\">Qurren</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Qurren\" title=\"User talk:Qurren\"><span class=\"signature-talk\">talk</span></a>)<div style=\"display:table;width:auto;vertical-align:middle;direction:ltr;float:left;line-height:22px;height:24px;font-size:.96em;margin:0px;padding:2px 4px 2px 6px;color:var(--color-base,#000);background:var(--background-color-neutral-subtle,#F8F9FA);border:1px solid #BAB;border-collapse:separate;border-spacing:0px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Applets-screenshooter.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Applets-screenshooter.svg/40px-Applets-screenshooter.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Applets-screenshooter.svg/60px-Applets-screenshooter.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></a></span> Taken with Canon PowerShot G9 X</div>",
+      "fetched_from": "wikimedia"
+    },
+    "museum": {
+      "key": "museum",
+      "label": "The visitor building at Miyagase Dam",
+      "query": [
+        "Miyagase Dam museum"
+      ],
+      "file": "img/dam-cards-japan-museum-the-visitor-building-at-miyagase-dam.webp",
+      "width": 960,
+      "height": 720,
+      "source_id": "wm:File:Miyagase Dam museum.jpg",
+      "title": "Miyagase Dam museum.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miyagase_Dam_museum.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Qurren",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Qurren\" title=\"User:Qurren\">Qurren</a>",
+      "fetched_from": "wikimedia"
+    }
   }
 }
