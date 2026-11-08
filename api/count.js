@@ -64,7 +64,10 @@ export default async function handler(req, res) {
     // the same. The aggregate pv_blog is still written below, uniques and transitions
     // included, so the existing series is unbroken.
     const isBlogSlug = /^pv_blog__[a-z0-9_]{1,48}$/.test(ev);
-    if (!URL || !TOKEN || (!FUNNEL_EVENTS.has(ev) && !isAff && !isSim && !isBlogSlug)) {
+    // Reading depth (rd50__<page-slug> / rd90__<page-slug>, 2026-11-08): sent once per page
+    // load by blog-quiz.js when half / nine-tenths of the article has been on screen.
+    const isDepth = /^rd(50|90)__[a-z0-9_]{1,48}$/.test(ev);
+    if (!URL || !TOKEN || (!FUNNEL_EVENTS.has(ev) && !isAff && !isSim && !isBlogSlug && !isDepth)) {
       res.status(200).json({ ok: false });
       return;
     }

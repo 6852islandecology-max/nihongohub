@@ -35,7 +35,7 @@ img{max-width:100%;display:block}
 /* Phones: the sticky nav wrapped to two rows (112px of a 812px screen). One row fits down to 360px. */
 @media(max-width:520px){
   html{scroll-padding-top:64px}
-  .bnav{flex-wrap:nowrap;padding:10px;gap:8px}
+  .bnav{padding:10px;gap:6px 8px} /* still wraps when a page adds a 5th link (science pages) */
   .bnav .logo{font-size:16px}
   .bnav a{font-size:12px;white-space:nowrap}
   .bnav .cta{padding:5px 9px;font-size:11px}

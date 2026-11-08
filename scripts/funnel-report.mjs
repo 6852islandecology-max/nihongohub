@@ -236,15 +236,28 @@ if (artPages.length) {
   // 「閲覧1・クリック7 = 700%」のような数字が出る。期間が揃うまで率は出さない。
   const PV_SLUG_SINCE = "2026-08-23"; // = api/count.js の isBlogSlug 追加日
   const sameWindow = dates[0] >= PV_SLUG_SINCE;
+  // Reading depth (rd50__/rd90__<slug>, 2026-11-08-): counts of page loads that reached half /
+  // nine-tenths of the article. Compare with views only for windows that start on or after
+  // 2026-11-08; before that, views include days with no depth beacon.
+  const rdByPage = { 50: {}, 90: {} };
+  for (const r of rows) {
+    for (const [k, v] of Object.entries(r.counts)) {
+      const m = k.match(/^rd(50|90)__(.+)$/);
+      if (m) rdByPage[m[1]][m[2]] = (rdByPage[m[1]][m[2]] || 0) + v;
+    }
+  }
   const rowsArt = artPages.map((p) => {
     const views = pvByPage[p] || 0, aff = affByPageAll[p] || 0, sim = simByPage[p] || 0;
-    return { p, views, aff, sim, ctr: (views && sameWindow) ? aff / views : null };
+    return { p, views, aff, sim, rd50: rdByPage[50][p] || 0, rd90: rdByPage[90][p] || 0,
+      ctr: (views && sameWindow) ? aff / views : null };
   }).sort((a, b) => b.views - a.views || b.aff - a.aff);
-  console.log("\nper article (views vs clicks) — pv_blog__<slug> は 2026-08-23 から記録開始:");
-  console.log("  " + "article".padEnd(42) + "views".padStart(7) + "aff".padStart(6) + "sim".padStart(6) + "clicks/pv".padStart(11));
+  console.log("\nper article (views vs clicks) — pv_blog__<slug> は 2026-08-23、rd50/rd90 は 2026-11-08 から記録開始:");
+  console.log("  " + "article".padEnd(42) + "views".padStart(7) + "aff".padStart(6) + "sim".padStart(6) + "clicks/pv".padStart(11) +
+    "rd50".padStart(6) + "rd90".padStart(6));
   for (const r of rowsArt.slice(0, 25)) {
     console.log("  " + r.p.slice(0, 42).padEnd(42) + String(r.views).padStart(7) + String(r.aff).padStart(6) +
-      String(r.sim).padStart(6) + (r.ctr === null ? "-" : r.ctr.toFixed(2)).padStart(11));
+      String(r.sim).padStart(6) + (r.ctr === null ? "-" : r.ctr.toFixed(2)).padStart(11) +
+      String(r.rd50).padStart(6) + String(r.rd90).padStart(6));
   }
   if (!sameWindow) console.log(`  (clicks/pv は窓が ${PV_SLUG_SINCE} 以降に収まるまで出さない。分母の記録開始がその日のため)`);
   const noView = rowsArt.filter((r) => !r.views && (r.aff || r.sim)).length;

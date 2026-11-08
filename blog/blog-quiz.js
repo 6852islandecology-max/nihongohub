@@ -829,7 +829,14 @@
     var art = document.querySelector('article');
     var rn = art && art.querySelector('.readnext');
     if (!rn || art.querySelector('.midnext')) return;
-    var h2s = [].filter.call(art.querySelectorAll('h2[id]'), function(h){ return !h.closest('.faq'); });
+    // Any h2 outside the FAQ and outside boxes (science and Amazon guides have h2 without ids).
+    var pick = function(sel){
+      return [].filter.call(art.querySelectorAll(sel), function(h){
+        return !h.closest('.faq, .readnext, .aff, .kreview, .kback, .kwarn');
+      });
+    };
+    var h2s = pick('h2');
+    if (h2s.length < 4) h2s = pick('h3'); // science explainers use h3 for their sections
     if (h2s.length < 4) return;
     var links = rn.querySelectorAll('a[href]');
     if (!links.length) return;
@@ -850,5 +857,32 @@
     });
     var target = h2s[Math.floor(h2s.length / 2)];
     target.parentNode.insertBefore(box, target);
+  } catch (e) {}
+})();
+
+// Reading depth (2026-11-08): rd50__<slug> / rd90__<slug>, once per page load, when the
+// bottom of the screen passes 50% / 90% of the article. Answers "which articles are not
+// read to the end", which pageviews alone cannot. Counted per article in funnel-report.
+(function(){
+  try {
+    var art = document.querySelector('article');
+    if (!art || !window.NH_PAGE_SLUG) return;
+    var slug = window.NH_PAGE_SLUG();
+    var done = { 50: false, 90: false }, ticking = false;
+    var check = function(){
+      ticking = false;
+      var r = art.getBoundingClientRect();
+      if (r.height < 400) return;
+      var seen = (window.innerHeight - r.top) / r.height;
+      [50, 90].forEach(function(p){
+        if (!done[p] && seen >= p / 100) {
+          done[p] = true;
+          try { if (window.NH_FUNNEL && window.NH_FUNNEL.track) window.NH_FUNNEL.track('rd' + p + '__' + slug); } catch (e) {}
+        }
+      });
+      if (done[50] && done[90]) window.removeEventListener('scroll', onScroll);
+    };
+    var onScroll = function(){ if (!ticking) { ticking = true; requestAnimationFrame(check); } };
+    window.addEventListener('scroll', onScroll, { passive: true });
   } catch (e) {}
 })();
