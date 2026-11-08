@@ -819,3 +819,36 @@
     // returning-visitor measurement above (nh_is_ret / &ret=1) stays.
   } catch (e) {}
 })();
+
+// Mid-article "Read next" (2026-11-08). 30-day data: views 2.3x, but only 7.4% of views
+// came from another page on the site, and the READ NEXT block sits at ~90% of the page.
+// Repeat its links once, before the middle section, on articles with 4+ sections.
+// Judge by the blog>blog transition rate in funnel-report (baseline 7.4%, 2026-11-08).
+(function(){
+  try {
+    var art = document.querySelector('article');
+    var rn = art && art.querySelector('.readnext');
+    if (!rn || art.querySelector('.midnext')) return;
+    var h2s = [].filter.call(art.querySelectorAll('h2[id]'), function(h){ return !h.closest('.faq'); });
+    if (h2s.length < 4) return;
+    var links = rn.querySelectorAll('a[href]');
+    if (!links.length) return;
+    var box = document.createElement('aside');
+    box.className = 'midnext';
+    box.setAttribute('aria-label', 'Related guides');
+    var head = document.createElement('div');
+    head.className = 'readnext-h';
+    var rnh = rn.querySelector('.readnext-h');
+    head.textContent = rnh ? rnh.textContent : 'Read next';
+    box.appendChild(head);
+    [].slice.call(links, 0, 3).forEach(function(a){
+      var t = a.querySelector('.rn-t');
+      var l = document.createElement('a');
+      l.href = a.getAttribute('href');
+      l.textContent = (t ? t.textContent : a.textContent).trim();
+      box.appendChild(l);
+    });
+    var target = h2s[Math.floor(h2s.length / 2)];
+    target.parentNode.insertBefore(box, target);
+  } catch (e) {}
+})();

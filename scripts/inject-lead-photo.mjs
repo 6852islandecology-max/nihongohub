@@ -48,7 +48,7 @@ const SUBJECT_OVERRIDE = {
   'buy-from-japan-proxy-services': 'Japanese red postbox',
   'eki-stamps-japan': 'Railway station platform',
   'character-manholes-japan': 'Decorative manhole cover',
-  'goshuincho-guide-japan': 'Goshuin stamp book',
+  'goshuincho-guide-japan': 'A drawstring bag for carrying a goshuin book', // the photo is the bag, not the book (fixed 2026-11-08)
   'michi-no-eki-stamp-rally-japan': 'Roadside station (michi-no-eki)',
   'sailor-moon-manholes-tokyo': 'Tokyo Tower from Shiba Park',
   'evangelion-hakone-guide': 'Hakone Shrine torii on Lake Ashi, with Mt. Fuji',
